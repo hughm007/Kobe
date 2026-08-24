@@ -9,10 +9,11 @@ your API keys is listed here as the checklist to run, tier by tier.
 ```bash
 cd orion
 uv sync --extra voice          # needs PortAudio: `brew install portaudio` on macOS
-cp .env.example .env
+uv run orion-setup             # guided: paste each key, hidden input, ends with preflight
 ```
 
-Fill in `.env`:
+(`orion-setup` writes `.env` for you; `cp .env.example .env` + a text editor
+still works if you prefer.) The keys:
 
 | Key | Status |
 |---|---|

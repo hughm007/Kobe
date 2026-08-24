@@ -4,15 +4,32 @@ Karl's voice-first assistant for Service Pow. What it is and what it's allowed t
 do lives in [`../AGENT.md`](../AGENT.md) — read that first; this file is just how
 to run it.
 
-## Setup
+## Quickstart — from zero to talking
 
 ```bash
-cd orion
-uv sync                      # add --extra voice once you reach Tier 3
-cp .env.example .env         # then put your ANTHROPIC_API_KEY in it
+git clone -b claude/voice-first-agent-core-dysy9h https://github.com/hughm007/Kobe.git
+cd Kobe/orion
+uv sync --extra voice
+uv run orion-setup           # paste your 3 keys when prompted (input is hidden)
+uv run orion                 # then type /voice
 ```
 
-`.env` is git-ignored. Never put a key in a source file, even for a minute.
+Prerequisites: [uv](https://docs.astral.sh/uv/) and, for audio —
+macOS: `brew install portaudio` · Debian/Ubuntu: `apt install libportaudio2` ·
+Windows: nothing (sounddevice bundles PortAudio).
+
+Where the keys come from:
+
+| Key | Get it at | Without it |
+|---|---|---|
+| `ANTHROPIC_API_KEY` | console.anthropic.com → API keys | no brain at all |
+| `DEEPGRAM_API_KEY` | console.deepgram.com (free credit on signup) | voice can't hear you |
+| `ELEVENLABS_API_KEY` | elevenlabs.io → profile → API keys (free tier) | answers on screen, not aloud |
+
+`orion-setup` is safe to re-run any time — it keeps keys you've already set and
+finishes with the same preflight as `orion-voicetest check`, so you always know
+what's working. `.env` is git-ignored; never put a key in a source file, even
+for a minute.
 
 ## Run
 
