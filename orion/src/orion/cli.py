@@ -15,6 +15,7 @@ from .agent import Agent
 from .config import ConfigError, get_config
 from .prompts import PromptError
 from .memory import MemoryStore
+from .notices import NoticeBoard
 from .provider import ProviderError, build_provider
 from .tools import default_registry
 
@@ -50,6 +51,7 @@ class Repl:
     def __init__(self, agent: Agent, style: Style | None = None) -> None:
         self.agent = agent
         self.style = style or Style(_supports_colour())
+        self.board = NoticeBoard(agent.config.state_path("notices.jsonl"))
         self.running = True
         self.commands: dict[str, Callable[[str], None]] = {
             "help": self.cmd_help,
@@ -61,6 +63,9 @@ class Repl:
             "tools": self.cmd_tools,
             "voice": self.cmd_voice,
             "memory": self.cmd_memory,
+            "notices": self.cmd_notices,
+            "pause": self.cmd_pause,
+            "resume": self.cmd_resume,
         }
 
     # -------------------------------------------------------------- commands
@@ -73,6 +78,9 @@ class Repl:
             ("/tools", "what Orion can do"),
             ("/voice", "start the spoken conversation (Ctrl-C returns here)"),
             ("/memory", "what Orion remembers across restarts"),
+            ("/notices", "what the heartbeat surfaced (/notices dismiss <id>|all)"),
+            ("/pause", "kill switch: hold all proactive behaviour"),
+            ("/resume", "let the heartbeat beat again"),
             ("/cost", "tokens and spend this session"),
             ("/quit", "leave"),
         ]
@@ -104,6 +112,56 @@ class Repl:
             first_line = t.description.split(". ")[0]
             print(f"  {self.style.bold(name.ljust(20))} {self.style.dim(first_line + gated)}")
         print()
+
+    def show_notices(self, notices, *, header: str) -> None:
+        if not notices:
+            return
+        print(self.style.bold(f"\n  {header}"))
+        for notice in notices:
+            badge = {"interrupt": self.style.red("!"), "notify": self.style.yellow("•")}.get(
+                notice.level, self.style.dim("·")
+            )
+            print(f"  {badge} {self.style.dim(notice.id)}  {notice.text}")
+        print(self.style.dim("  (/notices dismiss <id> clears one, `all` clears everything)\n"))
+
+    def catch_up(self) -> None:
+        """Anything the heartbeat noticed while Karl was away — held, not lost."""
+        unseen = self.board.unseen()
+        if unseen:
+            self.show_notices(unseen, header=f"while you were away ({len(unseen)}):")
+            self.board.mark_seen([n.id for n in unseen])
+
+    def cmd_notices(self, rest: str) -> None:
+        words = rest.split()
+        if words and words[0] == "dismiss":
+            target = words[1] if len(words) > 1 else ""
+            if not target:
+                print(self.style.yellow("  which one? /notices dismiss <id> or all\n"))
+            elif self.board.dismiss(target):
+                print(self.style.dim("  dismissed\n"))
+            else:
+                print(self.style.yellow(f"  nothing matched {target!r}\n"))
+            return
+        pending = self.board.pending()
+        if not pending:
+            print(self.style.dim("  nothing on the board\n"))
+            return
+        self.show_notices(pending, header=f"notices ({len(pending)}):")
+        self.board.mark_seen()
+
+    def cmd_pause(self, _: str) -> None:
+        self.agent.config.state_path("PAUSED").write_text(
+            "created by /pause — delete this file or run /resume to re-enable proactive behaviour\n"
+        )
+        print(self.style.dim("  paused — the heartbeat holds all background action; conversation still works\n"))
+
+    def cmd_resume(self, _: str) -> None:
+        pause_file = self.agent.config.state_path("PAUSED")
+        if pause_file.exists():
+            pause_file.unlink()
+            print(self.style.dim("  resumed — the heartbeat is live again\n"))
+        else:
+            print(self.style.dim("  it wasn't paused\n"))
 
     def cmd_memory(self, _: str) -> None:
         store = MemoryStore(self.agent.config.state_path("memory.jsonl"))
@@ -222,6 +280,7 @@ class Repl:
             return
 
         if not line or self.dispatch(line):
+            self.catch_up()
             return
 
         print(self.style.bold(f"{self.agent.config.name} › "), end="", flush=True)
@@ -245,6 +304,7 @@ class Repl:
 
     def run(self) -> None:
         self.banner()
+        self.catch_up()
         while self.running:
             self.prompt_once()
         print(self.style.dim("  goodbye\n"))

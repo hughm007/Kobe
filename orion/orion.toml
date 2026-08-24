@@ -75,3 +75,23 @@ barge_in = true
 self_echo_similarity = 0.75
 # Print each turn's latency breakdown (T0-T6) while developing.
 latency_log = true
+
+[heartbeat]
+# How often the loop wakes to see if anything is due. The checks themselves
+# run on their own intervals below.
+tick_seconds = 30
+# Non-urgent surfacing waits for waking hours; only urgent checks break through.
+quiet_hours = "22:00-08:00"
+
+[checks.inbox_triage]
+enabled = true
+interval_minutes = 15
+# A file ignored in inbox/ this long stops being quiet and interrupts.
+escalate_after_hours = 4
+
+[checks.open_loops]
+enabled = true
+interval_minutes = 1440   # daily
+worklog_gap_days = 3
+stale_draft_days = 7
+active_clients = "911drain"
