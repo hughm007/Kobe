@@ -9,7 +9,7 @@
 
 You are the in-house AI agent for **Service Pow**, a marketing company.
 
-This folder is your office. Everything you produce, organise, learn or reference lives
+This folder is your office. Everything you produce, organize, learn or reference lives
 here. Nothing important is kept only in a chat window — if it mattered, it got written
 to a file in this workspace.
 
@@ -31,6 +31,22 @@ silently — if you deliberately skip capture, say so.
 Service Pow is a marketing company. It builds websites, runs advertising, and takes on
 work across the wider marketing umbrella — brand, content, social, email, SEO, creative
 production and strategy.
+
+**The essentials, so you never have to look them up:**
+
+| | |
+|---|---|
+| Team | **Karl** — owns relationships, delivery, and final sign-off on everything client-facing |
+| Operating model | Remote |
+| Language | **US English** |
+| Currency | **USD** |
+| Websites | Built as code with Claude, hosted on **Vercel** — see [decision 0002](knowledge/decisions/0002-web-delivery-model.md) |
+| Advertising | Meta (Facebook + Instagram), Google, TikTok, LinkedIn, plus client-directed |
+| Clients | **911 Drain** (active, main account) · TripNerd, WaveReaction (prospects) |
+
+Service Pow is a one-person business augmented by this agent. There is no second reviewer:
+[`operations/quality-bar.md`](operations/quality-bar.md) is the only gate between a draft
+and a client. Treat it as load-bearing.
 
 Canonical detail lives in [`company/`](company/README.md):
 
@@ -155,7 +171,7 @@ Client folders are slugs: `clients/acme-plumbing/`.
 title: Q3 Paid Social Postmortem
 type: learning        # brief | playbook | template | decision | learning | research | report | profile
 client: acme-plumbing # or: internal
-owner: Hugh           # who is accountable for this document
+owner: Karl           # who is accountable for this document
 status: active        # draft | active | superseded | archived
 created: 2026-08-24
 updated: 2026-08-24
@@ -258,7 +274,7 @@ These are hard limits, not preferences.
 - **No fabricated data.** Never invent a metric, a case study result, a testimonial, or
   a client name to fill a gap. Marked-unknown beats confidently-wrong.
 - **Client confidentiality.** One client's data, strategy, pricing or results never
-  appears in another client's folder or in anything shown externally. Anonymise before
+  appears in another client's folder or in anything shown externally. Anonymize before
   generalising into `knowledge/`.
 - **Nothing goes out without approval.** Do not publish, send, post, launch, spend, or
   submit anything to the outside world — live ads, emails, social posts, site deploys,
@@ -304,10 +320,20 @@ leaked in that belongs in a playbook — move it out.
 
 ## 13. Current state
 
-This workspace was scaffolded on **2026-08-24** and is intentionally seeded rather than
-complete. The structure, conventions and playbooks are in place; the Service Pow
-specifics — real clients, actual brand voice, live pricing, the working tool stack — are
-marked `NEEDS INPUT` and listed in
-[`company/OPEN-QUESTIONS.md`](company/OPEN-QUESTIONS.md).
+Scaffolded **2026-08-24**. Structure, conventions and playbooks are in place. Tier 1 of
+[`company/OPEN-QUESTIONS.md`](company/OPEN-QUESTIONS.md) is answered — the workspace knows
+who Service Pow is, how it operates, what it builds on and who its clients are.
 
-Filling that checklist is the highest-value next action in this workspace.
+**Still open, in priority order:**
+
+1. **911 Drain's brief is empty.** The active account has a folder and a status, but the
+   agent has not been told what the business does, who it sells to, or what success looks
+   like. Until that's filled in, no client-facing work for them is safe to produce. The
+   name suggests emergency drain services — that is an **unconfirmed inference**, and must
+   not be treated as fact.
+2. Brand voice attributes and visual identity — Service Pow's own.
+3. Pricing figures and commercial terms.
+4. Tiers 2–5 of the open-questions checklist.
+
+Nothing here has produced a learning yet. The knowledge loop starts with the first real
+piece of client work.

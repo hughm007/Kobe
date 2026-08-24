@@ -20,7 +20,7 @@ tags: [proposal, sales, commercial]
 ## What you told us
 
 Reflect their situation back in their own words, from the discovery call. If they don't
-recognise themselves in this section, nothing after it will land.
+recognize themselves in this section, nothing after it will land.
 
 - Where you are now:
 - What you want to change:

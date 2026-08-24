@@ -2,7 +2,7 @@
 title: Services and Offers
 type: profile
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: draft
 created: 2026-08-24
 updated: 2026-08-24
@@ -38,7 +38,7 @@ incoming request is in scope.
 **Commonly excluded unless quoted**
 - Ongoing content writing after launch
 - Photography and video production
-- Hosting, domain and third-party licence fees
+- Hosting, domain and third-party license fees
 - Ongoing maintenance and security updates
 - Complex custom functionality, integrations, or e-commerce beyond the standard build
 
@@ -49,25 +49,45 @@ domain and hosting, a named decision-maker, and timely review.
 [`../playbooks/web/website-build.md`](../playbooks/web/website-build.md) is fully ticked
 and handover is complete.
 
-**NEEDS INPUT:** Which build platform(s) — WordPress, Webflow, Shopify, Squarespace,
-custom? This determines a great deal about scope, timeline and pricing.
+**How we build.** Sites are **built as code with Claude and deployed on Vercel** — not
+assembled in a page-builder CMS. See
+[`../knowledge/decisions/0002-web-delivery-model.md`](../knowledge/decisions/0002-web-delivery-model.md)
+for what that means for scope, handover and ongoing content edits, which differ
+meaningfully from a WordPress or Squarespace engagement.
+
+The short version for scoping: build speed is a genuine advantage, and post-launch
+**content editing is a scope question that must be settled in the proposal** — a client
+who expects to log in and edit their own pages needs that designed in deliberately.
 
 ---
 
 ## Advertising
 
-**What it is.** Planning, creative, buying and optimisation of paid media.
+**What it is.** Planning, creative, buying and optimization of paid media.
 
-**NEEDS INPUT:** Which platforms Service Pow actually runs — Meta, Google (Search /
-Performance Max / YouTube), TikTok, LinkedIn, programmatic display, out-of-home, print,
-radio? The playbooks are written channel-agnostically until this is answered.
+**Platforms we run**
+
+| Platform | Covers |
+|---|---|
+| **Meta Ads** | Facebook **and Instagram** — both are placements bought through one Meta Ads Manager account, not separate platforms |
+| **Google Ads** | Search, Performance Max, Display, YouTube |
+| **TikTok Ads** | |
+| **LinkedIn Ads** | |
+| **Client-directed** | We'll run wherever a client's audience is and they want presence |
+
+That last row is a real position, not a hedge — but it has a cost worth naming in
+scoping: an unfamiliar platform carries a learning curve the client is effectively
+paying for. Say so honestly, and price it in, rather than absorbing it silently.
+
+**NEEDS INPUT:** is there a floor — a platform we'd decline rather than learn on a
+client's budget?
 
 **Typically includes**
 - Objective setting and target cost-per-outcome
 - Audience and targeting strategy
 - Creative concepting and production
 - Campaign build, tracking setup and QA
-- Ongoing optimisation and creative testing
+- Ongoing optimization and creative testing
 - Reporting against the agreed measures
 
 **Commonly excluded unless quoted:** media spend itself, landing page builds,

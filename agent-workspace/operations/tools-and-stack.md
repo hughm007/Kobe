@@ -2,7 +2,7 @@
 title: Tools and Stack
 type: profile
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: draft
 created: 2026-08-24
 updated: 2026-08-24
@@ -18,19 +18,23 @@ a given task happens on, and where to point a client or a colleague.
 > held — never the access itself. Same rule as
 > [`../clients/_template/access-and-accounts.md`](../clients/_template/access-and-accounts.md).
 
-**NEEDS INPUT:** the whole table. Delete rows for tools not used; add ones that are missing.
+Known entries are filled in. The rest are **NEEDS INPUT** — delete rows for tools not
+used, and add any that are missing.
 
 | Function | Tool | Account / workspace | Who administers | Notes |
 |---|---|---|---|---|
-| Website builds | | | | |
-| Hosting | | | | |
+| Website builds | Claude / Claude Code | | Karl | Built as code — see decision 0002 |
+| Version control | GitHub | `hughm007` | Karl | One repo per client site |
+| Hosting | Vercel | | Karl | SSL, CDN and preview deploys by default |
 | Domains / DNS | | | | |
 | Analytics | | | | |
 | Tag management | | | | |
 | Search Console | | | | |
-| Paid search | | | | |
-| Paid social | | | | |
-| Other ad platforms | | | | |
+| Paid search | Google Ads | | Karl | Search, PMax, Display, YouTube |
+| Paid social | Meta Ads | | Karl | Facebook **and** Instagram placements — one account |
+| Paid social | TikTok Ads | | Karl | |
+| Paid social | LinkedIn Ads | | Karl | |
+| Other ad platforms | Client-directed | | Karl | We run where the client's audience is |
 | Email marketing | | | | |
 | Social scheduling | | | | |
 | SEO tooling | | | | |
@@ -53,6 +57,8 @@ a given task happens on, and where to point a client or a colleague.
 - Client files:
 - Contracts and signed documents:
 - Invoices:
+- Client site repos: GitHub, one per client
+- Deployed client sites: Vercel
 - This workspace: `hughm007/Kobe` → `agent-workspace/`
 
 ## Credential policy

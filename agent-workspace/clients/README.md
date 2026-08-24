@@ -9,7 +9,7 @@ their folder and nowhere else.
 - **Start every new client** by copying [`_template/`](_template/) — don't build a folder
   from scratch, or the structure drifts and cross-client comparison stops working.
 - **Never mix clients.** One client's data, strategy, pricing or results must never
-  appear in another client's folder. To generalise a lesson across clients, anonymise it
+  appear in another client's folder. To generalise a lesson across clients, anonymize it
   and put it in [`../knowledge/learnings/`](../knowledge/learnings/).
 - **No credentials, ever.** `access-and-accounts.md` records *where* access lives and who
   holds it. It never records the access itself.
@@ -43,14 +43,28 @@ Then, in order:
 └── notes/                   dated meeting and call notes
 ```
 
-## Current clients
+## Clients and prospects
 
-**NEEDS INPUT:** No clients set up yet. List them here as folders are created, so this
-page works as the index.
-
-| Client | Folder | Services | Status | Owner |
+| Client | Folder | Status | Services | Owner |
 |---|---|---|---|---|
-| — | — | — | — | — |
+| 911 Drain | [`911drain/`](911drain/) | **Active** — main account | **NEEDS INPUT** | Karl |
+| TripNerd | [`tripnerd/`](tripnerd/) | Prospect | — | Karl |
+| WaveReaction | [`wavereaction/`](wavereaction/) | Prospect | — | Karl |
+
+### Active vs. prospect
+
+Prospects live here too, with `status: prospect` in their frontmatter, so that discovery
+notes and research have a home before anything is signed. The distinction is a hard one
+for the agent:
+
+- **Active** — do the work.
+- **Prospect** — research, discovery notes and proposal drafts only. No campaign builds,
+  no live activity, no spend, and nothing sent to them without Karl's explicit go-ahead.
+
+When a prospect signs, flip `status` to `active` and run
+[`../playbooks/client-lifecycle/onboarding.md`](../playbooks/client-lifecycle/onboarding.md).
+When a prospect goes cold, move the folder to [`../archive/`](../archive/) with a note on
+why — lost-deal reasons are some of the most useful learnings the office can hold.
 
 ## When a client leaves
 

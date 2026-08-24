@@ -2,7 +2,7 @@
 title: Service Pow Brand Voice
 type: profile
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: draft
 created: 2026-08-24
 updated: 2026-08-24
@@ -34,7 +34,8 @@ what it is *not*. The contrast is what makes it usable; adjectives alone aren't.
 - **Formality:** contractions allowed? Slang? Humour — and where's the line?
 - **Sentence length:** house preference for short and punchy, or considered and longer?
 - **Jargon:** how much marketing terminology does the audience actually want?
-- **Spelling:** which English — UK, US, AU? *(This one blocks copy work; answer it early.)*
+- **Spelling: US English.** Applies to all Service Pow materials. Client materials follow
+  the client's own variant where it differs — check their `brand-guide.md`.
 - **Punctuation:** Oxford comma? Em dashes? Exclamation marks — how many is too many?
 
 ## Words we use / words we avoid

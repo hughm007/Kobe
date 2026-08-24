@@ -36,7 +36,7 @@ immutable — to change one, write a new decision that supersedes it and link bo
 - **Include the numbers, and the sample.** A result without its volume can't be judged.
 - **Log losses.** A record of what doesn't work is a competitive advantage precisely
   because everyone else throws it away.
-- **Anonymise before generalising.** A learning that leaves this folder for a playbook or
+- **Anonymize before generalising.** A learning that leaves this folder for a playbook or
   a pitch must not carry another client's identifiable data. See the confidentiality
   guardrail in [`../CLAUDE.md`](../CLAUDE.md) §10.
 - **Index it.** An unindexed knowledge base is a landfill. Update

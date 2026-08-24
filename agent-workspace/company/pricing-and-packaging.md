@@ -2,7 +2,7 @@
 title: Pricing and Packaging
 type: profile
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: draft
 created: 2026-08-24
 updated: 2026-08-24
@@ -26,7 +26,10 @@ rate, hourly, percentage of ad spend, performance-linked, or a mix per service?
 
 ## Rate card
 
-**NEEDS INPUT:** Fill in. Include currency and whether figures are inclusive of tax.
+**Currency: USD** for all quoting and reporting.
+
+**NEEDS INPUT:** the figures themselves, and whether they are stated inclusive or
+exclusive of tax.
 
 | Service | Structure | Price | Notes |
 |---|---|---|---|

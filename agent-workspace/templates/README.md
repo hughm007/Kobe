@@ -31,5 +31,5 @@ Set the frontmatter properly: real `title`, the client slug, an `owner`, today's
 
 If you find yourself adding the same section every time, or a field is never used, change
 the template. Note the change in [`../operations/worklog.md`](../operations/worklog.md).
-Templates that don't get maintained get quietly abandoned in favour of blank documents,
+Templates that don't get maintained get quietly abandoned in favor of blank documents,
 and the structure is lost.

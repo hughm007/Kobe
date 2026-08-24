@@ -2,7 +2,7 @@
 title: Open Questions
 type: profile
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: active
 created: 2026-08-24
 updated: 2026-08-24
@@ -30,15 +30,16 @@ with the `NEEDS INPUT` markers in the files themselves.
 
 ## Tier 1 — blocks almost everything
 
+**All answered 2026-08-24.** See the Answered table at the bottom.
+
+Follow-ups this raised, which are now the shortest path forward:
+
 | ✓ | Question | Lands in |
 |---|---|---|
-| ☐ | Which English do we write in — UK, US or AU? | `brand/brand-voice.md` |
-| ☐ | Where is the business based, and is it local, national or remote? | `company-profile.md` |
-| ☐ | What currency do we quote in? | `pricing-and-packaging.md` |
-| ☐ | Who is on the team, and who signs off client-facing work? | `company-profile.md` |
-| ☐ | Which ad platforms do we actually run? | `services.md` |
-| ☐ | Which website platform(s) do we build on? | `services.md` |
-| ☐ | Who are our current clients? | `../clients/` |
+| ☐ | **What does 911 Drain actually do, who do they sell to, and what are we measuring?** | `../clients/911drain/client-brief.md` |
+| ☐ | What services are we providing 911 Drain, and on what commercial terms? | `../clients/911drain/client-brief.md` |
+| ☐ | Which timezone is the working day for deadlines and scheduling? | `company-profile.md` |
+| ☐ | Any contractors, freelancers or partners used regularly? | `company-profile.md` |
 
 ## Tier 2 — needed for anything client-facing
 
@@ -50,7 +51,7 @@ with the `NEEDS INPUT` markers in the files themselves.
 | ☐ | Anti-profile — who we decline, and why | `positioning-and-icp.md` |
 | ☐ | Brand voice attributes, defined by contrast | `brand/brand-voice.md` |
 | ☐ | Two worked copy examples — one on-brand, one off-brand | `brand/brand-voice.md` |
-| ☐ | Logo files, colours (HEX), typefaces | `brand/visual-identity.md` |
+| ☐ | Logo files, colors (HEX), typefaces | `brand/visual-identity.md` |
 | ☐ | Nameable clients, case studies and results we're permitted to cite | `company-profile.md` |
 
 ## Tier 3 — commercial
@@ -98,4 +99,10 @@ losing the record of what was decided when.
 
 | Date | Question | Answer summary | Recorded in |
 |---|---|---|---|
-| — | — | — | — |
+| 2026-08-24 | Which English? | **US English** — workspace converted throughout | `brand/brand-voice.md` |
+| 2026-08-24 | Where based / how? | **Remote**, not location-tied | `company-profile.md` |
+| 2026-08-24 | Quoting currency? | **USD** | `pricing-and-packaging.md` |
+| 2026-08-24 | Team and sign-off? | **Karl** — owns relationships, delivery and final sign-off | `company-profile.md` |
+| 2026-08-24 | Ad platforms? | Meta (FB + IG), Google, TikTok, LinkedIn, plus client-directed | `services.md` |
+| 2026-08-24 | Website platform? | **Built as code with Claude, hosted on Vercel** | `services.md`, decision 0002 |
+| 2026-08-24 | Current clients? | 911 Drain (active); TripNerd, WaveReaction (prospects) | `../clients/README.md` |

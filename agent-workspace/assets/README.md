@@ -26,7 +26,7 @@ Create `<asset-name>.md`:
 title: Acme Plumbing — Logo Pack
 type: profile
 client: acme-plumbing
-owner: Hugh
+owner: Karl
 status: active
 created: 2026-08-24
 updated: 2026-08-24
@@ -38,7 +38,7 @@ tags: [assets, logo]
 **Location:** <where it lives — drive folder, DAM, client's server>
 **Access via:** <who can grant access>
 **Contains:** primary lockup (SVG, PNG), stacked, mono, favicon
-**Licence / usage rights:** <who owns it, what we may use it for>
+**License / usage rights:** <who owns it, what we may use it for>
 **Last verified:** 2026-08-24
 ```
 
@@ -47,7 +47,7 @@ checked in a year is a guess.
 
 ## Structure
 
-Organise by owner:
+Organize by owner:
 
 ```
 assets/
@@ -57,8 +57,8 @@ assets/
 
 ## Licensing
 
-Record the licence for every image, font and piece of stock media, and whether it covers
-client use. "We used it before" is not a licence, and an unlicensed image on a client's
+Record the license for every image, font and piece of stock media, and whether it covers
+client use. "We used it before" is not a license, and an unlicensed image on a client's
 site is their legal problem and our reputational one.
 
 **NEEDS INPUT:** where do Service Pow's master brand assets and client files actually

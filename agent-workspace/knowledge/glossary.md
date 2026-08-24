@@ -2,7 +2,7 @@
 title: Glossary
 type: research
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: active
 created: 2026-08-24
 updated: 2026-08-24

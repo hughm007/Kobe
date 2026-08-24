@@ -2,7 +2,7 @@
 title: Client Onboarding
 type: playbook
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: active
 created: 2026-08-24
 updated: 2026-08-24
@@ -13,7 +13,7 @@ tags: [client-lifecycle, onboarding, operations]
 
 **When to use:** from signature to first deliverable.
 
-The first three weeks set the tone for the engagement. A client who feels organised
+The first three weeks set the tone for the engagement. A client who feels organized
 handling in week one forgives a lot later; one who feels chaos never quite stops watching.
 
 ---
@@ -40,7 +40,7 @@ cp -r clients/_template clients/<client-slug>
 
 ## 3. Gather
 
-- ☐ Brand assets — logo files, fonts, colours, existing guidelines
+- ☐ Brand assets — logo files, fonts, colors, existing guidelines
 - ☐ Existing copy, photography, video
 - ☐ Product/service detail, pricing, terms
 - ☐ Customer testimonials and reviews

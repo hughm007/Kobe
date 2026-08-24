@@ -2,7 +2,7 @@
 title: Positioning and Ideal Client Profile
 type: profile
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: draft
 created: 2026-08-24
 updated: 2026-08-24

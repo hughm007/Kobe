@@ -2,7 +2,7 @@
 title: Service Pow Visual Identity
 type: profile
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: draft
 created: 2026-08-24
 updated: 2026-08-24
@@ -26,7 +26,7 @@ for the pointer convention).
 **Misuse — never do this:** NEEDS INPUT (stretching, recolouring, adding effects, placing
 on busy imagery, rebuilding the wordmark in a different typeface)
 
-## Colour
+## Color
 
 **NEEDS INPUT:** Fill in. HEX for digital, RGB for screen, CMYK for print, Pantone if the
 brand has one.
@@ -40,7 +40,7 @@ brand has one.
 | Background | | | |
 
 **Accessibility:** body text must meet WCAG AA contrast (4.5:1; 3:1 for large text)
-against its background. If a brand colour fails on white, record the compliant
+against its background. If a brand color fails on white, record the compliant
 alternative here rather than letting each designer improvise one.
 
 ## Typography
@@ -54,14 +54,14 @@ alternative here rather than letting each designer improvise one.
 | UI / small print | | | |
 | Web fallback stack | | | |
 
-Include licensing — self-hosted, Google Fonts, Adobe Fonts, or a purchased licence — and
-whether that licence covers client-facing use.
+Include licensing — self-hosted, Google Fonts, Adobe Fonts, or a purchased license — and
+whether that license covers client-facing use.
 
 ## Imagery and graphics
 
 **NEEDS INPUT:** Photography style, illustration or iconography style, treatment of
 screenshots and mockups, use of texture or gradient, and any stock library the company
-has a licence for.
+has a license for.
 
 ## Layout
 

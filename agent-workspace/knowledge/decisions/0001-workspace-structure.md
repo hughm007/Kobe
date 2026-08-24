@@ -2,7 +2,7 @@
 title: "0001 — Workspace structure and conventions"
 type: decision
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: active
 created: 2026-08-24
 updated: 2026-08-24
@@ -27,7 +27,7 @@ Constraints that shaped the design:
 - It has to be readable and editable by humans without special software.
 - It has to work in git, which rules out storing large binaries or any credential.
 - An agent has to be able to navigate it reliably, which means conventions strict enough
-  to be followed without judgement calls on every file.
+  to be followed without judgment calls on every file.
 - It starts almost empty and has to stay coherent as it fills.
 
 ## Options considered
@@ -67,12 +67,12 @@ The specific choices within that:
 
 ## Why
 
-The structure is optimised for one thing: **an agent or a human opening this folder cold
+The structure is optimized for one thing: **an agent or a human opening this folder cold
 and becoming useful within minutes.** That means a single authoritative entry point, a
 predictable place for every kind of artefact, and conventions consistent enough that
-"where does this go?" has one answer rather than a judgement call.
+"where does this go?" has one answer rather than a judgment call.
 
-The knowledge loop is deliberately the centre of the design rather than an add-on. An
+The knowledge loop is deliberately the center of the design rather than an add-on. An
 agency's real asset is what it has learned about its clients, its channels and its
 audiences — and that asset is normally lost because nobody writes it down while it's
 still fresh. Making capture a routine step, with a template and a home, is the difference

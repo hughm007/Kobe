@@ -2,7 +2,7 @@
 title: Service Pow — Company Profile
 type: profile
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: draft
 created: 2026-08-24
 updated: 2026-08-24
@@ -27,7 +27,7 @@ repeat back to someone else. Who exactly it's for, and what changes for them.
 Service Pow operates across marketing rather than in a single channel:
 
 - **Websites** — design, build, launch, iterate.
-- **Advertising** — paid media planning, creative, buying, optimisation.
+- **Advertising** — paid media planning, creative, buying, optimization.
 - **The wider umbrella** — brand, content, social, email, SEO, creative production,
   strategy and reporting.
 
@@ -41,16 +41,39 @@ once here rather than re-improvised each time.
 
 ## Team
 
-**NEEDS INPUT:** Who is on the team, their roles, and what each owns. At minimum: who
-signs off client-facing work, who owns the client relationship, who runs delivery.
+**Karl** — owns the business. Client relationships, delivery, and final sign-off on all
+client-facing work all route to Karl.
 
-The agent needs this to know who to route decisions and approvals to.
+Service Pow currently operates as a one-person business augmented by this agent. That
+shapes how the agent should work: there is no second reviewer to catch mistakes, so the
+quality bar in [`../operations/quality-bar.md`](../operations/quality-bar.md) is the only
+gate between a draft and a client. Treat it as load-bearing rather than a formality.
+
+**NEEDS INPUT:** any contractors, freelancers or partners used regularly, and what each
+covers.
 
 ## Where we operate
 
-**NEEDS INPUT:** Location, and whether the business is local, national or remote. This
-changes SEO strategy, ad geo-targeting, currency, legal/compliance regime and the
-timezone assumed in all scheduling.
+**Remote.** Service Pow is not tied to a location and works with clients wherever they are.
+
+| | |
+|---|---|
+| Operating model | Remote |
+| Currency | USD |
+| Language | US English |
+
+Two consequences the agent should carry into the work:
+
+- **Service Pow's own marketing has no local SEO angle.** Local tactics — Google Business
+  Profile, NAP consistency, location pages — apply to *clients* who serve a geographic
+  area, not to us.
+- **Client geography is per client, not assumed.** Ad geo-targeting, timezone for
+  scheduling, currency in client-facing documents and applicable regulation are all
+  properties of the individual client. Read it from their `client-brief.md`; never
+  default to ours.
+
+**NEEDS INPUT:** which timezone should be treated as the working day for deadlines and
+scheduling?
 
 ## Proof
 

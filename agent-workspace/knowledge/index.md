@@ -2,7 +2,7 @@
 title: Knowledge Index
 type: research
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: active
 created: 2026-08-24
 updated: 2026-08-24
@@ -24,6 +24,7 @@ open the file.
 | Date | Decision | Status |
 |---|---|---|
 | 2026-08-24 | [Workspace structure and conventions](decisions/0001-workspace-structure.md) | Accepted |
+| 2026-08-24 | [Websites built as code with Claude, hosted on Vercel](decisions/0002-web-delivery-model.md) | Accepted |
 
 ## Learnings
 

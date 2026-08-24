@@ -2,7 +2,7 @@
 title: Worklog
 type: profile
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: active
 created: 2026-08-24
 updated: 2026-08-24
@@ -31,6 +31,40 @@ picks up without re-deriving everything.
 
 Keep entries short. This is a log, not a report — three lines that are actually written
 beat a page that isn't.
+
+---
+
+## 2026-08-24 — Tier 1 answered; workspace populated
+
+**Did:** Converted the whole workspace from UK to US English (17 spellings, plus a GBP
+example changed to USD) — it had been drafted in UK English before the variant was
+confirmed. Filled Tier 1 of `OPEN-QUESTIONS.md` into the company files: Karl as sole
+owner and approver, remote operating model, USD, the four ad platforms plus
+client-directed, and the Claude-built / Vercel-hosted web stack. Created client folders
+for 911 Drain (active) and TripNerd and WaveReaction (prospects).
+
+**Decided:**
+- Recorded [decision 0002](../knowledge/decisions/0002-web-delivery-model.md) — websites
+  built as code with Claude, hosted on Vercel. Written up as an existing practice rather
+  than a new choice, because its consequences were undocumented and they're significant.
+- Prospects live in `clients/` with `status: prospect` rather than in a separate folder,
+  with a hard rule that prospect work is research and drafts only — no builds, no spend,
+  nothing sent without Karl's go-ahead.
+- Noted in `services.md` that Instagram is a Meta placement rather than a separate ad
+  platform. It's one account, not two, and the distinction matters for how campaigns get
+  structured and reported.
+
+**Learned:** Nothing from client work yet — still no history to learn from.
+
+**Open:** **911 Drain's brief is empty.** It's the active account and the agent knows
+nothing about the business beyond the name. The name implies emergency drain services;
+that's flagged in the brief as an unconfirmed inference, explicitly not a fact, so it
+can't leak into copy or targeting. Also open: Service Pow's own brand voice and visual
+identity, pricing figures, and Tiers 2–5.
+
+**Next:** Fill `clients/911drain/client-brief.md` — what the business does, who buys,
+what we're accountable for, and how we're measured. That single file unblocks all real
+work on the main account.
 
 ---
 

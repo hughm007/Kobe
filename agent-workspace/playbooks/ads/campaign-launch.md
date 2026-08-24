@@ -2,7 +2,7 @@
 title: Campaign Launch
 type: playbook
 client: internal
-owner: NEEDS INPUT
+owner: Karl
 status: active
 created: 2026-08-24
 updated: 2026-08-24
@@ -12,9 +12,12 @@ tags: [ads, paid-media, campaign, launch]
 # Campaign Launch
 
 **When to use:** any paid campaign, on any platform.
-**NEEDS INPUT:** platform-specific build steps once the platforms are confirmed in
-[`../../company/services.md`](../../company/services.md). The structure below holds
-regardless of channel.
+**Platforms we run:** Meta (Facebook and Instagram placements, one Ads Manager account),
+Google (Search, Performance Max, Display, YouTube), TikTok, LinkedIn — plus whatever else
+a client's audience justifies. See [`../../company/services.md`](../../company/services.md).
+
+The structure below is deliberately channel-agnostic; it holds on any platform, including
+one we're running for the first time.
 
 ---
 
@@ -78,12 +81,12 @@ Write it into the client's `campaigns/` folder before building anything.
 
 - Confirm delivery started and spend is pacing as expected
 - **First 24 hours:** check for the loud failures — no delivery, runaway spend,
-  disapprovals, broken destination. Don't optimise yet.
+  disapprovals, broken destination. Don't optimize yet.
 - **First week:** let the platform learn. Resist reacting to early noise; premature
   changes reset learning and cost more than the impatience saves.
 - Verify conversions are recording against real outcomes, not phantom events
 
-## 5. Optimise
+## 5. Optimize
 
 Change one meaningful thing at a time, and write down what you changed and why. A
 campaign with an undocumented change history can't be learned from.

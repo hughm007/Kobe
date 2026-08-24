@@ -9,7 +9,7 @@ Evidence from doing the work. One learning per file.
 
 | Weak | Strong |
 |---|---|
-| "Video performed well" | "15-second vertical video cut CPA from £42 to £27 vs. static, across £3,400 spend over 3 weeks" |
+| "Video performed well" | "15-second vertical video cut CPA from $42 to $27 vs. static, across $3,400 spend over 3 weeks" |
 | "The client liked the second option" | "Clients in this sector respond better to a single recommendation than to three options — choosing feels like risk to them" |
 | "SEO improved" | "Adding FAQ schema to the 6 service pages lifted impressions 34% in 8 weeks with no ranking change — the gain was in rich result eligibility" |
 

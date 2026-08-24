@@ -27,5 +27,5 @@ Market, competitor, audience and channel research. The reference material behind
 - **Note the method.** What you looked at, how many, over what period. It's how a reader
   judges the weight to give it.
 - **Re-check before reuse.** Before citing research in a pitch or a strategy, confirm it's
-  still true. Especially platform behaviour and competitor claims.
+  still true. Especially platform behavior and competitor claims.
 - **Index it** in [`../index.md`](../index.md).

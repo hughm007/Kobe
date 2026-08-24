@@ -58,7 +58,7 @@ the specifics that cause a re-export when they're missing.
 ## Mandatories
 
 - ☐ Logo — which version, placed where
-- ☐ Brand colours and typefaces
+- ☐ Brand colors and typefaces
 - ☐ Call to action wording
 - ☐ URL / destination
 - ☐ Legal or regulatory text

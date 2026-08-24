@@ -2,7 +2,7 @@
 title: "<Client Name> — Client Brief"
 type: brief
 client: <client-slug>
-owner: NEEDS INPUT
+owner: Karl
 status: draft
 created: YYYY-MM-DD
 updated: YYYY-MM-DD

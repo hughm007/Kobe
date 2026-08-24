@@ -2,7 +2,7 @@
 title: "<Client Name> — Brand Guide"
 type: brief
 client: <client-slug>
-owner: NEEDS INPUT
+owner: Karl
 status: draft
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
@@ -14,7 +14,7 @@ tags: [client, brand, voice, design]
 How this client sounds and looks. **This governs every asset produced for them** — it
 overrides Service Pow's own house voice and visual identity in all their materials.
 
-If the client supplied a formal brand guide, record where the master lives and summarise
+If the client supplied a formal brand guide, record where the master lives and summarize
 the working essentials here. If they didn't, build this from their existing materials and
 mark what's inferred rather than confirmed — the distinction matters when a client
 disputes a choice later.
@@ -54,8 +54,8 @@ page copy than the brand guide itself, because it's the language that already co
 |---|---|
 | Logo files (location) | |
 | Logo rules / misuse | |
-| Primary colour | HEX: |
-| Secondary colour(s) | HEX: |
+| Primary color | HEX: |
+| Secondary color(s) | HEX: |
 | Accent | HEX: |
 | Heading typeface | |
 | Body typeface | |
@@ -64,7 +64,7 @@ page copy than the brand guide itself, because it's the language that already co
 | Iconography / illustration | |
 
 **Accessibility:** confirm text/background combinations meet WCAG AA (4.5:1 body,
-3:1 large text). Record compliant alternatives for any brand colour that fails.
+3:1 large text). Record compliant alternatives for any brand color that fails.
 
 ## Assets
 
