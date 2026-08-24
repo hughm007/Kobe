@@ -100,6 +100,10 @@ class VoiceConversation:
         self.state = "LISTENING"
         self.timer: TurnTimer | None = None
         self.turns_completed = 0
+        # While a confirmation is pending, final transcripts are answers to the
+        # gate, not new turns.
+        self._confirm_answers: "queue.Queue[str]" = queue.Queue()
+        self._awaiting_confirmation = threading.Event()
 
     # ------------------------------------------------------------- lifecycle
 
@@ -164,6 +168,9 @@ class VoiceConversation:
             if not transcript:
                 return
             if self._is_self_echo(transcript):
+                return
+            if self._awaiting_confirmation.is_set():
+                self._confirm_answers.put(transcript)
                 return
             if self.state in ("THINKING", "SPEAKING") or self.player.is_playing:
                 # A real interruption — whether generation is still running or
@@ -261,6 +268,43 @@ class VoiceConversation:
             timer.mark("t4_first_phrase")
         self.state = "SPEAKING"
         self._phrases.put(speakable)
+
+    # -------------------------------------------------------- confirmation
+
+    def ask_confirmation(self, question: str) -> str | None:
+        """Speak the gate's question, then wait for Karl's spoken answer.
+
+        Called from the agent thread mid-turn. The question bypasses the
+        phrase queue (which belongs to the reply) and is spoken directly.
+        Returns None on timeout — the gate treats that as a decline, so an
+        unattended question can never hang the turn.
+        """
+        self.show(f"{self.agent.config.name} asks › {question}")
+        self._drain_answers()
+        self._awaiting_confirmation.set()
+        try:
+            try:
+                for chunk in self.tts.stream_phrase(spoken_text(question)):
+                    self.player.feed(chunk)
+            except Exception as exc:  # noqa: BLE001 — question still shown on screen
+                self.say(f"⚠ {exc}")
+            timeout = getattr(self.agent.config.gate, "voice_timeout_seconds", 30.0)
+            try:
+                answer = self._confirm_answers.get(timeout=timeout)
+            except queue.Empty:
+                self.say("· no answer — treating that as a no")
+                return None
+            self.show(f"you (heard) › {answer}")
+            return answer
+        finally:
+            self._awaiting_confirmation.clear()
+
+    def _drain_answers(self) -> None:
+        try:
+            while True:
+                self._confirm_answers.get_nowait()
+        except queue.Empty:
+            pass
 
     # ---------------------------------------------------------- the speaker
 

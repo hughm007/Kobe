@@ -140,6 +140,7 @@ class Agent:
         one clear line and asks for the next turn. Never a stack trace.
         """
         self._emit("turn.start", {"mode": self.mode, "text": user_text})
+        usage_before = Usage(self.usage.input_tokens, self.usage.output_tokens)
         self.messages.append({"role": "user", "content": user_text})
         self._trim_history()
 
@@ -222,7 +223,11 @@ class Agent:
         if result is not None and result.stop_reason == "refusal":
             return REFUSAL_MESSAGE
         reply = "\n\n".join(part for part in final_text_parts if part).strip()
-        self._emit("turn.end", {"reply": reply})
+        turn_usage = {
+            "input_tokens": self.usage.input_tokens - usage_before.input_tokens,
+            "output_tokens": self.usage.output_tokens - usage_before.output_tokens,
+        }
+        self._emit("turn.end", {"reply": reply, **turn_usage})
         return reply
 
     def _run_tool(self, name: str, arguments: dict[str, Any]) -> ToolResult:

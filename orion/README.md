@@ -58,6 +58,42 @@ Test each layer on its own before blaming the whole pipeline:
 | `orion-voicetest agent-tts` | type → Orion answers aloud (no Deepgram) |
 | `orion-voicetest pipeline` | the full loop — interrupt it, hold five turns |
 
+## The rails
+
+Karl's "never without asking" list is enforced by a two-step gate that sits
+between the model choosing a tool and the tool running — identical for typed,
+spoken, and heartbeat turns:
+
+1. Orion states plainly what it's about to do; any natural "yes" passes step one.
+2. It asks **"Are you sure you want to confirm?"** — only the exact word
+   `confirm` executes. Anything else, or silence, is a decline.
+
+Per-action, never generalising. The gate list is config
+(`[gate].always_confirm` in orion.toml) plus what tools declare themselves
+(overwrites, `forget`). The heartbeat never gets a gate at all — unattended
+consequential actions are declined by default and leave a note.
+
+- **Audit**: everything lands in `state/audit.jsonl` — turns, tool runs, gate
+  decisions, per-turn tokens. `/cost` shows session and lifetime spend.
+- **Kill switch**: `/pause` holds all proactive behaviour (heartbeat included);
+  conversation keeps working. `/resume` releases it.
+- **Injection posture**: everything Orion reads arrives wrapped as untrusted
+  data — a file ordering it to act can't authorise anything; the gate still asks.
+
+## The heartbeat
+
+```bash
+uv run orion-heartbeat    # separate process; move it to an always-on box later
+```
+
+Checks and their thresholds live in `orion.toml` (`[checks.*]`). Shipped:
+`inbox_triage` (untriaged files in `inbox/`, escalates if ignored) and
+`open_loops` (daily: quiet worklog, active client with an empty brief, stale
+drafts). Notices are **held** in `state/notices.jsonl` until you're back —
+the REPL shows "while you were away" — and every one is dismissible via
+`/notices`. Quiet hours defer non-urgent checks; restarts resume the schedule
+instead of refiring it.
+
 ## Run it without an API key
 
 ```bash

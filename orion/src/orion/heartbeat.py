@@ -31,6 +31,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Callable
 
+from .audit import AuditLog
 from .config import Config, get_config
 from .notices import NoticeBoard
 
@@ -72,6 +73,7 @@ class Heartbeat:
         self.config = config
         self.checks = checks
         self.board = board or NoticeBoard(config.state_path("notices.jsonl"))
+        self.audit = AuditLog(config.state_path("audit.jsonl"))
         self.schedule_path = config.state_path("schedule.json")
         self.pause_path = config.state_path("PAUSED")
         hb = config.raw.get("heartbeat", {})
@@ -133,12 +135,17 @@ class Heartbeat:
 
             self._running.add(check.name)
             try:
+                before = len(self.board.pending())
                 check.run(self.config, self.board, check.settings)
                 ran.append(check.name)
+                surfaced = len(self.board.pending()) - before
+                if surfaced > 0:
+                    self.audit.log("heartbeat.surfaced", {"check": check.name, "count": surfaced})
             except Exception as exc:  # noqa: BLE001 — one bad check never kills the pulse
                 self.board.post(
                     check.name, "log", f"check failed: {type(exc).__name__}: {exc}"
                 )
+                self.audit.log("heartbeat.check_failed", {"check": check.name, "error": str(exc)})
             finally:
                 self._running.discard(check.name)
                 schedule[check.name] = now + check.interval_seconds

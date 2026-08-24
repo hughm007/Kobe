@@ -16,4 +16,11 @@ def default_registry(config) -> "ToolRegistry":
     drafts.register(registry, config)
     worklog.register(registry, config)
     memory_tools.register(registry, config)
+
+    # Karl's always-ask list from orion.toml wins over what code declared:
+    # adding a tool name there gates it with no code change.
+    for name in getattr(config, "gate", None).always_confirm if getattr(config, "gate", None) else ():
+        tool_obj = registry.get(name)
+        if tool_obj is not None:
+            tool_obj.consequential = True
     return registry

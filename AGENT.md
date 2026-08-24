@@ -143,8 +143,8 @@ absent human, and it never proceeds by assuming permission.
 | Mode | How | Status |
 |---|---|---|
 | **Typed** | `uv run orion` | The default, and it never goes away — it's how every future change gets debugged without talking to a computer, and the fallback when audio misbehaves. |
-| **Push-to-talk** | `/voice` inside the REPL | Hold a key (or Enter-toggle) to speak, release to send. |
-| **Open-mic wake word** | — | Not built. Later, and only once everything else is solid. |
+| **Continuous voice** | `/voice` inside the REPL | Open mic with Deepgram Flux turn detection: speak naturally, no Enter, no button. Interrupt Orion mid-sentence and it stops and listens. (Karl's directive upgraded this from push-to-talk during the build.) |
+| **Wake word** | — | Not built. Later, and only once everything else is solid. |
 
 ---
 
@@ -172,12 +172,12 @@ Each tier runs and verifies on its own before the next begins.
 | Tier | What | State |
 |---|---|---|
 | 0 | Interview + this spec | ✅ |
-| 1 | The brain — text conversation loop | |
-| 2 | The hands — tool registry, first three capabilities | |
-| 3 | Ears and mouth — push-to-talk voice | |
-| 4 | The memory — durable across restarts | |
-| 5 | The heartbeat — proactive checks, held notices | |
-| 6 | The rails — confirmation gate, config, audit, kill switch | |
+| 1 | The brain — text conversation loop | ✅ |
+| 2 | The hands — tool registry, first three capabilities | ✅ |
+| 3 | Ears and mouth — continuous voice with barge-in | ✅ built; live audio pending keys + a real machine |
+| 4 | The memory — durable across restarts | ✅ |
+| 5 | The heartbeat — proactive checks, held notices | ✅ |
+| 6 | The rails — confirmation gate, config, audit, kill switch | ✅ |
 
 ---
 

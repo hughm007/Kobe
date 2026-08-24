@@ -12,7 +12,9 @@ import sys
 from typing import Callable
 
 from .agent import Agent
+from .audit import AuditLog
 from .config import ConfigError, get_config
+from .confirm import TwoStepGate
 from .prompts import PromptError
 from .memory import MemoryStore
 from .notices import NoticeBoard
@@ -212,12 +214,14 @@ class Repl:
             return
 
         self.agent.set_mode("voice")
+        previous_gate = self.agent.confirm
         convo = VoiceConversation(
             self.agent, stt, speaker, player,
             voice_config=config.voice,
             say=lambda line: print(self.style.dim("  " + line)),
             show=print,
         )
+        self.agent.confirm = TwoStepGate(convo.ask_confirmation)
         print(self.style.dim("\n  listening — speak naturally, interrupt freely, Ctrl-C returns to text\n"))
         running = threading.Event()
         running.set()
@@ -232,6 +236,7 @@ class Repl:
             mic.stop()
             player.close()
             self.agent.set_mode("text")
+            self.agent.confirm = previous_gate
         print(self.style.dim("\n  back to text\n"))
 
     def cmd_cost(self, _: str) -> None:
@@ -239,7 +244,18 @@ class Repl:
         print(
             self.style.dim(
                 f"  {u.input_tokens:,} in / {u.output_tokens:,} out "
-                f"— ${self.agent.cost_usd:.4f} this session\n"
+                f"— ${self.agent.cost_usd:.4f} this session"
+            )
+        )
+        audit = AuditLog(self.agent.config.state_path("audit.jsonl"))
+        model = self.agent.config.model
+        life_in, life_out, life_cost = audit.lifetime_cost(
+            model.price_input_per_mtok, model.price_output_per_mtok
+        )
+        print(
+            self.style.dim(
+                f"  {life_in:,} in / {life_out:,} out — ${life_cost:.4f} lifetime "
+                f"(audit: {audit.path})\n"
             )
         )
 
@@ -315,7 +331,22 @@ def main() -> int:
         config = get_config()
         provider = build_provider(config)
         memories = MemoryStore(config.state_path("memory.jsonl")).as_prompt_section()
-        agent = Agent(config, provider, tools=default_registry(config), memories=memories)
+        audit = AuditLog(config.state_path("audit.jsonl"))
+
+        def ask_typed(question: str) -> str | None:
+            try:
+                return input(f"\n  ⚠ {question}\n  › ")
+            except (EOFError, KeyboardInterrupt):
+                return None
+
+        agent = Agent(
+            config,
+            provider,
+            tools=default_registry(config),
+            memories=memories,
+            confirm=TwoStepGate(ask_typed),
+            on_event=lambda kind, data: audit.log(kind, data),
+        )
     except (ConfigError, PromptError, ProviderError) as exc:
         print(f"\n  {exc}\n", file=sys.stderr)
         return 1

@@ -97,6 +97,15 @@ class VoiceConfig:
 
 
 @dataclass(frozen=True)
+class GateConfig:
+    # Tool names that must always stop for confirmation, on top of what the
+    # tools themselves declare. Config wins: the gate list is Karl's, not code's.
+    always_confirm: tuple = ()
+    # Seconds a spoken confirmation waits before deciding nobody answered.
+    voice_timeout_seconds: float = 30.0
+
+
+@dataclass(frozen=True)
 class ConversationConfig:
     max_history_messages: int = 60
     max_tool_iterations: int = 8
@@ -112,6 +121,7 @@ class Config:
     model: ModelConfig
     conversation: ConversationConfig
     voice: VoiceConfig
+    gate: GateConfig
     raw: dict = field(default_factory=dict, repr=False)
 
     @property
@@ -142,7 +152,9 @@ def load_config(home: Path | None = None) -> Config:
     model = data.get("model", {})
     conversation = data.get("conversation", {})
     voice = data.get("voice", {})
+    gate = data.get("gate", {})
 
+    known_gate = {f for f in GateConfig.__dataclass_fields__}
     known_voice = {f for f in VoiceConfig.__dataclass_fields__}
     known_model = {f for f in ModelConfig.__dataclass_fields__}
     known_conv = {f for f in ConversationConfig.__dataclass_fields__}
@@ -158,6 +170,10 @@ def load_config(home: Path | None = None) -> Config:
             **{k: v for k, v in conversation.items() if k in known_conv}
         ),
         voice=VoiceConfig(**{k: v for k, v in voice.items() if k in known_voice}),
+        gate=GateConfig(**{
+            k: (tuple(v) if k == "always_confirm" else v)
+            for k, v in gate.items() if k in known_gate
+        }),
         raw=data,
     )
 

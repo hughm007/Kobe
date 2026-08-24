@@ -91,3 +91,25 @@ platforms are all `NEEDS INPUT`, collected in
 **Next:** Work through Tier 1 of `OPEN-QUESTIONS.md`. Seven answers — writing variant,
 location, currency, team, ad platforms, web platform, current clients — unblock most
 day-to-day work in here.
+
+## 2026-08-24 — Orion built: the voice-first agent harness (Tiers 0–6)
+
+- Built `orion/` at the repo root: Karl's voice-first assistant. Spec and
+  guardrails live in `AGENT.md` (repo root) — the persona there is read
+  verbatim into the system prompt at runtime.
+- Six tiers, each tested before the next: text brain → tool registry
+  (workspace search/read, gated drafts, append-only worklog + learnings,
+  memory) → continuous voice (Deepgram Flux → same brain → ElevenLabs, with
+  barge-in and self-echo suppression) → durable memory → heartbeat
+  (inbox_triage + open_loops checks, held notices, quiet hours, kill switch)
+  → rails (two-step confirmation gate — yes, then the exact word "confirm" —
+  audit trail, config-over-code).
+- 79 automated tests pass with no API keys. Live voice needs Karl's machine
+  and keys: see `orion/VERIFY.md`. ElevenLabs key still missing; Deepgram key
+  was never actually received despite being referenced — both flagged.
+- Decisions of note: manual agent loop (gate sits between tool choice and
+  execution, identical for typed/spoken/heartbeat turns); everything read is
+  wrapped untrusted; heartbeat turns get no confirmer at all, so unattended
+  consequential actions decline by default.
+- Open: fill in the two keys, run VERIFY.md tier by tier, then tune
+  `[voice]` thresholds to taste.
