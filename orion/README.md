@@ -75,6 +75,22 @@ Test each layer on its own before blaming the whole pipeline:
 | `orion-voicetest agent-tts` | type → Orion answers aloud (no Deepgram) |
 | `orion-voicetest pipeline` | the full loop — interrupt it, hold five turns |
 
+## The HUD
+
+Orion serves its own command-center page at `http://127.0.0.1:8765` (localhost
+only, never a network service). It opens automatically when Orion starts —
+`/hud` reprints or reopens it — and mirrors the live agent over a server-sent
+event stream: system status, the tool registry (tools flash as they run), the
+conversation feed with streaming replies, LISTENING/THINKING/SPEAKING state,
+real T0–T6 latency, session tokens and cost, heartbeat notices (dismissible),
+and the kill-switch state. The input bar sends a turn through the same agent
+core as typing or speaking; the stop button is barge-in from the screen.
+
+Every value on it is real. There are no fake gauges: the concept image's
+fictional telemetry became live equivalents, and things that don't exist
+(a wake word) say so instead of pretending. `[hud]` in orion.toml controls
+port and auto-open.
+
 ## The rails
 
 Karl's "never without asking" list is enforced by a two-step gate that sits

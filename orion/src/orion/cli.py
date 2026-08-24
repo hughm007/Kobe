@@ -16,6 +16,7 @@ from .audit import AuditLog
 from .config import ConfigError, get_config
 from .confirm import TwoStepGate
 from .prompts import PromptError
+from .hud.bus import EventBus
 from .memory import MemoryStore
 from .notices import NoticeBoard
 from .provider import ProviderError, build_provider
@@ -50,10 +51,12 @@ class Style:
 
 
 class Repl:
-    def __init__(self, agent: Agent, style: Style | None = None) -> None:
+    def __init__(self, agent: Agent, style: Style | None = None, hud=None, bus: EventBus | None = None) -> None:
         self.agent = agent
         self.style = style or Style(_supports_colour())
         self.board = NoticeBoard(agent.config.state_path("notices.jsonl"))
+        self.hud = hud
+        self.bus = bus
         self.running = True
         self.commands: dict[str, Callable[[str], None]] = {
             "help": self.cmd_help,
@@ -68,6 +71,7 @@ class Repl:
             "notices": self.cmd_notices,
             "pause": self.cmd_pause,
             "resume": self.cmd_resume,
+            "hud": self.cmd_hud,
         }
 
     # -------------------------------------------------------------- commands
@@ -83,6 +87,7 @@ class Repl:
             ("/notices", "what the heartbeat surfaced (/notices dismiss <id>|all)"),
             ("/pause", "kill switch: hold all proactive behaviour"),
             ("/resume", "let the heartbeat beat again"),
+            ("/hud", "the command-center page: show the URL, open the browser"),
             ("/cost", "tokens and spend this session"),
             ("/quit", "leave"),
         ]
@@ -165,6 +170,17 @@ class Repl:
         else:
             print(self.style.dim("  it wasn't paused\n"))
 
+    def cmd_hud(self, _: str) -> None:
+        if self.hud is None:
+            print(self.style.dim("  the HUD is disabled — set [hud].enabled = true in orion.toml\n"))
+            return
+        print(self.style.dim(f"  HUD: {self.hud.url}\n"))
+        import webbrowser
+        try:
+            webbrowser.open(self.hud.url)
+        except Exception:  # noqa: BLE001 — headless is fine, the URL is printed
+            pass
+
     def cmd_memory(self, _: str) -> None:
         store = MemoryStore(self.agent.config.state_path("memory.jsonl"))
         memories = store.load()
@@ -220,7 +236,11 @@ class Repl:
             voice_config=config.voice,
             say=lambda line: print(self.style.dim("  " + line)),
             show=print,
+            on_hud=(self.bus.publish if self.bus is not None else None),
         )
+        if self.hud is not None:
+            self.hud.state.conversation = convo
+            self.bus.publish("voice.state", {"state": "LISTENING"})
         self.agent.confirm = TwoStepGate(convo.ask_confirmation)
         print(self.style.dim("\n  listening — speak naturally, interrupt freely, Ctrl-C returns to text\n"))
         running = threading.Event()
@@ -237,6 +257,9 @@ class Repl:
             player.close()
             self.agent.set_mode("text")
             self.agent.confirm = previous_gate
+            if self.hud is not None:
+                self.hud.state.conversation = None
+                self.bus.publish("voice.state", {"state": "IDLE"})
         print(self.style.dim("\n  back to text\n"))
 
     def cmd_cost(self, _: str) -> None:
@@ -281,6 +304,8 @@ class Repl:
             tag = "fake provider — no model calls"
         print()
         print(f"  {self.style.bold(cfg.name)} {self.style.dim('· ' + tag)}")
+        if self.hud is not None:
+            print(self.style.dim(f"  HUD  {self.hud.url}"))
         print(self.style.dim("  /help for commands, /quit to leave"))
         print()
 
@@ -339,19 +364,45 @@ def main() -> int:
             except (EOFError, KeyboardInterrupt):
                 return None
 
+        bus = EventBus()
+
+        def on_event(kind: str, data: dict) -> None:
+            if kind != "turn.delta":  # deltas are for the live feed, not the record
+                audit.log(kind, data)
+            bus.publish(kind, data)
+
         agent = Agent(
             config,
             provider,
             tools=default_registry(config),
             memories=memories,
             confirm=TwoStepGate(ask_typed),
-            on_event=lambda kind, data: audit.log(kind, data),
+            on_event=on_event,
         )
+
+        hud = None
+        hud_config = config.raw.get("hud", {})
+        if hud_config.get("enabled", True):
+            from .hud.server import start_hud
+
+            try:
+                hud = start_hud(config, agent, bus)
+                if hud_config.get("auto_open", True):
+                    import webbrowser
+
+                    try:
+                        webbrowser.open(hud.url)
+                    except Exception:  # noqa: BLE001 — headless is fine
+                        pass
+            except OSError as exc:
+                print(f"  HUD couldn't start ({exc}) — continuing without it", file=sys.stderr)
     except (ConfigError, PromptError, ProviderError) as exc:
         print(f"\n  {exc}\n", file=sys.stderr)
         return 1
 
-    Repl(agent).run()
+    Repl(agent, hud=hud, bus=bus).run()
+    if hud is not None:
+        hud.stop()
     return 0
 
 

@@ -105,3 +105,11 @@ active_clients = "911drain"
 always_confirm = ["forget"]
 # How long a spoken confirmation waits for an answer before declining.
 voice_timeout_seconds = 30.0
+
+[hud]
+# The command-center page, served by Orion itself at http://127.0.0.1:<port>.
+# Localhost only — it is a window onto your own machine, never a network service.
+enabled = true
+port = 8765
+# Open the browser automatically when Orion starts.
+auto_open = true

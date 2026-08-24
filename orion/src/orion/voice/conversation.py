@@ -82,6 +82,7 @@ class VoiceConversation:
         voice_config,
         say: Callable[[str], None] = print,       # status lines to the terminal
         show: Callable[[str], None] = print,      # transcripts and replies
+        on_hud: Callable[[str, dict], None] | None = None,  # HUD event feed
     ) -> None:
         self.agent = agent
         self.stt = stt
@@ -90,6 +91,7 @@ class VoiceConversation:
         self.config = voice_config
         self.say = say
         self.show = show
+        self.on_hud = on_hud
 
         self.echo_guard = EchoGuard(voice_config.self_echo_similarity)
         self.cancel_generation = threading.Event()
@@ -198,6 +200,13 @@ class VoiceConversation:
         self.interrupt()
         self.say("· listening")
 
+    def _hud(self, kind: str, data: dict) -> None:
+        if self.on_hud is not None:
+            try:
+                self.on_hud(kind, data)
+            except Exception:  # noqa: BLE001 — the HUD never breaks a turn
+                pass
+
     def interrupt(self) -> None:
         """Stop everything Orion is saying or about to say. Immediately."""
         self.cancel_generation.set()      # 4. abort the model's generation
@@ -205,6 +214,7 @@ class VoiceConversation:
         self._drain_phrases()             # 2. drop queued phrases
         self.player.stop_playback()       # 1. silence the speakers
         self.state = "LISTENING"
+        self._hud("voice.state", {"state": "LISTENING"})
 
     def _drain_phrases(self) -> None:
         try:
@@ -226,6 +236,7 @@ class VoiceConversation:
         self.cancel_generation = threading.Event()
         self.tts.cancel = threading.Event()
         self.state = "THINKING"
+        self._hud("voice.state", {"state": "THINKING"})
 
         self._agent_thread = threading.Thread(
             target=self._agent_turn, args=(transcript,), daemon=True
@@ -266,6 +277,8 @@ class VoiceConversation:
             return
         if timer:
             timer.mark("t4_first_phrase")
+        if self.state != "SPEAKING":
+            self._hud("voice.state", {"state": "SPEAKING"})
         self.state = "SPEAKING"
         self._phrases.put(speakable)
 
@@ -341,6 +354,10 @@ class VoiceConversation:
     def _finish_turn(self) -> None:
         if self.state == "SPEAKING" or self.state == "THINKING":
             self.state = "LISTENING"
-        if self.timer and self.config.latency_log:
-            self.say("· " + self.timer.report())
+            self._hud("voice.state", {"state": "LISTENING"})
+        if self.timer:
+            if self.config.latency_log:
+                self.say("· " + self.timer.report())
+            total = self.timer._delta_ms("t0_speech_end", "t6_audio_start")
+            self._hud("voice.latency", {"report": self.timer.report(), "total_ms": total})
         self.timer = None

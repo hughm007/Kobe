@@ -13,7 +13,11 @@ def make_board(config) -> NoticeBoard:
 
 
 def make_heartbeat(config, checks) -> Heartbeat:
-    return Heartbeat(config, checks, board=make_board(config))
+    heartbeat = Heartbeat(config, checks, board=make_board(config))
+    # Tests must not depend on what time of day they run: quiet hours off by
+    # default; the quiet-hours test turns them back on explicitly.
+    heartbeat.quiet_hours = None
+    return heartbeat
 
 
 def counting_check(name="probe", interval=60, calls=None, settings=None, body=None):

@@ -157,6 +157,7 @@ class Agent:
             if cancel is not None and cancel.is_set():
                 raise _CancelSignal()
             partial.append(chunk)
+            self._emit("turn.delta", {"chunk": chunk})
             if on_text_delta is not None:
                 on_text_delta(chunk)
 
