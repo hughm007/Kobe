@@ -43,6 +43,11 @@
   .clock{font-size:19px;color:var(--white);letter-spacing:2px}
   .date{font-size:10px;color:var(--text-dim);letter-spacing:2px}
   .date::after{content:" ◆";color:var(--cyan);font-size:8px}
+  .hbtn{background:none;border:1px solid var(--line);color:var(--text-dim);
+    font:inherit;font-size:9px;letter-spacing:1px;padding:3px 8px;cursor:pointer}
+  .hbtn:hover{color:var(--cyan);border-color:var(--cyan)}
+  body.standby .panel,body.standby .hdr,body.standby .foot,body.standby .cmdstrip{opacity:.62;transition:opacity .6s}
+  body.error .bigstate{color:var(--bad);text-shadow:0 0 16px #ff5d73cc}
 
   .cmdstrip{flex:0 0 auto;text-align:center;padding:4px 0 2px}
   .cmdstrip canvas{width:520px;height:26px;display:block;margin:0 auto}
@@ -170,6 +175,10 @@
   <div class="right">
     <div class="clock" id="clock">--:--:--</div>
     <div class="date" id="date">—</div>
+    <div style="margin-top:4px">
+      <button class="hbtn" id="standbybtn" title="stop listening — mic and Deepgram off">⏻ STANDBY</button>
+      <button class="hbtn" id="fsbtn" title="fullscreen">⛶</button>
+    </div>
   </div>
 </header>
 
@@ -257,7 +266,10 @@
 "use strict";
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-let STATE = null, voiceState = "IDLE", speaking = false, listening = false;
+let STATE = null, voiceState = "STANDBY", speaking = false, listening = false;
+const levels = {mic: 0, out: 0};          // real PCM amplitude from the backend
+setInterval(() => { levels.mic *= 0.82; levels.out *= 0.82; }, 90);  // decay between events
+let wakeHoldUntil = 0, pendingState = null, stateInitialised = false;
 
 /* ---------- clock ---------- */
 setInterval(() => {
@@ -305,7 +317,13 @@ function renderState(s){
   $("f-kill").textContent = s.paused ? "PAUSED" : "LIVE";
   $("f-kill").style.color = s.paused ? "var(--warn)" : "var(--good)";
   $("f-voice").textContent = s.voice_live ? "CONTINUOUS · BARGE-IN" : "TEXT";
-  if (!s.voice_live && voiceState === "IDLE") setCmd(s.paused ? "PROACTIVE SYSTEMS PAUSED" : "READY FOR COMMAND");
+  if (s.session_state && s.session_state !== "TEXT" &&
+      ["STANDBY", "LISTENING", "ERROR"].includes(s.session_state) &&
+      (!stateInitialised || s.session_state !== voiceState) &&
+      Date.now() > wakeHoldUntil) {
+    setVoiceState(s.session_state, s.session_detail);
+  }
+  stateInitialised = true;
   renderNotices(s.notices);
 }
 function renderNotices(list){
@@ -340,28 +358,47 @@ function flashModule(name){
 
 /* ---------- event stream ---------- */
 function setCmd(text){ $("cmdlabel").textContent = text; }
-function setVoiceState(state){
+function setVoiceState(state, detail){
+  if (state === "THINKING") state = "PROCESSING";
+  if (state === "IDLE") state = STATE && STATE.voice_live ? "LISTENING" : "STANDBY";
+  // WAKING holds the screen briefly so the wake-up reads as a moment.
+  const now = Date.now();
+  if (state === "WAKING") { wakeHoldUntil = now + 650; pendingState = null; }
+  else if (now < wakeHoldUntil) { pendingState = [state, detail]; setTimeout(() => {
+      if (pendingState) { const [ps, pd] = pendingState; pendingState = null; setVoiceState(ps, pd); }
+    }, wakeHoldUntil - now + 20); return; }
   voiceState = state;
-  listening = state === "LISTENING"; speaking = state === "SPEAKING";
-  $("bigstate").textContent = state === "IDLE" ? "" : state;
-  $("vstate").textContent = state === "IDLE" ? (STATE && STATE.voice_live ? "LISTENING…" : "TEXT MODE") : state + "…";
-  setCmd(state === "LISTENING" ? "LISTENING FOR COMMAND" :
-         state === "THINKING" ? "PROCESSING" :
-         state === "SPEAKING" ? "RESPONDING" : "READY FOR COMMAND");
-  $("micbtn").className = "mic" + (speaking || state === "THINKING" ? " stop" : "");
-  $("micbtn").textContent = speaking || state === "THINKING" ? "◼" : "🎙";
+  listening = state === "LISTENING";
+  speaking = state === "SPEAKING";
+  document.body.classList.toggle("standby", state === "STANDBY");
+  document.body.classList.toggle("error", state === "ERROR");
+  $("bigstate").textContent = state === "STANDBY" ? "" : (state === "EXECUTING_TOOL" ? (detail || "EXECUTING TASK") : state);
+  $("vstate").textContent = ({
+    STANDBY: "MIC OFF · DEEPGRAM OFF", WAKING: "WAKING…", LISTENING: "LISTENING…",
+    PROCESSING: "PROCESSING…", SPEAKING: "SPEAKING…", EXECUTING_TOOL: (detail || "EXECUTING…"),
+    ERROR: "ERROR — RECOVERABLE",
+  })[state] || "TEXT MODE";
+  setCmd(({
+    STANDBY: "ORION STANDBY", WAKING: "ORION ONLINE", LISTENING: "LISTENING FOR COMMAND",
+    PROCESSING: "PROCESSING…", SPEAKING: "ORION SPEAKING",
+    EXECUTING_TOOL: (detail || "EXECUTING TASK"), ERROR: "SYSTEM ERROR — PRESS WAKE TO RETRY",
+  })[state] || "READY FOR COMMAND");
+  const stoppable = speaking || state === "PROCESSING" || state === "EXECUTING_TOOL";
+  $("micbtn").className = "mic" + (stoppable ? " stop" : "");
+  $("micbtn").textContent = stoppable ? "◼" : (state === "STANDBY" || state === "ERROR" ? "⏻" : "🎙");
+  $("micbtn").title = stoppable ? "stop Orion" : (state === "STANDBY" || state === "ERROR" ? "wake Orion" : "send");
 }
 function handle(ev){
   switch (ev.kind) {
     case "turn.start":
       addMsg("you", "YOU" + (ev.mode === "voice" ? " (HEARD)" : ""), ev.text);
-      streamEl = null; setVoiceState("THINKING"); break;
+      streamEl = null; setVoiceState("PROCESSING"); break;
     case "turn.delta":
-      if (!streamEl) { streamEl = addMsg("orion", "ORION", ""); setVoiceState(STATE && STATE.voice_live ? "SPEAKING" : "THINKING"); }
+      if (!streamEl) { streamEl = addMsg("orion", "ORION", ""); if (!(STATE && STATE.voice_live)) setVoiceState("PROCESSING"); }
       streamEl.textContent += ev.chunk; feed.scrollTop = feed.scrollHeight; break;
     case "turn.end":
       if (streamEl) streamEl.textContent = ev.reply; else if (ev.reply) addMsg("orion", "ORION", ev.reply);
-      streamEl = null; setVoiceState(STATE && STATE.voice_live ? "LISTENING" : "IDLE"); poll(); break;
+      streamEl = null; if (!(STATE && STATE.voice_live)) setVoiceState("STANDBY"); poll(); break;
     case "turn.interrupted":
       addMsg("sys", "SYSTEM", "— interrupted —"); streamEl = null; break;
     case "tool.run":
@@ -372,7 +409,12 @@ function handle(ev){
         (ev.approved ? "CONFIRMED — " : "DECLINED — ") + ev.action); break;
     case "gate.unattended":
       addMsg("warn", "GATE", "NO ONE TO CONFIRM — declined: " + ev.action); break;
-    case "voice.state": setVoiceState(ev.state); break;
+    case "voice.state": setVoiceState(ev.state, ev.detail); break;
+    case "audio.level":
+      if (ev.source === "mic") levels.mic = Math.max(levels.mic, ev.level);
+      else levels.out = Math.max(levels.out, ev.level);
+      break;
+    case "session.standby": poll(); break;
     case "voice.latency":
       if (ev.total_ms != null) $("m-lat").textContent = Math.round(ev.total_ms) + "ms";
       addMsg("sys", "SYSTEM", ev.report); break;
@@ -382,7 +424,7 @@ function handle(ev){
 }
 function connect(){
   const es = new EventSource("/events");
-  es.onopen = () => { $("online").textContent = "ONLINE"; $("online").classList.remove("off"); if (voiceState === "IDLE") setCmd("READY FOR COMMAND"); };
+  es.onopen = () => { $("online").textContent = "ONLINE"; $("online").classList.remove("off"); setVoiceState(voiceState); };
   es.onmessage = m => { try { handle(JSON.parse(m.data)); } catch(e){} };
   es.onerror = () => { $("online").textContent = "OFFLINE"; $("online").classList.add("off"); setCmd("RECONNECTING…"); };
 }
@@ -398,8 +440,14 @@ async function sayNow(){
 }
 $("sayline").addEventListener("keydown", e => { if (e.key === "Enter") sayNow(); });
 $("micbtn").addEventListener("click", async () => {
-  if (speaking || voiceState === "THINKING") await fetch("/interrupt", {method:"POST"});
+  if (voiceState === "STANDBY" || voiceState === "ERROR") await fetch("/wake", {method:"POST"});
+  else if (speaking || voiceState === "PROCESSING" || voiceState === "EXECUTING_TOOL") await fetch("/interrupt", {method:"POST"});
   else sayNow();
+});
+$("standbybtn").addEventListener("click", () => fetch("/standby", {method:"POST"}));
+$("fsbtn").addEventListener("click", () => {
+  if (document.fullscreenElement) document.exitFullscreen();
+  else document.documentElement.requestFullscreen();
 });
 async function dismiss(id){
   await fetch("/dismiss", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({id})});
@@ -438,12 +486,15 @@ document.querySelectorAll(".nav button").forEach(btn => btn.addEventListener("cl
     if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
     ctx.clearRect(0, 0, w, h);
     const cx = w / 2, cy = h * 0.44, R = Math.min(w, h) * 0.34;
-    const pulse = speaking ? 1 + 0.03 * Math.sin(Date.now() / 90) : 1;
+    const live = speaking ? levels.out : (listening ? levels.mic : 0);
+    const energy = ({STANDBY: .35, WAKING: 1.5, LISTENING: .9, PROCESSING: 1.35,
+                     SPEAKING: 1.15, EXECUTING_TOOL: 1.45, ERROR: .5})[voiceState] || .8;
+    const pulse = 1 + live * 0.16 + (voiceState === "PROCESSING" ? 0.02 * Math.sin(Date.now() / 70) : 0);
     // orbit ellipses
     ctx.strokeStyle = "rgba(57,194,255,0.28)";
     for (let i = 0; i < 5; i++) {
       ctx.beginPath();
-      ctx.ellipse(cx, cy, R * (1.15 + i * 0.13), R * (0.34 + i * 0.05), (i * 37 + rot * 18) * Math.PI / 180, 0, Math.PI * 2);
+      ctx.ellipse(cx, cy, R * (1.15 + i * 0.13), R * (0.34 + i * 0.05), (i * 37 + rot * 18 * energy) * Math.PI / 180, 0, Math.PI * 2);
       ctx.stroke();
     }
     // particles
@@ -452,7 +503,7 @@ document.querySelectorAll(".nav button").forEach(btn => btn.addEventListener("cl
       const x3 = Math.sin(p.phi) * Math.cos(theta) * p.r, y3 = Math.cos(p.phi) * p.r, z3 = Math.sin(p.phi) * Math.sin(theta) * p.r;
       const depth = (z3 + 1) / 2;
       const x = cx + x3 * R * pulse, y = cy + y3 * R * pulse;
-      const alpha = 0.3 + depth * 0.7 * (0.75 + 0.25 * Math.sin(p.tw + Date.now() / 700));
+      const alpha = (0.3 + depth * 0.7 * (0.75 + 0.25 * Math.sin(p.tw + Date.now() / 700))) * Math.min(1, 0.35 + energy * 0.65 + live * 0.5);
       ctx.fillStyle = `rgba(${140 + depth * 100},${205 + depth * 40},255,${alpha})`;
       const size = 0.9 + depth * 2.1;
       ctx.fillRect(x, y, size, size);
@@ -469,33 +520,36 @@ document.querySelectorAll(".nav button").forEach(btn => btn.addEventListener("cl
       ctx.ellipse(cx, h - 16, 34 + i * 26, 7 + i * 5, 0, 0, Math.PI * 2);
       ctx.globalAlpha = 0.5 - i * 0.11; ctx.stroke(); ctx.globalAlpha = 1;
     }
-    rot += speaking ? 0.012 : 0.005;
+    rot += 0.004 * energy + live * 0.01;
     requestAnimationFrame(frame);
   }
   frame();
 })();
 
 /* ---------- waveforms ---------- */
-function waveLoop(canvas, activeFn, barW, gap){
+function waveLoop(canvas, levelFn, barW, gap){
   const ctx = canvas.getContext("2d");
   function frame(){
-    const w = canvas.width, h = canvas.height, active = activeFn();
+    const w = canvas.width, h = canvas.height, level = levelFn();
     ctx.clearRect(0, 0, w, h);
     const n = Math.floor(w / (barW + gap));
     for (let i = 0; i < n; i++) {
       const mid = Math.abs(i - n / 2) / (n / 2);
-      const amp = active ? (0.15 + 0.85 * Math.abs(Math.sin(Date.now() / 130 + i * 0.55)) * (1 - mid * 0.6))
-                         : 0.08 + 0.05 * Math.sin(Date.now() / 900 + i * 0.3);
+      // Real amplitude shapes the bars; a faint sheen keeps the strip alive
+      // when nothing is streaming (and honest: near-flat means silence).
+      const amp = level > 0.02
+        ? Math.min(1, level * (1.3 - mid) * (0.7 + 0.3 * Math.abs(Math.sin(Date.now() / 120 + i * 0.7))))
+        : 0.05 + 0.03 * Math.sin(Date.now() / 900 + i * 0.3);
       const bh = Math.max(2, amp * h * 0.9);
-      ctx.fillStyle = `rgba(57,194,255,${0.35 + amp * 0.6})`;
+      ctx.fillStyle = `rgba(57,194,255,${0.3 + amp * 0.65})`;
       ctx.fillRect(i * (barW + gap), (h - bh) / 2, barW, bh);
     }
     requestAnimationFrame(frame);
   }
   frame();
 }
-waveLoop($("strip"), () => listening || speaking, 3, 3);
-waveLoop($("vwave"), () => listening || voiceState === "THINKING", 4, 3);
+waveLoop($("strip"), () => speaking ? levels.out : levels.mic, 3, 3);
+waveLoop($("vwave"), () => listening || voiceState === "PROCESSING" ? Math.max(levels.mic, 0.0) : (speaking ? levels.out : 0), 4, 3);
 </script>
 </body>
 </html>

@@ -90,6 +90,7 @@ class Player:
         self._stream = None
         self._last_audible = 0.0
         self.on_first_audio = None  # optional callback for latency T6
+        self.on_feed = None         # optional hook: real output PCM for the HUD
 
     def start(self) -> None:
         sd = _sounddevice()
@@ -122,6 +123,11 @@ class Player:
             ) from exc
 
     def feed(self, pcm: bytes) -> None:
+        if self.on_feed is not None:
+            try:
+                self.on_feed(pcm)
+            except Exception:  # noqa: BLE001 — visualisation never blocks audio
+                pass
         with self._lock:
             self._buffer.extend(pcm)
 
@@ -154,11 +160,14 @@ class FakePlayer:
         self.stopped_count = 0
         self.playing = False
         self.on_first_audio = None
+        self.on_feed = None
 
     def start(self) -> None:
         pass
 
     def feed(self, pcm: bytes) -> None:
+        if self.on_feed is not None:
+            self.on_feed(pcm)
         self.fed.append(pcm)
         self.playing = True
         if self.on_first_audio is not None:

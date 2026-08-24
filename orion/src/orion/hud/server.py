@@ -3,7 +3,11 @@
 GET  /        the page
 GET  /events  Server-Sent Events from the bus
 GET  /state   JSON snapshot for panels that aren't event-driven
+GET  /health  liveness + pid + session state (the Mac app's instance check)
 POST /say     a text turn into the same agent core (JSON: {"text": ...})
+POST /wake    STANDBY → LISTENING (hotkey, app icon, HUD wake button)
+POST /standby stop Deepgram + microphone now
+POST /quit    graceful full shutdown of the app-mode process
 POST /interrupt  stop Orion talking (voice mode barge-in, from the screen)
 POST /dismiss    clear a notice (JSON: {"id": ...})
 
@@ -29,16 +33,28 @@ STATIC_DIR = Path(__file__).parent / "static"
 class HudState:
     """Everything the server needs to answer for, in one place."""
 
-    def __init__(self, config, agent, bus, board: NoticeBoard | None = None) -> None:
+    def __init__(self, config, agent, bus, board: NoticeBoard | None = None, session=None) -> None:
         self.config = config
         self.agent = agent
         self.bus = bus
         self.board = board or NoticeBoard(config.state_path("notices.jsonl"))
-        self.conversation = None  # set while /voice is live
+        self.session = session       # OrionSession in app mode; None in bare tests
+        self.quit_event = threading.Event()
+        self._legacy_conversation = None  # set by the REPL's /voice path
         self.turn_lock = threading.Lock()
         self.started_at = time.time()
         self.last_latency_ms: float | None = None
         self.last_turn_seconds: float | None = None
+
+    @property
+    def conversation(self):
+        if self.session is not None and self.session.conversation is not None:
+            return self.session.conversation
+        return self._legacy_conversation
+
+    @conversation.setter
+    def conversation(self, value) -> None:
+        self._legacy_conversation = value
 
     # ------------------------------------------------------------- snapshot
 
@@ -72,7 +88,12 @@ class HudState:
                     }
                 )
         usage = self.agent.usage
+        session_state = self.session.state if self.session is not None else (
+            "LISTENING" if self.conversation is not None else "TEXT"
+        )
         return {
+            "session_state": session_state,
+            "session_detail": self.session.state_detail if self.session is not None else "",
             "name": config.name,
             "user": "KARL",
             "version": "0.1.0",
@@ -111,6 +132,22 @@ class HudState:
             except ProviderError as exc:
                 self.bus.publish("hud.error", {"text": str(exc)})
         self.last_turn_seconds = round(time.time() - started, 2)
+
+    def wake(self) -> dict:
+        if self.session is None:
+            return {"ok": False, "error": "no session manager (run `uv run orion-app`)"}
+        return self.session.wake()
+
+    def standby(self) -> dict:
+        if self.session is None:
+            return {"ok": False, "error": "no session manager"}
+        return self.session.standby(reason="requested from HUD")
+
+    def quit(self) -> None:
+        if self.session is not None:
+            self.session.shutdown()
+        self.bus.publish("session.quit", {})
+        self.quit_event.set()
 
     def interrupt(self) -> bool:
         conversation = self.conversation
@@ -155,6 +192,14 @@ class _Handler(BaseHTTPRequestHandler):
             self._send(200, page, "text/html; charset=utf-8")
         elif self.path == "/state":
             self._json(self.state.snapshot())
+        elif self.path == "/health":
+            session = self.state.session
+            self._json({
+                "ok": True,
+                "pid": os.getpid(),
+                "app": self.state.config.name,
+                "state": session.state if session is not None else "TEXT",
+            })
         elif self.path == "/events":
             self._stream_events()
         else:
@@ -191,6 +236,13 @@ class _Handler(BaseHTTPRequestHandler):
             # Answer immediately; the turn streams to the page over /events.
             threading.Thread(target=self.state.say, args=(text,), daemon=True).start()
             self._json({"ok": True})
+        elif self.path == "/wake":
+            self._json(self.state.wake())
+        elif self.path == "/standby":
+            self._json(self.state.standby())
+        elif self.path == "/quit":
+            self._json({"ok": True})
+            threading.Thread(target=self.state.quit, daemon=True).start()
         elif self.path == "/interrupt":
             self._json({"ok": self.state.interrupt()})
         elif self.path == "/dismiss":
@@ -224,8 +276,8 @@ class HudServer:
         self.httpd.server_close()
 
 
-def start_hud(config, agent, bus, *, port: int | None = None) -> HudServer:
+def start_hud(config, agent, bus, *, port: int | None = None, session=None) -> HudServer:
     hud_config = config.raw.get("hud", {})
-    state = HudState(config, agent, bus)
+    state = HudState(config, agent, bus, session=session)
     server = HudServer(state, port=port if port is not None else int(hud_config.get("port", 8765)))
     return server.start()

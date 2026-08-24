@@ -25,6 +25,7 @@ orion = "orion.cli:main"
 orion-heartbeat = "orion.heartbeat:main"
 orion-voicetest = "orion.voice.devtests:main"
 orion-setup = "orion.setup:main"
+orion-app = "orion.app:main"
 
 [build-system]
 requires = ["hatchling"]

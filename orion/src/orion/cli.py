@@ -51,12 +51,13 @@ class Style:
 
 
 class Repl:
-    def __init__(self, agent: Agent, style: Style | None = None, hud=None, bus: EventBus | None = None) -> None:
+    def __init__(self, agent: Agent, style: Style | None = None, hud=None, bus: EventBus | None = None, session=None) -> None:
         self.agent = agent
         self.style = style or Style(_supports_colour())
         self.board = NoticeBoard(agent.config.state_path("notices.jsonl"))
         self.hud = hud
         self.bus = bus
+        self.session = session
         self.running = True
         self.commands: dict[str, Callable[[str], None]] = {
             "help": self.cmd_help,
@@ -193,73 +194,36 @@ class Repl:
         print(self.style.dim(f"\n  edit the file directly: {store.path}\n"))
 
     def cmd_voice(self, _: str) -> None:
-        """Enter continuous voice mode. The same agent — same memory of this
-        conversation — carries straight on; only the ears and mouth change."""
-        import threading
-
-        try:
-            from .voice.audio import AudioError, Microphone, Player
-            from .voice.conversation import VoiceConversation
-            from .voice.devtests import _pump_mic_to_stt
-            from .voice.preflight import run_preflight
-            from .voice.stt import DeepgramStream
-            from .voice.tts import ElevenLabsSpeaker
-        except ImportError:
-            print(self.style.yellow(
-                "  voice support isn't installed — run `uv sync --extra voice`\n"
-            ))
+        """Wake the voice session — the same lifecycle the Mac app's hotkey
+        uses. Ctrl-C (or silence past the follow-up window) returns to text."""
+        if self.session is None:
+            print(self.style.yellow("  no session manager available\n"))
             return
 
-        config = self.agent.config
-        results, ok = run_preflight(config)
+        from .voice.preflight import run_preflight
+
+        results, ok = run_preflight(self.agent.config)
         for result in results:
             print(result.line())
         if not ok:
             print(self.style.yellow("\n  voice mode can't start — fix the ✗ lines above\n"))
             return
 
-        stt = DeepgramStream(config.voice)
-        speaker = ElevenLabsSpeaker(config.voice)
-        mic = Microphone(config.voice.sample_rate)
-        player = Player(config.voice.tts_sample_rate)
-        try:
-            mic.start()
-            player.start()
-        except AudioError as exc:
-            print(self.style.red(f"  {exc}\n"))
+        outcome = self.session.wake()
+        if not outcome["ok"]:
+            print(self.style.red(f"  {outcome.get('error', 'voice failed to start')}\n"))
             return
+        print(self.style.dim(
+            "\n  listening — speak naturally, interrupt freely; Ctrl-C or "
+            f"{int(self.session.follow_up_seconds)}s of silence returns to text\n"
+        ))
+        import time as time_module
 
-        self.agent.set_mode("voice")
-        previous_gate = self.agent.confirm
-        convo = VoiceConversation(
-            self.agent, stt, speaker, player,
-            voice_config=config.voice,
-            say=lambda line: print(self.style.dim("  " + line)),
-            show=print,
-            on_hud=(self.bus.publish if self.bus is not None else None),
-        )
-        if self.hud is not None:
-            self.hud.state.conversation = convo
-            self.bus.publish("voice.state", {"state": "LISTENING"})
-        self.agent.confirm = TwoStepGate(convo.ask_confirmation)
-        print(self.style.dim("\n  listening — speak naturally, interrupt freely, Ctrl-C returns to text\n"))
-        running = threading.Event()
-        running.set()
-        threading.Thread(target=_pump_mic_to_stt, args=(mic, stt, running), daemon=True).start()
         try:
-            convo.run()
+            while self.session.active:
+                time_module.sleep(0.25)
         except KeyboardInterrupt:
-            pass
-        finally:
-            running.clear()
-            convo.shutdown()
-            mic.stop()
-            player.close()
-            self.agent.set_mode("text")
-            self.agent.confirm = previous_gate
-            if self.hud is not None:
-                self.hud.state.conversation = None
-                self.bus.publish("voice.state", {"state": "IDLE"})
+            self.session.standby(reason="Ctrl-C")
         print(self.style.dim("\n  back to text\n"))
 
     def cmd_cost(self, _: str) -> None:
@@ -365,11 +329,14 @@ def main() -> int:
                 return None
 
         bus = EventBus()
+        session = None
 
         def on_event(kind: str, data: dict) -> None:
             if kind != "turn.delta":  # deltas are for the live feed, not the record
                 audit.log(kind, data)
             bus.publish(kind, data)
+            if session is not None:
+                session.note_agent_event(kind, data)
 
         agent = Agent(
             config,
@@ -380,13 +347,17 @@ def main() -> int:
             on_event=on_event,
         )
 
+        from .voice.session import OrionSession
+
+        session = OrionSession(config, agent, bus)
+
         hud = None
         hud_config = config.raw.get("hud", {})
         if hud_config.get("enabled", True):
             from .hud.server import start_hud
 
             try:
-                hud = start_hud(config, agent, bus)
+                hud = start_hud(config, agent, bus, session=session)
                 if hud_config.get("auto_open", True):
                     import webbrowser
 
@@ -400,7 +371,8 @@ def main() -> int:
         print(f"\n  {exc}\n", file=sys.stderr)
         return 1
 
-    Repl(agent, hud=hud, bus=bus).run()
+    Repl(agent, hud=hud, bus=bus, session=session).run()
+    session.shutdown()
     if hud is not None:
         hud.stop()
     return 0

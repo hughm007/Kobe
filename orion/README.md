@@ -4,6 +4,24 @@ Karl's voice-first assistant for Service Pow. What it is and what it's allowed t
 do lives in [`../AGENT.md`](../AGENT.md) — read that first; this file is just how
 to run it.
 
+## ORION.app — use it like an application (macOS)
+
+After the Quickstart below has worked once, build the Mac app and never open
+Terminal again:
+
+```bash
+cd ~/Kobe/orion/macos && ./build.sh --install
+```
+
+Then **⌃⌥Space** (or clicking ORION in the Dock/Spotlight) wakes Orion:
+backend starts if needed, the HUD window comes forward, listening begins.
+Silence returns it to standby — microphone and Deepgram fully off. Details and
+the hotkey rationale: [`macos/README.md`](macos/README.md).
+
+The same lifecycle without the app: `uv run orion-app` starts the backend in
+standby; `POST /wake`, `/standby`, `/quit` on the HUD port drive it, and the
+HUD's own power button does the same.
+
 ## Quickstart — from zero to talking
 
 ```bash

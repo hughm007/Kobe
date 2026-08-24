@@ -113,3 +113,10 @@ enabled = true
 port = 8765
 # Open the browser automatically when Orion starts.
 auto_open = true
+
+[session]
+# After Orion finishes speaking, how long it keeps listening for a follow-up
+# before shutting the microphone and Deepgram off and returning to standby.
+follow_up_seconds = 30
+# Hard ceiling: any wake with no interaction at all ends after this long.
+idle_seconds = 120

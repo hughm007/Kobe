@@ -228,10 +228,15 @@ class DeepgramStream:
 
 
 class FakeSTT:
-    """Scripted ears for tests: yields a fixed sequence of events."""
+    """Scripted ears for tests: yields a fixed sequence of events.
 
-    def __init__(self, events: list[TranscriptEvent]) -> None:
+    stay_open=True mimics the real stream, which stays connected after the
+    scripted events until stop() — what session-lifecycle tests need.
+    """
+
+    def __init__(self, events: list[TranscriptEvent], *, stay_open: bool = False) -> None:
         self._events = list(events)
+        self.stay_open = stay_open
         self.audio_in: "queue.Queue[bytes | None]" = queue.Queue()
         self.stopped = False
 
@@ -239,7 +244,14 @@ class FakeSTT:
         self.stopped = True
 
     def events(self) -> Iterator[TranscriptEvent]:
-        for event in self._events:
-            if self.stopped:
+        import time as time_module
+
+        index = 0
+        while not self.stopped:
+            if index < len(self._events):
+                yield self._events[index]
+                index += 1
+            elif self.stay_open:
+                time_module.sleep(0.05)  # keep the stream open for late events
+            else:
                 return
-            yield event

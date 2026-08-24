@@ -95,3 +95,19 @@ you get "while you were away". Restart the heartbeat: nothing refires early.
 - Change `[checks.inbox_triage].escalate_after_hours` in orion.toml →
   behaviour changes on the next run, no code edit.
 - `/cost` — session and lifetime spend; `state/audit.jsonl` has the full trail.
+
+## 7. The Mac app (after `macos/build.sh --install`)
+
+- **T1** Quit everything. Press ⌃⌥Space → ORION launches, HUD window appears,
+  sphere wakes (ORION ONLINE), then LISTENING.
+- **T2** Say "Orion test. Can you hear me?" → transcript in the feed, spoken
+  reply, states LISTENING→PROCESSING→SPEAKING.
+- **T3** While it speaks, the sphere and waveform move with the actual output
+  audio (they go flat in silence — that's the honesty check).
+- **T4** Ask a follow-up within 30s, no hotkey → it answers with context.
+- **T5** Stay silent past `follow_up_seconds` → HUD dims to ORION STANDBY;
+  confirm the mic indicator in the macOS menu bar turns off.
+- **T6** Press ⌃⌥Space again → instant wake, no second backend
+  (`ps aux | grep orion-app` shows one), no second window.
+- **T7** Launch from /Applications by double-click → same as hotkey.
+- **T8** Menu → Quit ORION → mic indicator off, `orion-app` gone, port free.

@@ -239,6 +239,7 @@ class Agent:
         """
         assert self.tools is not None
         tool_obj = self.tools.get(name)
+        self._emit("tool.start", {"tool": name})
 
         if tool_obj is not None and tool_obj.is_consequential(arguments):
             summary = tool_obj.action_summary(arguments)
