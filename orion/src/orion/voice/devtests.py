@@ -121,8 +121,11 @@ def cmd_tts() -> int:
 
 
 def _build_agent(config, mode: str) -> Agent:
+    from ..memory import MemoryStore
+
     provider = build_provider(config)
-    return Agent(config, provider, tools=default_registry(config), mode=mode)
+    memories = MemoryStore(config.state_path("memory.jsonl")).as_prompt_section()
+    return Agent(config, provider, tools=default_registry(config), mode=mode, memories=memories)
 
 
 def cmd_stt_agent() -> int:

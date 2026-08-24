@@ -14,6 +14,7 @@ from typing import Callable
 from .agent import Agent
 from .config import ConfigError, get_config
 from .prompts import PromptError
+from .memory import MemoryStore
 from .provider import ProviderError, build_provider
 from .tools import default_registry
 
@@ -59,6 +60,7 @@ class Repl:
             "cost": self.cmd_cost,
             "tools": self.cmd_tools,
             "voice": self.cmd_voice,
+            "memory": self.cmd_memory,
         }
 
     # -------------------------------------------------------------- commands
@@ -70,6 +72,7 @@ class Repl:
             ("/history", "how many turns are in short-term memory"),
             ("/tools", "what Orion can do"),
             ("/voice", "start the spoken conversation (Ctrl-C returns here)"),
+            ("/memory", "what Orion remembers across restarts"),
             ("/cost", "tokens and spend this session"),
             ("/quit", "leave"),
         ]
@@ -101,6 +104,17 @@ class Repl:
             first_line = t.description.split(". ")[0]
             print(f"  {self.style.bold(name.ljust(20))} {self.style.dim(first_line + gated)}")
         print()
+
+    def cmd_memory(self, _: str) -> None:
+        store = MemoryStore(self.agent.config.state_path("memory.jsonl"))
+        memories = store.load()
+        if not memories:
+            print(self.style.dim("  long-term memory is empty\n"))
+            return
+        print()
+        for memory in memories:
+            print(f"  {self.style.dim(memory.id)}  {memory.text}")
+        print(self.style.dim(f"\n  edit the file directly: {store.path}\n"))
 
     def cmd_voice(self, _: str) -> None:
         """Enter continuous voice mode. The same agent — same memory of this
@@ -240,7 +254,8 @@ def main() -> int:
     try:
         config = get_config()
         provider = build_provider(config)
-        agent = Agent(config, provider, tools=default_registry(config))
+        memories = MemoryStore(config.state_path("memory.jsonl")).as_prompt_section()
+        agent = Agent(config, provider, tools=default_registry(config), memories=memories)
     except (ConfigError, PromptError, ProviderError) as exc:
         print(f"\n  {exc}\n", file=sys.stderr)
         return 1
