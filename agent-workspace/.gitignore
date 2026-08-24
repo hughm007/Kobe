@@ -1,0 +1,44 @@
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+._*
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
+*~
+
+# Temporary and working files
+*.tmp
+~$*
+.~lock.*
+
+# ---------------------------------------------------------------------------
+# Credentials — belt and braces.
+# The real rule is in CLAUDE.md §10: never write a credential to a file here.
+# These patterns are a safety net, not permission to try.
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.pem
+*.key
+*credentials*
+*secret*
+*password*
+
+# ---------------------------------------------------------------------------
+# Large binaries — commit a pointer file instead. See assets/README.md.
+# Remove a specific exception below if a small file genuinely belongs in the repo.
+# ---------------------------------------------------------------------------
+*.mp4
+*.mov
+*.avi
+*.wav
+*.zip
+*.psd
+*.ai
+*.indd
+*.sketch
+*.fig
