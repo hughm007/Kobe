@@ -15,6 +15,7 @@ from .agent import Agent
 from .config import ConfigError, get_config
 from .prompts import PromptError
 from .provider import ProviderError, build_provider
+from .tools import default_registry
 
 
 def _supports_colour() -> bool:
@@ -56,6 +57,7 @@ class Repl:
             "reset": self.cmd_reset,
             "history": self.cmd_history,
             "cost": self.cmd_cost,
+            "tools": self.cmd_tools,
         }
 
     # -------------------------------------------------------------- commands
@@ -65,6 +67,7 @@ class Repl:
             ("/help", "this list"),
             ("/reset", "clear the current conversation"),
             ("/history", "how many turns are in short-term memory"),
+            ("/tools", "what Orion can do"),
             ("/cost", "tokens and spend this session"),
             ("/quit", "leave"),
         ]
@@ -84,6 +87,18 @@ class Repl:
         count = len(self.agent.messages)
         limit = self.agent.config.conversation.max_history_messages
         print(self.style.dim(f"  {count} messages in short-term memory (limit {limit})\n"))
+
+    def cmd_tools(self, _: str) -> None:
+        if not self.agent.tools or not len(self.agent.tools):
+            print(self.style.dim("  no tools registered\n"))
+            return
+        print()
+        for name in self.agent.tools.names():
+            t = self.agent.tools.get(name)
+            gated = " (asks first)" if t.consequential or t.consequential_when else ""
+            first_line = t.description.split(". ")[0]
+            print(f"  {self.style.bold(name.ljust(20))} {self.style.dim(first_line + gated)}")
+        print()
 
     def cmd_cost(self, _: str) -> None:
         u = self.agent.usage
@@ -163,7 +178,7 @@ def main() -> int:
     try:
         config = get_config()
         provider = build_provider(config)
-        agent = Agent(config, provider)
+        agent = Agent(config, provider, tools=default_registry(config))
     except (ConfigError, PromptError, ProviderError) as exc:
         print(f"\n  {exc}\n", file=sys.stderr)
         return 1

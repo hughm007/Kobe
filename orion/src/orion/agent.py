@@ -13,8 +13,26 @@ from typing import Any, Callable
 
 from .prompts import build_system_prompt
 from .provider import Provider, ProviderError, TurnResult, Usage
+from .tools.registry import ToolRegistry, ToolResult
 
 TextDeltaHandler = Callable[[str], None]
+
+# Asked before a consequential tool runs: (action summary, tool name) -> bool.
+# Tier 6 supplies the real two-step gate; the default is "nobody answered = no".
+Confirmer = Callable[[str, str], bool]
+
+# Optional observer for the audit trail: (event kind, data).
+EventHandler = Callable[[str, dict[str, Any]], None]
+
+DECLINED_MESSAGE = (
+    "Karl did not confirm this action, so it was not run. Do not retry it on "
+    "your own; carry on without it, or ask him what he wants to do."
+)
+UNATTENDED_MESSAGE = (
+    "This action needs Karl's explicit confirmation and no one is available to "
+    "give it, so it was not run. Leave a note about what you wanted to do and "
+    "why, and move on."
+)
 
 # A refusal is a real outcome, not an error. Say so plainly rather than
 # returning an empty turn and letting Karl wonder what happened.
@@ -36,11 +54,17 @@ class Agent:
         config,
         provider: Provider,
         *,
+        tools: ToolRegistry | None = None,
+        confirm: Confirmer | None = None,
+        on_event: EventHandler | None = None,
         mode: str = "text",
         memories: str | None = None,
     ) -> None:
         self.config = config
         self.provider = provider
+        self.tools = tools
+        self.confirm = confirm
+        self.on_event = on_event
         self.mode = mode
         self._memories = memories
         self.messages: list[dict[str, Any]] = []
@@ -102,23 +126,102 @@ class Agent:
     ) -> str:
         """Run one full turn and return Orion's reply as text.
 
+        The model may chain several tool calls before it is ready to answer;
+        the loop allows that naturally, bounded by max_tool_iterations so a
+        runaway chain stops instead of spending forever.
+
         Raises ProviderError if the model can't be reached — the caller prints
         one clear line and asks for the next turn. Never a stack trace.
         """
+        self._emit("turn.start", {"mode": self.mode, "text": user_text})
         self.messages.append({"role": "user", "content": user_text})
         self._trim_history()
 
-        result = self.provider.stream_turn(
-            system=self.system,
-            messages=self.messages,
-            on_text_delta=on_text_delta,
-        )
-        self._record(result)
-        self.messages.append({"role": "assistant", "content": result.content})
+        api_tools = self.tools.to_api() if self.tools and len(self.tools) else None
+        final_text_parts: list[str] = []
+        result: TurnResult | None = None
 
-        if result.stop_reason == "refusal":
+        for _ in range(self.config.conversation.max_tool_iterations):
+            result = self.provider.stream_turn(
+                system=self.system,
+                messages=self.messages,
+                tools=api_tools,
+                on_text_delta=on_text_delta,
+            )
+            self._record(result)
+            if result.content:
+                self.messages.append({"role": "assistant", "content": result.content})
+            if result.text:
+                final_text_parts.append(result.text)
+
+            if result.stop_reason == "pause_turn":
+                continue  # a long-running turn paused upstream; just resume it
+            if result.stop_reason != "tool_use" or not result.tool_calls:
+                break
+
+            # Execute every requested tool, then return ALL results in a single
+            # user message — splitting them across messages quietly teaches the
+            # model to stop making parallel calls.
+            result_blocks = []
+            for call in result.tool_calls:
+                outcome = self._run_tool(call["name"], call.get("input") or {})
+                block = {
+                    "type": "tool_result",
+                    "tool_use_id": call["id"],
+                    "content": outcome.content,
+                }
+                if outcome.is_error:
+                    block["is_error"] = True
+                result_blocks.append(block)
+            self.messages.append({"role": "user", "content": result_blocks})
+        else:
+            final_text_parts.append(
+                "(I stopped there — that chain of tool calls hit the safety limit.)"
+            )
+
+        if result is not None and result.stop_reason == "refusal":
             return REFUSAL_MESSAGE
-        return result.text
+        reply = "\n\n".join(part for part in final_text_parts if part).strip()
+        self._emit("turn.end", {"reply": reply})
+        return reply
+
+    def _run_tool(self, name: str, arguments: dict[str, Any]) -> ToolResult:
+        """Look the tool up, gate it if consequential, run it, capture the result.
+
+        This is the one place a tool ever runs, which is what makes the gate
+        cover typed, spoken and heartbeat-initiated turns alike.
+        """
+        assert self.tools is not None
+        tool_obj = self.tools.get(name)
+
+        if tool_obj is not None and tool_obj.is_consequential(arguments):
+            summary = tool_obj.action_summary(arguments)
+            if self.confirm is None:
+                # Nobody there = no. Background turns never assume permission.
+                self._emit("gate.unattended", {"tool": name, "action": summary})
+                return ToolResult(UNATTENDED_MESSAGE, is_error=True)
+            approved = False
+            try:
+                approved = bool(self.confirm(summary, name))
+            except Exception:  # noqa: BLE001 — a broken gate must fail closed
+                approved = False
+            self._emit("gate.decision", {"tool": name, "action": summary, "approved": approved})
+            if not approved:
+                return ToolResult(DECLINED_MESSAGE, is_error=True)
+
+        outcome = self.tools.dispatch(name, arguments)
+        self._emit(
+            "tool.run",
+            {"tool": name, "arguments": arguments, "is_error": outcome.is_error},
+        )
+        return outcome
+
+    def _emit(self, kind: str, data: dict[str, Any]) -> None:
+        if self.on_event is not None:
+            try:
+                self.on_event(kind, data)
+            except Exception:  # noqa: BLE001 — observers never break a turn
+                pass
 
     def _record(self, result: TurnResult) -> None:
         self.usage.input_tokens += result.usage.input_tokens
