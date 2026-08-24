@@ -28,6 +28,36 @@ uv run orion
 | `/cost` | tokens and spend this session |
 | `/quit` | leave |
 
+## Voice
+
+```bash
+uv sync --extra voice          # audio + websocket deps (needs PortAudio on the OS)
+uv run orion-voicetest check   # preflight: every layer, every key, clear errors
+uv run orion                   # then /voice for the live conversation
+```
+
+The pipeline: **microphone → Deepgram (Flux) → the same agent → spoken-response
+formatter → ElevenLabs (streaming) → speakers.** Continuous listening with
+Flux's built-in turn detection — no Enter key, no push-to-talk. Speak over
+Orion and it stops mid-word and listens (barge-in); it recognises its own
+voice leaking into the mic and ignores it. Every turn prints the transcript of
+what it *heard* next to the reply, plus a T0–T6 latency breakdown.
+
+Keys go in `.env` (see `.env.example`): `DEEPGRAM_API_KEY`,
+`ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID`, `ELEVENLABS_MODEL_ID`.
+If ElevenLabs is down or unconfigured, voice mode still listens and answers on
+screen — the mouth degrades, the brain doesn't.
+
+Test each layer on its own before blaming the whole pipeline:
+
+| Command | Layer |
+|---|---|
+| `orion-voicetest mic` | mic → Deepgram: speak, watch live + final transcripts |
+| `orion-voicetest tts` | "Good evening. Orion is online." → ElevenLabs → speakers |
+| `orion-voicetest stt-agent` | speak → Orion answers in text (no ElevenLabs) |
+| `orion-voicetest agent-tts` | type → Orion answers aloud (no Deepgram) |
+| `orion-voicetest pipeline` | the full loop — interrupt it, hold five turns |
+
 ## Run it without an API key
 
 ```bash
@@ -56,6 +86,9 @@ src/orion/
   prompts.py    system prompt assembly; persona is read from AGENT.md
   config.py     orion.toml + .env
   cli.py        the terminal interface
+  tools/        the registry — one self-contained module per capability
+  voice/        ears and mouth: stt.py, tts.py, audio.py, conversation.py,
+                format.py (spoken-response), sentences.py, preflight.py
 orion.toml      every tunable value
 state/          memory, notices, schedule, audit log (git-ignored)
 ```

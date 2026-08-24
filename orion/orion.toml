@@ -42,3 +42,36 @@ max_history_messages = 60
 
 # Hard stop on a single turn's tool chain, so a loop can't run away.
 max_tool_iterations = 8
+
+[voice]
+# --- Ears: Deepgram ---------------------------------------------------------
+# "flux" uses Deepgram Flux (conversational model with built-in turn
+# detection). "nova" falls back to /v1/listen streaming with endpointing —
+# use it if Flux misbehaves; nothing else changes.
+stt_engine = "flux"
+stt_model_flux = "flux-general-en"
+stt_model_fallback = "nova-3"
+sample_rate = 16000
+# End-of-turn sensitivity (Flux). Higher = waits longer before deciding you're
+# done; raise it if you get cut off mid-thought, lower it if replies feel slow.
+eot_threshold = 0.7
+# Set (e.g. 0.5) to also emit EagerEndOfTurn events for lower perceived latency.
+eager_eot_threshold = 0.0
+
+# --- Mouth: ElevenLabs ------------------------------------------------------
+# voice_id / tts_model here are DEFAULTS; the ELEVENLABS_VOICE_ID and
+# ELEVENLABS_MODEL_ID environment variables (.env) override them.
+voice_id = "KyjzVGDMoVqkKJdc4UFh"
+tts_model = "eleven_flash_v2_5"
+# Raw PCM keeps playback dependency-free; 16000 matches the mic path.
+tts_output_format = "pcm_16000"
+tts_sample_rate = 16000
+
+# --- Behaviour --------------------------------------------------------------
+# Barge-in: speaking while Orion talks stops it immediately and it listens.
+barge_in = true
+# While Orion is speaking, ignore transcripts that look like its own voice
+# leaking into the mic (similarity 0..1 against what it just said).
+self_echo_similarity = 0.75
+# Print each turn's latency breakdown (T0-T6) while developing.
+latency_log = true

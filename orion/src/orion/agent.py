@@ -9,6 +9,7 @@ background version — stop. Feed the text into `run_turn` instead.
 
 from __future__ import annotations
 
+import threading
 from typing import Any, Callable
 
 from .prompts import build_system_prompt
@@ -28,6 +29,10 @@ DECLINED_MESSAGE = (
     "Karl did not confirm this action, so it was not run. Do not retry it on "
     "your own; carry on without it, or ask him what he wants to do."
 )
+class _CancelSignal(Exception):
+    """Raised inside the stream callback to abort generation on barge-in."""
+
+
 UNATTENDED_MESSAGE = (
     "This action needs Karl's explicit confirmation and no one is available to "
     "give it, so it was not run. Leave a note about what you wanted to do and "
@@ -123,6 +128,7 @@ class Agent:
         user_text: str,
         *,
         on_text_delta: TextDeltaHandler | None = None,
+        cancel: "threading.Event | None" = None,
     ) -> str:
         """Run one full turn and return Orion's reply as text.
 
@@ -141,13 +147,47 @@ class Agent:
         final_text_parts: list[str] = []
         result: TurnResult | None = None
 
+        # Barge-in support: the delta callback checks the cancel flag, so an
+        # interruption aborts generation mid-stream instead of finishing a
+        # reply nobody is listening to.
+        partial: list[str] = []
+
+        def _delta(chunk: str) -> None:
+            if cancel is not None and cancel.is_set():
+                raise _CancelSignal()
+            partial.append(chunk)
+            if on_text_delta is not None:
+                on_text_delta(chunk)
+
         for _ in range(self.config.conversation.max_tool_iterations):
-            result = self.provider.stream_turn(
-                system=self.system,
-                messages=self.messages,
-                tools=api_tools,
-                on_text_delta=on_text_delta,
-            )
+            if cancel is not None and cancel.is_set():
+                break
+            partial.clear()
+            try:
+                result = self.provider.stream_turn(
+                    system=self.system,
+                    messages=self.messages,
+                    tools=api_tools,
+                    on_text_delta=_delta,
+                )
+            except _CancelSignal:
+                # Keep history coherent: record what was actually said before
+                # the interruption, so "as I was saying" makes sense next turn.
+                spoken_so_far = "".join(partial).strip()
+                self.messages.append(
+                    {
+                        "role": "assistant",
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": (spoken_so_far or "…")
+                                + "\n[Karl interrupted this reply before it finished.]",
+                            }
+                        ],
+                    }
+                )
+                self._emit("turn.interrupted", {"partial": spoken_so_far})
+                return spoken_so_far
             self._record(result)
             if result.content:
                 self.messages.append({"role": "assistant", "content": result.content})

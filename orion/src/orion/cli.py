@@ -58,6 +58,7 @@ class Repl:
             "history": self.cmd_history,
             "cost": self.cmd_cost,
             "tools": self.cmd_tools,
+            "voice": self.cmd_voice,
         }
 
     # -------------------------------------------------------------- commands
@@ -68,6 +69,7 @@ class Repl:
             ("/reset", "clear the current conversation"),
             ("/history", "how many turns are in short-term memory"),
             ("/tools", "what Orion can do"),
+            ("/voice", "start the spoken conversation (Ctrl-C returns here)"),
             ("/cost", "tokens and spend this session"),
             ("/quit", "leave"),
         ]
@@ -99,6 +101,66 @@ class Repl:
             first_line = t.description.split(". ")[0]
             print(f"  {self.style.bold(name.ljust(20))} {self.style.dim(first_line + gated)}")
         print()
+
+    def cmd_voice(self, _: str) -> None:
+        """Enter continuous voice mode. The same agent — same memory of this
+        conversation — carries straight on; only the ears and mouth change."""
+        import threading
+
+        try:
+            from .voice.audio import AudioError, Microphone, Player
+            from .voice.conversation import VoiceConversation
+            from .voice.devtests import _pump_mic_to_stt
+            from .voice.preflight import run_preflight
+            from .voice.stt import DeepgramStream
+            from .voice.tts import ElevenLabsSpeaker
+        except ImportError:
+            print(self.style.yellow(
+                "  voice support isn't installed — run `uv sync --extra voice`\n"
+            ))
+            return
+
+        config = self.agent.config
+        results, ok = run_preflight(config)
+        for result in results:
+            print(result.line())
+        if not ok:
+            print(self.style.yellow("\n  voice mode can't start — fix the ✗ lines above\n"))
+            return
+
+        stt = DeepgramStream(config.voice)
+        speaker = ElevenLabsSpeaker(config.voice)
+        mic = Microphone(config.voice.sample_rate)
+        player = Player(config.voice.tts_sample_rate)
+        try:
+            mic.start()
+            player.start()
+        except AudioError as exc:
+            print(self.style.red(f"  {exc}\n"))
+            return
+
+        self.agent.set_mode("voice")
+        convo = VoiceConversation(
+            self.agent, stt, speaker, player,
+            voice_config=config.voice,
+            say=lambda line: print(self.style.dim("  " + line)),
+            show=print,
+        )
+        print(self.style.dim("\n  listening — speak naturally, interrupt freely, Ctrl-C returns to text\n"))
+        running = threading.Event()
+        running.set()
+        threading.Thread(target=_pump_mic_to_stt, args=(mic, stt, running), daemon=True).start()
+        try:
+            convo.run()
+        except KeyboardInterrupt:
+            pass
+        finally:
+            running.clear()
+            convo.shutdown()
+            mic.stop()
+            player.close()
+            self.agent.set_mode("text")
+        print(self.style.dim("\n  back to text\n"))
 
     def cmd_cost(self, _: str) -> None:
         u = self.agent.usage

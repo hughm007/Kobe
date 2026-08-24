@@ -70,6 +70,33 @@ class ModelConfig:
 
 
 @dataclass(frozen=True)
+class VoiceConfig:
+    stt_engine: str = "flux"
+    stt_model_flux: str = "flux-general-en"
+    stt_model_fallback: str = "nova-3"
+    sample_rate: int = 16000
+    eot_threshold: float = 0.7
+    eager_eot_threshold: float = 0.0
+    voice_id: str = "KyjzVGDMoVqkKJdc4UFh"
+    tts_model: str = "eleven_flash_v2_5"
+    tts_output_format: str = "pcm_16000"
+    tts_sample_rate: int = 16000
+    barge_in: bool = True
+    self_echo_similarity: float = 0.75
+    latency_log: bool = True
+
+    @property
+    def effective_voice_id(self) -> str:
+        """ELEVENLABS_VOICE_ID in .env wins over the orion.toml default."""
+        return os.environ.get("ELEVENLABS_VOICE_ID", "").strip() or self.voice_id
+
+    @property
+    def effective_tts_model(self) -> str:
+        """ELEVENLABS_MODEL_ID in .env wins over the orion.toml default."""
+        return os.environ.get("ELEVENLABS_MODEL_ID", "").strip() or self.tts_model
+
+
+@dataclass(frozen=True)
 class ConversationConfig:
     max_history_messages: int = 60
     max_tool_iterations: int = 8
@@ -84,6 +111,7 @@ class Config:
     state_dir: Path
     model: ModelConfig
     conversation: ConversationConfig
+    voice: VoiceConfig
     raw: dict = field(default_factory=dict, repr=False)
 
     @property
@@ -113,7 +141,9 @@ def load_config(home: Path | None = None) -> Config:
     assistant = data.get("assistant", {})
     model = data.get("model", {})
     conversation = data.get("conversation", {})
+    voice = data.get("voice", {})
 
+    known_voice = {f for f in VoiceConfig.__dataclass_fields__}
     known_model = {f for f in ModelConfig.__dataclass_fields__}
     known_conv = {f for f in ConversationConfig.__dataclass_fields__}
 
@@ -127,6 +157,7 @@ def load_config(home: Path | None = None) -> Config:
         conversation=ConversationConfig(
             **{k: v for k, v in conversation.items() if k in known_conv}
         ),
+        voice=VoiceConfig(**{k: v for k, v in voice.items() if k in known_voice}),
         raw=data,
     )
 

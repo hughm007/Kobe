@@ -14,7 +14,7 @@ dependencies = [
 voice = [
     "sounddevice>=0.4",
     "numpy>=1.24",
-    "pynput>=1.7",
+    "websockets>=13",
 ]
 dev = [
     "pytest>=8.0",
@@ -23,6 +23,7 @@ dev = [
 [project.scripts]
 orion = "orion.cli:main"
 orion-heartbeat = "orion.heartbeat:main"
+orion-voicetest = "orion.voice.devtests:main"
 
 [build-system]
 requires = ["hatchling"]
