@@ -1,0 +1,40 @@
+# ---------------------------------------------------------------------------
+# Repository-root ignores. `agent-workspace/` has its own .gitignore for the
+# markdown office; this file covers the Orion codebase and everything the
+# assistant writes at runtime.
+# ---------------------------------------------------------------------------
+
+# Secrets. The real rule is AGENT.md §5 and CLAUDE.md §10: never write a
+# credential to a file here. This is a safety net, not permission to try.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Orion's runtime state — memory, notices, schedule, audit log, kill switch.
+# Plain text and hand-editable by design, but it is Karl's data, not source.
+orion/state/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Recorded audio — push-to-talk scratch files never belong in git.
+*.wav
+*.mp3
+*.flac
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~

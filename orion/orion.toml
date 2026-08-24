@@ -1,0 +1,44 @@
+# ---------------------------------------------------------------------------
+# Orion configuration.
+#
+# Everything tunable lives here, not in the code. Thresholds, intervals, the
+# model, the voice, which tools need confirmation — changing behaviour should
+# be a one-line edit, never a code change. (AGENT.md §7)
+#
+# Later tiers add sections: [voice] in Tier 3, [memory] in Tier 4,
+# [heartbeat] + [checks] in Tier 5, [gate] + [audit] in Tier 6.
+# ---------------------------------------------------------------------------
+
+[assistant]
+name = "Orion"
+# Paths are relative to this file. AGENT.md is read at runtime for the persona.
+spec_file = "../AGENT.md"
+workspace = "../agent-workspace"
+
+[model]
+name = "claude-opus-5"
+
+# How hard the model thinks. Latency is the whole experience in voice, and
+# conversational replies are short — "medium" is the deliberate default.
+# Raise to "high" or "xhigh" when you want real analysis and can wait for it.
+effort = "medium"
+
+max_tokens = 4000
+timeout_seconds = 90
+max_retries = 2
+
+# Server-side refusal fallback: if a safety classifier declines a request,
+# the API routes it to a comparable model instead of returning a dead turn.
+refusal_fallback = true
+
+# USD per million tokens, used only for the running cost tally.
+price_input_per_mtok = 5.0
+price_output_per_mtok = 25.0
+
+[conversation]
+# Turns kept in short-term memory before the oldest are dropped. Long-term
+# memory (Tier 4) is what survives past this and past a restart.
+max_history_messages = 60
+
+# Hard stop on a single turn's tool chain, so a loop can't run away.
+max_tool_iterations = 8

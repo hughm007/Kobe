@@ -1,0 +1,35 @@
+[project]
+name = "orion"
+version = "0.1.0"
+description = "Voice-first assistant for Service Pow"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.40",
+    "httpx",
+]
+
+[project.optional-dependencies]
+# Audio is only needed for Tier 3 (/voice). The text path works without it,
+# which keeps `uv sync` usable on a machine with no working audio stack.
+voice = [
+    "sounddevice>=0.4",
+    "numpy>=1.24",
+    "pynput>=1.7",
+]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+orion = "orion.cli:main"
+orion-heartbeat = "orion.heartbeat:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/orion"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
