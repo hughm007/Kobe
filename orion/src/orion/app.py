@@ -92,6 +92,10 @@ def main() -> int:
             )
             coder.register(agent.tools, config, job_manager)
 
+        from .tools import model_tools
+
+        model_tools.register(agent.tools, config, provider)
+
         from .hud.server import start_hud
 
         try:

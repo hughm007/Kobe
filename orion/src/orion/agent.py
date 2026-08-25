@@ -74,6 +74,7 @@ class Agent:
         self._memories = memories
         self.messages: list[dict[str, Any]] = []
         self.usage = Usage()
+        self.cost_usd_total = 0.0
         self.system = self._build_system()
 
     # ------------------------------------------------------------------ state
@@ -141,6 +142,7 @@ class Agent:
         """
         self._emit("turn.start", {"mode": self.mode, "text": user_text})
         usage_before = Usage(self.usage.input_tokens, self.usage.output_tokens)
+        cost_before = self.cost_usd_total
         self.messages.append({"role": "user", "content": user_text})
         self._trim_history()
 
@@ -227,6 +229,8 @@ class Agent:
         turn_usage = {
             "input_tokens": self.usage.input_tokens - usage_before.input_tokens,
             "output_tokens": self.usage.output_tokens - usage_before.output_tokens,
+            "cost_usd": round(self.cost_usd_total - cost_before, 6),
+            "model": getattr(self.provider, "active_model", self.config.model.name),
         }
         self._emit("turn.end", {"reply": reply, **turn_usage})
         return reply
@@ -274,10 +278,23 @@ class Agent:
         self.usage.input_tokens += result.usage.input_tokens
         self.usage.output_tokens += result.usage.output_tokens
         self.usage.cache_read_tokens += result.usage.cache_read_tokens
+        price_in, price_out = self._prices()
+        self.cost_usd_total += result.usage.cost_usd(price_in, price_out)
 
-    @property
-    def cost_usd(self) -> float:
-        return self.usage.cost_usd(
+    def _prices(self) -> tuple[float, float]:
+        """The active model's prices — asked of the provider so a runtime
+        model switch is reflected in the tally immediately."""
+        prices = getattr(self.provider, "prices", None)
+        if callable(prices):
+            try:
+                return prices()
+            except Exception:  # noqa: BLE001
+                pass
+        return (
             self.config.model.price_input_per_mtok,
             self.config.model.price_output_per_mtok,
         )
+
+    @property
+    def cost_usd(self) -> float:
+        return self.cost_usd_total

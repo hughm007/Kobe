@@ -73,6 +73,7 @@ class Repl:
             "pause": self.cmd_pause,
             "resume": self.cmd_resume,
             "hud": self.cmd_hud,
+            "model": self.cmd_model,
         }
 
     # -------------------------------------------------------------- commands
@@ -89,6 +90,7 @@ class Repl:
             ("/pause", "kill switch: hold all proactive behaviour"),
             ("/resume", "let the heartbeat beat again"),
             ("/hud", "the command-center page: show the URL, open the browser"),
+            ("/model", "show or switch the brain: /model fable high"),
             ("/cost", "tokens and spend this session"),
             ("/quit", "leave"),
         ]
@@ -170,6 +172,31 @@ class Repl:
             print(self.style.dim("  resumed — the heartbeat is live again\n"))
         else:
             print(self.style.dim("  it wasn't paused\n"))
+
+    def cmd_model(self, rest: str) -> None:
+        from .provider import EFFORT_LEVELS, MODEL_ALIASES, MODEL_CATALOG
+
+        provider = self.agent.provider
+        words = rest.split()
+        if not words:
+            active = getattr(provider, "active_model", self.agent.config.model.name)
+            effort = getattr(provider, "active_effort", self.agent.config.model.effort)
+            print(f"\n  active: {self.style.bold(active)} {self.style.dim('· effort ' + effort)}")
+            print(self.style.dim("  switch: /model <name> [effort]   e.g. /model fable high"))
+            for alias, full in sorted(MODEL_ALIASES.items()):
+                price_in, price_out = MODEL_CATALOG[full]
+                print(f"    {alias.ljust(8)} {self.style.dim(f'{full}  ${price_in:.0f}/${price_out:.0f} per MTok')}")
+            print(self.style.dim(f"  efforts: {', '.join(EFFORT_LEVELS)}\n"))
+            return
+        if not callable(getattr(provider, "set_model", None)):
+            print(self.style.yellow("  this provider can't switch models\n"))
+            return
+        try:
+            active, effort = provider.set_model(words[0], words[1] if len(words) > 1 else None)
+        except ValueError as exc:
+            print(self.style.yellow(f"  {exc}\n"))
+            return
+        print(self.style.dim(f"  brain switched: {active} · effort {effort} (persists across restarts)\n"))
 
     def cmd_hud(self, _: str) -> None:
         if self.hud is None:
@@ -263,7 +290,9 @@ class Repl:
     def banner(self) -> None:
         cfg = self.agent.config
         provider = cfg.provider_name
-        tag = f"{cfg.model.name} · effort {cfg.model.effort}"
+        active = getattr(self.agent.provider, "active_model", cfg.model.name)
+        active_effort = getattr(self.agent.provider, "active_effort", cfg.model.effort)
+        tag = f"{active} · effort {active_effort}"
         if provider == "fake":
             tag = "fake provider — no model calls"
         print()
@@ -360,6 +389,10 @@ def main() -> int:
                 audit, announce=session.announce,
             )
             coder.register(agent.tools, config, job_manager)
+
+        from .tools import model_tools
+
+        model_tools.register(agent.tools, config, provider)
 
         hud = None
         hud_config = config.raw.get("hud", {})

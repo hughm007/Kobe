@@ -40,6 +40,7 @@ class AuditLog:
     def lifetime_cost(self, price_in_per_mtok: float, price_out_per_mtok: float) -> tuple[int, int, float]:
         """Total tokens and dollars across every session in the log."""
         tokens_in = tokens_out = 0
+        cost = 0.0
         if self.path.is_file():
             for line in self.path.read_text(encoding="utf-8").splitlines():
                 try:
@@ -47,9 +48,15 @@ class AuditLog:
                 except json.JSONDecodeError:
                     continue
                 if entry.get("kind") == "turn.end":
-                    tokens_in += int(entry.get("input_tokens", 0) or 0)
-                    tokens_out += int(entry.get("output_tokens", 0) or 0)
-        cost = (tokens_in * price_in_per_mtok + tokens_out * price_out_per_mtok) / 1_000_000
+                    turn_in = int(entry.get("input_tokens", 0) or 0)
+                    turn_out = int(entry.get("output_tokens", 0) or 0)
+                    tokens_in += turn_in
+                    tokens_out += turn_out
+                    if entry.get("cost_usd") is not None:
+                        # Priced at whichever model actually served the turn.
+                        cost += float(entry["cost_usd"] or 0.0)
+                    else:  # entries from before per-turn pricing existed
+                        cost += (turn_in * price_in_per_mtok + turn_out * price_out_per_mtok) / 1_000_000
         return tokens_in, tokens_out, cost
 
     def tail(self, count: int = 20) -> list[dict]:

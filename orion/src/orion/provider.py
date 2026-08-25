@@ -16,6 +16,75 @@ from typing import Any, Callable, Protocol
 
 TextDeltaHandler = Callable[[str], None]
 
+# The brains Karl can switch between, with USD-per-million-token prices so the
+# cost tally stays honest whichever one is active. Full IDs are accepted too.
+MODEL_CATALOG: dict[str, tuple[float, float]] = {
+    "claude-fable-5": (10.0, 50.0),
+    "claude-opus-5": (5.0, 25.0),
+    "claude-opus-4-8": (5.0, 25.0),
+    "claude-opus-4-7": (5.0, 25.0),
+    "claude-opus-4-6": (5.0, 25.0),
+    "claude-sonnet-5": (3.0, 15.0),
+    "claude-sonnet-4-6": (3.0, 15.0),
+    "claude-haiku-4-5": (1.0, 5.0),
+}
+MODEL_ALIASES = {
+    "fable": "claude-fable-5",
+    "opus": "claude-opus-5",
+    "sonnet": "claude-sonnet-5",
+    "haiku": "claude-haiku-4-5",
+}
+EFFORT_LEVELS = ("low", "medium", "high", "xhigh", "max")
+
+
+def resolve_model(name: str) -> str:
+    cleaned = name.strip().lower()
+    if not cleaned:
+        raise ValueError("Name a model — e.g. fable, opus, sonnet, haiku, or a full id.")
+    resolved = MODEL_ALIASES.get(cleaned, cleaned)
+    if resolved not in MODEL_CATALOG:
+        raise ValueError(
+            f"Unknown model {name!r}. Shortcuts: {', '.join(sorted(MODEL_ALIASES))}; "
+            f"full ids: {', '.join(sorted(MODEL_CATALOG))}."
+        )
+    return resolved
+
+
+def resolve_effort(effort: str) -> str:
+    cleaned = effort.strip().lower()
+    if cleaned not in EFFORT_LEVELS:
+        raise ValueError(f"Effort must be one of: {', '.join(EFFORT_LEVELS)}.")
+    return cleaned
+
+
+def _override_path(config):
+    return config.state_path("model-override.json")
+
+
+def load_model_override(config) -> tuple[str, str]:
+    """The active (model, effort): a persisted runtime choice wins over
+    orion.toml. The file is plain JSON — delete it to return to the config."""
+    name, effort = config.model.name, config.model.effort
+    path = _override_path(config)
+    if path.is_file():
+        import json
+
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            name = resolve_model(str(data.get("model", name)))
+            effort = resolve_effort(str(data.get("effort", effort)))
+        except (json.JSONDecodeError, ValueError):
+            pass  # a mangled override falls back to config, never crashes
+    return name, effort
+
+
+def save_model_override(config, model: str, effort: str) -> None:
+    import json
+
+    _override_path(config).write_text(
+        json.dumps({"model": model, "effort": effort}, indent=1) + "\n", encoding="utf-8"
+    )
+
 
 class ProviderError(RuntimeError):
     """A failure talking to the model, already phrased for a human to read.
@@ -103,6 +172,7 @@ class AnthropicProvider:
         self._sdk = anthropic
         self._config = config
         self._model = config.model
+        self.active_model, self.active_effort = load_model_override(config)
 
         if not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")):
             # Not fatal — the SDK also resolves an `ant auth login` profile.
@@ -114,6 +184,38 @@ class AnthropicProvider:
             max_retries=int(self._model.max_retries),
         )
 
+    def set_model(self, model: str, effort: str | None = None) -> tuple[str, str]:
+        """Switch the active brain. Persisted, so the choice survives restarts."""
+        self.active_model = resolve_model(model)
+        if effort is not None:
+            self.active_effort = resolve_effort(effort)
+        save_model_override(self._config, self.active_model, self.active_effort)
+        return self.active_model, self.active_effort
+
+    def prices(self) -> tuple[float, float]:
+        return MODEL_CATALOG.get(
+            self.active_model,
+            (self._model.price_input_per_mtok, self._model.price_output_per_mtok),
+        )
+
+    def _request_kwargs(
+        self, *, system: str, messages: list[dict[str, Any]], tools: list[dict[str, Any]] | None
+    ) -> dict[str, Any]:
+        kwargs: dict[str, Any] = {
+            "model": self.active_model,
+            "max_tokens": int(self._model.max_tokens),
+            "system": system,
+            "messages": messages,
+            # Adaptive thinking with display left omitted: Orion reasons, but the
+            # reasoning never reaches the text stream and so never gets spoken.
+            # (On Fable 5 thinking is always on; adaptive is the accepted form.)
+            "thinking": {"type": "adaptive"},
+            "output_config": {"effort": self.active_effort},
+        }
+        if tools:
+            kwargs["tools"] = tools
+        return kwargs
+
     def stream_turn(
         self,
         *,
@@ -122,18 +224,7 @@ class AnthropicProvider:
         tools: list[dict[str, Any]] | None = None,
         on_text_delta: TextDeltaHandler | None = None,
     ) -> TurnResult:
-        kwargs: dict[str, Any] = {
-            "model": self._model.name,
-            "max_tokens": int(self._model.max_tokens),
-            "system": system,
-            "messages": messages,
-            # Adaptive thinking with display left omitted: Orion reasons, but the
-            # reasoning never reaches the text stream and so never gets spoken.
-            "thinking": {"type": "adaptive"},
-            "output_config": {"effort": self._model.effort},
-        }
-        if tools:
-            kwargs["tools"] = tools
+        kwargs = self._request_kwargs(system=system, messages=messages, tools=tools)
 
         try:
             if self._model.refusal_fallback:
@@ -184,7 +275,8 @@ class AnthropicProvider:
             return ProviderError("That key isn't allowed to use this model.")
         if isinstance(exc, sdk.NotFoundError):
             return ProviderError(
-                f"Model '{self._model.name}' wasn't found. Check [model].name in orion.toml."
+                f"Model '{self.active_model}' wasn't found. Check the model choice "
+                "(/model) or [model].name in orion.toml."
             )
         if isinstance(exc, sdk.RateLimitError):
             return ProviderError("Rate limited. Give it a few seconds and try again.")
@@ -211,6 +303,17 @@ class FakeProvider:
     def __init__(self, script: list[Any] | None = None) -> None:
         self.script: list[Any] = list(script or [])
         self.calls: list[dict[str, Any]] = []
+        self.active_model = "fake"
+        self.active_effort = "medium"
+
+    def set_model(self, model: str, effort: str | None = None) -> tuple[str, str]:
+        self.active_model = resolve_model(model)
+        if effort is not None:
+            self.active_effort = resolve_effort(effort)
+        return self.active_model, self.active_effort
+
+    def prices(self) -> tuple[float, float]:
+        return MODEL_CATALOG.get(self.active_model, (5.0, 25.0))
 
     def queue(self, *responses: Any) -> "FakeProvider":
         self.script.extend(responses)
