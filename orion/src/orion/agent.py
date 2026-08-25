@@ -75,6 +75,12 @@ class Agent:
         self.messages: list[dict[str, Any]] = []
         self.usage = Usage()
         self.cost_usd_total = 0.0
+        # One turn at a time, whoever starts it. The HUD's /say endpoint, the
+        # voice pipeline, the REPL and the heartbeat all share this brain; two
+        # concurrent run_turn calls would interleave self.messages into a
+        # history the API rejects. The lock lives on the agent — callers can't
+        # forget it. Reentrant, so a caller holding it may call run_turn.
+        self.turn_lock = threading.RLock()
         self.system = self._build_system()
 
     # ------------------------------------------------------------------ state
@@ -140,6 +146,16 @@ class Agent:
         Raises ProviderError if the model can't be reached — the caller prints
         one clear line and asks for the next turn. Never a stack trace.
         """
+        with self.turn_lock:
+            return self._run_turn(user_text, on_text_delta=on_text_delta, cancel=cancel)
+
+    def _run_turn(
+        self,
+        user_text: str,
+        *,
+        on_text_delta: TextDeltaHandler | None = None,
+        cancel: "threading.Event | None" = None,
+    ) -> str:
         self._emit("turn.start", {"mode": self.mode, "text": user_text})
         usage_before = Usage(self.usage.input_tokens, self.usage.output_tokens)
         cost_before = self.cost_usd_total

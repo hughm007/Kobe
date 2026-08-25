@@ -100,3 +100,42 @@ def test_cost_is_tallied_across_the_session(config):
     agent.run_turn("b")
     assert agent.usage.input_tokens == 20
     assert agent.cost_usd > 0
+
+
+def test_concurrent_turns_serialize_on_the_agents_own_lock(config):
+    """The HUD's /say and a live voice turn share one brain. Without the
+    agent-owned lock they interleave self.messages into a history the API
+    rejects — this drives both paths at once and proves they queue."""
+    import threading
+    import time as _time
+
+    class SlowProvider(FakeProvider):
+        def __init__(self, script):
+            super().__init__(script)
+            self.active = 0
+            self.max_active = 0
+            self._gauge = threading.Lock()
+
+        def stream_turn(self, **kwargs):
+            with self._gauge:
+                self.active += 1
+                self.max_active = max(self.max_active, self.active)
+            _time.sleep(0.05)
+            try:
+                return super().stream_turn(**kwargs)
+            finally:
+                with self._gauge:
+                    self.active -= 1
+
+    provider = SlowProvider([text_response("one"), text_response("two")])
+    agent = Agent(config, provider)
+
+    threads = [threading.Thread(target=agent.run_turn, args=(t,)) for t in ("a", "b")]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join(timeout=5)
+
+    assert provider.max_active == 1, "two turns ran inside the brain at once"
+    roles = [m["role"] for m in agent.messages]
+    assert roles == ["user", "assistant", "user", "assistant"]

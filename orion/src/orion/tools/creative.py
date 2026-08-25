@@ -177,6 +177,11 @@ def render_png(chromium: str, html_path: Path, png_path: Path, size: str) -> str
         f"--screenshot={png_path}",
         html_path.resolve().as_uri(),
     ]
+    # Chromium refuses its sandbox under root (containers, CI). The input is
+    # our own just-written local file, so rendering unsandboxed there is fine;
+    # a normal user account never gets the flag.
+    if getattr(os, "geteuid", lambda: 1000)() == 0:
+        cmd.insert(1, "--no-sandbox")
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=90)
     except (OSError, subprocess.TimeoutExpired) as exc:

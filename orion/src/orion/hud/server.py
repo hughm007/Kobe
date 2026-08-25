@@ -41,7 +41,9 @@ class HudState:
         self.session = session       # OrionSession in app mode; None in bare tests
         self.quit_event = threading.Event()
         self._legacy_conversation = None  # set by the REPL's /voice path
-        self.turn_lock = threading.Lock()
+        # The agent's own lock, not a second one: a /say turn and a live voice
+        # turn contend on the same mutex, so they can never interleave history.
+        self.turn_lock = agent.turn_lock
         self.started_at = time.time()
         self.last_latency_ms: float | None = None
         self.last_turn_seconds: float | None = None
