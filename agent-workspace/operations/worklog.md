@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 tags: [operations, log]
 ---
 
@@ -33,6 +33,36 @@ Keep entries short. This is a log, not a report — three lines that are actuall
 beat a page that isn't.
 
 ---
+
+## 2026-08-25 — Drive company OS ingested; Orion tailored to Service Pow
+
+**Did:** Read the canonical Drive folder "ServicePow OS 2" (the storage map there
+declares the Drive copies canonical) and distilled the live docs into this workspace —
+15 new/updated files, each citing its Drive source and sync date in frontmatter:
+company profile, services, positioning/ICP, pricing floors, sales process, email
+marketing playbook, video-production gate (31 blocking checks + ServicePow-6),
+compliance rules, the Style Bank design research, and real briefs for 911 Drain
+(partnership structure, CR-37 residential-only, live blockers) and TripNerd. Filled
+911 Drain's brand guide from known brand facts. Re-tiered `company/OPEN-QUESTIONS.md`
+around business risk. Updated `CLAUDE.md` §1 (clients row) and §13.
+
+**Decided:** [Decision 0003](../knowledge/decisions/0003-orion-and-the-company-os.md)
+— Orion keeps its own constitution and gate; the Company OS governs marketing quality
+and compliance; the mapping between the two is recorded once, not re-litigated per task.
+
+**Abandoned deliberately:** all RETIRED_*/LOCK_* Drive copies, the change-log
+mechanics, the other assistant's concurrency protocol, and the personal weekly
+checklist — bookkeeping for a different tool, not knowledge.
+
+**Learned:** [Checks beat prose](../knowledge/learnings/2026-08-25-checks-beat-prose.md)
+— the v8 "2:07 AM" kill is why binary blocking checks now gate creative work here too.
+
+**Open:** the Tier 1 risk items (unrecorded partnership percentages, unsigned claims
+sheet, sewer-scope verification, capacity vs. the daily-video promise); Wave Reaction's
+identity; ElevenLabs key still unverified from this container (egress-blocked).
+
+**Next:** Part B — wire the business snapshot into Orion's system prompt and add the
+static-ad drafting tool; then the code autopsy (Part C).
 
 ## 2026-08-24 — Tier 1 answered; workspace populated
 

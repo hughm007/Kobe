@@ -42,7 +42,7 @@ production and strategy.
 | Currency | **USD** |
 | Websites | Built as code with Claude, hosted on **Vercel** — see [decision 0002](knowledge/decisions/0002-web-delivery-model.md) |
 | Advertising | Meta (Facebook + Instagram), Google, TikTok, LinkedIn, plus client-directed |
-| Clients | **911 Drain** (active, main account) · TripNerd, WaveReaction (prospects) |
+| Clients | **911 Drain** (main account — a **revenue/exit partnership**, not a retainer; see its brief) · **TripNerd** (active) · WaveReaction (status unknown — open question) |
 
 Service Pow is a one-person business augmented by this agent. There is no second reviewer:
 [`operations/quality-bar.md`](operations/quality-bar.md) is the only gate between a draft
@@ -320,20 +320,28 @@ leaked in that belongs in a playbook — move it out.
 
 ## 13. Current state
 
-Scaffolded **2026-08-24**. Structure, conventions and playbooks are in place. Tier 1 of
-[`company/OPEN-QUESTIONS.md`](company/OPEN-QUESTIONS.md) is answered — the workspace knows
-who Service Pow is, how it operates, what it builds on and who its clients are.
+Scaffolded **2026-08-24**. On **2026-08-25** the Drive company OS ("ServicePow OS 2",
+declared canonical by its own storage map) was ingested: company identity, services,
+positioning, pricing floors, the sales process, email offering, compliance rules, the
+Style Bank design system, and real client briefs for 911 Drain and TripNerd. Each
+ingested file cites its Drive source and sync date in frontmatter.
 
-**Still open, in priority order:**
+**What that means in practice:**
 
-1. **911 Drain's brief is empty.** The active account has a folder and a status, but the
-   agent has not been told what the business does, who it sells to, or what success looks
-   like. Until that's filled in, no client-facing work for them is safe to produce. The
-   name suggests emergency drain services — that is an **unconfirmed inference**, and must
-   not be treated as fact.
-2. Brand voice attributes and visual identity — Service Pow's own.
-3. Pricing figures and commercial terms.
-4. Tiers 2–5 of the open-questions checklist.
+- **911 Drain's brief is real now** — partnership structure, license constraints
+  (CR-37 residential-only), brand facts, and live compliance blockers. Read the brief
+  *and* the brand guide before any work for them; the compliance constraints in the
+  brief are blocking, not advisory.
+- **Creative work has a gate:** the 31 blocking checks + ServicePow-6 scoring in
+  [`playbooks/ads/video-production.md`](playbooks/ads/video-production.md), and the
+  claims discipline in [`operations/compliance.md`](operations/compliance.md).
+- The open questions that remain are mostly **business risks recorded nowhere**
+  (partnership percentages, unsigned claims sheet, unverified sewer scope) — see the
+  re-tiered [`company/OPEN-QUESTIONS.md`](company/OPEN-QUESTIONS.md).
 
-Nothing here has produced a learning yet. The knowledge loop starts with the first real
-piece of client work.
+**Still open, in priority order:** the Tier 1 risk items in OPEN-QUESTIONS; Wave
+Reaction's identity; Service Pow's own brand voice examples and visual identity files.
+
+The knowledge loop has its first entries — see
+[`knowledge/index.md`](knowledge/index.md). Keep the Drive OS and this workspace in
+sync: when either changes materially, the change gets mirrored and the worklog says so.

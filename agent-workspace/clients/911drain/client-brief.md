@@ -5,110 +5,75 @@ client: 911drain
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-24
-tags: [client, brief]
+updated: 2026-08-25
+tags: [client, brief, partnership]
+source: Drive "ServicePow OS 2" — 04_CLIENT_MASTER_LIST.md (2026-08-20, CLIENT-PROVIDED), 05_ACTIVE_PROJECTS.md (2026-08-21) — synced 2026-08-25
 ---
 
 # 911 Drain — Client Brief
 
-The one document to read before doing anything for this client. If something here is
-wrong, everything built on it is wrong — keep it current.
-
-> **Status: active client.** This is Service Pow's main account — the one where a
-> mistake costs the most. Read this brief in full before producing anything for them.
->
-> Almost every field below is still `NEEDS INPUT`. That is deliberate: the agent has not
-> been told what 911 Drain does, who they sell to, or what success looks like, and
-> guessing would put invented facts into client work. The business name suggests
-> emergency drain services, but **that is an unconfirmed inference, not a recorded fact** —
-> do not build copy, targeting or strategy on it until it's confirmed here.
+> **⚠ NOT A STANDARD CLIENT.** Will owns 911 Drain LLC outright; **Service Pow and
+> McVicker Consulting take a percentage of revenue and of exit proceeds** without being
+> on the cap table, on a planned 36-month start-to-exit strategy. Three consequences:
+> standard pricing rules don't govern this account the way they govern a retainer;
+> Service Pow is an *interested party* in 911 Drain's marketing claims, so compliance
+> binds harder, not softer; and the quality bar is self-interested — killed deliverables
+> cost Service Pow its own future revenue.
+> Confidence: **CLIENT-PROVIDED** (recovered from a second workspace 2026-08-20; no
+> primary document read — do not present as VERIFIED).
 
 ## Snapshot
 
 | | |
 |---|---|
-| **Business** | **NEEDS INPUT** |
-| **What they sell** | |
-| **Website** | |
-| **Industry** | |
-| **Location / trading area** | |
-| **Company size** | |
-| **Engaged since** | NEEDS INPUT |
-| **Services we provide** | |
-| **Commercial arrangement** | |
-| **Our account owner** | Karl |
-| **Their decision-maker** | |
-| **Who signs off creative** | |
+| **Business** | 911 Drain LLC — emergency drain repair (residential), East Valley, Arizona |
+| **Website** | 911drain.com — live since **2026-07-28**, launch punch list cleared |
+| **Phone** | 480-992-3541 |
+| **Licence** | **AZ ROC 366870, class CR-37 Plumbing — residential only, expires 2028-07-31** (renewal is a diarised business risk) |
+| **Licence address** | 337 N Mesa Dr Unit 201, Mesa, AZ 85201 |
+| **Owner / signature authority** | **Will** — operations, staffing, and sign-off on anything client-side including the claims sheet |
+| **Service Pow (Hugh)** | Web, social, AI marketing, and *daily POV before/after plumber videos* (see open question) |
+| **McVicker Consulting** | Sales + partnerships — realtor groups, HOAs |
 
-## Their customers
+## Live compliance constraints (these block work, today)
 
-Who actually buys from them — not who they wish bought from them.
+1. **CR-37 is residential-only. `/commercial` stays unpublished; no ad, page or claim
+   may market commercial work.**
+2. **"Sewer" is unverified.** The wrap and alt tagline say "DRAIN & SEWER REPAIR"; it is
+   NOT verified that CR-37's scope covers advertised sewer repair. Verify with Will or
+   the ROC before any asset carries "sewer." A van is an advertisement.
+3. **ROC number must appear in advertising** (it's on the site; confirm wrap + every ad),
+   and it must sit inside the platform-safe area — not where TikTok/Reels UI covers it.
+4. **Claims sheet: 9 items, UNSIGNED.** Plus the trip/call-out/diagnostic-fee question to
+   add before signature. No claim ships without written substantiation.
 
-- **Primary audience:**
-- **Secondary audience:**
-- **What triggers a purchase:**
-- **What stops a purchase:** (price, trust, timing, competitor, inertia)
-- **How they currently find this business:**
-- **Typical customer value / purchase frequency:**
+## Brand
 
-## Objectives
+- Logo: red "911" + white "drain" on black. Logo tagline: "24/7 EMERGENCY DRAIN REPAIR."
+- Van wrap (settled, original mockup): Ford Transit, red/black diagonal, wordmark,
+  "24/7 EMERGENCY DRAIN & SEWER REPAIR", no slogan, the 480 number.
+- **⚠ TAGLINE DRIFT:** logo and wrap carry different taglines advertising different
+  scopes — pick one and record it (this is the sewer question in a different coat).
+- **The real files rule (LB24): logo, van, wordmark are never generated. Ever.**
 
-What the client is actually trying to achieve, in business terms — revenue, leads,
-bookings, market share. Not "more traffic".
+## Marketing state
 
-| # | Objective | How we measure it | Target | By when |
-|---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
+- Monthly plan written: **LSA first**, then Search, GBP, Meta. LSA is still Service Pow
+  research (Hugh) — **not live; never describe it as running.**
+- **Video Pack 01 "2:07 AM"** (3-hook, 9:16, ~15s): v8 built, **killed on owner watch
+  2026-08-20** — motion inert, dead-space open, dissolve-only cuts, price line too fast,
+  uncited references. Rebuild is storyboard-level. Nothing published, ever, yet.
+- **Highest-value missing asset: real repair footage** — POV before/during/after from
+  the crew. Free, unfakeable, and exactly what the "during" state needs (it cannot
+  safely be generated).
 
-> If a target can't be measured with something we have access to, either get access or
-> change the target. Un-measurable targets become arguments at renewal.
+## Open questions (business risk, not admin)
 
-## What we're accountable for
-
-Explicitly: what falls to Service Pow, and what stays with the client. The most common
-cause of a failed engagement is an assumption on this list that was never said out loud.
-
-| Area | Owner |
-|---|---|
-| e.g. Ad creative | Service Pow |
-| e.g. Responding to leads | Client |
-| | |
-
-## Competitors
-
-| Competitor | What they do well | Where the client wins |
-|---|---|---|
-| | | |
-
-## Constraints and sensitivities
-
-Everything that would embarrass us if we didn't know it:
-
-- Claims they can't legally make / regulated language:
-- Topics, imagery or competitors to avoid:
-- Approval requirements before anything goes live:
-- Seasonality, blackout periods, quiet trading times:
-- Anything that has gone wrong before, with us or a previous agency:
-
-## History with us
-
-Dated log of the engagement's significant moments — scope changes, wins, problems,
-renewals. Meeting notes live in `notes/`; this is the summary a newcomer reads.
-
-| Date | What happened |
-|---|---|
-| | |
-
-## Current state
-
-- **Live work:**
-- **Next milestone:**
-- **Open issues / blockers:**
-- **Waiting on client for:**
-
-## Related
-
-- Their voice and look → [`brand-guide.md`](brand-guide.md)
-- Where access lives → [`access-and-accounts.md`](access-and-accounts.md)
-- Campaigns → [`campaigns/`](campaigns/) · Deliverables → [`deliverables/`](deliverables/) · Notes → [`notes/`](notes/)
+- **The revenue % and exit % are not recorded anywhere.** Largest commercial exposure
+  on the account. All partnership terms are L4 — Orion drafts analyses, never a term
+  that fixes a percentage.
+- The 36-month exit strategy has no recorded terms/targets/milestones here.
+- The "daily POV videos" commitment vs. actual capacity (~4 finished ads/month working
+  ceiling) — stale promise or unkept one? Needs Karl/Will before planning.
+- Backstop option · vesting · McVicker commission tail at sale · ROC qualifying-party
+  succession — all open, all unrecorded.

@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 tags: [company, onboarding, blockers]
 ---
 
@@ -26,68 +26,60 @@ the first block alone unblocks most day-to-day work.
 file gets filled in, tick the row and note the date. Don't let this drift out of sync
 with the `NEEDS INPUT` markers in the files themselves.
 
+> **2026-08-25 sync:** the Drive company OS ("ServicePow OS 2") was ingested into this
+> workspace. It answered most of Tiers 1–3 — those rows moved to Answered. What it
+> *surfaced* is a new class of open item: business risks recorded nowhere (percentages,
+> unsigned claims, unverified licence scope). Those are now Tier 1, because they carry
+> real commercial exposure, not just missing context.
+
 ---
 
-## Tier 1 — blocks almost everything
-
-**All answered 2026-08-24.** See the Answered table at the bottom.
-
-Follow-ups this raised, which are now the shortest path forward:
+## Tier 1 — business risk, not admin
 
 | ✓ | Question | Lands in |
 |---|---|---|
-| ☐ | **What does 911 Drain actually do, who do they sell to, and what are we measuring?** | `../clients/911drain/client-brief.md` |
-| ☐ | What services are we providing 911 Drain, and on what commercial terms? | `../clients/911drain/client-brief.md` |
-| ☐ | Which timezone is the working day for deadlines and scheduling? | `company-profile.md` |
-| ☐ | Any contractors, freelancers or partners used regularly? | `company-profile.md` |
+| ☐ | **911 Drain: what revenue % and exit % do Service Pow and McVicker actually hold?** Recorded nowhere. Largest commercial exposure on the books. | `../clients/911drain/client-brief.md` |
+| ☐ | **911 Drain: claims sheet is unsigned** (9 items + the trip/call-out/diagnostic-fee question to add). No claim ships without Will's signature. | `../clients/911drain/client-brief.md` |
+| ☐ | **911 Drain: does CR-37 cover advertised sewer repair?** Verify with Will or the AZ ROC. Until then no asset carries "sewer" — and the wrap already does (tagline drift). | `../clients/911drain/brand-guide.md` |
+| ☐ | 911 Drain: "daily POV videos" promise vs. ~4 finished ads/month real capacity — stale promise or unkept one? Needs Karl + Will. | `../clients/911drain/client-brief.md` |
+| ☐ | 36-month exit strategy: terms, targets, milestones — none recorded. | `../clients/911drain/client-brief.md` |
 
-## Tier 2 — needed for anything client-facing
+## Tier 2 — client-facing gaps
 
 | ✓ | Question | Lands in |
 |---|---|---|
-| ☐ | The real one-line description of Service Pow | `company-profile.md` |
-| ☐ | Positioning statement — especially how we differ from the main alternative | `positioning-and-icp.md` |
-| ☐ | Ideal client profile — industry, size, budget, trigger, fear | `positioning-and-icp.md` |
-| ☐ | Anti-profile — who we decline, and why | `positioning-and-icp.md` |
-| ☐ | Brand voice attributes, defined by contrast | `brand/brand-voice.md` |
+| ☐ | **Wave Reaction: who are they, what stage, what's the play?** Folder exists; brief is `NEEDS INPUT` throughout. | `../clients/wavereaction/client-brief.md` |
+| ☐ | TripNerd: when does the email play start, and what list are we mailing? Zero live deliverables to date. | `../clients/tripnerd/client-brief.md` |
+| ☐ | Brand voice attributes for Service Pow itself, defined by contrast | `brand/brand-voice.md` |
 | ☐ | Two worked copy examples — one on-brand, one off-brand | `brand/brand-voice.md` |
-| ☐ | Logo files, colors (HEX), typefaces | `brand/visual-identity.md` |
+| ☐ | Service Pow's own logo files, colors (HEX), typefaces (the Style Bank governs *client ad design*, not Service Pow's own identity) | `brand/visual-identity.md` |
 | ☐ | Nameable clients, case studies and results we're permitted to cite | `company-profile.md` |
 
-## Tier 3 — commercial
+## Tier 3 — commercial terms not covered by the pricing doc
 
 | ✓ | Question | Lands in |
 |---|---|---|
-| ☐ | Pricing model per service | `pricing-and-packaging.md` |
-| ☐ | Rate card figures | `pricing-and-packaging.md` |
-| ☐ | Named packages, or confirmation that we scope bespoke | `pricing-and-packaging.md` |
 | ☐ | Payment terms, minimum term, notice period | `pricing-and-packaging.md` |
 | ☐ | Is media spend billed through us or paid direct? | `pricing-and-packaging.md` |
 | ☐ | Who owns assets and accounts when a client leaves? | `pricing-and-packaging.md` |
-| ☐ | Is discounting permitted, by whom, to what floor? | `pricing-and-packaging.md` |
-| ☐ | Which services beyond web and ads do we actively sell? | `services.md` |
-| ☐ | Engagement shapes — project, retainer, day rate? | `services.md` |
 
 ## Tier 4 — operational
 
 | ✓ | Question | Lands in |
 |---|---|---|
-| ☐ | What tools do we use — CMS, ad platforms, analytics, PM, email, design, storage? | `../operations/tools-and-stack.md` |
+| ☐ | Which timezone is the working day for deadlines and scheduling? (Likely America/Phoenix given 911 Drain, but unconfirmed) | `company-profile.md` |
+| ☐ | Any contractors, freelancers or partners used regularly beyond McVicker Consulting? | `company-profile.md` |
+| ☐ | What tools do we use — CMS, ad platforms, analytics, PM, email, design, storage? (Partial: Vercel, Drive, Higgsfield, Remotion known) | `../operations/tools-and-stack.md` |
 | ☐ | Where do credentials live — which password manager? | `../operations/tools-and-stack.md` |
-| ☐ | Where do large files and brand assets live — Drive, Dropbox, elsewhere? | `../assets/README.md` |
 | ☐ | What's the standard client reporting cadence and format? | `../playbooks/client-lifecycle/reporting.md` |
 | ☐ | Standard contract, SOW and proposal templates — where do they live? | `../templates/` |
-| ☐ | Which analytics platform is standard, and is consent management required? | `../operations/tools-and-stack.md` |
-| ☐ | Do we have documented approval steps for going live with ads or a site? | `../operations/quality-bar.md` |
+| ☐ | Capacity check: the 4-ads/month working ceiling is an assumption — measure actual pilot hours per finished ad and revisit | `../operations/worklog.md` |
 
 ## Tier 5 — nice to have
 
 | ✓ | Question | Lands in |
 |---|---|---|
 | ☐ | Founding story | `company-profile.md` |
-| ☐ | Work we explicitly don't do | `company-profile.md` |
-| ☐ | Messaging pillars with proof | `positioning-and-icp.md` |
-| ☐ | Competitor set and how we counter each | `positioning-and-icp.md` |
 | ☐ | Platform certifications and partnerships | `company-profile.md` |
 
 ---
@@ -105,4 +97,13 @@ losing the record of what was decided when.
 | 2026-08-24 | Team and sign-off? | **Karl** — owns relationships, delivery and final sign-off | `company-profile.md` |
 | 2026-08-24 | Ad platforms? | Meta (FB + IG), Google, TikTok, LinkedIn, plus client-directed | `services.md` |
 | 2026-08-24 | Website platform? | **Built as code with Claude, hosted on Vercel** | `services.md`, decision 0002 |
-| 2026-08-24 | Current clients? | 911 Drain (active); TripNerd, WaveReaction (prospects) | `../clients/README.md` |
+| 2026-08-24 | Current clients? | 911 Drain (partnership), TripNerd (active), WaveReaction (unknown — see Tier 2) | `../clients/README.md` |
+| 2026-08-25 | What does 911 Drain do, who buys, what do we measure? | Emergency **residential** drain repair, East Valley AZ; ROC 366870 CR-37; site live 2026-07-28; LSA-first channel plan | `../clients/911drain/client-brief.md` |
+| 2026-08-25 | What services / terms for 911 Drain? | **Not a retainer — revenue + exit % partnership** with Will (owner) and McVicker (sales). Percentages themselves still unrecorded → Tier 1 | `../clients/911drain/client-brief.md` |
+| 2026-08-25 | One-line description of Service Pow | Digital marketing + creative production + AI marketing for local service businesses — full profile ingested from the Drive OS | `company-profile.md` |
+| 2026-08-25 | Positioning / ICP / anti-profile | Ingested from 00_MASTER_OS + 22_BIZDEV_PIPELINE — authenticity-over-artificial stance, local service ICP, decline rules | `positioning-and-icp.md` |
+| 2026-08-25 | Pricing model, rate card, floors, discounting | Ingested from 14_PRICING_AND_SCOPE_RULES — floors are hard; remaining terms (payment/media/ownership) → Tier 3 | `pricing-and-packaging.md` |
+| 2026-08-25 | Services beyond web and ads? Engagement shapes? | Web, ads, creative/video production, AI marketing, email, lead-gen, automation; project + retainer + partnership | `services.md` |
+| 2026-08-25 | Approval steps for going live? | Yes — the 31 blocking checks + ServicePow-6 scoring (floor 8.0) from the Drive OS, plus Orion's confirmation gate | `../playbooks/ads/video-production.md`, `../operations/compliance.md` |
+| 2026-08-25 | Messaging pillars / how we counter competitors | Authenticity > artificial; checks-not-vibes quality; code-built delivery speed | `positioning-and-icp.md` |
+| 2026-08-25 | Work we explicitly don't do | Fake reviews/testimonials as a customer (FTC), unlicensed-scope claims, fabricated metrics | `operations/compliance.md` → summarized in `company-profile.md` |

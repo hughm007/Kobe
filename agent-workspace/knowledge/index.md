@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-08-25
 tags: [index, knowledge]
 ---
 
@@ -25,6 +25,7 @@ open the file.
 |---|---|---|
 | 2026-08-24 | [Workspace structure and conventions](decisions/0001-workspace-structure.md) | Accepted |
 | 2026-08-24 | [Websites built as code with Claude, hosted on Vercel](decisions/0002-web-delivery-model.md) | Accepted |
+| 2026-08-25 | [Orion and the Company OS — who governs what](decisions/0003-orion-and-the-company-os.md) | Accepted |
 
 ## Learnings
 
@@ -32,7 +33,9 @@ Grouped by theme. Add themes as they emerge — don't force a learning into a he
 doesn't fit.
 
 ### Advertising
-*None yet.*
+- [2026-08-25 — Checks beat prose](learnings/2026-08-25-checks-beat-prose.md): the v8
+  "2:07 AM" kill showed binary blocking checks catch what quality prose never does;
+  the 31-check gate exists because scores alone passed a dead ad.
 
 ### Web
 *None yet.*
@@ -47,7 +50,7 @@ doesn't fit.
 
 | Date | Subject | File |
 |---|---|---|
-| — | — | — |
+| 2026-08-25 | Design intelligence — the ServicePow Style Bank archetypes, hard laws, and how they translate to static + motion work | [research/design-intelligence.md](research/design-intelligence.md) |
 
 ---
 
@@ -59,7 +62,7 @@ the section below.
 
 | Pattern | Supporting learnings | Confidence |
 |---|---|---|
-| — | — | — |
+| Binary gates outperform judgment scores for creative QA | 1 (checks-beat-prose) | Forming — already codified in the Drive OS's 31 checks, so treat as adopted practice pending local evidence |
 
 ## Promoted to playbooks
 
@@ -68,4 +71,4 @@ playbook rule stays visible.
 
 | Pattern | Playbook | Learnings behind it |
 |---|---|---|
-| — | — | — |
+| Blocking checks + ServicePow-6 scoring before any ad ships | [playbooks/ads/video-production.md](../playbooks/ads/video-production.md) | Imported from the Drive OS (19_PRODUCTION_LEARNINGS); local trail starts with checks-beat-prose |

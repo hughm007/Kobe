@@ -3,95 +3,54 @@ title: Service Pow — Company Profile
 type: profile
 client: internal
 owner: Karl
-status: draft
+status: active
 created: 2026-08-24
-updated: 2026-08-24
-tags: [company, identity, foundational]
+updated: 2026-08-25
+tags: [company, identity]
+source: Drive "ServicePow OS 2" — 00_SERVICE_POW_MASTER_OS.md, 04_CLIENT_MASTER_LIST.md, 22_BUSINESS_DEVELOPMENT_PIPELINE.md (synced 2026-08-25)
 ---
 
 # Service Pow — Company Profile
 
-The single source of truth about who Service Pow is. Every pitch, proposal, site page
-and bio should be reconcilable with this file.
+**Service Pow is a full-service digital marketing, creative production, AI marketing,
+lead-generation, automation and growth company.** It helps businesses acquire customers,
+strengthen their digital presence, produce better content, and improve their marketing
+systems. It is not a niche agency and never describes itself as one.
 
-## In one sentence
+**The sentence that governs everything:** Service Pow sells outcomes, strategy,
+execution, reliability, creativity, and systems. AI is leverage. AI is not the product.
 
-Service Pow is a marketing company that builds websites, runs advertising, and delivers
-work across the wider marketing umbrella.
+## The people
 
-**NEEDS INPUT:** Replace with the real one-liner — the sentence you'd want a prospect to
-repeat back to someone else. Who exactly it's for, and what changes for them.
-
-## What we do
-
-Service Pow operates across marketing rather than in a single channel:
-
-- **Websites** — design, build, launch, iterate.
-- **Advertising** — paid media planning, creative, buying, optimization.
-- **The wider umbrella** — brand, content, social, email, SEO, creative production,
-  strategy and reporting.
-
-Detail per service: [`services.md`](services.md).
-
-## Founding and history
-
-**NEEDS INPUT:** Founded when, by whom, and why. The origin story is load-bearing —
-it appears in the About page, pitch decks, and founder bios, and it should be recorded
-once here rather than re-improvised each time.
-
-## Team
-
-**Karl** — owns the business. Client relationships, delivery, and final sign-off on all
-client-facing work all route to Karl.
-
-Service Pow currently operates as a one-person business augmented by this agent. That
-shapes how the agent should work: there is no second reviewer to catch mistakes, so the
-quality bar in [`../operations/quality-bar.md`](../operations/quality-bar.md) is the only
-gate between a draft and a client. Treat it as load-bearing rather than a formality.
-
-**NEEDS INPUT:** any contractors, freelancers or partners used regularly, and what each
-covers.
-
-## Where we operate
-
-**Remote.** Service Pow is not tied to a location and works with clients wherever they are.
-
-| | |
+| Who | Role |
 |---|---|
-| Operating model | Remote |
-| Currency | USD |
-| Language | US English |
+| **Karl** | Owner-operator. Final say on qualification, all pricing, every proposal, every close, all client-facing sign-off. Runs discovery calls. |
+| **Hugh** | Outreach execution and follow-up; network prospects; owns the Google LSA pay-per-lead research. |
+| **Orion / Claude** | Everything up to the moment a human is contacted, and everything after a human replies — **except the sending.** Drafts are ready-to-send; the click is always human. |
 
-Two consequences the agent should carry into the work:
+Remote, nationwide, US English, USD. Remote has one hard consequence: **Service Pow
+cannot shoot footage itself** — real media comes from the client's phone, which makes
+"will you send us footage monthly?" a qualification gate, not a nice-to-have.
 
-- **Service Pow's own marketing has no local SEO angle.** Local tactics — Google Business
-  Profile, NAP consistency, location pages — apply to *clients* who serve a geographic
-  area, not to us.
-- **Client geography is per client, not assumed.** Ad geo-targeting, timezone for
-  scheduling, currency in client-facing documents and applicable regulation are all
-  properties of the individual client. Read it from their `client-brief.md`; never
-  default to ours.
+## Operating principles (the ones with teeth)
 
-**NEEDS INPUT:** which timezone should be treated as the working day for deadlines and
-scheduling?
+- **Client value > technology. Quality > output volume. Business results > AI aesthetics.**
+- **Authenticity > artificial impressiveness.** Especially for local businesses: real
+  employees, owners, jobsites, trucks, before/afters, testimonials. AI enhances
+  authenticity; it never replaces everything with fake-looking content.
+- **Evidence > assumption.** Facts are classified VERIFIED / CLIENT-PROVIDED /
+  INFERENCE / ASSUMPTION / UNKNOWN, and an assumption is never presented as verified.
+- **Never confuse AI output with business value.**
+- **Show, then talk, then price.** The finished work is the credibility argument —
+  Service Pow has no public portfolio yet, so the spec ad IS the pitch.
 
-## Proof
+## Current commercial reality (honest, 2026-08-25)
 
-**NEEDS INPUT:** Named clients (with permission to name them), case studies, results
-worth citing, awards, partner or platform certifications.
-
-> Guardrail: until this section is filled in, **no proof claims may appear in any
-> client-facing material.** Do not invent, estimate or round up a result to make a page
-> feel more credible.
-
-## What we don't do
-
-**NEEDS INPUT:** The work Service Pow declines — out-of-scope services, industries it
-won't take, engagement sizes below the floor. Knowing what to say no to is as useful
-to the agent as knowing what to say yes to.
-
-## Related
-
-- Positioning and target customer → [`positioning-and-icp.md`](positioning-and-icp.md)
-- Voice → [`brand/brand-voice.md`](brand/brand-voice.md)
-- Commercials → [`pricing-and-packaging.md`](pricing-and-packaging.md)
+- **No Service Pow ad has yet been published or bought by a client.** Quality standards
+  are calibrated on owner taste alone. The approved-creative library has zero entries.
+- Client roster: **911 Drain** (revenue + exit-share partnership — see the client brief;
+  not a standard retainer), **TripNerd** (active, standard), **Wave Reaction** (confirmed
+  client; contact, scope and status still unknown).
+- The sales pipeline is built but empty — the spec-ad cold-open motion is written and
+  unlaunched. Expect 1–3 months to the first retainer once it starts; that is the
+  researched norm, not failure.
