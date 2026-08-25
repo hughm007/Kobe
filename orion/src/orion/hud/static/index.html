@@ -418,6 +418,16 @@ function handle(ev){
     case "voice.latency":
       if (ev.total_ms != null) $("m-lat").textContent = Math.round(ev.total_ms) + "ms";
       addMsg("sys", "SYSTEM", ev.report); break;
+    case "job.started":
+      addMsg("sys", "CLAUDE CODE", "started " + ev.id + " in " + ev.project + ": " + ev.task); break;
+    case "job.progress":
+      addMsg("sys", "CLAUDE CODE", ev.text); break;
+    case "job.done":
+      addMsg(ev.status === "done" ? "orion" : "warn", "CLAUDE CODE",
+        ev.status === "done"
+          ? ("job " + ev.id + " done ($" + (ev.cost_usd || 0).toFixed(2) + ") — " + (ev.result || "review the diff"))
+          : ("job " + ev.id + " FAILED — " + ev.error));
+      poll(); break;
     case "notice.posted": poll(); break;
     case "hud.error": addMsg("warn", "SYSTEM", ev.text); break;
   }

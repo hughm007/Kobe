@@ -81,6 +81,17 @@ def main() -> int:
         )
         session = OrionSession(config, agent, bus, say=lambda line: print(f"  {line}"))
 
+        if config.raw.get("claude_code", {}).get("enabled", True):
+            from .jobs import CodingJobManager
+            from .notices import NoticeBoard
+            from .tools import coder
+
+            job_manager = CodingJobManager(
+                config, bus, NoticeBoard(config.state_path("notices.jsonl")),
+                audit, announce=session.announce,
+            )
+            coder.register(agent.tools, config, job_manager)
+
         from .hud.server import start_hud
 
         try:

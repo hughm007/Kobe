@@ -109,6 +109,31 @@ fictional telemetry became live equivalents, and things that don't exist
 (a wake word) say so instead of pretending. `[hud]` in orion.toml controls
 port and auto-open.
 
+## Delegating real coding work
+
+Orion can hand software tasks to **Claude Code** — "have Claude Code add a
+contact form to the 911 Drain site" — via `delegate_coding_task`. Setup:
+
+```bash
+uv pip install claude-agent-sdk   # installs into Orion's venv (bundles the Claude Code runtime)
+```
+
+How it behaves, by design:
+
+- **Always gated.** Delegation edits a repo and spends money, so the two-step
+  confirmation speaks first. One confirm covers that one job.
+- **Background.** The tool returns immediately; you keep talking. Completion
+  is spoken if Orion is awake and always lands on the notice board with cost.
+- **Contained.** Each job runs inside one project directory under
+  `[claude_code].projects_root`, with a per-job dollar budget and turn cap.
+- **It can build, never ship.** Inside the job, pushes, deploys, publishes and
+  sends are denied by policy (`deny_patterns`, Karl-editable) — changes stay
+  in the working tree for your review. Jobs never pause to ask, so they can
+  never hang waiting for you.
+
+`check_coding_job` / `list_coding_jobs` report status, results, cost, and
+anything the guardrail blocked.
+
 ## The rails
 
 Karl's "never without asking" list is enforced by a two-step gate that sits

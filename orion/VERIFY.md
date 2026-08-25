@@ -111,3 +111,13 @@ you get "while you were away". Restart the heartbeat: nothing refires early.
   (`ps aux | grep orion-app` shows one), no second window.
 - **T7** Launch from /Applications by double-click → same as hotkey.
 - **T8** Menu → Quit ORION → mic indicator off, `orion-app` gone, port free.
+
+## 8. Claude Code delegation
+
+`uv pip install claude-agent-sdk`, make sure a test project exists under `~/Kobe`
+(e.g. `mkdir -p ~/Kobe/scratch-site && git -C ~/Kobe/scratch-site init`), then
+by voice: "have Claude Code create a simple hello page in scratch-site" →
+Orion states the action → yes → "are you sure you want to confirm?" →
+**confirm** → keep talking while it works → spoken completion with cost.
+Check `~/Kobe/scratch-site` for the diff; confirm nothing was pushed or
+deployed. `state/notices.jsonl` holds the completion if you walked away.

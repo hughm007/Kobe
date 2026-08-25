@@ -41,6 +41,9 @@ TOOL_LABELS = {
     "remember": "ACCESSING MEMORY",
     "forget": "ACCESSING MEMORY",
     "list_memories": "ACCESSING MEMORY",
+    "delegate_coding_task": "DELEGATING TO CLAUDE CODE",
+    "check_coding_job": "CHECKING CODE JOB",
+    "list_coding_jobs": "CHECKING CODE JOBS",
 }
 
 
@@ -285,6 +288,19 @@ class OrionSession:
                 self.standby(reason=f"no speech for {int(self.follow_up_seconds)}s")
             elif quiet_for > self.idle_seconds:
                 self.standby(reason=f"idle for {int(self.idle_seconds)}s")
+
+    def announce(self, text: str) -> None:
+        """Speak one line proactively if Orion is awake; otherwise stay quiet —
+        the notice board already holds the news for Karl's return."""
+        convo = self._convo
+        if convo is None or not self.active:
+            return
+        try:
+            self.touch()
+            convo._queue_phrase(text, None)
+            convo._phrases.put(None)  # PHRASE_END — return to LISTENING after
+        except Exception:  # noqa: BLE001
+            pass
 
     # --------------------------------------------------------------- quit
 

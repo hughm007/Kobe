@@ -120,3 +120,19 @@ auto_open = true
 follow_up_seconds = 30
 # Hard ceiling: any wake with no interaction at all ends after this long.
 idle_seconds = 120
+
+[claude_code]
+# Orion can hand real coding tasks to Claude Code (delegate_coding_task).
+# Jobs run in the background, contained to one project directory, with a
+# hard dollar budget — and they can never push, deploy, publish, or send.
+enabled = true
+# Projects must live under this directory.
+projects_root = "~/Kobe"
+max_budget_usd_per_job = 5.0
+max_turns = 50
+# Tool uses matching any of these (regex, case-insensitive against the tool
+# call) are denied inside a job. Dispatching needs Karl, always.
+deny_patterns = [
+    "git\\s+push", "\\bdeploy\\b", "\\bvercel\\b", "npm\\s+publish",
+    "gh\\s+(pr|release)", "\\bmail\\b", "\\bsendmail\\b",
+]
