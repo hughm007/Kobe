@@ -11,19 +11,25 @@ from __future__ import annotations
 import re
 from datetime import date, datetime
 
-DATE_RE = re.compile(r"(\d{4}-\d{2}-\d{2})")
+# Entry headings only ("## 2026-08-25 — …"): a date mentioned inside an entry
+# body ("launch scheduled for 2026-12-01") is not a journal entry, and a
+# future one would silently suppress the gone-quiet check.
+DATE_RE = re.compile(r"^##\s+(\d{4}-\d{2}-\d{2})", re.MULTILINE)
 NEEDS_INPUT_RE = re.compile(r"NEEDS INPUT", re.IGNORECASE)
 # A snapshot-table row whose value cell is blank: "| **Website** | |"
 EMPTY_FIELD_RE = re.compile(r"^\|[^|]+\|\s*\|\s*$", re.MULTILINE)
 
 
 def _last_worklog_date(worklog_text: str) -> date | None:
+    today = date.today()
     dates = []
     for match in DATE_RE.finditer(worklog_text):
         try:
-            dates.append(date.fromisoformat(match.group(1)))
+            parsed = date.fromisoformat(match.group(1))
         except ValueError:
             continue
+        if parsed <= today:  # a future-dated heading can't mean "recently active"
+            dates.append(parsed)
     return max(dates) if dates else None
 
 

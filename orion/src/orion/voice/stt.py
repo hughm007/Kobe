@@ -58,6 +58,7 @@ class DeepgramStream:
         self.api_key = (api_key or os.environ.get("DEEPGRAM_API_KEY", "")).strip()
         self.audio_in: "queue.Queue[bytes | None]" = queue.Queue(maxsize=256)
         self._stop = threading.Event()
+        self._ws = None  # the live websocket, so stop() can close it directly
         self._nova_parts: list[str] = []  # is_final segments awaiting utterance end
 
     # ------------------------------------------------------------------ setup
@@ -93,6 +94,16 @@ class DeepgramStream:
             self.audio_in.put_nowait(AUDIO_CHUNK_SENTINEL)
         except queue.Full:
             pass
+        # Close the socket from our side too: the reader is blocked in
+        # `for raw in ws` and the pump usually exits at its loop-top check
+        # without ever consuming the sentinel — without this, the connection
+        # (and the reader thread) lingers until Deepgram times it out.
+        ws = getattr(self, "_ws", None)
+        if ws is not None:
+            try:
+                ws.close()
+            except Exception:  # noqa: BLE001 — already closing/closed is fine
+                pass
 
     # ------------------------------------------------------------------ loop
 
@@ -123,6 +134,7 @@ class DeepgramStream:
                     max_size=2**22,
                 ) as ws:
                     attempts = 0  # a good connection resets the retry budget
+                    self._ws = ws
                     sender = threading.Thread(
                         target=self._pump_audio, args=(ws,), daemon=True
                     )
@@ -137,6 +149,7 @@ class DeepgramStream:
                             if event is not None:
                                 yield event
                     finally:
+                        self._ws = None
                         sender.join(timeout=2)
             except Exception as exc:  # noqa: BLE001 — classified right below
                 message = str(exc)
@@ -165,10 +178,15 @@ class DeepgramStream:
                 except queue.Empty:
                     continue
                 if chunk is AUDIO_CHUNK_SENTINEL:
-                    ws.send(json.dumps({"type": "CloseStream"}))
-                    return
+                    break
                 ws.send(chunk)
         except Exception:  # noqa: BLE001 — the reader loop reports the failure
+            return  # a dead socket has nothing left to close politely
+        # Every clean exit — sentinel consumed OR loop-top stop check — tells
+        # Deepgram we're done, so the server flushes and closes promptly.
+        try:
+            ws.send(json.dumps({"type": "CloseStream"}))
+        except Exception:  # noqa: BLE001 — already closed is fine
             pass
 
     # ------------------------------------------------------------------ parse

@@ -34,6 +34,11 @@ from .sentences import SentenceBuffer
 
 PHRASE_END = None  # sentinel on the phrase queue: the reply is complete
 
+# A proactive announcement's terminator: restores LISTENING after the line is
+# spoken, but — unlike PHRASE_END — never runs turn bookkeeping, so a job
+# finishing mid-reply can't finish Karl's live turn out from under him.
+ANNOUNCE_END = object()
+
 
 def _normalise(text: str) -> str:
     return re.sub(r"[^a-z0-9 ]", "", text.lower()).strip()
@@ -54,17 +59,24 @@ class EchoGuard:
     def __init__(self, similarity: float) -> None:
         self.similarity = similarity
         self._recent: deque[tuple[float, str]] = deque(maxlen=24)
+        # spoke() is called from the speaker and agent threads while is_echo
+        # iterates on the STT thread — an unguarded deque mutation during that
+        # iteration raises and would drop the whole voice session.
+        self._guard = threading.Lock()
 
     def spoke(self, phrase: str) -> None:
         import time as time_module
 
-        self._recent.append((time_module.monotonic(), _normalise(phrase)))
+        with self._guard:
+            self._recent.append((time_module.monotonic(), _normalise(phrase)))
 
     def _corpus(self) -> list[str]:
         import time as time_module
 
         cutoff = time_module.monotonic() - self.WINDOW_SECONDS
-        return [text for at, text in self._recent if at >= cutoff and text]
+        with self._guard:
+            snapshot = list(self._recent)
+        return [text for at, text in snapshot if at >= cutoff and text]
 
     def is_echo(self, transcript: str) -> bool:
         heard = _normalise(transcript)
@@ -137,6 +149,10 @@ class VoiceConversation:
         # gate, not new turns.
         self._confirm_answers: "queue.Queue[str]" = queue.Queue()
         self._awaiting_confirmation = threading.Event()
+        # Set while the speaker thread is mid-phrase, so an interrupt can wait
+        # for the in-flight synthesis to abort and the gate can wait for the
+        # speakers to go quiet before asking its question.
+        self._speaking_busy = threading.Event()
 
     # ------------------------------------------------------------- lifecycle
 
@@ -251,6 +267,17 @@ class VoiceConversation:
         self.player.stop_playback()       # 1. silence the speakers
         self.state = "LISTENING"
         self._hud("voice.state", {"state": "LISTENING"})
+        # Once the in-flight phrase has actually aborted, re-arm speech: a
+        # cancel flag left set would silently eat the next announcement when
+        # no new turn follows (the HUD stop button, an echo-guarded barge-in).
+        # Left set on timeout — dropping speech is the safe direction.
+        import time as _time
+
+        deadline = _time.monotonic() + 2.0
+        while self._speaking_busy.is_set() and _time.monotonic() < deadline:
+            _time.sleep(0.01)
+        if not self._speaking_busy.is_set():
+            self.tts.cancel.clear()
 
     def _drain_phrases(self) -> None:
         try:
@@ -329,11 +356,20 @@ class VoiceConversation:
         unattended question can never hang the turn.
         """
         self.show(f"{self.agent.config.name} asks › {question}")
+        # Register the question with the echo guard BEFORE opening the answer
+        # window: the instant _awaiting_confirmation is set, a final transcript
+        # can arrive on the STT thread, and if it's this question echoing back
+        # it must already be recognizable — or it lands in the answer queue and
+        # a sentence containing the word "confirm" becomes Karl's "answer".
+        speakable = spoken_text(question)
+        self.echo_guard.spoke(speakable)  # the question echoing back ≠ an answer
         self._drain_answers()
         self._awaiting_confirmation.set()
         try:
-            speakable = spoken_text(question)
-            self.echo_guard.spoke(speakable)  # the question echoing back ≠ an answer
+            # The reply's preamble may still be synthesizing on the speaker
+            # thread; two writers on one player interleave PCM into garble.
+            # Wait for the speakers to go quiet before asking.
+            self._await_speaker_idle()
             try:
                 for chunk in self.tts.stream_phrase(speakable):
                     self.player.feed(chunk)
@@ -357,6 +393,22 @@ class VoiceConversation:
         except queue.Empty:
             pass
 
+    def _await_speaker_idle(self, timeout: float = 30.0) -> None:
+        """Block until the speaker thread has no more phrases to write (or the
+        turn is cancelled). What matters is that only ONE writer feeds the
+        player at a time — audio still draining from the buffer is fine, since
+        a later feed appends after it in order. Bounded: a stuck speaker never
+        wedges the gate; worst case the question overlaps, as before."""
+        import time as _time
+
+        deadline = _time.monotonic() + timeout
+        while _time.monotonic() < deadline:
+            if self.tts.cancel.is_set() or self.cancel_generation.is_set():
+                return
+            if self._phrases.empty() and not self._speaking_busy.is_set():
+                return
+            _time.sleep(0.05)
+
     # ---------------------------------------------------------- the speaker
 
     def _speak_loop(self) -> None:
@@ -368,12 +420,20 @@ class VoiceConversation:
             if phrase is PHRASE_END:
                 self._finish_turn()
                 continue
+            if phrase is ANNOUNCE_END:
+                # No turn bookkeeping: just settle the HUD back to LISTENING
+                # when the announcement wasn't riding inside a live turn.
+                if self.timer is None and self.state == "SPEAKING":
+                    self.state = "LISTENING"
+                    self._hud("voice.state", {"state": "LISTENING"})
+                continue
             if self.tts.cancel.is_set():
                 continue
 
             timer = self.timer
             if timer and self.player.on_first_audio is None:
                 self.player.on_first_audio = lambda t=timer: t.mark("t6_audio_start")
+            self._speaking_busy.set()
             try:
                 first = True
                 for chunk in self.tts.stream_phrase(phrase):
@@ -388,6 +448,8 @@ class VoiceConversation:
             except Exception as exc:  # noqa: BLE001 — voice down ≠ Orion down
                 self.say(f"⚠ {exc}")
                 self.say("  (voice output failed — replies continue on screen)")
+            finally:
+                self._speaking_busy.clear()
 
     def _finish_turn(self) -> None:
         if self.state == "SPEAKING" or self.state == "THINKING":

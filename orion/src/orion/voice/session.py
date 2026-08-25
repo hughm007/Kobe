@@ -152,17 +152,23 @@ class OrionSession:
         # No terminal in app mode: confirmation is spoken, timeout = decline.
         self.agent.confirm = TwoStepGate(self._convo.ask_confirmation)
 
+        # A FRESH event and the pipeline's own devices per wake: a stale pump
+        # from the previous generation (cleared mid-wait during standby) must
+        # never see the next generation's flag re-set and keep running against
+        # the new mic/STT — two pumps interleave chunks into garbled audio.
+        self._pump_running = threading.Event()
         self._pump_running.set()
-        threading.Thread(target=self._pump_mic, daemon=True).start()
+        threading.Thread(
+            target=self._pump_mic,
+            args=(self._pump_running, self._mic, self._stt),
+            daemon=True,
+        ).start()
         threading.Thread(target=self._run_conversation, daemon=True).start()
 
-    def _pump_mic(self) -> None:
+    def _pump_mic(self, running: "threading.Event", mic, stt) -> None:
         import queue as queue_module
 
-        while self._pump_running.is_set():
-            mic, stt = self._mic, self._stt
-            if mic is None or stt is None:
-                return
+        while running.is_set():
             try:
                 chunk = mic.chunks.get(timeout=0.5)
             except queue_module.Empty:
@@ -297,9 +303,13 @@ class OrionSession:
         if convo is None or not self.active:
             return
         try:
+            from .conversation import ANNOUNCE_END
+
             self.touch()
             convo._queue_phrase(text, None)
-            convo._phrases.put(None)  # PHRASE_END — return to LISTENING after
+            # ANNOUNCE_END, never PHRASE_END: an announcement landing mid-turn
+            # must not run the live turn's finish bookkeeping (state, timer).
+            convo._phrases.put(ANNOUNCE_END)
         except Exception:  # noqa: BLE001
             pass
 

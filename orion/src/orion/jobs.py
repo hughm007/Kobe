@@ -26,6 +26,37 @@ from pathlib import Path
 from typing import Protocol
 
 
+# Dispatch and exfiltration patterns denied in EVERY job, regardless of what
+# orion.toml says — config patterns ADD to this baseline, they never replace
+# it, so an edited (or truncated) config can't quietly open the door. Regex
+# over command text is defense-in-depth, not a security boundary: it will
+# overblock (git stash push) and a determined prompt injection can dodge it —
+# which is why jobs also can't use web tools and denials are always recorded
+# for Karl to see. Overblocking is safe: a denial is a message, not a crash.
+BASELINE_DENY = (
+    r"\bgit\b[^\n]*\bpush\b",          # any spelling: git push, git -c x push…
+    r"force-with-lease",
+    r"\bgh\b[^\n]*\b(pr|release)\b",
+    r"\b(npm|yarn|pnpm)\b[^\n]*\bpublish\b",
+    r"\bdeploy\b",
+    r"\b(vercel|netlify|heroku|wrangler|flyctl)\b",
+    r"\b(curl|wget|nc|ncat|netcat|ssh|scp|sftp|rsync|ftp|telnet)\b",
+    r"\b(mail|sendmail|mutt)\b",
+)
+
+# Files whose names have no business in a job's shell command: reading them
+# is the first step of exfiltrating a credential.
+SENSITIVE_PATH_RE = re.compile(
+    r"\.env\b|\.pem\b|\.key\b|id_rsa|id_ed25519|\.ssh\b|\.aws\b|\.netrc\b|\.npmrc\b",
+    re.IGNORECASE,
+)
+
+# Tool-input keys that carry shell text (checked against SENSITIVE_PATH_RE)
+# and keys that carry file paths (checked for containment).
+_COMMAND_KEYS = ("command", "script")
+_PATH_KEYS = ("file_path", "path", "notebook_path", "cwd")
+
+
 @dataclass
 class JobPolicy:
     """What a job may touch. Built from [claude_code] in orion.toml."""
@@ -42,15 +73,23 @@ class JobPolicy:
         outbound sends are denied inside the job — Karl reviews and ships.
         """
         blob = f"{tool_name} {tool_input}".lower()
-        for pattern in self.deny_patterns:
+        for pattern in (*BASELINE_DENY, *self.deny_patterns):
             if re.search(pattern, blob):
                 return (
                     "Orion guardrail: drafting is fine, dispatching is not. "
                     f"'{pattern}' actions need Karl's explicit sign-off outside this job. "
                     "Leave the work committed locally / in the working tree instead."
                 )
+        # Shell commands must not touch credential files.
+        for key in _COMMAND_KEYS:
+            raw = tool_input.get(key)
+            if isinstance(raw, str) and SENSITIVE_PATH_RE.search(raw):
+                return (
+                    "Orion guardrail: that command references a credential or key "
+                    "file. Jobs never read secrets — work with the project's code only."
+                )
         # Path containment for file tools.
-        for key in ("file_path", "path", "notebook_path"):
+        for key in _PATH_KEYS:
             raw = tool_input.get(key)
             if isinstance(raw, str) and raw.strip():
                 candidate = Path(raw)
@@ -128,6 +167,10 @@ class SdkRunner:
             can_use_tool=_permission,
             max_turns=policy.max_turns,
             max_budget_usd=policy.max_budget_usd,
+            # Build-never-ship: a contained job has no reason to talk to the
+            # web, and a web request is also the easy exfiltration channel a
+            # prompt injection in the project's files would reach for.
+            disallowed_tools=["WebFetch", "WebSearch"],
             system_prompt=(
                 "You are doing delegated work for Service Pow via Orion, Karl's "
                 "assistant. Work only inside this project. Do not push, deploy, "
@@ -189,14 +232,9 @@ class CodingJobManager:
         ).expanduser()
         self.max_turns = int(settings.get("max_turns", 50))
         self.max_budget = float(settings.get("max_budget_usd_per_job", 5.0))
-        self.deny_patterns = tuple(
-            settings.get(
-                "deny_patterns",
-                [r"git\s+push", r"\bdeploy\b", r"\bvercel\b", r"npm\s+publish",
-                 r"gh\s+(pr|release)", r"force-with-lease", r"\bcurl\b.*\s-(x\s*post|d\b)",
-                 r"\bmail\b", r"\bsendmail\b"],
-            )
-        )
+        # Config patterns are EXTRAS on top of BASELINE_DENY, which always
+        # applies — an emptied config list still leaves the baseline standing.
+        self.deny_patterns = tuple(settings.get("deny_patterns", []))
         self.runner = runner or SdkRunner()
         self.jobs: dict[str, Job] = {}
         self._lock = threading.Lock()
@@ -228,15 +266,17 @@ class CodingJobManager:
     def start(self, task: str, project: str) -> Job:
         if not task.strip():
             raise ValueError("The task is empty — say what Claude Code should do.")
-        active = self.running_job()
-        if active is not None:
-            raise ValueError(
-                f"One job at a time: {active.id} is still working on '{active.task[:60]}'. "
-                "Check it with check_coding_job, or wait for it to finish."
-            )
         project_dir = self.resolve_project(project)
         job = Job(id=f"job_{secrets.token_hex(3)}", task=task.strip(), project=project_dir.name)
+        # One lock over check-and-insert: two concurrent starts must not both
+        # pass the one-job-at-a-time check.
         with self._lock:
+            active = next((j for j in self.jobs.values() if j.status == "running"), None)
+            if active is not None:
+                raise ValueError(
+                    f"One job at a time: {active.id} is still working on '{active.task[:60]}'. "
+                    "Check it with check_coding_job, or wait for it to finish."
+                )
             self.jobs[job.id] = job
         policy = JobPolicy(
             project_dir=project_dir, deny_patterns=self.deny_patterns,

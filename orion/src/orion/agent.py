@@ -223,24 +223,49 @@ class Agent:
             # user message — splitting them across messages quietly teaches the
             # model to stop making parallel calls.
             result_blocks = []
-            for call in result.tool_calls:
-                outcome = self._run_tool(call["name"], call.get("input") or {})
-                block = {
-                    "type": "tool_result",
-                    "tool_use_id": call["id"],
-                    "content": outcome.content,
-                }
-                if outcome.is_error:
-                    block["is_error"] = True
-                result_blocks.append(block)
+            try:
+                for call in result.tool_calls:
+                    outcome = self._run_tool(call["name"], call.get("input") or {})
+                    block = {
+                        "type": "tool_result",
+                        "tool_use_id": call["id"],
+                        "content": outcome.content,
+                    }
+                    if outcome.is_error:
+                        block["is_error"] = True
+                    result_blocks.append(block)
+            except BaseException:
+                # Ctrl-C (or anything else) mid-tool must not strand the
+                # assistant's tool_use without results — that history would
+                # 400 on every later turn. Close the books, then re-raise.
+                answered = {b["tool_use_id"] for b in result_blocks}
+                for call in result.tool_calls:
+                    if call["id"] not in answered:
+                        result_blocks.append({
+                            "type": "tool_result",
+                            "tool_use_id": call["id"],
+                            "content": "Interrupted before this tool finished.",
+                            "is_error": True,
+                        })
+                self.messages.append({"role": "user", "content": result_blocks})
+                raise
             self.messages.append({"role": "user", "content": result_blocks})
         else:
-            final_text_parts.append(
-                "(I stopped there — that chain of tool calls hit the safety limit.)"
+            limit_note = "(I stopped there — that chain of tool calls hit the safety limit.)"
+            final_text_parts.append(limit_note)
+            # The model's record has to say the chain was cut too, or the next
+            # turn resumes the same loop none the wiser.
+            self.messages.append(
+                {"role": "assistant", "content": [{"type": "text", "text": limit_note}]}
             )
 
         if result is not None and result.stop_reason == "refusal":
-            return REFUSAL_MESSAGE
+            # A refusal is a real turn: it goes on the record and through the
+            # same turn.end bookkeeping as any other outcome.
+            self.messages.append(
+                {"role": "assistant", "content": [{"type": "text", "text": REFUSAL_MESSAGE}]}
+            )
+            final_text_parts = [REFUSAL_MESSAGE]
         reply = "\n\n".join(part for part in final_text_parts if part).strip()
         turn_usage = {
             "input_tokens": self.usage.input_tokens - usage_before.input_tokens,
@@ -261,7 +286,13 @@ class Agent:
         tool_obj = self.tools.get(name)
         self._emit("tool.start", {"tool": name})
 
-        if tool_obj is not None and tool_obj.is_consequential(arguments):
+        # [gate].always_confirm is enforced here, not only at registry build
+        # time — tools registered later (coder, model) are covered the same.
+        gate_config = getattr(self.config, "gate", None)
+        always = tuple(getattr(gate_config, "always_confirm", ()) or ())
+        gated = name in always or (tool_obj is not None and tool_obj.is_consequential(arguments))
+
+        if tool_obj is not None and gated:
             summary = tool_obj.action_summary(arguments)
             if self.confirm is None:
                 # Nobody there = no. Background turns never assume permission.

@@ -184,3 +184,16 @@ def test_system_prompt_carries_the_snapshot(sandbox):
 def test_snapshot_stays_compact(sandbox):
     snapshot = business_snapshot(sandbox.workspace)
     assert len(snapshot) < 9000  # a digest, not the workspace pasted into the prompt
+
+
+def test_notes_cannot_break_out_of_their_comment(sandbox, registry):
+    result = registry.dispatch(
+        "make_static_ad", {**AD_ARGS, "notes": "end --><div>injected</div><!--"}
+    )
+    assert not result.is_error, result.content
+    html = next((sandbox.workspace / "clients/911drain/deliverables").glob("*.html")).read_text()
+    # The comment closes exactly once, where the template closes it, and the
+    # attempted markup never becomes live elements.
+    head = html.split("<style>")[0]
+    assert head.count("-->") == 1
+    assert "<div>injected</div>" not in html

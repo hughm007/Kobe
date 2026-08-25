@@ -24,10 +24,36 @@ MODEL_CATALOG: dict[str, tuple[float, float]] = {
     "claude-opus-4-8": (5.0, 25.0),
     "claude-opus-4-7": (5.0, 25.0),
     "claude-opus-4-6": (5.0, 25.0),
-    "claude-sonnet-5": (3.0, 15.0),
+    "claude-sonnet-5": (2.0, 10.0),
     "claude-sonnet-4-6": (3.0, 15.0),
     "claude-haiku-4-5": (1.0, 5.0),
 }
+
+# What each brain's API accepts. Older generations reject request shapes the
+# newer ones expect, and a wrong shape means every turn 400s until Karl
+# switches back — so requests are built from this table, and set_model
+# refuses an effort the target model can't take rather than storing it.
+#   adaptive: accepts thinking={"type": "adaptive"} (and the effort control).
+#   efforts:  the output_config.effort values the model accepts, low→high.
+MODEL_CAPS: dict[str, dict] = {
+    "claude-fable-5": {"adaptive": True, "efforts": ("low", "medium", "high", "xhigh", "max")},
+    "claude-opus-5": {"adaptive": True, "efforts": ("low", "medium", "high", "xhigh", "max")},
+    "claude-opus-4-8": {"adaptive": True, "efforts": ("low", "medium", "high", "xhigh")},
+    "claude-opus-4-7": {"adaptive": True, "efforts": ("low", "medium", "high", "xhigh")},
+    "claude-opus-4-6": {"adaptive": True, "efforts": ("low", "medium", "high")},
+    "claude-sonnet-5": {"adaptive": True, "efforts": ("low", "medium", "high", "xhigh", "max")},
+    "claude-sonnet-4-6": {"adaptive": True, "efforts": ("low", "medium", "high")},
+    "claude-haiku-4-5": {"adaptive": False, "efforts": ()},
+}
+
+
+def supported_effort(model: str, effort: str) -> str | None:
+    """The effort to actually send: the requested one if the model takes it,
+    else the highest it does take, else None (send no effort control)."""
+    efforts = MODEL_CAPS.get(model, {}).get("efforts", EFFORT_LEVELS)
+    if not efforts:
+        return None
+    return effort if effort in efforts else efforts[-1]
 MODEL_ALIASES = {
     "fable": "claude-fable-5",
     "opus": "claude-opus-5",
@@ -117,6 +143,16 @@ class ProviderError(RuntimeError):
 
     Callers print this and carry on. It is never a stack trace in Karl's face.
     """
+
+
+class _CallbackRaised(Exception):
+    """Wraps an exception the caller's delta callback raised, so it passes
+    through the provider's error handling untouched — the agent's barge-in
+    cancel signal must never be rewritten into a ProviderError."""
+
+    def __init__(self, original: BaseException) -> None:
+        super().__init__(str(original))
+        self.original = original
 
 
 @dataclass
@@ -212,9 +248,17 @@ class AnthropicProvider:
 
     def set_model(self, model: str, effort: str | None = None) -> tuple[str, str]:
         """Switch the active brain. Persisted, so the choice survives restarts."""
-        self.active_model = resolve_model(model)
-        if effort is not None:
-            self.active_effort = resolve_effort(effort)
+        resolved = resolve_model(model)
+        wanted = resolve_effort(effort) if effort is not None else self.active_effort
+        caps = MODEL_CAPS.get(resolved, {})
+        efforts = caps.get("efforts", EFFORT_LEVELS)
+        if effort is not None and efforts and wanted not in efforts:
+            raise ValueError(
+                f"{resolved} supports effort up to {efforts[-1]} — "
+                f"'{wanted}' isn't available on it."
+            )
+        self.active_model = resolved
+        self.active_effort = wanted
         save_model_override(self._config, self.active_model, self.active_effort)
         return self.active_model, self.active_effort
 
@@ -232,12 +276,17 @@ class AnthropicProvider:
             "max_tokens": int(self._model.max_tokens),
             "system": system,
             "messages": messages,
-            # Adaptive thinking with display left omitted: Orion reasons, but the
-            # reasoning never reaches the text stream and so never gets spoken.
-            # (On Fable 5 thinking is always on; adaptive is the accepted form.)
-            "thinking": {"type": "adaptive"},
-            "output_config": {"effort": self.active_effort},
         }
+        caps = MODEL_CAPS.get(self.active_model, {"adaptive": True})
+        if caps.get("adaptive"):
+            # Adaptive thinking with display left omitted: Orion reasons, but
+            # the reasoning never reaches the text stream and so never gets
+            # spoken. (On Fable 5 thinking is always on; adaptive is the
+            # accepted form.) Models that predate the control get neither key.
+            kwargs["thinking"] = {"type": "adaptive"}
+        effort = supported_effort(self.active_model, self.active_effort)
+        if effort is not None:
+            kwargs["output_config"] = {"effort": effort}
         if tools:
             kwargs["tools"] = tools
         return kwargs
@@ -267,8 +316,15 @@ class AnthropicProvider:
             with stream_ctx as stream:
                 for chunk in stream.text_stream:
                     if on_text_delta and chunk:
-                        on_text_delta(chunk)
+                        try:
+                            on_text_delta(chunk)
+                        except BaseException as cb_exc:
+                            raise _CallbackRaised(cb_exc) from cb_exc
                 final = stream.get_final_message()
+        except _CallbackRaised as exc:
+            # The caller's own signal (e.g. the agent's barge-in cancel):
+            # leaving the with-block has already aborted the request.
+            raise exc.original
         except Exception as exc:  # narrowed immediately below
             raise self._as_provider_error(exc) from exc
 
@@ -333,9 +389,16 @@ class FakeProvider:
         self.active_effort = "medium"
 
     def set_model(self, model: str, effort: str | None = None) -> tuple[str, str]:
-        self.active_model = resolve_model(model)
-        if effort is not None:
-            self.active_effort = resolve_effort(effort)
+        resolved = resolve_model(model)
+        wanted = resolve_effort(effort) if effort is not None else self.active_effort
+        efforts = MODEL_CAPS.get(resolved, {}).get("efforts", EFFORT_LEVELS)
+        if effort is not None and efforts and wanted not in efforts:
+            raise ValueError(
+                f"{resolved} supports effort up to {efforts[-1]} — "
+                f"'{wanted}' isn't available on it."
+            )
+        self.active_model = resolved
+        self.active_effort = wanted
         return self.active_model, self.active_effort
 
     def prices(self) -> tuple[float, float]:

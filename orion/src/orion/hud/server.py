@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -44,6 +45,11 @@ class HudState:
         # The agent's own lock, not a second one: a /say turn and a live voice
         # turn contend on the same mutex, so they can never interleave history.
         self.turn_lock = agent.turn_lock
+        # Bounded intake: SSE streams each hold a thread + queue, and /say
+        # turns queue on the turn lock — both get a cap instead of unbounded
+        # growth. Semaphores live here so tests can reach them.
+        self.sse_slots = threading.BoundedSemaphore(MAX_SSE_CLIENTS)
+        self.say_slots = threading.BoundedSemaphore(MAX_PENDING_SAYS)
         self.started_at = time.time()
         self.last_latency_ms: float | None = None
         self.last_turn_seconds: float | None = None
@@ -160,6 +166,24 @@ class HudState:
         return True
 
 
+# The control plane binds 127.0.0.1 only, but that alone doesn't keep the
+# browser out: any web page Karl has open may fire cross-site requests at
+# localhost, and a DNS-rebinding page can even read responses. Two checks
+# close both doors without breaking local callers (the Mac app, curl, the
+# HUD page itself):
+#   - Host must be a local origin — a rebound domain arrives as Host: evil.tld.
+#   - A POST carrying a non-local Origin/Referer is refused — browsers always
+#    attach Origin to cross-site POSTs; local non-browser tools send neither.
+_LOCAL_HOST_RE = re.compile(r"^(127\.0\.0\.1|localhost|\[::1\])(:\d+)?$", re.IGNORECASE)
+_LOCAL_ORIGIN_RE = re.compile(
+    r"^https?://(127\.0\.0\.1|localhost|\[::1\])(:\d+)?(/|$)", re.IGNORECASE
+)
+
+MAX_BODY_BYTES = 64 * 1024      # /say text and /dismiss ids are small
+MAX_SSE_CLIENTS = 32            # each stream holds a server thread + queue
+MAX_PENDING_SAYS = 4            # /say turns queued on the turn lock
+
+
 class _Handler(BaseHTTPRequestHandler):
     state: HudState  # injected by serve()
 
@@ -181,14 +205,30 @@ class _Handler(BaseHTTPRequestHandler):
         length = int(self.headers.get("Content-Length", 0) or 0)
         if not length:
             return {}
+        if length > MAX_BODY_BYTES:
+            return {}
         try:
             return json.loads(self.rfile.read(length))
         except json.JSONDecodeError:
             return {}
 
+    def _local_request(self, *, for_write: bool) -> bool:
+        host = (self.headers.get("Host") or "").strip()
+        if not _LOCAL_HOST_RE.match(host):
+            return False
+        if for_write:
+            for header in ("Origin", "Referer"):
+                value = (self.headers.get(header) or "").strip()
+                if value and value.lower() != "null" and not _LOCAL_ORIGIN_RE.match(value):
+                    return False
+        return True
+
     # ------------------------------------------------------------------ GET
 
     def do_GET(self) -> None:
+        if not self._local_request(for_write=False):
+            self._json({"ok": False, "error": "local requests only"}, 403)
+            return
         if self.path in ("/", "/index.html"):
             page = (STATIC_DIR / "index.html").read_bytes()
             self._send(200, page, "text/html; charset=utf-8")
@@ -208,6 +248,15 @@ class _Handler(BaseHTTPRequestHandler):
             self._send(404, b"not found", "text/plain")
 
     def _stream_events(self) -> None:
+        if not self.state.sse_slots.acquire(blocking=False):
+            self._json({"ok": False, "error": "too many event streams open"}, 503)
+            return
+        try:
+            self._stream_events_locked()
+        finally:
+            self.state.sse_slots.release()
+
+    def _stream_events_locked(self) -> None:
         self.send_response(200)
         self.send_header("Content-Type", "text/event-stream")
         self.send_header("Cache-Control", "no-store")
@@ -230,13 +279,26 @@ class _Handler(BaseHTTPRequestHandler):
     # ----------------------------------------------------------------- POST
 
     def do_POST(self) -> None:
+        if not self._local_request(for_write=True):
+            self._json({"ok": False, "error": "local requests only"}, 403)
+            return
         if self.path == "/say":
             text = str(self._body().get("text", "")).strip()
             if not text:
                 self._json({"ok": False, "error": "empty"}, 400)
                 return
+            if not self.state.say_slots.acquire(blocking=False):
+                self._json({"ok": False, "error": "busy — turns already queued"}, 429)
+                return
+
+            def _run() -> None:
+                try:
+                    self.state.say(text)
+                finally:
+                    self.state.say_slots.release()
+
             # Answer immediately; the turn streams to the page over /events.
-            threading.Thread(target=self.state.say, args=(text,), daemon=True).start()
+            threading.Thread(target=_run, daemon=True).start()
             self._json({"ok": True})
         elif self.path == "/wake":
             self._json(self.state.wake())

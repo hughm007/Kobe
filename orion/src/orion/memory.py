@@ -41,6 +41,21 @@ class Memory:
             created=today, updated=today, source=source,
         )
 
+    @classmethod
+    def adopt(cls, text: str) -> "Memory":
+        """A hand-written plain line, adopted with a STABLE id.
+
+        The id is derived from the text, so every load sees the same id and
+        a gated forget() actually finds the fact Karl confirmed deleting —
+        a random id here would change between the listing and the delete.
+        """
+        import hashlib
+
+        cleaned = text.strip()
+        digest = hashlib.sha256(cleaned.lower().encode("utf-8")).hexdigest()[:8]
+        today = date.today().isoformat()
+        return cls(id=f"mem_{digest}", text=cleaned, created=today, updated=today, source="manual")
+
 
 class MemoryStore:
     """A JSONL file of facts. Loaded whole; rewritten whole on change.
@@ -68,12 +83,21 @@ class MemoryStore:
                 memories.append(Memory(**{k: v for k, v in data.items() if k in known}))
             except (json.JSONDecodeError, TypeError):
                 # A hand-edited plain-text line still counts as a fact.
-                memories.append(Memory.new(line, source="manual"))
+                memories.append(Memory.adopt(line))
         return memories
 
     def _write(self, memories: list[Memory]) -> None:
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        lines = [json.dumps(asdict(m), ensure_ascii=False) for m in memories]
+        # The file is Karl's, hand-editable by design: any # comments he wrote
+        # survive a rewrite, kept together at the top.
+        comments: list[str] = []
+        if self.path.is_file():
+            comments = [
+                line
+                for line in self.path.read_text(encoding="utf-8").splitlines()
+                if line.strip().startswith("#")
+            ]
+        lines = comments + [json.dumps(asdict(m), ensure_ascii=False) for m in memories]
         self.path.write_text("\n".join(lines) + ("\n" if lines else ""), encoding="utf-8")
 
     # ------------------------------------------------------------------ api

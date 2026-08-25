@@ -51,6 +51,8 @@ _CHROMIUM_CANDIDATES = (
 def find_chromium() -> str | None:
     override = os.environ.get("ORION_CHROMIUM", "").strip()
     if override:
+        if "/" not in override:
+            return shutil.which(override)  # a PATH name like "chromium"
         return override if os.access(override, os.X_OK) else None
     for candidate in _CHROMIUM_CANDIDATES:
         if "/" in candidate:
@@ -115,7 +117,10 @@ def render_ad_html(
     subline_html = (
         f'\n      <p class="subline">{_escape(subline)}</p>' if subline.strip() else ""
     )
-    notes_comment = f"<!-- production notes: {_escape(notes)} -->\n" if notes.strip() else ""
+    # "--" is forbidden inside HTML comments (and "-->" would end it early),
+    # so soften any run of dashes before the comment wraps the notes.
+    safe_notes = re.sub(r"-{2,}", "-", notes)
+    notes_comment = f"<!-- production notes: {_escape(safe_notes)} -->\n" if notes.strip() else ""
 
     return f"""<!doctype html>
 <html>

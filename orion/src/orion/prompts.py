@@ -99,7 +99,7 @@ _SNAPSHOT_FILES: tuple[tuple[str, str], ...] = (
     ("Compliance", "operations/compliance.md"),
 )
 
-_FRONTMATTER_RE = re.compile(r"\A---\n.*?\n---\n", re.DOTALL)
+_FRONTMATTER_RE = re.compile(r"\A---\r?\n.*?\r?\n---(\r?\n|\Z)", re.DOTALL)
 
 
 def _lead(text: str, limit: int) -> str:
@@ -127,8 +127,16 @@ def _client_lines(workspace: Path) -> list[str]:
         brief = folder / "client-brief.md"
         status = "no brief"
         if brief.is_file():
-            match = re.search(r"^status:\s*(\S+)", brief.read_text(encoding="utf-8"), re.MULTILINE)
-            status = match.group(1) if match else "unknown"
+            try:
+                text = brief.read_text(encoding="utf-8")
+            except (OSError, UnicodeDecodeError):
+                text = ""
+                status = "unreadable brief"
+            match = re.search(r"^status:\s*(\S+)", text, re.MULTILINE)
+            if match:
+                status = match.group(1)
+            elif text:
+                status = "unknown"
         lines.append(f"- {folder.name} ({status}) — brief: clients/{folder.name}/client-brief.md")
     return lines
 
@@ -146,7 +154,9 @@ def business_snapshot(workspace: Path, *, per_file: int = 900) -> str | None:
         path = workspace / relative
         try:
             text = path.read_text(encoding="utf-8")
-        except OSError:
+        except (OSError, UnicodeDecodeError):
+            # One bad file must never take down prompt assembly — the
+            # snapshot just gets shorter.
             continue
         lead = _lead(text, per_file)
         if lead:

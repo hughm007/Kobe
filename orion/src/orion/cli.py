@@ -103,7 +103,10 @@ class Repl:
         self.running = False
 
     def cmd_reset(self, _: str) -> None:
-        self.agent.reset()
+        # Under the turn lock: resetting mid-turn (a HUD /say streaming in the
+        # background) would yank the history out from under the running loop.
+        with self.agent.turn_lock:
+            self.agent.reset()
         print(self.style.dim("  conversation cleared\n"))
 
     def cmd_history(self, _: str) -> None:
@@ -191,8 +194,23 @@ class Repl:
         if not callable(getattr(provider, "set_model", None)):
             print(self.style.yellow("  this provider can't switch models\n"))
             return
+        # People type models the way they say them — "/model fable 5 high",
+        # "/model haiku 4.5". Peel a trailing effort word off if there is one,
+        # and give resolve_model the whole rest, which understands those forms.
+        from .provider import resolve_effort
+
+        model_words, effort_arg = list(words), None
+        if len(model_words) > 1:
+            try:
+                effort_arg = resolve_effort(model_words[-1])
+                model_words = model_words[:-1]
+            except ValueError:
+                pass  # the last word is part of the model name, not an effort
         try:
-            active, effort = provider.set_model(words[0], words[1] if len(words) > 1 else None)
+            # Switching swaps what every later request sends (and how thinking
+            # blocks are signed) — never under a turn that's mid-flight.
+            with self.agent.turn_lock:
+                active, effort = provider.set_model(" ".join(model_words), effort_arg)
         except ValueError as exc:
             print(self.style.yellow(f"  {exc}\n"))
             return
