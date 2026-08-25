@@ -34,6 +34,34 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-25 — Orion's marketing hands + full code autopsy
+
+**Did:** Part B — `make_static_ad` tool (pixel-exact self-contained HTML ads in
+`clients/<slug>/deliverables/`, PNG export when Chromium is present, safe areas
+and contrast checks built in, overwrite gated), a business snapshot digested
+into Orion's system prompt from `company/`, and the Remotion video path named in
+the Claude Code delegation tool. Part C — three independent review passes over
+`orion/` (concurrency, correctness, security); every confirmed finding fixed
+with a regression test: production barge-in (the cancel signal was being
+swallowed by the provider), Ctrl-C-proof tool history, per-model API
+capabilities (haiku/efforts), voice-pipeline races (echo guard, gate question
+overlap, stale mic pump, announcement vs live turn), job-sandbox hardening
+(baseline denylist config can't erase, credential-file reads denied, no web
+tools in jobs), HUD CSRF/DNS-rebinding protection, lock-protected notices.
+161 tests green; end-to-end driven smoke green.
+
+**Learned:** the config-overrides-code pattern had quietly dropped exfil
+patterns from the job denylist — safety baselines now live in code and config
+only extends them.
+
+**Open:** unchanged from the ingestion entry (Tier 1 risk items). The Mac app
+needs a rebuild on Karl's machine to pick up nothing — no Swift changes this
+session.
+
+**Next:** Karl reviews the report; first real deliverable through the new gate
+(a 911 Drain static ad is the obvious candidate — blocked only on the claims
+sheet signature for any claim-bearing copy).
+
 ## 2026-08-25 — Drive company OS ingested; Orion tailored to Service Pow
 
 **Did:** Read the canonical Drive folder "ServicePow OS 2" (the storage map there
