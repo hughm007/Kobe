@@ -113,6 +113,28 @@ final class ProcessManager {
 final class HotkeyManager {
     private var hotKeyRef: EventHotKeyRef?
 
+    // THE shortcut lives here — one configuration location, no rebuild needed:
+    //   defaults write com.servicepow.orion hotkeyKeyCode -int 49
+    //   defaults write com.servicepow.orion hotkeyModifiers -string "control,option"
+    // then quit and relaunch ORION. Key codes: space=49, return=36, F19=80.
+    // Modifier names: control, option, command, shift (comma-separated).
+    static let defaultKeyCode = UInt32(kVK_Space)
+    static let defaultModifiers = "control,option"
+
+    private func modifierFlags(from names: String) -> UInt32 {
+        var flags: UInt32 = 0
+        for raw in names.lowercased().split(separator: ",") {
+            switch raw.trimmingCharacters(in: .whitespaces) {
+            case "control", "ctrl": flags |= UInt32(controlKey)
+            case "option", "opt", "alt": flags |= UInt32(optionKey)
+            case "command", "cmd": flags |= UInt32(cmdKey)
+            case "shift": flags |= UInt32(shiftKey)
+            default: break
+            }
+        }
+        return flags == 0 ? UInt32(controlKey | optionKey) : flags
+    }
+
     func register(handler target: AppDelegate) {
         var eventType = EventTypeSpec(
             eventClass: OSType(kEventClassKeyboard), eventKind: UInt32(kEventHotKeyPressed)
@@ -126,14 +148,16 @@ final class HotkeyManager {
             },
             1, &eventType, Unmanaged.passUnretained(target).toOpaque(), nil
         )
-        // Ctrl+Option+Space. (Plain Ctrl+Space is reserved by macOS for input
-        // source switching by default — change the modifiers here if you have
-        // freed it: use UInt32(controlKey) alone.)
-        let hotKeyID = EventHotKeyID(signature: OSType(0x4F52_494E), id: 1) // 'ORIN'
-        RegisterEventHotKey(
-            UInt32(kVK_Space), UInt32(controlKey | optionKey),
-            hotKeyID, GetEventDispatcherTarget(), 0, &hotKeyRef
+        // Ctrl+Option+Space by default; overridable via `defaults` (see above).
+        let defaults = UserDefaults.standard
+        let keyCode = defaults.object(forKey: "hotkeyKeyCode") != nil
+            ? UInt32(defaults.integer(forKey: "hotkeyKeyCode"))
+            : Self.defaultKeyCode
+        let modifiers = modifierFlags(
+            from: defaults.string(forKey: "hotkeyModifiers") ?? Self.defaultModifiers
         )
+        let hotKeyID = EventHotKeyID(signature: OSType(0x4F52_494E), id: 1) // 'ORIN'
+        RegisterEventHotKey(keyCode, modifiers, hotKeyID, GetEventDispatcherTarget(), 0, &hotKeyRef)
     }
 }
 
@@ -166,11 +190,18 @@ final class HudWindowController: NSWindowController, NSWindowDelegate {
         (window?.contentView?.subviews.first as? WKWebView)?.load(URLRequest(url: HUD_URL))
     }
 
-    func present() {
+    func present(fullscreen: Bool = false) {
         guard let window = window else { return }
         if window.isMiniaturized { window.deminiaturize(nil) }
         window.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
+        if fullscreen && !window.styleMask.contains(.fullScreen) {
+            // Slight delay lets the window land on screen before the space
+            // transition starts — avoids a visual stutter on cold launch.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                if !window.styleMask.contains(.fullScreen) { window.toggleFullScreen(nil) }
+            }
+        }
     }
 }
 
@@ -215,7 +246,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
                 }
                 if self.hudWindow == nil { self.hudWindow = HudWindowController() }
                 else { self.hudWindow?.reload() }   // reconnect after backend restarts
-                self.hudWindow?.present()
+                // Immersive by default. Turn off with:
+                //   defaults write com.servicepow.orion wakeFullscreen -bool false
+                let wantFullscreen = UserDefaults.standard.object(forKey: "wakeFullscreen") == nil
+                    || UserDefaults.standard.bool(forKey: "wakeFullscreen")
+                self.hudWindow?.present(fullscreen: wantFullscreen)
                 DispatchQueue.global().async { _ = httpJSON("wake", method: "POST") }
             }
         }

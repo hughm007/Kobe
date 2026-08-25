@@ -30,13 +30,39 @@ Options → Keep in Dock. Spotlight finds it as ORION.
 Silence after a reply returns Orion to standby on its own
 (`[session].follow_up_seconds` / `idle_seconds` in `orion.toml`).
 
-## Why Ctrl+Option+Space, and how to change it
+## The shortcut — one configuration location, no rebuild
 
-Plain **Ctrl+Space is reserved by macOS** for input-source switching by
-default, so the hotkey is **Ctrl+Option+Space**. To change it, edit the
-`RegisterEventHotKey` line in `Sources/main.swift` (the comment marks it) and
-re-run `./build.sh --install`. If you've freed Ctrl+Space in System Settings →
-Keyboard → Shortcuts → Input Sources, `UInt32(controlKey)` alone works.
+Default: **Ctrl+Option+Space**. Change it any time with two Terminal lines and
+a relaunch of ORION (no rebuild):
+
+```bash
+defaults write com.servicepow.orion hotkeyKeyCode -int 49              # 49 = space
+defaults write com.servicepow.orion hotkeyModifiers -string "control,option"
+```
+
+Modifier names: `control`, `option`, `command`, `shift` (comma-separated).
+If you have freed plain Ctrl+Space from Input Sources, `-string "control"`
+gives you exactly that. `defaults delete com.servicepow.orion hotkeyKeyCode`
+returns to the default.
+
+Waking is **immersive by default** — the HUD enters fullscreen on the hotkey.
+Prefer a normal window? `defaults write com.servicepow.orion wakeFullscreen
+-bool false`.
+
+## Permissions — what macOS will and won't ask
+
+- **Microphone**: yes, once, on the first wake. If you ever denied it:
+  System Settings → Privacy & Security → Microphone → enable ORION.
+- **Accessibility / Input Monitoring: NOT required.** RegisterEventHotKey is
+  a registered system hotkey, not keyboard sniffing — nothing to grant.
+
+## Always-armed hotkey
+
+A global hotkey only exists while ORION is running — a closed app cannot hear
+the keystroke that would launch it (an OS fact, not a limitation of this
+code). For the "press it anywhere, any time" experience: menu → **Launch
+ORION at Login**. At login ORION starts in **standby only** — microphone and
+Deepgram stay off until you actually wake it.
 
 ## If the backend lives somewhere other than ~/Kobe/orion
 
