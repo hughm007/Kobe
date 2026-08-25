@@ -25,6 +25,20 @@ def test_aliases_and_full_ids_resolve():
             resolve_model(bad)
 
 
+def test_the_way_karl_actually_says_it_resolves():
+    """Voice transcripts say 'fable 5', 'fable five', 'claude fable 5' —
+    every natural form must reach the same model."""
+    for spoken in ("fable 5", "Fable 5", "claude fable 5", "fable five", "fable-5"):
+        assert resolve_model(spoken) == "claude-fable-5", spoken
+    assert resolve_model("opus 5") == "claude-opus-5"
+    assert resolve_model("haiku 4.5") == "claude-haiku-4-5"
+    assert resolve_model("haiku four point five") == "claude-haiku-4-5"
+    assert resolve_model("opus 4.8") == "claude-opus-4-8"
+    assert resolve_effort("effort medium") == "medium"
+    assert resolve_effort("extra high") == "xhigh"
+    assert resolve_effort("maximum") == "max"
+
+
 def test_efforts_resolve_and_reject():
     assert resolve_effort("HIGH") == "high"
     for level in EFFORT_LEVELS:

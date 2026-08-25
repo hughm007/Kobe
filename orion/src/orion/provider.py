@@ -38,20 +38,46 @@ EFFORT_LEVELS = ("low", "medium", "high", "xhigh", "max")
 
 
 def resolve_model(name: str) -> str:
+    """Accept the way a person actually says it, spoken or typed.
+
+    "fable", "Fable 5", "claude fable 5", "OPUS-5", "haiku 4.5" and the full
+    "claude-…" ids all resolve. Transcripts write numbers as words too.
+    """
+    import re as re_module
+
     cleaned = name.strip().lower()
     if not cleaned:
         raise ValueError("Name a model — e.g. fable, opus, sonnet, haiku, or a full id.")
-    resolved = MODEL_ALIASES.get(cleaned, cleaned)
-    if resolved not in MODEL_CATALOG:
+    # Normalise: spoken numbers, separators, an optional "claude" prefix.
+    for word, digit in (("four point eight", "4-8"), ("four point seven", "4-7"),
+                        ("four point six", "4-6"), ("four point five", "4-5"),
+                        ("five", "5"), ("four", "4")):
+        cleaned = cleaned.replace(word, digit)
+    cleaned = re_module.sub(r"[\s_.]+", "-", cleaned)
+    cleaned = re_module.sub(r"^claude-?", "", cleaned)
+    cleaned = re_module.sub(r"-+", "-", cleaned).strip("-")
+
+    short_ids = {full.replace("claude-", ""): full for full in MODEL_CATALOG}
+    resolved = (
+        MODEL_ALIASES.get(cleaned)
+        or short_ids.get(cleaned)
+        # bare family name with a redundant version: "fable-5" handled above;
+        # "haiku-4-5" too — anything left is genuinely unknown.
+    )
+    if resolved is None:
         raise ValueError(
-            f"Unknown model {name!r}. Shortcuts: {', '.join(sorted(MODEL_ALIASES))}; "
-            f"full ids: {', '.join(sorted(MODEL_CATALOG))}."
+            f"Unknown model {name!r}. Say fable, opus, sonnet, or haiku "
+            f"(full ids work too: {', '.join(sorted(MODEL_CATALOG))})."
         )
     return resolved
 
 
 def resolve_effort(effort: str) -> str:
-    cleaned = effort.strip().lower()
+    cleaned = effort.strip().lower().replace("effort", "").strip()
+    if cleaned in ("extra high", "extra-high", "x-high"):
+        cleaned = "xhigh"
+    if cleaned == "maximum":
+        cleaned = "max"
     if cleaned not in EFFORT_LEVELS:
         raise ValueError(f"Effort must be one of: {', '.join(EFFORT_LEVELS)}.")
     return cleaned
