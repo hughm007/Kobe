@@ -36,6 +36,7 @@ TOOL_LABELS = {
     "search_workspace": "SEARCHING WORKSPACE",
     "read_workspace_file": "READING FILES",
     "write_draft": "WRITING DRAFT",
+    "make_static_ad": "BUILDING AD",
     "append_worklog": "UPDATING WORKLOG",
     "write_learning": "RECORDING LEARNING",
     "remember": "ACCESSING MEMORY",

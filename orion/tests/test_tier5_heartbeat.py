@@ -193,13 +193,30 @@ def test_inbox_triage_notices_a_dropped_file_and_escalates(config, tmp_path):
 def test_open_loops_flags_the_empty_active_brief(config, tmp_path):
     from orion.checks import open_loops
 
+    # 911drain's real brief was filled on 2026-08-25, so the standing interrupt
+    # cleared. The check still has to fire for the NEXT client onboarded with a
+    # template brief — construct that condition explicitly.
+    ws = _sandboxed(config, tmp_path)
+    template = ws / "clients" / "_template" / "client-brief.md"
+    newclient = ws / "clients" / "newclient"
+    newclient.mkdir()
+    (newclient / "client-brief.md").write_text(template.read_text())
+
+    board = make_board(config)
+    open_loops.run(config, board, {"active_clients": "newclient", "worklog_gap_days": 3650})
+
+    briefs = [n for n in board.pending() if "empty brief" in n.text]
+    assert briefs, "an active client's template brief is exactly the blocking condition"
+    assert briefs[0].level == "interrupt"
+
+
+def test_open_loops_stays_quiet_now_that_911drain_brief_is_real(config, tmp_path):
+    from orion.checks import open_loops
+
     _sandboxed(config, tmp_path)
     board = make_board(config)
     open_loops.run(config, board, {"active_clients": "911drain", "worklog_gap_days": 3650})
-
-    briefs = [n for n in board.pending() if "empty brief" in n.text]
-    assert briefs, "911drain's empty brief is exactly the blocking condition"
-    assert briefs[0].level == "interrupt"
+    assert not [n for n in board.pending() if "empty brief" in n.text]
 
 
 def test_open_loops_notices_a_quiet_worklog(config, tmp_path):

@@ -19,11 +19,15 @@ def register(registry: ToolRegistry, config, manager: CodingJobManager) -> None:
             "Hand a real coding task to Claude Code, running in the background in "
             "one project directory — build a page, fix a bug, add a feature, "
             "refactor. Use when Karl asks for actual software work on a site or "
-            "repo, not for questions. The task should say concretely what to do "
-            "and how to know it's done. Returns a job id immediately; the "
-            "conversation continues while it works, and completion is announced. "
-            "The job can edit files and run commands inside the project only — it "
-            "can never push, deploy, publish, or send anything."
+            "repo, not for questions. This is also how commercial VIDEO gets "
+            "made: video is built as code with Remotion (scaffold the project, "
+            "write the composition, render), following the gates in "
+            "agent-workspace/playbooks/ads/video-production.md — propose this "
+            "path when Karl wants a video ad. The task should say concretely "
+            "what to do and how to know it's done. Returns a job id immediately; "
+            "the conversation continues while it works, and completion is "
+            "announced. The job can edit files and run commands inside the "
+            "project only — it can never push, deploy, publish, or send anything."
         ),
         consequential=True,
         describe_action='hand this task to Claude Code in "{project}": {task}',
