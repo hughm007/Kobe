@@ -319,3 +319,69 @@ def test_missing_deepgram_key_yields_a_clear_error(config):
     events = list(stream.events())
     assert events[0].kind == "error"
     assert "DEEPGRAM_API_KEY" in events[0].text
+
+
+# ---------------------- regressions from the live speaker-echo incident ----
+
+def test_echo_is_caught_even_after_playback_has_stopped():
+    """Deepgram's transcript of Orion's speech lands seconds after the audio
+    ends — the guard must not depend on 'is playing right now'."""
+    guard = EchoGuard(similarity=0.75)
+    guard.spoke("The switch didn't go through.")
+    guard.spoke("The confirmation didn't register on my end, so I'm still on opus five.")
+    # No player involved at all — content alone must be enough.
+    assert guard.is_echo("the confirmation didn't register on my end so I'm still on opus five")
+
+
+def test_concatenated_multi_phrase_echo_is_caught():
+    """A long reply echoes back as several spoken phrases joined into one
+    transcript — exactly what looped live on speakers."""
+    guard = EchoGuard(similarity=0.75)
+    guard.spoke("The switch didn't go through.")
+    guard.spoke("Say the word and I'll fire it again.")
+    guard.spoke("Worth checking whether the confirmation dialog is actually appearing on your screen.")
+    monologue = ("the switch didn't go through say the word and I'll fire it again "
+                 "worth checking whether the confirmation dialog is actually appearing on your screen")
+    assert guard.is_echo(monologue)
+    # Genuinely new speech sharing a couple of words still gets through.
+    assert not guard.is_echo("actually switch to fable five right now")
+
+
+def test_spoken_confirmation_survives_its_own_echo(config):
+    """The gate's question echoing back must not consume the answer slot,
+    and Karl's short 'yes'/'confirm' must never be eaten by the guard —
+    even though the spoken question itself contains the word 'confirm'."""
+    import threading
+    from orion.confirm import TwoStepGate
+
+    provider = FakeProvider([])
+    agent = Agent(config, provider, mode="voice")
+    convo = VoiceConversation(
+        agent, FakeSTT([]), FakeTTS(), FakePlayer(),
+        voice_config=config.voice, say=lambda s: None, show=lambda s: None,
+    )
+
+    def feed_answers():
+        for step, real_answer in enumerate(("yes", "confirm")):
+            deadline = time.monotonic() + 2
+            while not convo._awaiting_confirmation.is_set() and time.monotonic() < deadline:
+                time.sleep(0.01)
+            # First the question itself echoes back through the mic…
+            question_echo = (
+                "I'm about to switch the brain to claude fable five at medium effort "
+                "this is on your always ask list should I go ahead"
+                if step == 0 else
+                "are you sure you want to confirm say confirm to proceed"
+            )
+            convo.handle_event(TranscriptEvent("final", question_echo))
+            # …then Karl actually answers.
+            convo.handle_event(TranscriptEvent("final", real_answer))
+            while convo._awaiting_confirmation.is_set() and time.monotonic() < deadline:
+                time.sleep(0.01)
+
+    thread = threading.Thread(target=feed_answers, daemon=True)
+    thread.start()
+    gate = TwoStepGate(convo.ask_confirmation)
+    approved = gate("switch the brain to claude-fable-5 at medium effort", "set_model")
+    thread.join(timeout=5)
+    assert approved is True, "the echoed question must not decline the gate; Karl's words must"

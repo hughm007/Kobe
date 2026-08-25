@@ -40,26 +40,57 @@ def _normalise(text: str) -> str:
 
 
 class EchoGuard:
-    """Decides whether a transcript is Orion's own voice coming back in."""
+    """Decides whether a transcript is Orion's own voice coming back in.
+
+    Content-based and time-windowed, deliberately NOT gated on "is audio
+    playing right now": Deepgram's final transcript of Orion's speech lands
+    seconds *after* playback ends, and a long reply echoes back as several
+    phrases concatenated into one transcript. Both were observed live —
+    Orion answering its own replies in a loop on speakers.
+    """
+
+    WINDOW_SECONDS = 45.0
 
     def __init__(self, similarity: float) -> None:
         self.similarity = similarity
-        self._recent: deque[str] = deque(maxlen=6)
+        self._recent: deque[tuple[float, str]] = deque(maxlen=24)
 
     def spoke(self, phrase: str) -> None:
-        self._recent.append(_normalise(phrase))
+        import time as time_module
+
+        self._recent.append((time_module.monotonic(), _normalise(phrase)))
+
+    def _corpus(self) -> list[str]:
+        import time as time_module
+
+        cutoff = time_module.monotonic() - self.WINDOW_SECONDS
+        return [text for at, text in self._recent if at >= cutoff and text]
 
     def is_echo(self, transcript: str) -> bool:
         heard = _normalise(transcript)
         if not heard:
             return True  # nothing intelligible — treat as noise
-        for said in self._recent:
-            if not said:
-                continue
+        corpus = self._corpus()
+        if not corpus:
+            return False
+        heard_words = heard.split()
+        for said in corpus:
+            # The transcript is (part of) one phrase Orion said…
             if heard in said:
                 return True
-            ratio = difflib.SequenceMatcher(None, heard, said).ratio()
-            if ratio >= self.similarity:
+            # …or one full phrase Orion said is inside a longer transcript
+            # (several phrases echoed back concatenated). Only meaningful
+            # phrases — short ones like "yes" would false-positive.
+            if len(said.split()) >= 4 and said in heard:
+                return True
+            if difflib.SequenceMatcher(None, heard, said).ratio() >= self.similarity:
+                return True
+        # Concatenation with transcription drift: if nearly every word of a
+        # longer transcript appears in what Orion recently said, it's Orion.
+        if len(heard_words) >= 6:
+            said_words = set(" ".join(corpus).split())
+            coverage = sum(1 for w in heard_words if w in said_words) / len(heard_words)
+            if coverage >= 0.85:
                 return True
         return False
 
@@ -169,10 +200,17 @@ class VoiceConversation:
             transcript = event.text.strip()
             if not transcript:
                 return
-            if self._is_self_echo(transcript):
-                return
             if self._awaiting_confirmation.is_set():
+                # Gate answers are short ("yes", "confirm", "no"). Short ones
+                # go straight through — the spoken question contains the word
+                # "confirm", so the echo guard must not eat Karl's answer.
+                # Long transcripts during the wait are almost always Orion's
+                # own question echoing back: guard them.
+                if len(transcript.split()) > 4 and self.echo_guard.is_echo(transcript):
+                    return
                 self._confirm_answers.put(transcript)
+                return
+            if self.echo_guard.is_echo(transcript):
                 return
             if self.state in ("THINKING", "SPEAKING") or self.player.is_playing:
                 # A real interruption — whether generation is still running or
@@ -183,9 +221,7 @@ class VoiceConversation:
     # ------------------------------------------------------------- barge-in
 
     def _is_self_echo(self, transcript: str) -> bool:
-        if self.state == "LISTENING" and not self.player.is_playing:
-            return False
-        return self.player.is_playing and self.echo_guard.is_echo(transcript)
+        return self.echo_guard.is_echo(transcript)
 
     def _maybe_barge_in(self, transcript: str | None) -> None:
         if not self.config.barge_in:
@@ -296,8 +332,10 @@ class VoiceConversation:
         self._drain_answers()
         self._awaiting_confirmation.set()
         try:
+            speakable = spoken_text(question)
+            self.echo_guard.spoke(speakable)  # the question echoing back ≠ an answer
             try:
-                for chunk in self.tts.stream_phrase(spoken_text(question)):
+                for chunk in self.tts.stream_phrase(speakable):
                     self.player.feed(chunk)
             except Exception as exc:  # noqa: BLE001 — question still shown on screen
                 self.say(f"⚠ {exc}")
