@@ -14,11 +14,17 @@ source: servicepow-ad-producer v4.0 §7–§7D (2026-08-20), imported verbatim 2
 
 > **Canonical home for QC thresholds and inspection protocols.** Load at QC time only.
 >
-> **⚠ SCRIPT GAP:** the four scripts referenced below (`servicepow_qc.py`,
-> `servicepow_source_qc.py`, `servicepow_performance_qc.py`, `servicepow_biomech_qc.py`) are
-> **not in this repo** — only their usage and thresholds are. Until the source is added,
-> checks 8–15, 26–28, 32 and 33 are enforced by **judgment, not measurement**, and any claim that
-> they were "run" is an LB29 violation. Paste the scripts to close this.
+> **SCRIPT STATUS (updated 2026-08-26):** the four scripts now live in
+> [`../scripts/`](../scripts/) as **clean-room REBUILDS** from the thresholds on this page —
+> the originals were never recovered (verified against all repo history). Each carries a
+> self-test proving its gates can fail (LB40); the preflight + all self-tests passed on
+> 2026-08-26. Honest residuals, per LB29:
+> - the **motion measure is a rebuild** (FFT phase correlation on edge maps, documented in the
+>   script header) and has NOT been cross-anchored against the original's two reference clips —
+>   near-floor scores return INDETERMINATE, never PASS, until re-anchored on scored clips;
+> - the **ASR paths** (checks 26–27, and 32's audio mode) fail CLOSED as UNVERIFIED until
+>   whisper is installed — they never pass by default;
+> - checks 28 (safe-area, OCR) and 32 (WPM from a timed transcript) are fully measured.
 >
 > Thresholds marked PROVISIONAL are exactly that — the motion floor is anchored on n=2.
 

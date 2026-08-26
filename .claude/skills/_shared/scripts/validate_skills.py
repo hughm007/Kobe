@@ -138,7 +138,7 @@ def check_skill(d: Path) -> None:
             fail(name, f"missing required section {section}")
 
     # relative reference paths resolve
-    for rel in re.findall(r"`((?:\.\./|references/|templates/|scripts/)[^`\s]+\.md)`", text):
+    for rel in re.findall(r"`((?:\.\./|references/|templates/|scripts/)[^`\s]+\.(?:md|py|jsonl))`", text):
         target = (d / rel).resolve()
         if not target.exists():
             fail(name, f"reference path does not resolve: {rel}")
