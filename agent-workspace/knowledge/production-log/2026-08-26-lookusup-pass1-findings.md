@@ -328,6 +328,31 @@ and the promoted learning).
 — so the plainer-spoken line also CURED signed residual (a). The lawyer-voice line wasn't
 just weaker copy; it was the harder read.
 
+## Round 13 (2 blocking, challenger) — a new artifact inherits every law on day one
+
+All CLAUDE-CAUGHT. The challenger's first gate round blocked on two authoring errors the
+control's twelve rounds had already taught: **CH-1** — the drain-first relief tail specced a
+performance moment (tap-shut → exhale, no plant) that existed in NO boarded capture, because
+the S5 exhale was choreographed to land ON the pour the challenger cut; a document promising
+"zero new shoot asks" contradicted itself at its one new margin. **CH-2** — the challenger's
+VO set silently failed the rhythm-ratio floor (160/150 ≈ 1.07 < 1.15): the control's healthy
+2.2 ratio rode entirely on the slow "911 Drain." anchor, and compressing that one line
+destroyed the set-level property while every per-line check still passed — and the board had
+published only the per-line checks. The control's caption delta passed conditionally: the
+humanized line's arithmetic verified, residual (a) was lawfully retired, and the one open
+item is a judgment signature (D-1: "your plumber's license" vs the registrar's CONTRACTOR
+license — audience language mapped onto a registered claim, signed rather than assumed).
+
+**Reusable lessons (EXPERIMENTAL):**
+- **A re-cut inherits every law of the board it cuts from — including set-level properties.**
+  Per-line checks passing while the set fails is the exact failure the ratio floor exists
+  for; any new cut republishes the FULL pace table, never a subset.
+- **A reordered edit can spec only moments the captures contain.** Before writing a beat's
+  tail, locate the exact take-time it comes from; choreography bound to a cut element
+  (the exhale on the pour) does not survive the element's removal.
+- **Audience language over registered-claim terms is a signature, not a synonym** — "plumber"
+  for "contractor" maps the substance but drifts the class; the sheet signs the mapping.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic

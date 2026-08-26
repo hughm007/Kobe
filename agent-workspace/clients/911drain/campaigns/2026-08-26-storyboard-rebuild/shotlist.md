@@ -1,17 +1,17 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 14"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 15"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-14, all-practical]
+tags: [campaign, storyboard, shotlist, revision-15, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 14 (ALL-PRACTICAL) — the CONTROL cut
+# Shotlist — "Look Us Up" pack — REVISION 15 (ALL-PRACTICAL) — the CONTROL cut
 
-**Current state (Revision 14, 2026-08-26 — this intro narrates NOW; the problem/solution-first CHALLENGER cut of these same assets lives in `challenger-board.md`, per the Owner's read #2 — the market decides between the two):**
+**Current state (Revision 15, 2026-08-26 — this intro narrates NOW; the problem/solution-first CHALLENGER cut of these same assets lives in `challenger-board.md` (V2), per the Owner's read #2 — the market decides between the two):**
 an all-practical, zero-generation 8-shot board; every burned and VO line inside its AUDITED
 CLASS (round-12 F12-2 — the taxonomy stated honestly): a registered claim · a question ·
 frame-narration (a statement about the visible frame, with recorded fallbacks) · or
@@ -19,6 +19,13 @@ Owner-accepted safety advice; the F4 record check **FULLY CLOSED** ("911 Drain L
 match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
+
+## Revision 15 changelog (round-13 finding → change)
+
+| Finding | Change |
+|---|---|
+| **CH-1 (severity S3 · challenger RELIEF, blocked)** | The S5 card gains **one directed settle beat** — tap-shut → held settle/exhale (hands still) → THEN the pour — inside the same take: the control's edit is unchanged in effect, and the challenger's drain-first relief tail now exists in a boarded capture |
+| **D-1 (S2 · both captions)** | The **plumber-for-contractor audience-language mapping** joins the sign-off sheet for Karl's named accept-or-fallback — one signature covers both cuts (also closes challenger CH-10) |
 
 ## Revision 14 changelog (Owner read #2, 2026-08-26 — the performance-challenger directive)
 
@@ -566,9 +573,11 @@ Story job:   payoff — control regained; the water is back to doing quiet, ordi
 Action:      from behind, elevated (see Camera): PRIMARY FOREGROUND ACTION — water running freely
              down the now-clear drain (the same basin from A1). The homeowner fills a glass at
              the tap, SHUTS THE TAP (round-4 F13: no water left running in a drought-conscious
-             market — and it mirrors A1's shutoff gesture), and without hurry WATERS THE SMALL
-             WINDOWSILL PLANT (no drinking); shoulders drop ~2 cm on one exhale as the pour
-             lands
+             market — and it mirrors A1's shutoff gesture), then **ONE HELD SETTLE BEAT —
+             shoulders drop ~2 cm on the exhale, hands still — BEFORE the hand moves to the
+             plant** (round-13 CH-1, control Rev 15: one direction beat inside the same take;
+             the CHALLENGER cut exits here, the control continues), and without hurry WATERS
+             THE SMALL WINDOWSILL PLANT (no drinking); the pour lands on the settled body
 Camera:      RE-SPECIFIED (round-5 F-3 — the counter-height behind-MCU could not see the
              basin interior: the basin wall and the person occluded the drain, leaving the
              payoff's proof invisible in its own frame): **ELEVATED over-shoulder
@@ -733,6 +742,14 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   from this environment** (gov + legal-mirror sites egress-blocked). Keep "LLC", or shorten
   to "911 Drain" only after a primary-source check (a 2-minute read of R4-9-109 / the ROC
   advertising page on any Mac). Karl ______ ☐
+- **AUDIENCE-LANGUAGE MAPPING (round-13 D-1 — one signature covers BOTH cuts, closing CH-10):**
+  the picked captions say "your plumber's license"; the registrar licenses CONTRACTORS (no
+  individual plumber's license exists at the ROC, and a viewer's "plumber" may personally
+  hold nothing checkable there). The substance maps to registered claim 2, the venue is
+  named, and the ad's subject IS a licensed plumbing contractor — but the mapping is a
+  judgment call, and judgment calls are signed, not assumed. Accept the plumber-for-
+  contractor audience language, or fall back to the gated contractor wording ("Every
+  licensed AZ contractor is publicly checkable — state registrar."). Karl ______ ☐
 - **PRE-EDIT-LOCK CHECKS:** (1) the S6 logo lockup FILE is verified to be the version
   WITHOUT the wrap's "& SEWER" line — checked against the actual file, not the intention
   (R7-F8) ☐ · (2) **the burned phone string 480-992-3541 is DIALED once and answered by/for

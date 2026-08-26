@@ -34,6 +34,36 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Dual gate lands: DR advisory filed; challenger V1 blocked, V2 + Rev 15 ready
+
+**Did:** Both halves of the dual gate returned. The **DR lens's first advisory** (filed
+verbatim + summarized in Bible §13): the control's cleverness-for-persuasion trade "has been
+built — it is the challenger"; the challenger's residual cleverness (the proof insert) is
+load-bearing; its next 30% of persuasion is barred copy — the claims sheet is the ceiling;
+**call-qualification tracking is REQUIRED test infrastructure** (CPQL is the only link that
+adjudicates the control's unique thesis). The **Skeptic's round 13 BLOCKED challenger V1 on
+2 × S3** — an unshootable relief tail (the S5 exhale was choreographed onto the pour the
+challenger cut) and a silently failing VO rhythm ratio (1.07 < 1.15, with the pace table
+omitted) — and **CONDITIONALLY PASSED the control's caption delta** (16.0 cps verified,
+residual (a) lawfully retired; one condition: D-1, the plumber-for-contractor mapping needs
+Karl's named signature, one signature for both cuts). **Challenger V2 + control Revision 15
+apply the full register:** the S5 card gains one directed settle beat (making the drain-first
+tail real inside the same take), the challenger publishes its full pace table (anchor 80 WPM,
+ratio 2.0), the strap staggers to 3.0, the proof window keeps performed evidence and the
+detail-page rule, seams re-sign against the direct cut, person-seam checks added, D-1 on the
+sheet.
+
+**Decided:** Round 14 re-gates challenger V2 + the control's S5/D-1 delta per the approved
+plan's conventions (converging fixes re-gate; non-convergence escalates).
+
+**Learned:** (production log) A re-cut inherits every law of its source board, including
+set-level properties — republish full tables, never subsets. Spec only moments the captures
+contain. Audience language over claim terms is a signature, not a synonym.
+
+**Open:** round 14 → then the two-board sign-off package to Karl (incl. the D-1 signature).
+
+**Next:** round 14 verdict.
+
 ## 2026-08-26 — Owner read #2 → the performance challenger, the humanized caption, and a corrected Kobe system
 
 **Did:** Karl's second read (8.5/10, sign-off withheld) directed a performance CHALLENGER
