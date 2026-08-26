@@ -1,15 +1,19 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Script — REVISION 9"
+title: "911 Drain — Storyboard Rebuild — Script — REVISION 10"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, script, revision-9]
+tags: [campaign, script, revision-10]
 ---
 
-# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 9
+# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 10
+
+**Revision 10 changes (Owner sign-off rulings; changelog in `shotlist.md`):** no script-side
+content changes — the version moves in lockstep with the shotlist (residuals a–c accepted ·
+S4 operator adopted · weekly re-check accepted; round 11 verifies).
 
 **Revision 9 changes (round-10 findings; changelog in `shotlist.md`):** variant C's tap split
 specified across the C1→S2 seam (F10-2) · caption/strap cps roundings corrected to 17.3 / 4.8

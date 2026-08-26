@@ -1,24 +1,33 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 9"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 10"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-9, all-practical]
+tags: [campaign, storyboard, shotlist, revision-10, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 9 (ALL-PRACTICAL)
+# Shotlist — "Look Us Up" pack — REVISION 10 (ALL-PRACTICAL)
 
-**Current state (Revision 9, 2026-08-26 — this intro narrates NOW):**
+**Current state (Revision 10, 2026-08-26 — this intro narrates NOW):**
 an all-practical, zero-generation 8-shot board; every burned and VO line inside the three
 registered claims or a question; the F4 record check **FULLY CLOSED** ("911 Drain LLC" exact
 match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
 
-## Revision 9 changelog (round-10 finding → change; round 10 = **CONDITIONAL PASS, the second straight — zero S3/S4, all five round-9 repairs verified landed.** The standing grant is exhausted; the sign-off package goes to Karl)
+## Revision 10 changelog (Owner sign-off rulings, in-session 2026-08-26; round 11 = the Owner-authorized verification round)
+
+| Ruling | Change |
+|---|---|
+| **Residuals (a)/(b)/(c) ACCEPTED** by Karl (Wyatt), by name, with the 1.5s occlusion context read | Three ☑ signatures on the sheet — the above-ceiling reads are knowingly accepted, none concealed |
+| **S4 operator-present ADOPTED** (the gate's recommendation) | The media ask now requires a briefed Service Pow operator (or Karl) at the job running the phone against the shot card; per the round-10 risk table S4 drops **HIGH → MEDIUM** — the pack now has NO high-risk shot |
+| **Weekly in-flight record re-check ACCEPTED** with the standing pause criterion | ☑ on the sheet; the filmed ACTIVE row can never silently outlive the record |
+| **Round 11 authorized** — one verification round | Verifies Revision 9's three fixes + these recorded rulings; still open after it: the name-form primary check (LLC default stands), the geography seam (at capture), the read-the-storyboard sign-off itself |
+
+## Revision 9 changelog (round-10 finding → change; round 10 = **CONDITIONAL PASS, the second straight — zero S3/S4, all five round-9 repairs verified landed.** The standing grant is exhausted; Revision 9's fixes verify in round 11)
 
 | Finding | Change |
 |---|---|
@@ -453,7 +462,10 @@ Audio:       drum ratchet; then water beginning to give — the first "right" wa
 Text:        "Licensed. Look us up." (42% — round-4 F3: claim 1 + a claim-2 imperative; passes the claims rule under both its readings)
 Source:      REAL CLIENT FOOTAGE REQUIRED — the "during" state is never generated. Media ask
              to Will's crew (PARKED until Karl re-opens it): phone rig, one job, ~30s usable,
-             interior residential fixture; **one-page shot card attached** (frame options a/b
+             interior residential fixture; **OPERATOR PRESENT (adopted by Karl, in-session
+             2026-08-26 — round-10 C-7 / R8-F4): a briefed Service Pow operator (or Karl)
+             attends the job and runs the phone against the shot card — the tech works the
+             drain, the operator works the camera**; **one-page shot card attached** (frame options a/b
              above — b restricted per R6-F6, angle tolerance ±20°, light on the work, ≥10s
              continuous per take, **no visible waste matter**, **vertical 9:16 on the main
              rear camera at ≥1080p — round-6 R6-F5: a third-party phone's defaults are not
@@ -594,7 +606,8 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 - **PROPOSED FOR KARL AT SIGN-OFF (round-6 R6-F8):** a weekly in-flight re-check of the live
   ROC record while the pack runs, with a named pause criterion — any status change or new
   complaint row → pause the pack (the ad sends viewers to a live page; the filmed ACTIVE row
-  must never outlive the record's truth). Accept or decline by name: Karl ______ ☐
+  must never outlive the record's truth). **ACCEPTED — Karl (Wyatt), in-session,
+  2026-08-26; the pause criterion stands** ☑
 - **NAMED-ACCEPTANCE RESIDUALS (sign-off sheet — every read above the board's own 15–17 cps
   comfort ceiling is routed to Karl, none concealed by a checkmark; R7-F5, completeness
   restored round-8 R8-F1). Full sweep, every burned string — all ten — board counting method
@@ -605,14 +618,17 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   (a) S2 caption ≈ **17.3 cps** over 4.0s (69 ch / 4.0s = 17.25 — F10-3 rounding fix; still just ABOVE the ceiling) — no trim exists that keeps
   "licensed" + the venue. Context for an informed signature (round-8 R8-F5): the caption's
   final 1.5s (5.5–7.0) is simultaneously contested by the strap's entrance at 5.5, the S3
-  scene cut at 6.0, and the brightest→darkest frame transition. Karl ______ ☐ ·
+  scene cut at 6.0, and the brightest→darkest frame transition. **ACCEPTED — Karl (Wyatt),
+  in-session, 2026-08-26** ☑ ·
   (b) A1 card 1 ≈ **17.3 cps** over 1.5s — just above; structurally unfixable (the line is
   Owner-accepted verbatim, the hook window is 2.5s, card 2 sits at its exact 1.0s floor —
-  the minimums sum past the window). Karl ______ ☐ ·
+  the minimums sum past the window). **ACCEPTED — Karl (Wyatt), in-session, 2026-08-26,
+  with the 1.5s occlusion context read** ☑ ·
   (c) A1 card 2 "Who do you let in?" ≈ **18.0 cps** over its 1.0s window (round-8 R8-F1 —
   previously behind a ✓ with no routing, the exact class this sheet exists to abolish;
   structurally unfixable for the same window arithmetic as (b); mitigations: a 5-short-word
-  glance question, and it exits AT the cut so eye-track continues into S2). Karl ______ ☐
+  glance question, and it exits AT the cut so eye-track continues into S2). **ACCEPTED —
+  Karl (Wyatt), in-session, 2026-08-26, with the 1.5s occlusion context read** ☑
   **Context for informed signatures on (b) and (c) (round-9 F9-4):** the hook's foreground
   occlusion event — the hand entering and killing the tap — fires at exactly **1.5s**, the
   same frame where card 1 must complete its read and card 2's 1.0s window opens; the eye is
@@ -624,7 +640,9 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   after the fact; the checklist protects the AD, nothing protects the CALENDAR (a failed
   window re-parks the whole schedule under capture-first). Option: a briefed Service Pow
   operator (or Karl) present at the job running the phone against the shot card.
-  Adopt / accept as-is: Karl ______ ☐
+  **ADOPTED — Karl (Wyatt), in-session, 2026-08-26:** a briefed Service Pow operator (or
+  Karl) attends the job and runs the phone against the shot card ☑ (per the round-10 risk
+  table, S4 drops HIGH → MEDIUM)
 - **NAME-FORM DECISION (round-8 R8-F3):** the board now burns the LICENSED name form
   "911 Drain LLC" (strap + endcard ROC line) as the conservative default — secondary sources
   on A.R.S. § 32-1124(B)/A.A.C. R4-9-109 say ads carry the licensee's name + ROC number and
@@ -641,8 +659,8 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   promoted from the historical R2-F17 row to a live line):** no "sewer" or "commercial" in
   captions, file names, ad-account text fields, or platform metadata — checked by whoever
   fills the ad-account fields, at publish time ☐
-- Karl has seen the storyboard: **PENDING — rounds 9 AND 10 both returned CONDITIONAL PASS
-  (zero S3/S4; round 10 verified every round-9 repair landed). The standing grant is
-  exhausted; Revision 9 applies round 10's three small fixes (formally unverified by a gate
-  round — Karl may authorize one verification round or accept them with the sign-off). THE
-  SIGN-OFF PACKAGE IS NOW WITH KARL** ☐
+- Karl has seen the storyboard: **PENDING — the sign-off sheet's decision lines are now
+  signed (residuals a–c accepted · S4 operator adopted · weekly re-check accepted, all
+  in-session 2026-08-26) and round 11, the Owner-authorized verification round, gates this
+  Revision 10. What remains for full sign-off: Karl reads the storyboard itself and says so,
+  plus the at-their-moment lines (name-form primary check; geography seam at capture)** ☐
