@@ -1,24 +1,34 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 7"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 8"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-7, all-practical]
+tags: [campaign, storyboard, shotlist, revision-8, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 7 (ALL-PRACTICAL)
+# Shotlist — "Look Us Up" pack — REVISION 8 (ALL-PRACTICAL)
 
-**Current state (Revision 7, 2026-08-26 — this intro narrates NOW):**
+**Current state (Revision 8, 2026-08-26 — this intro narrates NOW):**
 an all-practical, zero-generation 8-shot board; every burned and VO line inside the three
 registered claims or a question; the F4 record check **FULLY CLOSED** ("911 Drain LLC" exact
 match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
 
-## Revision 7 changelog (round-8 finding → change; rounds 9–10 run under the Owner's standing grant)
+## Revision 8 changelog (round-9 finding → change; round 9 = **CONDITIONAL PASS**, the first non-block — round 10 verifies these repairs)
+
+| Finding | Change |
+|---|---|
+| **F9-1 (S1)** | Rhythm-ratio row synced to 150/67 ≈ 2.2 (63 was the stale pre-R8-F9 value) |
+| **F9-2 (S2)** | The endcard phone string (≈4.0 cps) added to the published sweep — "every burned string" now enumerates all ten and is literally true |
+| **F9-3 (S1)** | "Punched-in" → locked-insert wording synced everywhere live (Feeling Spec B2, placement-table note, Bible §6 + §10 cells) — the punch-in/composite was the superseded Revision-2 method |
+| **F9-4 (S2)** | Residuals (b)/(c) gain their informed-signature context: the tap-shutoff occlusion event fires at exactly 1.5s, the frame where the two tightest reads hand over |
+| **F9-5 (S1)** | The S2 tap audio variant-scoped (C: six taps; A/B: the completing taps only) in both sound tables — a mixer obeying the shared cell would have desynced A/B's proof beat |
+
+## Revision 7 changelog (round-8 finding → change; fixes verified by round 9 — the round-8 register held)
 
 | Finding | Change |
 |---|---|
@@ -124,7 +134,7 @@ you trust.** Lead variant: **A**.
 | Persistent info strap "911 Drain LLC · ROC 366870 · 480-992-3541" | baseline **65%** | clears TikTok caption zone / Meta CTA chrome; 40%-black backing chip; name in licensed form (round-8 R8-F3) |
 | Hook cards | centered **42%** | exit at the S2 cut (F6) |
 | S2 locked-insert result row (the proof) | centered **40%** | in-band; above the caption |
-| S2 caption | **58%**, onset **3.0s, exits 7.0s** (round-7 R7-F1: this cell had kept the superseded 3.2s value against three harmonized locations — the spec now reads identically everywhere) | delayed past the punch-in (F6); tail rides 1.0s into S3 (R6-F2) |
+| S2 caption | **58%**, onset **3.0s, exits 7.0s** (round-7 R7-F1: this cell had kept the superseded 3.2s value against three harmonized locations — the spec now reads identically everywhere) | delayed past the cut to the locked insert (F6; wording synced round-9 F9-3); tail rides 1.0s into S3 (R6-F2) |
 | S4 line | **42%** | |
 | S5 line | **42%** | |
 | S6 number / ROC line / logo lockup | **44% / 55% / 62%** | all inside 15–70%; logo-only endcard (Owner ruling) |
@@ -532,7 +542,7 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 | Hook A | jolt → guided | water rising in real time; the hand killing the tap as the card lands |
 | Hook B | dread | the rim cascade — the fixture failing on screen, source visible |
 | Hook C | curiosity | digits going into an official form; the pre-last-digit hesitation |
-| B2 (shot S2) | assurance | the punched-in ACTIVE result row |
+| B2 (shot S2) | assurance | the locked-insert ACTIVE result row (round-9 F9-3: "punched-in" was the superseded Revision-2 method) |
 | B3 (shot S3) | safety | the porch-light figure holding his distance; the unhurried wait |
 | B4 (shot S4) | competence-calm | the cable's steady feed; the water ring dropping |
 | B5 (shot S5) | control regained (relief) | water freely draining; the unhurried pour into the plant; the shoulder drop |
@@ -543,7 +553,7 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 | Time | Diegetic | Music | VO | Emotional purpose |
 |---|---|---|---|---|
 | 0–2.5 | variant (gurgle / cascade patter / key taps) | none | none | wrongness (A/B) or focus (C) |
-| 2.5–6.0 | taps → confirm tap, room tone | **low ambient bed enters (F16)** | "Before you let anyone in — check them." | control arriving |
+| 2.5–6.0 | variant-scoped (round-9 F9-5): **C** six key taps → confirm tap; **A/B** the final completing tap(s) → confirm tap (S2 opens with the number completing — a mixer laying six taps against A/B's picture would desync the proof beat); room tone | **low ambient bed enters (F16)** | "Before you let anyone in — check them." | control arriving |
 | 6.0–9.0 | latch, evening street tone | bed sustains low (round-6 R6-F9: the F16 bed runs S2→S6 unbroken — these cells previously said "none", which a mix would obey, silently reopening F16) | — **(F11: no VO — the wait is the shot)** | safety |
 | 9.0–11.5 | drum ratchet, water giving | bed sustains low | — | competence |
 | 11.5–14.0 | tap, the pour, room tone resolving | bed sustains low | "911 Drain." (11.5–13.3) → CTA line J-cuts in at **13.4** (round-5 F-13: buys the CTA read 0.1s of slack — 150 WPM) | relief |
@@ -573,9 +583,11 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   must never outlive the record's truth). Accept or decline by name: Karl ______ ☐
 - **NAMED-ACCEPTANCE RESIDUALS (sign-off sheet — every read above the board's own 15–17 cps
   comfort ceiling is routed to Karl, none concealed by a checkmark; R7-F5, completeness
-  restored round-8 R8-F1). Full sweep, every burned string, board counting method (spaces +
-  punctuation): B1 11.9 · C1 8.3 · S4 8.4 · S5 8.4 · strap ≈4.9 · endcard ROC line ≈13 —
-  under ceiling; the THREE above-ceiling reads are (a)–(c) below:**
+  restored round-8 R8-F1). Full sweep, every burned string — all ten — board counting method
+  (spaces + punctuation): B1 11.9 · C1 8.3 · S4 8.4 · S5 8.4 · strap ≈4.9 · endcard ROC line
+  ≈13 · endcard phone "480-992-3541" ≈4.0 (added round-9 F9-2 — the tenth string; the sweep's
+  completeness sentence is now literally true) — under ceiling; the THREE above-ceiling reads
+  are (a)–(c) below:**
   (a) S2 caption ≈ **17.5 cps** over 4.0s — just ABOVE the ceiling; no trim exists that keeps
   "licensed" + the venue. Context for an informed signature (round-8 R8-F5): the caption's
   final 1.5s (5.5–7.0) is simultaneously contested by the strap's entrance at 5.5, the S3
@@ -587,6 +599,12 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   previously behind a ✓ with no routing, the exact class this sheet exists to abolish;
   structurally unfixable for the same window arithmetic as (b); mitigations: a 5-short-word
   glance question, and it exits AT the cut so eye-track continues into S2). Karl ______ ☐
+  **Context for informed signatures on (b) and (c) (round-9 F9-4):** the hook's foreground
+  occlusion event — the hand entering and killing the tap — fires at exactly **1.5s**, the
+  same frame where card 1 must complete its read and card 2's 1.0s window opens; the eye is
+  designed to be on the hand at the precise instant the board's two tightest reads hand
+  over. The card-1 text itself is Owner-accepted and untouched — this sentence exists so the
+  timing is signed with eyes open.
 - **S4 CAPTURE HARDENING — adopt or accept the risk as-is, by name (round-8 R8-F4):** the
   pack's only unfakeable beat rides on an unaccompanied third-party phone capture judged
   after the fact; the checklist protects the AD, nothing protects the CALENDAR (a failed
@@ -609,6 +627,6 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   promoted from the historical R2-F17 row to a live line):** no "sewer" or "commercial" in
   captions, file names, ad-account text fields, or platform metadata — checked by whoever
   fills the ad-account fields, at publish time ☐
-- Karl has seen the storyboard: **PENDING — rounds 8–10 run under the Owner's standing grant
-  (2026-08-26); Revision 7 applies the round-8 register; this line narrates NOW per R8-F6 and
-  is updated each revision** ☐
+- Karl has seen the storyboard: **PENDING — round 9 returned CONDITIONAL PASS (the first
+  non-block); Revision 8 applies its five repairs; round 10 (the standing grant's last round)
+  verifies them; then the sign-off package goes to Karl** ☐

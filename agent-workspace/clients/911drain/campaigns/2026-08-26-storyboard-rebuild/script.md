@@ -1,15 +1,19 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Script — REVISION 7"
+title: "911 Drain — Storyboard Rebuild — Script — REVISION 8"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, script, revision-7]
+tags: [campaign, script, revision-8]
 ---
 
-# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 7
+# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 8
+
+**Revision 8 changes (round-9 findings; changelog in `shotlist.md`):** rhythm ratio synced to
+150/67 ≈ 2.2 (F9-1) · the S2 tap audio variant-scoped so A/B's mix can't desync the proof
+beat (F9-5).
 
 **Revision 7 changes (round-8 findings; changelog in `shotlist.md`):** the strap and endcard
 carry the licensed name form "911 Drain LLC" (R8-F3) · A1 card 2's above-ceiling read routed
@@ -47,7 +51,7 @@ bonus layer. **Claim-free** — no price, no speed promise, no guarantee, no "se
 | Time | Shot | Burned text (muted carrier) | VO (sound-on bonus) | Diegetic audio |
 |---|---|---|---|---|
 | 0.0–2.5 | Hook (A/B/C) | per variant, below | — | per variant |
-| 2.5–6.0 | S2 verify | "Every licensed AZ contractor is publicly checkable — state registrar." (onset 3.0s, **exits 7.0s** — R6-F2 tail ride) + info strap enters at **5.5s** (R6-F2 retime), runs through S5: "911 Drain LLC · ROC 366870 · 480-992-3541" (65%, black backing chip; licensed name form — R8-F3) | "Before you let anyone in — check them." | six key taps, one confirm tap, room tone |
+| 2.5–6.0 | S2 verify | "Every licensed AZ contractor is publicly checkable — state registrar." (onset 3.0s, **exits 7.0s** — R6-F2 tail ride) + info strap enters at **5.5s** (R6-F2 retime), runs through S5: "911 Drain LLC · ROC 366870 · 480-992-3541" (65%, black backing chip; licensed name form — R8-F3) | "Before you let anyone in — check them." | variant-scoped (round-9 F9-5): **C** — six key taps + one confirm tap (typing began in C1); **A/B** — the final completing tap(s) + one confirm tap only (S2 opens with the number completing); room tone |
 | 6.0–9.0 | S3 arrival | no NEW text — the caption completes its exit at 7.0s; the strap continues | **none (F11)** | door latch, evening street tone; no dialogue |
 | 9.0–11.5 | S4 work | "Licensed. Look us up." (round-4 F3) | — (the ratchet is the line) | auger drum ratchet, water starting to give |
 | 11.5–14.0 | S5 payoff | "Licensed. Verifiable." | "911 Drain." (11.5–13.3); CTA line J-cuts in at 13.4 (round-5 F-13) | tap opens, the pour, room tone resolving |
@@ -73,7 +77,7 @@ bonus layer. **Claim-free** — no price, no speed promise, no guarantee, no "se
 | "Before you let anyone in — check them." | 7 | 3.5s | 120 | 175 | ✓ (slow anchor ✓ ≤155) |
 | "911 Drain." | 2 | 1.8s (11.5–13.3; 13.3–13.4 is the pause before the J-cut — R8-F9 label sync) | 67 | 175 | ✓ |
 | "…the number's on your screen — look us up." (CTA) | 8 | 3.2s (J-cut 13.4–16.6 — F17: the last word clears the final frame; round-5 F-13: start pulled to 13.4 so the em-dash pause has real slack) | **150** | **165** | ✓ |
-| Rhythm ratio (fastest 150 / slowest 63) | — | — | 2.4 | ≥1.15 | ✓ |
+| Rhythm ratio (fastest 150 / slowest 67 — round-9 F9-1: 63 was the stale pre-R8-F9 value) | — | — | ≈2.2 | ≥1.15 | ✓ |
 | Breaths | — | ≥0.40s held (the S2→S5 VO gap is 5.5s) | — | ≥0.40s | ✓ |
 
 **The digits are deliberately not voiced** — ten digits cannot stay under the CTA ceiling in

@@ -34,6 +34,32 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Round 9: CONDITIONAL PASS — the first non-block in nine rounds
+
+**Did:** Round 9 ran on Revision 7 under the standing grant and returned **CONDITIONAL
+PASS — no S3/S4**. The gate recomputed every routed number independently (all correct),
+re-audited compliance line-by-line (clean), and reported it "could not construct a postable
+screenshot" under the plumber lens. Five pre-signature repairs (stale rhythm-ratio value; the
+endcard phone string missing from the "every burned string" sweep; superseded "punch-in"
+wording in the Feeling Spec + two Bible cells; the 1.5s occlusion-event context missing from
+residuals (b)/(c); the shared tap-audio cell true only for variant C) — **Revision 8 applies
+all five**. Twenty conditions enumerated; 6–13 are Karl's named sign-off items (residuals
+a–c, S4 operator option with an ADOPT recommendation, name form, weekly record re-check,
+geography seam, the sign-off itself). **Round 10 — the grant's last round — verifies the
+repairs.**
+
+**Decided:** Continue under the grant: repairs are changes, changes regress, round 10 exists
+for exactly this. On a clean round 10, the storyboard sign-off package goes to Karl.
+
+**Learned:** (production log) A completeness sentence is all-or-nothing — enumerate against a
+counted list. Shared-body cells are implicitly claimed true per-variant. Derived values
+desync one edit later than their inputs.
+
+**Open:** round 10; then Karl's sign-off sheet. Will's claims sheet and the S4 media ask
+unchanged behind it.
+
+**Next:** round 10 verdict → the sign-off package.
+
 ## 2026-08-26 — Standing grant begins; round 8 audits the acceptance sheet itself
 
 **Did:** Karl granted a STANDING authorization — fix-and-re-gate without per-round asks,

@@ -176,6 +176,31 @@ legal-mirror sites egress-blocked; recorded NOT VERIFIED, never asserted).
   decision** — "911 Drain LLC" costs 4 characters; the reverse order (ship short, verify
   later) carries all the risk for none of the savings.
 
+## Round 9 (0 blocking) — CONDITIONAL PASS: the first non-block in nine rounds
+
+All CLAUDE-CAUGHT. The gate hunted for a blocker in earnest — recomputed every routed number
+independently, traced the strap→endcard VO truth condition frame-by-frame, re-audited every
+copy line, and tried to construct a plumber screenshot — and found none. Five pre-signature
+repairs: a stale derived value (the rhythm ratio quoted the pre-sync 63), the published
+"every burned string" sweep enumerating nine of ten (the endcard phone string, under-ceiling
+but missing — a completeness sentence false in ANY particular cannot certify what hides
+behind it, even when the answer is "nothing"), superseded "punch-in" method wording surviving
+in the Feeling Spec and two Bible cells, an informed-signature context gap (the tap-shutoff
+occlusion fires at exactly 1.5s — the frame where the board's two tightest reads hand over —
+and residuals (b)/(c) didn't say so), and the shared "six key taps" audio cell being true
+only for variant C. Twenty conditions enumerated, most being the sign-off sheet's own routed
+items. The verdict recommends ADOPTING the S4 operator-present option (HIGH→MEDIUM).
+
+**Reusable lessons (EXPERIMENTAL):**
+- **A completeness sentence is all-or-nothing:** listing 9 of 10 under a "full sweep" caption
+  is the same defect as hiding an above-ceiling read, because the sentence is what certifies
+  the sweep — enumerate against a counted list, then write the count into the sentence.
+- **Shared-body cells must be checked per-variant:** any table cell in a multi-variant pack
+  is implicitly claimed true for every variant; audio and hook-adjacent cells are where the
+  claim silently breaks.
+- **Derived values (ratios, totals) desync one edit later than their inputs** — when a base
+  number changes, grep for every figure computed FROM it, not just its repetitions.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic
