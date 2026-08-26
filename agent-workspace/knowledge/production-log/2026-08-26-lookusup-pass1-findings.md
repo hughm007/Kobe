@@ -375,6 +375,23 @@ the muted-story note), budgets published (pour lands by ~13.8).
 - **When a beat is added inside a fixed window, publish the window's internal budgets** —
   "unchanged in effect" is a claim about frames, and frames are counted, not asserted.
 
+## Round 15 (0 blocking) — the final verification: "the package you are about to sign is true"
+
+All CLAUDE-CAUGHT. The Owner-chosen closing round recomputed both boards end-to-end and
+certified the package honestly signable: every published number true, the round-14 register
+landed, the D-1 signature a true record with the adverse context stated and the fallback
+preserved. Its residue was four syncs — the sharpest being F15-2, a THIRD instance of the
+secondary-location class (the challenger's Feeling Spec and beat map still described the
+water-giving observable that round 14 had ruled audio-only on the kitchen frame), plus a
+stale version pointer, a word-count literalism, and the last indefinite blank re-labeled as
+a standing option so the signed sheet carries none. Fifteen rounds, two spines, one sheet
+with every decision either signed by name or scheduled at its named moment.
+
+**Reusable lesson (EXPERIMENTAL — third instance, promote):** when a resolution changes what
+a beat SHOWS, sync every cell that names the beat's observable — Feeling Spec, beat map,
+timeline, checklist — in the same edit. The class has now appeared in rounds 10, 14, and 15;
+per the promotion rule it graduates to the playbook at the next playbook touch.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic

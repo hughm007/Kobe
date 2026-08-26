@@ -9,7 +9,7 @@ updated: 2026-08-26
 tags: [campaign, storyboard, challenger, positioning-test, all-practical]
 ---
 
-# CHALLENGER — "Look Us Up" pack, problem/solution-first cut — VERSION 3
+# CHALLENGER — "Look Us Up" pack, problem/solution-first cut — VERSION 4
 
 **What this is (Owner directive, storyboard read #2, 2026-08-26):** a **performance
 challenger built from the control board's captures — zero new SETUPS** (one added direction
@@ -23,6 +23,12 @@ challenger is formally a SECOND SPINE, authorized by the Owner as a deliberate p
 A/B: **trust-first (control) vs problem/solution-first (challenger)**. Message, promise,
 emotion, CTA logic, claims discipline, and the captures are IDENTICAL; only the ORDER of
 what the viewer learns changes.
+
+## Version 4 changelog (round-15 finding → change; round 15 — the Owner-chosen final verification — = **CONDITIONAL PASS on both artifacts, zero S3/S4: "the package you are about to sign is true"**)
+
+| Finding | Change |
+|---|---|
+| **F15-2 (S2)** | The Feeling Spec WORK cell and the beat map WORK cell — two secondary locations — synced to the R14-C3 muted-story resolution: the muted observable is cable feed-depth / rhythm change; the water "giving" stays diegetic-audio only |
 
 ## Version 3 changelog (round-14 finding → change; round 14 = **CONDITIONAL PASS on both artifacts — zero S3/S4; all fifteen round-13 repairs verified landed by recomputation**)
 
@@ -92,7 +98,7 @@ proof; the market reports whether the arrival earns its 17.6% of the ad.
 | PAIN | my sink/drain is failing (their own life) | water rises / overflows; the hook question lands | this ad is about MY problem, right now | jolt/dread | self-selection — the DR filter | someone must fix this |
 | SOLVING | someone must fix this | real cable, real drain, "This is 911 Drain." + the strap with a callable number | a named, reachable company does exactly this work | dread → competence-relief begins | the Owner's hierarchy: solution before sermon | why THIS company? |
 | PROOF | why THIS company? | the official record row settles on screen; the confirm tap lands; "check your plumber's license" | they're licensed and I can verify that myself | assurance | the differentiator, EARNING the choice mid-story | back to the fix, verified |
-| WORK | back to the fix, verified | the work continues; the job state advances to the water giving | these people actually do the thing I need | competence-calm | the unfakeable middle, extended per the Owner | did it work? |
+| WORK | back to the fix, verified | the work continues; the job state VISIBLY advances — cable feed-depth / feed-to-crank rhythm change (round-15 F15-2 sync: on frame (a) the water "giving" is audio, never the muted observable) | these people actually do the thing I need | competence-calm | the unfakeable middle, extended per the Owner | did it work? |
 | RELIEF | did it work? | the drain visibly swallows water; tap shuts; the settle beat | it's fixed; life is normal again | relief | the payoff, drain-first | what do I do with this? |
 | CALL | what do I do with this? | number large, name + ROC, "Call 911 Drain —" | exactly what to do next | resolve | the direct-response close | (end) |
 
@@ -109,7 +115,7 @@ verified→confidence; RELIEF cannot precede WORK; no two beats swap unnoticed �
 | PAIN | jolt (A) / dread (B) | rising water / rim cascade | per variant hook (as gated) | none |
 | SOLVING | competence arriving | cable feeding, drum in frame | drum ratchet enters at 2.5 | **low bed enters (F16), sustains to S6** |
 | PROOF | assurance | the row settling; the confirm tap | one confirm tap, room tone | bed sustains low |
-| WORK | competence-calm | the water giving | ratchet, water starting to give | bed sustains low |
+| WORK | competence-calm | cable feed-depth advancing / the rhythm change (F15-2 sync — the muted observable; the water giving lives in the diegetic column only) | ratchet, water starting to give | bed sustains low |
 | RELIEF | relief | drain swallowing; tap shut; the settle | insert water + tap + room tone resolving — **NO pour in this cut (CH-7)** | bed sustains low |
 | CALL | resolve | the number large and still | — | bed resolves to one low note, silence + 0.4s tail |
 

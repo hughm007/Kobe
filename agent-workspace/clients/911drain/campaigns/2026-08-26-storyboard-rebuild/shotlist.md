@@ -1,17 +1,17 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 17"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 18"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-17, all-practical]
+tags: [campaign, storyboard, shotlist, revision-18, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 17 (ALL-PRACTICAL) — the CONTROL cut
+# Shotlist — "Look Us Up" pack — REVISION 18 (ALL-PRACTICAL) — the CONTROL cut
 
-**Current state (Revision 17, 2026-08-26 — this intro narrates NOW; the problem/solution-first CHALLENGER cut of these same assets lives in `challenger-board.md` (V2), per the Owner's read #2 — the market decides between the two):**
+**Current state (Revision 18, 2026-08-26 — this intro narrates NOW; the problem/solution-first CHALLENGER cut of these same assets lives in `challenger-board.md` (V4), per the Owner's read #2 — the market decides between the two):**
 an all-practical, zero-generation 8-shot board; every burned and VO line inside its AUDITED
 CLASS (round-12 F12-2 — the taxonomy stated honestly): a registered claim · a question ·
 frame-narration (a statement about the visible frame, with recorded fallbacks) · or
@@ -19,6 +19,14 @@ Owner-accepted safety advice; the F4 record check **FULLY CLOSED** ("911 Drain L
 match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
+
+## Revision 18 changelog (round-15 finding → change; round 15 = **CONDITIONAL PASS ×2, zero S3/S4 — "the package you are about to sign is true"**)
+
+| Finding | Change |
+|---|---|
+| **F15-1 (S1)** | The intro's challenger pointer synced to the live version |
+| **F15-3 (S1)** | `script.md` dwell-table endcard ROC row word count 7 → 8 (numbers count as one word, the table's own method) |
+| **F15-4 (S1)** | The name-form line RE-LABELED as a standing option with the "911 Drain LLC" default in force — the signed sheet carries zero indefinite blanks |
 
 ## Revision 17 changelog (signature-only — no copy or timing change)
 
@@ -765,7 +773,10 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   define the licensee's name as the ACC-filed legal name; **primary rule text NOT VERIFIED
   from this environment** (gov + legal-mirror sites egress-blocked). Keep "LLC", or shorten
   to "911 Drain" only after a primary-source check (a 2-minute read of R4-9-109 / the ROC
-  advertising page on any Mac). Karl ______ ☐
+  advertising page on any Mac). **RE-LABELED round-15 F15-4: this is a STANDING OPTION,
+  not a pending decision — the licensed form "911 Drain LLC" is the default IN FORCE on
+  both cuts; shortening remains available to Karl at any time after a primary-source check.
+  The signed sheet carries no indefinite blanks** ✓
 - **AUDIENCE-LANGUAGE MAPPING (round-13 D-1 — one signature covers BOTH cuts, closing CH-10;
   both live strings quoted per round-14 R14-C8):** the picked captions —
   CONTROL: **"You can check your plumber's license yourself — state registrar."** (64 ch /

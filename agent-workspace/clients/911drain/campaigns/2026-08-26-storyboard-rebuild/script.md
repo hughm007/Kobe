@@ -1,15 +1,19 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Script — REVISION 16"
+title: "911 Drain — Storyboard Rebuild — Script — REVISION 18"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, script, revision-16]
+tags: [campaign, script, revision-18]
 ---
 
-# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 16
+# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 18
+
+**Revision 17–18 changes (D-1 signature + round 15; changelog in `shotlist.md`):** no burned
+or VO line changes — lockstep (Rev 17: the D-1 signature; Rev 18: the ROC-row word count
+7 → 8 per this table's numbers-count-as-one-word method).
 
 **Revision 15–16 changes (rounds 13–14; changelog in `shotlist.md`):** no burned or VO line
 changes — the version moves in lockstep (Rev 15: the S5 settle beat; Rev 16: its in-window
@@ -131,7 +135,7 @@ and the VO directs eyes to it. Flagged for Karl at the storyboard gate.
 | S4 line "This is 911 Drain." | 4 | 2.5s | ≥1s | ✓ — 7.2 cps (Rev 12) |
 | S5 line "Back to normal." | 3 | 2.5s | ≥1s | ✓ — 6.0 cps (Rev 12) |
 | Phone number | 1 string | 3.0s | ≥2s phone number | ✓ |
-| Endcard ROC line "911 Drain LLC · ROC 366870 — look us up." | 7 | 3.0s (set from frame one — R7-F2) | ≥2s license | ✓ — 13.3 cps (round-12 F12-1: the missing eleventh row, added so this table's "every burned string" is literally true) |
+| Endcard ROC line "911 Drain LLC · ROC 366870 — look us up." | 8 (round-15 F15-3: numbers count as one word, this table's own method) | 3.0s (set from frame one — R7-F2) | ≥2s license | ✓ — 13.3 cps (round-12 F12-1: the missing eleventh row, added so this table's "every burned string" is literally true) |
 
 ## Spoken-language rules applied
 

@@ -34,6 +34,32 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Round 15 certifies the package; everything now waits on one word
+
+**Did:** Karl signed D-1 (the plumber wording stands on both cuts, registrar context read —
+Rev 17) and chose a final verification round. **Round 15 delivered: CONDITIONAL PASS on both
+boards, zero S3/S4 — "the package you are about to sign is true."** Every number recomputed
+by machine to its published value; the D-1 signature verified as a true record; compliance
+PASS on every string of both cuts; no HIGH/EXTREME risk anywhere. Its four syncs applied as
+**challenger V4 + control Rev 18 + script Rev 18**: the challenger's Feeling Spec/beat map
+WORK cells synced to the muted-story resolution (F15-2 — third instance of the
+secondary-location class, now promotable), the stale version pointer, the word count, and
+the name-form line re-labeled a standing option (LLC default in force) so **the signed sheet
+carries zero indefinite blanks**.
+
+**Decided:** The paper phase ends here by construction — fifteen rounds, two Owner reads,
+one DR advisory, two shootable spines. The next action in the campaign is human: Karl's
+one-word "signed."
+
+**Learned:** (production log) Observable-cell sync is now a third-instance class — promote
+to the playbook at next touch.
+
+**Open:** Karl's "signed" → capture planning (Will's S4 job, operator-present, kitchen bias
+→ the pre-lock gates → the shoot afternoon → pre-edit-lock checks → call-qualification
+tracking → launch go, each at its named moment). Will's claims sheet remains the v2 unlock.
+
+**Next:** the word.
+
 ## 2026-08-26 — Round 14: both cuts conditional — the two-board package is at Karl's sign-off
 
 **Did:** Round 14 re-gated challenger V2 + the control's Rev-15 delta: **CONDITIONAL PASS on
