@@ -224,6 +224,29 @@ which is the strongest argument the re-gate-after-repair rule has ever produced 
   the expensive-feeling loop is the cheap part of production; every one of these caught
   pre-spend would have been a re-shoot, a compliance exposure, or a dead CTA at delivery.
 
+## Round 11 (0 blocking) — third straight conditional pass; the paper phase ends
+
+All CLAUDE-CAUGHT. The verification round confirmed every focus by redoing the work itself:
+the ten-string sweep re-counted character by character (all published numbers true; exactly
+three above ceiling, all three signed with context), the tap split consistent in every cell,
+the operator adoption folded correctly — and it independently re-derived the risk table,
+concurring that the pack carries no HIGH or EXTREME shot. Its one material finding was a
+scheduling contradiction, not a content one: the geography-seam signature was promised "at
+storyboard sign-off" in one location and "at capture" in two — two moments risks no moment.
+Six S1s were tense/wording drift left behind by the signing itself (cells still saying
+"awaiting accept/decline" after the acceptance). Final campaign trajectory, eleven rounds:
+BLOCK ×8 (S3 count 7→3→5→5→2→1→1→1) → CONDITIONAL ×3 (findings 5→3→7, none above S2, the
+last register entirely syncs). Total: ~50 distinct defects caught pre-spend at $0.
+
+**Reusable lessons (EXPERIMENTAL):**
+- **Signing is itself an edit pass** — every cell that routed a decision must flip tense
+  when the decision lands, or the document disagrees with its own sheet one round later.
+- **A signature needs ONE moment.** Any accountability line stated with two different
+  "when"s effectively has none — sync the moment, not just the owner.
+- **A verification round that re-derives (recounts, recomputes, re-classifies) is worth
+  ten that re-read.** Round 11 re-counted characters and re-built the risk table from
+  scratch; that is why its confirmations mean something.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic

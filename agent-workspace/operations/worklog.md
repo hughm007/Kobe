@@ -34,6 +34,34 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Round 11 verifies everything; the paper phase is DONE — the board waits only on Karl's read
+
+**Did:** Karl answered the whole sign-off package on the gate's recommended options
+(residuals a–c ACCEPTED with context · S4 operator-present ADOPTED — no HIGH-risk shot
+remains · weekly record re-check ACCEPTED with the pause criterion · one verification round
+authorized). Rulings recorded as **Revision 10**; **round 11** ran on it and returned
+**CONDITIONAL PASS — the third straight, zero S3/S4**, re-verifying every signed number by
+recount and independently re-deriving the risk table ("no HIGH or EXTREME shot on the
+board"). Its register: one S2 (the geography-seam signature promised at two different
+moments — synced to ONE: at the capture window, before non-kitchen footage enters the edit)
+and six S1 tense/wording drifts from the signing itself. All seven applied as **Revision
+11**. Eleven rounds total: 8 blocks (7→1 S3s) then 3 conditional passes; ~50 defects caught
+pre-spend at $0, zero credits, nothing published.
+
+**Decided:** The paper loop is closed — no further rounds proposed. The board's remaining
+gates are human moments by design.
+
+**Learned:** (production log) Signing is itself an edit pass. A signature needs one moment.
+A verification round that re-derives beats ten that re-read.
+
+**Open:** THE ONE REMAINING GATE: **Karl reads the storyboard (shotlist.md + script.md) and
+signs** — that schedules the practical shoot afternoon. At their moments after that: S2
+capture-day mock · S3 cold-read test · A1 rig test · geography seam at capture · optional
+name-form primary check (LLC default stands) · pre-edit-lock checks · Will's claims sheet ·
+the S4 media ask (operator-present).
+
+**Next:** Karl's read. Then capture planning.
+
 ## 2026-08-26 — Round 10 closes the loop: two straight conditional passes; sign-off to Karl
 
 **Did:** The grant's final round ran on Revision 8: **CONDITIONAL PASS, zero S3/S4, all five

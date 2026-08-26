@@ -1,24 +1,37 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 10"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 11"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-10, all-practical]
+tags: [campaign, storyboard, shotlist, revision-11, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 10 (ALL-PRACTICAL)
+# Shotlist — "Look Us Up" pack — REVISION 11 (ALL-PRACTICAL)
 
-**Current state (Revision 10, 2026-08-26 — this intro narrates NOW):**
+**Current state (Revision 11, 2026-08-26 — this intro narrates NOW):**
 an all-practical, zero-generation 8-shot board; every burned and VO line inside the three
 registered claims or a question; the F4 record check **FULLY CLOSED** ("911 Drain LLC" exact
 match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
 
-## Revision 10 changelog (Owner sign-off rulings, in-session 2026-08-26; round 11 = the Owner-authorized verification round)
+## Revision 11 changelog (round-11 finding → change; round 11 = **CONDITIONAL PASS, the third straight — zero S3/S4; every signed number independently re-verified true**)
+
+| Finding | Change |
+|---|---|
+| **F11-1 (S2)** | The geography-seam signature moment synced to ONE statement everywhere: **signed at the capture window, before any non-kitchen footage enters the edit** (the S4 card had said "at storyboard sign-off" against two "at capture" locations) |
+| **F11-2/F11-3/F11-4/F11-5 (S1)** | Tense/wording syncs: the three signed residual cells in `script.md` read as signed; the S4 hardening preamble reads post-adoption; "ceiling's edge" → ABOVE the ceiling; the A1 KEEP ruling states it attaches to card 1 |
+| **F11-6 (S1)** | Sweep precision: endcard ROC line 13.3 (was "≈13") |
+| **F11-7 (S1)** | Round-4's finding→change table lives in Bible §14 — pointer added below rather than reconstructing history here |
+
+*(Round-4 note per F11-7: the Revision 4 changelog below covers round-5 findings; the round-4
+verdict's own finding→change record is in Bible §14, and its rulings are cited inline
+throughout this board.)*
+
+## Revision 10 changelog (Owner sign-off rulings, in-session 2026-08-26; round 11 — the Owner-authorized verification round — returned CONDITIONAL PASS and re-verified every signed number)
 
 | Ruling | Change |
 |---|---|
@@ -183,9 +196,10 @@ Text:        "Backed up? Stop the water." (**0.0–1.5**, 42% — round-6 R6-F3:
              readable card in its highest-attention window) → "Who do you let in?"
              (**1.5–2.5** — exits AT the S2 cut; 1.0s = its exact dwell floor; ≈18.0 cps,
              above the ceiling — **routed to the sign-off sheet as residual (c), round-8
-             R8-F1**, no silent self-exemption). **RESOLVED (Owner ruling, 2026-08-26): KEEP** —
-             named acceptance that "Stop the water." is safety advice, not a substantiatable
-             marketing-claim class. ACCEPTED BY: Karl (Wyatt), in-session
+             R8-F1**, no silent self-exemption). **RESOLVED (Owner ruling, 2026-08-26 —
+             attaching to CARD 1's text, not to residual (c); clarity per round-11 F11-5):
+             KEEP** — named acceptance that "Stop the water." is safety advice, not a
+             substantiatable marketing-claim class. ACCEPTED BY: Karl (Wyatt), in-session
 Source:      PRACTICAL SHOOT — rag wedged in the trap side (partial block), tap running, one
              real hand. NO generation path. If impossible: re-board + fresh Pass 1. **RIG
              TEST before shoot day (round-5; extended round-8 R8-F7):** flow restrictor vs.
@@ -302,8 +316,8 @@ Text:        caption "Every licensed AZ contractor is publicly checkable — sta
              the tail ride into S3 is continuity of an existing element, not new scene text,
              and the strap already continues there). Round-5 F-4 stands: the venue is
              claim-2's own tail, closing the "whose search box?" mock vector. NOTHING else
-             may ever be added to this beat (F-6); residual ≈17.3 cps (69/4.0 = 17.25 — F10-3) sits at the ceiling's
-             edge — flagged on the sign-off sheet) +
+             may ever be added to this beat (F-6); residual ≈17.3 cps (69/4.0 = 17.25 — F10-3) sits
+             ABOVE the 15–17 ceiling (F11-4 wording sync — accepted on the sign-off sheet) +
              the persistent INFO STRAP begins at **5.5s** (Owner-delegated design call
              2026-08-26, onset retimed round-6 R6-F2: entering at 2.5s pulled the eye at the
              exact proof moment — the beat's reads are now insert-then-caption only, and the
@@ -481,9 +495,11 @@ Source:      REAL CLIENT FOOTAGE REQUIRED — the "during" state is never genera
              shoot afternoon is not booked until this window has product.** CONTINGENCY RE-GATE: if no usable footage
              lands, an aftermath-only redesign is NOT pre-approved — the changed board returns
              to a fresh Pass 1. GEOGRAPHY SEAM (moved here from an eleventh field — round-6
-             R6-F11): if the filmed job's fixture differs from variant A's kitchen sink, the
-             seam is **pre-signed at storyboard sign-off, in advance of capture** —
-             ACCEPTED BY: Karl ______ (a knowing acceptance requires a named human)
+             R6-F11; **moment settled round-11 F11-1: signed AT THE CAPTURE WINDOW, before
+             any non-kitchen footage is accepted into the edit** — the two live locations
+             now state one moment): if the filmed job's fixture differs from variant A's
+             kitchen sink — ACCEPTED BY: Karl ______ (a knowing acceptance requires a named
+             human, before the footage is used)
 Real-ref:    CITED — https://www.thisoldhouse.com/bathrooms/how-to-snake-a-clogged-drain +
              https://www.youtube.com/watch?v=ZDaJchBnFn8 + https://www.youtube.com/watch?v=_nxvMioXWW4
              — two-handed feed+crank, drum near the mouth, feed-until-resistance rhythm
@@ -612,7 +628,7 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   comfort ceiling is routed to Karl, none concealed by a checkmark; R7-F5, completeness
   restored round-8 R8-F1). Full sweep, every burned string — all ten — board counting method
   (spaces + punctuation): B1 11.9 · C1 8.3 · S4 8.4 · S5 8.4 · strap ≈4.8 (F10-3) · endcard ROC line
-  ≈13 · endcard phone "480-992-3541" ≈4.0 (added round-9 F9-2 — the tenth string; the sweep's
+  13.3 (F11-6 precision sync) · endcard phone "480-992-3541" ≈4.0 (added round-9 F9-2 — the tenth string; the sweep's
   completeness sentence is now literally true) — under ceiling; the THREE above-ceiling reads
   are (a)–(c) below:**
   (a) S2 caption ≈ **17.3 cps** over 4.0s (69 ch / 4.0s = 17.25 — F10-3 rounding fix; still just ABOVE the ceiling) — no trim exists that keeps
@@ -635,11 +651,11 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   designed to be on the hand at the precise instant the board's two tightest reads hand
   over. The card-1 text itself is Owner-accepted and untouched — this sentence exists so the
   timing is signed with eyes open.
-- **S4 CAPTURE HARDENING — adopt or accept the risk as-is, by name (round-8 R8-F4):** the
-  pack's only unfakeable beat rides on an unaccompanied third-party phone capture judged
-  after the fact; the checklist protects the AD, nothing protects the CALENDAR (a failed
-  window re-parks the whole schedule under capture-first). Option: a briefed Service Pow
-  operator (or Karl) present at the job running the phone against the shot card.
+- **S4 CAPTURE HARDENING (round-8 R8-F4; tense synced round-11 F11-3):** the pack's only
+  unfakeable beat RODE on an unaccompanied third-party phone capture judged after the fact —
+  the checklist protected the AD, nothing protected the CALENDAR — until the adoption below
+  closed that failure mode: a briefed Service Pow operator (or Karl) present at the job
+  running the phone against the shot card.
   **ADOPTED — Karl (Wyatt), in-session, 2026-08-26:** a briefed Service Pow operator (or
   Karl) attends the job and runs the phone against the shot card ☑ (per the round-10 risk
   table, S4 drops HIGH → MEDIUM)
