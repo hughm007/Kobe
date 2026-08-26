@@ -27,30 +27,32 @@ tags: [campaign, bible, rebuild, baseline]
 | **Objective** | Calls to 480-992-3541 from East Valley homeowners; secondary: number saved |
 | **KPI + target** | Calls per 1,000 impressions — **no numeric target set before launch data exists (nothing has ever been published for this client)** |
 | **Budget (credits / $)** | **0 credits spent — paper stage.** Production estimate in §10 |
-| **Approval status** | DRAFT |
+| **Approval status** | **CONCEPT APPROVED** (2026-08-26) — storyboard gate NOT yet taken |
 
-## STATUS HEADER — parked at owner gates (Owner-Unavailable Rule)
+## STATUS HEADER
 
-Production never stalls silently. This campaign is **parked awaiting three decisions from Karl**,
-each prepared with a recommendation below. Nothing advances past DRAFT and nothing generates
-until they are made. This is a **paper baseline run**: S0–S2 executed in full, zero credits,
-hard stop at Gate 1.5.
+**Taken (Owner, 2026-08-26, in-session):** strategy APPROVED · concept + pack APPROVED (lead =
+variant A) · revision pass AUTHORIZED · QC-harness rebuild AUTHORIZED. Status advanced to
+**CONCEPT APPROVED**. Zero credits spent; nothing generates.
 
-| # | Awaiting | Recommendation ready in |
-|---|---|---|
-| 1 | Strategy approval (angle + claim-free constraint) | §2 |
-| 2 | Concept + pack approval (survivor hooks) | §3 |
-| 3 | Storyboard approval + budget → would unlock Gate 1.5 | §6, `shotlist.md`, §10 |
+**Still parked, in order:**
 
-**Gate state (2026-08-26, dual gate run at paper stage):** Kobe = **CANNOT ASSESS — DELIVERY
-BLOCKED** (§13) · Skeptic Pass 1 = **BLOCK, 7 × S3** (§14). The storyboard as drafted does
-**not** proceed to generation even if decision 3 were taken — the S3s close first, then a
-**fresh Pass 1** re-runs on the revised board. Decision 3 therefore reads: approve the
-*direction*, and authorize the revision pass that works §14's queue.
+| # | Awaiting | Who | Prepared where |
+|---|---|---|---|
+| 1 | Storyboard sign-off + budget → unlocks Gate 1.5 — only after the revised board clears a **fresh Skeptic Pass 1** | Karl | §6, `shotlist.md`, §10 |
+| 2 | **Live ROC record check** — egress-blocked from the build environment; a 1-minute step in the S2 capture script (legal name vs "911 Drain LLC", ACTIVE status, complaint rows, scope-text crop) | Karl, on the Mac | `shotlist.md` S2 capture script |
+| 3 | AIGC labeling posture signature (recommendation drafted) | Karl | Decision log |
+| 4 | Claims sheet signature (9 items + fee question) | Will | client brief |
+| 5 | S4 media ask — real "during" footage, one job, phone rig | Will's crew | `shotlist.md` S4 |
 
-Also surfaced by name (LB51 — never accepted silently): **one `NO REFERENCE FOUND — HIGH RISK`
-entry** in `shotlist.md` shot S5, and the **real-footage requirement** on shot S4 (the "during"
-state is never generated — this is the media ask to Will's crew).
+**Gate history:** first Pass 1 (2026-08-26) = **BLOCK, 7 × S3**; Kobe = **CANNOT ASSESS** (§13).
+The revision pass below works that queue; the revised board re-gates through a fresh Pass 1
+before it can be signed.
+
+Surfaced by name (LB51 — never accepted silently): shot S5's **generation fallback** carries a
+`NO REFERENCE FOUND — HIGH RISK` entry (its primary path is now a practical shoot, which needs
+no external reference); shot S4's **real-footage requirement** stands (the "during" state is
+never generated — the media ask to Will's crew).
 
 ---
 
@@ -202,9 +204,9 @@ and the one post-attack line repair: `hook-tournament.md`.
 
 | Variant | Hook mechanism | First frame / action / text / audio | Why this target stops | Expected failure mode |
 |---|---|---|---|---|
-| **A (lead)** — "Stop using water" | Utility-first | Sink water visibly rising, tap running; burned: "Drain backed up? Step 1: stop running the water." → "Step 2: know who you're letting in." · gurgle | Self-selects the mid-emergency viewer in half a second; useful before it sells | Viewer takes the free advice and scrolls; tap must visibly run or a pro calls the staging fake |
-| **B** — "Water doesn't wait" | Shock + macro dread | Macro: grey water advancing across a tile grout line toward a hallway rug; burned: "Water damage doesn't wait for you to read reviews." · faint trickle | Dread + second-person threat lands under 1s, fully muted | Grade drifts brown → sewage misread (banned-scope adjacency); gross-out flinch |
-| **C** — "Six digits" | Curiosity gap | ECU real phone: thumb types 3-6-6-8-7-0 into the AZ ROC search; burned: "Six digits tell you exactly who you're letting in." · six key taps | Number-entry on an official site is an unusual open; the digits pose a question | PSA read; ROC UI type illegible unless aggressively ECU. **Trust variant — never the lead** |
+| **A (lead)** — "Stop using water" | Utility-first | Sink water visibly rising, tap running; burned: "Backed up? Stop the water." → "Now — who do you let in?" · gurgle *(cards compressed in Revision 1 — Skeptic S2 #11)* | Self-selects the mid-emergency viewer in half a second; useful before it sells | Viewer takes the free advice and scrolls; tap must visibly run or a pro calls the staging fake |
+| **B** — "Still comparing plumbers?" | Shock + macro dread (re-scenarioed, Pass-1 round 2 F3) | Macro: the sink's far basin OVERFLOWS AT THE RIM, running tap visible — source on screen, fixture-scoped; burned: "Still comparing plumbers?" (a question, not a claim) · cascade patter | The fixture failing in real time + self-recognition | Rim cascade must read as fixture overflow, never autonomous floor water (scope optics) |
+| **C** — "Six digits" | Curiosity gap | ECU real phone: thumb types 3-6-6-8-7-0 into the AZ ROC search; burned: "These six digits tell you who you're letting in." *(F4b — this number, not all numbers)* · six key taps | Number-entry on an official site is an unusual open; the digits pose a question | PSA read; ROC UI type illegible unless aggressively ECU; filmed-screen moiré (shutter-sync note). **Trust variant — never the lead** |
 
 **Rejected concepts and beaten hooks, and why:** kept in `hook-tournament.md` — the reasoning is
 the asset, and the beaten hooks are where the next pack starts.
@@ -232,9 +234,9 @@ same action made theirs. No hard turn — the CTA is the demonstrated behavior.
 | # | What viewer knows before | What happens | What viewer knows after | Emotional change | Why this beat exists | Leads into |
 |---|---|---|---|---|---|---|
 | B2 | A drain crisis forces a trust decision, fast (from hook) | Six digits typed into the official AZ ROC search; the license row returns | There is an official, public way to check a contractor — and this one passes | unease → assurance | The proof IS the concept; claim-free | Verified on screen → what verified looks like in person |
-| B3 | This company is checkable on paper | Door opens; tech waits back from the threshold, ID visible, van at curb | Verified looks like this at your door: identifiable, patient, marked | assurance → safety | Converts an abstract record into a person you'd admit | The person you admitted → the work you called about |
+| B3 | This company is checkable on paper | The homeowner's own door opens at dusk; one tech waits back on the porch under the light, badge a small shape, still | Verified looks like this at your door: identifiable, patient, unhurried — at any hour | assurance → safety | Converts an abstract record into a person you'd admit | The person you admitted → the work you called about |
 | B4 | The right person is inside | Gloved hands feed the auger; the water level at the drain visibly drops | The actual competence, happening — the problem physically receding | safety → competence-calm | The unfakeable middle; the reason the license matters | Problem receding → the house back to normal |
-| B5 | The problem is beaten | Kettle set back on; shoulders drop; water runs free | Normal is restored; this is what "handled" feels like | competence-calm → control regained | The payoff answers the narrative question in feeling | Restored calm → the number that did it |
+| B5 | The problem is beaten | Water runs free down the clear drain (primary); a glass filled at the tap waters the windowsill plant; shoulders drop | Normal is restored — the water is back to quiet, ordinary work | competence-calm → control regained | The payoff answers the narrative question in feeling and closes hook A's loop; no drinking (F14) | Restored calm → the number that did it |
 | B6 | This outcome came from a checkable company | Endcard: number + "ROC 366870 — look us up" + logo | The exact number to call — and the invitation to verify it | control → resolve | CTA as the demonstrated behavior | — |
 
 **Chain check:** each "leads into" equals the next beat's "knows before" — verified per variant
@@ -246,17 +248,18 @@ re-check recorded in `shotlist.md`).**
 ### Per-variant hook blocks (each must hand off into B2's "knows before")
 
 **Variant A (lead) — "Stop using water"** · beat A-1, 0–2.5s
-Knows before: nothing (cold feed). What happens: rising sink, running tap, "Step 1: stop running
-the water." → "Step 2: know who you're letting in." Knows after: **a drain crisis forces a trust
-decision, fast — and there are right steps.** Emotional change: jolt → guided.
-Hand-off: "Step 2" names the trust decision = B2's knows-before. **Chain ✓. Shuffle ✓** (step 1
-before step 2 is not swappable; hook before check is causal).
+Knows before: nothing (cold feed). What happens: rising sink, running tap, "Backed up? Stop the
+water." → "Now — who do you let in?" Knows after: **a drain crisis forces a trust decision,
+fast — and there are right steps.** Emotional change: jolt → guided.
+Hand-off: the second card names the trust decision = B2's knows-before. **Chain ✓. Shuffle ✓**
+(stop-the-water before who-do-you-let-in is not swappable; hook before check is causal).
 
-**Variant B — "Water doesn't wait"** · beat B-1, 0–2.5s
-Knows before: nothing. What happens: water crosses the grout line toward the rug; "Water damage
-doesn't wait for you to read reviews." Knows after: **delay costs — the slow way of choosing
-(reviews) is too slow; a faster trust decision is needed.** Emotional change: idle → dread.
-Hand-off: "a faster way to decide" = B2's check. **Chain ✓. Shuffle ✓** (threat before remedy).
+**Variant B — "Still comparing plumbers?"** · beat B-1, 0–2.5s
+Knows before: nothing. What happens: the basin overflows at the rim, tap running; the card asks
+"Still comparing plumbers?" Knows after: **delay costs — comparing options is a luxury the
+failing fixture isn't giving you; a faster trust decision is needed.** Emotional change: idle →
+dread. Hand-off: "a faster way to decide" = B2's check. **Chain ✓. Shuffle ✓** (threat before
+remedy). The flood shown is the flood S4 clears and S5 resolves.
 
 **Variant C — "Six digits"** · beat C-1, 0–2.5s
 Knows before: nothing. What happens: a thumb starts typing 3-6-6-8-7-0 into the official search;
@@ -286,18 +289,19 @@ no "sewer", no "commercial"; ROC number in-safe-area on every text beat that car
 
 | # | Beat | Dur | Purpose | Contributes | Model req |
 |---|---|---|---|---|---|
-| A1/B1/C1 | Hook (per variant) | 2.5s | stop the scroll, pose the trust question | attention, emotion | per variant — see shotlist |
-| S2 | B2 verify | 4.0s | the official check, performed | proof, understanding | none — REAL screen recording |
-| S3 | B3 arrival | 3.0s | what verified looks like at the door | proof, emotion | consistent tech figure, face non-readable |
+| A1/B1/C1 | Hook (per variant) | 2.5s | stop the scroll, pose the trust question | attention, emotion | **all practical/real — the pack is zero-generation (Revision 2)** |
+| S2 | B2 verify | 3.5s | the official check, performed — hard punch-in on the status line | proof, understanding | none — REAL screen recording |
+| S3 | B3 arrival | 3.0s | what verified looks like at the door (homeowner-POV, dusk) | proof, emotion | practical stand-in (F1); real badge worn or none |
 | S4 | B4 work | 2.5s | the unfakeable middle | proof | none — REAL crew footage REQUIRED |
-| S5 | B5 calm | 1.5s | payoff: control regained | emotion, desire | figure from behind, no face |
-| S6 | B6 CTA | 2.5s | the number + the invitation to verify | action | none — composite from real files |
+| S5 | B5 calm | 2.5s | payoff: water back to ordinary work | emotion, desire | practical shoot; generation fallback DELETED (F2) |
+| S6 | B6 CTA | 3.0s | the number + the invitation to verify | action | none — composite from real files |
 
 **Visual language:** one world — a real East Valley single-family home, warm practical light
 inside, hard honest work light at the drain; phone screen as a light source. No beauty filler.
 **Camera language:** one named move per shot; slow push or locked; ECU on screens, MS at the
 door; no whip, no drone, nothing the story didn't ask for.
-**Lighting language:** dim warm interior vs daylight doorway; work light for S4; endcard black.
+**Lighting language:** dim warm interior; porch light against evening blue at the door (an
+evening arrival — 24/7 shown, not contradicted); work light for S4; endcard black.
 **Colour language:** brand red reserved for the endcard and the magnet/wrap accents only — red
 means the brand, not gore/alarm. Hex values from real files (**NEEDS INPUT**).
 
@@ -313,10 +317,12 @@ TECHNICIAN (adult, work-fit, company shirt).
 - HOMEOWNER in S2: wants certainty before opening the door to anyone; feels the low hum of a
   crisis being managed; thinks "is this real?"; just happened — the backup; looking at the phone
   result; hiding the edge of panic (it shows only in the too-fast typing, then the pause).
-- HOMEOWNER in S5: face never visible; the performance is posture only — shoulders drop on one
-  exhale, kettle set down without hurry. **No performed joy, no big reaction (LB25).**
-- TECHNICIAN in S3: wants to be let in the right way; stands back, lets the badge and the wait
-  do the talking; face at non-readable distance or partly turned — by design, not accident.
+- HOMEOWNER in S5: face never visible; the performance is posture only — a glass filled at the
+  tap without hurry, shoulders dropping on one exhale. **No performed joy, no big reaction
+  (LB25).** Primary path is a practical shoot: a real person, one take.
+- TECHNICIAN in S3: ONE figure, static, beyond the threshold at dusk, body angled three-quarter
+  away — the turn is blocked in the keyframe, never asserted. He wants to be let in the right
+  way; the distance and the wait do all the talking. **No dialogue.**
 
 ---
 
@@ -326,8 +332,9 @@ TECHNICIAN (adult, work-fit, company shirt).
 **Character bible:** one homeowner, one technician, locked at keyframe stage; same clothing
 across S2/S5 (homeowner) and S3/S4 (tech gloves match shirt color world).
 **Product bible:** the phone is the same device model and case in every variant hook and S2.
-**Location bible:** one house: kitchen (S2, S5), hallway/front door (S3), bathroom/shower drain
-(S4). Fixtures consistent; the same warm bulb temperature in kitchen shots.
+**Location bible:** one house: kitchen (A1, B1, S2, S5 — same sink, same tap), front door/porch
+(S3, dusk), S4 at whatever fixture the real footage shows (seam accepted in writing —
+`shotlist.md` S4 note). The same warm bulb temperature in all kitchen shots.
 **Lighting:** §6 lighting language; no time-of-day jumps inside the body (variant hooks may set
 their own hour, but the body reads as one continuous visit).
 **Camera:** eye-level bias; ECU–MS range only.
@@ -344,9 +351,11 @@ show water misbehaving after the fix.
 **Brand references (real client files):** logo master, wordmark, wrap mockup — **locations NEEDS
 INPUT (blocking for production, not for paper)**.
 **Product references:** n/a (service).
-**NEVER GENERATE (composite from real assets only):** logo · wordmark · van wrap · the ROC
-number as screen text (burned) · the AZ ROC site UI (real screen recording only — a generated
-government UI would be a fabricated record) · phone UI text — *(LB24)*.
+**NEVER GENERATE (composite from real assets only):** logo · wordmark · van wrap · **the tech's
+ID badge** (composited from the real badge design at shape-distance — a generated badge is a
+fabricated credential; Skeptic S3 #2) · the ROC number as screen text (burned) · the AZ ROC
+site UI (real screen recording only — a generated government UI would be a fabricated record) ·
+phone UI text — *(LB24)*.
 **Legal / licence copy that must appear:** **ROC 366870** on every variant, inside the 15–70%
 safe area; logo tagline "24/7 EMERGENCY DRAIN REPAIR" only (tagline-drift rule — never the wrap's
 "& SEWER" line).
@@ -357,19 +366,27 @@ safe area; logo tagline "24/7 EMERGENCY DRAIN REPAIR" only (tagline-drift rule �
 *Owner: `servicepow-higgsfield-production`. The shot chooses the model. **PAPER STAGE — nothing
 routed, nothing spent.***
 
-**Production method per shot:** S2 real screen recording (no generation) · S3 reference-driven
-generation, tech face non-readable, van in frame only if the real wrap file is composited ·
-S4 **real client footage required** (never generated) · S5 generation, subject from behind ·
-S6 composite from real files · variant hooks: per `shotlist.md`.
+**Production method per shot (Revision 2 — ALL-PRACTICAL, zero generation):** A1 practical
+(partial-block rig, F16) · B1 practical (rim overflow, stoppered basin + tap) · C1 whole shot
+real · S2 real screen recording composited into C1's filmed phone plate (F5) + post punch-in ·
+S3 practical stand-in on the real porch (F1; real badge worn or none; van out of frame) · S4
+**real client footage required** (kitchen-sink job preferred — F13; contingency re-gates
+through a fresh Pass 1) · S5 practical (generation fallback DELETED — F2) · S6 composite from
+real files. **Synthetic surface: zero** — the AIGC-labeling question (F8) closes by
+construction; any method change is a board change and re-gates. One shoot afternoon covers
+A1, B1, S3 and S5.
 **Model routing:** deferred to production; per capability map at routing time (never hardcoded).
 **Credit budget:** estimate for a 3-variant pack under the 3-draft rule: **≈ 500–900 credits**
 (keyframes ~5–50 · draft tier ~180–375 · premium finals ~325–455; measured per-generation costs
 in the dated capability map). **Spent to date: 0.**
 **Regeneration strategy:** stop-loss — two failed regens of one beat = stop, re-diagnose at the
 still frame; the fix ladder is frame → clip → never a third identical attempt.
-**Known production risks:** S3 face/lip risk (mitigated by distance + turn); S4 impossible
-without real footage (redesign to aftermath-only if the media ask fails — never generate the
-"during" state); screen-glare/moiré on S2 phone recording; endcard type legibility at feed size.
+**Known production risks:** S4 impossible without real footage — **the aftermath contingency
+is NOT pre-approved: if triggered, the changed board returns to a fresh Skeptic Pass 1**;
+filmed-screen moiré on C1/S2 (shutter-sync note, F15); endcard type legibility at feed size;
+the live ROC record must be eyeballed by Karl before sign-off (capture script in
+`shotlist.md`); the stand-in shoot needs one adult and one dusk hour — trivial, but now on the
+critical path.
 
 ---
 
@@ -381,7 +398,7 @@ without real footage (redesign to aftermath-only if the media ask fails — neve
 **Music direction:** none until the pack proves it needs it — silence + room tone is the
 concept's register. If added: low, dry, no melody before S5.
 **Foley / product sounds:** six key taps (the sonic hook), door latch, auger drum ratchet,
-water releasing, kettle click.
+water releasing, the tap opening, the pour into the plant pot.
 **Silence usage:** S6 resolves to one low note then silence — the ad ends quieter than the feed.
 **One continuous audio bed? (LB26):** YES — one bed, built once, never stitched from clip audio.
 **Muted-first:** every beat lands with zero audio via burned text + action; sound is the bonus.
@@ -392,14 +409,16 @@ water releasing, kettle click.
 *Owner: `servicepow-cinematography-editor`.*
 
 **Cut reasons per transition:** hook→S2 cut on the question (text answers it); S2→S3 cut on the
-result-tap (cause→effect: verified → admitted); S3→S4 cut on threshold crossing (J-cut the
-ratchet under the door beat); S4→S5 cut on the water releasing (problem→relief); S5→S6 fade-in
-endcard only.
-**Pacing:** near-still hook held slightly long → 4.0 / 3.0 / 2.5 / 1.5 accelerating → rhythm
-break into the 2.5s endcard. Suspense from rhythm, never slow motion.
+result-tap (cause→effect: verified → admitted); S3→S4 J-cut — the ratchet starts under the last
+beat of the wait (help admitted → help working); S4→S5 cut on the water releasing
+(problem→relief, same water made healthy); S5→S6 fade-in endcard only.
+**Pacing:** 2.5 hook → 3.5 / 3.0 / 2.5 / 2.5 → rhythm break into the 3.0s endcard. Suspense
+from rhythm, never slow motion.
 **Screen direction / eyelines / 180:** phone thumb enters frame low-right in every variant hook
-and S2 (continuity of hand); door opens screen-left → tech faces right; water always drains
-toward frame bottom.
+and S2 (continuity of hand); the door opens screen-left, the porch figure holds frame-right;
+water always drains toward frame bottom.
+**Hard rule (Skeptic S2 #17):** the ROC site UI and the client logo NEVER share a frame — the
+verification beat and the brand beat stay in separate shots, always.
 
 ---
 
@@ -494,3 +513,9 @@ rescuing; the board needs the seven S3s closed."*
 | 2026-08-26 | Claim-free copy constraint adopted campaign-wide | Claude (forced by client record) | Claims sheet unsigned; no price confirmed |
 | 2026-08-26 | Angle: risk removal / verifiability; rotated off the killed pack's speed angle | Claude (recommendation — awaiting Karl) | LB37; only claim-free proof asset available |
 | 2026-08-26 | "Sewer" and "commercial" excluded from every artifact incl. wrap-in-frame | Claude (forced by license constraints) | CR-37 residential-only; scope unverified |
+| 2026-08-26 | Strategy APPROVED — risk-removal/verifiability angle, claim-free | Owner (Wyatt), in-session | Only claim-free proof asset; LB37 rotation holds |
+| 2026-08-26 | Pack APPROVED — hooks A/B/C, **lead = A** | Owner (Wyatt), in-session | Tournament survivors; A stops the primary target |
+| 2026-08-26 | Revision pass AUTHORIZED — work §14's queue, then a fresh isolated Pass 1 | Owner (Wyatt), in-session | Both gates blocked the first board; all fixes are $0 paper |
+| 2026-08-26 | QC harness REBUILD authorized — four scripts from documented thresholds, self-tests must prove each gate can fail | Owner (Wyatt), in-session | Check 29 forbids all spend until the harness exists |
+| 2026-08-26 | **AIGC posture (drafted, awaiting Karl's signature):** shoot A1/C1/S5 practical and restructure S3 so the synthetic surface shrinks to one distant static figure + one macro fluid shot; enable the platform synthetic-content label wherever photoreal generated content remains; never claim any synthetic person is a real customer | Claude (recommendation) | Trust-premise ad; platform label rules; smallest honest surface |
+| 2026-08-26 | **Revision 2: the pack goes ALL-PRACTICAL — zero generation** (second Pass 1 blocked on F1/F2/F3, all pointing one way; its own words: "close to a zero-generation board") | Claude (forced by the gate; ratified by the standing revision authorization) | Kills AIGC-label exposure by construction; every remaining shot is one phone-shoot afternoon; the trust ad contains nothing synthetic |

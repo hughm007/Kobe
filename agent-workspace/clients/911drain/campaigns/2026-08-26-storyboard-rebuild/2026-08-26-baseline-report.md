@@ -90,7 +90,9 @@ and a fresh Pass 1 re-runs. Honest caveat: the test's sharpest scenario — a *p
 score coexisting with an S3 — could not arise, because nothing scoreable exists; that scenario
 re-tests at the first footage-stage run.
 
-## QC Results — the 34 blocking checks at the paper boundary
+## QC Results — the blocking-check list at the paper boundary
+
+*(The playbook owns the list and its count — this table audits each check's runnability, it does not restate the number.)*
 
 Per LB29, a check not actually run is recorded NOT RUN — never claimed.
 
