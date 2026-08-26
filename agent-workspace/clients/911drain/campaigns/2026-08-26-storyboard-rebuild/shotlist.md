@@ -1,5 +1,5 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 3"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 4"
 type: report
 client: 911drain
 owner: Karl
@@ -9,7 +9,7 @@ updated: 2026-08-26
 tags: [campaign, storyboard, shotlist, revision-3, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 3 (ALL-PRACTICAL)
+# Shotlist — "Look Us Up" pack — REVISION 4 (ALL-PRACTICAL)
 
 **Revision 3 (2026-08-26)** works the third Pass-1 attack (round-3 findings, Bible §14) on top
 of Revision 2's zero-generation posture (confirmed correct by round 3). Round-3 closures: the
@@ -19,6 +19,17 @@ live public page is filmed in camera, with a second locked ECU insert for legibi
 reframes to the input field only (F1); S4 re-boards to real trade practice (F3); and the F4
 name check is **half-complete: the record shows "911 Drain LLC", exact match (owner eyeball,
 2026-08-26)** — status/complaint rows still OPEN.
+
+## Revision 4 changelog (round-5 finding → change; Owner-authorized fix-and-re-gate-once, 2026-08-26)
+
+| Finding | Change |
+|---|---|
+| **F-1 (S3, blocked)** | Badge conditional **REMOVED**. Research (Owner-directed) found **no badge or branded uniform exists** — live site egress-blocked but unindexed, zero social/web presence, none in the asset inventory (NOT VERIFIED offline; a real one from Will slots in later and re-gates). Marker set: real plain **plumbing work shirt** (look planned WITH Karl at sign-off — Owner) + real printed **work order** on a clipboard + the burned strap. Blocking mechanic made concrete (light above/behind, turn arrested at three-quarter, silhouette against evening blue); coverage variants same evening |
+| **F-3 (S5, blocked)** | Camera re-specified: **elevated over-shoulder into the basin** (the counter-height MCU could not see its own payoff); locked high-angle drain insert as safety coverage |
+| **F-2 (S4)** | "Phone propped or mounted, never handheld" + stability floor added to shot card AND Karl's acceptance checklist |
+| **F-5 (S2)** | Sanctioned invisible cut vs. live-page latency; row-load timing added to the capture-day mock gate |
+| **F-4/F-6 (S2)** | Caption → "Every licensed AZ contractor is publicly checkable — state registrar." (venue restored = claim-2's tail; onset 3.0s; at the 180-WPM reading ceiling — beat frozen) |
+| **F-9/F-13/F-10/F-14 (minor)** | B1 stopper-never-resolvable + shoots LAST; CTA J-cut at 13.4 (150 WPM); one-pair-of-hands continuity in the self-check; A1 rig test + the-tell-is-audio note |
 
 ## Revision 3 changelog (round-3 finding → change)
 
@@ -83,7 +94,7 @@ you trust.** Lead variant: **A**.
 | S2 caption | **58%**, onset 3.2s | delayed past the punch-in (F6) |
 | S4 line | **42%** | |
 | S5 line | **42%** | |
-| S6 number / ROC line / tagline | **44% / 55% / 62%** | all inside 15–70% |
+| S6 number / ROC line / logo lockup | **44% / 55% / 62%** | all inside 15–70%; logo-only endcard (Owner ruling) |
 
 ---
 
@@ -105,7 +116,11 @@ Text:        "Backed up? Stop the water." (0.0–1.2, 42%) → "Who do you let i
              named acceptance that "Stop the water." is safety advice, not a substantiatable
              marketing-claim class. ACCEPTED BY: Karl (Wyatt), in-session
 Source:      PRACTICAL SHOOT — rag wedged in the trap side (partial block), tap running, one
-             real hand. NO generation path. If impossible: re-board + fresh Pass 1
+             real hand. NO generation path. If impossible: re-board + fresh Pass 1. **RIG
+             TEST before shoot day (round-5):** flow restrictor vs. rag compared for a
+             repeatable rise-then-slow-drawdown; and note the drawdown tell is mostly AUDIO —
+             the muted story must survive on rise + shutoff + cards alone (round-5 F-14: never
+             protect the glug at the picture's expense in the edit or the mix)
 Real-ref:    CITED — https://www.zoomdrain.com/blog/2026/march/what-to-do-when-your-basement-floor-drain-is-bac/
              and https://environmentmasters.com/5-reasons-theres-water-backing-up-in-your-kitchen-sink/
              — observed: stop-water-use is the real first advice; backups present as slow rise,
@@ -131,7 +146,12 @@ Audio:       tap run, rim-cascade patter; house tone; no music
 Text:        "Still comparing plumbers?" (0.4–2.5, 42% — a question, not a claim; exits at the
              S2 cut)
 Source:      PRACTICAL SHOOT — stoppered basin + running tap, towels below frame. NO generation
-             path. If impossible: re-board + fresh Pass 1
+             path. If impossible: re-board + fresh Pass 1. **STOPPER RULE (round-5):** the
+             pop-up plug is NEVER RESOLVABLE in any frame — at rim-level macro a visible
+             closed stopper reads "plugged sink, not blocked drain" to any plumber
+             (screenshot bait); frame and focus keep the drain mouth unreadable. **SHOOT
+             ORDER (round-5 F-9): B1 shoots LAST on the kitchen day** — it soaks the set
+             that A1 and S5 need dry
 Real-ref:    CITED — https://environmentmasters.com/5-reasons-theres-water-backing-up-in-your-kitchen-sink/
              (fixture backup presentation) — observed: a blocked basin fills and overflows at
              the rim with the faucet running; the failure is AT the fixture, visibly
@@ -183,7 +203,11 @@ Action:      the typed number completes; the result row loads on the filmed phon
              page never renders (F6)**
 Camera:      opens on the FULL phone-in-hand frame (legible cold for A/B — they arrive from a
              sink with no phone context), continuing C's action seamlessly; then the locked ECU
-             insert. METHOD: **no composite anywhere** — the real live page filmed in camera,
+             insert. **SANCTIONED INVISIBLE CUT (round-5 F-5):** between typing-complete and
+             row-display the edit may land the cut to the locked insert early — or hide a cut
+             on the thumb crossing frame — so LIVE-PAGE LOAD LATENCY can never eat a take;
+             one filmed world either way, no composite introduced. METHOD: **no composite
+             anywhere** — the real live page filmed in camera,
              twice (plate + insert), one filmed world. **PLATE FRAMING SPEC (round-4 F4):** the
              page is scrolled so the site header/seal sits OFF-VIEWPORT above the fold before
              the plate rolls; at plate distance the visible content is the search field +
@@ -191,8 +215,11 @@ Camera:      opens on the FULL phone-in-hand frame (legible cold for A/B — the
              header art resolvable at delivery resolution
 Lighting:    phone screen as key, warm practical behind — evening state
 Audio:       one confirm tap; room tone; no gurgle here — this beat is already calmer
-Text:        caption "Every licensed AZ contractor is publicly checkable." (58%, onset 3.2s,
-             **exits at the S3 cut, 6.0s** — round-4 F11: exit specified, 7 words / 2.8s) +
+Text:        caption "Every licensed AZ contractor is publicly checkable — state registrar."
+             (58%, onset **3.0s**, **exits at the S3 cut, 6.0s** — round-5 F-4: the venue
+             restored as claim-2's own tail; the ad now SAYS where to check, closing the
+             "whose search box?" mock vector. 9 words / 3.0s = the 180-WPM reading ceiling —
+             per F-6 nothing else may ever be added to this beat) +
              the persistent INFO STRAP begins (Owner-delegated design call, 2026-08-26 —
              resolves round-4 F10 + F20 in one element): plain burned type
              "911 Drain · ROC 366870 · 480-992-3541", baseline 65%, on a 40%-black backing
@@ -209,8 +236,10 @@ Source:      REAL — the actual public result for 366870, live on the phone, fi
              INCLUDED** (round-4 F7: the name is verified matching; showing it is the
              strongest proof and deletes the "why did they hide the name" attack) and scope
              text excluded; (b) the PLATE framing per the spec above; (c) moiré/refresh/
-             legibility on the actual phone (covers C1 too). The shoot day does not lock
-             until the mock passes
+             legibility on the actual phone (covers C1 too); (d) **row-load timing on the
+             real connection (round-5 F-5)** — measured, so the edit knows where the
+             sanctioned invisible cut must land. The shoot day does not lock until the mock
+             passes
 Real-ref:    CITED — https://roc.az.gov/contractor-search + consumer guide PDF +
              https://azroc.my.site.com/AZRoc/s/contractor-search. The recording is the reference
 Angle:       risk removal — verify before you trust
@@ -240,24 +269,48 @@ Shot S3 — 6.0–9.0s   [arrival — PRACTICAL (F1)]
 Story job:   proof — what verified looks like at your front door
 Action:      HOMEOWNER-POV: the camera IS the homeowner, just inside the front door at DUSK; a
              real hand pulls the door open — the door edge wipes the frame; beyond the
-             threshold, a REAL STAND-IN (any adult, plain dark work shirt, tool bag in left
-             stands ~5 ft back on the porch under the porch light; AS THE DOOR OPENS he
-             makes a natural HALF-TURN toward it — acknowledging the door like a human being
-             (round-4 F5: nobody keeps studying the street after the door they rang opens) —
-             while porch-light shadow and blocking keep the face unreadable through the turn;
-             the real badge worn IF the physical badge exists, else none; he does not step
+             threshold, a REAL STAND-IN stands ~5 ft back on the porch under the porch light,
+             wearing a REAL PLAIN PLUMBING WORK SHIRT (work-fit trade workwear — Owner
+             directive 2026-08-26 after research found no company badge or branded uniform
+             anywhere; **exact wardrobe look planned WITH Karl at sign-off**), tool bag in the
+             left hand, a PRINTED REAL WORK ORDER on a clipboard in the right (see Source —
+             the universal "scheduled professional" marker, readable at shape distance); AS
+             THE DOOR OPENS he makes a natural HALF-TURN toward it — acknowledging the door
+             like a human being (round-4 F5: nobody keeps studying the street after the door
+             they rang opens) — the turn ARRESTING at three-quarter profile; he does not step
              toward the door; the shot holds one beat on the wait after the turn. No dialogue.
-             Van out of frame. PRE-LOCK GATE: a cold-read test on unbriefed viewers (the beat
-             must read "verified professional waiting" — not menace, not nothing).
-Camera:      locked POV at eye height; at most a 2% post move
+             Van out of frame. **THE BADGE CONDITIONAL IS REMOVED (round-5 F-1):** every
+             permitted configuration of this shot now carries concrete identity/purpose
+             markers — trade shirt + work order + the burned info strap. PRE-LOCK GATE: a
+             cold-read test on unbriefed viewers (the beat must read "verified professional
+             waiting" — not menace, not nothing). COVERAGE (round-5 forced — alternates for
+             the cold-read gate without a re-shoot, same evening): two turn sizes (quarter /
+             three-quarter) × two distances (~5 ft / ~8 ft) × clipboard held low / raised
+Camera:      locked POV at eye height; at most a 2% post move. FACE-UNREADABLE MECHANIC made
+             concrete (round-5 forced — an outcome is not a method): porch light mounted
+             ABOVE and slightly BEHIND the stand-in's eyeline so the brow shadow holds
+             through the turn; the turn stops at three-quarter profile, never full-face to
+             lens; the figure reads as warm-rim-plus-silhouette against the evening blue —
+             unreadable by geometry, not by luck
 Lighting:    porch light warm against evening blue; dim warm hallway edge in the frame border
 Audio:       door latch, evening street/cricket tone. NO spoken word — the wait is the shot
 Text:        no scene text; the persistent info strap ("911 Drain · ROC 366870 ·
              480-992-3541") CONTINUES through this shot (F13 fix kept)
 Source:      PRACTICAL SHOOT — real hand, real door, real porch, real stand-in. NOTHING
-             generated. Badge: the real physical badge or nothing (a prop badge would be a
-             fabricated credential). If a stand-in is impossible: re-board (empty-porch +
-             knock redesign) + fresh Pass 1
+             generated. IDENTITY MARKERS (round-5 F-1, resolved by Owner directive +
+             research, 2026-08-26): **no badge or branded uniform exists** — not on the live
+             site, not in any social/web presence, not in the brand asset inventory (NOT
+             VERIFIED that one exists offline; if Will surfaces a real one before capture, it
+             slots in as a real item and the changed shot re-gates). So: (a) a real plain
+             plumbing work shirt — bought/borrowed trade workwear, nothing branded is printed
+             or fabricated; (b) a real printed WORK ORDER from the company's own template —
+             the company printing its own document with its own real logo artwork is
+             composite-from-real-assets (LB24's sanctioned category), and a work order
+             asserts a scheduled job (true in the story), never a personal credential — the
+             class distinction that made a prop photo-ID badge unusable. Shirt + prop look
+             go to Karl at sign-off ("we can plan how that will look together" — Owner).
+             If a stand-in is impossible: re-board (empty-porch + knock redesign) + fresh
+             Pass 1
 Real-ref:    CITED — https://egia.org/wp-content/themes/EGIA/documents/perfectServiceCall.pdf
              (EGIA "The Perfect Service Call") — the professional stands back in clear view,
              waits to be invited. The shot copies: the stand-back distance, the wait
@@ -276,7 +329,11 @@ Action:      THE FRAME FOLLOWS THE REAL JOB (F3 — re-boarded to real trade pra
              resistance, the standing water ring visibly dropping. Either way: one feeding
              hand, one cranking, the real rhythm
 Camera:      locked with slight breathing; drum edge in frame (the tool is real and
-             identifiable); angle per the frame chosen above
+             identifiable); angle per the frame chosen above. **PHONE PROPPED OR MOUNTED,
+             NEVER HANDHELD** (round-5 F-2 — a tech mid-job holding a phone produces neither
+             "locked" nor "slight breathing"; the field-vs-field contradiction is closed on
+             the cheap side): lean-the-phone-against-the-cabinet or a pocket tripod, both on
+             the shot card
 Lighting:    one hard work light from the left — honest, unglamorous
 Audio:       drum ratchet; then water beginning to give — the first "right" water sound
 Text:        "Licensed. Look us up." (42% — round-4 F3: claim 1 + a claim-2 imperative; passes the claims rule under both its readings)
@@ -287,7 +344,9 @@ Source:      REAL CLIENT FOOTAGE REQUIRED — the "during" state is never genera
              **no visible waste matter**). **ACCEPTANCE CHECKLIST (round-4 F8), judged by
              KARL by name, committed before the window opens:** cable + drum legible · exposure
              floor met · angle inside ±20° of a spec frame · ≥10s continuous · no waste
-             matter — marginal footage is rejected against this list, never sunk-cost
+             matter · **phone propped or mounted — handheld footage rejected (round-5 F-2;
+             stability surrogate: the drum edge stays inside a 5%-of-frame box across the
+             take)** — marginal footage is rejected against this list, never sunk-cost
              accepted. **Grade plan:** cool phone footage graded toward the warm practical
              world; tested on the first capture. **Capture-first scheduling: the controlled
              shoot afternoon is not booked until this window has product.** CONTINGENCY RE-GATE: if no usable footage
@@ -307,14 +366,22 @@ Note:        geography seam (if the filmed job's fixture differs from variant A'
 ```
 Shot S5 — 11.5–14.0s   [payoff — PRACTICAL, redesigned (F2/F14)]
 Story job:   payoff — control regained; the water is back to doing quiet, ordinary work
-Action:      from behind at counter height: PRIMARY FOREGROUND ACTION — water running freely
+Action:      from behind, elevated (see Camera): PRIMARY FOREGROUND ACTION — water running freely
              down the now-clear drain (the same basin from A1). The homeowner fills a glass at
              the tap, SHUTS THE TAP (round-4 F13: no water left running in a drought-conscious
              market — and it mirrors A1's shutoff gesture), and without hurry WATERS THE SMALL
              WINDOWSILL PLANT (no drinking); shoulders drop ~2 cm on one exhale as the pour
              lands
-Camera:      MCU from behind / three-quarter, static; face never visible; the drain corner
-             holds the deepest-focus plane (it is the proof)
+Camera:      RE-SPECIFIED (round-5 F-3 — the counter-height behind-MCU could not see the
+             basin interior: the basin wall and the person occluded the drain, leaving the
+             payoff's proof invisible in its own frame): **ELEVATED over-shoulder
+             three-quarter, static** — lens ~12–18 in above the shoulder line, angled DOWN
+             INTO THE BASIN so tap, glass, and the drain mouth swallowing water share the
+             frame; the drain corner holds the deepest-focus plane (it is the proof); face
+             verified out of frame at that height ON THE DAY (capture-checklist line).
+             SAFETY COVERAGE (same setup, one minute): a locked high-angle CU insert of
+             water spiraling down the clear drain — cut in only if the master fails the
+             "drain visibly swallowing water" check in the edit
 Lighting:    same warm kitchen practicals, evening state (F19)
 Audio:       tap opens (a healthy sound now), the pour into the plant pot, room tone resolving
 Text:        "Licensed. Verifiable." (42%)
@@ -373,7 +440,7 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 | 2.5–6.0 | taps → confirm tap, room tone | **low ambient bed enters (F16)** | "Before you let anyone in — check them." | control arriving |
 | 6.0–9.0 | latch, evening street tone | none | — **(F11: no VO — the wait is the shot)** | safety |
 | 9.0–11.5 | drum ratchet, water giving | none | — | competence |
-| 11.5–14.0 | tap, the pour, room tone resolving | none | "911 Drain." (11.5–13.4) → CTA line J-cuts in at 13.5 | relief |
+| 11.5–14.0 | tap, the pour, room tone resolving | none | "911 Drain." (11.5–13.3) → CTA line J-cuts in at **13.4** (round-5 F-13: buys the CTA read 0.1s of slack — 150 WPM) | relief |
 | 14.0–17.0 | — | the bed resolves to one low note | "…the number's on your screen — look us up." (**ends by 16.6 — F17**) | resolve — end quieter than the feed |
 
 **Sonic hook:** the six key taps. Muted placements lose nothing.
@@ -387,7 +454,11 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 - Chain + shuffle re-checked after the B1 and S5 redesigns ✓ (B1's overflow is resolved by S4's
   clearing and S5's free drain — the flood shown is the flood fixed)
 - Feeling Spec + Sound Spine ✓ · lead = A ✓
+- **ONE PAIR OF HANDS (round-5 F-10):** the C1→S2 continuous take bakes variant C's hands into
+  every variant's body — A1's tap-shutoff hand and S5's homeowner match them (skin, cuff,
+  wardrobe world) at the 2.5s and 11.5s cuts ✓ (cast one set of hands for the whole ad)
 - Registered-line-item queue: **EMPTY** (F2 closed by replacement — every burned line and VO
   line now sits inside the three registered claims or asks a question); the S4 seam acceptance
   line awaits Karl's signature at sign-off
-- Karl has seen the storyboard: **PENDING — after Skeptic Pass 1 round 4** ☐
+- Karl has seen the storyboard: **PENDING — after Skeptic Pass 1 round 6 (the Owner-authorized
+  fix-and-re-gate round)** ☐

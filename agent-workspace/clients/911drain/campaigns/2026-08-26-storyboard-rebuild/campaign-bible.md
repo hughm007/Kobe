@@ -39,7 +39,7 @@ variant A) · revision pass AUTHORIZED · QC-harness rebuild AUTHORIZED. Status 
 
 | # | Awaiting | Who | Prepared where |
 |---|---|---|---|
-| 1 | **Round-5 S3 fixes:** (a) does a physical badge / logoed shirt / printed work order exist? (F-1 — fact question, decides S3's identity marker); (b) authorize the S5 camera re-spec + forced changes and the fresh Pass 1 on the changed shots (F-3/F-2/F-5) | Karl | §14 round-5 row, `shotlist.md` S3/S5 |
+| 1 | ~~Round-5 S3 fixes~~ **✅ ANSWERED (Owner, 2026-08-26):** research found **no badge or branded uniform exists** → plain plumbing work shirt (exact look planned together at sign-off) + printed work order; **fix-and-re-gate-once AUTHORIZED** — Revision 4 applied, round 6 is the authorized re-gate | — | Revision 4 changelog (`shotlist.md`), §14 |
 | 2 | Storyboard sign-off + budget → unlocks Gate 1.5 — only after the board clears a **fresh Skeptic Pass 1** | Karl | §6, `shotlist.md`, §10 |
 | 3 | ~~Live ROC record check~~ **✅ COMPLETE** — name match, ACTIVE, no complaints, scope-text look (Owner, 2026-08-26). Screenshot to `clients/911drain/notes/` when convenient | — | `shotlist.md` S2 capture script |
 | 4 | AIGC labeling posture signature (moot on a zero-generation board; stays drafted) | Karl | Decision log |
@@ -58,8 +58,11 @@ before capture day; F-3 S5's camera cannot see its own payoff) — the claims au
 "near-bulletproof" and the info strap "the best single call on the board." Per the standing
 rule, **reported to the Owner with no further unilateral rounds**: the badge question is a fact
 only the client side can answer, and the fixed shots (S3, S5, plus the S2/S4 card-line changes)
-re-gate through a fresh Pass 1 once authorized. Kobe = CANNOT ASSESS (§13, unchanged — nothing
-to watch yet).
+re-gate through a fresh Pass 1 once authorized. **Both answers came back (Owner, 2026-08-26):**
+directed research found no badge/uniform anywhere findable → the plumbing-shirt + work-order
+marker set (his stated fallback); and **fix-and-re-gate-once AUTHORIZED**. **Revision 4**
+applies every forced change; **round 6 — the Owner-authorized re-gate — runs on it.** Kobe =
+CANNOT ASSESS (§13, unchanged — nothing to watch yet).
 
 Surfaced by name (LB51 — never accepted silently): shot S4's **real-footage requirement**
 stands (the "during" state is never generated — the media ask to Will's crew, with the shot
@@ -303,7 +306,7 @@ no "sewer", no "commercial"; ROC number in-safe-area on every text beat that car
 |---|---|---|---|---|---|
 | A1/B1/C1 | Hook (per variant) | 2.5s | stop the scroll, pose the trust question | attention, emotion | **all practical/real — the pack is zero-generation (Revision 2)** |
 | S2 | B2 verify | 3.5s | the official check, performed — hard punch-in on the status line | proof, understanding | none — REAL screen recording |
-| S3 | B3 arrival | 3.0s | what verified looks like at the door (homeowner-POV, dusk) | proof, emotion | practical stand-in (F1); real badge worn or none |
+| S3 | B3 arrival | 3.0s | what verified looks like at the door (homeowner-POV, dusk) | proof, emotion | practical stand-in (F1); plumbing work shirt + printed work order (round-5 F-1 — no badge exists; badge conditional removed) |
 | S4 | B4 work | 2.5s | the unfakeable middle | proof | none — REAL crew footage REQUIRED |
 | S5 | B5 calm | 2.5s | payoff: water back to ordinary work | emotion, desire | practical shoot; generation fallback DELETED (F2) |
 | S6 | B6 CTA | 3.0s | the number + the invitation to verify | action | none — composite from real files |
@@ -323,7 +326,8 @@ means the brand, not gore/alarm. Hex values from real files (**NEEDS INPUT**).
 *Owner: `servicepow-human-performance-realism`.*
 
 **Characters:** HOMEOWNER (adult, either gender, 30s–50s — cast for ordinary, not model-pretty),
-TECHNICIAN (adult, work-fit, company shirt).
+TECHNICIAN (adult, work-fit, plain plumbing work shirt — no branded wear exists, round-5 F-1;
+exact look planned with Karl at sign-off).
 **Character references (real files, cited):** none exist — no real crew footage yet (§1).
 **Performance direction (want / feel / think / just happened / looking at / hiding):**
 - HOMEOWNER in S2: wants certainty before opening the door to anyone; feels the low hum of a
@@ -363,14 +367,26 @@ show water misbehaving after the fix.
 **Brand references (real client files):** logo master, wordmark, wrap mockup — **locations NEEDS
 INPUT (blocking for production, not for paper)**.
 **Product references:** n/a (service).
-**NEVER GENERATE (composite from real assets only):** logo · wordmark · van wrap · **the tech's
-ID badge** (composited from the real badge design at shape-distance — a generated badge is a
-fabricated credential; Skeptic S3 #2) · the ROC number as screen text (burned) · the AZ ROC
+**NEVER GENERATE (composite from real assets only):** logo · wordmark · van wrap · **any tech
+ID badge** (round-5 F-1 research: **no real badge exists** — so there is nothing to composite
+and no badge appears in the ad at all; a generated or prop badge is a fabricated credential;
+Skeptic S3 #2. The S3 work-order prop is printed from the company's own real template — the
+sanctioned composite-from-real category) · the ROC number as screen text (burned) · the AZ ROC
 site UI (real screen recording only — a generated government UI would be a fabricated record) ·
 phone UI text — *(LB24)*.
 **Legal / licence copy that must appear:** **ROC 366870** on every variant, inside the 15–70%
 safe area; logo tagline "24/7 EMERGENCY DRAIN REPAIR" only (tagline-drift rule — never the wrap's
 "& SEWER" line).
+
+**Client-facing rationale, pre-written (round-5 F-11 — have the answers before Will asks):**
+- *Why no tech's face:* the ad's promise is that the COMPANY is checkable — any tech, any
+  night. One face makes one employee the brand, and dates the ad the day he leaves.
+- *Why no van:* the wrap exists only as a mockup — filming a mockup would put an unreal asset
+  at the center of a trust ad, and the wrap's own text carries the "& SEWER" line this
+  campaign's license scope bars from copy.
+- *Why the record's scope text is cropped:* the ad is residential and the license class
+  (CR-37) is residential-only — the crop keeps the ad from implying anything beyond the
+  license. Nothing is hidden: the ad's whole CTA sends every viewer to the full record.
 
 ---
 
@@ -381,7 +397,8 @@ routed, nothing spent.***
 **Production method per shot (Revision 2 — ALL-PRACTICAL, zero generation):** A1 practical
 (partial-block rig, F16) · B1 practical (rim overflow, stoppered basin + tap) · C1 whole shot
 real · S2 real screen recording composited into C1's filmed phone plate (F5) + post punch-in ·
-S3 practical stand-in on the real porch (F1; real badge worn or none; van out of frame) · S4
+S3 practical stand-in on the real porch (F1; plumbing work shirt + printed work order, badge
+conditional removed — round-5 F-1; van out of frame) · S4
 **real client footage required** (kitchen-sink job preferred — F13; contingency re-gates
 through a fresh Pass 1) · S5 practical (generation fallback DELETED — F2) · S6 composite from
 real files. **Synthetic surface: zero** — the AIGC-labeling question (F8) closes by
@@ -576,3 +593,5 @@ claims-sheet item 1 when Will signs.
 | 2026-08-26 | CONFLICT resolved: **logo-only endcard** (24/7 tagline as logo artwork, not ad copy) + **A1 "Stop the water." KEPT** with named acceptance | Owner (Wyatt), in-session | Both authorities satisfied; safety advice is not a claims-sheet class |
 | 2026-08-26 | **F4 fully closed:** record status **ACTIVE, no complaints** (owner-verified) — the last record dependency before spend | Owner (Wyatt), in-session | The ad may safely send every viewer to the record |
 | 2026-08-26 | **Info strap** "911 Drain · ROC 366870 · 480-992-3541" at 65%, S2→S5 (replaces the badge-only chip) | Claude (design call delegated by Owner: "do what you believe is best based off marketing analytics") | The brand guide's own doctrine — the ad's job is the number and the reassurance; the mid-emergency primary target gets something callable from second 2.5; resolves round-4 F10+F20 in one element; plain type is not the wordmark (LB24). Trade accepted: variant C's digits→brand reveal softens |
+| 2026-08-26 | **Round-5 S3 marker (F-1):** badge conditional removed — research (Owner-directed) found **no badge or branded uniform exists** anywhere findable (live site egress-blocked but unindexed; zero social/web presence; none in the asset inventory — NOT VERIFIED offline); marker set = real plain **plumbing work shirt** + real printed **work order**; exact look planned WITH Karl at sign-off. **Fix-and-re-gate-once AUTHORIZED** | Owner (Wyatt), in-session (research directed; shirt fallback his call) | F-1 was a fact question; the marker set fabricates nothing — trade workwear is bought, the work order is the company's own real document |
+| 2026-08-26 | **Round-5 design closures (delegated):** S5 camera = elevated over-shoulder into the basin (+ locked high-angle drain insert as safety coverage); work-order-on-clipboard as S3's second marker; caption venue restored per F-4; CTA J-cut at 13.4 | Claude (delegated design authority) | The payoff's proof must be visible in its own frame (F-3); the clipboard work order is the universal "scheduled professional" semiotic, real-printable, credential-free; the venue line is claim-2's own registered tail |
