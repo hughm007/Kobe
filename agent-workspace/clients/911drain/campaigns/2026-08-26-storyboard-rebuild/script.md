@@ -6,10 +6,16 @@ owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, script, revision-4]
+tags: [campaign, script, revision-5]
 ---
 
-# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 4
+# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 5
+
+**Revision 5 changes (round-6 findings; changelog in `shotlist.md`):** the S2 caption's exit
+rides 1.0s into S3 (3.0–7.0s — character-rate arithmetic, not WPM: ~70 chars needs ~4.0s) ·
+the info strap's onset moves to **5.5s** so the proof beat reads insert-then-caption only
+(trade: 3.0s of early callability) · A1's card split retimes to **1.5s** · the strap dwell
+arithmetic below is corrected (R6-F10c).
 
 **Revision 4 changes (round-5 findings; changelog in `shotlist.md`):** S2 caption regains the
 venue — **"Every licensed AZ contractor is publicly checkable — state registrar."** (F-4;
@@ -32,16 +38,17 @@ bonus layer. **Claim-free** — no price, no speed promise, no guarantee, no "se
 | Time | Shot | Burned text (muted carrier) | VO (sound-on bonus) | Diegetic audio |
 |---|---|---|---|---|
 | 0.0–2.5 | Hook (A/B/C) | per variant, below | — | per variant |
-| 2.5–6.0 | S2 verify | "Every licensed AZ contractor is publicly checkable — state registrar." (onset 3.0s, exits 6.0s — round-5 F-4: the venue restored, claim-2's own tail) + persistent info strap through S5: "911 Drain · ROC 366870 · 480-992-3541" (65%, black backing chip) | "Before you let anyone in — check them." | six key taps, one confirm tap, room tone |
-| 6.0–9.0 | S3 arrival | none — the wait is the shot | **none (F11)** | door latch, evening street tone; no dialogue |
+| 2.5–6.0 | S2 verify | "Every licensed AZ contractor is publicly checkable — state registrar." (onset 3.0s, **exits 7.0s** — R6-F2 tail ride) + info strap enters at **5.5s** (R6-F2 retime), runs through S5: "911 Drain · ROC 366870 · 480-992-3541" (65%, black backing chip) | "Before you let anyone in — check them." | six key taps, one confirm tap, room tone |
+| 6.0–9.0 | S3 arrival | no NEW text — the caption completes its exit at 7.0s; the strap continues | **none (F11)** | door latch, evening street tone; no dialogue |
 | 9.0–11.5 | S4 work | "Licensed. Look us up." (round-4 F3) | — (the ratchet is the line) | auger drum ratchet, water starting to give |
 | 11.5–14.0 | S5 payoff | "Licensed. Verifiable." | "911 Drain." (11.5–13.3); CTA line J-cuts in at 13.4 (round-5 F-13) | tap opens, the pour, room tone resolving |
 | 14.0–17.0 | S6 endcard | "480-992-3541" (large) · "ROC 366870 — look us up." · **real logo lockup only** (Owner ruling: no burned tagline — the 24/7 line lives inside the logo art) | "…the number's on your screen — look us up." (**ends by 16.6 — F17**) | bed resolves to one low note, then silence + 0.4s clean tail |
 
 ## Variant hook text
 
-- **A:** "Backed up? Stop the water." (0.0–1.2) → "Who do you let in?" (1.2–2.5, 5 words —
-  F7; exits at the S2 cut)
+- **A:** "Backed up? Stop the water." (0.0–**1.5** — R6-F3 retime: 26 chars at the 15–17 cps
+  comfort rate) → "Who do you let in?" (**1.5**–2.5, 5 words — F7; its exact 1.0s floor, a
+  glance question; exits at the S2 cut)
 - **B:** "Still comparing plumbers?" (0.4–2.5 — a question, not a claim)
 - **C:** "Look them up first." (0.2–2.5 — round-4 F9: differentiated from A's question; a
   claim-2 imperative; the typing visual carries the code idea)
@@ -68,12 +75,12 @@ and the VO directs eyes to it. Flagged for Karl at the storyboard gate.
 
 | String | Words | On screen | Floor | OK? |
 |---|---|---|---|---|
-| A card 1 "Backed up? Stop the water." | 5 | 1.2s | ≥1s | ✓ |
-| A card 2 "Who do you let in?" | 5 | 1.3s + exits at the cut | ≥1s | ✓ |
+| A card 1 "Backed up? Stop the water." | 5 | 1.5s (R6-F3 retime — ≈17.3 cps ✓) | ≥1s | ✓ |
+| A card 2 "Who do you let in?" | 5 | 1.0s + exits at the cut (its exact floor — accepted as a glance question) | ≥1s | ✓ |
 | B line "Still comparing plumbers?" | 3 | 2.1s | ≥1s | ✓ |
 | C line "Look them up first." | 4 | 2.3s | ≥1s | ✓ |
-| S2 caption (incl. "— state registrar.") | 9 | 3.0s (onset 3.0s, exits 6.0s) | ≥1s | ✓ — at the 180-WPM reading ceiling; the beat is frozen (round-5 F-6) |
-| Info strap "911 Drain · ROC 366870 · 480-992-3541" | 5 | 14.5s persistent (S2→S5) | ≥2s license + phone | ✓ — the number is now on screen ~14.5s before the endcard repeats it large |
+| S2 caption (incl. "— state registrar.") | 9 (~70 chars) | 4.0s (onset 3.0s, exits 7.0s — R6-F2 tail ride into S3) | ≥1s | ✓ — ≈17.5 cps, at the 15–17 cps comfort ceiling's edge; the beat is frozen (F-6) and the residual is flagged on the sign-off sheet |
+| Info strap "911 Drain · ROC 366870 · 480-992-3541" | 5 | 8.5s persistent (5.5–14.0s, R6-F2 onset retime) + 3.0s endcard = **11.5s total number-on-screen** (R6-F10c: the old "14.5s (S2→S5)" conflated the strap window with the total) | ≥2s license + phone | ✓ — on screen continuously for the ad's back 11.5s; VO "the number's on your screen" (13.4–16.6) stays true across the strap→endcard handoff |
 | S4 line "Licensed. Look us up." | 4 | 2.5s | ≥1s | ✓ |
 | S5 line | 2 | 2.5s | ≥1s | ✓ |
 | Phone number | 1 string | 3.0s | ≥2s phone number | ✓ |

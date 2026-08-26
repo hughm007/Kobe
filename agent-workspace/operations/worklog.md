@@ -34,6 +34,41 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Round 6 spends the re-gate grant on my own editing debt; Revision 5 ready
+
+**Did:** Karl's two answers came back: research online for how 911 Drain shows itself (badge or
+shirt), and fix-and-re-gate-once authorized. **Research finding, recorded honestly: no badge or
+branded uniform exists anywhere findable** — the live site is egress-blocked from this
+container but unindexed by search, there is zero social/review presence, and the workspace
+asset inventory lists only the logo and a van-wrap mockup (NOT VERIFIED offline). Per his
+fallback: S3 re-boarded around a real plain **plumbing work shirt** (look planned together at
+sign-off) + a real printed **work order** on a clipboard; badge conditional removed. Revision 4
+applied all round-5 forced changes and **round 6 — the authorized re-gate — returned BLOCK,
+1 × S3 (R6-F1):** the S2 proof shot's own documentation contradicted itself — the round-4
+name-INCLUDED ruling lived in the capture-day gate while three older locations still said
+name-EXCLUDED, and capture script step 2 still described the eliminated composite method.
+That is the fix passes' own harmonization debt, and the gate caught it before it could bait a
+wrong capture. Compliance CLEAN a second consecutive round; no shot EXTREME; the verdict
+itself calls the block narrow and the method posture sound after "a six-round attack."
+**Revision 5** applies everything: R6-F1 harmonized, strap onset 5.5s + caption tail ride
+(character-rate arithmetic), A1 split 1.5s, S3 coverage ranked, S4 9:16/no-tubs, S5
+pour-in-frame, in-flight record re-check proposed for Karl, S1 sweep.
+
+**Decided:** The fix-and-re-gate-once grant is SPENT — round 7 is not run unilaterally; the
+authorization ask goes to Karl with the verdict. Strap onset traded 3.0s of early callability
+for proof-beat legibility (delegated call, rationale in the decision log).
+
+**Learned:** (production log) Every fix pass creates harmonization debt — grep every statement
+of a changed fact before closing a fix. Burned-text legibility is characters/second (~15–17
+cps), not WPM; WPM flatters long words. Coverage plans must fit their light window.
+
+**Open:** Karl — authorize round 7 (the gate expects CONDITIONAL-PASS shape on the fixed
+board). At sign-off: named acceptances queue (caption at the cps ceiling's edge, S3 pruned
+coverage, S4 no-tub restriction, weekly in-flight record re-check), wardrobe/prop look
+planning, geography-seam line. Behind that, unchanged: Will's claims sheet, the S4 media ask.
+
+**Next:** Karl's round-7 authorization; then one clean gate and the storyboard sign-off ask.
+
 ## 2026-08-26 — Rulings applied; round 5 blocks on geometry, not copy
 
 **Did:** All four of Karl's rulings landed on the board: the tagline conflict **RESOLVED**

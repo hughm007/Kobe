@@ -95,6 +95,34 @@ resolved before capture. Claims/compliance passes will never catch these; a geom
 (can this lens, from this position, see what the action field promises?) belongs in every
 pre-spend pass.
 
+## Round 6 (1 blocking) — the authorized re-gate catches the fix passes' own editing debt
+
+All CLAUDE-CAUGHT. The blocker, R6-F1, is a defect class no prior round could have seen because
+the fix passes CREATED it: round 4 ruled the result-row name field INCLUDED and the ruling was
+written into the capture-day gate — but three older name-EXCLUDING instructions (the Action
+row-contents line, the FRAME RULE, capture script step 2's crop list) were never harmonized,
+and step 2 still described the Revision-2 composite method that a blocked finding had
+eliminated. Four instructions, two answers: an operator running the written procedure had a
+75% chance of regressing to a previously blocked state — the name-hidden crop that hands
+competitors their attack back, or a composited screen inside the trust ad. The S2-class ring
+(caption/card character-rate over-subscription, an 8-setup coverage matrix that couldn't fit
+its own dusk window, a tub-practice spec error, the payoff's observable missing from its own
+frame spec, no in-flight record monitoring) plus an S1 sweep all shipped fixes in Revision 5.
+Compliance was CLEAN for the second consecutive round under the canonical rule text.
+
+**Reusable lessons (EXPERIMENTAL):**
+- **Every fix pass creates harmonization debt.** A ruling applied at one location of a
+  multi-location spec leaves the other locations asserting the old answer — grep for every
+  statement of the changed fact before closing the fix, or the document ends up giving the
+  operator a choice of defects. (This is the shot-card cross-field lesson from round 5, one
+  level up: cross-LOCATION consistency.)
+- **Measure burned-text legibility in characters per second (~15–17 cps comfort), not WPM.**
+  WPM flatters long words: a 9-word caption passed "180 WPM" while running ~23 cps. The QC
+  harness's WPM gates are for VOICE; on-screen text needs the cps metric.
+- **Coverage plans must fit their light window.** Alternates exist to feed a comparison gate;
+  if the window forces light drift across setups, the coverage contaminates the very
+  comparison it exists for. Rank, shoot best-first, sacrifice the tail.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic
