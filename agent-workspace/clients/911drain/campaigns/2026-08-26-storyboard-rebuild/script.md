@@ -1,15 +1,21 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Script — REVISION 11"
+title: "911 Drain — Storyboard Rebuild — Script — REVISION 12"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, script, revision-11]
+tags: [campaign, script, revision-12]
 ---
 
-# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 11
+# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 12
+
+**Revision 12 changes (the Owner's storyboard read → copy hierarchy; all lines Owner-picked
+from compliant options — changelog in `shotlist.md`):** VO close → **"Call 911 Drain — the
+number's on your screen."** (action first, 150 WPM) · S4 → **"This is 911 Drain."** · S5 →
+**"Back to normal."** · B → **"Still comparing?" / "The water isn't."** (two cards) · media
+plan: A cold lead, B second, C retargeting-only.
 
 **Revision 11 changes (round-11 hygiene; changelog in `shotlist.md`):** the three signed
 residual cells below read as signed, not pending (F11-2).
@@ -64,16 +70,18 @@ bonus layer. **Claim-free** — no price, no speed promise, no guarantee, no "se
 | 0.0–2.5 | Hook (A/B/C) | per variant, below | — | per variant |
 | 2.5–6.0 | S2 verify | "Every licensed AZ contractor is publicly checkable — state registrar." (onset 3.0s, **exits 7.0s** — R6-F2 tail ride) + info strap enters at **5.5s** (R6-F2 retime), runs through S5: "911 Drain LLC · ROC 366870 · 480-992-3541" (65%, black backing chip; licensed name form — R8-F3) | "Before you let anyone in — check them." | variant-scoped (round-9 F9-5; split per round-10 F10-2): **C** — key tap 6 + one confirm tap (taps 1–5 live in C1); **A/B** — the final completing tap(s) + one confirm tap only (S2 opens with the number completing); room tone |
 | 6.0–9.0 | S3 arrival | no NEW text — the caption completes its exit at 7.0s; the strap continues | **none (F11)** | door latch, evening street tone; no dialogue |
-| 9.0–11.5 | S4 work | "Licensed. Look us up." (round-4 F3) | — (the ratchet is the line) | auger drum ratchet, water starting to give |
-| 11.5–14.0 | S5 payoff | "Licensed. Verifiable." | "911 Drain." (11.5–13.3); CTA line J-cuts in at 13.4 (round-5 F-13) | tap opens, the pour, room tone resolving |
-| 14.0–17.0 | S6 endcard | "480-992-3541" (large) · "911 Drain LLC · ROC 366870 — look us up." (licensed name — R8-F3) · **real logo lockup only** (Owner ruling: no burned tagline — the 24/7 line lives inside the logo art); number + ROC line set from FRAME ONE (R7-F2) | "…the number's on your screen — look us up." (**ends by 16.6 — F17**) | bed resolves to one low note, then silence + 0.4s clean tail |
+| 9.0–11.5 | S4 work | "This is 911 Drain." (Owner-picked, Rev 12 — the brand on the unfakeable beat; 7.2 cps ✓) | — (the ratchet is the line) | auger drum ratchet, water starting to give |
+| 11.5–14.0 | S5 payoff | "Back to normal." (Owner-picked, Rev 12 — relief named at the relief beat; 6.0 cps ✓; frame-narration class, fallback on the shot card) | "911 Drain." (11.5–13.3); CTA line J-cuts in at 13.4 (round-5 F-13; deliberate brand echo with the close — the 13.3–13.4 breath separates them) | tap opens, the pour, room tone resolving |
+| 14.0–17.0 | S6 endcard | "480-992-3541" (large) · "911 Drain LLC · ROC 366870 — look us up." (licensed name — R8-F3) · **real logo lockup only** (Owner ruling: no burned tagline — the 24/7 line lives inside the logo art); number + ROC line set from FRAME ONE (R7-F2) | **"Call 911 Drain — the number's on your screen."** (Owner-picked, Rev 12: action verb first; **ends by 16.6 — F17**) | bed resolves to one low note, then silence + 0.4s clean tail |
 
 ## Variant hook text
 
 - **A:** "Backed up? Stop the water." (0.0–**1.5** — R6-F3 retime: 26 chars at the 15–17 cps
   comfort rate) → "Who do you let in?" (**1.5**–2.5, 5 words — F7; its exact 1.0s floor, a
   glance question; exits at the S2 cut)
-- **B:** "Still comparing plumbers?" (0.4–2.5 — a question, not a claim)
+- **B:** "Still comparing?" (0.4–1.4 — a question; 16.0 cps, inside the band) → "The water
+  isn't." (1.4–2.5 — exits at the S2 cut; 14.5 cps ✓; a statement about the ON-SCREEN water,
+  frame-narration class — Owner-picked, Rev 12: the aggressive B)
 - **C:** "Look them up first." (0.2–2.5 — round-4 F9: differentiated from A's question; a
   claim-2 imperative; the typing visual carries the code idea)
 
@@ -87,7 +95,7 @@ bonus layer. **Claim-free** — no price, no speed promise, no guarantee, no "se
 |---|---|---|---|---|---|
 | "Before you let anyone in — check them." | 7 | 3.5s | 120 | 175 | ✓ (slow anchor ✓ ≤155) |
 | "911 Drain." | 2 | 1.8s (11.5–13.3; 13.3–13.4 is the pause before the J-cut — R8-F9 label sync) | 67 | 175 | ✓ |
-| "…the number's on your screen — look us up." (CTA) | 8 | 3.2s (J-cut 13.4–16.6 — F17: the last word clears the final frame; round-5 F-13: start pulled to 13.4 so the em-dash pause has real slack) | **150** | **165** | ✓ |
+| "Call 911 Drain — the number's on your screen." (CTA, Rev 12 — action verb first) | 8 | 3.2s (J-cut 13.4–16.6 — F17: the last word clears the final frame; round-5 F-13: start pulled to 13.4 so the em-dash pause has real slack) | **150** | **165** | ✓ |
 | Rhythm ratio (fastest 150 / slowest 67 — round-9 F9-1: 63 was the stale pre-R8-F9 value) | — | — | ≈2.2 | ≥1.15 | ✓ |
 | Breaths | — | ≥0.40s held (the S2→S5 VO gap is 5.5s) | — | ≥0.40s | ✓ |
 
@@ -101,12 +109,13 @@ and the VO directs eyes to it. Flagged for Karl at the storyboard gate.
 |---|---|---|---|---|
 | A card 1 "Backed up? Stop the water." | 5 | 1.5s (R6-F3 retime) | ≥1s | ✓ floor — but **≈17.3 cps, just ABOVE the 15–17 ceiling** (R7-F5: structurally unfixable inside the 2.5s hook; ACCEPTED by Karl on the signed sheet, 2026-08-26 — F11-2 tense sync) |
 | A card 2 "Who do you let in?" | 5 | 1.0s + exits at the cut (its exact floor) | ≥1s | ✓ floor — but **≈18.0 cps, ABOVE the 15–17 ceiling** (R8-F1: residual (c), ACCEPTED by Karl on the signed sheet, 2026-08-26 — F11-2 tense sync) |
-| B line "Still comparing plumbers?" | 3 | 2.1s | ≥1s | ✓ |
+| B card 1 "Still comparing?" | 2 | 1.0s (0.4–1.4) | ≥1s | ✓ — 16.0 cps, inside the 15–17 band (Rev 12) |
+| B card 2 "The water isn't." | 3 | 1.1s + exits at the cut | ≥1s | ✓ — 14.5 cps (Rev 12) |
 | C line "Look them up first." | 4 | 2.3s | ≥1s | ✓ |
 | S2 caption (incl. "— state registrar.") | 9 (69 chars) | 4.0s (onset 3.0s, exits 7.0s — R6-F2 tail ride into S3) | ≥1s | ✓ floor — but **≈17.3 cps (69/4.0 — F10-3), just ABOVE the 15–17 ceiling** (R7-F5 wording fix: "at the edge" understated it; the beat is frozen (F-6) and the residual is ACCEPTED by Karl on the signed sheet, 2026-08-26 — F11-2 tense sync) |
 | Info strap "911 Drain LLC · ROC 366870 · 480-992-3541" (R8-F3 licensed form, ≈4.8 cps — F10-3) | 6 | 8.5s persistent (5.5–14.0s, R6-F2 onset retime) + 3.0s endcard = **11.5s total number-on-screen** (R6-F10c: the old "14.5s (S2→S5)" conflated the strap window with the total) | ≥2s license + phone | ✓ — on screen continuously for the ad's back 11.5s; VO "the number's on your screen" (13.4–16.6) stays true across the strap→endcard handoff |
-| S4 line "Licensed. Look us up." | 4 | 2.5s | ≥1s | ✓ |
-| S5 line | 2 | 2.5s | ≥1s | ✓ |
+| S4 line "This is 911 Drain." | 4 | 2.5s | ≥1s | ✓ — 7.2 cps (Rev 12) |
+| S5 line "Back to normal." | 3 | 2.5s | ≥1s | ✓ — 6.0 cps (Rev 12) |
 | Phone number | 1 string | 3.0s | ≥2s phone number | ✓ |
 
 ## Spoken-language rules applied

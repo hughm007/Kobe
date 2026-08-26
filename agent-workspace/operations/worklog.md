@@ -34,6 +34,35 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Revision 12: the Owner's hierarchy applied, every line his pick; round 12 runs
+
+**Did:** Karl chose "revise now, claim-free" with options-first approval, then picked all
+four recommended lines from the compliant candidates: CTA close **"Call 911 Drain — the
+number's on your screen."** (action verb first, 150 WPM), S4 **"This is 911 Drain."** (the
+brand on the unfakeable beat), S5 **"Back to normal."** (relief named at the relief beat;
+frame-narration class with a recorded fallback), B → two cards **"Still comparing?" / "The
+water isn't."** (the turn weaponizes the rim overflow; both inside ceilings). Media plan
+codified: A cold lead · B second cold cell · C retargeting/trust only. The sign-off sheet's
+cps sweep recomputed to eleven strings (the three signed residuals unchanged); two stale
+Bible hook-table cells caught and synced in the same pass (the C card had silently kept its
+Revision-2 text). All applied as **Revision 12**; **round 12 — the authorized re-gate for
+the copy change — launches on it**, then Karl re-reads.
+
+**Decided:** The verification thread survives the hierarchy shift by moving, not dying: the
+proof beat (S2) is untouched, and "look us up" lives on in the strap + the endcard ROC line
+while the VOICE now closes on the direct ask. V2 direction (full relief/urgency copy)
+recorded as unlockable only by Will's claims-sheet signature.
+
+**Learned:** The copy could take the Owner's hierarchy most of the way inside the three
+registered claims — via imperatives + name (the CTA), brand-on-frame statements (S4), and
+frame-narration (S5, B card 2). The claims discipline constrains WHAT may be asserted, not
+how directly the ad may ask.
+
+**Open:** Round 12 verdict → Karl's re-read → sign-off. Then the at-their-moment gates.
+Will's claims sheet remains the commercial bottleneck for v2.
+
+**Next:** Round 12; then the re-read ask.
+
 ## 2026-08-26 — The Owner's read: 8.3/10, sign-off withheld — the first OWNER-CAUGHT gate event
 
 **Did:** Karl read both artifacts in full and delivered a structured verdict: 8.3/10 overall

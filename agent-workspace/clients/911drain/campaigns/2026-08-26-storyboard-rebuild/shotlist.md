@@ -1,22 +1,32 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 11"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 12"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-11, all-practical]
+tags: [campaign, storyboard, shotlist, revision-12, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 11 (ALL-PRACTICAL)
+# Shotlist — "Look Us Up" pack — REVISION 12 (ALL-PRACTICAL)
 
-**Current state (Revision 11, 2026-08-26 — this intro narrates NOW):**
+**Current state (Revision 12, 2026-08-26 — this intro narrates NOW):**
 an all-practical, zero-generation 8-shot board; every burned and VO line inside the three
 registered claims or a question; the F4 record check **FULLY CLOSED** ("911 Drain LLC" exact
 match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
+
+## Revision 12 changelog (the Owner's storyboard read → copy hierarchy, all lines Owner-picked from compliant options, 2026-08-26; round 12 = the authorized re-gate)
+
+| Owner finding (read: 8.3/10, sign-off withheld) | Change |
+|---|---|
+| CTA "softer than a strong direct-response CTA" (7.6) | VO close → **"Call 911 Drain — the number's on your screen."** (action verb first, 150 WPM ✓); the burned "911 Drain LLC · ROC 366870 — look us up." stays as the endcard's trust line — verification keeps its step-4 slot |
+| "Not enough 911 Drain in the emotional center" (script 7.7 / emotion 7.3) | S4 → **"This is 911 Drain."** (the unfakeable footage carries the brand); S5 → **"Back to normal."** (relief named at the relief beat; frame-narration class, fallback recorded) |
+| "Room to make B much more aggressive" (B 8.4) | B → two cards: **"Still comparing?" / "The water isn't."** — the turn weaponizes the rim overflow; both inside ceilings, card 2 is frame-narration |
+| C "weakest thumb-stop; better as retargeting" (C 7.4) | **MEDIA PLAN codified: A leads cold · B second cold cell · C retargeting/trust, never cold lead** |
+| Structural root cause | The unsigned claims sheet bars relief/urgency claims — recorded; **Will's signature is the commercial bottleneck**; a v2 leans fully into pain → urgency → relief once it lands |
 
 ## Revision 11 changelog (round-11 finding → change; round 11 = **CONDITIONAL PASS, the third straight — zero S3/S4; every signed number independently re-verified true**)
 
@@ -232,8 +242,12 @@ Camera:      macro, counter level, locked; rim line diagonal; single fixed focus
              all-practical board)
 Lighting:    warm kitchen practicals, evening state — the cascade catches the practical
 Audio:       tap run, rim-cascade patter; house tone; no music
-Text:        "Still comparing plumbers?" (0.4–2.5, 42% — a question, not a claim; exits at the
-             S2 cut)
+Text:        TWO CARDS (Owner-picked, Revision 12 — the aggressive B): **"Still comparing?"**
+             (0.4–1.4, 42% — a question; 16 ch / 1.0s = 16.0 cps, inside the 15–17 band) →
+             **"The water isn't."** (1.4–2.5, exits at the S2 cut; 16 ch / 1.1s = 14.5 cps ✓
+             — a statement about the ON-SCREEN water, not the advertiser: the viewer is
+             comparing, the water is rising; frame-narration class, asserts nothing
+             substantiatable)
 Source:      PRACTICAL SHOOT — stoppered basin + running tap, towels below frame. NO generation
              path. If impossible: re-board + fresh Pass 1. **STOPPER RULE (round-5):** the
              pop-up plug is NEVER RESOLVABLE in any frame — at rim-level macro a visible
@@ -275,6 +289,11 @@ Angle:       risk removal — verify before you trust
 Motion:      TWO AXES (hero): subject travel (thumb across the keypad) + light change (screen
              refresh as the field populates)
 ```
+
+**MEDIA PLAN (Owner read, 2026-08-26 — Revision 12):** **A leads cold traffic** (Owner rank
+8.7) · **B is the second cold cell, now sharpened** (8.4 — "you don't have time to screw
+around") · **C runs as the retargeting/trust slot, NEVER cold lead** (7.4 — weakest
+thumb-stop; codifies the Bible's own "trust variant — never the lead").
 
 **Documented choice (kept from Revision 1):** variant C's loop closes on the endcard (the six
 digits resolve as ROC 366870). Deliberate — C targets the pre-need saver, whose payoff IS the
@@ -473,7 +492,10 @@ Camera:      locked with slight breathing; drum edge in frame (the tool is real 
              the shot card
 Lighting:    one hard work light from the left — honest, unglamorous
 Audio:       drum ratchet; then water beginning to give — the first "right" water sound
-Text:        "Licensed. Look us up." (42% — round-4 F3: claim 1 + a claim-2 imperative; passes the claims rule under both its readings)
+Text:        "This is 911 Drain." (42% — Owner-picked, Revision 12: the unfakeable footage
+             carries the brand name; claim 3 + a statement of the frame. 18 ch / 2.5s =
+             7.2 cps ✓. The verification imperative lives on in the strap and the endcard
+             ROC line — the beat's job shifts from proof-copy to brand-attributed proof)
 Source:      REAL CLIENT FOOTAGE REQUIRED — the "during" state is never generated. Media ask
              to Will's crew (PARKED until Karl re-opens it): phone rig, one job, ~30s usable,
              interior residential fixture; **OPERATOR PRESENT (adopted by Karl, in-session
@@ -532,7 +554,12 @@ Camera:      RE-SPECIFIED (round-5 F-3 — the counter-height behind-MCU could n
              "drain visibly swallowing water" check in the edit
 Lighting:    same warm kitchen practicals, evening state (F19)
 Audio:       tap opens (a healthy sound now), the pour into the plant pot, room tone resolving
-Text:        "Licensed. Verifiable." (42%)
+Text:        "Back to normal." (42% — Owner-picked, Revision 12: relief named at the relief
+             beat; 15 ch / 2.5s = 6.0 cps ✓. CLASSIFICATION: frame-narration — it describes
+             the visible scene (water draining, glass filled, plant watered), the same class
+             as "the number's on your screen"; it promises no outcome about any future job.
+             FALLBACK if the gate reads it as an outcome claim: "911 Drain. Verifiable." or
+             the Owner's named acceptance)
 Source:      PRACTICAL SHOOT — real person from behind, one take. NO generation fallback
              (deleted — F2). If impossible: no-person insert (the freely-draining basin CU,
              real) + fresh Pass 1
@@ -598,7 +625,7 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 | 6.0–9.0 | latch, evening street tone | bed sustains low (round-6 R6-F9: the F16 bed runs S2→S6 unbroken — these cells previously said "none", which a mix would obey, silently reopening F16) | — **(F11: no VO — the wait is the shot)** | safety |
 | 9.0–11.5 | drum ratchet, water giving | bed sustains low | — | competence |
 | 11.5–14.0 | tap, the pour, room tone resolving | bed sustains low | "911 Drain." (11.5–13.3) → CTA line J-cuts in at **13.4** (round-5 F-13: buys the CTA read 0.1s of slack — 150 WPM) | relief |
-| 14.0–17.0 | — | the bed resolves to one low note | "…the number's on your screen — look us up." (**ends by 16.6 — F17**) | resolve — end quieter than the feed |
+| 14.0–17.0 | — | the bed resolves to one low note | **"Call 911 Drain — the number's on your screen."** (Owner-picked, Revision 12: action verb first — the direct-response close; 8 words / 3.2s = 150 WPM ✓; **ends by 16.6 — F17**. Deliberate brand echo with the 11.5–13.3 "911 Drain." — the 13.3–13.4 breath separates them; mix judges the echo at the audio pass) | resolve — end quieter than the feed |
 
 **Sonic hook (variant C):** the six key taps, split taps 1–5 in C1 / tap 6 + confirm in S2
 (F10-2). Variants A/B open on water, not taps. Muted placements lose nothing.
@@ -626,11 +653,13 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   2026-08-26; the pause criterion stands** ☑
 - **NAMED-ACCEPTANCE RESIDUALS (sign-off sheet — every read above the board's own 15–17 cps
   comfort ceiling is routed to Karl, none concealed by a checkmark; R7-F5, completeness
-  restored round-8 R8-F1). Full sweep, every burned string — all ten — board counting method
-  (spaces + punctuation): B1 11.9 · C1 8.3 · S4 8.4 · S5 8.4 · strap ≈4.8 (F10-3) · endcard ROC line
-  13.3 (F11-6 precision sync) · endcard phone "480-992-3541" ≈4.0 (added round-9 F9-2 — the tenth string; the sweep's
-  completeness sentence is now literally true) — under ceiling; the THREE above-ceiling reads
-  are (a)–(c) below:**
+  restored round-8 R8-F1). Full sweep, every burned string — **all ELEVEN after Revision 12's
+  Owner-picked copy** (B now carries two cards; S4/S5 lines replaced) — board counting method
+  (spaces + punctuation): B card 1 "Still comparing?" 16.0 (1.0s — inside the 15–17 band) ·
+  B card 2 "The water isn't." 14.5 (1.1s) · C1 8.3 · S4 "This is 911 Drain." 7.2 · S5 "Back
+  to normal." 6.0 · strap ≈4.8 (F10-3) · endcard ROC line 13.3 (F11-6) · endcard phone
+  "480-992-3541" ≈4.0 — under ceiling; the THREE above-ceiling reads are (a)–(c) below,
+  unchanged by Revision 12:**
   (a) S2 caption ≈ **17.3 cps** over 4.0s (69 ch / 4.0s = 17.25 — F10-3 rounding fix; still just ABOVE the ceiling) — no trim exists that keeps
   "licensed" + the venue. Context for an informed signature (round-8 R8-F5): the caption's
   final 1.5s (5.5–7.0) is simultaneously contested by the strap's entrance at 5.5, the S3
