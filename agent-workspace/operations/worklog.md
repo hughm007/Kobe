@@ -34,6 +34,32 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — ✅ SIGNED. The storyboard gate is taken; the campaign leaves paper
+
+**Did:** Karl signed the two-board package — **CONTROL Rev 18 + CHALLENGER V4** — after two
+storyboard reads, fifteen isolated adversarial gate rounds, one Direct-Response advisory, and
+a final verification round that certified every published number true. Recorded in the
+sign-off sheet (with the post-signature gates enumerated), the Bible status header, the
+approval-status row (**STORYBOARD SIGNED**), and the decision log. **The first campaign ever
+run through this pipeline reached sign-off with $0 spent, zero credits, and nothing
+published.**
+
+**Decided:** Sign-off is not a budget — the launch spend stays a separate explicit decision.
+Any change to a signed board re-gates before spend (standing rule, unchanged).
+
+**Learned:** The whole arc is already captured — the OWNER-CAUGHT entries, the DR-lens
+advisory, and the promoted learning ("correctness is the floor, conversion is the objective")
+that turned one campaign's blind spot into a permanent system change.
+
+**Open (capture phase, in order):** Will's S4 job — operator-present, kitchen bias,
+acceptance checklist judged by Karl → pre-lock tests (A1 rig + water-read · S3 cold-read ·
+S2 capture-day mock a–e · challenger insert-only cold-read) → the practical shoot afternoon
+→ capture-window signatures (geography seam vs the direct cut; unbriefed-plumber read) →
+pre-edit-lock checks 1–4 → 7-day record re-verify → call-qualification tracking → launch go.
+Will's claims sheet remains the v2 copy unlock.
+
+**Next:** schedule Will's S4 job and the shoot afternoon.
+
 ## 2026-08-26 — Round 15 certifies the package; everything now waits on one word
 
 **Did:** Karl signed D-1 (the plumber wording stands on both cuts, registrar context read —

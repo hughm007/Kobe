@@ -27,7 +27,7 @@ tags: [campaign, bible, rebuild, baseline]
 | **Objective** | Calls to 480-992-3541 from East Valley homeowners; secondary: number saved |
 | **KPI + target** | Calls per 1,000 impressions — **no numeric target set before launch data exists (nothing has ever been published for this client)** |
 | **Budget (credits / $)** | **0 credits spent — paper stage.** Production estimate in §10 |
-| **Approval status** | **CONCEPT APPROVED** (2026-08-26) — storyboard gate NOT yet taken |
+| **Approval status** | **STORYBOARD SIGNED** (Karl/Wyatt, 2026-08-26) — the two-board package: CONTROL Rev 18 + CHALLENGER V4. Gate taken; capture planning open. Spend still requires an explicit launch go |
 
 ## STATUS HEADER
 
@@ -136,10 +136,15 @@ both cuts** (Revision 17, signature-only), and he chose **one final verification
 his signature — and round 15 delivered it: CONDITIONAL PASS on both boards, zero S3/S4,
 every number recomputed true, the D-1 signature verified honest — "the package you are
 about to sign is true." Its four syncs are applied (challenger V4 · control Rev 18 ·
-script Rev 18). THE TWO-BOARD PACKAGE NOW AWAITS THE OWNER'S ONE-WORD "SIGNED" — which
-locks both boards and opens capture planning: Will's S4 job (operator-present, kitchen
-bias), the S2/S3/A1 pre-lock gates, the practical shoot afternoon, the pre-edit-lock
-checks, call-qualification tracking before launch, and no spend without his explicit go.** Still at their moments: geography seam at capture · name-form primary check
+script Rev 18). **✅ THE OWNER SIGNED (Karl/Wyatt, 2026-08-26,
+in-session): the two-board package — CONTROL Rev 18 + CHALLENGER V4 — is APPROVED and the
+storyboard gate is TAKEN.** The campaign leaves paper for the first time. Next, in order:
+Will's S4 job (operator-present, kitchen bias, acceptance checklist judged by Karl) → the
+pre-lock tests (A1 rig + water-read · S3 cold-read · S2 capture-day mock · challenger
+insert-only cold-read) → the practical shoot afternoon → the capture-window signatures →
+pre-edit-lock checks 1–4 → the 7-day re-verify → call-qualification tracking → **the launch
+spend, which still needs an explicit go: sign-off is not a budget.** Any change to a signed
+board re-gates before spend (standing rule).** Still at their moments: geography seam at capture · name-form primary check
 (LLC default stands) · S2 mock · S3 cold-read · A1 rig test · pre-edit-lock checks · the S4
 media ask (operator-present). Kobe = CANNOT ASSESS (§13, unchanged — nothing to watch until
 footage exists).
@@ -701,6 +706,7 @@ claims-sheet item 1 when Will signs.
 | 2026-08-26 | **Round-5 design closures (delegated):** S5 camera = elevated over-shoulder into the basin (+ locked high-angle drain insert as safety coverage); work-order-on-clipboard as S3's second marker; caption venue restored per F-4; CTA J-cut at 13.4 | Claude (delegated design authority) | The payoff's proof must be visible in its own frame (F-3); the clipboard work order is the universal "scheduled professional" semiotic, real-printable, credential-free; the venue line is claim-2's own registered tail |
 | 2026-08-26 | **Standing gate authorization:** fix-and-re-gate cycles run WITHOUT per-round asks, capped at **3 more rounds (8–10)**; stop early on PASS/CONDITIONAL or on non-convergence (findings stop shrinking); every verdict recorded + pushed; result reported to Karl either way | Owner (Wyatt), in-session | Blocks converging hard (2 → 1 → 1 cell) with zero content defects; per-round asks cost more attention than they protect at $0/zero credits |
 | 2026-08-26 | **Owner read #2: 8.5/10, sign-off withheld — the performance-challenger directive.** Rulings executed: (a) **two spines authorized** — the trust-first control AND a problem/solution-first CHALLENGER from the same assets (`challenger-board.md`), the market deciding on his metric chain (3-sec hold → 25% view → CTR → calls → CPQL), S3 cut from the challenger as its pressure test, drain-first relief as the S5 test; (b) **humanized caption Owner-picked**: "You can check your plumber's license yourself — state registrar." (16.0 cps — cures signed residual (a)); (c) challenger work card = the gated "This is 911 Drain."; (d) **Kobe system corrected by directive**: Performance Challenger Rule (playbook, advisory tier) + creative-critic Direct-Response lens + learning promoted at occurrence #1 | Owner (Wyatt) — direction and both copy picks; Claude — drafting and placement | "Correctness is the floor. Conversion is the objective." Twelve gate rounds found zero commercial-structure defects because no gate was asking the question |
+| 2026-08-26 | **✅ STORYBOARD SIGNED — the two-board package (CONTROL Rev 18 + CHALLENGER V4)** — after two reads, fifteen gate rounds, and a final verification round that certified the package true. The gate is taken; capture planning opens; the launch spend remains a separate explicit decision | Owner (Wyatt), in-session | The first campaign ever run through this pipeline reached sign-off with zero credits spent and nothing published |
 | 2026-08-26 | **D-1 SIGNED + the final-verification choice:** the plumber-for-contractor audience-language mapping ACCEPTED on both cuts by name, registrar context read (Rev 17, signature-only; the contractor fallback stays as history); and one last verification round (round 15) chosen before the sign-off — consistent with "a fix is a change, and changes regress" | Owner (Wyatt), in-session | The audience talks about plumbers; the record talks about contractors; the sheet now shows a human chose the bridge knowingly |
 | 2026-08-26 | **Revision 13 (round-12 fixes, all seven):** the dwell table's eleventh row; the honest four-class compliance taxonomy in the intro + self-check; the **platform copy gate** (ad-account text = board-gated strings verbatim, or re-gate); the **S3↔S4 person-seam closed** (accepted-take sleeve/glove/skin reads recorded → S3 wardrobe chosen compatible); the J-cut-gap wording; "Back to normal." bound to the drain-visibility check; the S6 cell at 13.3 | Claude (paper closures; delta-check verification at the Owner's discretion per the round-12 verdict) | Round 12 passed every Owner-picked line; these fixes protect the classifications it granted |
 | 2026-08-26 | **Revision 12 — the copy-hierarchy revision, every line Owner-picked from compliant options:** CTA close → "Call 911 Drain — the number's on your screen." (action verb first; the burned ROC trust line keeps verification at step 4); S4 → "This is 911 Drain."; S5 → "Back to normal." (frame-narration class, fallback recorded on the card); B → "Still comparing?" / "The water isn't."; **media plan codified: A cold lead · B second cold cell · C retargeting/trust only.** The relief/urgency ceiling stays where the unsigned claims sheet puts it — v2 direction recorded for post-signature | Owner (Wyatt) picked each line; Claude drafted the compliant options | The Owner's hierarchy (pain → urgency → relief → trust-proof → action) applied as far as today's three registered claims legally allow |

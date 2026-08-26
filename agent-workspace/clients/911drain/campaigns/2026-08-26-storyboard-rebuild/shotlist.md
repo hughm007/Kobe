@@ -804,9 +804,15 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   VERBATIM (registered-claim copy or questions); any NEW platform copy re-gates through
   Pass 1 before publish. In particular, "Back to normal." NEVER appears on any surface
   without the frame it narrates — off-frame it becomes the barred outcome claim ☐
-- Karl has seen the storyboard: **TWO READS, both 2026-08-26, sign-off still ☐ (narration
-  synced round-14 R14-K3).** Read #1: 8.3/10 → the copy-hierarchy revision (executed,
-  Rev 12–13). Read #2: 8.5/10 → the performance-challenger directive (executed — the
-  humanized caption, `challenger-board.md`, the Kobe DR lens; production design endorsed at
-  9.4). The decision lines above stay signed; what remains is the sign-off itself, now over
-  the TWO-BOARD package (control + challenger, the market deciding between them) ☐
+- Karl has seen the storyboard: **✅ SIGNED — Karl (Wyatt), 2026-08-26, in-session.** Two
+  reads (8.3/10 → the copy-hierarchy revision; 8.5/10 → the performance-challenger
+  directive), fifteen adversarial gate rounds, and a final verification round that certified
+  the package true. **The sign-off covers the TWO-BOARD package: this CONTROL cut (Rev 18) +
+  the CHALLENGER cut (`challenger-board.md` V4), with the market deciding between them on
+  the Owner's metric chain.** The storyboard gate is TAKEN; the campaign moves to capture.
+  **Still gated after sign-off, each at its named moment:** the pre-lock tests (A1 rig +
+  water-read · S3 cold-read · S2 capture-day mock a–e · challenger insert-only cold-read) ·
+  the capture-window signatures (geography seam vs the direct cut; unbriefed-plumber read) ·
+  the S4 acceptance checklist judged by Karl · pre-edit-lock checks 1–4 · the 7-day record
+  re-verify · call-qualification tracking before launch · **and the launch spend itself,
+  which needs Karl's explicit go — sign-off is not a budget**
