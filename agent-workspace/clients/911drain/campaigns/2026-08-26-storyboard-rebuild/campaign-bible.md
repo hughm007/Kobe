@@ -95,13 +95,19 @@ AUTHORIZED.** **Round 11 (Revision 10): CONDITIONAL PASS — the third straight,
 every signed number on the sheet independently re-verified true; the pack confirmed to
 carry NO high-risk shot.** Revision 11 applies its seven syncs (one S2: the geography-seam
 moment stated once everywhere — at the capture window; six S1 hygiene). **ELEVEN ROUNDS
-COMPLETE: 8 blocks converging 7→1 S3, then 3 conditional passes with shrinking registers.
-The board is done moving on paper. What remains is human: (1) KARL READS THE STORYBOARD AND
-SIGNS — the final gate before the shoot afternoon is scheduled; (2) at their moments — the
-geography-seam signature at capture, the optional name-form primary check (LLC default
-stands), the S2 capture-day mock, the S3 cold-read test, the A1 rig test, the pre-edit-lock
-checks, Will's claims sheet, and the S4 media ask (operator-present).** Kobe = CANNOT
-ASSESS (§13, unchanged — nothing to watch until footage exists).
+COMPLETE: 8 blocks converging 7→1 S3, then 3 conditional passes with shrinking registers.**
+**THE OWNER'S STORYBOARD READ IS IN (2026-08-26) — the first OWNER-CAUGHT gate event: 8.3/10
+overall (production 9.2 · trust 9.5 · visuals 9.0 · script 7.7 · CTA 7.6 · emotional impact
+7.3). SIGN-OFF WITHHELD pending a copy-hierarchy revision: the verification risks becoming
+the hero instead of 911 Drain solving the emergency; wanted hierarchy = pain → urgency →
+relief → trust-proof → action, with a direct-response CTA. Hook ranking A 8.7 / B 8.4 (make
+it more aggressive) / C 7.4 (retarget, don't lead cold). Root cause identified: the unsigned
+claims sheet bars all relief/urgency claims, which relocates the ad's emotional center to
+trust by default — the fastest lift is Will's signature.** Direction decision pending (see
+decision log). Still at their moments: geography seam at capture · name-form primary check
+(LLC default stands) · S2 mock · S3 cold-read · A1 rig test · pre-edit-lock checks · the S4
+media ask (operator-present). Kobe = CANNOT ASSESS (§13, unchanged — nothing to watch until
+footage exists).
 
 Surfaced by name (LB51 — never accepted silently): shot S4's **real-footage requirement**
 stands (the "during" state is never generated — the media ask to Will's crew, with the shot
@@ -642,6 +648,7 @@ claims-sheet item 1 when Will signs.
 | 2026-08-26 | **Round-5 S3 marker (F-1):** badge conditional removed — research (Owner-directed) found **no badge or branded uniform exists** anywhere findable (live site egress-blocked but unindexed; zero social/web presence; none in the asset inventory — NOT VERIFIED offline); marker set = real plain **plumbing work shirt** + real printed **work order**; exact look planned WITH Karl at sign-off. **Fix-and-re-gate-once AUTHORIZED** | Owner (Wyatt), in-session (research directed; shirt fallback his call) | F-1 was a fact question; the marker set fabricates nothing — trade workwear is bought, the work order is the company's own real document |
 | 2026-08-26 | **Round-5 design closures (delegated):** S5 camera = elevated over-shoulder into the basin (+ locked high-angle drain insert as safety coverage); work-order-on-clipboard as S3's second marker; caption venue restored per F-4; CTA J-cut at 13.4 | Claude (delegated design authority) | The payoff's proof must be visible in its own frame (F-3); the clipboard work order is the universal "scheduled professional" semiotic, real-printable, credential-free; the venue line is claim-2's own registered tail |
 | 2026-08-26 | **Standing gate authorization:** fix-and-re-gate cycles run WITHOUT per-round asks, capped at **3 more rounds (8–10)**; stop early on PASS/CONDITIONAL or on non-convergence (findings stop shrinking); every verdict recorded + pushed; result reported to Karl either way | Owner (Wyatt), in-session | Blocks converging hard (2 → 1 → 1 cell) with zero content defects; per-round asks cost more attention than they protect at $0/zero credits |
+| 2026-08-26 | **Owner storyboard read: 8.3/10, SIGN-OFF WITHHELD** — production system endorsed (9.2; "I would not throw this storyboard away"), copy hierarchy challenged (script 7.7 / CTA 7.6 / emotional impact 7.3): wanted pain → urgency → relief → trust-proof → action; "look us up" softer than a direct-response close; B sharpened; C to retargeting. Recorded verbatim-faithfully in the production log as the campaign's first OWNER-CAUGHT gate event | Owner (Wyatt), in-session | The gates score risk and compliance, not persuasion — this read IS the taste gate at paper level |
 | 2026-08-26 | **Revision 11 (round-11 syncs, all seven):** the geography-seam moment stated once everywhere (at the capture window, before non-kitchen footage enters the edit — F11-1); signed-tense, post-adoption-tense, above-ceiling wording, ruling-attachment, and precision syncs (F11-2–F11-6); the round-4 changelog pointer (F11-7). Round 11 itself: CONDITIONAL PASS ×3, every signed number re-verified true | Claude (mechanical closures; the settled framings were the Owner's) | The board is done moving on paper — the remaining gates are human moments |
 | 2026-08-26 | **Sign-off sheet rulings (Revision 10):** residuals (a)–(c) **ACCEPTED** with the 1.5s occlusion context read · **S4 operator-present ADOPTED** (the gate's recommendation — a briefed operator or Karl at the job runs the phone; S4 HIGH → MEDIUM, no high-risk shot remains) · **weekly in-flight record re-check ACCEPTED** with the standing pause criterion · **round 11 AUTHORIZED** as the verification round for Revision 9's fixes + these rulings | Owner (Wyatt), in-session | All four were the gate's own recommended options; the acceptance instrument is signed on true numbers |
 | 2026-08-26 | **Revision 9 (round-10 fixes, all three):** the S2 shot card's Audio cell synced to the two scoped sound tables (F10-1 — the third location); variant C's tap split specified across the C1→S2 seam, taps 1–5 + hesitation / tap 6 + confirm (F10-2); roundings corrected to strap 4.8 · caption 17.3 (F10-3). Applied AFTER the grant's last round — formally unverified by a gate; routed to Karl with the sign-off package | Claude (mechanical closures; the verification decision is Karl's) | Two consecutive conditional passes ended the loop; the three fixes are one-cell syncs of already-verified intent |

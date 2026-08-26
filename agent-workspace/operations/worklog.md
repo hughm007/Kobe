@@ -34,6 +34,30 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — The Owner's read: 8.3/10, sign-off withheld — the first OWNER-CAUGHT gate event
+
+**Did:** Karl read both artifacts in full and delivered a structured verdict: 8.3/10 overall
+— production system 9.2 ("I would not throw this storyboard away"), trust 9.5, visuals 9.0,
+but script 7.7, CTA 7.6, emotional impact 7.3. His finding: the verification risks becoming
+the hero instead of 911 Drain solving the emergency; wanted hierarchy pain → urgency →
+relief → trust-proof → action with a direct-response close; hook ranking A 8.7 / B 8.4
+(sharpen it) / C 7.4 (retargeting, not cold lead). Recorded in the Bible (status header +
+decision log), the shotlist self-check, and the production log as the campaign's first
+OWNER-CAUGHT entry — with the structural root cause named: the unsigned claims sheet bars
+relief/urgency claims, which relocates the emotional center to trust by default.
+
+**Decided:** Sign-off withheld = the read gate did its job. Response options prepared for
+Karl (claim-free copy-hierarchy revision now / claims-sheet push to Will to unlock the real
+relief copy / ship the trust ad as v1). Any copy change re-gates.
+
+**Learned:** (production log) The adversarial gate cannot score persuasion — route every
+storyboard through a human taste read before sign-off. An unsigned claims sheet relocates an
+ad's emotional center; surface that trade at concept stage.
+
+**Open:** Karl's direction pick; then the copy revision + one re-gate + his re-read.
+
+**Next:** Karl chooses the path; Will's claims sheet just became the commercial bottleneck.
+
 ## 2026-08-26 — Round 11 verifies everything; the paper phase is DONE — the board waits only on Karl's read
 
 **Did:** Karl answered the whole sign-off package on the gate's recommended options

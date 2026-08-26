@@ -675,8 +675,9 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   promoted from the historical R2-F17 row to a live line):** no "sewer" or "commercial" in
   captions, file names, ad-account text fields, or platform metadata — checked by whoever
   fills the ad-account fields, at publish time ☐
-- Karl has seen the storyboard: **PENDING — the sign-off sheet's decision lines are now
-  signed (residuals a–c accepted · S4 operator adopted · weekly re-check accepted, all
-  in-session 2026-08-26) and round 11, the Owner-authorized verification round, gates this
-  Revision 10. What remains for full sign-off: Karl reads the storyboard itself and says so,
-  plus the at-their-moment lines (name-form primary check; geography seam at capture)** ☐
+- Karl has seen the storyboard: **READ, 2026-08-26 — verdict 8.3/10, SIGN-OFF WITHHELD**
+  pending a copy-hierarchy revision (pain → urgency → relief → trust-proof → action; a
+  direct-response close; B sharpened; C to retargeting — the Owner's read, recorded in the
+  Bible decision log and the production log as OWNER-CAUGHT). The decision lines above stay
+  signed; the production plan is endorsed (9.2). A copy revision is a board change and
+  re-gates ☐

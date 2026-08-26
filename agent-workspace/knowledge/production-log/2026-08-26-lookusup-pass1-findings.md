@@ -247,6 +247,37 @@ last register entirely syncs). Total: ~50 distinct defects caught pre-spend at $
   ten that re-read.** Round 11 re-counted characters and re-built the risk table from
   scratch; that is why its confirmations mean something.
 
+## OWNER-CAUGHT — the storyboard read (2026-08-26): the ad's emotional hierarchy
+
+**The first OWNER-CAUGHT entry of the campaign, and the highest-value one (LB38).** Karl read
+both artifacts and scored the package 8.3/10 — production system 9.2, trust/credibility 9.5,
+visual storytelling 9.0, but script 7.7, CTA 7.6, emotional impact 7.3. His finding, in
+substance: **the production thinking is stronger than the advertising copy; the license
+verification risks becoming the hero instead of 911 Drain solving the emergency.** The
+homeowner's actual state is "my drain is backed up — can these guys fix it?", and the board's
+hierarchy reads pain → trust → verification → trust → trust → CTA where a commercial ad wants
+**pain → urgency → relief → trust-proof → action**. "Look us up" is softer than a
+direct-response CTA. Hook ranking: A 8.7 (lead — agrees with the board) · B 8.4 ("room to
+make this variant much more aggressive"; possibly the strongest visual) · C 7.4 (weakest
+thumb-stop; better as retargeting/trust than cold traffic). He explicitly endorsed: the
+story spine, the all-practical evidence posture ("not 'we're trustworthy' — 'check us'"),
+the muted-first design, and the unvoiced phone number ("good advertising judgment").
+
+**Why eleven machine rounds missed it:** the Skeptic's four lenses attack risk, compliance,
+and executability — none of them scores persuasion; and Kobe (the taste gate) = CANNOT
+ASSESS with nothing watchable. The Owner just performed Kobe's job at paper level. **And the
+root cause is structural, not taste:** the copy is trust-heavy because the claims discipline
+bars every relief/urgency claim while the claims sheet is unsigned — "911 Drain fixes this"
+is a substantiatable capability claim. The clinical script is the only legal script today.
+The commercial ceiling Karl is pointing at lifts substantially the day Will signs the sheet.
+
+**Reusable lessons (EXPERIMENTAL):**
+- **The adversarial gate cannot score persuasion — route every storyboard through a human
+  taste read BEFORE sign-off, and treat its verdict as a gate, not a comment.**
+- **An unsigned claims sheet doesn't just remove lines — it relocates the ad's emotional
+  center.** When copy must live inside trust-claims only, trust becomes the hero by default.
+  Surface that trade to the owner explicitly at concept stage, not at sign-off.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic
