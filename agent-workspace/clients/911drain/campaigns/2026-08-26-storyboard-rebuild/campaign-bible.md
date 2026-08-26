@@ -42,6 +42,12 @@ hard stop at Gate 1.5.
 | 2 | Concept + pack approval (survivor hooks) | §3 |
 | 3 | Storyboard approval + budget → would unlock Gate 1.5 | §6, `shotlist.md`, §10 |
 
+**Gate state (2026-08-26, dual gate run at paper stage):** Kobe = **CANNOT ASSESS — DELIVERY
+BLOCKED** (§13) · Skeptic Pass 1 = **BLOCK, 7 × S3** (§14). The storyboard as drafted does
+**not** proceed to generation even if decision 3 were taken — the S3s close first, then a
+**fresh Pass 1** re-runs on the revised board. Decision 3 therefore reads: approve the
+*direction*, and authorize the revision pass that works §14's queue.
+
 Also surfaced by name (LB51 — never accepted silently): **one `NO REFERENCE FOUND — HIGH RISK`
 entry** in `shotlist.md` shot S5, and the **real-footage requirement** on shot S4 (the "during"
 state is never generated — this is the media ask to Will's crew).
@@ -438,12 +444,41 @@ reasoning. Both gates must pass; a score never argues down a severity.*
 
 | Pass | When | Result | Highest severity |
 |---|---|---|---|
-| 1 — storyboard | before any generation spend | PENDING — running at paper stage | |
+| 1 — storyboard | before any generation spend | **BLOCK** (run 2026-08-26, blind — no production reasoning supplied, stated in its own disclosure) | **S3 × 7** |
 | 2 — candidate footage | before the edit locks | NOT RUN — no footage exists | |
 | 3 — finished ad | before delivery | NOT RUN — no ad exists | |
 
-**Findings (S3 or S4 blocks):** —
-**Re-run after repair:** ☐
+**Findings (S3 or S4 blocks) — the seven S3s, each blocking until resolved:**
+1. **S3 arrival shot rated EXTREME generation risk** — two interacting generated humans,
+   near-camera hand contact, "non-readable face" asserted not enforceable, generated push.
+   Forced restructure: homeowner-POV, one figure, locked camera, no spoken word.
+2. **Generated photo-ID badge = generated brand mark + fabricated credential**, contradicting
+   the shot's own Source field — in an ad about verifying credentials.
+3. **"Local." (S5 text) is a fourth claim** — the register allows exactly three (licensed ·
+   checkable · phone) and the claims sheet is unsigned. Cut it or register it.
+4. **24/7 contradiction** — the only permitted tagline says 24/7; the board shows an evening
+   emergency and a hard-daylight "morning" arrival. Fix is free: evening arrival, cut "morning."
+5. **The live ROC record is unverified** — legal-name match to "911 Drain LLC", complaint rows,
+   ACTIVE status, and the class-line "sewer" leak vector must be verified from actual pixels
+   before approval; scripted capture + crop plan required.
+6. **S4 depends on footage that does not exist**; the aftermath-only contingency is NOT
+   pre-approved — if triggered, the changed board re-gates through a fresh Pass 1.
+7. **AIGC labeling posture undecided** for a trust-premise ad carrying synthetic humans on
+   platforms that require labels — decide before spend; the forced changes shrink the synthetic
+   surface toward zero and are the real remedy.
+
+Plus S2-class findings to address or knowingly accept individually (A1 HIGH risk → practical or
+split-class; S5 HIGH → practical/simplified, steam physics error, 1.5s payoff crush; strike C1's
+"AI hand" escape hatch; A1 text density; 5.5s muted text blackout across S3–S4; "Every Arizona
+contractor has a number" → insert **licensed**; soften C1's "exactly"; reword S3 VO; specify
+safe-area Y-positions per placement; ROC branding never shares a frame with the client logo;
+two story seams; van conditional → decision now, default out of frame) and S1 notes ("hob"/
+kettle Britishism, staged-water read, expect a "911" platform flag). Full verbatim attack:
+baseline report appendix.
+
+**Re-run after repair:** ☐ — required; the revised storyboard resubmits for a **fresh Pass 1**
+before it earns a single credit. Skeptic's own close, kept: *"The concept does not need
+rescuing; the board needs the seven S3s closed."*
 
 ---
 

@@ -34,6 +34,40 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — First campaign ever run: the 911 Drain baseline, blocked for the right reasons
+
+**Did:** Ran the 911 Drain storyboard-level rebuild through the whole pipeline as a **paper
+baseline — zero credits.** First: proved by full-history repo forensics that no campaign has ever
+run and no campaign/QC code has ever existed (the four QC scripts are cited 49× and were never a
+file in any commit; the "fails the gate on record" v8 evidence is prose only, no video, no data).
+Then executed everything that exists: campaign Bible instantiated at
+`clients/911drain/campaigns/2026-08-26-storyboard-rebuild/` · Hook Tournament (10 candidates →
+isolated Skeptic attack → **3 survivors**, two candidates killed at S4 including one carrying a
+factually false superiority line) · pack spine + claim-free timed script · **ten-field storyboard**
+(7/8 Real-refs cited openable; one honest `NO REFERENCE FOUND — HIGH RISK`) · then the **dual
+gate, both isolated**: Kobe cold = **CANNOT ASSESS — DELIVERY BLOCKED** (contract applied exactly,
+zero scores emitted) and Skeptic Pass 1 = **BLOCK, 7 × S3**. All four behavior tests (6a–6d)
+**PASS** on real artifacts. Full record: `2026-08-26-baseline-report.md` in the campaign folder.
+
+**Decided:** Nothing self-approved — the three owner gates are parked in the Bible's Status
+Header with recommendations. The storyboard stays frozen as-attacked (baseline integrity); the
+revision queue lives in Bible §14 and re-gates through a fresh Pass 1.
+
+**Learned:** The gates work better isolated than the author does alone: the Skeptic caught a
+generated-badge/Source self-contradiction, an unregistered fourth claim ("Local."), a
+24/7-tagline-vs-daylight-arrival contradiction, and that "Every Arizona contractor has a number"
+is false (handyman exemption) — all in artifacts I wrote carefully. Also structural: A1/B1/S5 are
+brand-free domestic actions that should be shot practical, not generated — "no client footage"
+justifies AI only for shots that need the client.
+
+**Open:** The bottleneck is the **four missing QC scripts** — check 29's own text blocks all
+generation spend until the harness exists, independent of every other fix. Then: claims-sheet
+signature (Will), the S4 media ask (real "during" footage), brand-asset file locations, AIGC
+labeling posture, and Karl's three parked decisions.
+
+**Next:** Karl reads the baseline report and takes the parked decisions; then the revision pass
+works §14's queue → fresh Skeptic Pass 1; scripts get pasted or rebuilt before any credit.
+
 ## 2026-08-26 — v4.0 read in full and consolidated: its content, the skills' structure
 
 **Did:** Karl pasted the real `servicepow-ad-producer` SKILL.md — **v4.0, 631 lines, 2026-08-20**.
