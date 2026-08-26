@@ -1,19 +1,44 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 2"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 3"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-2, all-practical]
+tags: [campaign, storyboard, shotlist, revision-3, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 2 (ALL-PRACTICAL)
+# Shotlist — "Look Us Up" pack — REVISION 3 (ALL-PRACTICAL)
 
-**Revision 2 (2026-08-26)** works the second Pass-1 attack (F1–F19, Bible §14). The three
-blockers all pointed one direction, so the board takes it fully: **the pack is now
-zero-generation.** Every shot is a practical shoot, a real screen capture, or a real-file
+**Revision 3 (2026-08-26)** works the third Pass-1 attack (round-3 findings, Bible §14) on top
+of Revision 2's zero-generation posture (confirmed correct by round 3). Round-3 closures: the
+two queued copy lines are **replaced with registered-claim copy** (F2 closed without new
+sign-off, via the round's own alternative); the S2 screen **composite is eliminated** — the
+live public page is filmed in camera, with a second locked ECU insert for legibility; C1
+reframes to the input field only (F1); S4 re-boards to real trade practice (F3); and the F4
+name check is **half-complete: the record shows "911 Drain LLC", exact match (owner eyeball,
+2026-08-26)** — status/complaint rows still OPEN.
+
+## Revision 3 changelog (round-3 finding → change)
+
+| Finding | Change |
+|---|---|
+| **F2 (blocked)** | Both queued lines replaced with registered-claim copy — C1 card → **"Who are you letting in?"** (pure question); S2 caption → **"Any licensed Arizona contractor is publicly checkable — state registrar."** (strictly claim 2). The registration queue is empty; no copy now waits on a signature |
+| **F4 (blocked)** | Name half **CONFIRMED** — "911 Drain LLC", exact match (owner, 2026-08-26). Status/complaints half OPEN — blocks *spend*, not this revision |
+| **F1 + F6 (blocked)** | C1 reframed to the **search input field only**, ROC branding verifiably out of frame; S2's insert is the only view of the result row; **the post-tap hold ends ON the tap frame** — the detail page never renders |
+| **S2 forced changes (blocked)** | Composite **eliminated**: the real live page filmed on the real phone; legibility from a **second locked-off ECU insert** of the same real screen; crop mock = capture-day gate; S2 opens on the full phone-in-hand frame so A/B arrive legible cold |
+| **F3 (blocked)** | S4 re-boarded: **the frame follows the real job** — under-sink trap frame for a kitchen job, or tub/shower top-down water-ring frame; geography acceptance pre-signed at sign-off; one-page shot card with a minimum-acceptable spec; **"no visible waste matter"**; capture-first scheduling |
+| F7 | A1 card 2 → "Who do you let in?" (5 words, 1.2–2.5s) |
+| F9/F13 | S3 [Text] field corrected: the persistent badge continues through S3 |
+| F11 | A1 physics honest: **slow glugging drawdown** after shutoff — a partly blocked drain drains slowly and loudly; it does not sit sealed and bubble |
+| F12 | B1's post rack **dropped** — subject travel + light change carry the shot |
+| F14 | One string everywhere: **"ROC 366870"** |
+| F15 | Rule reworded: no ROC **branding, seal, or identity imagery** in any frame; the cropped result-row insert is the single sanctioned exception |
+| F16 | The Sound Spine establishes the low ambient bed entering at S2, so S6 has something to resolve |
+| F17 | CTA VO ends by **16.6s** — the last word no longer lands on the final frame |
+
+**Revision 2 recap (kept):** the pack is **zero-generation.** Every shot is a practical shoot, a real screen capture, or a real-file
 composite. One afternoon, a phone, a stand-in, a sink. Consequences: the AIGC-labeling exposure
 (F8) disappears entirely; the fallback-coupling problem (F10) disappears; and the trust ad
 contains nothing synthetic to distrust.
@@ -52,9 +77,9 @@ you trust.** Lead variant: **A**.
 
 | Element | Y-position | Note |
 |---|---|---|
-| Persistent badge "AZ ROC 366870" | baseline **65%** | clears TikTok caption zone / Meta CTA chrome |
+| Persistent badge "ROC 366870" | baseline **65%** | clears TikTok caption zone / Meta CTA chrome (F14: one string) |
 | Hook cards | centered **42%** | exit at the S2 cut (F6) |
-| S2 punched-in status line (the proof) | centered **40%** | in-band; above the caption (F7) |
+| S2 locked-insert result row (the proof) | centered **40%** | in-band; above the caption |
 | S2 caption | **58%**, onset 3.2s | delayed past the punch-in (F6) |
 | S4 line | **42%** | |
 | S5 line | **42%** | |
@@ -68,15 +93,15 @@ you trust.** Lead variant: **A**.
 Shot A1 — 0.0–2.5s   [VARIANT A LEAD HOOK — PRACTICAL]
 Story job:   hook — self-select the mid-emergency viewer and pose the trust question
 Action:      kitchen sink, tap RUNNING, grey-clear water visibly rising toward the rim; a hand
-             enters and shuts the tap at 1.4s as the first card completes; the water stops
-             rising but does not drain — the drain mouth still bubbles (partial block, so the
-             gurgle is physically honest — F16)
+             enters and shuts the tap at 1.2s as the first card completes; the water then
+             begins a SLOW GLUGGING DRAWDOWN — a partly blocked drain drains slowly and
+             loudly (F11: honest physics; it does not sit sealed and bubble)
 Camera:      locked CU on the basin, slight natural breathing; tap handle and water surface in
              frame (the running tap is the honesty of the shot)
 Lighting:    warm kitchen practicals, evening state (F19) — identical in every kitchen shot
-Audio:       tap run + rising gurgle; the gurgle keeps going after the tap stops (the tell)
-Text:        "Backed up? Stop the water." (0.0–1.4, 42%) → "Now — who do you let in?"
-             (1.4–2.5, exits AT the S2 cut — F6)
+Audio:       tap run + rising gurgle; after shutoff, the slow glug of the drawdown (the tell)
+Text:        "Backed up? Stop the water." (0.0–1.2, 42%) → "Who do you let in?"
+             (1.2–2.5, 5 words — F7; exits AT the S2 cut)
 Source:      PRACTICAL SHOOT — rag wedged in the trap side (partial block), tap running, one
              real hand. NO generation path. If impossible: re-board + fresh Pass 1
 Real-ref:    CITED — https://www.zoomdrain.com/blog/2026/march/what-to-do-when-your-basement-floor-drain-is-bac/
@@ -96,8 +121,9 @@ Action:      macro at counter level: the sink's far basin OVERFLOWS AT THE RIM �
              over the edge with individual drips, the running tap visible in the upper frame
              (the source is on screen; fixture-scoped, nothing autonomous); water sheets toward
              the counter edge
-Camera:      macro, counter level, locked; rim line diagonal. Rack focus rim-cascade → leading
-             drip edge executed IN POST at 2.0s
+Camera:      macro, counter level, locked; rim line diagonal; single fixed focus plane on the
+             rim cascade (F12: the post rack is dropped — no synthetic focus pull on an
+             all-practical board)
 Lighting:    warm kitchen practicals, evening state — the cascade catches the practical
 Audio:       tap run, rim-cascade patter; house tone; no music
 Text:        "Still comparing plumbers?" (0.4–2.5, 42% — a question, not a claim; exits at the
@@ -108,8 +134,8 @@ Real-ref:    CITED — https://environmentmasters.com/5-reasons-theres-water-bac
              (fixture backup presentation) — observed: a blocked basin fills and overflows at
              the rim with the faucet running; the failure is AT the fixture, visibly
 Angle:       risk removal — verify before you trust
-Motion:      TWO AXES (hero): subject travel through depth (cascade + advancing sheet) + focus
-             change (post rack at 2.0s)
+Motion:      TWO AXES (hero): subject travel through depth (cascade + advancing sheet) + light
+             change (the falling water catching the practical, frame by frame)
 ```
 
 ```
@@ -118,14 +144,16 @@ Story job:   hook — curiosity: a code exists that identifies who you admit
 Action:      ECU real phone screen: a real thumb types 3-6-6-8… into the Arizona ROC
              contractor-search field; quick typing, half-beat hesitation before the last digit;
              C1 is the same continuous filmed action S2 completes
-Camera:      ECU over-shoulder, screen ~90% of frame width; shutter synced to the screen
-             refresh (F15 — moiré/banding kills UI shots at feed size)
+Camera:      ECU over-shoulder on the SEARCH INPUT FIELD ONLY — framed so no ROC branding,
+             seal, or page identity is in frame (F1); shutter synced to the screen refresh
+             (moiré/banding kills UI shots at feed size)
 Lighting:    phone screen as key in the evening kitchen; one warm practical behind
 Audio:       six soft key taps (the sonic hook), room tone
-Text:        "These six digits tell you who you're letting in." (0.2–2.5, 42% — starts at 0.2s
-             per F15; "these" ties the statement to THIS number — F4b; registered line-item)
-Source:      REAL — a real person performing the search on a real phone, filmed. The result
-             screen shown in-frame is the composited real capture (see S2). NO generation path
+Text:        "Who are you letting in?" (0.2–2.5, 42% — F2: a pure question, zero claims; the
+             six-digit typing visual carries the code idea)
+Source:      REAL — a real person performing the search on a real phone, filmed; the input
+             field is the live public page in camera (no composite anywhere — see S2). NO
+             generation path
 Real-ref:    CITED — https://roc.az.gov/contractor-search + the AZ ROC consumer guide PDF
              (https://roc.az.gov/sites/default/files/2022-07/20201221-Guide.pdf). The shot IS
              the reference, performed
@@ -145,34 +173,46 @@ number. A and B close on S5.
 ```
 Shot S2 — 2.5–6.0s   [verify beat — the concept's proof]
 Story job:   proof — the official check exists, performed, and this company passes it
-Action:      the typed number completes; the result row loads on the filmed phone; HARD
-             PUNCH-IN (post) so the result row — license number + ACTIVE status — fills ≥60% of
-             frame width, centered at 40% frame height (F7); one confirm tap; a half-beat hold
-Camera:      continues C1's filmed over-shoulder phone plate. METHOD (F5, resolved): the real
-             screen recording is COMPOSITED ONTO THE FILMED PHONE'S GLASS — one continuous
-             filmed world, no cut to a flat UI; the phone's key-light interplay stays real
+Action:      the typed number completes; the result row loads on the filmed phone; the
+             legibility view cuts to a SECOND LOCKED-OFF ECU INSERT of the same real screen —
+             the result row (license number + status) fills ≥60% of frame width, centered at
+             40% frame height; one confirm tap; **the hold ends ON the tap frame — the detail
+             page never renders (F6)**
+Camera:      opens on the FULL phone-in-hand frame (legible cold for A/B — they arrive from a
+             sink with no phone context), continuing C's action seamlessly; then the locked ECU
+             insert for the row. METHOD (round-3 forced change): **no composite anywhere** —
+             the real live public page is filmed in camera, twice (plate + insert), one filmed
+             world; the key-light interplay is real because everything is
 Lighting:    phone screen as key, warm practical behind — evening state
 Audio:       one confirm tap; room tone; no gurgle here — this beat is already calmer
-Text:        caption "Look up any Arizona contractor: roc.az.gov" (58%, onset 3.2s — F4a/F6;
-             registered line-item) + persistent badge begins: "AZ ROC 366870" (65%, through S5)
-Source:      REAL screen recording of the actual public result for 366870, composited into the
-             filmed plate; nothing on the screen generated, ever. CROP RULE (F9): the punch-in
-             crops to the result row ONLY — no state seal, no ROC site branding, no legal-name
-             field, no scope text legible in ANY frame, period
+Text:        caption "Any licensed Arizona contractor is publicly checkable — state registrar."
+             (58%, onset 3.2s — F2: strictly registered claim 2) + persistent badge begins:
+             "ROC 366870" (65%, through S5 — F14: one string everywhere)
+Source:      REAL — the actual public result for 366870, live on the phone, filmed. Nothing
+             composited, nothing generated. FRAME RULE (F15 rewording): no ROC branding, seal,
+             or identity imagery in any frame of the ad; **the result-row insert is the single
+             sanctioned exception**, framed to exclude the legal-name field and scope text.
+             Capture-day gate: mock the insert framing from a real capture BEFORE the shoot
+             day locks
 Real-ref:    CITED — https://roc.az.gov/contractor-search + consumer guide PDF +
              https://azroc.my.site.com/AZRoc/s/contractor-search. The recording is the reference
 Angle:       risk removal — verify before you trust
-Motion:      focus change (rack thumb → result row) + the post punch-in
+Motion:      focus change (rack thumb → screen as the row loads) + the cut to the locked
+             insert (screen-content change)
 ```
 
 ### S2 CAPTURE SCRIPT (run on the Mac, BEFORE storyboard sign-off)
 
 1. **The 1-minute live-record check (Karl):** open `https://roc.az.gov/contractor-search`,
-   search **366870**. Record: (a) displayed legal/business name — matches "911 Drain LLC"?
-   (b) status ACTIVE? (c) complaint rows? (d) does any visible field render scope text
-   containing "sewer"? Screenshot the full record into `clients/911drain/notes/`. **Any
-   mismatch, complaint row, or scope-text leak → back to the director before sign-off.**
-   *(Egress-blocked from the build environment; verified blocked 2026-08-26.)*
+   search **366870**.
+   - (a) legal/business name: **✅ CONFIRMED "911 Drain LLC", exact match (owner eyeball,
+     2026-08-26)** — the regulatory-name risk is closed.
+   - (b) status ACTIVE? **OPEN** · (c) complaint rows? **OPEN** · (d) any visible scope text
+     containing "sewer"? **OPEN** — one look at the same result row closes all three;
+     screenshot the record into `clients/911drain/notes/`. **A non-ACTIVE status or complaint
+     rows → back to the director before any spend.**
+   *(Egress-blocked from the build environment; research exhausted 2026-08-26 — no cached
+   copy exists anywhere searchable. The owner's look is the only path.)*
 2. **The capture (at production):** screen-record the search → result at device resolution.
    Composite target: C1's filmed phone plate. Show ONLY: search field, typed digits, result
    row with number + status. Crop out: seal/branding, legal-name field, addresses, names,
@@ -193,7 +233,8 @@ Action:      HOMEOWNER-POV: the camera IS the homeowner, just inside the front d
 Camera:      locked POV at eye height; at most a 2% post move
 Lighting:    porch light warm against evening blue; dim warm hallway edge in the frame border
 Audio:       door latch, evening street/cricket tone. NO spoken word — the wait is the shot
-Text:        none
+Text:        no scene text; the persistent badge "ROC 366870" CONTINUES through this shot
+             (F13 — this field previously said "none", contradicting S2's persistence rule)
 Source:      PRACTICAL SHOOT — real hand, real door, real porch, real stand-in. NOTHING
              generated. Badge: the real physical badge or nothing (a prop badge would be a
              fabricated credential). If a stand-in is impossible: re-board (empty-porch +
@@ -209,26 +250,35 @@ Motion:      foreground occlusion event (the real door edge wiping frame) + ligh
 ```
 Shot S4 — 9.0–11.5s   [the work — the unfakeable middle]
 Story job:   proof — licensed competence, physically happening
-Action:      top-down CU at a drain: gloved hands feed the auger cable — one feeding, one
-             cranking — two pushes to resistance; the standing water ring at the drain mouth
-             visibly drops
-Camera:      top-down CU, locked with slight breathing; drum edge in frame
+Action:      THE FRAME FOLLOWS THE REAL JOB (F3 — re-boarded to real trade practice):
+             (a) kitchen job → UNDER-SINK frame: gloved hands at the open trap arm, cable
+             feeding into the branch line, drum on the cabinet floor; or (b) tub/shower/
+             floor-drain job → top-down CU: cable into the drain mouth, two pushes to
+             resistance, the standing water ring visibly dropping. Either way: one feeding
+             hand, one cranking, the real rhythm
+Camera:      locked with slight breathing; drum edge in frame (the tool is real and
+             identifiable); angle per the frame chosen above
 Lighting:    one hard work light from the left — honest, unglamorous
 Audio:       drum ratchet; then water beginning to give — the first "right" water sound
 Text:        "Licensed. On the job." (42%)
 Source:      REAL CLIENT FOOTAGE REQUIRED — the "during" state is never generated. Media ask
-             to Will's crew: phone rig, one job, ~30s usable, interior residential fixture —
-             **kitchen-sink job preferred (F13: the geography seam closes free if the crew
-             films one)**. CONTINGENCY RE-GATE: if no footage lands, an aftermath-only redesign
-             is NOT pre-approved — the changed board returns to a fresh Pass 1
+             to Will's crew (PARKED until Karl re-opens it): phone rig, one job, ~30s usable,
+             interior residential fixture; **one-page shot card attached** (frame options a/b
+             above, angle tolerance ±20°, light on the work, ≥10s continuous per take,
+             **no visible waste matter** — a platform shocking-content exposure and an
+             anti-payoff). **Capture-first scheduling: the controlled shoot afternoon is not
+             booked until this window has product.** CONTINGENCY RE-GATE: if no usable footage
+             lands, an aftermath-only redesign is NOT pre-approved — the changed board returns
+             to a fresh Pass 1
 Real-ref:    CITED — https://www.thisoldhouse.com/bathrooms/how-to-snake-a-clogged-drain +
              https://www.youtube.com/watch?v=ZDaJchBnFn8 + https://www.youtube.com/watch?v=_nxvMioXWW4
              — two-handed feed+crank, drum near the mouth, feed-until-resistance rhythm
 Angle:       risk removal — verify before you trust
 Motion:      subject travel through depth (cable feeding INTO the drain) + light/subject change
              (the water ring dropping)
-Note:        geography seam (if the filmed job is not a kitchen sink): ACCEPTED BY: Karl ______
-             (F13 — a knowing acceptance requires a named human; sign at storyboard sign-off)
+Note:        geography seam (if the filmed job's fixture differs from variant A's kitchen
+             sink): **pre-signed at storyboard sign-off, in advance of capture** —
+             ACCEPTED BY: Karl ______ (a knowing acceptance requires a named human)
 ```
 
 ```
@@ -289,11 +339,11 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 | Time | Diegetic | Music | VO | Emotional purpose |
 |---|---|---|---|---|
 | 0–2.5 | variant (gurgle / cascade patter / key taps) | none | none | wrongness (A/B) or focus (C) |
-| 2.5–6.0 | taps → confirm tap, room tone | none | "Before you let anyone in — check them." | control arriving |
+| 2.5–6.0 | taps → confirm tap, room tone | **low ambient bed enters (F16)** | "Before you let anyone in — check them." | control arriving |
 | 6.0–9.0 | latch, evening street tone | none | — **(F11: no VO — the wait is the shot)** | safety |
 | 9.0–11.5 | drum ratchet, water giving | none | — | competence |
 | 11.5–14.0 | tap, the pour, room tone resolving | none | "911 Drain." (11.5–13.4) → CTA line J-cuts in at 13.5 | relief |
-| 14.0–17.0 | — | one low resolving note | "…the number's on your screen — look us up." (ends ~16.9) | resolve — end quieter than the feed |
+| 14.0–17.0 | — | the bed resolves to one low note | "…the number's on your screen — look us up." (**ends by 16.6 — F17**) | resolve — end quieter than the feed |
 
 **Sonic hook:** the six key taps. Muted placements lose nothing.
 
@@ -306,5 +356,7 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 - Chain + shuffle re-checked after the B1 and S5 redesigns ✓ (B1's overflow is resolved by S4's
   clearing and S5's free drain — the flood shown is the flood fixed)
 - Feeling Spec + Sound Spine ✓ · lead = A ✓
-- Registered-line-item queue for Karl: S2 caption · C1 line · S4 seam acceptance
-- Karl has seen the storyboard: **PENDING — after the third Skeptic Pass 1** ☐
+- Registered-line-item queue: **EMPTY** (F2 closed by replacement — every burned line and VO
+  line now sits inside the three registered claims or asks a question); the S4 seam acceptance
+  line awaits Karl's signature at sign-off
+- Karl has seen the storyboard: **PENDING — after Skeptic Pass 1 round 4** ☐

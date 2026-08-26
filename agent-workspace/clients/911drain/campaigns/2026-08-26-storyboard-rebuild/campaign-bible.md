@@ -40,14 +40,16 @@ variant A) · revision pass AUTHORIZED · QC-harness rebuild AUTHORIZED. Status 
 | # | Awaiting | Who | Prepared where |
 |---|---|---|---|
 | 1 | Storyboard sign-off + budget → unlocks Gate 1.5 — only after the revised board clears a **fresh Skeptic Pass 1** | Karl | §6, `shotlist.md`, §10 |
-| 2 | **Live ROC record check** — egress-blocked from the build environment; a 1-minute step in the S2 capture script (legal name vs "911 Drain LLC", ACTIVE status, complaint rows, scope-text crop) | Karl, on the Mac | `shotlist.md` S2 capture script |
+| 2 | **Live ROC record check — HALF DONE:** name **CONFIRMED "911 Drain LLC", exact match** (Owner, 2026-08-26). Remaining: status ACTIVE? · complaint rows? · scope-text? — one look at the same result row (or the screenshot). Blocks spend, not board work | Karl | `shotlist.md` S2 capture script |
 | 3 | AIGC labeling posture signature (recommendation drafted) | Karl | Decision log |
 | 4 | Claims sheet signature (9 items + fee question) | Will | client brief |
 | 5 | S4 media ask — real "during" footage, one job, phone rig | Will's crew | `shotlist.md` S4 |
 
-**Gate history:** first Pass 1 (2026-08-26) = **BLOCK, 7 × S3**; Kobe = **CANNOT ASSESS** (§13).
-The revision pass below works that queue; the revised board re-gates through a fresh Pass 1
-before it can be signed.
+**Gate history:** Pass-1 rounds (2026-08-26): round 1 BLOCK 7×S3 → round 2 BLOCK 3×S3 →
+round 3 BLOCK 5 items → **Revision 3 applied (F2 closed by registered-claim copy replacement;
+F4 name half CONFIRMED by owner; composite eliminated; S4 re-boarded)** → round 4 pending.
+Kobe = CANNOT ASSESS (§13, unchanged — nothing to watch yet). The board re-gates through the
+fresh round-4 Pass 1 before it can be signed.
 
 Surfaced by name (LB51 — never accepted silently): shot S5's **generation fallback** carries a
 `NO REFERENCE FOUND — HIGH RISK` entry (its primary path is now a practical shoot, which needs
@@ -206,7 +208,7 @@ and the one post-attack line repair: `hook-tournament.md`.
 |---|---|---|---|---|
 | **A (lead)** — "Stop using water" | Utility-first | Sink water visibly rising, tap running; burned: "Backed up? Stop the water." → "Now — who do you let in?" · gurgle *(cards compressed in Revision 1 — Skeptic S2 #11)* | Self-selects the mid-emergency viewer in half a second; useful before it sells | Viewer takes the free advice and scrolls; tap must visibly run or a pro calls the staging fake |
 | **B** — "Still comparing plumbers?" | Shock + macro dread (re-scenarioed, Pass-1 round 2 F3) | Macro: the sink's far basin OVERFLOWS AT THE RIM, running tap visible — source on screen, fixture-scoped; burned: "Still comparing plumbers?" (a question, not a claim) · cascade patter | The fixture failing in real time + self-recognition | Rim cascade must read as fixture overflow, never autonomous floor water (scope optics) |
-| **C** — "Six digits" | Curiosity gap | ECU real phone: thumb types 3-6-6-8-7-0 into the AZ ROC search; burned: "These six digits tell you who you're letting in." *(F4b — this number, not all numbers)* · six key taps | Number-entry on an official site is an unusual open; the digits pose a question | PSA read; ROC UI type illegible unless aggressively ECU; filmed-screen moiré (shutter-sync note). **Trust variant — never the lead** |
+| **C** — "Six digits" | Curiosity gap | ECU real phone: thumb types 3-6-6-8-7-0 into the search input field (input only — F1); burned: **"Who are you letting in?"** *(F2 — pure question; the typing carries the code idea)* · six key taps | Number-entry on an official form is an unusual open; the digits pose a question | PSA read; filmed-screen moiré (shutter-sync note). **Trust variant — never the lead** |
 
 **Rejected concepts and beaten hooks, and why:** kept in `hook-tournament.md` — the reasoning is
 the asset, and the beaten hooks are where the next pack starts.
@@ -537,3 +539,4 @@ rescuing; the board needs the seven S3s closed."*
 | 2026-08-26 | QC harness REBUILD authorized — four scripts from documented thresholds, self-tests must prove each gate can fail | Owner (Wyatt), in-session | Check 29 forbids all spend until the harness exists |
 | 2026-08-26 | **AIGC posture (drafted, awaiting Karl's signature):** shoot A1/C1/S5 practical and restructure S3 so the synthetic surface shrinks to one distant static figure + one macro fluid shot; enable the platform synthetic-content label wherever photoreal generated content remains; never claim any synthetic person is a real customer | Claude (recommendation) | Trust-premise ad; platform label rules; smallest honest surface |
 | 2026-08-26 | **Revision 2: the pack goes ALL-PRACTICAL — zero generation** (second Pass 1 blocked on F1/F2/F3, all pointing one way; its own words: "close to a zero-generation board") | Claude (forced by the gate; ratified by the standing revision authorization) | Kills AIGC-label exposure by construction; every remaining shot is one phone-shoot afternoon; the trust ad contains nothing synthetic |
+| 2026-08-26 | **Revision 3:** F2 closed WITHOUT a new signature — both queued lines replaced with copy strictly inside the three registered claims (the round-3 verdict's own alternative); F4 name half CONFIRMED by the Owner ("911 Drain LLC", exact match); S2 composite eliminated (all in-camera); S4 re-boarded to real trade practice | Claude (per the approved plan) + Owner (F4 check; "skip Will for now") | The campaign no longer waits on Will for copy; status/complaint look is the last human blocker before spend |
