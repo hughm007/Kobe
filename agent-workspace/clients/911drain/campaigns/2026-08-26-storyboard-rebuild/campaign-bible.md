@@ -400,14 +400,35 @@ toward frame bottom.
 ## 13. QC — gate 1 of 2: the score
 *Owner: `servicepow-creative-critic` (Kobe). Independent evaluation.*
 
-**Verdict:** NOT RUN — pending isolated run at paper stage (see baseline report)
-**Card used:** —
-**ServicePow-6 scores:** —
-**Lead variant scored in full:** — **Siblings scored on hook / flow / CTA:** —
-**AI artifact risk (1–10):** —
-**Hard failures found:** —
-**Human watched end to end:** ☐ *(LB29 — the only semantic gate; no footage exists to watch)*
-**Human Taste Gate — would Karl be proud to put his name on this?** ☐
+**Verdict:** **CANNOT ASSESS — NOT CLIENT READY. DELIVERY BLOCKED.** (Run cold 2026-08-26,
+isolated context, no creator reasoning supplied.) Contract applied exactly: the creative is
+unavailable — nothing exists to watch; the machine gates could not run (the four QC scripts do
+not exist in the repo), and a gate that could not run is a BLOCK. Nothing in the run is a pass.
+**Card used:** NONE — deliberately. The 9-axis rough card was not used (no work-in-progress edit
+exists, and it may never clear a deliverable); ServicePow-6 requires watching the creative.
+**ServicePow-6 scores:** NOT RUN — no numeric scores emitted anywhere, by contract.
+**Lead variant scored in full:** NOT RUN — additionally, **no lead variant is designated yet**
+(Kobe finding 12; recommendation on the paper evidence: A). **Siblings on hook / flow / CTA:**
+NOT RUN.
+**AI artifact risk (1–10):** NOT RUN on footage. Pre-spend paper warnings recorded (below).
+**Hard failures found:** none assessable on footage; **12 storyboard-stage advisory findings**
+recorded for the pre-spend revision queue, the load-bearing ones:
+1. The absent QC scripts are a blocker in their own right — build and smoke-test them **before
+   the first credit** (cheapest fix, currently blocking the whole back half).
+2. **S3's "visible photo ID badge" under a pure-AI Source is a generated brand mark waiting to
+   happen** — declare S3 real-footage or composite-marks-only, in writing, before spend.
+3. S5 is the highest-risk credit in the plan (primary-emotion payoff with NO REFERENCE FOUND) —
+   never a premium render in this state.
+4. The S2 verify beat dies at feed size without a hard punch-in on the status line; and the real
+   ROC record page needs a scripted capture (crop plan) so no banned/stale string enters frame,
+   recaptured fresh before delivery.
+5. Hook B is the weak sibling (slogan-shaped, logo-swappable at the hook level) — first
+   candidate to sharpen or replace.
+6. "ROC in-safe on every ad" needs its interpretation resolved in writing (per-creative endcard
+   vs persistent strap) before generation.
+Full 12-finding text: baseline report appendix.
+**Human watched end to end:** **NO — nothing exists to watch** *(LB29)*
+**Human Taste Gate — would Karl be proud to put his name on this?** ☐ (unreachable at paper)
 
 ---
 
