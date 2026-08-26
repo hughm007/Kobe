@@ -150,6 +150,32 @@ Block trajectory across the campaign: 7 S3 → 3 → 5 → 5 (3 conflict-class) 
 - **Every gate needs a runnable artifact named at board time** — "test on unbriefed viewers"
   is a wish until the board says what they will be shown.
 
+## Round 8 (1 blocking) — the gate audits the acceptance instrument itself
+
+All CLAUDE-CAUGHT. The blocker, R8-F1, was an integrity defect in the round-7 fix: the
+sign-off sheet claimed "every read above the ceiling is routed… none concealed by a
+checkmark" while a third above-ceiling read (A1 card 2, 18 chars / 1.0s = 18.0 cps) sat
+behind a ✓ with an unnamed "accepted as a glance question." The R7-F5 fix had routed the two
+reads the gate NAMED instead of applying the ceiling check to every string — fixing the
+instances, not the class. Round 8 also produced the pack's two cheapest-insurance closures:
+the burned phone number had no reality check anywhere (the ROC number was verified twice;
+the phone number, the ad's entire CTA, zero times), and the advertising name form ("911
+Drain" vs the licensed "911 Drain LLC") was unverified against ROC advertising rules in a
+pack that deliberately sends competitors to the registrar — resolved conservatively (licensed
+form adopted, ≈4.9 cps cost) with the primary-source check left for a human (gov and
+legal-mirror sites egress-blocked; recorded NOT VERIFIED, never asserted).
+
+**Reusable lessons (EXPERIMENTAL):**
+- **Fix the class, not the named instances.** When a gate flags two members of a class,
+  sweep the whole class before claiming completeness — a completeness sentence written from
+  the gate's examples is false the moment a third member exists.
+- **Every burned fact needs one reality check.** The board verified the license number twice
+  and the phone number zero times; the check gradient followed what felt risky, not what was
+  burned. Checklist rule: each fact that appears on screen names the check that touched it.
+- **When the compliant form is nearly free, adopt it and route the shortening as the
+  decision** — "911 Drain LLC" costs 4 characters; the reverse order (ship short, verify
+  later) carries all the risk for none of the savings.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic

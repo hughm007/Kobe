@@ -1,24 +1,34 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 6"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 7"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-6, all-practical]
+tags: [campaign, storyboard, shotlist, revision-7, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 6 (ALL-PRACTICAL)
+# Shotlist — "Look Us Up" pack — REVISION 7 (ALL-PRACTICAL)
 
-**Current state (Revision 6, 2026-08-26 — R7-F9: this intro narrates NOW, not Revision 3):**
+**Current state (Revision 7, 2026-08-26 — this intro narrates NOW):**
 an all-practical, zero-generation 8-shot board; every burned and VO line inside the three
 registered claims or a question; the F4 record check **FULLY CLOSED** ("911 Drain LLC" exact
 match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
 
-## Revision 6 changelog (round-7 finding → change; round 8 awaits Owner authorization)
+## Revision 7 changelog (round-8 finding → change; rounds 9–10 run under the Owner's standing grant)
+
+| Finding | Change |
+|---|---|
+| **R8-F1 (severity S3 · sign-off sheet, blocked)** | The third above-ceiling read — A1 card 2, ≈18.0 cps over 1.0s — is now **residual (c)** on the sign-off sheet, and the sheet's "every read routed, none concealed" sentence is made TRUE by a full published cps sweep of every burned string (three above ceiling, all routed; five under, listed) |
+| **R8-F2 (shot S2/S6)** | Pre-edit-lock check (2): the burned phone string is **dialed once** and checked character-by-character against the client record — the number was the only burned fact with no reality check |
+| **R8-F3 (compliance)** | Strap + endcard now carry the **licensed name form "911 Drain LLC"** (conservative default; secondary sources on § 32-1124(B)/R4-9-109 say name-as-licensed + ROC number; primary text NOT VERIFIED — gov/legal mirrors egress-blocked); name-form decision line for Karl on the sheet |
+| **R8-F4 (shot S4)** | Operator-present capture hardening offered on the sheet — adopt or accept the risk as-is, by name |
+| **R8-F5/F6/F7/F8/F9 (S1)** | Residual (a) gains its juxtaposition context sentence; the self-check narration line updated to NOW; the A1 rig test gains a grey-clear WATER-READ check with a practical method; the "sewer"-in-metadata sweep promoted to live pre-edit-lock line (3); script pace-table window labels synced (VO ends 13.3) |
+
+## Revision 6 changelog (round-7 finding → change; fixes verified by round 8 — 9 of 10 landed, R7-F9 partial)
 
 | Finding | Change |
 |---|---|
@@ -111,7 +121,7 @@ you trust.** Lead variant: **A**.
 
 | Element | Y-position | Note |
 |---|---|---|
-| Persistent info strap "911 Drain · ROC 366870 · 480-992-3541" | baseline **65%** | clears TikTok caption zone / Meta CTA chrome; 40%-black backing chip |
+| Persistent info strap "911 Drain LLC · ROC 366870 · 480-992-3541" | baseline **65%** | clears TikTok caption zone / Meta CTA chrome; 40%-black backing chip; name in licensed form (round-8 R8-F3) |
 | Hook cards | centered **42%** | exit at the S2 cut (F6) |
 | S2 locked-insert result row (the proof) | centered **40%** | in-band; above the caption |
 | S2 caption | **58%**, onset **3.0s, exits 7.0s** (round-7 R7-F1: this cell had kept the superseded 3.2s value against three harmonized locations — the spec now reads identically everywhere) | delayed past the punch-in (F6); tail rides 1.0s into S3 (R6-F2) |
@@ -144,14 +154,19 @@ Audio:       tap run + rising gurgle; after shutoff, the slow glug of the drawdo
 Text:        "Backed up? Stop the water." (**0.0–1.5**, 42% — round-6 R6-F3: 26 chars needed
              ~1.55s at the 15–17 cps comfort rate; the old 1.2s split put the pack's least
              readable card in its highest-attention window) → "Who do you let in?"
-             (**1.5–2.5** — exits AT the S2 cut; 1.0s = its exact dwell floor, accepted as a
-             glance-read question). **RESOLVED (Owner ruling, 2026-08-26): KEEP** —
+             (**1.5–2.5** — exits AT the S2 cut; 1.0s = its exact dwell floor; ≈18.0 cps,
+             above the ceiling — **routed to the sign-off sheet as residual (c), round-8
+             R8-F1**, no silent self-exemption). **RESOLVED (Owner ruling, 2026-08-26): KEEP** —
              named acceptance that "Stop the water." is safety advice, not a substantiatable
              marketing-claim class. ACCEPTED BY: Karl (Wyatt), in-session
 Source:      PRACTICAL SHOOT — rag wedged in the trap side (partial block), tap running, one
              real hand. NO generation path. If impossible: re-board + fresh Pass 1. **RIG
-             TEST before shoot day (round-5):** flow restrictor vs. rag compared for a
-             repeatable rise-then-slow-drawdown; and note the drawdown tell is mostly AUDIO —
+             TEST before shoot day (round-5; extended round-8 R8-F7):** flow restrictor vs.
+             rag compared for a repeatable rise-then-slow-drawdown, AND a WATER-READ check —
+             the "grey-clear" state needs a practical method (e.g., a trace of diluted soil/
+             soap water), judged at CU on the actual capture phone: clear tap water at rim
+             height reads "clean sink filling", not "backup", in the muted 0–1.5s window;
+             and note the drawdown tell is mostly AUDIO —
              the muted story must survive on rise + shutoff + cards alone (round-5 F-14: never
              protect the glug at the picture's expense in the edit or the mix)
 Real-ref:    CITED — https://www.zoomdrain.com/blog/2026/march/what-to-do-when-your-basement-floor-drain-is-bac/
@@ -262,7 +277,13 @@ Text:        caption "Every licensed AZ contractor is publicly checkable — sta
              exact proof moment — the beat's reads are now insert-then-caption only, and the
              strap establishes 0.5s before the S3 cut; the trade is 3.0s of early
              callability, recorded): plain burned type
-             "911 Drain · ROC 366870 · 480-992-3541", baseline 65%, on a 40%-black backing
+             "911 Drain LLC · ROC 366870 · 480-992-3541" (name in LICENSED FORM — round-8
+             R8-F3: secondary sources on A.R.S. § 32-1124(B)/R4-9-109 say ads carry the
+             licensee's name + ROC number, with the licensee's name defined as the ACC-filed
+             legal name; primary rule text NOT VERIFIED from this environment — gov and
+             legal-mirror sites egress-blocked; the licensed form is the conservative
+             default, ≈4.9 cps over 8.5s, no legibility cost; Karl may shorten only after a
+             primary-source check), baseline 65%, on a 40%-black backing
              chip (one contrast treatment across screen-bright, dusk and under-sink frames),
              running through 14.0s (S5's end) — so VO line "the number's on your screen"
              (13.4–16.6) stays TRUE across the strap→endcard handoff. Plain type naming the
@@ -360,7 +381,7 @@ Camera:      locked POV at eye height; at most a 2% post move. FACE-UNREADABLE M
 Lighting:    porch light warm against evening blue; dim warm hallway edge in the frame border
 Audio:       door latch, evening street/cricket tone. NO spoken word — the wait is the shot
 Text:        no NEW scene text — the wait is the shot; the S2 caption completes its exit at
-             7.0s (round-6 R6-F2 tail ride) and the persistent info strap ("911 Drain ·
+             7.0s (round-6 R6-F2 tail ride) and the persistent info strap ("911 Drain LLC ·
              ROC 366870 · 480-992-3541") CONTINUES through this shot (F13 fix kept)
 Source:      PRACTICAL SHOOT — real hand, real door, real porch, real stand-in. NOTHING
              generated. IDENTITY MARKERS (round-5 F-1, resolved by Owner directive +
@@ -484,7 +505,10 @@ Action:      black brand field; **the number and ROC line are SET FROM FRAME ONE
 Camera:      graphic card; the drift is the motion
 Lighting:    brand black; red reserved exactly here
 Audio:       the bed resolves to one low note, then silence
-Text:        "480-992-3541" (large, 44%, 3.0s) · "ROC 366870 — look us up." (55%) · **the
+Text:        "480-992-3541" (large, 44%, 3.0s) · "911 Drain LLC · ROC 366870 — look us up."
+             (55% — round-8 R8-F3: the licensed name joins the ROC line so name + number ride
+             every endcard frame and every endcard screenshot; ≈13 cps over 3.0s, under
+             ceiling) · **the
              real logo lockup file only** at 62% — **RESOLVED (Owner ruling, 2026-08-26:
              logo-only endcard):** no separately burned tagline text; the 24/7 tagline enters
              solely as artwork inside the real logo file — a brand mark, not ad copy —
@@ -548,14 +572,43 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   complaint row → pause the pack (the ad sends viewers to a live page; the filmed ACTIVE row
   must never outlive the record's truth). Accept or decline by name: Karl ______ ☐
 - **NAMED-ACCEPTANCE RESIDUALS (sign-off sheet — every read above the board's own 15–17 cps
-  comfort ceiling is routed to Karl, none concealed by a checkmark, round-7 R7-F5):**
+  comfort ceiling is routed to Karl, none concealed by a checkmark; R7-F5, completeness
+  restored round-8 R8-F1). Full sweep, every burned string, board counting method (spaces +
+  punctuation): B1 11.9 · C1 8.3 · S4 8.4 · S5 8.4 · strap ≈4.9 · endcard ROC line ≈13 —
+  under ceiling; the THREE above-ceiling reads are (a)–(c) below:**
   (a) S2 caption ≈ **17.5 cps** over 4.0s — just ABOVE the ceiling; no trim exists that keeps
-  "licensed" + the venue. Karl ______ ☐ · (b) A1 card 1 ≈ **17.3 cps** over 1.5s — just above;
-  structurally unfixable (the line is Owner-accepted verbatim, the hook window is 2.5s, card 2
-  sits at its exact 1.0s floor — the minimums sum past the window). Karl ______ ☐
-- **PRE-EDIT-LOCK ASSET CHECK (round-7 R7-F8):** the S6 logo lockup FILE used in the edit is
-  verified to be the version WITHOUT the wrap's "& SEWER" line — checked against the actual
-  file, not the intention ☐
-- Karl has seen the storyboard: **PENDING — round 6 (the authorized re-gate) returned BLOCK on
-  the S2 spec contradiction; Revision 5 applies the fixes; round 7 awaits Owner
-  authorization** ☐
+  "licensed" + the venue. Context for an informed signature (round-8 R8-F5): the caption's
+  final 1.5s (5.5–7.0) is simultaneously contested by the strap's entrance at 5.5, the S3
+  scene cut at 6.0, and the brightest→darkest frame transition. Karl ______ ☐ ·
+  (b) A1 card 1 ≈ **17.3 cps** over 1.5s — just above; structurally unfixable (the line is
+  Owner-accepted verbatim, the hook window is 2.5s, card 2 sits at its exact 1.0s floor —
+  the minimums sum past the window). Karl ______ ☐ ·
+  (c) A1 card 2 "Who do you let in?" ≈ **18.0 cps** over its 1.0s window (round-8 R8-F1 —
+  previously behind a ✓ with no routing, the exact class this sheet exists to abolish;
+  structurally unfixable for the same window arithmetic as (b); mitigations: a 5-short-word
+  glance question, and it exits AT the cut so eye-track continues into S2). Karl ______ ☐
+- **S4 CAPTURE HARDENING — adopt or accept the risk as-is, by name (round-8 R8-F4):** the
+  pack's only unfakeable beat rides on an unaccompanied third-party phone capture judged
+  after the fact; the checklist protects the AD, nothing protects the CALENDAR (a failed
+  window re-parks the whole schedule under capture-first). Option: a briefed Service Pow
+  operator (or Karl) present at the job running the phone against the shot card.
+  Adopt / accept as-is: Karl ______ ☐
+- **NAME-FORM DECISION (round-8 R8-F3):** the board now burns the LICENSED name form
+  "911 Drain LLC" (strap + endcard ROC line) as the conservative default — secondary sources
+  on A.R.S. § 32-1124(B)/A.A.C. R4-9-109 say ads carry the licensee's name + ROC number and
+  define the licensee's name as the ACC-filed legal name; **primary rule text NOT VERIFIED
+  from this environment** (gov + legal-mirror sites egress-blocked). Keep "LLC", or shorten
+  to "911 Drain" only after a primary-source check (a 2-minute read of R4-9-109 / the ROC
+  advertising page on any Mac). Karl ______ ☐
+- **PRE-EDIT-LOCK CHECKS:** (1) the S6 logo lockup FILE is verified to be the version
+  WITHOUT the wrap's "& SEWER" line — checked against the actual file, not the intention
+  (R7-F8) ☐ · (2) **the burned phone string 480-992-3541 is DIALED once and answered by/for
+  911 Drain, and checked character-by-character against the client record** (round-8 R8-F2 —
+  the ROC number is cross-verified twice; the phone number existed only as a burn; a
+  transposed digit ships a dead CTA) ☐ · (3) **pre-publish metadata sweep (round-8 R8-F8,
+  promoted from the historical R2-F17 row to a live line):** no "sewer" or "commercial" in
+  captions, file names, ad-account text fields, or platform metadata — checked by whoever
+  fills the ad-account fields, at publish time ☐
+- Karl has seen the storyboard: **PENDING — rounds 8–10 run under the Owner's standing grant
+  (2026-08-26); Revision 7 applies the round-8 register; this line narrates NOW per R8-F6 and
+  is updated each revision** ☐

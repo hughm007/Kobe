@@ -34,6 +34,35 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Standing grant begins; round 8 audits the acceptance sheet itself
+
+**Did:** Karl granted a STANDING authorization — fix-and-re-gate without per-round asks,
+capped at rounds 8–10, stop on PASS/CONDITIONAL or non-convergence. Round 8 ran on Revision 6:
+**BLOCK, 1 × S3 (R8-F1)** — the sign-off sheet's "every read routed, none concealed" sentence
+was false: A1 card 2 (18.0 cps) sat above the ceiling behind a ✓, unrouted. The round verified
+9 of 10 round-7 fixes landed, cleared compliance line-by-line, and surfaced the pack's two
+cheapest-insurance gaps: the burned phone number had NO reality check anywhere, and the
+advertising name form was unverified against ROC rules. **Revision 7** applies the register:
+residual (c) routed + a published full cps sweep (the sheet's claim is now arithmetically
+true), a pre-edit-lock dial test, the **licensed name form "911 Drain LLC"** adopted in strap
++ endcard (conservative default; primary rule text NOT VERIFIED — gov/legal mirrors
+egress-blocked; decision line for Karl), the S4 operator option, and the S1 sweep. Round 9
+launches on Revision 7 under the grant.
+
+**Decided:** Name form resolved conservatively (adopt licensed form, route the shortening as
+Karl's decision) — the cheap direction of the asymmetry. Research honesty held: secondary
+sources cited, primary text marked NOT VERIFIED.
+
+**Learned:** (production log) Fix the class, not the gate's named instances. Every burned
+fact needs one named reality check. When the compliant form is nearly free, adopt it and
+route the shortening as the decision.
+
+**Open:** rounds 9–10 under the grant; then sign-off (now with residuals a–c, the name-form
+line, the S4 operator option, the weekly record re-check). Will's claims sheet and the S4
+media ask unchanged.
+
+**Next:** round 9 verdict.
+
 ## 2026-08-26 — Round 7 blocks on one cell; Revision 6 ready; the loop is converging
 
 **Did:** Karl authorized round 7; it ran isolated on Revision 5 and returned **BLOCK — 1 × S3
