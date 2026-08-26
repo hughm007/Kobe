@@ -34,6 +34,46 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Phase 2: three Skeptic rounds drive the pack all-practical; the QC harness exists again
+
+**Did:** Karl approved all four parked decisions (strategy, pack, revision pass, QC rebuild).
+Worked the revision queue through **three isolated Skeptic Pass-1 rounds**: round 1's 7 S3s →
+Revision 1 → round 2's 3 S3s ("close to a zero-generation board") → **Revision 2: the pack is
+now ALL-PRACTICAL, zero generated content** — every shot a practical shoot, real screen capture,
+or real-file composite; all generation fallbacks deleted; any method change re-gates. Round 3
+still BLOCKS (5 items) but with changed composition: two are human-owned (the live ROC record
+check — egress-blocked from the build container, 1 minute on the Mac; line-item registration of
+two load-bearing copy lines), three are board/proof work (C1-vs-crop-rule contradiction, S4's
+frame vs real trade practice — kitchen snaking happens at the trap, not through the strainer —
+and the S2 screen-composite proof-or-redesign). **Escalated to Karl per the one-repair-round
+rule.** Separately: **rebuilt the four QC scripts** at `playbooks/ads/scripts/` from the
+documented thresholds — preflight + all self-tests pass, every gate proven able to fail on a
+planted fixture (the performance gate's self-test IS the ~242 WPM price line); the SCRIPT GAP
+banner now records rebuilt status with honest residuals (ASR fails closed as UNVERIFIED; the
+rebuilt motion measure returns INDETERMINATE near the floor until re-anchored); the validator
+now resolves `.py`/`.jsonl` references too. **Check 29's structural block on generation spend is
+closed.**
+
+**Decided:** All-practical is the pack's production posture (decision log row in the Bible) —
+kills the AIGC-label exposure by construction on a trust-premise ad. Escalation over a fourth
+unilateral revision loop: the remaining blockers need inputs only humans hold.
+
+**Learned:** (production log, CLAUDE-CAUGHT) "No client footage" justifies AI only for shots
+that need the client — brand-free domestic actions are an afternoon of practical shooting at
+zero risk. Fallbacks are where blocked risk re-enters; the S4 pattern (any change re-boards and
+re-gates) is now uniform. And the gate catches its own author: round 3's C1 contradiction was
+introduced by the same hand that wrote the crop rule.
+
+**Open:** For Karl — (1) the 1-minute ROC record check for 366870 (legal-name match, ACTIVE,
+complaints, scope text), screenshot to clients/911drain/notes/; (2) register the two queued
+lines with Will (or approve registered-claim replacements); (3) S4 media ask to Will's crew with
+the re-boarded frame + shot card; (4) the AIGC posture signature is now mostly moot
+(zero-generation board) but stays drafted. Then: board revision 3 → fresh Pass 1 round 4 →
+storyboard sign-off → the practical shoot afternoon.
+
+**Next:** Karl runs the record check and the registrations; the board revision follows those
+outcomes (a name mismatch reopens the concept, so nothing is polished before the check lands).
+
 ## 2026-08-26 — First campaign ever run: the 911 Drain baseline, blocked for the right reasons
 
 **Did:** Ran the 911 Drain storyboard-level rebuild through the whole pipeline as a **paper

@@ -37,6 +37,24 @@ the critic's KPI tracks. Full verbatim attacks: the campaign folder's baseline r
 **Resolution: Revision 2 took the board all-practical (zero generation).** Round 2's own
 verdict text pointed there: "close to a zero-generation board."
 
+## Round 3 (5 blocking) — the all-practical board
+
+1. The live ROC record check upgraded to a pre-spend BLOCK (advertising-name match is
+   regulatory, not cosmetic) — owner-owned.
+2. The two queued copy lines are load-bearing comprehension, not garnish — registration is a
+   precondition of any variant shooting.
+3. C1's live-screen framing collided with S2's own any-frame crop rule (a Revision-2 drafting
+   error — the gate caught its author).
+4. S4's "preferred" kitchen-sink capture cannot produce the boarded top-down frame — real
+   kitchen snaking happens at the trap, not through the basket strainer. The one audience that
+   knows is the one the shot exists to convince.
+5. The S2 screen composite is professional-grade VFX described in one clause — prove it on a
+   test plate or redesign in-camera.
+
+Escalated to the owner after round 3 (the one authorized repair round used). No new copy
+violations; the round's clean-checks list grew substantially — the findings are converging on
+execution feasibility, which is exactly where a pre-spend gate should end up.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic

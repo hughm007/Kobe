@@ -463,11 +463,29 @@ reasoning. Both gates must pass; a score never argues down a severity.*
 
 | Pass | When | Result | Highest severity |
 |---|---|---|---|
-| 1 — storyboard | before any generation spend | **BLOCK** (run 2026-08-26, blind — no production reasoning supplied, stated in its own disclosure) | **S3 × 7** |
+| 1 — storyboard, **round 1** (first board) | pre-spend | **BLOCK** — 7 × S3 (generated-badge contradiction, unregistered "Local.", 24/7-vs-daylight, EXTREME arrival shot, unverified ROC record, ungated S4 contingency, AIGC posture) | S3 × 7 |
+| 1 — storyboard, **round 2** (Revision 1) | pre-spend | **BLOCK** — 3 × S3 (one generated figure still HIGH on the trust beat; a standing HIGH generation fallback; B1's floor water depicting the banned scope). Verdict text: *"close to a zero-generation board"* → Revision 2 took it there | S3 × 3 |
+| 1 — storyboard, **round 3** (Revision 2, all-practical) | pre-spend | **BLOCK** — 5 blocking items, composition changed: **2 human-owned dependencies** (F4 live-record check → Karl; F2 line-item registration of two load-bearing copy lines → Karl/Will), 3 board/proof items (F1/F6 C1-vs-crop-rule reconciliation; F3 S4 frame vs real trade practice; S2 composite proof or in-camera redesign). **No new copy violations; all-practical posture, real-or-absent badge, honest water references and the 7-day recapture rule called correct.** Plus F5–F9/F12 (S2-class) and F13–F17 (S1) for the next board revision | S3 × 5 |
 | 2 — candidate footage | before the edit locks | NOT RUN — no footage exists | |
 | 3 — finished ad | before delivery | NOT RUN — no ad exists | |
 
-**Findings (S3 or S4 blocks) — the seven S3s, each blocking until resolved:**
+**Escalated to the Owner after round 3 (per the authorized one-repair-round rule — no further
+revision loops without new inputs):** the two human dependencies gate everything else. Round 3's
+own conversion order: **(1) F4 — the live 366870 record check NOW** — legal-name match vs
+"911 Drain LLC" or a registered trade name (upgraded from sign-off formality to regulatory
+exposure: Arizona contractors advertise under the record's name; a mismatch reopens the concept,
+not the shot); **(2) F2 — register the two queued lines** (C1's hook card and S2's caption —
+the caption is the only thing explaining the verify beat to variants A/B: structure, not
+garnish); **(3–5) board fixes for the next revision** (C1 crop reconciliation + post-tap frame
+defined; S4 re-boarded to real trade practice — under-sink trap frame for a kitchen job, or the
+tub-drain frame with the geography acceptance secured in advance, capture-first scheduling, a
+one-page shot card with a minimum-acceptable spec, "no visible waste matter" in the ask; S2
+crop mock from the real capture + composite test plate or the in-camera two-insert redesign +
+cold-open legibility for A/B; A1 physics honesty — slow glug drawdown; F7 card timing; F13
+badge-field contradiction; F14 one ROC string; F15/F16/F17 wording, bed and end-timing). The
+revised board then returns for a **fresh Pass 1, round 4.**
+
+**Round-1 findings (S3 or S4 blocks) — the seven S3s that shaped Revision 1:**
 1. **S3 arrival shot rated EXTREME generation risk** — two interacting generated humans,
    near-camera hand contact, "non-readable face" asserted not enforceable, generated push.
    Forced restructure: homeowner-POV, one figure, locked camera, no spoken word.
