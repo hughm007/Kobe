@@ -39,20 +39,27 @@ variant A) · revision pass AUTHORIZED · QC-harness rebuild AUTHORIZED. Status 
 
 | # | Awaiting | Who | Prepared where |
 |---|---|---|---|
-| 1 | Storyboard sign-off + budget → unlocks Gate 1.5 — only after the revised board clears a **fresh Skeptic Pass 1** | Karl | §6, `shotlist.md`, §10 |
-| 2 | ~~Live ROC record check~~ **✅ COMPLETE** — name match, ACTIVE, no complaints, scope-text look (Owner, 2026-08-26). Screenshot to `clients/911drain/notes/` when convenient | — | `shotlist.md` S2 capture script |
-| 3 | AIGC labeling posture signature (moot on a zero-generation board; stays drafted) | Karl | Decision log |
-| 4 | Claims sheet signature (9 items + fee question — "24/7 availability" proposed as item 1) | Will | client brief |
-| 5 | S4 media ask — real "during" footage, one job, phone rig, shot card + acceptance checklist | Will's crew | `shotlist.md` S4 |
+| 1 | **Round-5 S3 fixes:** (a) does a physical badge / logoed shirt / printed work order exist? (F-1 — fact question, decides S3's identity marker); (b) authorize the S5 camera re-spec + forced changes and the fresh Pass 1 on the changed shots (F-3/F-2/F-5) | Karl | §14 round-5 row, `shotlist.md` S3/S5 |
+| 2 | Storyboard sign-off + budget → unlocks Gate 1.5 — only after the board clears a **fresh Skeptic Pass 1** | Karl | §6, `shotlist.md`, §10 |
+| 3 | ~~Live ROC record check~~ **✅ COMPLETE** — name match, ACTIVE, no complaints, scope-text look (Owner, 2026-08-26). Screenshot to `clients/911drain/notes/` when convenient | — | `shotlist.md` S2 capture script |
+| 4 | AIGC labeling posture signature (moot on a zero-generation board; stays drafted) | Karl | Decision log |
+| 5 | Claims sheet signature (9 items + fee question — "24/7 availability" proposed as item 1) | Will | client brief |
+| 6 | S4 media ask — real "during" footage, one job, phone rig, shot card + acceptance checklist (now incl. round-5 F-2: propped/mounted phone, stability floor) | Will's crew | `shotlist.md` S4 |
 
 **Gate history:** Pass-1 rounds (2026-08-26): round 1 BLOCK 7×S3 → round 2 BLOCK 3×S3 →
 round 3 BLOCK 5 → round 4 BLOCK 5×S3 — of which 3 are a **rules-authority conflict** (see
 ## CONFLICTS) and 2 were **fixed on the board** (S2 plate spec + extended mock; S3 half-turn
 restage + cold-read gate). **The unilateral iteration loop is STOPPED** (findings stopped
 converging: round 4 flagged lines round 3 passed as clean). All four Owner rulings are in (2026-08-26): conflict resolved,
-F4 fully closed, design calls made. **Round 5 — the legitimate re-gate — runs on the updated
-board**; PASS/CONDITIONAL converts to the storyboard sign-off ask. Kobe = CANNOT ASSESS (§13,
-unchanged — nothing to watch yet).
+F4 fully closed, design calls made. **Round 5 (the legitimate re-gate, on the rulings-applied
+board): BLOCK — 2 × S3, both paper fixes** (F-1 S3 identity-marker conditional must be resolved
+before capture day; F-3 S5's camera cannot see its own payoff) — the claims audit came back
+**fully clean under the canonical rule**, and the verdict itself calls the claims posture
+"near-bulletproof" and the info strap "the best single call on the board." Per the standing
+rule, **reported to the Owner with no further unilateral rounds**: the badge question is a fact
+only the client side can answer, and the fixed shots (S3, S5, plus the S2/S4 card-line changes)
+re-gate through a fresh Pass 1 once authorized. Kobe = CANNOT ASSESS (§13, unchanged — nothing
+to watch yet).
 
 Surfaced by name (LB51 — never accepted silently): shot S4's **real-footage requirement**
 stands (the "during" state is never generated — the media ask to Will's crew, with the shot
@@ -472,6 +479,7 @@ reasoning. Both gates must pass; a score never argues down a severity.*
 | 1 — storyboard, **round 2** (Revision 1) | pre-spend | **BLOCK** — 3 × S3 (one generated figure still HIGH on the trust beat; a standing HIGH generation fallback; B1's floor water depicting the banned scope). Verdict text: *"close to a zero-generation board"* → Revision 2 took it there | S3 × 3 |
 | 1 — storyboard, **round 3** (Revision 2, all-practical) | pre-spend | **BLOCK** — 5 blocking items, composition changed: **2 human-owned dependencies** (F4 live-record check → Karl; F2 line-item registration of two load-bearing copy lines → Karl/Will), 3 board/proof items (F1/F6 C1-vs-crop-rule reconciliation; F3 S4 frame vs real trade practice; S2 composite proof or in-camera redesign). **No new copy violations; all-practical posture, real-or-absent badge, honest water references and the 7-day recapture rule called correct.** Plus F5–F9/F12 (S2-class) and F13–F17 (S1) for the next board revision | S3 × 5 |
 | 1 — storyboard, **round 4** (Revision 3) | pre-spend | **BLOCK — 5 × S3, but three of them (F1 the mandated logo tagline; F2 "Stop the water."; F3 "On the job.") are lines round 3 explicitly passed as CLEAN — flagged only because the round-4 brief hardened the claims rule to "every line is a registered claim or a question." That exposed a genuine authority conflict (brand guide vs claims discipline) now raised in ## CONFLICTS for Karl, and the findings have stopped converging — the iteration loop is STOPPED per the convergence rule.** The two real fixes (F4 plate-framing spec + extended capture mock; F5 arrival half-turn restage + cold-read gate) are applied, along with the F7–F15 sweep (name field INCLUDED in the insert — it is verified matching; S4 acceptance checklist judged by Karl; C card differentiated; caption trimmed with a stated exit; badge backing chip; tap shut in S5; one basin across variants). Round 4's own close: *"The board fails on its own stated rules, not on taste"* — water physics validated under the professional lens, practical posture validated, safe-area and banned-word compliance clean | S3 × 5 (3 conflict-class, 2 fixed) |
+| 1 — storyboard, **round 5** (rulings-applied board — the legitimate re-gate) | pre-spend | **BLOCK — 2 × S3, both paper fixes measured in minutes:** **F-1** S3's badge conditional permits a zero-identity-marker configuration on the shot whose job is "what VERIFIED looks like at your door" — resolve badge existence at sign-off, not capture day (badge exists → worn, conditional removed; doesn't → re-board with one concrete real marker); **F-3** S5's [Action]/[Camera] geometry contradiction — the counter-height behind/three-quarter MCU cannot see the basin interior, so the payoff's proof is invisible in its own frame (fix: elevated over-shoulder into the basin, or a locked high-angle drain insert). Forced changes travel with the block: **F-2** S4 "phone propped or mounted, never handheld" + stability floor on the shot card and acceptance checklist; **F-5** S2 sanctioned invisible cut so live-site latency can never eat the take + row-load timing added to the mock gate. Notables: **F-4** extend the S2 caption to claim-2's own tail ("…at the state registrar.") — closes the provenance hole; **F-6** four simultaneous reading targets in the 3.5s beat. Minors F-7–F-14 logged (caption/strap air gap, A1 card speed, B1-shoots-last ordering, one-pair-of-hands continuity, pre-written client rationale for no-face/no-van/scope-crop, scope-crop mock vector, CTA J-cut at 13.4, A1's audio tell). **Claims audit fully CLEAN under the canonical rule** — banned words absent, every line inside the three registered claims or a question, both owner acceptances honored. Verdict's own close: the claims posture is "near-bulletproof", the strap "the best single call on the board", S4's trade language survives the professional lens. **Reported to the Owner — no further unilateral rounds**; the two S3 fixes re-gate the changed shots (S3, S5, S2/S4 card lines) through a fresh Pass 1 | S3 × 2 (both paper) |
 | 2 — candidate footage | before the edit locks | NOT RUN — no footage exists | |
 | 3 — finished ad | before delivery | NOT RUN — no ad exists | |
 

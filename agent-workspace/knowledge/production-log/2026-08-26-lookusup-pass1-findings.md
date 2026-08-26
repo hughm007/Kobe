@@ -68,6 +68,33 @@ acknowledge the door opening — behavioral truth beats blocking dogma) were app
 harden a rule in the brief and the gate will faithfully flag compliant work. Keep the claims
 rule stated once, canonically, and hand the gate THAT text, not a paraphrase.
 
+## Round 5 (2 blocking) — the legitimate re-gate, on the rulings-applied board
+
+All CLAUDE-CAUGHT. Run with the canonical claims-rule text (the round-4 lesson applied) and the
+two owner-named acceptances excluded from re-litigation by name. Result: the claims audit came
+back **fully clean** — no copy findings at all, confirming round 4's flags were brief-induced.
+The two blockers are pure execution geometry, which is where a fifth round *should* land:
+
+- **F-1 (S3, blocks):** S3's "badge worn IF it exists, else none" conditional leaves a permitted
+  configuration with zero identity markers on the shot whose story job is "what VERIFIED looks
+  like at your front door" — and its downstream gate (the cold-read test) can only catch that
+  after the shoot is paid for. A conditional on a load-bearing prop is a decision deferred to
+  capture day; the gate forced it back to sign-off.
+- **F-3 (S5, blocks):** the [Action] field's primary foreground (water down the now-clear drain)
+  is physically invisible from the [Camera] field's counter-height behind/three-quarter MCU —
+  the basin wall and the homeowner's body occlude it. Two fields of the same ten-field card
+  contradicted each other and three prior rounds (focused on claims and posture) never looked.
+- Forced changes travelling with the block: S4 gains "phone propped or mounted, never handheld"
+  + a stability floor (the [Camera] promise "locked" vs. the [Source] reality "tech-shot phone"
+  was the same *field-vs-field contradiction* class as F-3); S2 gains a sanctioned invisible cut
+  so live-page latency can never eat the continuous take.
+
+**Reusable lesson (EXPERIMENTAL):** cross-field consistency on a shot card is its own check
+class — [Action]-visible-from-[Camera], [Camera]-achievable-by-[Source], prop conditionals
+resolved before capture. Claims/compliance passes will never catch these; a geometry read
+(can this lens, from this position, see what the action field promises?) belongs in every
+pre-spend pass.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic

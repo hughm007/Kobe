@@ -34,6 +34,39 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Rulings applied; round 5 blocks on geometry, not copy
+
+**Did:** All four of Karl's rulings landed on the board: the tagline conflict **RESOLVED**
+(logo-lockup-only endcard — 24/7 enters solely as artwork inside the real logo file); A1
+"Backed up? Stop the water." **KEPT** with his named acceptance; the ROC record check
+**COMPLETE** (exact name match, ACTIVE, no complaints) — F4 fully closed, capture-script step 1
+all green; and the delegated design call recorded (persistent **info strap** "911 Drain ·
+ROC 366870 · 480-992-3541" at 65%, S2→S5 — rationale in the decision log). Then **round 5, the
+legitimate re-gate**, ran isolated with the canonical claims-rule text per the round-4 lesson.
+Verdict: **BLOCK — 2 × S3**, and both are new territory: the claims audit came back fully
+clean (confirming round 4's flags were brief-induced), but the gate caught two shot-card
+geometry defects — **F-1**: S3's badge conditional permits a zero-identity-marker configuration
+on the "what verified looks like at your door" shot; **F-3**: S5's specified camera physically
+cannot see the payoff its own action field promises (basin interior occluded). Forced changes
+travel with it: S4 propped/mounted-phone + stability floor; S2 sanctioned invisible cut against
+live-page latency. Verdict's own close: claims posture "near-bulletproof", the strap "the best
+single call on the board."
+
+**Decided:** Per the standing rule, no further unilateral rounds — reported out. Both S3s are
+paper fixes measured in minutes, but F-1 turns on a fact only the client side knows (does a
+physical badge/logoed shirt/work order exist?), so it goes to Karl with the F-3 camera re-spec
+recommendation attached.
+
+**Learned:** (production log) Cross-field consistency on a shot card is its own check class —
+[Action]-visible-from-[Camera], [Camera]-achievable-by-[Source], prop conditionals resolved
+before capture day. Claims passes never catch these.
+
+**Open:** Karl — the badge fact + authorization of the S5/S2/S4 fixes and the fresh Pass 1 on
+the changed shots. Behind that, unchanged: storyboard sign-off, Will's claims sheet, the S4
+media ask.
+
+**Next:** Karl's two answers; then fix, re-gate once, and take the sign-off ask.
+
 ## 2026-08-26 — Rounds 3–4: the loop finds its floor and stops itself
 
 **Did:** Karl took the round-3 escalation: **F4 name check CONFIRMED** ("911 Drain LLC", exact
