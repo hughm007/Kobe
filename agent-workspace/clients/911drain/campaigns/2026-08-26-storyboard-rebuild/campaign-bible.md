@@ -40,26 +40,24 @@ variant A) · revision pass AUTHORIZED · QC-harness rebuild AUTHORIZED. Status 
 | # | Awaiting | Who | Prepared where |
 |---|---|---|---|
 | 1 | Storyboard sign-off + budget → unlocks Gate 1.5 — only after the revised board clears a **fresh Skeptic Pass 1** | Karl | §6, `shotlist.md`, §10 |
-| 2 | **Live ROC record check — HALF DONE:** name **CONFIRMED "911 Drain LLC", exact match** (Owner, 2026-08-26). Remaining: status ACTIVE? · complaint rows? · scope-text? — one look at the same result row (or the screenshot). Blocks spend, not board work | Karl | `shotlist.md` S2 capture script |
-| 3 | **CONFLICT ruling: the 24/7 tagline + "Stop the water."** (recommendation: logo-lockup-only endcard; keep or simplify A1 card 1) | Karl | ## CONFLICTS |
-| 4 | Two recorded design decisions: earlier/persistent phone number (round-4 F10)? · pair the real wordmark with the badge pre-endcard (F20)? | Karl | §14 round-4 row |
-| 5 | AIGC labeling posture signature (moot on a zero-generation board; stays drafted) | Karl | Decision log |
-| 6 | Claims sheet signature (9 items + fee question — "24/7 availability" proposed as item 1) | Will | client brief |
-| 7 | S4 media ask — real "during" footage, one job, phone rig, shot card + acceptance checklist | Will's crew | `shotlist.md` S4 |
+| 2 | ~~Live ROC record check~~ **✅ COMPLETE** — name match, ACTIVE, no complaints, scope-text look (Owner, 2026-08-26). Screenshot to `clients/911drain/notes/` when convenient | — | `shotlist.md` S2 capture script |
+| 3 | AIGC labeling posture signature (moot on a zero-generation board; stays drafted) | Karl | Decision log |
+| 4 | Claims sheet signature (9 items + fee question — "24/7 availability" proposed as item 1) | Will | client brief |
+| 5 | S4 media ask — real "during" footage, one job, phone rig, shot card + acceptance checklist | Will's crew | `shotlist.md` S4 |
 
 **Gate history:** Pass-1 rounds (2026-08-26): round 1 BLOCK 7×S3 → round 2 BLOCK 3×S3 →
 round 3 BLOCK 5 → round 4 BLOCK 5×S3 — of which 3 are a **rules-authority conflict** (see
 ## CONFLICTS) and 2 were **fixed on the board** (S2 plate spec + extended mock; S3 half-turn
 restage + cold-read gate). **The unilateral iteration loop is STOPPED** (findings stopped
-converging: round 4 flagged lines round 3 passed as clean). The board re-gates through a fresh
-Pass 1 only after Karl rules on the conflict — bundled with the real-world gates it needs
-anyway (cold-read test, capture-day mock, status-row look). Kobe = CANNOT ASSESS (§13,
+converging: round 4 flagged lines round 3 passed as clean). All four Owner rulings are in (2026-08-26): conflict resolved,
+F4 fully closed, design calls made. **Round 5 — the legitimate re-gate — runs on the updated
+board**; PASS/CONDITIONAL converts to the storyboard sign-off ask. Kobe = CANNOT ASSESS (§13,
 unchanged — nothing to watch yet).
 
-Surfaced by name (LB51 — never accepted silently): shot S5's **generation fallback** carries a
-`NO REFERENCE FOUND — HIGH RISK` entry (its primary path is now a practical shoot, which needs
-no external reference); shot S4's **real-footage requirement** stands (the "during" state is
-never generated — the media ask to Will's crew).
+Surfaced by name (LB51 — never accepted silently): shot S4's **real-footage requirement**
+stands (the "during" state is never generated — the media ask to Will's crew, with the shot
+card and acceptance checklist). S5's old generation fallback was deleted in Revision 2; every
+shot on the board is practical/real, so no HIGH RISK reference entries remain.
 
 ---
 
@@ -530,7 +528,7 @@ rescuing; the board needs the seven S3s closed."*
 ## CONFLICTS
 *Append-only. Raised by any skill, resolved only by `servicepow-campaign-director`.*
 
-### CONFLICT 2026-08-26 · raised by servicepow-skeptic (Pass 1 round 4) · status: OPEN — KARL RULES
+### CONFLICT 2026-08-26 · raised by servicepow-skeptic (Pass 1 round 4) · status: **RESOLVED (Owner rulings, 2026-08-26)**
 **Approved decision:** the brand guide mandates the logo tagline "24/7 EMERGENCY DRAIN REPAIR"
 on every new asset (tagline-drift rule), and the endcard carries it.
 **Problem:** the claims discipline (claims sheet UNSIGNED) reads "24/7" as an unregistered
@@ -547,6 +545,11 @@ to "Backed up?", which also cures the 1.2s readability finding. (c) When Will si
 sheet, "24/7 availability" goes on it as item 1, retiring this conflict permanently.
 **Cost of not changing:** the board cannot clear a Pass 1 that applies the strict reading, and
 the tagline stays a reportable-claim exposure until the sheet is signed.
+**RESOLUTION (Owner, in-session, 2026-08-26):** (a) **logo-only endcard** — the recommended
+option, applied: no separately burned tagline; the 24/7 line enters solely as artwork inside
+the real logo file. (b) **A1 kept** with the Owner's named acceptance that "Stop the water." is
+safety advice, not a substantiatable-claim class. (c) "24/7 availability" proposed as
+claims-sheet item 1 when Will signs.
 
 ## Decision log
 | Date | Decision | By | Why |
@@ -562,3 +565,6 @@ the tagline stays a reportable-claim exposure until the sheet is signed.
 | 2026-08-26 | **AIGC posture (drafted, awaiting Karl's signature):** shoot A1/C1/S5 practical and restructure S3 so the synthetic surface shrinks to one distant static figure + one macro fluid shot; enable the platform synthetic-content label wherever photoreal generated content remains; never claim any synthetic person is a real customer | Claude (recommendation) | Trust-premise ad; platform label rules; smallest honest surface |
 | 2026-08-26 | **Revision 2: the pack goes ALL-PRACTICAL — zero generation** (second Pass 1 blocked on F1/F2/F3, all pointing one way; its own words: "close to a zero-generation board") | Claude (forced by the gate; ratified by the standing revision authorization) | Kills AIGC-label exposure by construction; every remaining shot is one phone-shoot afternoon; the trust ad contains nothing synthetic |
 | 2026-08-26 | **Revision 3:** F2 closed WITHOUT a new signature — both queued lines replaced with copy strictly inside the three registered claims (the round-3 verdict's own alternative); F4 name half CONFIRMED by the Owner ("911 Drain LLC", exact match); S2 composite eliminated (all in-camera); S4 re-boarded to real trade practice | Claude (per the approved plan) + Owner (F4 check; "skip Will for now") | The campaign no longer waits on Will for copy; status/complaint look is the last human blocker before spend |
+| 2026-08-26 | CONFLICT resolved: **logo-only endcard** (24/7 tagline as logo artwork, not ad copy) + **A1 "Stop the water." KEPT** with named acceptance | Owner (Wyatt), in-session | Both authorities satisfied; safety advice is not a claims-sheet class |
+| 2026-08-26 | **F4 fully closed:** record status **ACTIVE, no complaints** (owner-verified) — the last record dependency before spend | Owner (Wyatt), in-session | The ad may safely send every viewer to the record |
+| 2026-08-26 | **Info strap** "911 Drain · ROC 366870 · 480-992-3541" at 65%, S2→S5 (replaces the badge-only chip) | Claude (design call delegated by Owner: "do what you believe is best based off marketing analytics") | The brand guide's own doctrine — the ad's job is the number and the reassurance; the mid-emergency primary target gets something callable from second 2.5; resolves round-4 F10+F20 in one element; plain type is not the wordmark (LB24). Trade accepted: variant C's digits→brand reveal softens |

@@ -77,7 +77,7 @@ you trust.** Lead variant: **A**.
 
 | Element | Y-position | Note |
 |---|---|---|
-| Persistent badge "ROC 366870" | baseline **65%** | clears TikTok caption zone / Meta CTA chrome (F14: one string) |
+| Persistent info strap "911 Drain · ROC 366870 · 480-992-3541" | baseline **65%** | clears TikTok caption zone / Meta CTA chrome; 40%-black backing chip |
 | Hook cards | centered **42%** | exit at the S2 cut (F6) |
 | S2 locked-insert result row (the proof) | centered **40%** | in-band; above the caption |
 | S2 caption | **58%**, onset 3.2s | delayed past the punch-in (F6) |
@@ -101,11 +101,9 @@ Camera:      locked CU on the basin, slight natural breathing; tap handle and wa
 Lighting:    warm kitchen practicals, evening state (F19) — identical in every kitchen shot
 Audio:       tap run + rising gurgle; after shutoff, the slow glug of the drawdown (the tell)
 Text:        "Backed up? Stop the water." (0.0–1.2, 42%) → "Who do you let in?"
-             (1.2–2.5 — exits AT the S2 cut). **⚠ CONFLICT-PENDING (round-4 F2/F6):** "Stop
-             the water." is generic safety advice, not a substantiatable marketing claim — but
-             the strict claims-rule reading flags any non-question outside the three claims,
-             and 5 words / 1.2s is under muted reading speed anyway. Karl rules: keep with
-             named acceptance, or simplify card 1 to "Backed up?" (cures both findings)
+             (1.2–2.5 — exits AT the S2 cut). **RESOLVED (Owner ruling, 2026-08-26): KEEP** —
+             named acceptance that "Stop the water." is safety advice, not a substantiatable
+             marketing-claim class. ACCEPTED BY: Karl (Wyatt), in-session
 Source:      PRACTICAL SHOOT — rag wedged in the trap side (partial block), tap running, one
              real hand. NO generation path. If impossible: re-board + fresh Pass 1
 Real-ref:    CITED — https://www.zoomdrain.com/blog/2026/march/what-to-do-when-your-basement-floor-drain-is-bac/
@@ -195,9 +193,13 @@ Lighting:    phone screen as key, warm practical behind — evening state
 Audio:       one confirm tap; room tone; no gurgle here — this beat is already calmer
 Text:        caption "Every licensed AZ contractor is publicly checkable." (58%, onset 3.2s,
              **exits at the S3 cut, 6.0s** — round-4 F11: exit specified, 7 words / 2.8s) +
-             persistent badge begins: "ROC 366870" (65%, through S5, **on a 40%-black backing
-             chip** — round-4 F12: one contrast treatment across screen-bright, dusk and
-             under-sink frames)
+             the persistent INFO STRAP begins (Owner-delegated design call, 2026-08-26 —
+             resolves round-4 F10 + F20 in one element): plain burned type
+             "911 Drain · ROC 366870 · 480-992-3541", baseline 65%, on a 40%-black backing
+             chip (one contrast treatment across screen-bright, dusk and under-sink frames),
+             running S2 through S5. Plain type naming the company is not the wordmark — no
+             mark is generated or re-drawn (LB24). The mid-emergency viewer has something
+             callable from second 2.5
 Source:      REAL — the actual public result for 366870, live on the phone, filmed. Nothing
              composited, nothing generated. FRAME RULE (F15 rewording): no ROC branding, seal,
              or identity imagery in any frame of the ad; **the result-row insert is the single
@@ -222,12 +224,11 @@ Motion:      focus change (rack thumb → screen as the row loads) + the cut to 
    search **366870**.
    - (a) legal/business name: **✅ CONFIRMED "911 Drain LLC", exact match (owner eyeball,
      2026-08-26)** — the regulatory-name risk is closed.
-   - (b) status ACTIVE? **OPEN** · (c) complaint rows? **OPEN** · (d) any visible scope text
-     containing "sewer"? **OPEN** — one look at the same result row closes all three;
-     screenshot the record into `clients/911drain/notes/`. **A non-ACTIVE status or complaint
-     rows → back to the director before any spend.**
-   *(Egress-blocked from the build environment; research exhausted 2026-08-26 — no cached
-   copy exists anywhere searchable. The owner's look is the only path.)*
+   - (b) status: **✅ ACTIVE** · (c) complaint rows: **✅ NONE** · (d) scope-text look:
+     **✅ done via the Owner's record view** — all confirmed by the Owner, 2026-08-26.
+     **STEP 1 COMPLETE — the record is clean and the ad may safely send viewers to it.**
+     The screenshot is still filed to `clients/911drain/notes/` when convenient (evidence
+     hygiene; no longer blocking).
 2. **The capture (at production):** screen-record the search → result at device resolution.
    Composite target: C1's filmed phone plate. Show ONLY: search field, typed digits, result
    row with number + status. Crop out: seal/branding, legal-name field, addresses, names,
@@ -251,8 +252,8 @@ Action:      HOMEOWNER-POV: the camera IS the homeowner, just inside the front d
 Camera:      locked POV at eye height; at most a 2% post move
 Lighting:    porch light warm against evening blue; dim warm hallway edge in the frame border
 Audio:       door latch, evening street/cricket tone. NO spoken word — the wait is the shot
-Text:        no scene text; the persistent badge "ROC 366870" CONTINUES through this shot
-             (F13 — this field previously said "none", contradicting S2's persistence rule)
+Text:        no scene text; the persistent info strap ("911 Drain · ROC 366870 ·
+             480-992-3541") CONTINUES through this shot (F13 fix kept)
 Source:      PRACTICAL SHOOT — real hand, real door, real porch, real stand-in. NOTHING
              generated. Badge: the real physical badge or nothing (a prop badge would be a
              fabricated credential). If a stand-in is impossible: re-board (empty-porch +
@@ -334,10 +335,16 @@ Action:      black brand field; the real logo file fades in (fade-in only); type
 Camera:      graphic card; the drift is the motion
 Lighting:    brand black; red reserved exactly here
 Audio:       the bed resolves to one low note, then silence
-Text:        "480-992-3541" (large, 44%, 3.0s) · "ROC 366870 — look us up." (55%) ·
-             "24/7 EMERGENCY DRAIN REPAIR" (62%) — all in-safe; logo tagline only
-Source:      COMPOSITE FROM REAL FILES ONLY (LB24). No ROC-site imagery in any frame,
-             anywhere in the ad (F9)
+Text:        "480-992-3541" (large, 44%, 3.0s) · "ROC 366870 — look us up." (55%) · **the
+             real logo lockup file only** at 62% — **RESOLVED (Owner ruling, 2026-08-26:
+             logo-only endcard):** no separately burned tagline text; the 24/7 tagline enters
+             solely as artwork inside the real logo file — a brand mark, not ad copy —
+             satisfying the brand guide's tagline mandate AND the claims discipline at once.
+             "24/7 availability" is proposed as claims-sheet item 1 for Will. The wrap's
+             "& SEWER" line never appears
+Source:      REAL-FILE GRAPHIC CARD (LB24; the sanctioned third category of the all-practical
+             posture). No ROC branding/seal/identity imagery anywhere in the ad — the S2
+             result-row insert is the single sanctioned exception
 Real-ref:    exempt — graphic card
 Angle:       risk removal — the CTA literally invites verification
 Motion:      light change (logo fade-in + red pulse) + micro scale drift

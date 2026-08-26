@@ -26,11 +26,11 @@ bonus layer. **Claim-free** — no price, no speed promise, no guarantee, no "se
 | Time | Shot | Burned text (muted carrier) | VO (sound-on bonus) | Diegetic audio |
 |---|---|---|---|---|
 | 0.0–2.5 | Hook (A/B/C) | per variant, below | — | per variant |
-| 2.5–6.0 | S2 verify | "Every licensed AZ contractor is publicly checkable." (onset 3.2s, exits 6.0s) + persistent badge (black backing chip) through S5: "ROC 366870" | "Before you let anyone in — check them." | six key taps, one confirm tap, room tone |
+| 2.5–6.0 | S2 verify | "Every licensed AZ contractor is publicly checkable." (onset 3.2s, exits 6.0s) + persistent info strap through S5: "911 Drain · ROC 366870 · 480-992-3541" (65%, black backing chip) | "Before you let anyone in — check them." | six key taps, one confirm tap, room tone |
 | 6.0–9.0 | S3 arrival | none — the wait is the shot | **none (F11)** | door latch, evening street tone; no dialogue |
 | 9.0–11.5 | S4 work | "Licensed. Look us up." (round-4 F3) | — (the ratchet is the line) | auger drum ratchet, water starting to give |
 | 11.5–14.0 | S5 payoff | "Licensed. Verifiable." | "911 Drain." (11.5–13.4); CTA line J-cuts in at 13.5 | tap opens, the pour, room tone resolving |
-| 14.0–17.0 | S6 endcard | "480-992-3541" (large) · "ROC 366870 — look us up." · "24/7 EMERGENCY DRAIN REPAIR" | "…the number's on your screen — look us up." (**ends by 16.6 — F17**) | bed resolves to one low note, then silence + 0.4s clean tail |
+| 14.0–17.0 | S6 endcard | "480-992-3541" (large) · "ROC 366870 — look us up." · **real logo lockup only** (Owner ruling: no burned tagline — the 24/7 line lives inside the logo art) | "…the number's on your screen — look us up." (**ends by 16.6 — F17**) | bed resolves to one low note, then silence + 0.4s clean tail |
 
 ## Variant hook text
 
@@ -67,7 +67,7 @@ and the VO directs eyes to it. Flagged for Karl at the storyboard gate.
 | B line "Still comparing plumbers?" | 3 | 2.1s | ≥1s | ✓ |
 | C line "Look them up first." | 4 | 2.3s | ≥1s | ✓ |
 | S2 caption | 7 | 2.8s (onset 3.2s, exits 6.0s) | ≥1s | ✓ |
-| "ROC 366870" badge | 2 | 14.5s persistent (S2→S5, F13 fixed) | ≥2s license number | ✓ |
+| Info strap "911 Drain · ROC 366870 · 480-992-3541" | 5 | 14.5s persistent (S2→S5) | ≥2s license + phone | ✓ — the number is now on screen ~14.5s before the endcard repeats it large |
 | S4 line "Licensed. Look us up." | 4 | 2.5s | ≥1s | ✓ |
 | S5 line | 2 | 2.5s | ≥1s | ✓ |
 | Phone number | 1 string | 3.0s | ≥2s phone number | ✓ |
