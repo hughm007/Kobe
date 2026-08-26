@@ -1,15 +1,19 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Script — REVISION 14"
+title: "911 Drain — Storyboard Rebuild — Script — REVISION 16"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, script, revision-14]
+tags: [campaign, script, revision-16]
 ---
 
-# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 14
+# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 16
+
+**Revision 15–16 changes (rounds 13–14; changelog in `shotlist.md`):** no burned or VO line
+changes — the version moves in lockstep (Rev 15: the S5 settle beat; Rev 16: its in-window
+timing budgets + the D-1 fallback line). The S5 payoff sentence below carries the settle.
 
 **Revision 14 changes (Owner read #2; changelog in `shotlist.md`):** the S2 caption becomes
 the Owner-picked humanized voice — "You can check your plumber's license yourself — state
@@ -134,4 +138,5 @@ and the VO directs eyes to it. Flagged for Karl at the storyboard gate.
 Contractions yes; no slang; "we/you" direct address; the emergency is never joked about; every
 word a homeowner would say. No line requires a breathless read; the ad ends quieter than the
 feed it sits in. US vocabulary throughout. The payoff is domestic and wordless: water freely
-draining, a glass filled at the tap, the windowsill plant watered — no drinking (F14).
+draining, a glass filled at the tap, the tap shut, **one held settle beat (Rev 15 — the
+challenger cut exits there)**, the windowsill plant watered — no drinking (F14).

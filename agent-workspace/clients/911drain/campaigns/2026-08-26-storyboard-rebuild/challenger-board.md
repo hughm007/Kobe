@@ -9,7 +9,7 @@ updated: 2026-08-26
 tags: [campaign, storyboard, challenger, positioning-test, all-practical]
 ---
 
-# CHALLENGER — "Look Us Up" pack, problem/solution-first cut — VERSION 2
+# CHALLENGER — "Look Us Up" pack, problem/solution-first cut — VERSION 3
 
 **What this is (Owner directive, storyboard read #2, 2026-08-26):** a **performance
 challenger built from the control board's captures — zero new SETUPS** (one added direction
@@ -23,6 +23,16 @@ challenger is formally a SECOND SPINE, authorized by the Owner as a deliberate p
 A/B: **trust-first (control) vs problem/solution-first (challenger)**. Message, promise,
 emotion, CTA logic, claims discipline, and the captures are IDENTICAL; only the ORDER of
 what the viewer learns changes.
+
+## Version 3 changelog (round-14 finding → change; round 14 = **CONDITIONAL PASS on both artifacts — zero S3/S4; all fifteen round-13 repairs verified landed by recomputation**)
+
+| Finding | Change |
+|---|---|
+| **R14-C1 (S2)** | D-1's decline branch is now executable for BOTH cuts: pre-computed shared fallback **"Contractor licenses are public — state registrar."** (49 ch — challenger 3.0s = 16.3 cps ✓ · control 4.0s = 12.3 cps ✓, both swept) replaces the unsized old line as the fallback |
+| **R14-C2 (S2)** | The **job-state-advances line is INSTALLED on the control's committed S4 acceptance checklist** (no longer a prose-only claim) |
+| **R14-C3 (S2)** | The kitchen/visible-progress collision resolved (delegated design call, recorded): on frame (a) the VISIBLE correlate of progress is **cable feed-depth advancing / the feed-to-crank rhythm change**; the water "giving" stays an AUDIO event there; **muted-story note recorded** — on kitchen jobs the muted WORK beat carries competence through visible cable progress, not water; kitchen bias kept |
+| **R14-C4/C5 (S1)** | Insert-then-master structure restated in the acceptance criteria; the homeowner continuity check re-anchored to the **insert→master cut at ~12.5** (insert 11.0–12.5 · master 12.5–14.0) |
+| **R14-C6/C7/C8 (S1)** | This cut's own numbers derived (strap 41 ch / 11.0s ≈ **3.7 cps**; "Back to normal." onset 11.0 → exits 14.0, 3.0s = **5.0 cps**); B-card exit generalized to "exits at the 2.5 cut"; the direct-cut plumber question folded into the seam re-sign context; both live caption strings quoted verbatim on the D-1 sheet line |
 
 ## Version 2 changelog (round-13 finding → change)
 
@@ -54,11 +64,11 @@ what the viewer learns changes.
 
 | Time | Beat | Assets (control shot IDs) | Burned text | VO |
 |---|---|---|---|---|
-| 0.0–2.5 | **PAIN** | A1 or B1, unchanged cards and rigs | per variant (as gated) | — |
+| 0.0–2.5 | **PAIN** | A1 or B1, unchanged cards and rigs | per variant (as gated; card exits generalize to "exits at the 2.5 cut" in this cut — R14-C6) | — |
 | 2.5–5.0 | **SOLVING** — the work opens 6.5s earlier than control | S4 footage, first accepted stretch (~2.5s of the ~30s usable ask) | **"This is 911 Drain."** at 2.5 (gated; 7.2 cps); **the strap enters at 3.0** (round-13 CH-3 stagger — "911 Drain LLC · ROC 366870 · 480-992-3541", 65%, chip; callable at 3.0, 2.5s earlier than control) | **"911 Drain." (3.0–4.5 — 2 w / 1.5s = 80 WPM, the set's slow anchor — round-13 CH-2)** |
 | 5.0–8.0 | **PROOF** — verification compressed, evidence still PERFORMED | S2 locked ECU insert: the window **opens on the result row loading/settling and ends ON the confirm-tap frame — the detail page never renders** (CH-4/CH-5) | caption (short core, Owner-picked voice): **"Check your plumber's license — state registrar."** (47 ch / 3.0s = 15.7 cps ✓; onset 5.0, **exits 8.0 — no tail ride, one instruction** (CH-9); the plumber-for-contractor mapping rides sign-off line D-1) | "Check them yourself — before you let anyone in." (the control line's words + "yourself", 7→8 words — CH-11; 8 w / 3.0s = 160 WPM ✓ ≤175) |
-| 8.0–11.0 | **WORK** — competence extended | S4 footage, **a second accepted stretch of the same take/job** (CH-14) — the acceptance footage must show the job state advancing (feed → the water giving), per the checklist | none — the strap carries; the ratchet is the line | — |
-| 11.0–14.0 | **RELIEF** — drain-first | **S5 high-angle drain insert (REQUIRED capture — acceptance criteria below, CH-15)** opening the beat, then the S5 master: tap-shut → **the directed settle beat (shoulders drop on the exhale — added to the S5 card, control Rev 15, CH-1)** — this cut exits BEFORE the hand moves to the plant | **"Back to normal."** (gated; the F12-6 binding is satisfied by the insert — the drain visibly swallowing IS the opening frame) | — (wordless relief) |
+| 8.0–11.0 | **WORK** — competence extended | S4 footage, **a second accepted stretch of the same take/job** (CH-14) — the job state must ADVANCE across the accepted stretches, per the checklist line installed round-14 (R14-C2/C3): on frame (a), the under-sink trap frame, the VISIBLE correlate is cable feed-depth advancing / the feed-to-crank rhythm change (the water "giving" is an AUDIO event there — muted-story note: kitchen-job WORK carries competence through visible cable progress, not water) | none — the strap carries; the ratchet is the line | — |
+| 11.0–14.0 | **RELIEF** — drain-first | **S5 high-angle drain insert (REQUIRED capture — acceptance criteria below, CH-15)** opening the beat, then the S5 master: tap-shut → **the directed settle beat (shoulders drop on the exhale — added to the S5 card, control Rev 15, CH-1)** — this cut exits BEFORE the hand moves to the plant | **"Back to normal."** (gated; onset **11.0, exits 14.0 — 3.0s = 5.0 cps** (R14-C6); the F12-6 binding is satisfied by the insert — the drain visibly swallowing IS the opening frame) | — (wordless relief) |
 | 14.0–17.0 | **CALL** | S6 endcard exactly as gated (number set from frame one) | as gated | **"Call 911 Drain — the number's on your screen."** (J-cut 13.4, ends 16.6 — as gated) |
 
 **S3 (the dusk arrival) IS CUT from this challenger — deliberately: the Owner's S3 pressure
@@ -107,30 +117,38 @@ verified→confidence; RELIEF cannot precede WORK; no two beats swap unnoticed �
 
 | String | Class | cps / WPM | Status |
 |---|---|---|---|
-| "Check your plumber's license — state registrar." | claim-2 restatement in audience language + imperative; venue named; **plumber-for-contractor mapping = sign-off line D-1 (shared with the control's caption — one Karl signature covers both)** | 47 ch / 3.0s = 15.7 ✓ | gates with this board |
+| "Check your plumber's license — state registrar." | claim-2 restatement in audience language + imperative; venue named; **plumber-for-contractor mapping = sign-off line D-1 (one Karl signature covers both cuts)**. DECLINE FALLBACK, pre-computed and swept (R14-C1): **"Contractor licenses are public — state registrar."** — 49 ch: 16.3 cps here ✓, 12.3 cps in the control's 4.0s window ✓ | 47 ch / 3.0s = 15.7 ✓ | gates with this board |
 | VO "Check them yourself — before you let anyone in." | claim-2 imperative — the control line's words + "yourself" (7→8 words, CH-11) | 160 WPM ✓ | gates with this board |
 | VO "911 Drain." at 3.0–4.5 | claim 3; the set's slow anchor | 80 WPM ✓ | window new; line gated |
 | Everything else | as classified on the control | as published | already gated |
 
 **Strap arithmetic (this cut):** enters **3.0** (CH-3), runs through 14.0 = 11.0s + 3.0s
-endcard = **number on screen 14.0s of 17.0** — still 2.5s earlier callable than the control,
-with one text element arriving per moment (card 2.5 → strap 3.0 → VO 3.0 is voice, not text).
+endcard = **number on screen 14.0s of 17.0**; this cut's own strap read = 41 ch / 11.0s ≈
+**3.7 cps** (R14-C6 — derived here, not inherited) — still 2.5s earlier callable than the
+control, one text element per moment (card 2.5 → strap 3.0 → VO 3.0 is voice, not text).
 
 ## Capture/seam checks specific to this cut
 
 - **Person seams (CH-8):** at the 2.5 cut, homeowner hand (hook) → GLOVED tech hands (S4):
   the tech must NOT read as the homeowner — glove/sleeve/skin distinguishability recorded
-  from the accepted S4 take against the hook's cast hands ☐. At the 11.0 cut, homeowner
-  continuity A1↔S5 per the cast-hands rule ☐.
-- **Geography seam (CH-6):** the direct kitchen-basin→S4-fixture cut makes the seam naked if
-  the job is a non-kitchen fixture — **the seam signature (Karl, at the capture window)
-  re-signs explicitly against THIS direct cut, and the kitchen-job bias is effectively
-  required for the challenger** ☐.
+  from the accepted S4 take against the hook's cast hands ☐. At the **insert→master cut (~12.5** — re-anchored round-14 R14-C5; 11.0 is S4→insert, no
+  person), homeowner continuity A1↔S5 per the cast-hands rule ☐.
+- **Geography seam (CH-6; + R14-C7):** the direct kitchen-basin→S4-fixture cut makes the
+  seam naked if the job is a non-kitchen fixture — **the seam signature (Karl, at the
+  capture window) re-signs explicitly against THIS direct cut, and the kitchen-job bias is
+  effectively required for the challenger** ☐. The re-sign context also carries the
+  professional-lens question (R14-C7): a loaded basin at 2.4s hard-cut to an open trap arm
+  at 2.5s — montage grammar protects it, and the question is put to the unbriefed-plumber
+  read rather than left unasked ☐.
 - **PROOF cold-read (CH-4):** insert-only beat shown cold to ≥3 unbriefed viewers ("what is
   this?" — PASS = official-record family, not "a screenshot/mockup") before lock ☐.
-- **Promoted drain insert (CH-15):** capture-day acceptance — drain visibly swallowing at
-  capture · locked framing/focus on the drain mouth · ≥8s clean so the 3.0s beat cuts from
-  the take's best stretch ☐.
+- **Promoted drain insert (CH-15; wording per R14-C4):** capture-day acceptance — drain
+  visibly swallowing at capture · locked framing/focus on the drain mouth · ≥8s clean as
+  SAFETY MARGIN — the beat is **insert (11.0–12.5) then master (12.5–14.0)**, never
+  insert-only ☐.
+- **RELIEF internal cut (R14-C5):** the insert→master cut lands at **~12.5**; the homeowner
+  continuity check (A1↔S5, cast-hands rule) anchors to THAT cut, not to 11.0 (which is
+  S4→insert, no person) ☐.
 
 ## Test design (media plan — the market decides)
 

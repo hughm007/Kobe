@@ -353,6 +353,28 @@ license — audience language mapped onto a registered claim, signed rather than
 - **Audience language over registered-claim terms is a signature, not a synonym** — "plumber"
   for "contractor" maps the substance but drifts the class; the sheet signs the mapping.
 
+## Round 14 (0 blocking) — both artifacts conditional; the challenger converts
+
+All CLAUDE-CAUGHT. The re-gate verified all fifteen round-13 repairs by recomputation and
+found the residue in the repairs' own margins: the D-1 decline fallback had never been sized
+for the challenger's window (23.0 cps — "a board that publishes a cps sweep for every string
+left its own fallback un-swept"); the challenger cited a checklist line that existed only in
+its own prose ("per the checklist" pointing at a checklist that didn't carry the line); the
+kitchen-bias requirement collided with a visible-progress requirement on a frame where the
+water never appears; and the control-side settle beat consumed real frames in a fixed window
+while the changelog claimed "unchanged in effect." V3 + Revision 16 closed all of it: an
+executable fallback swept for both windows, the checklist line installed, frame (a)'s
+visible correlate defined (cable feed-depth / rhythm change; water-giving stays audio, with
+the muted-story note), budgets published (pour lands by ~13.8).
+
+**Reusable lessons (EXPERIMENTAL):**
+- **A fallback is a string like any other — sweep it the day it is named.** An un-sized
+  fallback turns a decline branch into a hidden re-board.
+- **"Per the checklist" is a citation, not a wish** — a requirement exists where the judged
+  document carries it, nowhere else. Install, then cite.
+- **When a beat is added inside a fixed window, publish the window's internal budgets** —
+  "unchanged in effect" is a claim about frames, and frames are counted, not asserted.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic

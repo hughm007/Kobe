@@ -34,6 +34,34 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Round 14: both cuts conditional — the two-board package is at Karl's sign-off
+
+**Did:** Round 14 re-gated challenger V2 + the control's Rev-15 delta: **CONDITIONAL PASS on
+both, zero S3/S4, all fifteen round-13 repairs verified by recomputation.** Its register —
+the un-sized D-1 fallback (23.0 cps in the challenger window), the "per the checklist" claim
+citing a line the committed checklist didn't carry, the kitchen/visible-progress collision,
+the S5 settle beat's unpublished window budgets — closed as **challenger V3 + control
+Revision 16**: shared decline fallback "Contractor licenses are public — state registrar."
+(swept both windows), the job-state-advances line INSTALLED on the checklist with frame
+(a)'s visible correlate defined, both caption strings verbatim on the D-1 line, S5 budgets
+published (pour lands by ~13.8; can't-hold → re-time + re-gate). **The two-board package now
+sits with Karl: the D-1 signature (plumber-for-contractor audience language, one signature
+covering both cuts — or the pre-computed contractor fallback) and the storyboard sign-off
+itself, over control + challenger with the market deciding between them.**
+
+**Decided:** No further unilateral rounds — the remaining conditions are all named to Karl,
+and the regression rule (changed documents re-gate before spend) is preserved by the boards'
+own standing text.
+
+**Learned:** (production log) Sweep a fallback the day it is named. "Per the checklist" is a
+citation, not a wish. A beat added inside a fixed window publishes the window's budgets.
+
+**Open:** Karl — D-1 signature + the two-board sign-off. At their moments: the capture-day
+gates, seam re-signs, pre-edit-lock checks, call-qualification tracking before launch,
+Will's claims sheet (the v2 copy unlock).
+
+**Next:** Karl's package answers.
+
 ## 2026-08-26 — Dual gate lands: DR advisory filed; challenger V1 blocked, V2 + Rev 15 ready
 
 **Did:** Both halves of the dual gate returned. The **DR lens's first advisory** (filed

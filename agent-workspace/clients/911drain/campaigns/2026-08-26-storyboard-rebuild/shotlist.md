@@ -1,17 +1,17 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 15"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 16"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-15, all-practical]
+tags: [campaign, storyboard, shotlist, revision-16, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 15 (ALL-PRACTICAL) — the CONTROL cut
+# Shotlist — "Look Us Up" pack — REVISION 16 (ALL-PRACTICAL) — the CONTROL cut
 
-**Current state (Revision 15, 2026-08-26 — this intro narrates NOW; the problem/solution-first CHALLENGER cut of these same assets lives in `challenger-board.md` (V2), per the Owner's read #2 — the market decides between the two):**
+**Current state (Revision 16, 2026-08-26 — this intro narrates NOW; the problem/solution-first CHALLENGER cut of these same assets lives in `challenger-board.md` (V2), per the Owner's read #2 — the market decides between the two):**
 an all-practical, zero-generation 8-shot board; every burned and VO line inside its AUDITED
 CLASS (round-12 F12-2 — the taxonomy stated honestly): a registered claim · a question ·
 frame-narration (a statement about the visible frame, with recorded fallbacks) · or
@@ -20,11 +20,20 @@ match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); t
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
 
+## Revision 16 changelog (round-14 finding → change; round 14 = **CONDITIONAL PASS on both artifacts, zero S3/S4**)
+
+| Finding | Change |
+|---|---|
+| **R14-C2 (S2)** | The **job-state-advances line INSTALLED on the committed S4 acceptance checklist**, with frame (a)'s visible correlate defined (cable feed-depth / rhythm change; water-giving = audio there, muted-story note recorded) |
+| **R14-C1/C8 (S2/S1)** | The D-1 sheet line now quotes BOTH live caption strings verbatim and carries the pre-computed shared decline fallback **"Contractor licenses are public — state registrar."** (49 ch — swept for both windows) |
+| **R14-K1 (S2)** | S5 **in-window timing budgets published** (fill ~0.4 · shut ~0.4 · settle ≤0.7 · pour lands by ~13.8, day-rehearsed; can't-hold → re-time + re-gate); the Rev-15 changelog's "the control's edit is unchanged in effect" overstatement corrected below |
+| **R14-K2/K3 (S1)** | `script.md` gains its Rev-16 lockstep row + the settle in its payoff sentence; the sign-off read-line below narrates read #2 |
+
 ## Revision 15 changelog (round-13 finding → change)
 
 | Finding | Change |
 |---|---|
-| **CH-1 (severity S3 · challenger RELIEF, blocked)** | The S5 card gains **one directed settle beat** — tap-shut → held settle/exhale (hands still) → THEN the pour — inside the same take: the control's edit is unchanged in effect, and the challenger's drain-first relief tail now exists in a boarded capture |
+| **CH-1 (severity S3 · challenger RELIEF, blocked)** | The S5 card gains **one directed settle beat** — tap-shut → held settle/exhale (hands still) → THEN the pour — inside the same take; the challenger's drain-first relief tail now exists in a boarded capture. ~~"the control's edit is unchanged in effect"~~ **corrected round-14 R14-K1: the settle occupies real control frames inside the fixed 2.5s window — budgets now published on the card** |
 | **D-1 (S2 · both captions)** | The **plumber-for-contractor audience-language mapping** joins the sign-off sheet for Karl's named accept-or-fallback — one signature covers both cuts (also closes challenger CH-10) |
 
 ## Revision 14 changelog (Owner read #2, 2026-08-26 — the performance-challenger directive)
@@ -548,8 +557,12 @@ Source:      REAL CLIENT FOOTAGE REQUIRED — the "during" state is never genera
              R6-F5)** · **phone propped or mounted — handheld footage rejected (round-5 F-2;
              stability surrogate: the drum edge stays inside a 5%-of-frame box across the
              take)** · **visible sleeve/glove/skin reads of the accepted take RECORDED for
-             the S3 wardrobe plan (round-12 F12-4)** — marginal footage is rejected against
-             this list, never sunk-cost accepted. **Grade plan:** cool phone footage graded toward the warm practical
+             the S3 wardrobe plan (round-12 F12-4)** · **the job state ADVANCES across
+             accepted stretches (round-14 R14-C2/C3 — installed for the challenger's
+             two-window use): on frame (a) the visible correlate is cable feed-depth
+             advancing / the feed-to-crank rhythm change (the water "giving" is an audio
+             event on that frame — muted-story note recorded)** — marginal footage is
+             rejected against this list, never sunk-cost accepted. **Grade plan:** cool phone footage graded toward the warm practical
              world; tested on the first capture. **Capture-first scheduling: the controlled
              shoot afternoon is not booked until this window has product.** CONTINGENCY RE-GATE: if no usable footage
              lands, an aftermath-only redesign is NOT pre-approved — the changed board returns
@@ -577,7 +590,12 @@ Action:      from behind, elevated (see Camera): PRIMARY FOREGROUND ACTION — w
              shoulders drop ~2 cm on the exhale, hands still — BEFORE the hand moves to the
              plant** (round-13 CH-1, control Rev 15: one direction beat inside the same take;
              the CHALLENGER cut exits here, the control continues), and without hurry WATERS
-             THE SMALL WINDOWSILL PLANT (no drinking); the pour lands on the settled body
+             THE SMALL WINDOWSILL PLANT (no drinking); the pour lands on the settled body.
+             **IN-WINDOW TIMING BUDGETS (round-14 R14-K1 — the settle consumes real control
+             frames; published, not assumed): fill ~0.4s · shut ~0.4s · settle ≤0.7s · the
+             pour LANDS BY ~13.8 so it stays on camera (R6-F7 day check) — rehearsed against
+             the 11.5–14.0 window on the day; if the take can't hold the budgets, the beat
+             re-times and re-gates rather than losing the pour**
 Camera:      RE-SPECIFIED (round-5 F-3 — the counter-height behind-MCU could not see the
              basin interior: the basin wall and the person occluded the drain, leaving the
              payoff's proof invisible in its own frame): **ELEVATED over-shoulder
@@ -742,14 +760,18 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   from this environment** (gov + legal-mirror sites egress-blocked). Keep "LLC", or shorten
   to "911 Drain" only after a primary-source check (a 2-minute read of R4-9-109 / the ROC
   advertising page on any Mac). Karl ______ ☐
-- **AUDIENCE-LANGUAGE MAPPING (round-13 D-1 — one signature covers BOTH cuts, closing CH-10):**
-  the picked captions say "your plumber's license"; the registrar licenses CONTRACTORS (no
-  individual plumber's license exists at the ROC, and a viewer's "plumber" may personally
-  hold nothing checkable there). The substance maps to registered claim 2, the venue is
-  named, and the ad's subject IS a licensed plumbing contractor — but the mapping is a
-  judgment call, and judgment calls are signed, not assumed. Accept the plumber-for-
-  contractor audience language, or fall back to the gated contractor wording ("Every
-  licensed AZ contractor is publicly checkable — state registrar."). Karl ______ ☐
+- **AUDIENCE-LANGUAGE MAPPING (round-13 D-1 — one signature covers BOTH cuts, closing CH-10;
+  both live strings quoted per round-14 R14-C8):** the picked captions —
+  CONTROL: **"You can check your plumber's license yourself — state registrar."** (64 ch /
+  4.0s = 16.0 cps) · CHALLENGER: **"Check your plumber's license — state registrar."**
+  (47 ch / 3.0s = 15.7 cps) — say "your plumber's license"; the registrar licenses
+  CONTRACTORS (no individual plumber's license exists at the ROC, and a viewer's "plumber"
+  may personally hold nothing checkable there). The substance maps to registered claim 2,
+  the venue is named, and the ad's subject IS a licensed plumbing contractor — but the
+  mapping is a judgment call, and judgment calls are signed, not assumed. Accept the
+  audience language, or DECLINE to the pre-computed shared fallback (round-14 R14-C1,
+  swept for both windows): **"Contractor licenses are public — state registrar."** (49 ch —
+  control 12.3 cps ✓ · challenger 16.3 cps ✓). Karl ______ ☐
 - **PRE-EDIT-LOCK CHECKS:** (1) the S6 logo lockup FILE is verified to be the version
   WITHOUT the wrap's "& SEWER" line — checked against the actual file, not the intention
   (R7-F8) ☐ · (2) **the burned phone string 480-992-3541 is DIALED once and answered by/for
@@ -763,9 +785,9 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   VERBATIM (registered-claim copy or questions); any NEW platform copy re-gates through
   Pass 1 before publish. In particular, "Back to normal." NEVER appears on any surface
   without the frame it narrates — off-frame it becomes the barred outcome claim ☐
-- Karl has seen the storyboard: **READ, 2026-08-26 — verdict 8.3/10, SIGN-OFF WITHHELD**
-  pending a copy-hierarchy revision (pain → urgency → relief → trust-proof → action; a
-  direct-response close; B sharpened; C to retargeting — the Owner's read, recorded in the
-  Bible decision log and the production log as OWNER-CAUGHT). The decision lines above stay
-  signed; the production plan is endorsed (9.2). A copy revision is a board change and
-  re-gates ☐
+- Karl has seen the storyboard: **TWO READS, both 2026-08-26, sign-off still ☐ (narration
+  synced round-14 R14-K3).** Read #1: 8.3/10 → the copy-hierarchy revision (executed,
+  Rev 12–13). Read #2: 8.5/10 → the performance-challenger directive (executed — the
+  humanized caption, `challenger-board.md`, the Kobe DR lens; production design endorsed at
+  9.4). The decision lines above stay signed; what remains is the sign-off itself, now over
+  the TWO-BOARD package (control + challenger, the market deciding between them) ☐
