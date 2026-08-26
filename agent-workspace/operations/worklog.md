@@ -34,6 +34,35 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Round 7 blocks on one cell; Revision 6 ready; the loop is converging
+
+**Did:** Karl authorized round 7; it ran isolated on Revision 5 and returned **BLOCK — 1 × S3
+(R7-F1): one stale table cell** (the Text-placement spec's caption onset, the last
+un-harmonized location of the round-6 retime). The gate verified the round-6 fixes held and
+found **no defect in what the ad says** — line-by-line compliance PASS, no shot EXTREME, no
+method change forced, and the professional lens called it "the strongest plumber-proof board
+of its kind I can construct an attack against." The rest of the register was capture-day spec
+(endcard type-from-frame-one; the stale "recapture" step rewritten to re-verify-not-re-shoot;
+the contrast chip extended to every burned string; a runnable cold-read artifact; the
+sewer-free lockup FILE check) plus one honesty defect — A1 card 1's above-ceiling read sat
+behind a ✓ while its sibling was flagged; both now sit on the sign-off sheet for Karl by
+name. **Revision 6** applies the full register. Block trajectory: 7 → 3 → 5 → 5 → 2 → 1 → 1
+cell.
+
+**Decided:** The second one-round grant is spent — round 8 goes to Karl as an authorization
+ask, with the honest observation that the loop is converging hard and the remaining
+named-acceptance items are ones he signs at the storyboard gate anyway.
+
+**Learned:** (production log) A retime is a multi-location fact — touch every table that
+repeats the number in the same edit. A residual above a stated ceiling is fixed or routed to
+a named human, never stamped ✓. Every gate names its runnable artifact at board time.
+
+**Open:** Karl — round-8 authorization. At sign-off: the named-acceptance sheet (two cps
+residuals, weekly record re-check, geography seam, wardrobe/prop look). Behind that: Will's
+claims sheet, the S4 media ask.
+
+**Next:** Karl's call on round 8; then the storyboard sign-off ask.
+
 ## 2026-08-26 — Round 6 spends the re-gate grant on my own editing debt; Revision 5 ready
 
 **Did:** Karl's two answers came back: research online for how 911 Drain shows itself (badge or

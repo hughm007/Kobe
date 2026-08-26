@@ -1,26 +1,36 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 4"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 6"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-5, all-practical]
+tags: [campaign, storyboard, shotlist, revision-6, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 5 (ALL-PRACTICAL)
+# Shotlist — "Look Us Up" pack — REVISION 6 (ALL-PRACTICAL)
 
-**Revision 3 (2026-08-26)** works the third Pass-1 attack (round-3 findings, Bible §14) on top
-of Revision 2's zero-generation posture (confirmed correct by round 3). Round-3 closures: the
-two queued copy lines are **replaced with registered-claim copy** (F2 closed without new
-sign-off, via the round's own alternative); the S2 screen **composite is eliminated** — the
-live public page is filmed in camera, with a second locked ECU insert for legibility; C1
-reframes to the input field only (F1); S4 re-boards to real trade practice (F3); and the F4
-record check is now **FULLY CLOSED (round-6 R6-F10a text sync): "911 Drain LLC" exact match ·
-status ACTIVE · zero complaint rows (Owner-verified, 2026-08-26)**.
+**Current state (Revision 6, 2026-08-26 — R7-F9: this intro narrates NOW, not Revision 3):**
+an all-practical, zero-generation 8-shot board; every burned and VO line inside the three
+registered claims or a question; the F4 record check **FULLY CLOSED** ("911 Drain LLC" exact
+match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
+filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
+history in the changelogs below, verdict history in Bible §14.
 
-## Revision 5 changelog (round-6 finding → change; round 7 awaits Owner authorization)
+## Revision 6 changelog (round-7 finding → change; round 8 awaits Owner authorization)
+
+| Finding | Change |
+|---|---|
+| **R7-F1 (severity S3 · shot S2, blocked)** | The Text-placement table's caption cell — the last un-harmonized location — corrected to **onset 3.0s, exits 7.0s**; the spec now reads identically in all four places |
+| **R7-F2 (shot S6)** | Number + ROC line **set from frame one** of the endcard; only the logo fades — the 3.0s dwell and the "number's on your screen" truth condition can no longer be broken by a type stagger |
+| **R7-F3 (shot S2)** | Capture script step 3 rewritten: **re-VERIFY the record within 7 days of delivery** (change → re-film + re-gate; no change → capture stands) — the stale "recapture the recording" wording no longer mandates a silent re-shoot |
+| **R7-F4 (spec)** | The 40%-black chip extends to **every burned string**; the capture-day mock gains a per-frame contrast check (e) |
+| **R7-F5 (sign-off)** | BOTH above-ceiling reads (S2 caption 17.5 cps, A1 card 1 17.3 cps) now sit on the sign-off sheet for Karl's named accept/decline — no residual concealed by a checkmark |
+| **R7-F6/F7/F8 (S1)** | Hands continuity check gains the 6.0s cut; the cold-read gate names its runnable test artifact (phone-staged blocking mock, ≥3 unbriefed viewers, one question); pre-edit-lock check that the S6 lockup FILE is the no-"& SEWER" version |
+| **R7-F9/F10 (S1)** | Version hygiene (titles/tags/intro narrate Revision 6); S5's Real-ref exemption recorded as a named ruling in the decision log |
+
+## Revision 5 changelog (round-6 finding → change; fixes verified by round 7)
 
 | Finding | Change |
 |---|---|
@@ -104,10 +114,16 @@ you trust.** Lead variant: **A**.
 | Persistent info strap "911 Drain · ROC 366870 · 480-992-3541" | baseline **65%** | clears TikTok caption zone / Meta CTA chrome; 40%-black backing chip |
 | Hook cards | centered **42%** | exit at the S2 cut (F6) |
 | S2 locked-insert result row (the proof) | centered **40%** | in-band; above the caption |
-| S2 caption | **58%**, onset 3.2s | delayed past the punch-in (F6) |
+| S2 caption | **58%**, onset **3.0s, exits 7.0s** (round-7 R7-F1: this cell had kept the superseded 3.2s value against three harmonized locations — the spec now reads identically everywhere) | delayed past the punch-in (F6); tail rides 1.0s into S3 (R6-F2) |
 | S4 line | **42%** | |
 | S5 line | **42%** | |
 | S6 number / ROC line / logo lockup | **44% / 55% / 62%** | all inside 15–70%; logo-only endcard (Owner ruling) |
+
+**Contrast treatment (round-7 R7-F4):** the 40%-black backing chip extends to **EVERY burned
+string** — hook cards, S2 caption, S4/S5 lines, and the strap — one treatment across
+screen-bright, dusk, and under-sink frame states (the caption's R6-F2 tail ride crosses the
+ad's brightest frame into its darkest; nothing burned may depend on the frame behind it for
+legibility). The capture-day mock gate gains a per-frame contrast check.
 
 ---
 
@@ -266,7 +282,9 @@ Source:      REAL — the actual public result for 366870, live on the phone, fi
              text excluded; (b) the PLATE framing per the spec above; (c) moiré/refresh/
              legibility on the actual phone (covers C1 too); (d) **row-load timing on the
              real connection (round-5 F-5)** — measured, so the edit knows where the
-             sanctioned invisible cut must land. The shoot day does not lock until the mock
+             sanctioned invisible cut must land; (e) **burned-text contrast per frame state
+             (round-7 R7-F4)** — every string on its chip, checked against the brightest and
+             darkest frames it crosses. The shoot day does not lock until the mock
              passes
 Real-ref:    CITED — https://roc.az.gov/contractor-search + consumer guide PDF +
              https://azroc.my.site.com/AZRoc/s/contractor-search. The recording is the reference
@@ -294,7 +312,12 @@ Motion:      focus change (rack thumb → screen as the row loads) + the cut to 
    not return through this step). The insert shows: legal-name field ("911 Drain LLC" —
    verified matching, INCLUDED per round-4 F7), license number, status. Kept out of frame:
    seal/branding, addresses, personal names, scope text.
-3. **Recapture within 7 days of delivery** — the recording is a snapshot of a live record.
+3. **Re-VERIFY the live record within 7 days of delivery** (round-7 R7-F3 rewrite — the old
+   "recapture the recording" wording predated the in-camera-only method and read as an
+   unconditional delivery-coupled re-shoot): open the record, compare to the filmed insert.
+   **Any change → re-film the S2 capture (and it re-gates). No change → the existing capture
+   stands.** The filmed row is a snapshot of a live record; freshness is verified, not
+   automatically re-shot.
 
 ```
 Shot S3 — 6.0–9.0s   [arrival — PRACTICAL (F1)]
@@ -315,7 +338,13 @@ Action:      HOMEOWNER-POV: the camera IS the homeowner, just inside the front d
              permitted configuration of this shot now carries concrete identity/purpose
              markers — trade shirt + work order + the burned info strap. PRE-LOCK GATE: a
              cold-read test on unbriefed viewers (the beat must read "verified professional
-             waiting" — not menace, not nothing). COVERAGE (round-5 forced; **pruned round-6
+             waiting" — not menace, not nothing). TEST ARTIFACT (round-7 R7-F7 — the gate
+             must be runnable pre-lock): a phone-staged blocking mock (the stand-in, the
+             porch or a stand-in doorway, dusk or dimmed light, the S2-crop-mock pattern),
+             shown COLD to ≥3 unbriefed viewers with one question — "what is happening
+             here?" PASS = readings in the professional-waiting family; FAIL = menace or
+             nothing; results kept so ranked-coverage alternates are compared against the
+             same bar. COVERAGE (round-5 forced; **pruned round-6
              R6-F4 — the 8-setup matrix did not fit the ~20–30 min dusk light window, and
              light drift across setups would contaminate the cold-read comparison itself**):
              RANKED, shot best-first, tail sacrificial — (1) HERO: three-quarter turn, ~5 ft,
@@ -435,7 +464,10 @@ Text:        "Licensed. Verifiable." (42%)
 Source:      PRACTICAL SHOOT — real person from behind, one take. NO generation fallback
              (deleted — F2). If impossible: no-person insert (the freely-draining basin CU,
              real) + fresh Pass 1
-Real-ref:    not required — real behavior captured live, not imitated
+Real-ref:    EXEMPT BY RECORDED RULING (round-7 R7-F10, decision log): live-captured ordinary
+             domestic behavior (fill a glass, water a plant) needs no imitation reference —
+             the exemption is named here so the self-check's "all ten fields" stays literally
+             true, instead of self-exempting silently
 Angle:       risk removal — verify before you trust
 Motion:      TWO AXES (hero): subject travel (glass to plant + shoulder drop) + light change
              (poured water catching the practical)
@@ -444,7 +476,10 @@ Motion:      TWO AXES (hero): subject travel (glass to plant + shoulder drop) + 
 ```
 Shot S6 — 14.0–17.0s   [CTA endcard]
 Story job:   CTA — the number, and the invitation to do what the ad just did
-Action:      black brand field; the real logo file fades in (fade-in only); type sets beneath;
+Action:      black brand field; **the number and ROC line are SET FROM FRAME ONE of S6 —
+             only the logo fades in** (round-7 R7-F2: a type-after-fade stagger would open a
+             gap in which VO "the number's on your screen" is false and the 3.0s dwell runs
+             short; the strap→endcard number handoff at 14.0 must be unbroken); fade-in only;
              ≤5% red luminance pulse; 2% slow scale drift across 3.0s
 Camera:      graphic card; the drift is the motion
 Lighting:    brand black; red reserved exactly here
@@ -503,7 +538,8 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 - Feeling Spec + Sound Spine ✓ · lead = A ✓
 - **ONE PAIR OF HANDS (round-5 F-10):** the C1→S2 continuous take bakes variant C's hands into
   every variant's body — A1's tap-shutoff hand and S5's homeowner match them (skin, cuff,
-  wardrobe world) at the 2.5s and 11.5s cuts ✓ (cast one set of hands for the whole ad)
+  wardrobe world) at the **2.5s, 6.0s (phone hand → door-pulling hand — round-7 R7-F6) and
+  11.5s** cuts ✓ (cast one set of hands for the whole ad)
 - Registered-line-item queue: **EMPTY** (F2 closed by replacement — every burned line and VO
   line now sits inside the three registered claims or asks a question); the S4 seam acceptance
   line awaits Karl's signature at sign-off
@@ -511,6 +547,15 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   ROC record while the pack runs, with a named pause criterion — any status change or new
   complaint row → pause the pack (the ad sends viewers to a live page; the filmed ACTIVE row
   must never outlive the record's truth). Accept or decline by name: Karl ______ ☐
+- **NAMED-ACCEPTANCE RESIDUALS (sign-off sheet — every read above the board's own 15–17 cps
+  comfort ceiling is routed to Karl, none concealed by a checkmark, round-7 R7-F5):**
+  (a) S2 caption ≈ **17.5 cps** over 4.0s — just ABOVE the ceiling; no trim exists that keeps
+  "licensed" + the venue. Karl ______ ☐ · (b) A1 card 1 ≈ **17.3 cps** over 1.5s — just above;
+  structurally unfixable (the line is Owner-accepted verbatim, the hook window is 2.5s, card 2
+  sits at its exact 1.0s floor — the minimums sum past the window). Karl ______ ☐
+- **PRE-EDIT-LOCK ASSET CHECK (round-7 R7-F8):** the S6 logo lockup FILE used in the edit is
+  verified to be the version WITHOUT the wrap's "& SEWER" line — checked against the actual
+  file, not the intention ☐
 - Karl has seen the storyboard: **PENDING — round 6 (the authorized re-gate) returned BLOCK on
   the S2 spec contradiction; Revision 5 applies the fixes; round 7 awaits Owner
   authorization** ☐

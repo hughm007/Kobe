@@ -1,15 +1,19 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Script — REVISED"
+title: "911 Drain — Storyboard Rebuild — Script — REVISION 6"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, script, revision-5]
+tags: [campaign, script, revision-6]
 ---
 
-# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 5
+# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 6
+
+**Revision 6 changes (round-7 findings; changelog in `shotlist.md`):** endcard number + ROC
+line set from frame one (R7-F2) · both above-ceiling reads named honestly below and routed to
+the sign-off sheet (R7-F5) · version hygiene (R7-F9).
 
 **Revision 5 changes (round-6 findings; changelog in `shotlist.md`):** the S2 caption's exit
 rides 1.0s into S3 (3.0–7.0s — character-rate arithmetic, not WPM: ~70 chars needs ~4.0s) ·
@@ -75,11 +79,11 @@ and the VO directs eyes to it. Flagged for Karl at the storyboard gate.
 
 | String | Words | On screen | Floor | OK? |
 |---|---|---|---|---|
-| A card 1 "Backed up? Stop the water." | 5 | 1.5s (R6-F3 retime — ≈17.3 cps ✓) | ≥1s | ✓ |
+| A card 1 "Backed up? Stop the water." | 5 | 1.5s (R6-F3 retime) | ≥1s | ✓ floor — but **≈17.3 cps, just ABOVE the 15–17 ceiling** (R7-F5: structurally unfixable inside the 2.5s hook; on the sign-off sheet for Karl's named accept/decline, not concealed by a checkmark) |
 | A card 2 "Who do you let in?" | 5 | 1.0s + exits at the cut (its exact floor — accepted as a glance question) | ≥1s | ✓ |
 | B line "Still comparing plumbers?" | 3 | 2.1s | ≥1s | ✓ |
 | C line "Look them up first." | 4 | 2.3s | ≥1s | ✓ |
-| S2 caption (incl. "— state registrar.") | 9 (~70 chars) | 4.0s (onset 3.0s, exits 7.0s — R6-F2 tail ride into S3) | ≥1s | ✓ — ≈17.5 cps, at the 15–17 cps comfort ceiling's edge; the beat is frozen (F-6) and the residual is flagged on the sign-off sheet |
+| S2 caption (incl. "— state registrar.") | 9 (~70 chars) | 4.0s (onset 3.0s, exits 7.0s — R6-F2 tail ride into S3) | ≥1s | ✓ floor — but **≈17.5 cps, just ABOVE the 15–17 ceiling** (R7-F5 wording fix: "at the edge" understated it; the beat is frozen (F-6) and the residual sits on the sign-off sheet for Karl's named accept/decline) |
 | Info strap "911 Drain · ROC 366870 · 480-992-3541" | 5 | 8.5s persistent (5.5–14.0s, R6-F2 onset retime) + 3.0s endcard = **11.5s total number-on-screen** (R6-F10c: the old "14.5s (S2→S5)" conflated the strap window with the total) | ≥2s license + phone | ✓ — on screen continuously for the ad's back 11.5s; VO "the number's on your screen" (13.4–16.6) stays true across the strap→endcard handoff |
 | S4 line "Licensed. Look us up." | 4 | 2.5s | ≥1s | ✓ |
 | S5 line | 2 | 2.5s | ≥1s | ✓ |

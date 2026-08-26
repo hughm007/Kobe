@@ -123,6 +123,33 @@ Compliance was CLEAN for the second consecutive round under the canonical rule t
   if the window forces light drift across setups, the coverage contaminates the very
   comparison it exists for. Rank, shoot best-first, sacrifice the tail.
 
+## Round 7 (1 blocking) — one cell; the loop is converging hard
+
+All CLAUDE-CAUGHT. The blocker, R7-F1, was the last un-harmonized location of the round-6
+caption retime: the Text-placement table still said onset 3.2s against three corrected
+locations — exactly the harmonization-debt class round 6 blocked on, one instance smaller.
+The rest of the register was capture-day specification (endcard type timing vs the VO's truth
+condition; a stale "recapture" step that read as a mandatory delivery-coupled re-shoot;
+contrast specified for one string out of eight; a cold-read gate with no runnable artifact;
+an asset check nobody owned) and one honesty defect: A1 card 1's 17.3 cps sat behind a ✓
+while its 17.5 cps sibling was flagged — a residual above a stated ceiling is routed to the
+named human or it is not honest. Round 7 also VERIFIED the round-6 fixes held (name-INCLUDED
+identical in four places; pace arithmetic recomputed) and found no defect in ad content:
+compliance passed line-by-line, and the professional lens called it "the strongest
+plumber-proof board of its kind I can construct an attack against."
+
+Block trajectory across the campaign: 7 S3 → 3 → 5 → 5 (3 conflict-class) → 2 → 1 → 1 cell.
+
+**Reusable lessons (EXPERIMENTAL):**
+- **A retime is a multi-location fact.** When a number changes, list every table that repeats
+  it (placement spec, dwell table, timing spine, sound spine) and touch all of them in the
+  same edit — the changelog row should name the count of locations updated.
+- **A residual above a stated ceiling is either fixed or routed to a named human — never
+  stamped ✓.** Selective flagging of identical-class residuals is an integrity defect the
+  adversary will find.
+- **Every gate needs a runnable artifact named at board time** — "test on unbriefed viewers"
+  is a wish until the board says what they will be shown.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic
