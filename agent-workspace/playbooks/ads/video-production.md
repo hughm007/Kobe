@@ -5,19 +5,28 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-25
-updated: 2026-08-25
-tags: [ads, video, quality, qc]
-source: Drive "ServicePow OS 2" — 08_VIDEO_QUALITY_STANDARDS.md, 19_PRODUCTION_LEARNINGS.md, 17_REJECTED_CREATIVE_LIBRARY.md, 00 §18-45 (synced 2026-08-25). Canonical enforcement lives in the servicepow-ad-producer skill (claude.ai workspace); on any conflict of substance, the skill wins.
+updated: 2026-08-26
+tags: [ads, video, quality, qc, canonical]
+source: Drive "ServicePow OS 2" — 08_VIDEO_QUALITY_STANDARDS.md, 19_PRODUCTION_LEARNINGS.md, 17_REJECTED_CREATIVE_LIBRARY.md, 00 §18-45 (synced 2026-08-25); v4.0 deltas reconstructed from CLAIM_servicepow-ad-producer_v4.0 + the 35_ install ledger (2026-08-26). See decision 0004.
 ---
 
 # Video production
 
-**Where production actually runs:** the `servicepow-ad-producer` skill (v4.0) in the
-claude.ai workspace drives generation through Higgsfield; the graphics/edit layer
-(end cards, captions, counters) is Remotion — code-rendered, which Orion can delegate to
-Claude Code (`delegate_coding_task`) since it needs Node + Chromium. **Orion's lane:
-concepts, hooks, scripts, storyboards, briefs, QC thinking, and drafting — production
-spend and publishing are always Karl's.**
+> ## ⚠ THIS FILE OWNS THE BLOCKING-CHECK LIST AND ITS COUNT
+> **Canonical (decision [0004](../../knowledge/decisions/0004-canonical-source-of-truth.md),
+> 2026-08-26).** The blocking checks, the standing laws and the storyboard gate live here and
+> nowhere else. Every other file — skills, scorecards, Drive mirrors, the claude.ai
+> `servicepow-ad-producer` skill — **points at this file and must not restate the count** (LB50:
+> one number, one file; and within a file, one place).
+>
+> This inverts the previous line, which said the claude.ai skill won on conflict. A canonical
+> source that the tools doing the work cannot read is not canonical.
+
+**Where production runs:** the graphics/edit layer is Remotion — code-rendered, delegated to
+Claude Code (`delegate_coding_task`) since it needs Node + Chromium. Generation runs through
+Higgsfield, routed by `servicepow-higgsfield-production`. **Orion's lane: concepts, hooks,
+scripts, storyboards, briefs, QC thinking, and drafting — production spend and publishing are
+always Karl's.**
 
 ## The pipeline (never bypass a gate because production is behind)
 
@@ -30,7 +39,8 @@ performance analysis → learning logged.
 **The still frame is where quality is cheap:** frame fix = 1 image job · clip fix =
 130+ credits · master fix = a rebuild. Catch it early or pay for it late.
 
-## What blocks delivery (summary of the 31 blocking checks)
+<!-- CANONICAL: blocking-check-count = 34 -->
+## What blocks delivery — **34 blocking checks**
 
 - **Machine QC** (1–15): resolution/fps/format · true loudness (LUFS) · no frozen or
   black sections · motion floor per clip AND per master shot (slow-mo is the documented
@@ -48,19 +58,31 @@ performance analysis → learning logged.
   safe area.
 - **Enforcement** (29–31): preflight proven before spend · every clip gate-passed by
   md5 · every shot names a motion axis.
+- **v4.0 additions (32–34):**
+  - **32 — performance gate.** Spoken and on-screen delivery is *measured*, not eyeballed.
+    The recorded failing case is the 911 Drain price line at **~242 WPM**: too fast to be
+    read or heard. Measured by `servicepow_performance_qc.py`.
+  - **33 — impossible human speed.** Biomechanical plausibility: no human moves that fast.
+    Measured by `servicepow_biomech_qc.py`. (This is LB52 in check form — the ceiling, not
+    just the floor.)
+  - **34 — cited real reference.** The enforcement arm of LB51: every shot claiming a real
+    reference names one that can be opened *now*. *(The v4.0 claim file calls 34
+    "sport/domain accuracy"; the install ledger calls it "cited real reference" — resolve
+    against the skill text when it is available.)*
 
 **A gate that could not run is a BLOCK, not a note.** "QC not run" stops delivery.
+
+## The storyboard gate — **ten required fields, and there is no eleventh**
+
+`Real-ref` has existed since v3.1. The defect was never a missing field — it was a field that
+accepted an unverifiable answer. v4.0 deliberately **refused to add an eleventh box**, because a
+duplicate box papers over an enforcement failure instead of fixing it. Field detail:
+[`.claude/skills/servicepow-storyboard-director/references/shot-fields.md`](../../../.claude/skills/servicepow-storyboard-director/references/shot-fields.md).
 
 ## The standing laws (each one was paid for)
 
 - **Logo Law (LB24):** marks come from real client files, composited — never painted by
   a model. A nearly-right mark reads faker than none.
-- **Real-Reference Law (LB30/LB51):** real footage of the real event is consulted before
-  the storyboard, **cited and openable** — "I looked" is not evidence. No reference
-  found = surfaced to the owner by name, never accepted silently.
-- **In-World Reason Test (LB31):** every on-screen action needs a reason inside the
-  scene. "To show the viewer the product" is not one. (The spinning-lanyard man and the
-  home-screen-to-camera woman both died on this.)
 - **Performed-Emotion Ban (LB25):** no generated celebrations at readable distance —
   back-of-head, stillness, small business.
 - **Crowd-Voice Law (LB26):** unspecified crowd vocals are gibberish; one scripted
@@ -68,10 +90,36 @@ performance analysis → learning logged.
 - **Phone-Is-The-Camera (LB27):** no second phone, no screens shown to camera.
 - **Verification Honesty (LB29):** never claim QC that wasn't machine-checked AND
   human-watched. Trusting the prompt over the pixels shipped a hovering man.
+- **In-World Reason Test (LB31):** every on-screen action needs a reason inside the
+  scene. "To show the viewer the product" is not one. (The spinning-lanyard man and the
+  home-screen-to-camera woman both died on this.)
+- **LB49 — VAD by safe error direction.** An ASR gate chooses its voice-activity detection
+  by which error direction is safe to be wrong in.
+- **LB50 — one number, one file.** A count written in two files drifted in six hours.
+  A count lives in exactly one file — **and within that file, in exactly one place.**
+  Every summary points at it rather than restating it. *(The second half was earned on day
+  one of v4.0: a session misread the release note because the note restated a count.)*
+- **LB51 — THE UNIVERSAL REAL-REFERENCE LAW** (supersedes LB30). Real footage of the real
+  event is consulted before the storyboard, **cited and openable** — "I looked" is not
+  evidence. No reference found = surfaced to the owner by name, never accepted silently.
+  - **Amendment — reference the STATE, not just the scene** (owner-ordered 2026-08-20,
+    in force): where a shot depicts a **state** — broken/working, before/after,
+    dirty/clean, failing/fixed — **each state is referenced separately.** One reference for
+    "a drain" is not compliance. `Real-ref` carries the **BEFORE** source + observable
+    markers, the **AFTER** source + observable markers, and **THE DIFFERENCE** — what the
+    viewer must *see* change, in one line. If that line cannot be written, the shot pair
+    proves nothing and goes back to the board.
+  - **Why:** the transition *is* the proof. An unreferenced transition is an unsubstantiated
+    claim in visual form — adjacent to checks 16–20, not merely to craft.
+  - **Why trades are the hardest case:** the viewer is a domain expert in the exact moment
+    depicted. A homeowner with a blocked drain has stood over that drain. Generic "AI
+    plumbing" reads false instantly to the only person who matters. **Real client jobsite
+    footage beats any generated pair, and it is free.**
+- **One-sided checks are half checks (LB52):** every floor gets asked what its ceiling
+  is (a crowd moving faster than humanly possible once passed everything). Now enforced as
+  check 33.
 - **Three-state structure:** before / during / after, each referenced — and the
   "during" state is what real client footage exists for; it cannot safely be generated.
-- **One-sided checks are half checks (LB52):** every floor gets asked what its ceiling
-  is (a crowd moving faster than humanly possible once passed everything).
 - **The Claude-Catch Law:** noticing an obvious problem creates an obligation — if it
   violates written law, fix it and report; if it's a judgment call, ask before delivery
   with a recommendation and cost. The spec is not a shield. Tag catches
@@ -94,3 +142,15 @@ accounts gave "tired, vindicated" where "relieved" produced "pleased") · the pa
 the performance · reference the format, not just the moment · ~⅓ of generated material
 ships; sunk credits never justify weak clips · separate the brief by placement — a muted
 homepage hero and a scroll-stopping feed ad are different films.
+
+## QC scripts (live in the claude.ai skill package — source not yet in this repo)
+
+| Script | Version | State |
+|---|---|---|
+| `servicepow_qc.py` | v1.6 | `--preflight`, `--gate-clips`, clip-gate ledger |
+| `servicepow_source_qc.py` | v1.1 | source verification |
+| `servicepow_performance_qc.py` | v1.1 | check 32. Self-test 6/6; **ASR boundary UNVERIFIED** |
+| `servicepow_biomech_qc.py` | v1.0 | check 33. Self-test exits 0 |
+
+**Gap:** the source is not in this repo, so checks 32–33 are currently enforced by judgment
+rather than measurement here. Paste the scripts to close it.

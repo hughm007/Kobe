@@ -111,7 +111,7 @@ Every specialist returns here. This skill is the only one that changes approval 
 - `../_shared/references/campaign-bible-contract.md` — section ownership, read/write rules
 - `../_shared/references/evidence-and-conflict.md` — evidence ladder, conflict protocol
 - `../_shared/references/advertising-standard.md` — the bar and the judgment standard
-- `agent-workspace/playbooks/ads/video-production.md` — pipeline gates, 31 checks, LB laws
+- `agent-workspace/playbooks/ads/video-production.md` — **owns the blocking-check list and count**, pipeline gates, LB laws
 
 ## LEARNING BEHAVIOR
 

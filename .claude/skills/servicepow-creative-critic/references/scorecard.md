@@ -1,20 +1,32 @@
 # Critic scorecard
 
+> **This file does not own the blocking-check list or its count.**
+> The checks live in
+> [`agent-workspace/playbooks/ads/video-production.md`](../../../../agent-workspace/playbooks/ads/video-production.md)
+> and nowhere else (LB50 — one number, one file; decision 0004). **Read them there.** Never quote
+> a count from here; there isn't one to quote.
+>
+> This file owns the *procedure*: the order of operations, the critic's own semantic hard-failure
+> list, the axis scores and the verdict rules.
+
 ## Order of operations (do not reorder)
 
 1. Stranger watch — one pass, delivery size and speed, sound on
 2. The five viewer questions
-3. Hard-failure sweep
-4. Machine + compliance checks
+3. Semantic hard-failure sweep (below)
+4. **Machine + compliance checks — run the full blocking-check list from the playbook**
 5. Axis scoring
 6. ServicePow-6 ruling
 
-**Taste never overrides a technical or legal failure.** Machine and compliance run first for that
-reason.
+**Taste never overrides a technical or legal failure.** Machine and compliance run before
+aesthetic judgment for that reason. **A gate that could not run is a BLOCK, not a note.**
 
 ---
 
-## 1. Hard failures — any hit = NOT CLIENT READY
+## 1. Semantic hard failures — any hit = NOT CLIENT READY
+
+These are the critic's own judgment calls. They sit *alongside* the playbook's blocking checks,
+not inside them.
 
 | # | Failure | Note |
 |---|---|---|
@@ -30,41 +42,30 @@ reason.
 | 10 | Fake testimonial | Synthetic person as customer/reviewer/endorser |
 | 11 | Wrong CTA | Wrong action, wrong number, wrong destination |
 | 12 | Visuals contradicting the script | |
-| 13 | **Text present but unreadable** | On screen too briefly to read at delivery speed — same defect as absent, plus wasted frames *(added from the v8 pilot)* |
-| 14 | **Uncited or unopenable reference** | A shot claiming a real reference that cannot be opened now — LB30/LB51 *(added from the v8 pilot)* |
 
 **Do not average these away.** A 9.2 mean with a wrong logo is not a 9.2 — it is a reshoot.
 
-## 2. Compliance sweep (hard failures too)
+### Two failures the playbook already owns — do not duplicate them here
 
-- Every claim substantiated in writing, or absent
-- No synthetic person presented as a customer, reviewer or endorser
-- Platform AI disclosure set where required
-- Ad-to-landing-page parity — **open the page and confirm**
-- Rights cleared for music, footage, likeness
-- Required licence/legal copy present, legible, inside the safe area
-- Nothing advertised outside the client's licensed scope
-- **Reference citation audit** — every shot claiming a real reference names one that can be
-  opened **now**. Missing or unopenable = hard failure #14, surfaced to Karl by name, never
-  accepted silently (LB30/LB51). Verification honesty (LB29): a check not actually run is
-  recorded as not run, never as passed.
+| Was | Now |
+|---|---|
+| ~~#13 text present but unreadable~~ | **Blocking check 32 — performance gate.** Superior: measured, not eyeballed, with a recorded threshold case (the 911 Drain price line at ~242 WPM) and a script. Run the check; do not re-derive it |
+| ~~#14 uncited or unopenable reference~~ | **Blocking check 34 + LB51.** Includes the state amendment: a before/after shot references **each state separately** and names the observable difference |
 
-## 3. Machine checks (from the production playbook)
+*(Both were found independently by the v8 pilot on 2026-08-26 and already existed in
+ad-producer v4.0 as measured checks. The measured version wins — see decision 0004.)*
 
-Resolution/fps/format · true loudness (LUFS) · no frozen or black sections · motion floor per
-clip **and** per master shot · no flash cuts · aspect + duration declared and matched · no
-letterbox · no opening dead-space · expected strings (phone, URL, client name) verified on screen ·
-burned text inside the 15–70% safe area · looped/layered audio proven speech-free · master speech
-matches declared lines.
+## 2. Compliance and machine sweep
 
-**On-screen text dwell time** — every string the viewer is expected to read (price, phone, URL,
-licence number, CTA) must be on screen long enough to read at delivery speed. Rule of thumb:
-a short string ≥1s, a phone or licence number ≥2s. **Presence is not legibility** — text that
-flashes is hard failure #13. *(This is the check the v8 "2:07 AM" price line escaped.)*
+**Run the full list from the playbook.** It is not reproduced here. It covers machine QC,
+compliance, human gates, source-side checks, enforcement, and the v4.0 performance, biomechanical
+and real-reference gates.
 
-**A gate that could not run is a BLOCK, not a note.**
+Two that the critic must confirm rather than assume:
+- **Ad-to-landing-page parity** — *open the page*, do not infer it.
+- **Human watched end to end** (LB29) — the critic cannot supply this. Record whether it happened.
 
-## 4. Axis scoring (1–10, each with a stated reason)
+## 3. Axis scoring (1–10, each with a stated reason)
 
 **Strategy layer:** strategy · hook · clarity · customer relevance · creative idea
 **Story layer:** story · sequence coherence · scene-to-scene logic · emotion · memorability
@@ -81,20 +82,18 @@ editing · audio · voice · lip sync
 | 7–8 | Reads synthetic on first watch — **revise** |
 | 9–10 | Obviously synthetic — **not client ready** |
 
-## 5. ServicePow-6 — the only client-ready score
+## 4. ServicePow-6 — the only client-ready score
 
 doesn't-look-AI · hook inside 2s · human presence · format fit · audio design ·
-message + CTA clarity.
+message + CTA clarity. **Floor 8.0 AND no axis ≤ 6.** Both, or not client ready.
 
-**Floor 8.0 overall AND no axis ≤ 6.** Both, or not client ready.
-
-## 6. Verdict
+## 5. Verdict
 
 | Verdict | Condition |
 |---|---|
-| **HARD FAIL** | Any hard failure or compliance failure |
+| **HARD FAIL** | Any semantic hard failure, or any blocking check failed |
 | **REVISE** | No hard failure, but ServicePow-6 below floor or an axis ≤6 |
-| **CLIENT READY** | No hard failure, ServicePow-6 ≥8.0, no axis ≤6, all gates actually run |
+| **CLIENT READY** | No hard failure, all blocking checks passed and actually run, ServicePow-6 ≥8.0, no axis ≤6 |
 | **CANNOT ASSESS** | Creative or Bible unavailable, or a gate could not be run — never a pass |
 
 ## Report format
@@ -102,11 +101,12 @@ message + CTA clarity.
 ```
 VERDICT: <one of the four>
 FIRST REACTION (stranger watch): <honest, one line>
-FIVE QUESTIONS: who ☐ why ☐ what ☐ believe ☐ next ☐
-HARD FAILURES: <list with shot number / timestamp, or "none">
-SERVICEPOW-6: <per-axis> → <mean>
+FIVE QUESTIONS: who / why / what / believe / next
+SEMANTIC HARD FAILURES: <list with shot number / timestamp, or "none">
+BLOCKING CHECKS: <pass / which failed / which could not be run>
+SERVICEPOW-6: <per-axis> -> <mean>
 AI ARTIFACT RISK: <n>/10 — <what gives it away>
 TOP 3 REASONS NOT TO SHIP: 1. 2. 3.
 FIX PER FAILURE: <specific, routed to the owning skill>
-HUMAN WATCHED END TO END: ☐ (LB29 — not the critic's to tick)
+HUMAN WATCHED END TO END: <yes/no> (LB29 — not the critic's to tick)
 ```

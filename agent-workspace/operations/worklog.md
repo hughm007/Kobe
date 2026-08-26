@@ -34,6 +34,36 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Two sources of truth eliminated; repo is canonical
+
+**Did:** Traced `servicepow-ad-producer` v4.0. It exists nowhere on this machine — four
+references, zero copies — but Drive holds a full record of it. Read the v4.0 claim, the install
+ledger and the LB51 amendment, and reconstructed its deltas into
+`tmp/servicepow-ad-producer-v4-export.md` (labelled RECONSTRUCTED, not ported). Merged what was
+missing into `playbooks/ads/video-production.md`: **LB49, LB50 (with its day-one amendment),
+LB51 + the state amendment, LB52 as check 33, and blocking checks 32–34 — count 31 → 34.**
+Inverted the precedence line: the playbook now owns the check list, and the claude.ai skill is a
+downstream consumer. The critic scorecard and shot-fields stopped restating and now point.
+
+**Decided:** [Decision 0004](../knowledge/decisions/0004-canonical-source-of-truth.md) — one
+rule, one home. Repo canonical for production law; Drive keeps the historical ledger; client
+state lives in `clients/`. Rationale: a canonical source the working tools cannot read is not
+canonical, and git structurally prevents the fork class Drive's concurrency protocol works around.
+
+**Learned:** My v8 pilot's two findings (#13 unreadable text, #14 uncited reference) **already
+existed in v4.0 as measured checks 32 and 34** — with a WPM threshold and a script, where mine had
+judgment. Two independent routes found the same holes; the measured version wins. Also: the Drive
+ledger's own "silo fork" entry describes this repo — the facts it recorded as missing from the
+Project are exactly the ones we ingested on 08-25.
+
+**Open:** The v4.0 skill body was never read — §8B, HB1–14 and the exact wording of checks 32–34
+are still missing, and the claim file and install ledger disagree on what check 34 is. The four QC
+scripts' source is not here, so checks 32–33 are enforced by judgment rather than measurement.
+**Paste the real v4.0 SKILL.md to close all of it.**
+
+**Next:** Karl pastes v4.0; diff reconstruction against it, correct, delete the export. Then the
+911 Drain storyboard-level rebuild — which now fails the gate on record.
+
 ## 2026-08-26 — Service Pow operating intelligence: 15 project skills
 
 **Did:** Audited every installed skill (all 11 valid; found a three-way trigger collision between

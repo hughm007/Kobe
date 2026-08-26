@@ -25,7 +25,7 @@ Turn story into shots that a producer can execute and a critic can defend — wh
 right to exist is written down before anyone spends a credit.
 
 *(Supersedes the generic `seedance-shotlist-director` for Service Pow campaign work: that skill
-produces shot lists with no knowledge of the Bible, the 31 blocking checks or the client's
+produces shot lists with no knowledge of the Bible, the blocking-check gate or the client's
 constraints. Use it only for non-campaign, non-client shot lists.)*
 
 ## TRIGGER
@@ -49,9 +49,11 @@ Reference footage · location constraints · available real assets · budget cei
    do the real work: **purpose · what came before · what this adds · what comes next.**
 3. **Declare what each shot contributes** — attention, understanding, proof, emotion, desire or
    action. A shot contributing none is cut, not improved.
-4. **Run the real-reference law (LB30/LB51).** Real footage of the real event is consulted before
+4. **Run the real-reference law (LB51).** Real footage of the real event is consulted before
    the shot is designed, **cited and openable**. No reference found is surfaced to Karl by name —
-   never accepted silently.
+   never accepted silently. **State amendment:** a shot depicting a state change (broken/working,
+   before/after) references **each state separately** and names the observable difference in one
+   line — an unreferenced transition is an unsubstantiated claim in visual form.
 5. **Mark the "during" state.** In trades work the before/after states can be staged; the
    *during* state is what real client footage exists for and generally cannot be generated
    safely. Flag those shots for real footage.
@@ -105,7 +107,7 @@ known failure mode.
 
 - `references/shot-fields.md` — the full per-shot field set
 - `../_shared/references/anti-choppy.md`
-- `agent-workspace/playbooks/ads/video-production.md` — LB laws, 31 checks, safe areas
+- `agent-workspace/playbooks/ads/video-production.md` — **owns the blocking-check list and count**, LB laws, safe areas
 
 ## LEARNING BEHAVIOR
 

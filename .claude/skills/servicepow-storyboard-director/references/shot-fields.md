@@ -1,5 +1,11 @@
 # Shot field set
 
+> **The storyboard gate is TEN required fields. There is no eleventh.** The gate itself is owned
+> by [`agent-workspace/playbooks/ads/video-production.md`](../../../../agent-workspace/playbooks/ads/video-production.md)
+> (decision 0004) — this file expands what each field must contain, and never restates the count.
+> `Real-ref` has existed since v3.1; the defect was never a missing field but a field that
+> accepted an unverifiable answer, so v4.0 deliberately refused to add another box.
+
 Every shot in a Service Pow shot list carries these. Blank fields are unfinished work, not
 shorthand — a blank is what lets a filler shot survive into production.
 
@@ -46,7 +52,7 @@ shorthand — a blank is what lets a filler shot survive into production.
 ## Production
 | Field | Notes |
 |---|---|
-| **Reference** | Cited and openable (LB30/LB51). "I looked" is not evidence |
+| **Reference** | Cited and openable (**LB51**). "I looked" is not evidence. **State amendment:** where the shot depicts a state — broken/working, before/after, dirty/clean — carry a **BEFORE** source + observable markers, an **AFTER** source + observable markers, and **THE DIFFERENCE** the viewer must see, in one line. If that line cannot be written, the pair proves nothing |
 | **Model requirement** | The *requirement*, not the model — production routes it |
 | **Method flag** | generate / reference-driven / real footage / composite / hybrid |
 | **Continuity notes** | What must match which other shots |
@@ -54,6 +60,7 @@ shorthand — a blank is what lets a filler shot survive into production.
 ## Standing flags
 
 - **Composite required** wherever a logo, wordmark, packaging text, UI or legal copy appears (LB24)
-- **Real footage required** for the "during" state in trades work
+- **Real footage required** for the "during" state in trades work. The viewer of a trades ad is a domain expert in the exact moment depicted — real jobsite footage beats any generated pair, and it is free
+- **`NO REFERENCE FOUND — HIGH RISK`** applies **per state**, surfaced to Karl by name with the scene named and the help needed stated
 - **Safe area** — burned text inside 15–70% of frame height
 - **No opening dead-space** — the first frame works from frame one

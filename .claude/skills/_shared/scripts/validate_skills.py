@@ -152,6 +152,42 @@ def check_skill(d: Path) -> None:
                 fail(name, f"{label} hardcoded in {where} — belongs in the workspace")
 
 
+CANONICAL_MARKER = "CANONICAL: blocking-check-count"
+BARE_COUNT_RE = re.compile(r"\b\d+\s+(?:blocking\s+)?checks\b", re.IGNORECASE)
+
+
+def check_single_source() -> None:
+    """Mechanise LB50: one number, one file.
+
+    The blocking-check count is declared in exactly one place, marked with
+    CANONICAL_MARKER. No skill file may state a bare count — skills point at the
+    playbook instead. Historical references (a changelog noting a past count) are
+    allowed outside .claude/skills, since they describe the past, not the present.
+    """
+    declarers = []
+    for path in REPO.rglob("*.md"):
+        if ".git" in path.parts:
+            continue
+        try:
+            body = path.read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError):
+            continue
+        if CANONICAL_MARKER in body:
+            declarers.append(path.relative_to(REPO))
+
+    if len(declarers) == 0:
+        fail("LB50", "no file declares the canonical blocking-check count")
+    elif len(declarers) > 1:
+        fail("LB50", f"blocking-check count declared in {len(declarers)} files: {declarers}")
+
+    for path in SKILLS_DIR.rglob("*.md"):
+        body = path.read_text(encoding="utf-8")
+        if CANONICAL_MARKER in body:
+            continue
+        if BARE_COUNT_RE.search(body):
+            fail("LB50", f"{path.relative_to(REPO)} states a blocking-check count — point at the playbook instead")
+
+
 def main() -> int:
     skills = sorted(
         p for p in SKILLS_DIR.iterdir()
@@ -162,8 +198,10 @@ def main() -> int:
         return 1
     for d in skills:
         check_skill(d)
+    check_single_source()
 
-    print(f"Validated {checked} skills in {SKILLS_DIR.relative_to(REPO)}\n")
+    print(f"Validated {checked} skills in {SKILLS_DIR.relative_to(REPO)}")
+    print("Single-source rule (LB50): checked\n")
     if warnings:
         print(f"WARNINGS ({len(warnings)}):")
         for w in warnings:

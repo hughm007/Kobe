@@ -16,7 +16,7 @@ apart into fifteen slightly-different versions.
 These skills are **procedure**, not content. The standards themselves are in the workspace
 and stay there — one home per rule:
 
-- `agent-workspace/playbooks/ads/video-production.md` — the 31 blocking checks, laws LB24–LB52,
+- `agent-workspace/playbooks/ads/video-production.md` — **the canonical blocking checks (owns the list and the count)**, laws LB24–LB52,
   the Claude-Catch Law, ServicePow-6 scoring
 - `agent-workspace/operations/compliance.md` — claims, FTC synthetic-person rule, AI disclosure,
   ad↔landing-page parity, rights

@@ -29,6 +29,19 @@ have escaped a HARD FAIL verdict on the two missed items.
 
 ---
 
+> ## ⚠ SUPERSEDED BY THE v4.0 MERGE (2026-08-26)
+> Both gaps this pilot found **already existed in `servicepow-ad-producer` v4.0 as measured
+> checks** — discovered when v4.0 was reconstructed from the Drive ledger later the same day.
+> The measured versions win (decision 0004):
+>
+> | Pilot finding | Now enforced as |
+> |---|---|
+> | Gap 1 — legibility duration (my hard failure #13) | **Blocking check 32 — performance gate**, measured in WPM by `servicepow_performance_qc.py`. The recorded failing case *is* this ad's price line at **~242 WPM** |
+> | Gap 2 — reference citation audit (my hard failure #14) | **Blocking check 34 + LB51**, including the state amendment |
+>
+> The scorecard no longer carries #13/#14 — it points at the playbook. The history below is kept
+> because the convergence is the point: two independent routes found the same two holes.
+
 ## Gap 1 — legibility duration
 
 **The hole:** "expected strings verified on screen" is a *presence* check. A price, phone number
@@ -67,11 +80,15 @@ Also added to the hard-failure list as #14.
 | 1 | Motion inert | ✅ | motion floor / motion axis |
 | 2 | Dead-space open | ✅ | opening dead-space + hook-inside-2s |
 | 3 | Dissolve-only cuts | ✅ | editing + sequence coherence |
-| 4 | Price line too fast | ✅ | **text dwell time** (new, hard failure #13) |
-| 5 | Uncited references | ✅ | **reference citation audit** (new, hard failure #14) |
+| 4 | Price line too fast | ✅ | **blocking check 32 — performance gate** (~242 WPM, measured) |
+| 5 | Uncited references | ✅ | **blocking check 34 + LB51** state amendment |
 
-**5 of 5. Verdict on v8: HARD FAIL** — four hard failures (#1 motion floor block, #13 dwell time,
-#14 uncited reference, plus dead-space). Matches the owner's kill.
+**5 of 5. Verdict on v8: HARD FAIL** — motion-floor block, opening dead-space, check 32
+(performance gate), check 34 (uncited reference). Matches the owner's kill.
+
+Independently confirmed by the Drive install ledger, which recorded the same conclusion on
+2026-08-20: *"the 911Drain price line at ~242 WPM stops being an unactioned observation and
+becomes a failure of blocking check 32… The rebuild is storyboard-level, not a motion pass."*
 
 **Regression rule:** v8 must keep failing. If any future scorecard edit lets it pass, the edit is
 wrong.

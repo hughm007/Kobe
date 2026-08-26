@@ -11,6 +11,8 @@ tags: [decision, architecture, knowledge]
 
 # Decision 0003 — Orion and the Company OS
 
+> **⚠ SUPERSEDED IN PART by [decision 0004](0004-canonical-source-of-truth.md) (2026-08-26).** The precedence recorded here — that the claude.ai `servicepow-ad-producer` skill wins on conflict — is **inverted**. This repo is now canonical for production law; that skill is a downstream consumer. Everything else in this decision stands.
+
 ## Context
 Karl runs a full Company OS in a claude.ai workspace (Drive folder "ServicePow OS 2"):
 master rules, client state, video-production law, skills (`servicepow-ad-producer`

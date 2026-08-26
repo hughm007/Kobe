@@ -5,7 +5,7 @@ description: >
   to find reasons the work should NOT ship — scoring strategy, hook, clarity, customer relevance,
   idea, story, sequence coherence, emotion, memorability, human realism, physics, product
   fidelity, continuity, camera, lighting, editing, audio, voice, lip sync, brand fit, CTA and
-  platform fit, plus an AI-artifact-risk rating — and applying Service Pow's 31 blocking checks
+  platform fit, plus an AI-artifact-risk rating — and applying Service Pow's blocking checks
   and ServicePow-6 scoring. Hard failures mean NOT CLIENT READY regardless of averages. Use before
   anything goes to Karl or a client, and when auditing an existing ad. Do NOT use to improve or
   rewrite the work — it judges; other skills fix.
@@ -42,7 +42,7 @@ after any re-cut. Runs on every campaign — this gate is never skipped because 
 
 - The creative (cut, stills, or assembled ad)
 - Campaign Bible: brief, target customer, objective, strategy, spine
-- `agent-workspace/playbooks/ads/video-production.md` — the 31 checks and ServicePow-6
+- `agent-workspace/playbooks/ads/video-production.md` — **owns the blocking-check list and count** + ServicePow-6
 
 ## OPTIONAL INPUTS
 
@@ -68,10 +68,9 @@ only — never a gate)*
 
 - **Never average away a catastrophe.** One broken product or one incorrect logo sinks the piece
   regardless of every other score.
-- **Hard failures:** random disconnected scene · story that does not make sense · major face or
-  hand issue · broken product · incorrect branding · major continuity error · bad dialogue lip
-  sync · unusable audio · unsupported claim · fake testimonial · wrong CTA · visuals
-  contradicting the script.
+- **Hard failures** are listed in `references/scorecard.md` §1 — that file owns them; do not
+  restate or extend them here. Two failures the *playbook* owns instead (checks 32 and 34) are
+  measured, not judged: run them, never re-derive them.
 - **Compliance failures are hard failures**: an unsubstantiated claim, a synthetic person
   presented as a customer or reviewer, a missing AI disclosure, missing licence copy, broken
   ad-to-landing-page parity, uncleared rights.
@@ -112,7 +111,7 @@ CLIENT READY → Karl for the human watch. **The critic never fixes the work its
 ## REFERENCE FILES
 
 - `references/scorecard.md` — every axis, hard-failure list, verdict rules
-- `agent-workspace/playbooks/ads/video-production.md` — 31 checks, ServicePow-6, LB laws
+- `agent-workspace/playbooks/ads/video-production.md` — blocking checks, ServicePow-6, LB laws
 - `agent-workspace/operations/compliance.md` — claims, disclosure, rights
 - `../_shared/references/anti-choppy.md`
 

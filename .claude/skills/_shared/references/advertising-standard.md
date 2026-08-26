@@ -57,6 +57,6 @@ hearing it, that is his call — proceed and note the decision in the Bible.
 ## Where the enforceable version lives
 
 This file is the philosophy. The **enforceable** gates are:
-`agent-workspace/playbooks/ads/video-production.md` — 31 blocking checks, ServicePow-6 scoring
+`agent-workspace/playbooks/ads/video-production.md` — the blocking checks (it owns the list and the count), ServicePow-6 scoring
 (floor 8.0, no axis ≤6), laws LB24–LB52 — and `agent-workspace/operations/compliance.md`.
 Read those before declaring anything client-ready.
