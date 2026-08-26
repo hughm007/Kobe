@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-08-26
 tags: [operations, log]
 ---
 
@@ -33,6 +33,38 @@ Keep entries short. This is a log, not a report — three lines that are actuall
 beat a page that isn't.
 
 ---
+
+## 2026-08-26 — Service Pow operating intelligence: 15 project skills
+
+**Did:** Audited every installed skill (all 11 valid; found a three-way trigger collision between
+`motion-design`, `higgsfield-seedance-prompt` and `seedance-shotlist-director`, and that none of
+them know Service Pow exists). Built 15 project skills at `.claude/skills/` encoding the
+company's own advertising judgment end to end: campaign-director → client-intelligence →
+strategy → creative-director → creative-spine → script-director → storyboard-director →
+brand-fidelity / continuity / performance → higgsfield-intelligence + production →
+cinematography-editor → audio-director → creative-critic. Added the **Campaign Bible** as the
+single source of truth (one owning skill per section, append-only CONFLICTS, no silent rewrites),
+a dated Higgsfield capability map seeded from live account data, the credit cost ladder, and two
+separate learning ledgers (`knowledge/production-log/`, `knowledge/campaign-results/`).
+
+**Decided:** Six merges/rejections rather than 22 files — voice-of-customer into
+client-intelligence, offer-positioning into strategy as a blocking gate, credit-guard into
+higgsfield-production, and claims-check/client-onboarding/client-reporting rejected as
+duplicating existing playbooks. Skills are procedure; playbooks stay the content. Reasoning is in
+`.claude/skills/README.md`.
+
+**Learned:** The pilot mattered. Running the critic against the killed v8 "2:07 AM" caught only
+3 of its 5 documented failures — legibility dwell time and reference-citation audit were missing.
+Both are now hard failures (#13, #14). A critic that passes known-bad work is worse than none.
+
+**Open:** `servicepow-ad-producer` v4.0 still lives in the claude.ai workspace and is referenced
+as canonical by `playbooks/ads/video-production.md` — export it so anything it holds that the
+playbooks missed gets folded in, then retire that line. `motion-design` still says "always use
+this skill" and is synced, so it must be retuned at source. Critic perception is unverified until
+it runs on a real cut.
+
+**Next:** Run one live campaign end to end on the Mac; then wave 2 (hook-lab,
+reference-ad-intelligence, platform-adaptation, experiment-design, campaign-learning).
 
 ## 2026-08-25 — Orion's marketing hands + full code autopsy
 
