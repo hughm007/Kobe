@@ -1,24 +1,32 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 8"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 9"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-8, all-practical]
+tags: [campaign, storyboard, shotlist, revision-9, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 8 (ALL-PRACTICAL)
+# Shotlist — "Look Us Up" pack — REVISION 9 (ALL-PRACTICAL)
 
-**Current state (Revision 8, 2026-08-26 — this intro narrates NOW):**
+**Current state (Revision 9, 2026-08-26 — this intro narrates NOW):**
 an all-practical, zero-generation 8-shot board; every burned and VO line inside the three
 registered claims or a question; the F4 record check **FULLY CLOSED** ("911 Drain LLC" exact
 match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
 
-## Revision 8 changelog (round-9 finding → change; round 9 = **CONDITIONAL PASS**, the first non-block — round 10 verifies these repairs)
+## Revision 9 changelog (round-10 finding → change; round 10 = **CONDITIONAL PASS, the second straight — zero S3/S4, all five round-9 repairs verified landed.** The standing grant is exhausted; the sign-off package goes to Karl)
+
+| Finding | Change |
+|---|---|
+| **F10-1 (S2)** | The S2 shot card's Audio cell — the third location — synced to the two repaired sound tables (variant-scoped taps); a contradiction is resolved, not signed |
+| **F10-2 (S1)** | Variant C's six-tap sonic hook split specified across the C1→S2 seam: taps 1–5 + hesitation in C1, tap 6 + confirm in S2 — never twelve taps under a cell-literal read; pack-level "sonic hook" line scoped to C |
+| **F10-3 (S1)** | Two conservative rounding slops corrected: strap ≈4.8 cps (41/8.5), caption ≈17.3 cps (69/4.0 = 17.25); no routing changes |
+
+## Revision 8 changelog (round-9 finding → change; round 9 = **CONDITIONAL PASS**, the first non-block — round 10 verified all five repairs landed)
 
 | Finding | Change |
 |---|---|
@@ -228,7 +236,9 @@ Camera:      ECU over-shoulder on the SEARCH INPUT FIELD ONLY — framed so no R
              seal, or page identity is in frame (F1); shutter synced to the screen refresh
              (moiré/banding kills UI shots at feed size)
 Lighting:    phone screen as key in the evening kitchen; one warm practical behind
-Audio:       six soft key taps (the sonic hook), room tone
+Audio:       soft key taps 1–5 + the pre-last-digit hesitation (the sonic hook opens here;
+             tap 6 + the confirm tap complete in S2 — round-10 F10-2: one six-tap sequence
+             spans the C1→S2 seam, never twelve taps under a cell-literal read), room tone
 Text:        "Look them up first." (0.2–2.5, 42% — round-4 F9: differentiated from variant
              A's question so the A/C hook test is interpretable; a claim-2 imperative that
              passes the claims rule under both readings; the typing visual carries the code)
@@ -273,14 +283,17 @@ Camera:      opens on the FULL phone-in-hand frame (legible cold for A/B — the
              result row only — "no identity in frame" means no seal, no site wordmark, no
              header art resolvable at delivery resolution
 Lighting:    phone screen as key, warm practical behind — evening state
-Audio:       one confirm tap; room tone; no gurgle here — this beat is already calmer
+Audio:       variant-scoped (round-10 F10-1 — this cell now matches the two sound tables):
+             **C** — key tap 6, the sequence's completion (taps 1–5 live in C1) + one confirm
+             tap; **A/B** — the final completing tap(s) + one confirm tap; room tone; no
+             gurgle here — this beat is already calmer
 Text:        caption "Every licensed AZ contractor is publicly checkable — state registrar."
              (58%, onset **3.0s**, **exits 7.0s — 1.0s into S3** (round-6 R6-F2: measured in
-             characters, not WPM — ~70 chars needs ~4.0s at the 15–17 cps comfort ceiling;
+             characters, not WPM — 69 chars needs ~4.0s at the 15–17 cps comfort ceiling;
              the tail ride into S3 is continuity of an existing element, not new scene text,
              and the strap already continues there). Round-5 F-4 stands: the venue is
              claim-2's own tail, closing the "whose search box?" mock vector. NOTHING else
-             may ever be added to this beat (F-6); residual ~17.5 cps sits at the ceiling's
+             may ever be added to this beat (F-6); residual ≈17.3 cps (69/4.0 = 17.25 — F10-3) sits at the ceiling's
              edge — flagged on the sign-off sheet) +
              the persistent INFO STRAP begins at **5.5s** (Owner-delegated design call
              2026-08-26, onset retimed round-6 R6-F2: entering at 2.5s pulled the eye at the
@@ -292,7 +305,7 @@ Text:        caption "Every licensed AZ contractor is publicly checkable — sta
              licensee's name + ROC number, with the licensee's name defined as the ACC-filed
              legal name; primary rule text NOT VERIFIED from this environment — gov and
              legal-mirror sites egress-blocked; the licensed form is the conservative
-             default, ≈4.9 cps over 8.5s, no legibility cost; Karl may shorten only after a
+             default, ≈4.8 cps over 8.5s (F10-3 rounding fix), no legibility cost; Karl may shorten only after a
              primary-source check), baseline 65%, on a 40%-black backing
              chip (one contrast treatment across screen-bright, dusk and under-sink frames),
              running through 14.0s (S5's end) — so VO line "the number's on your screen"
@@ -553,13 +566,14 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 | Time | Diegetic | Music | VO | Emotional purpose |
 |---|---|---|---|---|
 | 0–2.5 | variant (gurgle / cascade patter / key taps) | none | none | wrongness (A/B) or focus (C) |
-| 2.5–6.0 | variant-scoped (round-9 F9-5): **C** six key taps → confirm tap; **A/B** the final completing tap(s) → confirm tap (S2 opens with the number completing — a mixer laying six taps against A/B's picture would desync the proof beat); room tone | **low ambient bed enters (F16)** | "Before you let anyone in — check them." | control arriving |
+| 2.5–6.0 | variant-scoped (round-9 F9-5; split per round-10 F10-2): **C** key tap 6 (taps 1–5 live in C1) → confirm tap; **A/B** the final completing tap(s) → confirm tap (S2 opens with the number completing — a mixer laying six taps against A/B's picture would desync the proof beat); room tone | **low ambient bed enters (F16)** | "Before you let anyone in — check them." | control arriving |
 | 6.0–9.0 | latch, evening street tone | bed sustains low (round-6 R6-F9: the F16 bed runs S2→S6 unbroken — these cells previously said "none", which a mix would obey, silently reopening F16) | — **(F11: no VO — the wait is the shot)** | safety |
 | 9.0–11.5 | drum ratchet, water giving | bed sustains low | — | competence |
 | 11.5–14.0 | tap, the pour, room tone resolving | bed sustains low | "911 Drain." (11.5–13.3) → CTA line J-cuts in at **13.4** (round-5 F-13: buys the CTA read 0.1s of slack — 150 WPM) | relief |
 | 14.0–17.0 | — | the bed resolves to one low note | "…the number's on your screen — look us up." (**ends by 16.6 — F17**) | resolve — end quieter than the feed |
 
-**Sonic hook:** the six key taps. Muted placements lose nothing.
+**Sonic hook (variant C):** the six key taps, split taps 1–5 in C1 / tap 6 + confirm in S2
+(F10-2). Variants A/B open on water, not taps. Muted placements lose nothing.
 
 ## Storyboard-gate self-check
 
@@ -584,11 +598,11 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 - **NAMED-ACCEPTANCE RESIDUALS (sign-off sheet — every read above the board's own 15–17 cps
   comfort ceiling is routed to Karl, none concealed by a checkmark; R7-F5, completeness
   restored round-8 R8-F1). Full sweep, every burned string — all ten — board counting method
-  (spaces + punctuation): B1 11.9 · C1 8.3 · S4 8.4 · S5 8.4 · strap ≈4.9 · endcard ROC line
+  (spaces + punctuation): B1 11.9 · C1 8.3 · S4 8.4 · S5 8.4 · strap ≈4.8 (F10-3) · endcard ROC line
   ≈13 · endcard phone "480-992-3541" ≈4.0 (added round-9 F9-2 — the tenth string; the sweep's
   completeness sentence is now literally true) — under ceiling; the THREE above-ceiling reads
   are (a)–(c) below:**
-  (a) S2 caption ≈ **17.5 cps** over 4.0s — just ABOVE the ceiling; no trim exists that keeps
+  (a) S2 caption ≈ **17.3 cps** over 4.0s (69 ch / 4.0s = 17.25 — F10-3 rounding fix; still just ABOVE the ceiling) — no trim exists that keeps
   "licensed" + the venue. Context for an informed signature (round-8 R8-F5): the caption's
   final 1.5s (5.5–7.0) is simultaneously contested by the strap's entrance at 5.5, the S3
   scene cut at 6.0, and the brightest→darkest frame transition. Karl ______ ☐ ·
@@ -627,6 +641,8 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   promoted from the historical R2-F17 row to a live line):** no "sewer" or "commercial" in
   captions, file names, ad-account text fields, or platform metadata — checked by whoever
   fills the ad-account fields, at publish time ☐
-- Karl has seen the storyboard: **PENDING — round 9 returned CONDITIONAL PASS (the first
-  non-block); Revision 8 applies its five repairs; round 10 (the standing grant's last round)
-  verifies them; then the sign-off package goes to Karl** ☐
+- Karl has seen the storyboard: **PENDING — rounds 9 AND 10 both returned CONDITIONAL PASS
+  (zero S3/S4; round 10 verified every round-9 repair landed). The standing grant is
+  exhausted; Revision 9 applies round 10's three small fixes (formally unverified by a gate
+  round — Karl may authorize one verification round or accept them with the sign-off). THE
+  SIGN-OFF PACKAGE IS NOW WITH KARL** ☐

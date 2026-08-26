@@ -1,15 +1,19 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Script — REVISION 8"
+title: "911 Drain — Storyboard Rebuild — Script — REVISION 9"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, script, revision-8]
+tags: [campaign, script, revision-9]
 ---
 
-# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 8
+# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 9
+
+**Revision 9 changes (round-10 findings; changelog in `shotlist.md`):** variant C's tap split
+specified across the C1→S2 seam (F10-2) · caption/strap cps roundings corrected to 17.3 / 4.8
+(F10-3).
 
 **Revision 8 changes (round-9 findings; changelog in `shotlist.md`):** rhythm ratio synced to
 150/67 ≈ 2.2 (F9-1) · the S2 tap audio variant-scoped so A/B's mix can't desync the proof
@@ -51,7 +55,7 @@ bonus layer. **Claim-free** — no price, no speed promise, no guarantee, no "se
 | Time | Shot | Burned text (muted carrier) | VO (sound-on bonus) | Diegetic audio |
 |---|---|---|---|---|
 | 0.0–2.5 | Hook (A/B/C) | per variant, below | — | per variant |
-| 2.5–6.0 | S2 verify | "Every licensed AZ contractor is publicly checkable — state registrar." (onset 3.0s, **exits 7.0s** — R6-F2 tail ride) + info strap enters at **5.5s** (R6-F2 retime), runs through S5: "911 Drain LLC · ROC 366870 · 480-992-3541" (65%, black backing chip; licensed name form — R8-F3) | "Before you let anyone in — check them." | variant-scoped (round-9 F9-5): **C** — six key taps + one confirm tap (typing began in C1); **A/B** — the final completing tap(s) + one confirm tap only (S2 opens with the number completing); room tone |
+| 2.5–6.0 | S2 verify | "Every licensed AZ contractor is publicly checkable — state registrar." (onset 3.0s, **exits 7.0s** — R6-F2 tail ride) + info strap enters at **5.5s** (R6-F2 retime), runs through S5: "911 Drain LLC · ROC 366870 · 480-992-3541" (65%, black backing chip; licensed name form — R8-F3) | "Before you let anyone in — check them." | variant-scoped (round-9 F9-5; split per round-10 F10-2): **C** — key tap 6 + one confirm tap (taps 1–5 live in C1); **A/B** — the final completing tap(s) + one confirm tap only (S2 opens with the number completing); room tone |
 | 6.0–9.0 | S3 arrival | no NEW text — the caption completes its exit at 7.0s; the strap continues | **none (F11)** | door latch, evening street tone; no dialogue |
 | 9.0–11.5 | S4 work | "Licensed. Look us up." (round-4 F3) | — (the ratchet is the line) | auger drum ratchet, water starting to give |
 | 11.5–14.0 | S5 payoff | "Licensed. Verifiable." | "911 Drain." (11.5–13.3); CTA line J-cuts in at 13.4 (round-5 F-13) | tap opens, the pour, room tone resolving |
@@ -92,8 +96,8 @@ and the VO directs eyes to it. Flagged for Karl at the storyboard gate.
 | A card 2 "Who do you let in?" | 5 | 1.0s + exits at the cut (its exact floor) | ≥1s | ✓ floor — but **≈18.0 cps, ABOVE the 15–17 ceiling** (R8-F1: routed to the sign-off sheet as residual (c) for Karl's named accept/decline — no concealment) |
 | B line "Still comparing plumbers?" | 3 | 2.1s | ≥1s | ✓ |
 | C line "Look them up first." | 4 | 2.3s | ≥1s | ✓ |
-| S2 caption (incl. "— state registrar.") | 9 (~70 chars) | 4.0s (onset 3.0s, exits 7.0s — R6-F2 tail ride into S3) | ≥1s | ✓ floor — but **≈17.5 cps, just ABOVE the 15–17 ceiling** (R7-F5 wording fix: "at the edge" understated it; the beat is frozen (F-6) and the residual sits on the sign-off sheet for Karl's named accept/decline) |
-| Info strap "911 Drain LLC · ROC 366870 · 480-992-3541" (R8-F3 licensed form, ≈4.9 cps) | 6 | 8.5s persistent (5.5–14.0s, R6-F2 onset retime) + 3.0s endcard = **11.5s total number-on-screen** (R6-F10c: the old "14.5s (S2→S5)" conflated the strap window with the total) | ≥2s license + phone | ✓ — on screen continuously for the ad's back 11.5s; VO "the number's on your screen" (13.4–16.6) stays true across the strap→endcard handoff |
+| S2 caption (incl. "— state registrar.") | 9 (69 chars) | 4.0s (onset 3.0s, exits 7.0s — R6-F2 tail ride into S3) | ≥1s | ✓ floor — but **≈17.3 cps (69/4.0 — F10-3), just ABOVE the 15–17 ceiling** (R7-F5 wording fix: "at the edge" understated it; the beat is frozen (F-6) and the residual sits on the sign-off sheet for Karl's named accept/decline) |
+| Info strap "911 Drain LLC · ROC 366870 · 480-992-3541" (R8-F3 licensed form, ≈4.8 cps — F10-3) | 6 | 8.5s persistent (5.5–14.0s, R6-F2 onset retime) + 3.0s endcard = **11.5s total number-on-screen** (R6-F10c: the old "14.5s (S2→S5)" conflated the strap window with the total) | ≥2s license + phone | ✓ — on screen continuously for the ad's back 11.5s; VO "the number's on your screen" (13.4–16.6) stays true across the strap→endcard handoff |
 | S4 line "Licensed. Look us up." | 4 | 2.5s | ≥1s | ✓ |
 | S5 line | 2 | 2.5s | ≥1s | ✓ |
 | Phone number | 1 string | 3.0s | ≥2s phone number | ✓ |

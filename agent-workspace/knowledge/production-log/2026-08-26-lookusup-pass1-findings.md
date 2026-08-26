@@ -201,6 +201,29 @@ items. The verdict recommends ADOPTING the S4 operator-present option (HIGH→ME
 - **Derived values (ratios, totals) desync one edit later than their inputs** — when a base
   number changes, grep for every figure computed FROM it, not just its repetitions.
 
+## Round 10 (0 blocking) — second straight conditional pass; the loop closes
+
+All CLAUDE-CAUGHT. The grant's final round verified all five round-9 repairs landed by
+independent recomputation, then found three residues of its own: the S2 shot card's Audio
+cell was a THIRD location the F9-5 variant-scoping never reached (the fix synced the two
+tables the finding named — the named-instances trap again, one repair later); variant C's
+six-tap hook was double-booked across the C1/S2 cells (twelve taps under a cell-literal
+read); and two rounding slops sat in the conservative direction. Verdict trajectory across
+the campaign: BLOCK ×8 (7→3→5→5→2→1→1→1 S3s) → CONDITIONAL PASS ×2 (5 findings → 3, none
+above S2). The board's claims posture, physics, and method survived ten adversarial rounds;
+what the last five rounds caught was almost entirely the fix process's own editing debt —
+which is the strongest argument the re-gate-after-repair rule has ever produced for itself.
+
+**Reusable lessons (EXPERIMENTAL):**
+- **"Fix the class" includes locations the finding never named.** F9-5 said "both sound
+  tables"; the class was "every cell that states S2's audio." Sweep by FACT, not by the
+  finding's location list — the same lesson as round 8, one level deeper.
+- **A sequence that spans a cut must state its split in both shots' cells** — otherwise
+  each cell claims the whole sequence and a literal read doubles it.
+- **Ten rounds of a converging adversarial gate cost $0 and found ~40 real defects** —
+  the expensive-feeling loop is the cheap part of production; every one of these caught
+  pre-spend would have been a re-shoot, a compliance exposure, or a dead CTA at delivery.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic

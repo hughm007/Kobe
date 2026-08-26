@@ -34,6 +34,32 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Round 10 closes the loop: two straight conditional passes; sign-off to Karl
+
+**Did:** The grant's final round ran on Revision 8: **CONDITIONAL PASS, zero S3/S4, all five
+round-9 repairs verified landed by independent recomputation.** Three small findings (the S2
+shot card's Audio cell as a third un-scoped location; variant C's tap split double-booked
+across the C1→S2 seam; two conservative rounding slops) — applied as **Revision 9**, which is
+formally unverified by a gate round since the grant is exhausted; that verification decision
+rides with the sign-off. **The gate loop is closed.** Verdict trajectory: 8 blocks
+(7→3→5→5→2→1→1→1 S3s) then 2 conditional passes (5→3 findings, none above S2). The
+storyboard sign-off package goes to Karl: residuals (a)–(c), the S4 operator decision
+(Skeptic recommends ADOPT), the name-form default, the weekly record re-check, the geography
+seam, the pre-edit-lock checks, the optional Revision-9 verification round, and the sign-off
+itself.
+
+**Decided:** Loop exit per the grant's own terms (PASS/CONDITIONAL reached). Revision 9's
+three fixes applied without a fresh round — recorded as such, never claimed verified.
+
+**Learned:** (production log) "Fix the class" includes locations the finding never named —
+sweep by fact, not by the finding's location list. A sequence spanning a cut states its split
+in both cells. Ten $0 adversarial rounds caught ~40 real defects pre-spend.
+
+**Open:** Karl — the sign-off package (everything above). Then: the practical shoot
+afternoon's pre-lock gates, Will's claims sheet, the S4 media ask.
+
+**Next:** Karl's sign-off answers; then capture planning.
+
 ## 2026-08-26 — Round 9: CONDITIONAL PASS — the first non-block in nine rounds
 
 **Did:** Round 9 ran on Revision 7 under the standing grant and returned **CONDITIONAL
