@@ -1,17 +1,17 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 13"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 14"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-13, all-practical]
+tags: [campaign, storyboard, shotlist, revision-14, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 13 (ALL-PRACTICAL)
+# Shotlist — "Look Us Up" pack — REVISION 14 (ALL-PRACTICAL) — the CONTROL cut
 
-**Current state (Revision 13, 2026-08-26 — this intro narrates NOW):**
+**Current state (Revision 14, 2026-08-26 — this intro narrates NOW; the problem/solution-first CHALLENGER cut of these same assets lives in `challenger-board.md`, per the Owner's read #2 — the market decides between the two):**
 an all-practical, zero-generation 8-shot board; every burned and VO line inside its AUDITED
 CLASS (round-12 F12-2 — the taxonomy stated honestly): a registered claim · a question ·
 frame-narration (a statement about the visible frame, with recorded fallbacks) · or
@@ -19,6 +19,15 @@ Owner-accepted safety advice; the F4 record check **FULLY CLOSED** ("911 Drain L
 match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
+
+## Revision 14 changelog (Owner read #2, 2026-08-26 — the performance-challenger directive)
+
+| Owner finding (read #2: 8.5/10, sign-off withheld) | Change |
+|---|---|
+| S2 caption "reads like a lawyer" — "Claude's compliance brain beat its copywriting brain" | Caption → **"You can check your plumber's license yourself — state registrar."** (his own phrasing, Owner-picked from compliant options; 64 ch / 4.0s = **16.0 cps, inside the band — former signed residual (a) is CURED and retired**) |
+| Trust-first structure limits the conversion ceiling; no plumbing until 9s; S3 must earn its 3s; S4 deserves more/earlier; test a drain-first S5 | **`challenger-board.md` created** — a second spine by design (Owner-authorized positioning A/B): problem → SOLVING at 2.5s → proof → extended work → drain-first relief → CALL; **S3 cut from the challenger = the S3 pressure test**; zero new shoot asks; the market decides on the Owner's metric chain (3-sec hold → 25% view → CTR → calls → CPQL) |
+| "Correct the Kobe system: Production QA AND Performance-Marketing QA" | Advisory-tier **Performance Challenger Rule** in the playbook's doctrine; **Direct-Response lens** in the critic's scorecard (advisory — never a floor, never an axis); learning filed + indexed |
+| Hook ranking B 9.0 > A 8.8 > C 7.5 | Media plan already codified (Rev 12): A+B cold, C retargeting-only — B's rank noted for budget weighting at launch |
 
 ## Revision 13 changelog (round-12 finding → change; round 12 = **CONDITIONAL PASS — zero S3/S4, every Owner-picked line passed classification as picked.** Per the verdict, these paper-only fixes verify as a delta check at the Owner's discretion)
 
@@ -341,14 +350,16 @@ Audio:       variant-scoped (round-10 F10-1 — this cell now matches the two so
              **C** — key tap 6, the sequence's completion (taps 1–5 live in C1) + one confirm
              tap; **A/B** — the final completing tap(s) + one confirm tap; room tone; no
              gurgle here — this beat is already calmer
-Text:        caption "Every licensed AZ contractor is publicly checkable — state registrar."
-             (58%, onset **3.0s**, **exits 7.0s — 1.0s into S3** (round-6 R6-F2: measured in
-             characters, not WPM — 69 chars needs ~4.0s at the 15–17 cps comfort ceiling;
-             the tail ride into S3 is continuity of an existing element, not new scene text,
-             and the strap already continues there). Round-5 F-4 stands: the venue is
-             claim-2's own tail, closing the "whose search box?" mock vector. NOTHING else
-             may ever be added to this beat (F-6); residual ≈17.3 cps (69/4.0 = 17.25 — F10-3) sits
-             ABOVE the 15–17 ceiling (F11-4 wording sync — accepted on the sign-off sheet) +
+Text:        caption **"You can check your plumber's license yourself — state registrar."**
+             (Owner-picked, Revision 14 — the humanized voice from his read #2: the old line
+             "reads like a lawyer"; this is his own phrasing made compliant. 58%, onset
+             **3.0s**, **exits 7.0s — 1.0s into S3** (R6-F2 tail ride unchanged). **64 ch /
+             4.0s = 16.0 cps — INSIDE the 15–17 band: the humanized line also CURES signed
+             residual (a).** The venue stays (round-5 F-4 — "whose search box?" stays
+             closed). CLASSIFICATION: claim-2 restated in audience language ("plumber" for
+             the record's contractor — the ad's subject IS a plumbing contractor) +
+             imperative flavor; gates fresh in the challenger round. NOTHING else may ever
+             be added to this beat (F-6) +
              the persistent INFO STRAP begins at **5.5s** (Owner-delegated design call
              2026-08-26, onset retimed round-6 R6-F2: entering at 2.5s pulled the eye at the
              exact proof moment — the beat's reads are now insert-then-caption only, and the
@@ -679,18 +690,19 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   2026-08-26; the pause criterion stands** ☑
 - **NAMED-ACCEPTANCE RESIDUALS (sign-off sheet — every read above the board's own 15–17 cps
   comfort ceiling is routed to Karl, none concealed by a checkmark; R7-F5, completeness
-  restored round-8 R8-F1). Full sweep, every burned string — **all ELEVEN after Revision 12's
-  Owner-picked copy** (B now carries two cards; S4/S5 lines replaced) — board counting method
-  (spaces + punctuation): B card 1 "Still comparing?" 16.0 (1.0s — inside the 15–17 band) ·
-  B card 2 "The water isn't." 14.5 (1.1s) · C1 8.3 · S4 "This is 911 Drain." 7.2 · S5 "Back
-  to normal." 6.0 · strap ≈4.8 (F10-3) · endcard ROC line 13.3 (F11-6) · endcard phone
-  "480-992-3541" ≈4.0 — under ceiling; the THREE above-ceiling reads are (a)–(c) below,
-  unchanged by Revision 12:**
-  (a) S2 caption ≈ **17.3 cps** over 4.0s (69 ch / 4.0s = 17.25 — F10-3 rounding fix; still just ABOVE the ceiling) — no trim exists that keeps
-  "licensed" + the venue. Context for an informed signature (round-8 R8-F5): the caption's
-  final 1.5s (5.5–7.0) is simultaneously contested by the strap's entrance at 5.5, the S3
-  scene cut at 6.0, and the brightest→darkest frame transition. **ACCEPTED — Karl (Wyatt),
-  in-session, 2026-08-26** ☑ ·
+  restored round-8 R8-F1). Full sweep, every burned string — **all ELEVEN** — board counting
+  method (spaces + punctuation): **S2 caption "You can check your plumber's license yourself
+  — state registrar." 16.0 (64 ch / 4.0s — inside the band; Revision 14: the Owner's
+  humanized pick CURED former residual (a))** · B card 1 "Still comparing?" 16.0 (1.0s —
+  inside the band) · B card 2 "The water isn't." 14.5 (1.1s) · C1 8.3 · S4 "This is 911
+  Drain." 7.2 · S5 "Back to normal." 6.0 · strap ≈4.8 (F10-3) · endcard ROC line 13.3
+  (F11-6) · endcard phone "480-992-3541" ≈4.0 — under ceiling; the TWO above-ceiling reads
+  are (b)–(c) below:**
+  (a) ~~S2 caption above-ceiling~~ **RETIRED (Revision 14):** the Owner-picked humanized
+  caption reads **16.0 cps — inside the band**; the accepted residual no longer exists (his
+  2026-08-26 signature preserved as history; the contested-window context — strap entrance,
+  scene cut, bright→dark transition — still holds and stays checked at the mock's contrast
+  pass (e)) ·
   (b) A1 card 1 ≈ **17.3 cps** over 1.5s — just above; structurally unfixable (the line is
   Owner-accepted verbatim, the hook window is 2.5s, card 2 sits at its exact 1.0s floor —
   the minimums sum past the window). **ACCEPTED — Karl (Wyatt), in-session, 2026-08-26,

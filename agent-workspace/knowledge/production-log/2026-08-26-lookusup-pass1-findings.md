@@ -304,6 +304,30 @@ recounting every "every burned string" table re-created the completeness-claim d
 - **Any table headed "every X" re-verifies whenever the count of X changes** — the third
   instance of this class; promote to the playbook.
 
+## OWNER-CAUGHT #2 — the second read (2026-08-26): the performance-challenger directive
+
+Karl's second full read: **8.5/10, sign-off withheld** — production design 9.4, trust
+positioning 9.7 ("could become a legitimate 911 Drain brand platform"), authenticity 9.8,
+muted-feed design 9.3; script 7.9, CTA 7.4, emotional impact 8.3, DR performance potential
+8.1. Hook re-rank: **B 9.0 > A 8.8 > C 7.5**. The finding: the ad is trust-first where
+direct response wants problem/solution-first — the viewer sees no plumbing until 9s of 17s;
+"the customer isn't primarily buying a verifiable contractor, they're buying a drain that
+works again"; the caption "reads like a lawyer" ("Claude's compliance brain beat its
+copywriting brain"); S3 must prove it earns 17.6% of the runtime; and the system itself
+needs Performance-Marketing QA next to production QA — *"if we removed 30% of the
+cleverness and made this 30% more persuasive, would the phone ring more?"* His prescribed
+fix: don't start over — a CHALLENGER from the same assets; **the market decides** (3-sec
+hold → 25% view → CTR → calls → CPQL). Honesty note, recorded: this read was of Revision 11
+— the CTA, B-aggression, and brand-in-center critiques were already fixed by his own
+Revision-12 picks; the challenger, the caption, the S3 test, and the system change were the
+genuinely new directives, and all four were executed same-day (Revision 14,
+`challenger-board.md`, the playbook's Performance Challenger Rule + the critic's DR lens,
+and the promoted learning).
+
+**Bonus outcome:** the humanized caption he picked reads 16.0 cps — INSIDE the comfort band
+— so the plainer-spoken line also CURED signed residual (a). The lawyer-voice line wasn't
+just weaker copy; it was the harder read.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic

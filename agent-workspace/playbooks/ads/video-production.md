@@ -77,6 +77,24 @@ The first seconds decide everything: on Meta, roughly half of a campaign's value
 - **A meaningful visual change lands every ≤3 seconds** (cut, zoom step, text beat, or angle change ≥30°).
 - Post-ship targets (S9): hook rate ≥25–30% Meta / ≥30% TikTok / ≥25% Shorts; hold rate ≥50%; average watch ≥50% of duration. Below-benchmark hooks feed the next concept's WHY.
 
+### THE PERFORMANCE CHALLENGER RULE (v1.0 — 2026-08-26, Owner-directed; ADVISORY tier)
+Production QA answers "is it correct?" Performance-Marketing QA answers "will someone care?"
+**Correctness is the floor. Conversion is the objective.** The standing question, asked of
+every board before sign-off (the Owner's words): *"If we removed 30% of the cleverness and
+made this 30% more persuasive, would the phone ring more?"*
+- **A pack whose concept leans on a clever mechanism ships with a problem/solution-first
+  CHALLENGER cut built from the same production assets.** The challenger reorders, it does
+  not reshoot: pain → the brand solving it → proof → work → relief → direct CTA.
+- **The market decides between control and challenger — never a reviewer on paper** — on a
+  metric chain stated before launch (e.g. 3-second hold → 25% video view → CTR → calls →
+  cost per qualified lead).
+- A structural beat under pressure ("does this scene earn its seconds?") is tested by
+  CUTTING it from the challenger, not by arguing about it.
+- This is ADVISORY doctrine, not a blocking check — it shapes the work at the point of
+  making it, and the `servicepow-creative-critic` Direct-Response lens reads against it.
+Origin: OWNER-CAUGHT, 911 Drain storyboard read #2 —
+[the learning](../../knowledge/learnings/2026-08-26-correctness-floor-conversion-objective.md).
+
 ---
 
 ## The pipeline — stages, gates, artifacts

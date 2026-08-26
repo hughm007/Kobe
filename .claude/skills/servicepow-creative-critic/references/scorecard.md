@@ -96,6 +96,20 @@ message + CTA clarity. **Floor 8.0 AND no axis ≤ 6.** Both, or not client read
 | **CLIENT READY** | No hard failure, all blocking checks passed and actually run, ServicePow-6 ≥8.0, no axis ≤6 |
 | **CANNOT ASSESS** | Creative or Bible unavailable, or a gate could not be run — never a pass |
 
+## 6. The Direct-Response lens (ADVISORY — never a floor, never an axis, never a verdict input)
+
+Run AFTER the verdict, never instead of it. This lens answers the playbook's Performance
+Challenger Rule question — would the phone ring more? — and its output is an advisory note
+appended to the Bible §13 entry, clearly labeled ADVISORY. It cannot block, cannot clear,
+and adds no axis to the client-ready score (the playbook owns that score, alone).
+
+| Read | Question |
+|---|---|
+| **Time-to-value-proposition** | At what second does a cold viewer first see the thing they are actually buying (the problem being solved)? Is anything cleverer than the sale sitting in front of it? |
+| **CTA directness** | Does the close ASK — a verb, the brand, the action — or does it educate one more time? |
+| **Persuasion vs. cleverness** | Name the ad's cleverest element. If it were removed and the freed seconds given to problem/solution/CTA, would a stranger be more or less likely to act? |
+| **Challenger exists** | Does a problem/solution-first challenger cut exist for market testing (the playbook's rule)? If not, why is this pack exempt — written down, by name? |
+
 ## Report format
 
 ```

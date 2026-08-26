@@ -84,9 +84,14 @@ only — never a gate)*
    with an offset applied** (the calibration ledger's offset is SUSPENDED; the playbook says why).
 8. **For a pack:** score the **lead variant in full**, and each sibling on **hook, flow and CTA**
    only. A sibling that fails one of those three does not ship, whatever the lead scored.
-9. **Confirm the Skeptic's final pass exists and cleared.** No Skeptic result = not client ready,
+9. **Run the Direct-Response lens** in `references/scorecard.md` §6 — ADVISORY only: it never
+   blocks, never clears, and adds no axis; its note is appended to the Bible §13 entry,
+   labeled ADVISORY. It exists so production QA ("is it correct?") is always accompanied by
+   performance-marketing QA ("will someone care?") — the playbook's Performance Challenger
+   Rule states the doctrine.
+10. **Confirm the Skeptic's final pass exists and cleared.** No Skeptic result = not client ready,
    the same as a check that could not be run.
-10. **Write Bible section 13** with the verdict, the failures and what would fix each.
+11. **Write Bible section 13** with the verdict, the failures and what would fix each.
 
 ## DECISION RULES
 

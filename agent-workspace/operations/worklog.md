@@ -34,6 +34,37 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Owner read #2 → the performance challenger, the humanized caption, and a corrected Kobe system
+
+**Did:** Karl's second read (8.5/10, sign-off withheld) directed a performance CHALLENGER
+from the same assets rather than a rebuild — executed same-day: **`challenger-board.md`**
+(a second spine by authorized design: pain → SOLVING at 2.5s → compressed proof → extended
+work → drain-first relief → CALL; **S3 cut from it = his S3 pressure test**; zero new shoot
+asks; control vs challenger decided by the market on his metric chain, A+B cold / C
+retargeting). **Revision 14** puts his picked humanized caption on the control — "You can
+check your plumber's license yourself — state registrar." — which reads 16.0 cps, INSIDE
+the band, and thereby **cures signed residual (a)**. **The Kobe system is corrected per his
+directive:** the Performance Challenger Rule (playbook Doctrine, advisory tier — never a
+blocking check), the creative-critic Direct-Response lens (§6, advisory — never a floor,
+never an axis), the learning promoted at occurrence #1 by explicit Owner directive
+(recorded as such), and the knowledge index updated. Honesty note: his read was of
+Revision 11; the CTA/B/brand critiques were already fixed by his own Rev-12 picks — the new
+work is the challenger, the caption, the S3 test, and the system change.
+
+**Decided:** Two spines by design (the spine law makes a reordered body a second concept —
+so it is authorized as one, not smuggled as a variant). The market, never a reviewer,
+decides between them. No spend without Karl's explicit go at launch.
+
+**Learned:** (learning file, promoted by directive) Production QA cannot see persuasion —
+every QA regime optimizes toward what it can measure. Pair it with performance-marketing QA,
+always.
+
+**Open:** the dual gate (Skeptic on challenger + caption delta ∥ first DR-lens read on both
+boards) → verdicts recorded → the two-board package back to Karl for sign-off. Behind that:
+the at-their-moment gates, Will's claims sheet (still the v2 copy unlock).
+
+**Next:** dual-gate verdicts; then Karl's sign-off ask.
+
 ## 2026-08-26 — Round 12: every Owner-picked line passes; Revision 13; the board is at his re-read
 
 **Did:** Round 12 (the authorized re-gate of the copy revision) returned **CONDITIONAL PASS
