@@ -95,6 +95,11 @@ starts at 5.0 with the strap already established (no new-element eye-pull at the
 
 **Metric chain (the Owner's, verbatim):** 3-second hold → 25% video view → CTR → calls →
 cost per qualified lead. Decision rule: the market decides; nobody argues a winner on paper.
+**Test infrastructure (DR-lens underline, 2026-08-26): call-qualification tracking is
+REQUIRED before launch** — the chain's last link (CPQL) is the only one that can adjudicate
+the control's unique better-qualified-calls thesis; without it the test cannot answer its
+own question. Also: paired cells share identical hooks, so 3-second hold should read
+near-equal — a built-in sanity check on the test itself.
 **No spend without the Owner's explicit go at launch time** (standing guardrail — this
 document authorizes a test DESIGN, not a budget).
 

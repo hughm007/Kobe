@@ -517,6 +517,19 @@ verification beat and the brand beat stay in separate shots, always.
 ## 13. QC — gate 1 of 2: the score
 *Owner: `servicepow-creative-critic` (Kobe). Independent evaluation.*
 
+**ADVISORY (Direct-Response lens §6, FIRST live run, 2026-08-26 — paper level, both cuts;
+full verbatim text in `2026-08-26-dr-lens-advisory.md`; no gate effect):** Control:
+time-to-solution 9.0s of 17 (the cut's thesis, and the Owner-named ceiling); close asks;
+its cleverness-for-persuasion trade "has been built — it is the challenger." Challenger:
+time-to-solution **2.5s** ("the fastest time-to-value these assets can produce"); its
+residual cleverness (the compressed proof insert) is LOAD-BEARING — removing it leaves "a
+fix-it ad any competitor could run with a logo swap"; its next 30% of persuasion is copy
+the unsigned claims sheet bars — **there the constraint is the ceiling, not the cut**. One
+watch item: Challenger-A's card 2 hands into SOLVING obliquely (results-read observation,
+not an edit). One infrastructure underline: **call-qualification tracking is required or
+the metric chain's last link (CPQL) cannot adjudicate the control's only unique claim.**
+No winner named; the market decides.
+
 **Verdict:** **CANNOT ASSESS — NOT CLIENT READY. DELIVERY BLOCKED.** (Run cold 2026-08-26,
 isolated context, no creator reasoning supplied.) Contract applied exactly: the creative is
 unavailable — nothing exists to watch; the machine gates could not run (the four QC scripts do
