@@ -1,24 +1,36 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 12"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 13"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-12, all-practical]
+tags: [campaign, storyboard, shotlist, revision-13, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 12 (ALL-PRACTICAL)
+# Shotlist — "Look Us Up" pack — REVISION 13 (ALL-PRACTICAL)
 
-**Current state (Revision 12, 2026-08-26 — this intro narrates NOW):**
-an all-practical, zero-generation 8-shot board; every burned and VO line inside the three
-registered claims or a question; the F4 record check **FULLY CLOSED** ("911 Drain LLC" exact
+**Current state (Revision 13, 2026-08-26 — this intro narrates NOW):**
+an all-practical, zero-generation 8-shot board; every burned and VO line inside its AUDITED
+CLASS (round-12 F12-2 — the taxonomy stated honestly): a registered claim · a question ·
+frame-narration (a statement about the visible frame, with recorded fallbacks) · or
+Owner-accepted safety advice; the F4 record check **FULLY CLOSED** ("911 Drain LLC" exact
 match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
 
-## Revision 12 changelog (the Owner's storyboard read → copy hierarchy, all lines Owner-picked from compliant options, 2026-08-26; round 12 = the authorized re-gate)
+## Revision 13 changelog (round-12 finding → change; round 12 = **CONDITIONAL PASS — zero S3/S4, every Owner-picked line passed classification as picked.** Per the verdict, these paper-only fixes verify as a delta check at the Owner's discretion)
+
+| Finding | Change |
+|---|---|
+| **F12-1 (S2)** | The endcard ROC line (13.3 cps) added as the dwell table's eleventh row — "every burned string" is literally true in `script.md` again |
+| **F12-2 (S2)** | The intro + self-check compliance taxonomy stated honestly: registered claim · question · frame-narration (with recorded fallbacks) · Owner-accepted safety advice |
+| **F12-3 (S2)** | **Platform copy gate** added as pre-edit-lock check (4): ad-account text carries ONLY board-gated strings verbatim, new platform copy re-gates — "Back to normal." never leaves its frame |
+| **F12-4 (S2)** | S3↔S4 person-seam closed: the accepted S4 take's sleeve/glove/skin reads are RECORDED (new acceptance-checklist line) and the S3 wardrobe is chosen compatible — "This is 911 Drain." lands on one continuous person |
+| **F12-5/F12-6/F12-7 (S1)** | "Breath" → J-cut-gap wording (the ≥0.40s criterion is met by the 5.5s VO gap); "Back to normal."'s classification BOUND to the drain-visibility check (failed master fires the fallback); S6 cell synced to 13.3 cps |
+
+## Revision 12 changelog (the Owner's storyboard read → copy hierarchy, all lines Owner-picked from compliant options, 2026-08-26; round 12 — the authorized re-gate — returned CONDITIONAL PASS: every picked line passed classification)
 
 | Owner finding (read: 8.3/10, sign-off withheld) | Change |
 |---|---|
@@ -461,6 +473,12 @@ Source:      PRACTICAL SHOOT — real hand, real door, real porch, real stand-in
              asserts a scheduled job (true in the story), never a personal credential — the
              class distinction that made a prop photo-ID badge unusable. Shirt + prop look
              go to Karl at sign-off ("we can plan how that will look together" — Owner).
+             **WARDROBE COMPATIBILITY (round-12 F12-4):** capture-first scheduling means
+             S4's real footage EXISTS before this shoot — record the accepted S4 take's
+             visible sleeve/glove/skin reads and choose the S3 stand-in's shirt and sleeves
+             to be COMPATIBLE: the edit reads S3's arriving figure and S4's working hands
+             as one person, "This is 911 Drain." lands at that seam, and a person-swap
+             tell in a trust ad is the competitor's screenshot.
              If a stand-in is impossible: re-board (empty-porch + knock redesign) + fresh
              Pass 1
 Real-ref:    CITED — https://egia.org/wp-content/themes/EGIA/documents/perfectServiceCall.pdf
@@ -511,8 +529,9 @@ Source:      REAL CLIENT FOOTAGE REQUIRED — the "during" state is never genera
              matter · **orientation + resolution floor met (vertical 9:16, ≥1080p — round-6
              R6-F5)** · **phone propped or mounted — handheld footage rejected (round-5 F-2;
              stability surrogate: the drum edge stays inside a 5%-of-frame box across the
-             take)** — marginal footage is rejected against this list, never sunk-cost
-             accepted. **Grade plan:** cool phone footage graded toward the warm practical
+             take)** · **visible sleeve/glove/skin reads of the accepted take RECORDED for
+             the S3 wardrobe plan (round-12 F12-4)** — marginal footage is rejected against
+             this list, never sunk-cost accepted. **Grade plan:** cool phone footage graded toward the warm practical
              world; tested on the first capture. **Capture-first scheduling: the controlled
              shoot afternoon is not booked until this window has product.** CONTINGENCY RE-GATE: if no usable footage
              lands, an aftermath-only redesign is NOT pre-approved — the changed board returns
@@ -559,7 +578,11 @@ Text:        "Back to normal." (42% — Owner-picked, Revision 12: relief named 
              the visible scene (water draining, glass filled, plant watered), the same class
              as "the number's on your screen"; it promises no outcome about any future job.
              FALLBACK if the gate reads it as an outcome claim: "911 Drain. Verifiable." or
-             the Owner's named acceptance)
+             the Owner's named acceptance. **CLASSIFICATION BINDING (round-12 F12-6): the
+             frame-narration ruling holds ONLY while the edit passes the "drain visibly
+             swallowing water" check — master or safety insert; a failed-master edit FIRES
+             THE FALLBACK, never keeps "Back to normal." over footage that no longer shows
+             the normal it narrates**)
 Source:      PRACTICAL SHOOT — real person from behind, one take. NO generation fallback
              (deleted — F2). If impossible: no-person insert (the freely-draining basin CU,
              real) + fresh Pass 1
@@ -585,7 +608,7 @@ Lighting:    brand black; red reserved exactly here
 Audio:       the bed resolves to one low note, then silence
 Text:        "480-992-3541" (large, 44%, 3.0s) · "911 Drain LLC · ROC 366870 — look us up."
              (55% — round-8 R8-F3: the licensed name joins the ROC line so name + number ride
-             every endcard frame and every endcard screenshot; ≈13 cps over 3.0s, under
+             every endcard frame and every endcard screenshot; 13.3 cps over 3.0s (F12-7 sync), under
              ceiling) · **the
              real logo lockup file only** at 62% — **RESOLVED (Owner ruling, 2026-08-26:
              logo-only endcard):** no separately burned tagline text; the 24/7 tagline enters
@@ -625,7 +648,7 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
 | 6.0–9.0 | latch, evening street tone | bed sustains low (round-6 R6-F9: the F16 bed runs S2→S6 unbroken — these cells previously said "none", which a mix would obey, silently reopening F16) | — **(F11: no VO — the wait is the shot)** | safety |
 | 9.0–11.5 | drum ratchet, water giving | bed sustains low | — | competence |
 | 11.5–14.0 | tap, the pour, room tone resolving | bed sustains low | "911 Drain." (11.5–13.3) → CTA line J-cuts in at **13.4** (round-5 F-13: buys the CTA read 0.1s of slack — 150 WPM) | relief |
-| 14.0–17.0 | — | the bed resolves to one low note | **"Call 911 Drain — the number's on your screen."** (Owner-picked, Revision 12: action verb first — the direct-response close; 8 words / 3.2s = 150 WPM ✓; **ends by 16.6 — F17**. Deliberate brand echo with the 11.5–13.3 "911 Drain." — the 13.3–13.4 breath separates them; mix judges the echo at the audio pass) | resolve — end quieter than the feed |
+| 14.0–17.0 | — | the bed resolves to one low note | **"Call 911 Drain — the number's on your screen."** (Owner-picked, Revision 12: action verb first — the direct-response close; 8 words / 3.2s = 150 WPM ✓; **ends by 16.6 — F17**. Deliberate brand echo with the 11.5–13.3 "911 Drain." — separated by the line-final slack (~0.7–0.8s at 67 WPM) plus the 0.1s J-CUT GAP (round-12 F12-5: not "the breath" — the design's ≥0.40s breath criterion is met by the 5.5s S2→S5 VO gap); mix judges the echo at the audio pass) | resolve — end quieter than the feed |
 
 **Sonic hook (variant C):** the six key taps, split taps 1–5 in C1 / tap 6 + confirm in S2
 (F10-2). Variants A/B open on water, not taps. Muted placements lose nothing.
@@ -643,9 +666,12 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   every variant's body — A1's tap-shutoff hand and S5's homeowner match them (skin, cuff,
   wardrobe world) at the **2.5s, 6.0s (phone hand → door-pulling hand — round-7 R7-F6) and
   11.5s** cuts ✓ (cast one set of hands for the whole ad)
-- Registered-line-item queue: **EMPTY** (F2 closed by replacement — every burned line and VO
-  line now sits inside the three registered claims or asks a question); the S4 seam acceptance
-  line awaits Karl's signature at sign-off
+- Registered-line-item queue: **EMPTY** — and the compliance taxonomy stated honestly
+  (round-12 F12-2): every burned and VO line sits in one of the AUDITED classes — a
+  registered claim · a question · frame-narration ("The water isn't.", "Back to normal.",
+  the CTA's "the number's on your screen" tail — statements about the visible frame, with
+  recorded fallbacks) · or Owner-accepted safety advice ("Stop the water."). No line is
+  outside these four classes; the S4 seam acceptance line signs at the capture window
 - **PROPOSED FOR KARL AT SIGN-OFF (round-6 R6-F8):** a weekly in-flight re-check of the live
   ROC record while the pack runs, with a named pause criterion — any status change or new
   complaint row → pause the pack (the ad sends viewers to a live page; the filmed ACTIVE row
@@ -703,7 +729,11 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   transposed digit ships a dead CTA) ☐ · (3) **pre-publish metadata sweep (round-8 R8-F8,
   promoted from the historical R2-F17 row to a live line):** no "sewer" or "commercial" in
   captions, file names, ad-account text fields, or platform metadata — checked by whoever
-  fills the ad-account fields, at publish time ☐
+  fills the ad-account fields, at publish time ☐ · (4) **PLATFORM COPY GATE (round-12
+  F12-3):** ad-account primary text, headlines, and captions carry ONLY board-gated strings
+  VERBATIM (registered-claim copy or questions); any NEW platform copy re-gates through
+  Pass 1 before publish. In particular, "Back to normal." NEVER appears on any surface
+  without the frame it narrates — off-frame it becomes the barred outcome claim ☐
 - Karl has seen the storyboard: **READ, 2026-08-26 — verdict 8.3/10, SIGN-OFF WITHHELD**
   pending a copy-hierarchy revision (pain → urgency → relief → trust-proof → action; a
   direct-response close; B sharpened; C to retargeting — the Owner's read, recorded in the

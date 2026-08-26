@@ -34,6 +34,33 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Round 12: every Owner-picked line passes; Revision 13; the board is at his re-read
+
+**Did:** Round 12 (the authorized re-gate of the copy revision) returned **CONDITIONAL PASS
+— the fourth straight, zero S3/S4, and every Owner-picked line passed classification as
+picked**: "Back to normal." survived "narrowly" as frame-narration, "The water isn't."
+passed, the call-first CTA's truth condition re-verified, the brand echo ruled a mix note.
+Its seven paper findings applied as **Revision 13**: the dwell table's missing eleventh row;
+the honest four-class compliance taxonomy; a **platform copy gate** (ad-account text =
+board-gated strings verbatim, or re-gate — frame-narration lines never leave their frames);
+the **S3↔S4 person-seam closed** (the accepted S4 take's sleeve/glove/skin reads recorded,
+S3 wardrobe chosen compatible — "This is 911 Drain." lands on one continuous person); plus
+the S1 sweep. Verification of these fixes is a delta check at the Owner's discretion, per
+the verdict itself.
+
+**Decided:** No further rounds proposed — twelve rounds, four straight conditionals, every
+remaining item human-gated. The board goes back to Karl for the re-read his withheld
+sign-off asked for.
+
+**Learned:** (production log) Frame-narration copy is a loan, not a grant — bind it to the
+edit check and gate off-frame surfaces. Cast seams are claim seams. "Every X" tables
+re-verify when the count of X changes (third instance — promote).
+
+**Open:** Karl's re-read → "signed" schedules the shoot afternoon. Then the at-their-moment
+gates; Will's claims sheet remains the v2 unlock.
+
+**Next:** Karl's re-read.
+
 ## 2026-08-26 — Revision 12: the Owner's hierarchy applied, every line his pick; round 12 runs
 
 **Did:** Karl chose "revise now, claim-free" with options-first approval, then picked all

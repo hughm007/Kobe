@@ -1,15 +1,19 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Script — REVISION 12"
+title: "911 Drain — Storyboard Rebuild — Script — REVISION 13"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, script, revision-12]
+tags: [campaign, script, revision-13]
 ---
 
-# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 12
+# Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 13
+
+**Revision 13 changes (round-12 findings; changelog in `shotlist.md`):** the endcard ROC
+line joins the dwell table as its eleventh row (F12-1) · the J-cut-gap wording replaces
+"breath" (F12-5).
 
 **Revision 12 changes (the Owner's storyboard read → copy hierarchy; all lines Owner-picked
 from compliant options — changelog in `shotlist.md`):** VO close → **"Call 911 Drain — the
@@ -71,7 +75,7 @@ bonus layer. **Claim-free** — no price, no speed promise, no guarantee, no "se
 | 2.5–6.0 | S2 verify | "Every licensed AZ contractor is publicly checkable — state registrar." (onset 3.0s, **exits 7.0s** — R6-F2 tail ride) + info strap enters at **5.5s** (R6-F2 retime), runs through S5: "911 Drain LLC · ROC 366870 · 480-992-3541" (65%, black backing chip; licensed name form — R8-F3) | "Before you let anyone in — check them." | variant-scoped (round-9 F9-5; split per round-10 F10-2): **C** — key tap 6 + one confirm tap (taps 1–5 live in C1); **A/B** — the final completing tap(s) + one confirm tap only (S2 opens with the number completing); room tone |
 | 6.0–9.0 | S3 arrival | no NEW text — the caption completes its exit at 7.0s; the strap continues | **none (F11)** | door latch, evening street tone; no dialogue |
 | 9.0–11.5 | S4 work | "This is 911 Drain." (Owner-picked, Rev 12 — the brand on the unfakeable beat; 7.2 cps ✓) | — (the ratchet is the line) | auger drum ratchet, water starting to give |
-| 11.5–14.0 | S5 payoff | "Back to normal." (Owner-picked, Rev 12 — relief named at the relief beat; 6.0 cps ✓; frame-narration class, fallback on the shot card) | "911 Drain." (11.5–13.3); CTA line J-cuts in at 13.4 (round-5 F-13; deliberate brand echo with the close — the 13.3–13.4 breath separates them) | tap opens, the pour, room tone resolving |
+| 11.5–14.0 | S5 payoff | "Back to normal." (Owner-picked, Rev 12 — relief named at the relief beat; 6.0 cps ✓; frame-narration class, fallback on the shot card) | "911 Drain." (11.5–13.3); CTA line J-cuts in at 13.4 (round-5 F-13; deliberate brand echo with the close — separated by the line-final slack plus the 0.1s J-CUT GAP, not "the breath": the ≥0.40s breath criterion is met by the 5.5s S2→S5 VO gap — round-12 F12-5) | tap opens, the pour, room tone resolving |
 | 14.0–17.0 | S6 endcard | "480-992-3541" (large) · "911 Drain LLC · ROC 366870 — look us up." (licensed name — R8-F3) · **real logo lockup only** (Owner ruling: no burned tagline — the 24/7 line lives inside the logo art); number + ROC line set from FRAME ONE (R7-F2) | **"Call 911 Drain — the number's on your screen."** (Owner-picked, Rev 12: action verb first; **ends by 16.6 — F17**) | bed resolves to one low note, then silence + 0.4s clean tail |
 
 ## Variant hook text
@@ -117,6 +121,7 @@ and the VO directs eyes to it. Flagged for Karl at the storyboard gate.
 | S4 line "This is 911 Drain." | 4 | 2.5s | ≥1s | ✓ — 7.2 cps (Rev 12) |
 | S5 line "Back to normal." | 3 | 2.5s | ≥1s | ✓ — 6.0 cps (Rev 12) |
 | Phone number | 1 string | 3.0s | ≥2s phone number | ✓ |
+| Endcard ROC line "911 Drain LLC · ROC 366870 — look us up." | 7 | 3.0s (set from frame one — R7-F2) | ≥2s license | ✓ — 13.3 cps (round-12 F12-1: the missing eleventh row, added so this table's "every burned string" is literally true) |
 
 ## Spoken-language rules applied
 

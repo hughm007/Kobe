@@ -278,6 +278,32 @@ The commercial ceiling Karl is pointing at lifts substantially the day Will sign
   center.** When copy must live inside trust-claims only, trust becomes the hero by default.
   Surface that trade to the owner explicitly at concept stage, not at sign-off.
 
+## Round 12 (0 blocking) — the Owner's copy passes the adversary; two new control surfaces
+
+All CLAUDE-CAUGHT. The re-gate of the Owner's copy-hierarchy revision passed every picked
+line: "Back to normal." survived as frame-narration "narrowly" — no subject, no tense, true
+of the pixels it sits on — with the gate's own condition that the classification is
+edit-conditional (bound to the drain-visibility check; a failed master fires the fallback)
+and surface-conditional (the new PLATFORM COPY GATE: ad-account text carries board-gated
+strings verbatim or re-gates, because "Back to normal." as a platform headline has no frame
+to narrate and becomes the barred outcome claim). The round's best catch was the S3↔S4
+person-seam: the arriving stand-in and the working technician are different people the edit
+presents as one, "This is 911 Drain." lands exactly at that seam, and nothing had checked
+wardrobe/sleeve/skin compatibility — capture-first scheduling makes the fix free (the S4
+take exists before the S3 wardrobe is chosen). Also: adding a string to the board without
+recounting every "every burned string" table re-created the completeness-claim defect
+(F12-1, third instance of the class).
+
+**Reusable lessons (EXPERIMENTAL):**
+- **Frame-narration copy is a loan, not a grant** — it stays legal only welded to its frame:
+  bind it to the edit check that proves the frame, and gate every off-frame surface
+  (platform text fields) where it would become a bare claim.
+- **Cast seams are claim seams.** When copy attributes identity ("This is X") across footage
+  of different people presented as one, wardrobe/skin compatibility is a compliance check,
+  not a nicety — shoot-order the real footage first and choose the staged wardrobe from it.
+- **Any table headed "every X" re-verifies whenever the count of X changes** — the third
+  instance of this class; promote to the playbook.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic
