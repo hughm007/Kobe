@@ -12,6 +12,9 @@ measured statement rather than a claim:
   - the operating sections Service Pow requires are all present
   - every relative reference path a skill cites actually resolves
   - no secrets, and no client-specific facts hardcoded into permanent skills
+  - LB50 in three forms: the blocking-check count is declared once, every LB and HB
+    is defined exactly once in its canonical home, and no skill restates a
+    threshold the playbook owns
 
 Run:  python3 .claude/skills/_shared/scripts/validate_skills.py
 Exit: 0 all pass, 1 any failure.
@@ -180,12 +183,119 @@ def check_single_source() -> None:
     elif len(declarers) > 1:
         fail("LB50", f"blocking-check count declared in {len(declarers)} files: {declarers}")
 
-    for path in SKILLS_DIR.rglob("*.md"):
+    for path in _repo_md():
+        rel = path.relative_to(REPO)
+        # History describes the past, not the present: the worklog, the decision
+        # records and LB50's own origin story may quote a count that has since moved.
+        if rel.parts[:3] == ("agent-workspace", "knowledge", "decisions"):
+            continue
+        if rel.name == "lesson-bank.md":
+            continue
         body = path.read_text(encoding="utf-8")
         if CANONICAL_MARKER in body:
             continue
         if BARE_COUNT_RE.search(body):
-            fail("LB50", f"{path.relative_to(REPO)} states a blocking-check count — point at the playbook instead")
+            fail("LB50", f"{rel} states a blocking-check count — point at the playbook instead")
+
+
+# ---------------------------------------------------------------- LB / HB homes
+
+RULE_SETS = {
+    "LB": {"marker": "CANONICAL: lesson-bank", "expect": 52, "label": "lesson"},
+    "HB": {"marker": "CANONICAL: hard-boundaries", "expect": 14, "label": "hard boundary"},
+}
+
+DEF_RE = re.compile(r"^(\d{1,3})\.\s+\*\*(.+?)\*\*", re.MULTILINE)
+
+# Files that record history rather than current law may legitimately quote a rule.
+HISTORY_DIRS = ("tmp", "archive")   # anywhere in the path, at any depth
+HISTORY_FILES = ("worklog.md",)
+
+
+def _is_history(path: Path) -> bool:
+    rel = path.relative_to(REPO)
+    return any(part in HISTORY_DIRS for part in rel.parts) or rel.name in HISTORY_FILES
+
+
+def _repo_md() -> list[Path]:
+    return [
+        p for p in REPO.rglob("*.md")
+        if ".git" not in p.parts and not _is_history(p)
+    ]
+
+
+def check_rule_homes() -> None:
+    """One rule, one home — mechanised for LB1-52 and HB1-14.
+
+    Two failures are possible and both matter:
+
+      1. Coverage. The canonical home must define every number in the set exactly
+         once, contiguously. A gap means a lesson was lost in a move; a repeat
+         means two versions of the same lesson are live.
+      2. A second definition elsewhere. Citing "LB24" is correct and expected.
+         Pasting LB24's text into a skill is how the two-sources problem grows
+         back, so a distinctive span of each rule's own wording is searched for
+         across the repo. An exact 60-character match is a copy, not a coincidence.
+    """
+    docs = _repo_md()
+    for prefix, spec in RULE_SETS.items():
+        homes = [d for d in docs if spec["marker"] in d.read_text(encoding="utf-8")]
+        if len(homes) != 1:
+            fail(prefix, f"expected exactly 1 canonical home, found {len(homes)}: "
+                         f"{[str(h.relative_to(REPO)) for h in homes]}")
+            continue
+        home = homes[0]
+        body = home.read_text(encoding="utf-8")
+
+        numbers: list[int] = []
+        shingles: dict[int, str] = {}
+        for m in DEF_RE.finditer(body):
+            n = int(m.group(1))
+            numbers.append(n)
+            line = body[m.start():body.find("\n", m.start())]
+            tail = line[m.end() - m.start():]
+            if len(tail) >= 60:
+                shingles[n] = tail[:60]
+
+        expect = spec["expect"]
+        missing = sorted(set(range(1, expect + 1)) - set(numbers))
+        extra = sorted(n for n in numbers if n > expect or n < 1)
+        dupes = sorted({n for n in numbers if numbers.count(n) > 1})
+        if missing:
+            fail(prefix, f"{home.relative_to(REPO)} is missing {spec['label']}s {missing}")
+        if extra:
+            fail(prefix, f"{home.relative_to(REPO)} defines out-of-range {spec['label']}s {extra}")
+        if dupes:
+            fail(prefix, f"{home.relative_to(REPO)} defines {spec['label']}s twice: {dupes}")
+
+        for doc in docs:
+            if doc == home:
+                continue
+            text = doc.read_text(encoding="utf-8")
+            for n, shingle in shingles.items():
+                if shingle in text:
+                    fail(prefix, f"{prefix}{n} is re-stated verbatim in "
+                                 f"{doc.relative_to(REPO)} — cite it, do not copy it")
+
+
+# Thresholds the playbook tier owns. A skill that repeats one has forked it.
+OWNED_THRESHOLDS = [
+    ("175 WPM", "check 32 — the performance gate"),
+    ("165 WPM", "check 32 — the performance gate"),
+    ("155 WPM", "check 32 — the performance gate"),
+    ("1.6 px/frame", "the motion floor"),
+    ("≥ 8.0", "the ServicePow-6 ship floor"),
+]
+
+
+def check_owned_thresholds() -> None:
+    """A skill states procedure. The number it gates on belongs to the playbook."""
+    for path in SKILLS_DIR.rglob("*.md"):
+        text = path.read_text(encoding="utf-8")
+        for token, owner in OWNED_THRESHOLDS:
+            if token in text:
+                fail("THRESHOLDS", f"{path.relative_to(REPO)} states '{token}' — "
+                                   f"{owner} is owned by the playbook; point at it instead")
 
 
 def main() -> int:
@@ -199,9 +309,11 @@ def main() -> int:
     for d in skills:
         check_skill(d)
     check_single_source()
+    check_rule_homes()
+    check_owned_thresholds()
 
     print(f"Validated {checked} skills in {SKILLS_DIR.relative_to(REPO)}")
-    print("Single-source rule (LB50): checked\n")
+    print("Single-source rule (LB50): blocking-check count, LB1-52, HB1-14, owned thresholds\n")
     if warnings:
         print(f"WARNINGS ({len(warnings)}):")
         for w in warnings:

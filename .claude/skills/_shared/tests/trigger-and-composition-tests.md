@@ -1,6 +1,6 @@
 # Service Pow skill tests
 
-Structural checks are automated (`../scripts/validate_skills.py`, 15/15 passing).
+Structural checks are automated (`../scripts/validate_skills.py`, 16/16 passing).
 The tests below are behavioural and are re-run by reading them and confirming routing.
 
 ---
@@ -28,7 +28,9 @@ The tests below are behavioural and are re-run by reading them and confirming ro
 | "Can we just generate the logo?" | `servicepow-brand-fidelity` (answer: no — LB24) |
 | "Why are we cutting here?" | `servicepow-cinematography-editor` |
 | "The audio feels off" | `servicepow-audio-director` |
-| "Is this ready to send?" / "QC this" | `servicepow-creative-critic` |
+| "Is this ready to send?" / "QC this" | `servicepow-creative-critic` **and** `servicepow-skeptic` — both, always |
+| "Tear this apart" / "what's wrong with it" / "attack this storyboard" | `servicepow-skeptic` |
+| "Give me a pack" / "three hooks for this" | `servicepow-creative-director` (pack mode is the default, not a request) |
 
 ## 2. Negative trigger tests — must NOT fire
 
@@ -70,11 +72,12 @@ it at source (claude.ai), not locally, or the sync overwrites it.
 | campaign-director | Bible created at the right path; approval status set; decisions logged |
 | client-intelligence | Bible §1 with every material line evidence-labelled; blocking UNKNOWNs listed |
 | strategy | Explicit offer verdict; ≥3 angles differing in argument; ranked |
-| creative-director | ≥3 concepts; ten-companies result recorded per concept |
-| creative-spine | Beat map with no blank cells; unbroken leads-into → knows-before chain |
-| storyboard-director | Every shot has purpose/before/adds/next + motion axis |
+| creative-director | ≥3 concept families; Anti-Generic Gate recorded per concept; Hook Tournament run (8–12 in, 3–5 out) or an exemption written; angle declared with the last three pasted |
+| creative-spine | One shared beat map with no blank cells; one hook block per variant; unbroken leads-into → knows-before chain per variant; shuffle test run |
+| storyboard-director | Every shot has **all ten fields** — story job · action · camera · lighting · audio · text · source · cited Real-ref · Angle · Motion. Not nine, not eleven. Plus the Feeling Spec, and the Sound Spine where sound is meaningful |
+| skeptic | Three passes with severities; S3/S4 named as blocking; no reference anywhere to the production reasoning |
 | higgsfield-production | Method chosen before model; cost estimate vs budget before spend |
-| creative-critic | Verdict + hard-failure list + ServicePow-6 + AI artifact risk |
+| creative-critic | Verdict + hard-failure list + ServicePow-6 (as a range, no offset) + AI artifact risk + the Skeptic's result confirmed present |
 
 ## 4. Edge-case tests
 
@@ -101,7 +104,23 @@ owned twice — verified by inspection, no overlaps.
 **Deliberate-conflict test:** when a downstream skill is given a spine it cannot execute, it must
 append a `## CONFLICTS` entry and stop — never silently rewrite. Verified below in the pilot.
 
-## 6. Regression test
+## 6. v4.0 consolidation tests (added 2026-08-26, decision 0005)
+
+These four exist because the consolidation changed behaviour, not just files. **Structure edited
+is not the same as system working.**
+
+| # | Test | Pass condition | Fails if |
+|---|---|---|---|
+| 6a | **Pack test** | "Make an ad for 911 Drain" produces a **pack**: one concept family, 3–5 genuinely different hooks, shared body/payoff/CTA | One ad comes back, or the "variants" are three edits of the same argument |
+| 6b | **Field test** | A storyboard emits exactly the ten fields per shot | Nine fields, the old 24-field set, or an invented eleventh box |
+| 6c | **Independence test** | `servicepow-skeptic` is invoked with the artifact and the brief **only** | Its output quotes or reacts to the reasoning behind a choice — that means it was handed the creator's case and is no longer independent |
+| 6d | **Two-gate test** | A deliverable that clears the Kobe score but carries an S3 Skeptic finding is **not** client ready | Either gate is treated as sufficient, or a score is used to argue down a severity |
+
+**6a is the one most likely to silently regress.** Pack mode is a habit change, not a rule that
+throws an error — if a session quietly produces one polished ad, nothing fails loudly. The tell is
+the Bible: section 3 with fewer than three hook variants and no written exemption.
+
+## 7. Regression test
 
 The killed v8 "2:07 AM" ad (see `pilot-2am-critic.md`) **must keep failing** after any change to
 the critic or the scorecard. If a scorecard edit ever lets v8 pass, the edit is wrong.

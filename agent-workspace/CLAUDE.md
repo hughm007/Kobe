@@ -332,9 +332,11 @@ ingested file cites its Drive source and sync date in frontmatter.
   (CR-37 residential-only), brand facts, and live compliance blockers. Read the brief
   *and* the brand guide before any work for them; the compliance constraints in the
   brief are blocking, not advisory.
-- **Creative work has a gate:** the 31 blocking checks + ServicePow-6 scoring in
-  [`playbooks/ads/video-production.md`](playbooks/ads/video-production.md), and the
-  claims discipline in [`operations/compliance.md`](operations/compliance.md).
+- **Creative work has a gate:** the blocking checks + ServicePow-6 scoring in
+  [`playbooks/ads/video-production.md`](playbooks/ads/video-production.md) — which owns
+  that list and its count; never restate either here — and the claims discipline in
+  [`operations/compliance.md`](operations/compliance.md). Beneath it sit four reference
+  files: the lesson bank, the hard boundaries, prompt craft and measurement.
 - The open questions that remain are mostly **business risks recorded nowhere**
   (partnership percentages, unsigned claims sheet, unverified sewer scope) — see the
   re-tiered [`company/OPEN-QUESTIONS.md`](company/OPEN-QUESTIONS.md).

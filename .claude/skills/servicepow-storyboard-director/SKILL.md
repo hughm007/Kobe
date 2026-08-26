@@ -1,14 +1,14 @@
 ---
 name: servicepow-storyboard-director
 description: >
-  Converts an approved creative spine and script into an intentional shot list where every shot
-  declares its beat, duration, purpose, what came before, what it adds, what comes next, subject,
-  action, performance, gaze, shot size, camera, lens feel, movement, light, environment, product,
-  props, dialogue, audio, transition, reference, model requirement and continuity notes. Every
-  shot must contribute to attention, understanding, proof, emotion, desire or action — filler
-  shots are cut. Use after the spine and script are approved and before any production or model
-  routing. Do NOT use for a single standalone shot prompt (use higgsfield-seedance-prompt) and
-  do NOT use before a beat map exists.
+  Converts an approved creative spine and script into the mandatory storyboard artifact — the
+  shot-by-shot document written before any image is generated, where every shot carries the ten
+  required fields: story job, action, camera, lighting, audio, text, source, a cited real
+  reference, the pack's angle, and a named motion axis. Also produces the Feeling Spec and Sound
+  Spine. Every shot must earn its place; filler shots are cut, not improved. Use after the spine
+  and script are approved and before any keyframe or video credit is spent. Do NOT use for a
+  single standalone shot prompt (use higgsfield-seedance-prompt), do NOT use before a beat map
+  exists, and do NOT add an eleventh field.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
   version: 1.0.0
@@ -45,23 +45,36 @@ Reference footage · location constraints · available real assets · budget cei
 ## WORKFLOW
 
 1. **Map beats to shots.** A beat may need one shot or several; a shot never spans two beats.
-2. **Write every shot with the full field set** (see `references/shot-fields.md`). The four that
-   do the real work: **purpose · what came before · what this adds · what comes next.**
+2. **Write every shot with all TEN fields** (see `references/shot-fields.md`): story job ·
+   action · camera · lighting · audio · text · source · **Real-ref (cited)** · **Angle** ·
+   **Motion**. A blank field is unfinished work. **Do not invent an eleventh** — a new box is
+   SOP bloat papering over an enforcement failure.
 3. **Declare what each shot contributes** — attention, understanding, proof, emotion, desire or
    action. A shot contributing none is cut, not improved.
-4. **Run the real-reference law (LB51).** Real footage of the real event is consulted before
-   the shot is designed, **cited and openable**. No reference found is surfaced to Karl by name —
-   never accepted silently. **State amendment:** a shot depicting a state change (broken/working,
-   before/after) references **each state separately** and names the observable difference in one
-   line — an unreferenced transition is an unsubstantiated claim in visual form.
+4. **Run the real-reference law (LB30/LB51).** Real footage of the real event is consulted
+   before the shot is designed, **cited and openable**, naming the specific observed behaviors
+   copied. No reference found is written as the exact `NO REFERENCE FOUND — HIGH RISK` entry and
+   surfaced to Karl by name — never accepted silently. It binds the **keyframe** as well as the
+   motion. **State amendment:** a shot depicting a state change (broken/working, before/after)
+   references **each state separately** and names the observable difference in one line — an
+   unreferenced transition is an unsubstantiated claim in visual form.
 5. **Mark the "during" state.** In trades work the before/after states can be staged; the
    *during* state is what real client footage exists for and generally cannot be generated
    safely. Flag those shots for real footage.
-6. **Name a motion axis for every shot** (check 31) — what actually moves, and why. Static
-   beauty fails the motion floor.
-7. **Set model requirement per shot** — the *requirement*, not the model. ("Needs consistent
+6. **Name a motion axis for every shot** (check 31) — which of the five axes (camera
+   translation · subject travel through depth · foreground occlusion · focus change · light
+   change) **and how it is achieved**. Hero beats name two. Static beauty fails the motion floor.
+7. **Declare the Angle once for the whole pack** — the same argument on every shot in every
+   variant, and it must differ from this client's previous deliverable (LB37). Storyboard the
+   shared body once; storyboard **each hook variant's opening shots separately**.
+8. **Write the Feeling Spec and, where sound is meaningful, the Sound Spine** — both are required
+   at this gate, not later. An emotion with no observable on-screen cause is a wish.
+9. **Check the shot-length arithmetic:** total ÷ shot count ≥ 1.3s; pure-AI shots ≤5s (static
+   people-free environment shots may hold to 7s). Mark hero beats for the 3-draft rule.
+10. **Set model requirement per shot** — the *requirement*, not the model. ("Needs consistent
    face across three shots"; "needs legible on-screen text".) `higgsfield-production` chooses.
-8. **Write Bible section 6** and the full list to `shotlist.md`.
+11. **Write Bible section 6** and the full list to `shotlist.md`. The storyboard **is the
+    Master Timeline seed** — clip order, story jobs, audio spine, continuity locks per joint.
 
 ## DECISION RULES
 
@@ -85,11 +98,15 @@ count, total duration, and the list of shots needing real assets.
 
 ## QUALITY GATES
 
-- Every shot has purpose / before / adds / next filled
-- Every shot names a motion axis
-- Every shot declares one or more of attention, understanding, proof, emotion, desire, action
-- References cited and openable, or the gap surfaced by name
+- Every shot has **all ten fields** filled — counted, not assumed
+- Every shot names a motion axis and how it is achieved; hero beats name two
+- Angle stated, identical across the pack, and different from the last deliverable
+- Every action passed the In-World Reason Test
+- References cited and openable, or the exact HIGH RISK line written and surfaced by name
+- Feeling Spec exists with a cause per emotional beat; Sound Spine exists where sound is meaningful
+- Flow reads as one story, not a list of shots
 - Composite shots marked wherever marks or text appear
+- Karl has seen the storyboard for anything concept-level
 
 ## FAILURE CONDITIONS
 

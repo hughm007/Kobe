@@ -54,13 +54,18 @@ never automatically obeyed — see the judgment standard)*
    constraints there (licence scope, banned words, never-generate rules) are hard limits on
    everything downstream.
 3. **Sequence the specialists.** Default order, skipping only what the Bible already has:
-   `client-intelligence` → `strategy` → *gate: Karl approves strategy* → `creative-director` →
-   *gate: Karl approves concept* → `creative-spine` → `script-director` →
-   `storyboard-director` → `brand-fidelity` + `continuity-supervisor` +
+   `client-intelligence` → `strategy` → *gate: Karl approves strategy* → `creative-director`
+   (**produces a pack — 3–5 hooks — not one ad**) → *gate: Karl approves concept* →
+   `creative-spine` → `script-director` → `storyboard-director` → **`skeptic` pass 1 on the
+   storyboard, before a single credit** → `brand-fidelity` + `continuity-supervisor` +
    `human-performance-realism` (in parallel — they constrain the storyboard) →
    `higgsfield-production` → *gate: Karl approves storyboard + budget* → production →
-   `cinematography-editor` → `audio-director` → `creative-critic` → *gate: human watch* →
+   **`skeptic` pass 2 on candidate footage** → `cinematography-editor` → `audio-director` →
+   **`creative-critic` and `skeptic` pass 3 — both, independently** → *gate: human watch* →
    CLIENT READY.
+
+   **The deliverable is a pack.** A single one-off ad is the exception and the reason goes in the
+   decision log. Body, payoff and CTA are produced once and reused; only the hooks differ.
 4. **Run one phase at a time.** Hand the specialist the Bible path and its section. Do not do its
    job. Do not run the next phase before the current one has written its section.
 5. **Resolve conflicts.** On a `## CONFLICTS` entry: accept (update the Bible, mark RESOLVED with
@@ -71,6 +76,9 @@ never automatically obeyed — see the judgment standard)*
 ## DECISION RULES
 
 - **Nothing is generated before `STORYBOARD APPROVED`.** Spend follows thinking.
+- **Two gates, both binding.** `creative-critic` grades (Kobe) and `servicepow-skeptic` attacks.
+  Never run one instead of the other, and never let a good score argue down an S3/S4 finding.
+- **After any repair, both gates re-run.** A fix that was never re-attacked is a fix on trust.
 - **A weak offer stops the campaign.** If `strategy` returns offer verdict WEAK, surface it and
   recommend fixing the proposition — do not proceed to prettier video.
 - **Skip a phase only when the Bible already answers it**, and say which phase was skipped and
@@ -99,7 +107,7 @@ needing his approval, and credits committed vs budget.
 
 Stop and report rather than proceed when: the client folder does not exist · a licence or
 compliance constraint forbids the requested campaign (e.g. advertising outside a licensed scope)
-· a required UNKNOWN cannot be resolved · the critic returns HARD FAIL · budget would be exceeded.
+· a required UNKNOWN cannot be resolved · the critic returns HARD FAIL · the Skeptic returns S3 or S4 · budget would be exceeded.
 
 ## HANDOFF
 

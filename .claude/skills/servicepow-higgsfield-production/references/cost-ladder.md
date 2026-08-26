@@ -1,14 +1,17 @@
 # The Service Pow cost ladder
 
 **Quality is cheap at the still frame and expensive at the master.**
-Frame fix = 1 image job · clip fix = 130+ credits · master fix = a rebuild.
+Fixing a frame is one image job. Fixing a clip costs a video generation. Fixing a master is a
+rebuild. **That ladder is the whole point of this file, and it does not change when models do.**
 
-Live numbers live in the capability map, not here. The **ratios** are what matters and they are
-stable: exploration costs pennies, premium video costs hundreds of times more.
+**No credit figures are written here.** Every current cost — per model, per generation, and the
+day-level baselines — lives dated and sourced in
+[`../../servicepow-higgsfield-intelligence/references/higgsfield-capability-map.md`](../../servicepow-higgsfield-intelligence/references/higgsfield-capability-map.md).
+Read it there before quoting a number to anyone.
 
-> Reference point, verified 2026-08-25: Soul V2 **0.12** · Nano Banana Pro **2.0** ·
-> Kling v3.0 **7.5–12.5** · Seedance 2.5 **32.5**.
-> **One Seedance 2.5 video = 271 Soul V2 images.**
+The **ratios** are what matters and they are stable: exploration costs pennies, premium video
+costs hundreds of times more — a three-order-of-magnitude gap between the cheapest image and the
+most expensive video. That gap is why exploration happens in images.
 
 ---
 

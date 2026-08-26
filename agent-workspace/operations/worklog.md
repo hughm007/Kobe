@@ -34,6 +34,54 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — v4.0 read in full and consolidated: its content, the skills' structure
+
+**Did:** Karl pasted the real `servicepow-ad-producer` SKILL.md — **v4.0, 631 lines, 2026-08-20**.
+Read all of it. The reconstruction from earlier today was directionally right and materially
+incomplete: it had ~10 of 52 lessons, none of the 14 hard boundaries, none of the three inspection
+protocols and no thresholds. Archived the pasted file verbatim to `archive/` and deleted the
+reconstruction. Split v4.0 into homes: the blocking tier stayed in
+`playbooks/ads/video-production.md`; four new reference files took the rest — **lesson-bank
+(LB1–52), hard-boundaries (HB1–14, with HB8's gate chain), prompt-craft, measurement**. Built the
+16th skill, **`servicepow-skeptic`** — the adversary v4.0 requires to be separate from Kobe. Then
+resolved the seven conflicts: `creative-director` and `creative-spine` adopted **pack mode** and
+the **Hook Tournament**; `shot-fields.md` collapsed **24 fields → v4.0's ten**; `creative-critic`
+became **Kobe only**; my ten-companies test became v4.0's **Anti-Generic Gate**; the shuffle test
+merged into the anti-choppy law. Moved every volatile fact — model names, credit baselines,
+provisional thresholds — into the dated capability map, and out of the prose that claimed them as
+timeless. Extended the validator: **LB1–52 and HB1–14 must each be defined exactly once**, with a
+60-character span of every rule's own wording searched repo-wide, so citing a number passes and
+pasting its text fails. Proved all three new checks can actually fail before trusting them.
+
+**Decided:** [Decision 0005](../knowledge/decisions/0005-v40-consolidation.md) — **v4.0's content,
+the skills' structure.** v4.0 is a deep content system with a shallow structure; the skills were a
+good structure with shallow content. v4.0's own §8B diagnoses the monolith problem (*"~600 discrete
+checks per ad… a check everyone skips is worse than no check"*) and answers it with tiering;
+progressive disclosure across reference files is the same answer executed structurally. Also
+recorded what was deliberately **not** imported: the changelog preamble, the LB renumbering table,
+the install-proof ritual (git is the proof), Drive's lock protocol, empty pattern-library
+scaffolding, and the stage-hat names — One Brain was kept, Paul/Steve/D-Wade were not.
+
+**Learned:** **v4.0 broke its own LB50 three times.** §8B says 34 blocking checks; three other
+places in the same file say 31. It also calls Real-ref the "eleventh" field two sections after
+insisting there are ten and no eleventh. Corrected both on import — and that is exactly why the
+validator now enforces single-definition mechanically instead of by care. Second: my 24-field shot
+form was *precisely* the bloat v4.0 forbids — "SOP bloat papering over an enforcement failure".
+The defect it was trying to fix was never a missing field; it was a field that accepted an
+unverifiable answer.
+
+**Open:** The **four QC scripts' source is still absent** — checks 26–28, 32 and 33 are enforced by
+judgment and labelled as such, not measured. Two files v4.0 cites (its creative-performance engine
+and shot-motion-and-staging references) were never pasted, so the Hook Tournament's full mechanics
+and the five motion axes' detail are missing. Behaviour tests 6a–6d (pack, ten fields, Skeptic
+independence, two gates) are written but **only run on a real campaign** — structure edited is not
+the same as system working. Karl also asked to be reminded about the **Aiera** and **Alpha
+Vantage** MCP connectors.
+
+**Next:** Run one real campaign end to end on the Mac — the 911 Drain storyboard-level rebuild is
+the obvious candidate, and it now fails the gate on record. That is the only thing that proves
+6a–6d.
+
 ## 2026-08-26 — Two sources of truth eliminated; repo is canonical
 
 **Did:** Traced `servicepow-ad-producer` v4.0. It exists nowhere on this machine — four

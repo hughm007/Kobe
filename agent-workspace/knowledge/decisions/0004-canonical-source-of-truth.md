@@ -81,6 +81,12 @@ copy the rule, and it never restates a count.
 
 ## Known gaps at the time of decision
 
+> **All of these were closed the same day by
+> [`0005`](0005-v40-consolidation.md)**, when Karl pasted the real v4.0 file. The RECONSTRUCTED
+> export named below was deleted as superseded; the genuine source is archived verbatim at
+> `agent-workspace/archive/servicepow-ad-producer-v4.0-VERBATIM.md`. This section is kept as the
+> record of what was and was not known when 0004 was decided.
+
 - The v4.0 skill body was **never read**. Its deltas were reconstructed from the Drive claim and
   install ledger — see `tmp/servicepow-ad-producer-v4-export.md`, labelled RECONSTRUCTED.
   **§8B (the check-list text), HB1–14, and the exact wording of checks 32–34 are still missing.**

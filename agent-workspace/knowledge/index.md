@@ -62,7 +62,7 @@ the section below.
 
 | Pattern | Supporting learnings | Confidence |
 |---|---|---|
-| Binary gates outperform judgment scores for creative QA | 1 (checks-beat-prose) | Forming — already codified in the Drive OS's 31 checks, so treat as adopted practice pending local evidence |
+| Binary gates outperform judgment scores for creative QA | 1 (checks-beat-prose) | Forming — already codified as the playbook's blocking-check list, so treat as adopted practice pending local evidence |
 
 ## Promoted to playbooks
 

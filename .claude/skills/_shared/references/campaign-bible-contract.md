@@ -28,7 +28,7 @@ reads. This is what stops fifteen skills reinventing the creative direction.
 | Campaign header, approval status, CONFLICTS resolution | `servicepow-campaign-director` |
 | Ground truth: business, customer, geography, pricing, competitors, proof, objections, buying process, assets, voice-of-customer | `servicepow-client-intelligence` |
 | Offer verdict, positioning, target, awareness level, core message, angle, promise, objection strategy, platform, KPI, CTA | `servicepow-strategy` |
-| Approved creative concept, rejected concepts and why | `servicepow-creative-director` |
+| Approved concept, **the pack's hook variants**, rejected concepts and beaten hooks and why | `servicepow-creative-director` |
 | Creative spine, primary emotion, viewer start/end state, narrative question, payoff, beat map | `servicepow-creative-spine` |
 | Script | `servicepow-script-director` |
 | Shot list, visual/camera language | `servicepow-storyboard-director` |
@@ -39,6 +39,7 @@ reads. This is what stops fifteen skills reinventing the creative direction.
 | Audio language, music direction | `servicepow-audio-director` |
 | Edit logic, cut reasons | `servicepow-cinematography-editor` |
 | QC verdict, scores, hard failures | `servicepow-creative-critic` |
+| Skeptic findings and severities (all three passes) | `servicepow-skeptic` |
 
 ## Read/write rules
 
@@ -57,8 +58,9 @@ reads. This is what stops fifteen skills reinventing the creative direction.
 `DRAFT` → `STRATEGY APPROVED` → `CONCEPT APPROVED` → `STORYBOARD APPROVED` →
 `IN PRODUCTION` → `QC PASSED` → `CLIENT READY` → `DELIVERED`
 
-Spend on generation begins only at `STORYBOARD APPROVED`. `CLIENT READY` requires the critic's
-pass **and** a human having watched it end to end (LB29 — the only semantic gate).
+Spend on generation begins only at `STORYBOARD APPROVED`. `CLIENT READY` requires **both** gates
+— the critic's pass and a clear Skeptic pass 3 — **and** a human having watched it end to end
+(LB29 — the only semantic gate).
 
 ## Minimum viable Bible
 

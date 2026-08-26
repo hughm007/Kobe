@@ -19,6 +19,32 @@ sequence is incoherent.
 
 A shot that cannot answer 1, 3 or 4 is filler. **Cut it or redesign it.**
 
+## The shuffle test — the one-line version of all eight
+
+> **If any two beats could swap places and nobody would notice, the flow is broken.**
+
+Run it on the beat map, on the script and on the assembled cut. It is faster than the eight
+questions and it fails in exactly the same place, which is why it survives as the field test.
+When it fails, **rewrite the connection** — do not reorder and hope.
+
+## Smooth Advert Flow — the law at every stage
+
+Every advert plays as **one connected story**: hook → main message → visual scenes → CTA, with a
+clear beginning, middle and end. Never choppy, disconnected, rushed, confusing, random, robotic,
+or like separate clips placed next to each other. Each stage has its own version of the law:
+
+| Stage | What it means there |
+|---|---|
+| **Script** | The hook leads directly into the main message; every beat sets up the next; the CTA lands as the *obvious next step* of the story |
+| **Generation** | Each scene visually leads into the next — shared subject, direction, location, or cause→effect. **Flow cannot be edited into scenes that do not connect** |
+| **Edit** | Every join must answer the shot before it. Fix order: reorder/trim → B-roll bridge → regen |
+| **QC** | The cold viewer explicitly checks flow — any stitched-together joint or bolted-on CTA gets flagged |
+
+**Pacing is the suspense engine — and it is cutting rhythm, never slow motion.** The proven
+pattern: a near-still opening held slightly too long → accelerating cut lengths (2.0s → 1.4s →
+1.0s → 0.8s) → a rhythm break into one long held beat for the payoff. **The break in rhythm is
+what makes the payoff read as significant.**
+
 ## The failure shape to design against
 
 > COOL AI CLIP → DIFFERENT COOL AI CLIP → DIFFERENT COOL AI CLIP → PRODUCT → CTA

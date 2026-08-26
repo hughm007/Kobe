@@ -83,15 +83,36 @@ fixes a weak proposition; if WEAK, say what would fix it before spending.*
 
 ---
 
-## 3. Creative concept
+## 3. Creative concept and pack
 *Owner: `servicepow-creative-director`.*
 
-**APPROVED CONCEPT:**
+**APPROVED CONCEPT FAMILY:**
 **Why this one:**
-**Ten-companies test result:** *(Would this work for ten unrelated companies with a new logo?
-If yes — too generic, go again.)*
+**ANGLE (one line):**
+**Client's last three angles** *(pasted as evidence — no paste means the angle gate did not run):*
+1.
+2.
+3.
 
-**Rejected concepts and why:** *(kept — the reasoning is the asset)*
+**Anti-Generic Gate — the logo-swap test:** *(Could a competitor run this exact ad changing only
+logo, name and CTA? YES → rework a meaningful element.)*
+
+**Stakes check:** wants · could miss · continues if unsolved · success feels like · why now
+
+### The pack — 3–5 hook variants
+*(One concept family, shared body/payoff/CTA, different opening. A single one-off ad is the
+exception and needs a reason written here.)*
+
+| Variant | Hook mechanism | First frame / action / text / audio | Why this target stops | Expected failure mode |
+|---|---|---|---|---|
+| A (lead) | | | | |
+| B | | | | |
+| C | | | | |
+
+**Hook Tournament:** ___ candidates in → ___ survivors. *(Or the written exemption and its reason.)*
+
+**Rejected concepts and beaten hooks, and why:** *(kept — the reasoning is the asset, and the
+beaten hooks are where the next pack starts)*
 
 ---
 
@@ -201,14 +222,33 @@ real footage + AI / compositing / traditional edit / hybrid
 
 ---
 
-## 13. QC
-*Owner: `servicepow-creative-critic`. Independent evaluation.*
+## 13. QC — gate 1 of 2: the score
+*Owner: `servicepow-creative-critic` (Kobe). Independent evaluation.*
 
 **Verdict:** NOT RUN / HARD FAIL / REVISE / CLIENT READY
-**ServicePow-6 scores:** *(floor 8.0, no axis ≤6)*
+**Card used:** ServicePow-6 (client-facing) / 9-axis rough card *(rough cuts only — may never
+clear a deliverable)*
+**ServicePow-6 scores:** *(reported as `X ± 1.5`, gated on the midpoint, no offset applied)*
+**Lead variant scored in full:**   **Siblings scored on hook / flow / CTA:**
 **AI artifact risk (1–10):**
 **Hard failures found:**
 **Human watched end to end:** ☐ *(LB29 — the only semantic gate)*
+**Human Taste Gate — would Karl be proud to put his name on this?** ☐
+
+---
+
+## 14. Skeptic — gate 2 of 2: the attack
+*Owner: `servicepow-skeptic`. Given the artifact and the brief only — **never** the production
+reasoning. Both gates must pass; a score never argues down a severity.*
+
+| Pass | When | Result | Highest severity |
+|---|---|---|---|
+| 1 — storyboard | before any generation spend | NOT RUN / CLEAR / findings | |
+| 2 — candidate footage | before the edit locks | NOT RUN / CLEAR / findings | |
+| 3 — finished ad | before delivery | NOT RUN / CLEAR / findings | |
+
+**Findings (S3 or S4 blocks):**
+**Re-run after repair:** ☐
 
 ---
 

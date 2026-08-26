@@ -36,7 +36,7 @@ have escaped a HARD FAIL verdict on the two missed items.
 >
 > | Pilot finding | Now enforced as |
 > |---|---|
-> | Gap 1 — legibility duration (my hard failure #13) | **Blocking check 32 — performance gate**, measured in WPM by `servicepow_performance_qc.py`. The recorded failing case *is* this ad's price line at **~242 WPM** |
+> | Gap 1 — legibility duration (my hard failure #13) | **Blocking check 32 — performance gate**, measured in WPM by `servicepow_performance_qc.py`. The recorded failing case *is* this ad's price line at **~242 WPM** — which breaches both the global line ceiling and the tighter ceiling the gate puts on any line carrying the price, offer or CTA. The thresholds themselves are in the playbook; read them there |
 > | Gap 2 — reference citation audit (my hard failure #14) | **Blocking check 34 + LB51**, including the state amendment |
 >
 > The scorecard no longer carries #13/#14 — it points at the playbook. The history below is kept
@@ -80,7 +80,7 @@ Also added to the hard-failure list as #14.
 | 1 | Motion inert | ✅ | motion floor / motion axis |
 | 2 | Dead-space open | ✅ | opening dead-space + hook-inside-2s |
 | 3 | Dissolve-only cuts | ✅ | editing + sequence coherence |
-| 4 | Price line too fast | ✅ | **blocking check 32 — performance gate** (~242 WPM, measured) |
+| 4 | Price line too fast | ✅ | **blocking check 32 — performance gate** (~242 WPM, measured — over both the global ceiling and the price/offer/CTA ceiling) |
 | 5 | Uncited references | ✅ | **blocking check 34 + LB51** state amendment |
 
 **5 of 5. Verdict on v8: HARD FAIL** — motion-floor block, opening dead-space, check 32
@@ -92,6 +92,11 @@ becomes a failure of blocking check 32… The rebuild is storyboard-level, not a
 
 **Regression rule:** v8 must keep failing. If any future scorecard edit lets it pass, the edit is
 wrong.
+
+**Re-confirmed 2026-08-26** against the real v4.0 thresholds (decision 0005). Nothing in the
+verdict moved: the failure is now stated with numbers rather than judgment, which is the whole
+improvement. The one change is procedural — the adversarial half of this pilot now belongs to
+`servicepow-skeptic`, so a re-run exercises **both** gates and v8 must fail each independently.
 
 ---
 

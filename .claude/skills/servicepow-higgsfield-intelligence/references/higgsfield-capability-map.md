@@ -7,7 +7,7 @@ decision depends on a row older than that.
 Status ladder: `DOCUMENTED` (vendor API/docs) < `VENDOR CLAIM` (marketing) <
 `INDEPENDENT TEST` < **`SERVICE POW TEST`** (we ran it — wins for our work).
 
-Last full refresh: **2026-08-25**
+Last full refresh: **2026-08-25** · v4.0's volatile facts folded in **2026-08-26**
 
 ---
 
@@ -81,6 +81,66 @@ off-brand drift; a kit removes the cause. *(Not yet done — 2026-08-25.)*
 | Unspecified crowd vocals generate as gibberish | LB26 | 2026-08-25 | SERVICE POW TEST |
 | "During" state of real work cannot be safely generated | three-state structure | 2026-08-25 | SERVICE POW TEST |
 | Batch-firing premium video burns credits fast | 6 × Seedance 2.5 in 22s = 195 credits, 2026-08-21 | 2026-08-25 | SERVICE POW TEST |
+
+## Moved out of prose — v4.0's volatile facts (imported 2026-08-26)
+
+`servicepow-ad-producer` v4.0 hardcoded these as timeless law inside its operating text. They are
+not timeless: they are model names, credit baselines and thresholds. They live here instead, with
+their dates and their confidence labels intact. **A threshold whose confidence has been stripped
+is a lie**, so the PROVISIONAL and UNVERIFIED labels travel with the number.
+
+### Production Law tool assignments
+
+| Asset type | Named tool at the time | Source | Verified | Status |
+|---|---|---|---|---|
+| People / characters | Soul (character sheet flow) | ad-producer v4.0 | 2026-08-20 | VENDOR CLAIM — re-check before relying |
+| Backgrounds / locations | Cinema Studio location flow | ad-producer v4.0 | 2026-08-20 | VENDOR CLAIM |
+| Objects / props | GPT Image 2 / `nano_banana_pro` | ad-producer v4.0 | 2026-08-20 | VENDOR CLAIM |
+| Brand marks | **The client's real vector/PNG — never generated** | LB24 | 2026-08-20 | SERVICE POW TEST — *durable, not volatile* |
+| Composite / video | "the newest stable Seedance (currently 2.5)" | ad-producer v4.0 | 2026-08-20 | DOCUMENTED |
+
+> **The Production Law itself is durable and stays in the playbook** — characters, backgrounds and
+> objects are built and locked separately, then composited, and a final clip is never generated
+> straight from a text prompt. Only the *tool names* above are volatile.
+>
+> **On any model update: re-verify the locked parameter set on one test clip before a client ad
+> uses it.**
+
+### Credit baselines and stop-loss figures
+
+| Figure | Value | Basis | Verified | Status |
+|---|---|---|---|---|
+| Full two-ad day incl. rebuilds | **1,892 credits** | a single observed day | 2026-08-20 | **PROVISIONAL — n=1** |
+| Owner-flag threshold | **~2,800 credits/day** (baseline × 1.5) | derived from the above | 2026-08-20 | **PROVISIONAL — derived from n=1** |
+| Batch-firing premium video | 6 × Seedance 2.5 in 22s = 195 credits | our transactions | 2026-08-25 | SERVICE POW TEST |
+| Native audio in generation | ≈ **+50–100% credits** — draft silent | ad-producer v4.0 | 2026-08-20 | VENDOR CLAIM |
+| Unlimited pass | Applies **only** to the UNLIMITED-badged entry in the web UI. **MCP/API generations always charge** (LB16) | ad-producer v4.0 | 2026-08-20 | SERVICE POW TEST — *durable* |
+
+> **The stop-loss rule is durable and stays in the craft reference:** two failed regens of the same
+> beat = STOP, because the problem is upstream. Only the credit *numbers* are here.
+
+### Measurement thresholds carrying a confidence label
+
+**This table owns the *confidence*, not the numbers.** The thresholds themselves live in
+`agent-workspace/playbooks/ads/references/measurement.md`, which is what the QC gates read.
+
+| Threshold | Value | Confidence | Verified |
+|---|---|---|---|
+| Motion floor (clip edge travel) | *stated in the measurement reference — not restated here* | **PROVISIONAL — anchored on n=2**, one rejected clip and one accepted one. Tighten when the sample grows | 2026-08-20 |
+| Biomechanical limits (`servicepow_biomech_qc.py` v1.0) | whole threshold set | **PROVISIONAL** — v1.0, thresholds not yet re-derived from a real sample | 2026-08-20 |
+| ASR word-boundary handling (`servicepow_performance_qc.py`) | — | **UNVERIFIED** — no whisper available when it was built, so the ASR path has never been exercised | 2026-08-20 |
+
+> The performance-gate figures behind check 32 are **not** in this table: they are the stated
+> thresholds of a delivered gate, not sample-derived estimates. They stay in the playbook, which
+> owns them.
+
+### Corrections applied on import
+
+| v4.0 said | Reality on 2026-08-26 | What we hold |
+|---|---|---|
+| `virality_predictor` "failed both attempts — not part of the pipeline" (2026-08-17) | **Stale.** The tool is live in the MCP today; its schema was read on 2026-08-25 | Listed above as **advisory only, never a gate**. Re-test warranted before any weight is put on it |
+
+---
 
 ## Stale / needs verification
 

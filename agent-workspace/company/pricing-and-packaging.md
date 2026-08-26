@@ -59,8 +59,8 @@ use unless exclusivity is purchased, stated in the proposal.
 
 - Revisions: **two rounds included**; round three billed. A new direction after approval
   is new work, not a revision — stated in the proposal before it's ever needed.
-- Concept changes after storyboard approval are new work (frame fix = 1 image job;
-  clip fix = 130+ credits; master fix = a rebuild).
+- Concept changes after storyboard approval are new work. The cost ladder is why: fixing a
+  frame is one image job, fixing a clip is a video generation, fixing a master is a rebuild.
 - Discounts: never to win a price objection; reduce scope instead; legitimate discounts
   capped at 15% (prepay, founding-client-for-case-study), always logged with reason.
   Never pay-on-results.

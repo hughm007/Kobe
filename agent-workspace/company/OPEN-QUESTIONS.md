@@ -104,6 +104,6 @@ losing the record of what was decided when.
 | 2026-08-25 | Positioning / ICP / anti-profile | Ingested from 00_MASTER_OS + 22_BIZDEV_PIPELINE — authenticity-over-artificial stance, local service ICP, decline rules | `positioning-and-icp.md` |
 | 2026-08-25 | Pricing model, rate card, floors, discounting | Ingested from 14_PRICING_AND_SCOPE_RULES — floors are hard; remaining terms (payment/media/ownership) → Tier 3 | `pricing-and-packaging.md` |
 | 2026-08-25 | Services beyond web and ads? Engagement shapes? | Web, ads, creative/video production, AI marketing, email, lead-gen, automation; project + retainer + partnership | `services.md` |
-| 2026-08-25 | Approval steps for going live? | Yes — the 31 blocking checks + ServicePow-6 scoring (floor 8.0) from the Drive OS, plus Orion's confirmation gate | `../playbooks/ads/video-production.md`, `../operations/compliance.md` |
+| 2026-08-25 | Approval steps for going live? | Yes — the blocking checks + ServicePow-6 scoring from the video-production playbook (which owns the list and the count), plus Orion's confirmation gate | `../playbooks/ads/video-production.md`, `../operations/compliance.md` |
 | 2026-08-25 | Messaging pillars / how we counter competitors | Authenticity > artificial; checks-not-vibes quality; code-built delivery speed | `positioning-and-icp.md` |
 | 2026-08-25 | Work we explicitly don't do | Fake reviews/testimonials as a customer (FTC), unlicensed-scope claims, fabricated metrics | `operations/compliance.md` → summarized in `company-profile.md` |

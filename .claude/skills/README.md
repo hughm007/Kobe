@@ -16,7 +16,7 @@ campaign-director  ← owns the Campaign Bible, sequences everything, resolves c
       │
       ├─ client-intelligence ──── ground truth + voice of customer (evidence-labelled)
       ├─ strategy ─────────────── offer verdict (hard gate) + angle, ranked
-      ├─ creative-director ────── concepts + ten-companies test
+      ├─ creative-director ────── concept pack + Hook Tournament + Anti-Generic Gate
       ├─ creative-spine ───────── ONE ad, not clips: beat map (anti-choppy authority)
       ├─ script-director ──────── words that survive being spoken
       ├─ storyboard-director ──── shots that each earn their place
@@ -31,8 +31,14 @@ campaign-director  ← owns the Campaign Bible, sequences everything, resolves c
       ├─ cinematography-editor ── every cut states its reason
       ├─ audio-director ───────── audio as story, not music underneath
       │
-      └─ creative-critic ──────── independent, isolated: reasons NOT to ship
+      │
+      └─ THE DUAL GATE — both must pass, never merged
+            ├─ creative-critic ─── Kobe: taste + the ServicePow-6 score
+            └─ skeptic ────────── the adversary, no production reasoning, 3 passes
 ```
+
+**The unit of work is a pack, not an ad** — one concept family × 3–5 genuinely different hooks,
+shared body and payoff. A single one-off ad is the exception and needs a stated reason.
 
 ## Directory
 
@@ -45,7 +51,7 @@ campaign-director  ← owns the Campaign Bible, sequences everything, resolves c
 │   │   ├── anti-choppy.md              the quality unit is the finished ad
 │   │   ├── evidence-and-conflict.md    evidence ladder + conflict protocol
 │   │   └── campaign-bible-contract.md  section ownership, read/write rules
-│   ├── scripts/validate_skills.py      structural validator (15/15 passing)
+│   ├── scripts/validate_skills.py      structural validator (16/16 passing)
 │   └── tests/
 │       ├── trigger-and-composition-tests.md
 │       └── pilot-2am-critic.md         the v8 regression pilot
@@ -63,7 +69,8 @@ campaign-director  ← owns the Campaign Bible, sequences everything, resolves c
 ├── servicepow-brand-fidelity/
 ├── servicepow-cinematography-editor/
 ├── servicepow-audio-director/
-└── servicepow-creative-critic/         + references/scorecard.md
+├── servicepow-creative-critic/         + references/scorecard.md
+└── servicepow-skeptic/                 the independent adversary (Kobe's counterpart)
 ```
 
 ## Where knowledge lives (one home per rule)
@@ -93,5 +100,13 @@ buy."** Learnings climb EXPERIMENTAL → REPEATED → VALIDATED; only VALIDATED 
 python3 .claude/skills/_shared/scripts/validate_skills.py
 ```
 
-Validates frontmatter portability, required sections, reference-path resolution, and that no
-secrets or client facts are baked into permanent skills.
+Validates frontmatter portability, required sections, reference-path resolution, that no secrets
+or client facts are baked into permanent skills, and **LB50 in three forms**:
+
+1. the blocking-check count is declared in exactly one file, and nothing else states a count;
+2. LB1–LB52 and HB1–HB14 are each defined exactly once, in their canonical home — and a
+   distinctive span of every rule's own wording is searched for across the repo, so **citing
+   "LB24" passes and pasting LB24's text anywhere else fails**;
+3. no skill restates a threshold the playbook owns.
+
+All three were proved able to fail before being trusted — a gate that cannot fail is not a gate.

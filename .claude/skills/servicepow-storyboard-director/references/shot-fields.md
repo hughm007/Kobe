@@ -1,66 +1,141 @@
-# Shot field set
+# Shot field set — the ten
 
 > **The storyboard gate is TEN required fields. There is no eleventh.** The gate itself is owned
 > by [`agent-workspace/playbooks/ads/video-production.md`](../../../../agent-workspace/playbooks/ads/video-production.md)
-> (decision 0004) — this file expands what each field must contain, and never restates the count.
-> `Real-ref` has existed since v3.1; the defect was never a missing field but a field that
-> accepted an unverifiable answer, so v4.0 deliberately refused to add another box.
+> (decision 0004) — this file expands what each field must contain.
+>
+> **Why ten and not more.** The owner ordered a real-reference field on 2026-08-20; building it
+> revealed the field *already existed* (`Real-ref`, present since the Real-Reference Law) — and a
+> TripNerd football scene had shipped with players running out of bounds behind the endzone
+> anyway. **The defect was never a missing field. It was a field that accepted an unverifiable
+> answer.** So the fix made the existing field citable and refusable rather than adding a box.
+> An eleventh field would have been SOP bloat papering over an enforcement failure.
+>
+> This file previously carried a 24-field set. That set was exactly the bloat this rule forbids
+> and was retired on 2026-08-26 (decision 0005). Everything it asked for that actually changes a
+> shot survives *inside* one of the ten below.
 
-Every shot in a Service Pow shot list carries these. Blank fields are unfinished work, not
-shorthand — a blank is what lets a filler shot survive into production.
+## The template
 
-## Placement in the story
-| Field | Notes |
-|---|---|
-| **Shot number** | Sequential, stable — referenced by QC, continuity and the production log |
-| **Beat** | Which beat map row this serves. One beat only |
-| **Duration** | Seconds, from the beat's needs — not the model's default |
-| **Purpose** | Why this shot exists at all |
-| **What came before** | The state the viewer is in when it starts |
-| **What this adds** | New information, proof or feeling. If nothing: cut |
-| **What comes next** | Why the following shot follows *this* one |
-| **Contributes** | attention / understanding / proof / emotion / desire / action (≥1) |
+Every shot in a Service Pow storyboard is written out in this form, before any image is generated.
+A blank field is unfinished work, not shorthand — a blank is what lets a filler shot survive into
+production.
 
-## What is in frame
-| Field | Notes |
-|---|---|
-| **Subject** | Who or what |
-| **Action** | What physically happens. Needs an in-world reason (LB31) |
-| **Performance** | Want / feel / think / just happened / looking at / hiding |
-| **Gaze** | Where the eyes go, and when they move |
-| **Body language** | Weight, posture, restraint |
-| **Environment** | Location, time, weather — must match the location bible |
-| **Product** | Which product, orientation, scale |
-| **Props** | Everything else that must be consistent |
+```
+Shot N — [start]–[end]s
+Story job:   [what this beat does for the ad — hook / proof / payoff / CTA]
+Action:      [who does what, hyper-specific — every action passes the In-World Reason Test]
+Camera:      [one named move, position, FOV/shot size]
+Lighting:    [source, direction, level]
+Audio:       [diegetic sound this shot contributes]
+Text:        [on-screen text, if any — always burned in post from real files]
+Source:      [REAL client footage / AI from client still / pure AI + why]
+Real-ref:    [REQUIRED AND CITED — see below]
+Angle:       [REQUIRED — the argument this pack makes for the business]
+Motion:      [REQUIRED — which of the five motion axes, and how it is achieved]
+```
 
-## How it is filmed
-| Field | Notes |
-|---|---|
-| **Shot size** | WS / MS / MCU / CU / ECU |
-| **Camera** | Angle, height, position relative to the 180 line |
-| **Lens feel** | Wide / normal / long — must stay in the campaign's lens family |
-| **Movement** | What moves and why. **Motion axis is mandatory** (check 31) |
-| **Light** | Direction, quality, temperature — matches the lighting bible |
+## What each field must actually contain
 
-## Sound and cut
-| Field | Notes |
-|---|---|
-| **Dialogue** | Exact spoken words, or none |
-| **Audio** | Room tone, foley, effects, music state |
-| **Transition** | How we leave, and the cut's reason |
+### 1. Story job
+Hook, proof, payoff or CTA. One of them, not two. A shot whose story job is "looks good" has no
+story job and does not survive the board. This is the field the In-World Reason Test and the
+beautiful-filler problem both resolve against.
 
-## Production
-| Field | Notes |
-|---|---|
-| **Reference** | Cited and openable (**LB51**). "I looked" is not evidence. **State amendment:** where the shot depicts a state — broken/working, before/after, dirty/clean — carry a **BEFORE** source + observable markers, an **AFTER** source + observable markers, and **THE DIFFERENCE** the viewer must see, in one line. If that line cannot be written, the pair proves nothing |
-| **Model requirement** | The *requirement*, not the model — production routes it |
-| **Method flag** | generate / reference-driven / real footage / composite / hybrid |
-| **Continuity notes** | What must match which other shots |
+### 2. Action
+Hyper-specific: who does what, with which hand, to what object, in what order. **Every action must
+pass the In-World Reason Test** — if the honest answer to "why is he doing that?" is "to show the
+viewer the logo / app / product", the action is fake and the shot fails. (Rejected on record: a man
+spinning in circles to display a lanyard; a woman in a crowd holding her phone's home screen up to
+camera.) The one exception is direct-address UGC, where talking to camera *is* the format.
 
-## Standing flags
+### 3. Camera
+**One** named move, plus position and FOV/shot size. Not a list of moves — a named one. "Slow push
+in, eye level, 35mm equivalent, medium" is a camera. "Dynamic cinematic movement" is not.
 
-- **Composite required** wherever a logo, wordmark, packaging text, UI or legal copy appears (LB24)
-- **Real footage required** for the "during" state in trades work. The viewer of a trades ad is a domain expert in the exact moment depicted — real jobsite footage beats any generated pair, and it is free
-- **`NO REFERENCE FOUND — HIGH RISK`** applies **per state**, surfaced to Karl by name with the scene named and the help needed stated
-- **Safe area** — burned text inside 15–70% of frame height
-- **No opening dead-space** — the first frame works from frame one
+### 4. Lighting
+Source, direction, level. Named practicals where they exist in the world of the shot. This field is
+what keeps a grade family consistent across shots that were generated hours apart.
+
+### 5. Audio
+The diegetic sound *this shot contributes* — not the music, not the VO. What the room actually
+sounds like. The Sound Spine assembles these; this field supplies them.
+
+### 6. Text
+On-screen text if any. **Always burned in post from real files** — never generated inside the
+image or clip. Generated text is the single most reliable synthetic tell, and it is unfixable
+after the fact.
+
+### 7. Source
+`REAL client footage` / `AI from client still` / `pure AI + why`. Real-Media-First means the third
+option needs a stated reason, every time. This field is also what makes the media ask concrete:
+the shots marked `pure AI + why` are the list of footage to request from the client.
+
+### 8. Real-ref — the field with teeth
+**Required and cited.** A real-world source someone can **open** — a link, a title, or named client
+media — plus **the specific observed behaviors this shot copies**: what hands do, where phones
+point, how people stand, what they ignore.
+
+- **"I looked" is not evidence. The citation is.**
+- Applies to **every** scene with a findable reference — not just trades. Sport, hospitality,
+  travel, retail, any domain with rules a viewer knows.
+- Claude often cannot stream video. Photos, video stills, image-search results and detailed written
+  accounts of the real event are all valid evidence. An unreferenced claim ("real fans do X") is not.
+- If no reference exists, write **exactly**:
+  `NO REFERENCE FOUND — HIGH RISK — <scene> — <what would help>` and surface it to Karl.
+  **Claude never accepts that entry alone.**
+- It binds the **keyframe** as well as the motion. The endzone error existed in the still.
+- **Exemption:** a deliberately unreal "impossible shot" concept beat skips the lookup, but still
+  passes the In-World Reason Test and still needs owner approval at storyboard.
+
+**State amendment (owner-ordered, 2026-08-26):** where the scene depends on a jurisdiction — a
+license class, a code requirement, a road rule, a sign — the reference must be for **that state**,
+not a generic national one.
+
+### 9. Angle
+The argument this pack makes for the business: speed-of-response, price transparency, the people
+behind it, proof, risk removal. **Same on every shot in a pack**, and it **must differ from this
+client's previous deliverable** (the Angle Rotation Law). Declaring it here is what makes rotation
+enforceable at the point where changing it is still free.
+
+### 10. Motion
+Which of the **five motion axes** this shot uses — camera translation · subject travel through
+depth · foreground occlusion event · focus change · light change — **and how it is achieved**.
+Hero beats name **two**.
+
+> "The camera is locked and the subject talks" is not an axis. That shot goes back to the board.
+
+This is the only field that forces the director to design movement *before* the QC gate can report
+its absence, and it costs nothing at the storyboard stage. It was added after a whole pack shipped
+with no movement in any shot.
+
+## Companion artifacts (timeline-level, not per-shot)
+
+These are not fields — they sit alongside the shot list and are required at the same gate.
+
+- **Feeling Spec** — for every meaningful ad: at each beat, the specific feeling **and its
+  observable on-screen cause**. *An emotion with no cause is a wish.* Specific states only —
+  "relief", "anticipation", "recognition" — never bare "engaged" or "excited". Causes come from
+  event, framing, cut rhythm, audio and small real behavior. The arc must make the CTA the
+  emotionally obvious next step.
+- **Sound Spine** — where sound is meaningful: the full timeline as TIME · diegetic · music · SFX ·
+  VO · silence · transitions · **emotional purpose**, plus where energy rises, drops and lands the
+  CTA. Most placements autoplay muted, so the sonic hook is a bonus layer, never load-bearing.
+
+## Also decided at the board, not later
+
+- **Total ÷ shot count ≥ 1.3s** — the average-shot-length floor.
+- **Shot-Length Law:** pure-AI shots hold the screen **≤5s by default** (openers/action 2–4s, faces
+  2–5s). The one exception is a static-subject environment shot with no visible people, which may
+  hold to **7s**. Synthetic tells — breathing regularity, eye tracking — surface around 8s.
+  Generate 6–8s takes for the edit room, but cut before the tell window.
+- **Hero beats identified and marked** for the 3-draft rule.
+- The storyboard **is the Master Timeline seed**: clip order, story jobs, audio spine, and the
+  continuity locks at each joint.
+
+## Known gap
+
+The five motion axes have a dedicated reference in the ad-producer source tree
+(`SHOT_MOTION_AND_STAGING`) that has never been pasted into this repo. Until it is, the axis
+definitions above are the whole of what we hold — name the axis and the method, and do not assume
+a deeper taxonomy exists here.
