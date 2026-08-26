@@ -101,7 +101,11 @@ Camera:      locked CU on the basin, slight natural breathing; tap handle and wa
 Lighting:    warm kitchen practicals, evening state (F19) — identical in every kitchen shot
 Audio:       tap run + rising gurgle; after shutoff, the slow glug of the drawdown (the tell)
 Text:        "Backed up? Stop the water." (0.0–1.2, 42%) → "Who do you let in?"
-             (1.2–2.5, 5 words — F7; exits AT the S2 cut)
+             (1.2–2.5 — exits AT the S2 cut). **⚠ CONFLICT-PENDING (round-4 F2/F6):** "Stop
+             the water." is generic safety advice, not a substantiatable marketing claim — but
+             the strict claims-rule reading flags any non-question outside the three claims,
+             and 5 words / 1.2s is under muted reading speed anyway. Karl rules: keep with
+             named acceptance, or simplify card 1 to "Backed up?" (cures both findings)
 Source:      PRACTICAL SHOOT — rag wedged in the trap side (partial block), tap running, one
              real hand. NO generation path. If impossible: re-board + fresh Pass 1
 Real-ref:    CITED — https://www.zoomdrain.com/blog/2026/march/what-to-do-when-your-basement-floor-drain-is-bac/
@@ -117,7 +121,7 @@ Motion:      TWO AXES (hero): subject travel through depth (water climbing) + fo
 Shot B1 — 0.0–2.5s   [VARIANT B HOOK — PRACTICAL, re-scenarioed (F3)]
 Story job:   hook — dread with the source on screen: the fixture is overflowing NOW; comparing
              options is a luxury the water isn't giving you
-Action:      macro at counter level: the sink's far basin OVERFLOWS AT THE RIM — a thin cascade
+Action:      macro at counter level: THE SAME BASIN A1 USES (round-4 F14: one basin across all variants — the problem basin IS the payoff basin) OVERFLOWS AT THE RIM — a thin cascade
              over the edge with individual drips, the running tap visible in the upper frame
              (the source is on screen; fixture-scoped, nothing autonomous); water sheets toward
              the counter edge
@@ -149,8 +153,9 @@ Camera:      ECU over-shoulder on the SEARCH INPUT FIELD ONLY — framed so no R
              (moiré/banding kills UI shots at feed size)
 Lighting:    phone screen as key in the evening kitchen; one warm practical behind
 Audio:       six soft key taps (the sonic hook), room tone
-Text:        "Who are you letting in?" (0.2–2.5, 42% — F2: a pure question, zero claims; the
-             six-digit typing visual carries the code idea)
+Text:        "Look them up first." (0.2–2.5, 42% — round-4 F9: differentiated from variant
+             A's question so the A/C hook test is interpretable; a claim-2 imperative that
+             passes the claims rule under both readings; the typing visual carries the code)
 Source:      REAL — a real person performing the search on a real phone, filmed; the input
              field is the live public page in camera (no composite anywhere — see S2). NO
              generation path
@@ -180,20 +185,30 @@ Action:      the typed number completes; the result row loads on the filmed phon
              page never renders (F6)**
 Camera:      opens on the FULL phone-in-hand frame (legible cold for A/B — they arrive from a
              sink with no phone context), continuing C's action seamlessly; then the locked ECU
-             insert for the row. METHOD (round-3 forced change): **no composite anywhere** —
-             the real live public page is filmed in camera, twice (plate + insert), one filmed
-             world; the key-light interplay is real because everything is
+             insert. METHOD: **no composite anywhere** — the real live page filmed in camera,
+             twice (plate + insert), one filmed world. **PLATE FRAMING SPEC (round-4 F4):** the
+             page is scrolled so the site header/seal sits OFF-VIEWPORT above the fold before
+             the plate rolls; at plate distance the visible content is the search field +
+             result row only — "no identity in frame" means no seal, no site wordmark, no
+             header art resolvable at delivery resolution
 Lighting:    phone screen as key, warm practical behind — evening state
 Audio:       one confirm tap; room tone; no gurgle here — this beat is already calmer
-Text:        caption "Any licensed Arizona contractor is publicly checkable — state registrar."
-             (58%, onset 3.2s — F2: strictly registered claim 2) + persistent badge begins:
-             "ROC 366870" (65%, through S5 — F14: one string everywhere)
+Text:        caption "Every licensed AZ contractor is publicly checkable." (58%, onset 3.2s,
+             **exits at the S3 cut, 6.0s** — round-4 F11: exit specified, 7 words / 2.8s) +
+             persistent badge begins: "ROC 366870" (65%, through S5, **on a 40%-black backing
+             chip** — round-4 F12: one contrast treatment across screen-bright, dusk and
+             under-sink frames)
 Source:      REAL — the actual public result for 366870, live on the phone, filmed. Nothing
              composited, nothing generated. FRAME RULE (F15 rewording): no ROC branding, seal,
              or identity imagery in any frame of the ad; **the result-row insert is the single
              sanctioned exception**, framed to exclude the legal-name field and scope text.
-             Capture-day gate: mock the insert framing from a real capture BEFORE the shoot
-             day locks
+             CAPTURE-DAY GATE (extended, round-4): the mock from a real capture must prove
+             (a) insert crop geometry — the row fills ≥60% width **with the name field
+             INCLUDED** (round-4 F7: the name is verified matching; showing it is the
+             strongest proof and deletes the "why did they hide the name" attack) and scope
+             text excluded; (b) the PLATE framing per the spec above; (c) moiré/refresh/
+             legibility on the actual phone (covers C1 too). The shoot day does not lock
+             until the mock passes
 Real-ref:    CITED — https://roc.az.gov/contractor-search + consumer guide PDF +
              https://azroc.my.site.com/AZRoc/s/contractor-search. The recording is the reference
 Angle:       risk removal — verify before you trust
@@ -225,11 +240,14 @@ Story job:   proof — what verified looks like at your front door
 Action:      HOMEOWNER-POV: the camera IS the homeowner, just inside the front door at DUSK; a
              real hand pulls the door open — the door edge wipes the frame; beyond the
              threshold, a REAL STAND-IN (any adult, plain dark work shirt, tool bag in left
-             hand) stands ~5 ft back on the porch under the porch light, body angled
-             three-quarter away, face turned toward the street and never readable; the real
-             badge worn on the chest IF the physical badge exists — otherwise no badge, and
-             stance + the wait carry it; he does not move toward the door; the shot holds one
-             full beat on the wait. No dialogue. Van out of frame.
+             stands ~5 ft back on the porch under the porch light; AS THE DOOR OPENS he
+             makes a natural HALF-TURN toward it — acknowledging the door like a human being
+             (round-4 F5: nobody keeps studying the street after the door they rang opens) —
+             while porch-light shadow and blocking keep the face unreadable through the turn;
+             the real badge worn IF the physical badge exists, else none; he does not step
+             toward the door; the shot holds one beat on the wait after the turn. No dialogue.
+             Van out of frame. PRE-LOCK GATE: a cold-read test on unbriefed viewers (the beat
+             must read "verified professional waiting" — not menace, not nothing).
 Camera:      locked POV at eye height; at most a 2% post move
 Lighting:    porch light warm against evening blue; dim warm hallway edge in the frame border
 Audio:       door latch, evening street/cricket tone. NO spoken word — the wait is the shot
@@ -260,14 +278,18 @@ Camera:      locked with slight breathing; drum edge in frame (the tool is real 
              identifiable); angle per the frame chosen above
 Lighting:    one hard work light from the left — honest, unglamorous
 Audio:       drum ratchet; then water beginning to give — the first "right" water sound
-Text:        "Licensed. On the job." (42%)
+Text:        "Licensed. Look us up." (42% — round-4 F3: claim 1 + a claim-2 imperative; passes the claims rule under both its readings)
 Source:      REAL CLIENT FOOTAGE REQUIRED — the "during" state is never generated. Media ask
              to Will's crew (PARKED until Karl re-opens it): phone rig, one job, ~30s usable,
              interior residential fixture; **one-page shot card attached** (frame options a/b
              above, angle tolerance ±20°, light on the work, ≥10s continuous per take,
-             **no visible waste matter** — a platform shocking-content exposure and an
-             anti-payoff). **Capture-first scheduling: the controlled shoot afternoon is not
-             booked until this window has product.** CONTINGENCY RE-GATE: if no usable footage
+             **no visible waste matter**). **ACCEPTANCE CHECKLIST (round-4 F8), judged by
+             KARL by name, committed before the window opens:** cable + drum legible · exposure
+             floor met · angle inside ±20° of a spec frame · ≥10s continuous · no waste
+             matter — marginal footage is rejected against this list, never sunk-cost
+             accepted. **Grade plan:** cool phone footage graded toward the warm practical
+             world; tested on the first capture. **Capture-first scheduling: the controlled
+             shoot afternoon is not booked until this window has product.** CONTINGENCY RE-GATE: if no usable footage
              lands, an aftermath-only redesign is NOT pre-approved — the changed board returns
              to a fresh Pass 1
 Real-ref:    CITED — https://www.thisoldhouse.com/bathrooms/how-to-snake-a-clogged-drain +
@@ -286,8 +308,10 @@ Shot S5 — 11.5–14.0s   [payoff — PRACTICAL, redesigned (F2/F14)]
 Story job:   payoff — control regained; the water is back to doing quiet, ordinary work
 Action:      from behind at counter height: PRIMARY FOREGROUND ACTION — water running freely
              down the now-clear drain (the same basin from A1). The homeowner fills a glass at
-             the tap and, without hurry, WATERS THE SMALL WINDOWSILL PLANT (no drinking — F14);
-             shoulders drop ~2 cm on one exhale as the pour lands
+             the tap, SHUTS THE TAP (round-4 F13: no water left running in a drought-conscious
+             market — and it mirrors A1's shutoff gesture), and without hurry WATERS THE SMALL
+             WINDOWSILL PLANT (no drinking); shoulders drop ~2 cm on one exhale as the pour
+             lands
 Camera:      MCU from behind / three-quarter, static; face never visible; the drain corner
              holds the deepest-focus plane (it is the proof)
 Lighting:    same warm kitchen practicals, evening state (F19)

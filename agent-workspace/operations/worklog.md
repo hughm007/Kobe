@@ -34,6 +34,38 @@ beat a page that isn't.
 
 ---
 
+## 2026-08-26 — Rounds 3–4: the loop finds its floor and stops itself
+
+**Did:** Karl took the round-3 escalation: **F4 name check CONFIRMED** ("911 Drain LLC", exact
+match, owner eyeball) — the regulatory-name risk is closed; status/complaint rows still need his
+one look (research from this environment exhausted — gov sites egress-blocked, no cached copy
+anywhere). Will parked by his choice, so **Revision 3 closed F2 without a signature** via the
+round-3 verdict's own alternative: every line now sits inside the three registered claims or
+asks a question; the S2 composite was eliminated entirely (live page filmed twice — plate +
+locked ECU insert); S4 re-boarded to real trade practice. **Round 4 still blocked (5 × S3) —
+but three of the five were lines round 3 had passed as CLEAN** (the brand guide's own mandated
+tagline among them), flagged only because the round-4 brief hardened the claims rule. That is
+non-convergence, so the **unilateral iteration loop is stopped** per the convergence rule. The
+two real round-4 findings were applied (S2 plate-framing spec + extended capture-day mock,
+including the name field now INCLUDED in the insert since it is verified matching; the arrival
+stand-in now half-turns toward the opening door — behavioral truth over blocking dogma), plus
+the F8–F15 sweep. The tagline-vs-claims authority question is now a formal **## CONFLICTS entry
+for Karl**, with a resolution that satisfies both authorities (logo-lockup-only endcard).
+
+**Decided:** Stop iterating without new inputs. The board re-gates through a fresh Pass 1 only
+after Karl's conflict ruling — bundled with the real-world gates it needs anyway (cold-read
+test, capture-day mock, status-row look).
+
+**Learned:** (production log) An adversarial gate's rule phrasing is itself an input — harden a
+rule in the brief and the gate faithfully flags compliant work. Hand the gate the canonical rule
+text, never a paraphrase.
+
+**Open:** Karl — conflict ruling (tagline + "Stop the water."), the status/complaints look, two
+recorded design decisions (earlier/persistent number; wordmark pre-endcard), then Will's parked
+items. After those: fresh Pass 1 → storyboard sign-off → the practical shoot afternoon.
+
+**Next:** Karl's rulings. Nothing else moves the campaign; everything else is done on paper.
+
 ## 2026-08-26 — Phase 2: three Skeptic rounds drive the pack all-practical; the QC harness exists again
 
 **Did:** Karl approved all four parked decisions (strategy, pack, revision pass, QC rebuild).

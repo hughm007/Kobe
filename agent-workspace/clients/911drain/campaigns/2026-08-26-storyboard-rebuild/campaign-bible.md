@@ -41,15 +41,20 @@ variant A) · revision pass AUTHORIZED · QC-harness rebuild AUTHORIZED. Status 
 |---|---|---|---|
 | 1 | Storyboard sign-off + budget → unlocks Gate 1.5 — only after the revised board clears a **fresh Skeptic Pass 1** | Karl | §6, `shotlist.md`, §10 |
 | 2 | **Live ROC record check — HALF DONE:** name **CONFIRMED "911 Drain LLC", exact match** (Owner, 2026-08-26). Remaining: status ACTIVE? · complaint rows? · scope-text? — one look at the same result row (or the screenshot). Blocks spend, not board work | Karl | `shotlist.md` S2 capture script |
-| 3 | AIGC labeling posture signature (recommendation drafted) | Karl | Decision log |
-| 4 | Claims sheet signature (9 items + fee question) | Will | client brief |
-| 5 | S4 media ask — real "during" footage, one job, phone rig | Will's crew | `shotlist.md` S4 |
+| 3 | **CONFLICT ruling: the 24/7 tagline + "Stop the water."** (recommendation: logo-lockup-only endcard; keep or simplify A1 card 1) | Karl | ## CONFLICTS |
+| 4 | Two recorded design decisions: earlier/persistent phone number (round-4 F10)? · pair the real wordmark with the badge pre-endcard (F20)? | Karl | §14 round-4 row |
+| 5 | AIGC labeling posture signature (moot on a zero-generation board; stays drafted) | Karl | Decision log |
+| 6 | Claims sheet signature (9 items + fee question — "24/7 availability" proposed as item 1) | Will | client brief |
+| 7 | S4 media ask — real "during" footage, one job, phone rig, shot card + acceptance checklist | Will's crew | `shotlist.md` S4 |
 
 **Gate history:** Pass-1 rounds (2026-08-26): round 1 BLOCK 7×S3 → round 2 BLOCK 3×S3 →
-round 3 BLOCK 5 items → **Revision 3 applied (F2 closed by registered-claim copy replacement;
-F4 name half CONFIRMED by owner; composite eliminated; S4 re-boarded)** → round 4 pending.
-Kobe = CANNOT ASSESS (§13, unchanged — nothing to watch yet). The board re-gates through the
-fresh round-4 Pass 1 before it can be signed.
+round 3 BLOCK 5 → round 4 BLOCK 5×S3 — of which 3 are a **rules-authority conflict** (see
+## CONFLICTS) and 2 were **fixed on the board** (S2 plate spec + extended mock; S3 half-turn
+restage + cold-read gate). **The unilateral iteration loop is STOPPED** (findings stopped
+converging: round 4 flagged lines round 3 passed as clean). The board re-gates through a fresh
+Pass 1 only after Karl rules on the conflict — bundled with the real-world gates it needs
+anyway (cold-read test, capture-day mock, status-row look). Kobe = CANNOT ASSESS (§13,
+unchanged — nothing to watch yet).
 
 Surfaced by name (LB51 — never accepted silently): shot S5's **generation fallback** carries a
 `NO REFERENCE FOUND — HIGH RISK` entry (its primary path is now a practical shoot, which needs
@@ -468,6 +473,7 @@ reasoning. Both gates must pass; a score never argues down a severity.*
 | 1 — storyboard, **round 1** (first board) | pre-spend | **BLOCK** — 7 × S3 (generated-badge contradiction, unregistered "Local.", 24/7-vs-daylight, EXTREME arrival shot, unverified ROC record, ungated S4 contingency, AIGC posture) | S3 × 7 |
 | 1 — storyboard, **round 2** (Revision 1) | pre-spend | **BLOCK** — 3 × S3 (one generated figure still HIGH on the trust beat; a standing HIGH generation fallback; B1's floor water depicting the banned scope). Verdict text: *"close to a zero-generation board"* → Revision 2 took it there | S3 × 3 |
 | 1 — storyboard, **round 3** (Revision 2, all-practical) | pre-spend | **BLOCK** — 5 blocking items, composition changed: **2 human-owned dependencies** (F4 live-record check → Karl; F2 line-item registration of two load-bearing copy lines → Karl/Will), 3 board/proof items (F1/F6 C1-vs-crop-rule reconciliation; F3 S4 frame vs real trade practice; S2 composite proof or in-camera redesign). **No new copy violations; all-practical posture, real-or-absent badge, honest water references and the 7-day recapture rule called correct.** Plus F5–F9/F12 (S2-class) and F13–F17 (S1) for the next board revision | S3 × 5 |
+| 1 — storyboard, **round 4** (Revision 3) | pre-spend | **BLOCK — 5 × S3, but three of them (F1 the mandated logo tagline; F2 "Stop the water."; F3 "On the job.") are lines round 3 explicitly passed as CLEAN — flagged only because the round-4 brief hardened the claims rule to "every line is a registered claim or a question." That exposed a genuine authority conflict (brand guide vs claims discipline) now raised in ## CONFLICTS for Karl, and the findings have stopped converging — the iteration loop is STOPPED per the convergence rule.** The two real fixes (F4 plate-framing spec + extended capture mock; F5 arrival half-turn restage + cold-read gate) are applied, along with the F7–F15 sweep (name field INCLUDED in the insert — it is verified matching; S4 acceptance checklist judged by Karl; C card differentiated; caption trimmed with a stated exit; badge backing chip; tap shut in S5; one basin across variants). Round 4's own close: *"The board fails on its own stated rules, not on taste"* — water physics validated under the professional lens, practical posture validated, safe-area and banned-word compliance clean | S3 × 5 (3 conflict-class, 2 fixed) |
 | 2 — candidate footage | before the edit locks | NOT RUN — no footage exists | |
 | 3 — finished ad | before delivery | NOT RUN — no ad exists | |
 
@@ -524,7 +530,23 @@ rescuing; the board needs the seven S3s closed."*
 ## CONFLICTS
 *Append-only. Raised by any skill, resolved only by `servicepow-campaign-director`.*
 
-<!-- none raised yet -->
+### CONFLICT 2026-08-26 · raised by servicepow-skeptic (Pass 1 round 4) · status: OPEN — KARL RULES
+**Approved decision:** the brand guide mandates the logo tagline "24/7 EMERGENCY DRAIN REPAIR"
+on every new asset (tagline-drift rule), and the endcard carries it.
+**Problem:** the claims discipline (claims sheet UNSIGNED) reads "24/7" as an unregistered
+availability claim — one missed 3 AM call is a competitor's screenshot. The same strict reading
+flags A1's "Stop the water." (safety advice, not a marketing claim) as a non-question outside
+the three registered claims.
+**Evidence:** round-4 findings F1/F2; round 3 had passed both lines as clean — the flag appears
+only under the hardened rule phrasing, which is why this is an authority question, not a defect.
+**Proposed change (recommendation):** (a) endcard burns ONLY the real logo lockup file — its
+tagline art enters as a brand mark, not ad copy, satisfying both authorities; the separately
+burned tagline text line is dropped. (b) A1 card 1 keeps "Backed up? Stop the water." with
+Karl's named acceptance that safety advice is not a substantiatable-claim class — or simplifies
+to "Backed up?", which also cures the 1.2s readability finding. (c) When Will signs the claims
+sheet, "24/7 availability" goes on it as item 1, retiring this conflict permanently.
+**Cost of not changing:** the board cannot clear a Pass 1 that applies the strict reading, and
+the tagline stays a reportable-claim exposure until the sheet is signed.
 
 ## Decision log
 | Date | Decision | By | Why |

@@ -6,7 +6,7 @@ owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, script, revision-3]
+tags: [campaign, script, revision-3b]
 ---
 
 # Script — "Look Us Up" pack (3 variants × 17.0s, 9:16) — REVISION 3
@@ -26,9 +26,9 @@ bonus layer. **Claim-free** — no price, no speed promise, no guarantee, no "se
 | Time | Shot | Burned text (muted carrier) | VO (sound-on bonus) | Diegetic audio |
 |---|---|---|---|---|
 | 0.0–2.5 | Hook (A/B/C) | per variant, below | — | per variant |
-| 2.5–6.0 | S2 verify | "Any licensed Arizona contractor is publicly checkable — state registrar." (onset 3.2s) + persistent badge from here through S5: "ROC 366870" | "Before you let anyone in — check them." | six key taps, one confirm tap, room tone |
+| 2.5–6.0 | S2 verify | "Every licensed AZ contractor is publicly checkable." (onset 3.2s, exits 6.0s) + persistent badge (black backing chip) through S5: "ROC 366870" | "Before you let anyone in — check them." | six key taps, one confirm tap, room tone |
 | 6.0–9.0 | S3 arrival | none — the wait is the shot | **none (F11)** | door latch, evening street tone; no dialogue |
-| 9.0–11.5 | S4 work | "Licensed. On the job." | — (the ratchet is the line) | auger drum ratchet, water starting to give |
+| 9.0–11.5 | S4 work | "Licensed. Look us up." (round-4 F3) | — (the ratchet is the line) | auger drum ratchet, water starting to give |
 | 11.5–14.0 | S5 payoff | "Licensed. Verifiable." | "911 Drain." (11.5–13.4); CTA line J-cuts in at 13.5 | tap opens, the pour, room tone resolving |
 | 14.0–17.0 | S6 endcard | "480-992-3541" (large) · "ROC 366870 — look us up." · "24/7 EMERGENCY DRAIN REPAIR" | "…the number's on your screen — look us up." (**ends by 16.6 — F17**) | bed resolves to one low note, then silence + 0.4s clean tail |
 
@@ -37,8 +37,8 @@ bonus layer. **Claim-free** — no price, no speed promise, no guarantee, no "se
 - **A:** "Backed up? Stop the water." (0.0–1.2) → "Who do you let in?" (1.2–2.5, 5 words —
   F7; exits at the S2 cut)
 - **B:** "Still comparing plumbers?" (0.4–2.5 — a question, not a claim)
-- **C:** "Who are you letting in?" (0.2–2.5 — F2: a pure question; the typing visual carries
-  the code idea)
+- **C:** "Look them up first." (0.2–2.5 — round-4 F9: differentiated from A's question; a
+  claim-2 imperative; the typing visual carries the code idea)
 
 ## Pace arithmetic — design check, now machine-verifiable
 
@@ -65,10 +65,10 @@ and the VO directs eyes to it. Flagged for Karl at the storyboard gate.
 | A card 1 "Backed up? Stop the water." | 5 | 1.2s | ≥1s | ✓ |
 | A card 2 "Who do you let in?" | 5 | 1.3s + exits at the cut | ≥1s | ✓ |
 | B line "Still comparing plumbers?" | 3 | 2.1s | ≥1s | ✓ |
-| C line "Who are you letting in?" | 5 | 2.3s | ≥1s | ✓ |
-| S2 caption | 9 | 2.8s (onset 3.2s) | ≥1s | ✓ |
+| C line "Look them up first." | 4 | 2.3s | ≥1s | ✓ |
+| S2 caption | 7 | 2.8s (onset 3.2s, exits 6.0s) | ≥1s | ✓ |
 | "ROC 366870" badge | 2 | 14.5s persistent (S2→S5, F13 fixed) | ≥2s license number | ✓ |
-| S4 line | 4 | 2.5s | ≥1s | ✓ |
+| S4 line "Licensed. Look us up." | 4 | 2.5s | ≥1s | ✓ |
 | S5 line | 2 | 2.5s | ≥1s | ✓ |
 | Phone number | 1 string | 3.0s | ≥2s phone number | ✓ |
 

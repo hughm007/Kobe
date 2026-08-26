@@ -55,6 +55,19 @@ Escalated to the owner after round 3 (the one authorized repair round used). No 
 violations; the round's clean-checks list grew substantially — the findings are converging on
 execution feasibility, which is exactly where a pre-spend gate should end up.
 
+## Round 4 (5 blocking) — and the stop
+
+Three of the five blockers were lines round 3 had explicitly passed as clean (the mandated logo
+tagline among them) — flagged only after the briefing hardened the claims rule. That is
+non-convergence: the oscillation was coming from the brief's rule phrasing, not the board. Loop
+stopped; the tagline-vs-claims authority question went to the Bible's CONFLICTS for the owner.
+The two real findings (S2 plate-framing spec + extended capture mock; the arrival stand-in must
+acknowledge the door opening — behavioral truth beats blocking dogma) were applied on the board.
+
+**Reusable lesson (EXPERIMENTAL):** an adversarial gate's rule phrasing is itself an input —
+harden a rule in the brief and the gate will faithfully flag compliant work. Keep the claims
+rule stated once, canonically, and hand the gate THAT text, not a paraphrase.
+
 ## Reusable lessons (EXPERIMENTAL — promote after repetition)
 
 - **"No client footage" justifies AI only for shots that need the CLIENT.** Brand-free domestic
