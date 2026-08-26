@@ -1,17 +1,17 @@
 ---
-title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 16"
+title: "911 Drain — Storyboard Rebuild — Shotlist (ten fields) — REVISION 17"
 type: report
 client: 911drain
 owner: Karl
 status: draft
 created: 2026-08-26
 updated: 2026-08-26
-tags: [campaign, storyboard, shotlist, revision-16, all-practical]
+tags: [campaign, storyboard, shotlist, revision-17, all-practical]
 ---
 
-# Shotlist — "Look Us Up" pack — REVISION 16 (ALL-PRACTICAL) — the CONTROL cut
+# Shotlist — "Look Us Up" pack — REVISION 17 (ALL-PRACTICAL) — the CONTROL cut
 
-**Current state (Revision 16, 2026-08-26 — this intro narrates NOW; the problem/solution-first CHALLENGER cut of these same assets lives in `challenger-board.md` (V2), per the Owner's read #2 — the market decides between the two):**
+**Current state (Revision 17, 2026-08-26 — this intro narrates NOW; the problem/solution-first CHALLENGER cut of these same assets lives in `challenger-board.md` (V2), per the Owner's read #2 — the market decides between the two):**
 an all-practical, zero-generation 8-shot board; every burned and VO line inside its AUDITED
 CLASS (round-12 F12-2 — the taxonomy stated honestly): a registered claim · a question ·
 frame-narration (a statement about the visible frame, with recorded fallbacks) · or
@@ -19,6 +19,12 @@ Owner-accepted safety advice; the F4 record check **FULLY CLOSED** ("911 Drain L
 match · status ACTIVE · zero complaint rows — Owner-verified, 2026-08-26); the S2 proof shot
 filmed in camera only (composite eliminated in Revision 3, harmonized rounds 6–7); revision
 history in the changelogs below, verdict history in Bible §14.
+
+## Revision 17 changelog (signature-only — no copy or timing change)
+
+| Ruling | Change |
+|---|---|
+| **D-1 SIGNED** — Karl (Wyatt), in-session, 2026-08-26 | The plumber-for-contractor audience-language mapping is ACCEPTED on BOTH cuts, with the registrar context read; the pre-computed contractor fallback stays recorded as history. **Round 15 — the Owner-chosen final verification round — gates the two-board package before his sign-off** |
 
 ## Revision 16 changelog (round-14 finding → change; round 14 = **CONDITIONAL PASS on both artifacts, zero S3/S4**)
 
@@ -771,7 +777,9 @@ Motion:      light change (logo fade-in + red pulse) + micro scale drift
   mapping is a judgment call, and judgment calls are signed, not assumed. Accept the
   audience language, or DECLINE to the pre-computed shared fallback (round-14 R14-C1,
   swept for both windows): **"Contractor licenses are public — state registrar."** (49 ch —
-  control 12.3 cps ✓ · challenger 16.3 cps ✓). Karl ______ ☐
+  control 12.3 cps ✓ · challenger 16.3 cps ✓).
+  **ACCEPTED — Karl (Wyatt), in-session, 2026-08-26, with the registrar-context read: the
+  plumber wording stands on BOTH cuts** ☑ (the fallback stays recorded as history)
 - **PRE-EDIT-LOCK CHECKS:** (1) the S6 logo lockup FILE is verified to be the version
   WITHOUT the wrap's "& SEWER" line — checked against the actual file, not the intention
   (R7-F8) ☐ · (2) **the burned phone string 480-992-3541 is DIALED once and answered by/for
