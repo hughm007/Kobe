@@ -1,0 +1,171 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Service Pow — identity directions</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#000}
+  #b{position:relative;width:1920px;height:1080px;overflow:hidden;
+     font-family:'Liberation Sans',Arial,sans-serif;color:var(--ink);background:var(--paper)}
+  .rule{position:absolute;background:var(--ink);opacity:.16}
+  .lab{position:absolute;font-size:19px;letter-spacing:.20em;text-transform:uppercase;opacity:.52}
+  .wm{position:absolute;font-weight:700;white-space:nowrap}
+  .say{position:absolute;font-size:25px;line-height:1.5;max-width:940px}
+  .sw{position:absolute;border-radius:2px}
+  .swl{position:absolute;font-size:17px;letter-spacing:.04em}
+  .mono{font-family:'Liberation Mono','DejaVu Sans Mono',monospace}
+  .panel{position:absolute;background:var(--panel)}
+  .spec{position:absolute}
+</style>
+<div id="b"></div>
+<script>
+/* Three identity directions for Service Pow, rendered so they can be judged by eye.
+   The typeface is a STAND-IN in all three — the direction is the decision, not the face. */
+
+const DIRS = [
+ { key:'A', name:'THE FRAME',
+   paper:'#F7F5F0', ink:'#17181A', accent:'#17457A', panel:'#EDEAE3',
+   idea:'Everything Service Pow makes lives inside a frame — an ad, a page, a shot. The mark is the frame itself.',
+   says:'Production discipline. Editorial restraint. The buyer reads craft before they read energy.',
+   risks:'The safest of the three. Brackets are common in agency identity — this has to be executed exactly right or it reads as generic.',
+   letter:'.20em' },
+ { key:'B', name:'THE CUT',
+   paper:'#F5F3EE', ink:'#121314', accent:'#C2361B', panel:'#EAE6DE',
+   idea:'The wordmark is split by a hard rule at the join — an edit point. The company is video-native and the mark says so.',
+   says:'Decisive. Video-first. The single hottest colour on the page is the cut itself.',
+   risks:'The rule can read as a divider rather than an edit. It also makes the name harder to type-set small.',
+   letter:'.06em' },
+ { key:'C', name:'THE MARK',
+   paper:'#F4F2ED', ink:'#14161A', accent:'#A85B00', panel:'#EAE7E0',
+   idea:'A precise eight-point burst — "pow" drawn with geometry instead of cartooning. The only direction that yields a real icon.',
+   says:'Energy, held under control. Works at 16px as a favicon, which a bracket and a rule do not.',
+   risks:'A burst is one bad decision away from comic-book. It also pushes against the taste-anxiety brief the Style Bank sets for this archetype.',
+   letter:'.10em' }
+];
+
+/* --- measured, never asserted --- */
+function lum(h){const c=[1,3,5].map(i=>parseInt(h.substr(i,2),16)/255)
+  .map(v=>v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4));
+  return .2126*c[0]+.7152*c[1]+.0722*c[2];}
+function ratio(a,b){const x=lum(a),y=lum(b),[h,l]=x>y?[x,y]:[y,x];return (h+.05)/(l+.05);}
+
+function device(d,x,y,s,col){
+  const c=col||d.accent;
+  if(d.key==='A'){ /* two corner brackets */
+    const t=Math.round(s*0.085), L=s*0.42;
+    return `<svg style="position:absolute;left:${x}px;top:${y}px" width="${s}" height="${s}">
+      <path d="M ${t/2} ${L} L ${t/2} ${t/2} L ${L} ${t/2}" fill="none" stroke="${c}" stroke-width="${t}"/>
+      <path d="M ${s-L} ${s-t/2} L ${s-t/2} ${s-t/2} L ${s-t/2} ${s-L}" fill="none" stroke="${c}" stroke-width="${t}"/>
+    </svg>`;
+  }
+  if(d.key==='B'){ /* the cut */
+    const w=Math.round(s*0.17);
+    return `<svg style="position:absolute;left:${x}px;top:${y}px" width="${s}" height="${s}">
+      <rect x="${(s-w)/2}" y="0" width="${w}" height="${s}" fill="${c}"/>
+    </svg>`;
+  }
+  /* C — eight-point geometric burst, exact radial construction */
+  const cx=s/2, cy=s/2, R=s*0.48, r=s*0.155, pts=[];
+  for(let i=0;i<16;i++){
+    const a=(Math.PI*2*i)/16 - Math.PI/2, rad=(i%2===0)?R:r;
+    pts.push(`${(cx+Math.cos(a)*rad).toFixed(2)},${(cy+Math.sin(a)*rad).toFixed(2)}`);
+  }
+  return `<svg style="position:absolute;left:${x}px;top:${y}px" width="${s}" height="${s}">
+    <polygon points="${pts.join(' ')}" fill="${c}"/></svg>`;
+}
+
+function wordmark(d,x,y,size,col){
+  const c=col||'var(--ink)';
+  if(d.key==='B'){
+    const bar=Math.round(size*0.13);
+    return `<div class="wm" style="left:${x}px;top:${y}px;font-size:${size}px;letter-spacing:${d.letter};color:${c};display:flex;align-items:center">`
+         + `<span>SERVICE</span>`
+         + `<span style="display:inline-block;width:${bar}px;height:${size*1.02}px;background:${d.accent};margin:0 ${Math.round(size*0.10)}px"></span>`
+         + `<span>POW</span></div>`;
+  }
+  return `<div class="wm" style="left:${x}px;top:${y}px;font-size:${size}px;letter-spacing:${d.letter};color:${c}">SERVICE POW</div>`;
+}
+
+function board(i){
+  const d=DIRS[i];
+  const o=[];
+  document.documentElement.style.setProperty('--paper',d.paper);
+  document.documentElement.style.setProperty('--ink',d.ink);
+  document.documentElement.style.setProperty('--accent',d.accent);
+  document.documentElement.style.setProperty('--panel',d.panel);
+
+  /* header */
+  o.push(`<div class="lab" style="left:72px;top:64px">Direction ${d.key} &nbsp;·&nbsp; ${d.name}</div>`);
+  o.push(`<div class="rule" style="left:72px;top:110px;width:1776px;height:2"></div>`);
+  o.push(`<div class="say" style="left:72px;top:140px;font-size:27px;opacity:.82">${d.idea}</div>`);
+
+  /* wordmark hero */
+  o.push(wordmark(d,72,296,84));
+  o.push(`<div class="lab" style="left:72px;top:404px;font-size:16px">primary lockup &nbsp;·&nbsp; typeface is a stand-in</div>`);
+
+  /* device + reversed lockup */
+  o.push(device(d,72,470,130));
+  o.push(`<div class="lab" style="left:72px;top:620px;font-size:16px">device</div>`);
+  o.push(`<div class="panel" style="left:250px;top:470px;width:760px;height:130px;background:${d.ink}"></div>`);
+  o.push(wordmark(d,290,505,54,d.paper));
+  o.push(`<div class="lab" style="left:250px;top:620px;font-size:16px">reversed</div>`);
+
+  /* palette with MEASURED ratios */
+  const sw=[['paper',d.paper],['ink',d.ink],['accent',d.accent],['panel',d.panel]];
+  sw.forEach(([n,hex],k)=>{
+    const x=72+k*236;
+    o.push(`<div class="sw" style="left:${x}px;top:690px;width:200px;height:120px;background:${hex};border:1px solid rgba(0,0,0,.14)"></div>`);
+    o.push(`<div class="swl" style="left:${x}px;top:824px;font-weight:700">${n}</div>`);
+    o.push(`<div class="swl mono" style="left:${x}px;top:848px;opacity:.7">${hex.toUpperCase()}</div>`);
+    const r = (n==='paper') ? null : ratio(hex,d.paper);
+    if(r!==null) o.push(`<div class="swl mono" style="left:${x}px;top:872px;opacity:.7">${r.toFixed(2)}:1 vs paper ${r>=4.5?'✓':(r>=3?'△ large only':'✗')}</div>`);
+  });
+  o.push(`<div class="lab" style="left:72px;top:918px;font-size:15px">measured at render time &nbsp;·&nbsp; accent never carries body text</div>`);
+
+  /* --- right: applied --- */
+  const RX=1140;
+  o.push(`<div class="rule" style="left:${RX-40}px;top:140px;width:2px;height:800px"></div>`);
+  o.push(`<div class="lab" style="left:${RX}px;top:150px;font-size:16px">applied</div>`);
+
+  /* 1. endcard */
+  o.push(`<div class="panel" style="left:${RX}px;top:186px;width:708px;height:398px;background:${d.paper};border:1px solid rgba(0,0,0,.18)"></div>`);
+  o.push(wordmark(d,RX+ (d.key==='B'?96:118), 340, 40));
+  o.push(`<div style="position:absolute;left:${RX+118}px;top:414px;width:472px;height:5px;background:${d.accent}"></div>`);
+  o.push(`<div style="position:absolute;left:${RX}px;top:444px;width:708px;text-align:center;font-size:22px;opacity:.75">servicepow.com</div>`);
+  if(d.key!=='B') o.push(device(d,RX+318,236,72));
+  o.push(`<div class="lab" style="left:${RX}px;top:596px;font-size:16px">video endcard</div>`);
+
+  /* 2. an ad frame carrying the mark */
+  o.push(`<div class="panel" style="left:${RX}px;top:636px;width:440px;height:248px;background:${d.ink}"></div>`);
+  o.push(`<div style="position:absolute;left:${RX+38}px;top:690px;width:150px;height:110px;background:${d.paper};opacity:.9"></div>`);
+  o.push(`<div style="position:absolute;left:${RX+38}px;top:822px;width:250px;height:34px;background:${d.paper};opacity:.92"></div>`);
+  o.push(`<div style="position:absolute;left:${RX+52}px;top:832px;width:150px;height:6px;background:${d.ink}"></div>`);
+  o.push(`<div style="position:absolute;left:${RX+52}px;top:843px;width:96px;height:6px;background:${d.ink};opacity:.55"></div>`);
+  o.push(device(d,RX+352,660,54,d.accent));
+  o.push(`<div class="lab" style="left:${RX}px;top:896px;font-size:16px">mark on an ad</div>`);
+
+  /* 3. favicon test — the honest functional differentiator */
+  [64,32,16].forEach((s,k)=>{
+    const x=RX+486+k*84;
+    o.push(`<div style="position:absolute;left:${x}px;top:${636+ (64-s)/2}px;width:${s}px;height:${s}px;background:${d.ink}"></div>`);
+    o.push(device(d,x,636+(64-s)/2,s,d.accent));
+    o.push(`<div class="swl mono" style="left:${x}px;top:712px;opacity:.6;font-size:14px">${s}px</div>`);
+  });
+  o.push(`<div class="lab" style="left:${RX+486}px;top:744px;font-size:16px">icon at size</div>`);
+
+  /* 4. type specimen */
+  o.push(`<div style="position:absolute;left:${RX+486}px;top:790px;width:262px;font-size:27px;font-weight:700;line-height:1.2">Four tested ads,<br>not one guess.</div>`);
+  o.push(`<div style="position:absolute;left:${RX+486}px;top:868px;width:262px;font-size:16px;line-height:1.5;opacity:.75">Body copy sits here. Liberation Sans is standing in for a licensed face.</div>`);
+
+  /* footer */
+  o.push(`<div class="rule" style="left:72px;top:966px;width:1776px;height:2"></div>`);
+  o.push(`<div class="say" style="left:72px;top:990px;font-size:22px"><b>Says:</b> ${d.says}</div>`);
+  o.push(`<div class="say" style="left:1010px;top:990px;font-size:22px;max-width:840px;opacity:.72"><b>Risks:</b> ${d.risks}</div>`);
+
+  document.getElementById('b').innerHTML=o.join('');
+  window.__ratios = DIRS.map(x=>({dir:x.key, accent_vs_paper:+ratio(x.accent,x.paper).toFixed(2),
+                                  ink_vs_paper:+ratio(x.ink,x.paper).toFixed(2),
+                                  paper_vs_ink:+ratio(x.paper,x.ink).toFixed(2)}));
+}
+window.setBoard = board;
+board(parseInt(new URLSearchParams(location.search).get('board')||'0',10));
+</script>

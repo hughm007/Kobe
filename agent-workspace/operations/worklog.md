@@ -814,3 +814,55 @@ day-to-day work in here.
   consequential actions decline by default.
 - Open: fill in the two keys, run VERIFY.md tier by tier, then tune
   `[voice]` thresholds to taste.
+
+## 2026-08-28 — Service Pow intro video built, then the root cause underneath it
+
+**Did.** Built the company's own 60s introductory video end to end and then, on the Owner's
+direction, stopped short of finishing it to fix the thing that was blocking it.
+
+*The video.* `company/campaigns/2026-08-26-intro-video/` — campaign bible, script (Rev 2),
+storyboard (Rev 2), and a working build: `build/scenes.html` renders every pixel as a pure
+function of the frame number, `render.py` drives a pinned Chromium frame by frame, `render.sh`
+assembles with ffmpeg. Verified output: 1920×1080 · 30fps · 1800 frames · **60.000000s**. No
+generative calls, no credits, **$0**, nothing published. Concept: *the whiteboard becomes the
+work* — one shared ad vocabulary drawn in marker line-art that snaps to finished, three times.
+
+*What fact-finding changed before a frame was drawn.* The honest public service list is shorter
+than `services.md`: email marketing and Google LSA are barred from all copy by Service Pow's own
+rules ("never describe it as running"). No logo file exists, so the endcard is a labelled
+provisional type-only treatment and every export carries `-provisional-endcard`.
+
+*Two claims escalated rather than shipped quietly.* The pilot pack's "5–7 business days" is
+conditional in the source ("from receipt of client assets") and the VO had dropped the condition —
+the qualifier moved into the burned text, still inside the legibility band. "We make the first one
+before you ask" was marked UNSIGNED and put to the Owner; **ruled SIGNED, kept as written**, with
+the accepted obligation and its two consequences recorded in `script.md` §4b.
+
+*Seven defects caught by looking at rendered frames rather than at code.* The hook cold-read as a
+note instead of an ad; a compliance checklist floated on an empty board; motion primitives were
+bare rectangles; a van hovered above its road. All fixed, all recorded in the storyboard's
+revision log. **This is the lesson of the day: the code was correct and the pictures were wrong.**
+
+*The root cause.* `brand/visual-identity.md` is `NEEDS INPUT` in all seven sections and
+`brand-voice.md` likewise. That is why the endcard is provisional and the accent is a guess — and
+every Service Pow asset after this one hits the same wall. Owner chose to fix the root first.
+Built three identity directions for selection — `brand/explorations/2026-08-28-identity-directions/`
+— each with wordmark, device, reversed lockup, palette with contrast measured at render time, and
+the same three applications (endcard, mark on an ad, icon at 64/32/16px) so they compare like with
+like. Brief derived from the Style Bank, not invented: Service Pow routes to archetype I, which
+sits under **taste anxiety**, so restraint is the mechanism; archetype I permits "one chromatic
+event", so near-achromatic plus one decisive colour.
+
+**Decided.** Brand identity before the video is finished (Owner). C10 signed as written (Owner).
+The marker draws pictures, type is type — no hand-lettering, because hand-lettering the company
+name is drawing a mark. One shared ad vocabulary at four sizes, so the signature snap pays off a
+shape the viewer met at second one.
+
+**Open.** Owner picks a direction. Then: the licensed typeface, `visual-identity.md` filled in for
+real, the video re-rendered into the chosen palette (one CSS variable, 145 seconds), the
+`-provisional-endcard` suffix removed, and **only then** Skeptic Pass 1 and the Kobe + DR-lens
+gate. Both gates are still PENDING — nothing about this video has been scored yet. Also open and
+unfixed by any of the above: the film is silent (VO written and timed, not recorded), the "your
+footage" plate at 0:31 is a placeholder in the one beat about real footage, and `servicepow.com`
+remains **NOT VERIFIED** — blocked by this container's egress policy on three separate attempts,
+recorded rather than routed around.

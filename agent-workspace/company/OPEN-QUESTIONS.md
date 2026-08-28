@@ -52,7 +52,7 @@ with the `NEEDS INPUT` markers in the files themselves.
 | ☐ | TripNerd: when does the email play start, and what list are we mailing? Zero live deliverables to date. | `../clients/tripnerd/client-brief.md` |
 | ☐ | Brand voice attributes for Service Pow itself, defined by contrast | `brand/brand-voice.md` |
 | ☐ | Two worked copy examples — one on-brand, one off-brand | `brand/brand-voice.md` |
-| ☐ | Service Pow's own logo files, colors (HEX), typefaces (the Style Bank governs *client ad design*, not Service Pow's own identity) | `brand/visual-identity.md` |
+| ◐ | Service Pow's own logo files, colors (HEX), typefaces (the Style Bank governs *client ad design*, not Service Pow's own identity) — **IN PROGRESS 2026-08-28:** three directions built and sent to the Owner for selection, see [`brand/explorations/2026-08-28-identity-directions/proposal.md`](brand/explorations/2026-08-28-identity-directions/proposal.md). Blocks the intro video's endcard and accent, and every Service Pow asset after it. Still open after selection: the licensed typeface, and vector masters into `assets/` | `brand/visual-identity.md` |
 | ☐ | Nameable clients, case studies and results we're permitted to cite | `company-profile.md` |
 
 ## Tier 3 — commercial terms not covered by the pricing doc

@@ -194,10 +194,23 @@ sign-off:
    implication, keeps the sequence). Weaker pull, no capacity exposure.
 3. **Cut to a plain CTA** — "So let's start with one." Safest, and materially less interesting.
 
-**Recommendation: option 1**, because it is the single most differentiating thing Service Pow does
-and the video has no other proof to offer, *and* because a one-person shop can throttle a spec-ad
-promise by simply being slow to a bad-fit lead. But it is the Owner's call and it is not made here.
-**Currently written as option 1 and marked UNSIGNED.**
+**Recommendation was option 1**, because it is the single most differentiating thing Service Pow
+does and the video has no other proof to offer, *and* because a one-person shop can throttle a
+spec-ad promise by simply being slow to a bad-fit lead.
+
+> ### ✅ OWNER RULING — 2026-08-28
+> **Option 1. Keep it as written.** Signed by Karl (Wyatt), in-session.
+> The line stays: *"So we'll make one for your business — before you ask."*
+>
+> **What this now commits Service Pow to.** Every enquiry that arrives through this video is
+> entitled to expect a spec ad already in motion, at zero revenue. That is accepted deliberately,
+> not overlooked. Two things follow and are recorded here so they are not rediscovered later:
+> 1. The **throttle is qualification, not silence** — a bad-fit lead is declined, not ignored. The
+>    hard gates in `positioning-and-icp.md` are what stop this becoming unbounded.
+> 2. **Call-qualification tracking has to exist before this video runs anywhere**, for the same
+>    reason it is a pre-launch item on 911 Drain: an unmeasured promise cannot be throttled.
+>
+> C10 is now a **registered claim**, not an open question. It moves out of §5's gap list.
 
 ---
 
