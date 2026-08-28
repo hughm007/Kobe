@@ -1,0 +1,539 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Service Pow intro — deterministic frame renderer</title>
+<style>
+  :root{
+    --ground:#F7F5F0;
+    --ink:#1A1A1A;
+    --accent:#1B5FA8;          /* PROVISIONAL. One line changes the whole film. */
+    --plate:#232323;
+    --light:#E8E4DC;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#000}
+  #stage{position:relative;width:1920px;height:1080px;background:var(--ground);overflow:hidden;
+         font-family:'Liberation Sans',Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+  #art{position:absolute;inset:0;width:1920px;height:1080px}
+  #txt{position:absolute;inset:0;pointer-events:none}
+  .t{position:absolute;color:var(--ink);line-height:1.15;white-space:pre-wrap}
+  .t.c{text-align:center;transform:translate(-50%,-50%)}
+  .t.l{text-align:left;transform:translate(0,-50%)}
+  .wm{font-weight:700;letter-spacing:.20em}
+</style>
+
+<div id="stage">
+  <svg id="art" viewBox="0 0 1920 1080" shape-rendering="geometricPrecision">
+    <defs>
+      <filter id="grain" x="0" y="0" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="n"/>
+        <feColorMatrix in="n" type="saturate" values="0"/>
+      </filter>
+      <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="14"/>
+      </filter>
+      <linearGradient id="plateGrad" x1="0" y1="0" x2="0.6" y2="1">
+        <stop offset="0" stop-color="#8C8A85"/><stop offset="0.55" stop-color="#6E6C67"/>
+        <stop offset="1" stop-color="#4A4845"/>
+      </linearGradient>
+      <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#AFC2D4"/><stop offset="1" stop-color="#EDE7DC"/>
+      </linearGradient>
+    </defs>
+    <g id="scene"></g>
+  </svg>
+  <div id="txt"></div>
+</div>
+
+<script>
+/* =====================================================================
+   Service Pow intro video — deterministic renderer.
+   Every visible pixel is a pure function of the frame number.
+   No requestAnimationFrame, no CSS transition, no unseeded randomness.
+   render(N) twice always produces identical output.
+   ===================================================================== */
+
+const FPS = 30, TOTAL = 1800;              /* 60.000s */
+const W = 1920, H = 1080;
+const ACCENT = '#1B5FA8', INK = '#1A1A1A', GROUND = '#F7F5F0',
+      PLATE = '#232323', LIGHT = '#E8E4DC';
+
+/* ---------- math ---------- */
+const clamp=(x,a,b)=>x<a?a:(x>b?b:x);
+const seg=(t,a,b)=>b<=a?(t>=b?1:0):clamp((t-a)/(b-a),0,1);
+const easeOut=p=>1-Math.pow(1-p,3);
+const easeIn =p=>p*p*p;
+const easeIO =p=>p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;
+const lerp=(a,b,p)=>a+(b-a)*p;
+/* seeded PRNG so any "hand wobble" is identical on every render */
+function rnd(seed){let s=seed>>>0;return()=>{s^=s<<13;s>>>=0;s^=s>>17;s^=s<<5;s>>>=0;return s/4294967296;}}
+
+/* ---------- svg helpers ---------- */
+const A=[];                                   /* art accumulator for this frame */
+function push(s){A.push(s)}
+/* draw-on stroke: pathLength normalised so one dash covers any path */
+function P(d,p,o={}){
+  if(p<=0) return '';
+  const st=o.stroke||INK, sw=o.w||5, op=o.opacity==null?1:o.opacity;
+  return `<path d="${d}" fill="none" stroke="${st}" stroke-width="${sw}" opacity="${op}"`
+       + ` stroke-linecap="round" stroke-linejoin="round" pathLength="1"`
+       + ` stroke-dasharray="1" stroke-dashoffset="${(1-p).toFixed(5)}"/>`;
+}
+function F(d,o={}){                            /* filled shape, no draw-on */
+  const f=o.fill||INK, op=o.opacity==null?1:o.opacity;
+  return `<path d="${d}" fill="${f}" opacity="${op.toFixed(4)}" stroke="none"/>`;
+}
+const rectD=(x,y,w,h)=>`M ${x} ${y} L ${x+w} ${y} L ${x+w} ${y+h} L ${x} ${y+h} Z`;
+const lineD=(x1,y1,x2,y2)=>`M ${x1} ${y1} L ${x2} ${y2}`;
+function circD(cx,cy,r){                       /* one-path circle, draws clockwise from top */
+  return `M ${cx} ${cy-r} A ${r} ${r} 0 1 1 ${cx-0.01} ${cy-r} Z`;
+}
+/* a hand-drawn rectangle: same corners, slight wobble, deterministic per seed */
+function wobbleRect(x,y,w,h,seed,amp=3){
+  const r=rnd(seed), o=()=> (r()-0.5)*2*amp;
+  return `M ${x+o()} ${y+o()} L ${x+w+o()} ${y+o()} L ${x+w+o()} ${y+h+o()} L ${x+o()} ${y+h+o()} Z`;
+}
+function grp(inner,tf,op){
+  return `<g${tf?` transform="${tf}"`:''}${op!=null?` opacity="${op.toFixed(4)}"`:''}>${inner}</g>`;
+}
+
+/* =====================================================================
+   BURNED TEXT — the table in script.md §3, encoded once.
+   ===================================================================== */
+const TEXTS=[
+ {id:'T1', s:'One ad. One guess.',            in:3.4, out:6.6, x:960, y:830, sz:64, a:'c', w:900},
+ {id:'T2', s:'SERVICE POW',                   in:8.0, out:15.0,x:960, y:430, sz:104,a:'c', w:1400, cls:'wm'},
+ {id:'T3', s:'video ads',                     in:10.6,out:14.6,x:560, y:790, sz:38, a:'c', w:400},
+ {id:'T4', s:'websites',                      in:11.6,out:14.6,x:960, y:790, sz:38, a:'c', w:400},
+ {id:'T5', s:'social',                        in:12.6,out:14.6,x:1360,y:790, sz:38, a:'c', w:400},
+ {id:'T6', s:'2 concepts × 2 hooks',     in:16.4,out:20.4,x:960, y:150, sz:54, a:'c', w:1200},
+ {id:'T7', s:'4 finished ads',                in:20.2,out:23.0,x:960, y:1010,sz:60, a:'c', w:1200},
+ {id:'T8', s:'5–7 days from your footage',in:23.2,out:25.8,x:960,y:1010,sz:46, a:'c', w:1200},
+ {id:'T9', s:'Your footage stays the hero',   in:29.4,out:33.0,x:960, y:960, sz:56, a:'c', w:1400},
+ {id:'T10',s:'AI builds the rest',            in:33.2,out:36.2,x:960, y:960, sz:56, a:'c', w:1400},
+ {id:'T11',s:'Disclosure handled',            in:38.6,out:44.4,x:262, y:420, sz:54, a:'l', w:820},
+ {id:'T12',s:'No fake testimonials',          in:40.4,out:44.4,x:262, y:540, sz:54, a:'l', w:820},
+ {id:'T13',s:'Claims substantiated',          in:42.2,out:44.4,x:262, y:660, sz:54, a:'l', w:820},
+ {id:'T14',s:'The page it lands on',          in:46.4,out:49.4,x:960, y:950, sz:52, a:'c', w:1200},
+ {id:'T15',s:'Captions. End cards. Titles.',  in:49.6,out:52.4,x:960, y:950, sz:52, a:'c', w:1200},
+ {id:'T16',s:'We make the first one before you ask.',in:54.0,out:57.2,x:960,y:930,sz:56,a:'c',w:1500},
+ {id:'T17',s:'SERVICE POW',                   in:57.4,out:60.0,x:960, y:470, sz:112,a:'c', w:1500, cls:'wm'},
+ {id:'T18',s:'servicepow.com',                in:58.0,out:60.0,x:960, y:625, sz:42, a:'c', w:900}
+];
+const FADE=0.15;
+
+/* =====================================================================
+   SCENE PARTS
+   ===================================================================== */
+
+/* ---- S1 HOOK : one ad, one question mark ----
+   The lone ad is drawn in the SAME sketch vocabulary the grid uses at 15.0s,
+   so S4's snap pays off a shape the viewer met in the first two seconds. */
+function s1(t){
+  const o=[];
+  o.push(adSketch(420,270,800,450,1,seg(t,0.6,2.6),101));
+  const q=seg(t,2.4,3.2);
+  o.push(P('M 1360 380 C 1360 310, 1500 302, 1500 380 C 1500 442, 1430 450, 1430 516', q, {w:8}));
+  o.push(P('M 1430 576 L 1430 584', seg(t,3.2,3.35), {w:12}));
+  const dim = 1 - 0.62*easeIO(seg(t,5.0,7.0));
+  return grp(o.join(''), null, dim);
+}
+
+/* ---- S2 WHO : wordmark + three live services ---- */
+function iconFilm(x,y,s,p){
+  const o=[]; const w=s, h=s*0.66;
+  o.push(P(wobbleRect(x-w/2,y-h/2,w,h,201,2), clamp(p*2,0,1), {w:5}));
+  const q=clamp(p*2-1,0,1);
+  for(let i=0;i<3;i++){
+    const yy=y-h/2+14+i*(h-28)/2.6;
+    o.push(P(rectD(x-w/2+10,yy,16,16), clamp(q*3-i,0,1), {w:3}));
+    o.push(P(rectD(x+w/2-26,yy,16,16), clamp(q*3-i,0,1), {w:3}));
+  }
+  return o.join('');
+}
+function iconBrowser(x,y,s,p){
+  const o=[]; const w=s, h=s*0.72;
+  o.push(P(wobbleRect(x-w/2,y-h/2,w,h,202,2), clamp(p*2,0,1), {w:5}));
+  const q=clamp(p*2-1,0,1);
+  o.push(P(lineD(x-w/2,y-h/2+30,x+w/2,y-h/2+30), q, {w:4}));
+  for(let i=0;i<3;i++) o.push(P(circD(x-w/2+22+i*22,y-h/2+15,5), clamp(q*3-i,0,1), {w:3}));
+  o.push(P(lineD(x-w/2+22,y+6,x+w/2-60,y+6), q, {w:4,opacity:.7}));
+  o.push(P(lineD(x-w/2+22,y+36,x+w/2-30,y+36), q, {w:4,opacity:.7}));
+  return o.join('');
+}
+function iconPhone(x,y,s,p){
+  const o=[]; const w=s*0.52, h=s*0.86;
+  o.push(P(wobbleRect(x-w/2,y-h/2,w,h,203,2), clamp(p*2,0,1), {w:5}));
+  const q=clamp(p*2-1,0,1);
+  o.push(P(lineD(x-w/2+14,y-h/2+26,x+w/2-14,y-h/2+26), q, {w:4}));
+  o.push(P(circD(x,y+h/2-24,9), q, {w:3}));
+  return o.join('');
+}
+function s2(t){
+  const o=[];
+  o.push(P(lineD(650,522,1270,522), seg(t,9.6,10.2), {stroke:ACCENT,w:9}));
+  o.push(iconFilm   (560, 640,190, seg(t,10.2,10.9)));
+  o.push(iconBrowser(960, 640,190, seg(t,11.2,11.9)));
+  o.push(iconPhone  (1360,640,190, seg(t,12.2,12.9)));
+  return o.join('');
+}
+
+/* ---- S3/S4 PACKS : the 2x2 grid and THE SNAP ---- */
+const CELLS=[[320,250],[980,250],[320,620],[980,620]];
+const CW=620, CH=330;
+const VAR=[
+ {hz:.62, subj:[.10,.28,.30,.34], acc:{k:'bar', b:[.62,.68,.30,.09]}, cap:[.05,.50]},
+ {hz:null,subj:[.30,.18,.40,.52], acc:{k:'circ',c:[.83,.24,.095]},    cap:[.05,.38]},
+ {hz:.55, subj:[.56,.22,.34,.33], acc:{k:'diag',d:[.04,.50,.34,.16]}, cap:[.44,.50]},
+ {hz:null,subj:[.36,.34,.28,.40], acc:{k:'band',b:[0,.05,1,.13]},     cap:[.05,.44]}
+];
+/* One ad, sketched then finished. Used at four sizes: the lone hook ad (S1),
+   the four grid cells (S3/S4) and the annotated compliance ad (S7). */
+function adSketch(x,y,w,h,v,p,seed){
+  const o=[], V=VAR[v], U=u=>x+u*w, Y=q=>y+q*h;
+  o.push(P(wobbleRect(x,y,w,h,seed,3), clamp(p*2.2,0,1), {w:5}));
+  const q=clamp(p*2.2-1.2,0,1);
+  if(V.hz) o.push(P(lineD(x+12,Y(V.hz),x+w-12,Y(V.hz)), clamp(q*3,0,1), {w:4,opacity:.8}));
+  const s=V.subj;
+  o.push(P(wobbleRect(U(s[0]),Y(s[1]),s[2]*w,s[3]*h,seed+20,2), clamp(q*3-0.6,0,1), {w:4,opacity:.85}));
+  const a=V.acc, q3=clamp(q*3-1.4,0,1);
+  if(a.k==='bar')  o.push(P(rectD(U(a.b[0]),Y(a.b[1]),a.b[2]*w,a.b[3]*h), q3, {w:4,opacity:.8}));
+  if(a.k==='circ') o.push(P(circD(U(a.c[0]),Y(a.c[1]),a.c[2]*h), q3, {w:4,opacity:.8}));
+  if(a.k==='diag') o.push(P(lineD(U(a.d[0]),Y(a.d[1]),U(a.d[2]),Y(a.d[3])), q3, {w:4,opacity:.8}));
+  if(a.k==='band') o.push(P(rectD(U(a.b[0])+6,Y(a.b[1]),a.b[2]*w-12,a.b[3]*h), q3, {w:4,opacity:.8}));
+  o.push(P(rectD(U(V.cap[0])+8,y+h-h*0.17,V.cap[1]*w,h*0.105), clamp(q*3-2,0,1), {w:4,opacity:.7}));
+  const px=x+w/2, py=y+h*0.46;
+  o.push(P(`M ${px-w*0.026} ${py-h*0.066} L ${px+w*0.039} ${py} L ${px-w*0.026} ${py+h*0.066} Z`,
+           clamp(q*3-2.4,0,1), {w:4,opacity:.55}));
+  return o.join('');
+}
+function adFinal(x,y,w,h,v){
+  const o=[], V=VAR[v], U=u=>x+u*w, Y=q=>y+q*h;
+  o.push(F(rectD(x,y,w,h),{fill:PLATE}));
+  if(V.hz) o.push(F(rectD(x,y,w,V.hz*h),{fill:'#2E2E2E'}));
+  const a=V.acc;
+  if(a.k==='bar')  o.push(F(rectD(U(a.b[0]),Y(a.b[1]),a.b[2]*w,a.b[3]*h),{fill:ACCENT}));
+  if(a.k==='circ') o.push(F(circD(U(a.c[0]),Y(a.c[1]),a.c[2]*h),{fill:ACCENT}));
+  if(a.k==='diag') o.push(`<path d="M ${U(a.d[0])} ${Y(a.d[1])} L ${U(a.d[2])} ${Y(a.d[3])} L ${U(a.d[0])} ${Y(a.d[1])-h*0.32} Z" fill="${ACCENT}" opacity="0.9"/>`);
+  if(a.k==='band') o.push(F(rectD(U(a.b[0]),Y(a.b[1]),a.b[2]*w,a.b[3]*h),{fill:ACCENT}));
+  const s=V.subj;
+  o.push(F(rectD(U(s[0]),Y(s[1]),s[2]*w,s[3]*h),{fill:LIGHT}));
+  const cx0=U(V.cap[0])+8, cy0=y+h-h*0.17, cw=V.cap[1]*w, ch=h*0.105;
+  o.push(F(rectD(cx0,cy0,cw,ch),{fill:'#F2EFE8',opacity:.94}));
+  o.push(F(rectD(cx0+14,cy0+ch*0.24,cw*0.55,h*0.021),{fill:'#3A3A3A'}));
+  o.push(F(rectD(cx0+14,cy0+ch*0.58,cw*0.36,h*0.021),{fill:'#6A6A6A'}));
+  const px=x+w/2, py=y+h*0.46;
+  o.push(`<path d="M ${px-w*0.026} ${py-h*0.066} L ${px+w*0.039} ${py} L ${px-w*0.026} ${py+h*0.066} Z" fill="#FFFFFF" opacity="0.22"/>`);
+  o.push(P(rectD(x,y,w,h),1,{w:3,opacity:.35,stroke:'#000'}));
+  return o.join('');
+}
+const cellSketch=(x,y,v,p)=>adSketch(x,y,CW,CH,v,p,300+v);
+const cellFinal =(x,y,v)  =>adFinal (x,y,CW,CH,v);
+
+function s34(t,f){
+  const o=[];
+  const SNAP=Math.round(20.4*FPS);                       /* frame 612 */
+  for(let i=0;i<4;i++){
+    const [x,y]=CELLS[i];
+    const drawP  = seg(t,15.4+i*0.15,16.4+i*0.15);
+    const compP  = seg(t,17.0+i*0.55,19.0+i*0.55);
+    const snapped= f>=SNAP;
+    if(snapped){
+      const k=clamp((f-SNAP)/4,0,1);                     /* 4-frame overshoot settle */
+      const sc=1+0.030*(1-easeOut(k));
+      const cx=x+CW/2, cy=y+CH/2;
+      o.push(grp(cellFinal(x,y,i), `translate(${cx} ${cy}) scale(${sc.toFixed(5)}) translate(${-cx} ${-cy})`));
+    } else {
+      o.push(cellSketch(x,y,i, Math.max(drawP*0.45, 0.45+compP*0.55)));
+    }
+  }
+  /* counter 1..4 lands after the snap */
+  for(let i=0;i<4;i++){
+    const cp=seg(t,21.0+i*0.4,21.25+i*0.4);
+    if(cp>0){
+      const [x,y]=CELLS[i];
+      o.push(`<g opacity="${cp.toFixed(3)}"><circle cx="${x+44}" cy="${y+44}" r="26" fill="${ACCENT}"/>`+
+             `<text x="${x+44}" y="${y+56}" font-family="Liberation Sans,Arial" font-size="34" font-weight="700"`+
+             ` fill="#FFFFFF" text-anchor="middle">${i+1}</text></g>`);
+    }
+  }
+  /* the only camera move in the film: 4% push-in across the offer */
+  const sc=lerp(1,1.04,easeIO(seg(t,15.0,26.0)));
+  return grp(o.join(''), `translate(${W/2} ${H/2}) scale(${sc.toFixed(5)}) translate(${-W/2} ${-H/2})`);
+}
+
+/* ---- S5/S6 REAL+AI : the plate that never changes ----
+   The plate is deliberately large and crosses the horizon, so it reads as the
+   SUBJECT of a built scene rather than a screen sitting inside another screen. */
+const FX=290, FY=112, FW=1340, FH=754;
+const HZ=FY+562;
+const PX=740, PY=252, PW=440, PH=548;
+function envSketch(p){
+  const o=[];
+  o.push(P(lineD(FX+18,HZ,FX+FW-18,HZ), clamp(p*3,0,1), {w:4,opacity:.8}));
+  o.push(P(wobbleRect(FX+70,HZ-300,210,300,401,3), clamp(p*3-0.5,0,1), {w:4,opacity:.8}));
+  o.push(P(wobbleRect(FX+FW-300,HZ-372,230,372,402,3), clamp(p*3-0.9,0,1),{w:4,opacity:.8}));
+  o.push(P(lineD(FX+60,FY+120,FX+390,FY+120), clamp(p*3-1.4,0,1), {w:4,opacity:.5}));
+  o.push(P(lineD(FX+FW-420,FY+86,FX+FW-60,FY+86), clamp(p*3-1.7,0,1),{w:4,opacity:.5}));
+  return o.join('');
+}
+function envFinal(op,dx2,dx3){
+  const o=[];
+  o.push(F(rectD(FX+4,FY+4,FW-8,HZ-FY-4),{fill:'url(#skyGrad)',opacity:op}));
+  o.push(grp(F(rectD(FX+60,FY+108,330,26),{fill:'#AEBCC8',opacity:op*.9})+
+             F(rectD(FX+FW-420,FY+74,360,26),{fill:'#AEBCC8',opacity:op*.9}), `translate(${dx3} 0)`));
+  o.push(grp(F(rectD(FX+70,HZ-300,210,300),{fill:'#78848E',opacity:op})+
+             F(rectD(FX+FW-300,HZ-372,230,372),{fill:'#66717B',opacity:op}), `translate(${dx2} 0)`));
+  o.push(F(rectD(FX+4,HZ,FW-8,FY+FH-HZ-4),{fill:'#565450',opacity:op}));
+  return o.join('');
+}
+function plate(){
+  const o=[], m=24;
+  o.push(`<rect x="${PX+12}" y="${PY+16}" width="${PW}" height="${PH}" fill="#000" opacity="0.30" filter="url(#soft)"/>`);
+  o.push(F(rectD(PX,PY,PW,PH),{fill:'url(#plateGrad)'}));
+  o.push(`<rect x="${PX}" y="${PY}" width="${PW}" height="${PH}" filter="url(#grain)" opacity="0.20"/>`);
+  /* film-frame corner ticks — says "this is footage" without inventing content */
+  for(const [x,y,sx,sy] of [[PX,PY,1,1],[PX+PW,PY,-1,1],[PX,PY+PH,1,-1],[PX+PW,PY+PH,-1,-1]]){
+    o.push(P(lineD(x+sx*15,y+sy*15,x+sx*15+sx*m,y+sy*15),1,{stroke:'#FFFFFF',w:4,opacity:.85}));
+    o.push(P(lineD(x+sx*15,y+sy*15,x+sx*15,y+sy*15+sy*m),1,{stroke:'#FFFFFF',w:4,opacity:.85}));
+  }
+  o.push(P(rectD(PX,PY,PW,PH),1,{w:4,opacity:.9}));
+  return o.join('');
+}
+function s56(t){
+  const o=[];
+  o.push(P(wobbleRect(FX,FY,FW,FH,400,3), seg(t,26.4,27.4), {w:6}));
+  const snapP=seg(t,30.0,30.067);
+  const dx2 = t>33.2 ? -easeOut(seg(t,33.2,34.6))*46 : 0;
+  const dx3 = t>34.4 ? +easeOut(seg(t,34.4,36.0))*28 : 0;
+  if(snapP<1) o.push(envSketch(seg(t,28.4,29.2)));
+  if(snapP>0) o.push(envFinal(snapP,dx2,dx3));
+  const dp=seg(t,28.0,28.28);
+  if(dp>0) o.push(grp(plate(), `translate(0 ${lerp(-70,0,easeOut(dp)).toFixed(2)})`, dp));
+  return o.join('');
+}
+
+/* ---- S7 SAFE : the boring differentiator, made concrete ----
+   A ticking checklist is the most generic visual in explainer video. The fix is
+   to give it something to annotate: each tick lands a real change on a real ad. */
+function tick(x,y,p){
+  return P(`M ${x} ${y} L ${x+18} ${y+22} L ${x+52} ${y-26}`, p, {stroke:ACCENT,w:9});
+}
+const SV=1, SX=1040, SY=330, SW=700, SH=394;
+function s7(t){
+  const o=[];
+  o.push(P(lineD(182,360,182,712), seg(t,36.9,37.9), {w:6,opacity:.55}));
+  o.push(tick(200,412,seg(t,38.6,38.95)));
+  o.push(tick(200,532,seg(t,40.4,40.75)));
+  o.push(tick(200,652,seg(t,42.2,42.55)));
+  const ap=seg(t,37.4,38.2);
+  if(ap>0) o.push(grp(adFinal(SX,SY,SW,SH,SV), null, ap));
+  /* 1 — a disclosure label lands on the ad */
+  const a1=seg(t,38.6,38.95);
+  if(a1>0){
+    const x=SX+26, y=SY+24;
+    o.push(grp(F(rectD(x,y,210,40),{fill:'#F2EFE8',opacity:.95})+
+               F(rectD(x+16,y+13,120,7),{fill:'#3A3A3A'})+
+               F(rectD(x+146,y+13,48,7),{fill:ACCENT}), null, a1));
+  }
+  /* 2 — a testimonial quote is drawn, then struck through */
+  const a2=seg(t,40.4,40.75);
+  if(a2>0){
+    const x=SX+50, y=SY+SH-150;
+    o.push(grp(P(`M ${x} ${y} q 0 -36 32 -42 M ${x+52} ${y} q 0 -36 32 -42`,1,
+                 {stroke:'#F2EFE8',w:9,opacity:.85}), null, a2));
+    o.push(P(lineD(x-18,y-54,x+104,y+18), a2, {stroke:ACCENT,w:8}));
+  }
+  /* 3 — the claim gets a rule under it */
+  const a3=seg(t,42.2,42.7);
+  if(a3>0){
+    const rx=SX+VAR[SV].cap[0]*SW+22, ry=SY+SH-20;
+    o.push(P(lineD(rx,ry,rx+SW*0.26,ry), a3, {stroke:ACCENT,w:7}));
+  }
+  /* a hand gesture, not a UI animation */
+  o.push(P('M 906 358 C 986 462, 946 686, 700 724 C 442 760, 186 718, 170 552'
+         +' C 156 402, 348 336, 596 340 C 740 342, 842 350, 914 372', seg(t,44.0,44.5),
+         {stroke:ACCENT,w:6,opacity:.8}));
+  return o.join('');
+}
+
+/* ---- S8 BUILD : the page it lands on, and the motion layer ----
+   The three primitives are shown INSIDE three mini ads, because a caption bar
+   with nothing to caption is a rectangle. */
+const BX=560, BY=118, BW=800, BH=452;
+function mini(x,y,w,h){
+  return F(rectD(x,y,w,h),{fill:PLATE})
+       + F(rectD(x+w*0.12,y+h*0.20,w*0.34,h*0.42),{fill:'#5E5A54'})
+       + P(rectD(x,y,w,h),1,{w:3,opacity:.5,stroke:'#000'});
+}
+function s8(t){
+  const o=[], dp=seg(t,45.0,46.4), snap=seg(t,47.2,47.4);
+  if(snap<1){
+    o.push(P(wobbleRect(BX,BY,BW,BH,500,3), clamp(dp*2,0,1), {w:5}));
+    const q=clamp(dp*2-1,0,1);
+    o.push(P(lineD(BX,BY+52,BX+BW,BY+52), q, {w:4}));
+    o.push(P(wobbleRect(BX+36,BY+86,BW-72,190,501,2), clamp(q*3,0,1), {w:4,opacity:.85}));
+    o.push(P(lineD(BX+36,BY+312,BX+BW-240,BY+312), clamp(q*3-1,0,1), {w:4,opacity:.7}));
+    o.push(P(lineD(BX+36,BY+350,BX+BW-130,BY+350), clamp(q*3-1.3,0,1), {w:4,opacity:.7}));
+    o.push(P(wobbleRect(BX+36,BY+382,200,52,502,2), clamp(q*3-1.8,0,1), {w:4,opacity:.85}));
+  }
+  if(snap>0){
+    const g=[];
+    g.push(F(rectD(BX,BY,BW,BH),{fill:'#FFFFFF'}));
+    g.push(F(rectD(BX,BY,BW,52),{fill:'#E4E0D8'}));
+    for(let i=0;i<3;i++) g.push(F(circD(BX+24+i*22,BY+26,6),{fill:'#B5B0A6'}));
+    g.push(F(rectD(BX+36,BY+86,BW-72,190),{fill:PLATE}));
+    g.push(F(rectD(BX+64,BY+134,280,17),{fill:LIGHT}));
+    g.push(F(rectD(BX+64,BY+168,186,11),{fill:'#9A968E'}));
+    g.push(F(rectD(BX+36,BY+306,BW-260,13),{fill:'#3A3A3A'}));
+    g.push(F(rectD(BX+36,BY+344,BW-150,13),{fill:'#7A7A7A'}));
+    g.push(F(rectD(BX+36,BY+382,200,52),{fill:ACCENT}));
+    g.push(F(rectD(BX+74,BY+403,124,11),{fill:'#FFFFFF',opacity:.85}));
+    g.push(P(rectD(BX,BY,BW,BH),1,{w:4,opacity:.9}));
+    o.push(grp(g.join(''),null,snap));
+  }
+  const MW=380, MH=214, MY=640, MXS=[300,770,1240];
+  const up=seg(t,49.2,49.6);
+  if(up>0) for(const x of MXS) o.push(grp(mini(x,MY,MW,MH),null,up));
+  /* 1 captions type on */
+  const cap=seg(t,49.6,50.4);
+  if(cap>0){
+    const x=MXS[0], g=[F(rectD(x+22,MY+MH-58,MW-44,40),{fill:'#0D0D0D',opacity:.86})];
+    const chips=[92,64,120]; let cx=x+38;
+    for(let i=0;i<3;i++){ g.push(F(rectD(cx,MY+MH-45,chips[i],14),{fill:LIGHT,opacity:clamp(cap*3.6-i,0,1)})); cx+=chips[i]+12; }
+    o.push(g.join(''));
+  }
+  /* 2 an end card wipes in */
+  const ec=seg(t,50.6,51.3);
+  if(ec>0){
+    const x=MXS[1], w=MW*easeOut(ec);
+    o.push(`<clipPath id="ecc"><rect x="${x}" y="${MY}" width="${w.toFixed(1)}" height="${MH}"/></clipPath>`
+      +`<g clip-path="url(#ecc)">${F(rectD(x,MY,MW,MH),{fill:'#EFEBE3'})}`
+      +`${F(rectD(x+96,MY+72,188,15),{fill:'#2A2A2A'})}`
+      +`${F(rectD(x+130,MY+100,120,10),{fill:'#8A867E'})}`
+      +`${F(rectD(x+140,MY+128,100,8),{fill:ACCENT})}</g>`);
+  }
+  /* 3 a lower third slides in */
+  const lt=seg(t,51.6,52.2);
+  if(lt>0){
+    const x=MXS[2], dx=lerp(-MW,0,easeOut(lt));
+    o.push(grp(F(rectD(x+18,MY+MH-84,MW*0.80,64),{fill:'#0D0D0D',opacity:.92})+
+               F(rectD(x+40,MY+MH-70,168,14),{fill:LIGHT})+
+               F(rectD(x+40,MY+MH-46,108,10),{fill:'#9A968E'})+
+               F(rectD(x+18,MY+MH-84,8,64),{fill:ACCENT}), `translate(${dx.toFixed(1)} 0)`));
+  }
+  return o.join('');
+}
+
+/* ---- S9 START : the snap, applied to the viewer ----
+   Wheels sit ON the road line, the cab connects to the box, and the livery panel
+   is left BLANK — the client's mark goes there, and we never draw one. */
+const GX=460, GY=190, GW=1000, GH=563;
+function s9(t,f){
+  const o=[], SNAP=Math.round(55.4*FPS);
+  o.push(P(wobbleRect(GX,GY,GW,GH,600,3), seg(t,52.8,53.6), {w:6}));
+  const snapped=f>=SNAP;
+  const HZ9=GY+470, vx=GX+120, vy=GY+290, ax=GX+640, ay=GY+180;
+  if(!snapped){
+    const p=seg(t,53.6,54.6);
+    o.push(P(lineD(GX+30,HZ9,GX+GW-30,HZ9), clamp(p*3,0,1), {w:4,opacity:.8}));
+    o.push(P(`M ${vx} ${vy+150} L ${vx} ${vy+40} L ${vx+250} ${vy+40} L ${vx+250} ${vy+150} Z`, clamp(p*3-0.3,0,1),{w:5}));
+    o.push(P(`M ${vx+250} ${vy+150} L ${vx+250} ${vy+72} L ${vx+318} ${vy+72} L ${vx+364} ${vy+124} L ${vx+364} ${vy+150} Z`, clamp(p*3-0.7,0,1),{w:5}));
+    o.push(P(circD(vx+74,vy+150,30), clamp(p*3-1.2,0,1), {w:5}));
+    o.push(P(circD(vx+298,vy+150,30), clamp(p*3-1.4,0,1), {w:5}));
+    o.push(P(`M ${ax} ${ay+110} L ${ax+30} ${ay+40} L ${ax+230} ${ay+40} L ${ax+260} ${ay+110} Z`, clamp(p*3-1.0,0,1),{w:5}));
+    o.push(P(rectD(ax+30,ay+110,200,180), clamp(p*3-1.6,0,1), {w:5}));
+  } else {
+    const k=clamp((f-SNAP)/4,0,1), sc=1+0.030*(1-easeOut(k));
+    const g=[];
+    g.push(F(rectD(GX+4,GY+4,GW-8,HZ9-GY-4),{fill:'url(#skyGrad)'}));
+    g.push(F(rectD(GX+4,HZ9,GW-8,GY+GH-HZ9-4),{fill:'#565450'}));
+    g.push(`<ellipse cx="${ax+130}" cy="${HZ9+6}" rx="132" ry="15" fill="#000" opacity="0.38" filter="url(#soft)"/>`);
+    g.push(`<ellipse cx="${vx+190}" cy="${HZ9+6}" rx="196" ry="17" fill="#000" opacity="0.38" filter="url(#soft)"/>`);
+    g.push(F(rectD(ax+30,ay+110,200,180),{fill:'#78848E'}));
+    g.push(`<path d="M ${ax} ${ay+110} L ${ax+30} ${ay+40} L ${ax+230} ${ay+40} L ${ax+260} ${ay+110} Z" fill="${ACCENT}"/>`);
+    g.push(F(rectD(vx,vy+40,250,110),{fill:'#DCD7CE'}));
+    g.push(`<path d="M ${vx+250} ${vy+150} L ${vx+250} ${vy+72} L ${vx+318} ${vy+72} L ${vx+364} ${vy+124} L ${vx+364} ${vy+150} Z" fill="#DCD7CE"/>`);
+    g.push(F(rectD(vx+262,vy+82,48,34),{fill:'#8C99A4'}));
+    g.push(F(rectD(vx+28,vy+64,150,58),{fill:'#F2EFE8'}));
+    g.push(P(rectD(vx+28,vy+64,150,58),1,{stroke:ACCENT,w:5}));
+    g.push(P(`M ${vx+250} ${vy+40} L ${vx} ${vy+40} L ${vx} ${vy+150} L ${vx+364} ${vy+150}`,1,{w:4,opacity:.85}));
+    g.push(P(`M ${vx+250} ${vy+72} L ${vx+318} ${vy+72} L ${vx+364} ${vy+124} L ${vx+364} ${vy+150}`,1,{w:4,opacity:.85}));
+    g.push(F(circD(vx+74,vy+150,30),{fill:PLATE}));
+    g.push(F(circD(vx+298,vy+150,30),{fill:PLATE}));
+    g.push(P(rectD(GX,GY,GW,GH),1,{w:5,opacity:.9}));
+    const cx=GX+GW/2, cy=GY+GH/2;
+    o.push(grp(g.join(''), `translate(${cx} ${cy}) scale(${sc.toFixed(5)}) translate(${-cx} ${-cy})`));
+  }
+  const sc=lerp(1,1.03,easeIO(seg(t,52.5,57.2)));
+  return grp(o.join(''), `translate(${W/2} ${H/2}) scale(${sc.toFixed(5)}) translate(${-W/2} ${-H/2})`);
+}
+
+/* ---- S10 END : provisional type-only card ---- */
+function s10(t){
+  return P(lineD(700,545,1220,545), seg(t,57.8,58.4), {stroke:ACCENT,w:10});
+}
+
+/* =====================================================================
+   FRAME ASSEMBLY
+   ===================================================================== */
+function wipe(t,a,b){ return -W*easeIO(seg(t,a,b)); }   /* board clears left */
+
+function renderArt(t,f){
+  const o=[];
+  if(t<7.6)                 o.push(grp(s1(t),  `translate(${wipe(t,7.0,7.6)} 0)`));
+  if(t>=7.0  && t<15.6)     o.push(grp(s2(t),  `translate(${wipe(t,15.0,15.6)} 0)`));
+  if(t>=15.0 && t<26.5)     o.push(grp(s34(t,f),`translate(${wipe(t,26.0,26.5)} 0)`));
+  if(t>=26.0 && t<37.0)     o.push(grp(s56(t), `translate(${wipe(t,36.5,37.0)} 0)`));
+  if(t>=36.5 && t<45.0)     o.push(grp(s7(t),  `translate(${wipe(t,44.5,45.0)} 0)`));
+  if(t>=44.5 && t<53.0)     o.push(grp(s8(t),  `translate(${wipe(t,52.5,53.0)} 0)`));
+  if(t>=52.5 && t<57.5)     o.push(grp(s9(t,f),null, 1-seg(t,57.2,57.45)));
+  if(t>=57.2)               o.push(s10(t));
+  return o.join('');
+}
+
+function renderText(t){
+  const o=[];
+  for(const T of TEXTS){
+    let a=0;
+    if(t>=T.in-FADE && t<=T.out+FADE){
+      a = Math.min(seg(t,T.in-FADE,T.in), 1-seg(t,T.out,T.out+FADE));
+    }
+    if(a<=0.001) continue;
+    const dy = lerp(10,0,easeOut(seg(t,T.in-FADE,T.in+0.10)));
+    const left = T.a==='c' ? T.x : T.x;
+    const tf = T.a==='c' ? 'translate(-50%,-50%)' : 'translate(0,-50%)';
+    o.push(`<div class="t ${T.a} ${T.cls||''}" style="left:${left}px;top:${(T.y+dy).toFixed(2)}px;`
+         + `width:${T.w}px;font-size:${T.sz}px;opacity:${a.toFixed(4)};`
+         + `transform:${tf}${T.a==='c'?'':''};${T.a==='c'?`margin-left:${-T.w/2}px;transform:translate(0,-50%);`:''}">`
+         + T.s.replace(/&/g,'&amp;').replace(/</g,'&lt;') + `</div>`);
+  }
+  return o.join('');
+}
+
+function render(f){
+  f = clamp(Math.round(f),0,TOTAL-1);
+  const t = f/FPS;
+  document.getElementById('scene').innerHTML = renderArt(t,f);
+  document.getElementById('txt').innerHTML   = renderText(t);
+  document.title = 'f'+f+' t'+t.toFixed(3);
+  window.__frame = f;
+  return f;
+}
+window.setFrame = render;
+
+/* contrast reporting — printed, never asserted */
+function lum(hex){
+  const c=[1,3,5].map(i=>parseInt(hex.substr(i,2),16)/255)
+    .map(v=>v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4));
+  return 0.2126*c[0]+0.7152*c[1]+0.0722*c[2];
+}
+function ratio(a,b){const l1=lum(a),l2=lum(b);const [x,y]=l1>l2?[l1,l2]:[l2,l1];return (x+0.05)/(y+0.05);}
+window.__contrast = {
+  'ink_on_ground'   : +ratio(INK,GROUND).toFixed(2),
+  'accent_on_ground': +ratio(ACCENT,GROUND).toFixed(2),
+  'light_on_plate'  : +ratio(LIGHT,PLATE).toFixed(2)
+};
+
+const q = new URLSearchParams(location.search);
+render(parseInt(q.get('frame')||'0',10));
+</script>
