@@ -107,10 +107,52 @@ The string is on screen. The full-string match fails on the **curly apostrophe (
 OCR does not return faithfully. The typography is correct and stays; the harness limitation is
 recorded, and `--expect` strings should avoid apostrophes.
 
-## 3. Skeptic — isolated, four lenses
+## 3. Skeptic — isolated, four lenses — VERDICT: **BLOCK**
 
-*(pending — running in an isolated context with no production reasoning; forbidden from reading
-the challenger board, the benefit audit, the script, the storyboard or the worklog)*
+Ran against the pre-boil challenger master, in isolation (it disclosed reading `build/out/README.md`,
+which was not on the prohibited list, and re-derived every fact it used from the frames itself).
+
+**Driving count: 14 × S4, 23 × S3.** One S3 blocks; there are thirty-seven.
+
+### The four findings that would each block on their own
+
+| # | Finding | Class |
+|---|---|---|
+| 1 | **`So it doesn't look fake.` is written across a cartoon.** The film's one realism claim sits on the least real image in it — the company's stated moat, refuted by its own hero in a single screenshot | Self-refuting claim — S4 |
+| 2 | **`Can't get pulled.`** is an absolute guarantee about third-party platform moderation, from a company `company-profile.md` records as never having shipped a paid ad. `compliance.md`: "No written confirmation = the claim is absent" | Unsubstantiated guarantee — S4 |
+| 3 | **`Get your free growth audit.`** — the film's only CTA names an offer that exists in no company document, has no destination, and is new information at the endcard | Unbacked offer — S4 (independently caught 2026-08-30, now gate-confirmed) |
+| 4 | **The loop joins a blank frame to a blank frame.** "Seamless" was technically true and substantively empty: ~2.9s of dead cream at every pass, and the loop's real sentence is *"Get your free growth audit → [blank] → You paid. It didn't ring."* | Loop design — S4 |
+
+### Findings that are MINE, stated as such
+
+- **I reintroduced the 5–7 days defect.** On 2026-08-28 I caught the VO dropping "business days, from
+  receipt of client assets" and fixed it in the control's burned text. In the challenger I wrote
+  `4 ads · 5–7 days` — both qualifiers dropped again, by me, in the very cut built to fix claim
+  hygiene. Second occurrence of the class, same author.
+- **The unlabeled checklist is my own earlier "fix".** I moved the compliance labels out of the
+  burned text into the VO to stop the picture and voice duplicating — on a film with **no audio**.
+  Result: three checkmarks proving nothing. The de-duplication was right for a sound-on film and
+  wrong for this placement.
+- **Blocking check 28 (text safe-area, 15–70% of frame height) fails on 10 of 13 strings** —
+  measured at 81–94%. I never ran the check. On a mobile hero crop that band is exactly what gets
+  cut. Wholesale layout violation, mine.
+- **`Nobody comes to your site.`** — I meant *jobsite*; on a website it reads as *website* and
+  self-refutes in placement. Copy defect, mine.
+- **The Hook Law fails**: frame 1 is 0.000% ink. The film opens on a blank screen.
+
+### Findings mooted or partially mooted by the boil (§2b)
+
+The pixel-level freeze findings (L1-08, LP-04 in part) are addressed by the 10 Hz boil. **The
+composition-level stillness is not**: 26.8–32.8 remains six seconds where only the caption changes,
+and ~31% of runtime still carries no words. Shimmering lines do not fix an empty message hole.
+
+### Disputed / needs frame-check
+
+- `no-flash-cuts` overlap: the 2-frame snap is a transition inside a shot, not a shot. Harness says
+  frame-check before trusting; still pending.
+- L3-03's "play glyph is a literal `>`": it is a drawn triangle at low draw-progress in that frame;
+  at full draw it closes. Partially an artifact of sampling mid-draw — but if a sampled frame reads
+  that way, a paused viewer sees the same thing, so the finding stands at S2 for the sketch state.
 
 ## 4. Kobe creative critic — ServicePow-6 + the Direct-Response lens
 
