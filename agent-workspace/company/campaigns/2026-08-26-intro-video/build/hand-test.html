@@ -1,0 +1,86 @@
+<!doctype html><meta charset="utf-8"><title>hand + phone — line-art prototype</title>
+<style>
+ *{margin:0;padding:0;box-sizing:border-box}
+ body{background:#F7F5F0}
+ #s{position:relative;width:1920px;height:1080px;background:#F7F5F0;
+    font-family:'Liberation Sans',Arial,sans-serif}
+ .cap{position:absolute;font-size:22px;letter-spacing:.16em;text-transform:uppercase;opacity:.55}
+</style>
+<div id="s"><svg id="a" viewBox="0 0 1920 1080" width="1920" height="1080"></svg></div>
+<script>
+const INK='#1A1A1A', ACCENT='#1B5FA8';
+const rnd=s=>{let x=s>>>0;return()=>{x^=x<<13;x>>>=0;x^=x>>17;x^=x<<5;x>>>=0;return x/4294967296}};
+function P(d,o={}){const w=o.w||5,op=o.opacity==null?1:o.opacity,st=o.stroke||INK;
+  return `<path d="${d}" fill="${o.fill||'none'}" stroke="${st}" stroke-width="${w}" opacity="${op}" stroke-linecap="round" stroke-linejoin="round"/>`}
+function wob(x,y,w,h,seed,amp=3,r=0){const q=rnd(seed),o=()=>(q()-.5)*2*amp;
+  if(!r) return `M ${x+o()} ${y+o()} L ${x+w+o()} ${y+o()} L ${x+w+o()} ${y+h+o()} L ${x+o()} ${y+h+o()} Z`;
+  return `M ${x+r+o()} ${y+o()} L ${x+w-r+o()} ${y+o()} Q ${x+w+o()} ${y+o()} ${x+w+o()} ${y+r+o()}`
+       + ` L ${x+w+o()} ${y+h-r+o()} Q ${x+w+o()} ${y+h+o()} ${x+w-r+o()} ${y+h+o()}`
+       + ` L ${x+r+o()} ${y+h+o()} Q ${x+o()} ${y+h+o()} ${x+o()} ${y+h-r+o()}`
+       + ` L ${x+o()} ${y+r+o()} Q ${x+o()} ${y+o()} ${x+r+o()} ${y+o()} Z`}
+
+/* ---- hand + phone, v3 ----
+   v1 failed (wrist read as a lasso). v2 read as a hand but cluttered the screen and the
+   thumb floated. v3 fixes the real error: TOO MUCH HAND. The grip now enters from the
+   bottom of the frame, so the wrist is cropped by the frame edge and never drawn. Only
+   what a real held-phone photo shows: the heel of the hand under the phone, a thumb up
+   the right bezel, two fingertips at the left bezel. Nothing crosses the screen. */
+function handPhone(cx, cy, sc, opts={}){
+  const g=[], S=v=>v*sc;
+  const PW=S(300), PH=S(560), px=cx-PW/2, py=cy-PH/2;
+  const bot = py+PH;
+
+  if(!opts.noHand){
+    /* heel of the hand: a wide mass rising from below the frame, behind the phone */
+    g.push(P(`M ${px+S(4)} ${bot+S(170)} C ${px-S(24)} ${bot+S(66)}, ${px-S(10)} ${bot-S(2)}, ${px+S(56)} ${bot-S(22)}`
+            +` L ${px+PW-S(40)} ${bot-S(22)} C ${px+PW+S(18)} ${bot-S(6)}, ${px+PW+S(34)} ${bot+S(74)}, ${px+PW+S(16)} ${bot+S(170)}`,
+            {w:S(5),fill:'#F7F5F0'}));
+    /* cuff — ends the hand deliberately instead of letting it trail off */
+    g.push(P(`M ${px+S(2)} ${bot+S(150)} C ${px+S(90)} ${bot+S(186)}, ${px+PW-S(70)} ${bot+S(186)}, ${px+PW+S(18)} ${bot+S(150)}`,{w:S(5)}));
+  }
+
+  /* the phone sits in front of the heel */
+  g.push(P(wob(px,py,PW,PH,4101,2.2,S(34)),{w:S(6),fill:'#F7F5F0'}));
+  const ix=px+S(22), iy=py+S(34), iw=PW-S(44), ih=PH-S(76);
+  if(opts.screen==='dark'){
+    g.push(P(wob(ix,iy,iw,ih,4102,1.6,S(20)),{w:S(4),opacity:.55,fill:'#DEDAD2'}));
+  } else if(opts.screen==='frame'){
+    g.push(P(wob(ix,iy,iw,ih,4102,1.6,S(20)),{w:S(4),opacity:.9,fill:'#EFECE4'}));
+    g.push(P(`M ${ix+S(14)} ${iy+ih*0.62} L ${ix+iw-S(14)} ${iy+ih*0.62}`,{w:S(4),opacity:.8}));
+    g.push(P(wob(ix+S(26),iy+ih*0.40,iw*0.42,ih*0.22,4103,2),{w:S(4),opacity:.85}));
+    g.push(P(`M ${ix+iw*0.62} ${iy+ih*0.62} L ${ix+iw*0.66} ${iy+ih*0.44} L ${ix+iw*0.90} ${iy+ih*0.44} L ${ix+iw*0.94} ${iy+ih*0.62} Z`,{w:S(4),opacity:.85}));
+    g.push(`<circle cx="${ix+iw-S(30)}" cy="${iy+S(30)}" r="${S(11)}" fill="${ACCENT}"/>`);
+  }
+
+  if(opts.noHand) return g.join('');
+
+  /* thumb up the RIGHT bezel — sits on the frame, never on the screen */
+  const tx=px+PW-S(6), ty=bot-S(34);
+  g.push(`<g transform="rotate(-16 ${tx} ${ty})">`
+    + P(`M ${tx-S(52)} ${ty} C ${tx-S(56)} ${ty-S(96)}, ${tx-S(18)} ${ty-S(150)}, ${tx+S(18)} ${ty-S(146)}`
+       +` C ${tx+S(52)} ${ty-S(142)}, ${tx+S(56)} ${ty-S(40)}, ${tx+S(40)} ${ty+S(24)}`,{w:S(5),fill:'#F7F5F0'})
+    + P(`M ${tx-S(34)} ${ty-S(104)} C ${tx-S(6)} ${ty-S(116)}, ${tx+S(20)} ${ty-S(110)}, ${tx+S(34)} ${ty-S(96)}`,{w:S(3.5),opacity:.5})
+    + `</g>`);
+
+  /* two fingertips at the LEFT bezel */
+  [0.62,0.78].forEach((t,i)=>{
+    const y=py+PH*t, L=S(58), T=S(42), x0=px-S(30);
+    g.push(`<g transform="rotate(${i?5:-3} ${x0} ${y})">`
+      + P(`M ${x0} ${y-T/2} L ${x0+L-T*0.6} ${y-T/2} Q ${x0+L} ${y-T/2} ${x0+L} ${y}`
+         +` Q ${x0+L} ${y+T/2} ${x0+L-T*0.6} ${y+T/2} L ${x0} ${y+T/2}`,{w:S(5),fill:'#F7F5F0'})
+      + `</g>`);
+  });
+  return g.join('');
+}
+
+const o=[];
+o.push(`<g>${handPhone(330,430,0.72,{screen:'dark'})}</g>`);
+o.push(`<g transform="translate(960 0) rotate(-7 0 430)">${handPhone(0,430,0.72,{screen:'frame'})}</g>`);
+o.push(`<g>${handPhone(1600,430,0.72,{screen:'dark',noHand:true})}</g>`);
+document.getElementById('a').innerHTML=o.join('');
+document.getElementById('s').insertAdjacentHTML('beforeend',
+ `<div class="cap" style="left:150px;top:850px">A &nbsp;·&nbsp; hook — held, screen dark</div>
+  <div class="cap" style="left:790px;top:850px">B &nbsp;·&nbsp; beat 4 — raised, filming</div>
+  <div class="cap" style="left:1440px;top:850px">C &nbsp;·&nbsp; no hand at all</div>
+  <div class="cap" style="left:150px;top:60px;font-size:26px;opacity:.8">hand + phone v3 — grip cropped by the frame edge &nbsp;·&nbsp; no face, no identifiable person &nbsp;·&nbsp; C is the honest alternative</div>`);
+</script>
