@@ -77,6 +77,14 @@ have satisfied the detector and fixed nothing; that was considered and rejected.
 
 Verified: `PSNR(frame 300, frame 301)` was **inf** (pixel-identical) before, **43.45 dB** after.
 
+**Re-run on the boiled master:** frozen time **43.7s → ~15.5s** (17 sections → 7). The seven
+survivors are the elements the boil does not reach — beats built from plain straight strokes
+(`lineD` road lines, the van and shopfront paths, the checklist ticks) and the blank open. The fix
+carried into the repair round as a build rule: **every stroke is a hand-drawn wobble line** —
+ruler-straight lines are off-style for a marker film regardless, and wobble lines boil for free.
+The remaining `no-frozen-sections` FAIL is therefore expected to clear in the repair render, and
+must be proven there, not asserted here.
+
 ### 2c. `audio-*` FAIL is a harness gap, not a film defect — but it needs a ruling
 
 Both cuts are silent by design. `video-production.md` step 4b: *"homepage heroes and most feed
