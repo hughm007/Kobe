@@ -26,6 +26,7 @@ def main():
     ap.add_argument("--all",   action="store_true")
     ap.add_argument("--out",   default="frames")
     ap.add_argument("--every", type=int, default=1, help="stride, for contact sheets")
+    ap.add_argument("--cut",   default="control", choices=["control","challenger"])
     a = ap.parse_args()
 
     start = 0 if a.all else a.start
@@ -46,9 +47,10 @@ def main():
         page.on("pageerror", lambda e: errors.append(f"pageerror: {e}"))
         page.on("console", lambda m: errors.append(f"console.{m.type}: {m.text}")
                 if m.type in ("error", "warning") else None)
-        page.goto((HERE / "scenes.html").as_uri(), wait_until="load")
+        page.goto((HERE / "scenes.html").as_uri() + f"?cut={a.cut}", wait_until="load")
 
         contrast = page.evaluate("window.__contrast")
+        print(f"CUT: {a.cut}")
         print("CONTRAST RATIOS (measured, not asserted):", json.dumps(contrast))
         for k, v in contrast.items():
             print(f"  {k:18s} {v:6.2f}  {'PASS >=4.5' if v >= 4.5 else 'BELOW 4.5'}")

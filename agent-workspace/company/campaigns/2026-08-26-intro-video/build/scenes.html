@@ -19,6 +19,7 @@
   .t.c{text-align:center;transform:translate(-50%,-50%)}
   .t.l{text-align:left;transform:translate(0,-50%)}
   .wm{font-weight:700;letter-spacing:.20em}
+  .bug{opacity:.40}
 </style>
 
 <div id="stage">
@@ -53,6 +54,7 @@
    ===================================================================== */
 
 const FPS = 30, TOTAL = 1800;              /* 60.000s */
+const CUT = new URLSearchParams(location.search).get('cut') || 'control';
 const W = 1920, H = 1080;
 const ACCENT = '#1B5FA8', INK = '#1A1A1A', GROUND = '#F7F5F0',
       PLATE = '#232323', LIGHT = '#E8E4DC';
@@ -91,6 +93,14 @@ function circD(cx,cy,r){                       /* one-path circle, draws clockwi
 function wobbleRect(x,y,w,h,seed,amp=3){
   const r=rnd(seed), o=()=> (r()-0.5)*2*amp;
   return `M ${x+o()} ${y+o()} L ${x+w+o()} ${y+o()} L ${x+w+o()} ${y+h+o()} L ${x+o()} ${y+h+o()} Z`;
+}
+/* rounded hand-drawn rect — the square-cornered wobbleRect above stays as the control uses it */
+function wobRound(x,y,w,h,seed,amp=3,r=20){
+  const q=rnd(seed), o=()=>(q()-0.5)*2*amp;
+  return `M ${x+r+o()} ${y+o()} L ${x+w-r+o()} ${y+o()} Q ${x+w+o()} ${y+o()} ${x+w+o()} ${y+r+o()}`
+       + ` L ${x+w+o()} ${y+h-r+o()} Q ${x+w+o()} ${y+h+o()} ${x+w-r+o()} ${y+h+o()}`
+       + ` L ${x+r+o()} ${y+h+o()} Q ${x+o()} ${y+h+o()} ${x+o()} ${y+h-r+o()}`
+       + ` L ${x+o()} ${y+r+o()} Q ${x+o()} ${y+o()} ${x+r+o()} ${y+o()} Z`;
 }
 function grp(inner,tf,op){
   return `<g${tf?` transform="${tf}"`:''}${op!=null?` opacity="${op.toFixed(4)}"`:''}>${inner}</g>`;
@@ -474,6 +484,187 @@ function s10(t){
 }
 
 /* =====================================================================
+   CHALLENGER CUT  (?cut=challenger)
+   Benefit-led. Muted-first: the burned text is the whole message, because the
+   Owner confirmed this runs as an autoplay-muted looping homepage hero.
+   Beat 2 is the Owner's own line. The endcard mirrors the site's primary button.
+   ===================================================================== */
+const TEXTS_CH = [
+ /* K0 — persistent corner mark. On an autoplay LOOP the viewer joins at an arbitrary
+    second, so the company has to be identifiable at every one of them. Off at t=0 and
+    t=59.97 so the seamless loop handoff is preserved. */
+ {id:'K0', s:'SERVICE POW', in:1.5, out:55.0, x:96, y:1006, sz:26, a:'l', w:420, cls:'wm bug'},
+ {id:'K1', s:'You paid. It didn’t ring.',      in:2.6, out:7.4, x:960, y:900, sz:62, a:'c', w:1200},
+ {id:'K2', s:'You’re busy. Your ads aren’t.', in:9.4, out:14.6,x:960, y:900, sz:62, a:'c', w:1200},
+ {id:'K3', s:'2 ideas × 2 hooks',              in:16.4,out:20.4,x:960, y:150, sz:54, a:'c', w:1200},
+ {id:'K4', s:'Keep the one that pulls.',           in:20.8,out:23.4,x:960, y:1010,sz:58, a:'c', w:1400},
+ {id:'K5', s:'4 ads · 5–7 days',          in:23.6,out:24.9,x:960, y:1010,sz:46, a:'c', w:1200},
+ {id:'K6', s:'Clips off your phone.',              in:26.6,out:29.6,x:960, y:975, sz:60, a:'c', w:1400},
+ {id:'K7', s:'Nobody comes to your site.',         in:29.9,out:32.8,x:960, y:975, sz:60, a:'c', w:1400},
+ {id:'K8', s:'Your van. Your street.',             in:35.0,out:38.2,x:960, y:960, sz:58, a:'c', w:1400},
+ {id:'K9', s:'So it doesn’t look fake.',       in:38.5,out:41.8,x:960, y:960, sz:58, a:'c', w:1400},
+ {id:'K10',s:'Can’t get pulled.',              in:46.2,out:48.6,x:300, y:532, sz:58, a:'l', w:900},
+ {id:'K11',s:'We make the first one before you ask.',in:50.4,out:55.2,x:960,y:930,sz:56,a:'c',w:1500},
+ {id:'K12',s:'SERVICE POW',                        in:55.7,out:59.4,x:960, y:470, sz:112,a:'c', w:1500, cls:'wm'},
+ {id:'K13',s:'Get your free growth audit.',        in:55.9,out:59.4,x:960, y:632, sz:44, a:'c', w:1100}
+];
+
+/* ---- the hand: v4 geometry. Grip cropped by the frame; nothing crosses the screen. ---- */
+function handPhone(cx, cy, sc, o2={}){
+  const g=[], S=v=>v*sc;
+  const PW=S(300), PH=S(560), px=cx-PW/2, py=cy-PH/2, bot=py+PH;
+  const dr = o2.draw==null?1:o2.draw;
+  g.push(P(`M ${px+S(4)} ${bot+S(170)} C ${px-S(24)} ${bot+S(66)}, ${px-S(10)} ${bot-S(2)}, ${px+S(56)} ${bot-S(22)}`
+          +` L ${px+PW-S(40)} ${bot-S(22)} C ${px+PW+S(18)} ${bot-S(6)}, ${px+PW+S(34)} ${bot+S(74)}, ${px+PW+S(16)} ${bot+S(170)}`,
+          clamp(dr*3,0,1),{w:S(5)}));
+  g.push(P(`M ${px+S(2)} ${bot+S(150)} C ${px+S(90)} ${bot+S(186)}, ${px+PW-S(70)} ${bot+S(186)}, ${px+PW+S(18)} ${bot+S(150)}`,
+          clamp(dr*3-0.5,0,1),{w:S(5)}));
+  g.push(P(wobRound(px,py,PW,PH,4101,2.2,S(34)), clamp(dr*3-0.9,0,1),{w:S(6)}));
+  const ix=px+S(22), iy=py+S(34), iw=PW-S(44), ih=PH-S(76);
+  const sp=clamp(dr*3-1.4,0,1);
+  if(o2.screen==='dark') o2.screenFill='#DEDAD2';
+  if(sp>0 && o2.screen){
+    o2.__ix=ix; o2.__iy=iy; o2.__iw=iw; o2.__ih=ih;
+    g.push(F(rectD(ix,iy,iw,ih),{fill:o2.screen==='dark'?'#DEDAD2':'#EFECE4',opacity:sp}));
+    if(o2.screen==='film'){
+      const gg=[];
+      gg.push(P(lineD(ix+S(14),iy+ih*0.66,ix+iw-S(14),iy+ih*0.66),1,{w:S(4),opacity:.8}));
+      gg.push(P(wobbleRect(ix+S(24),iy+ih*0.42,iw*0.44,ih*0.24,4103,2),1,{w:S(4),opacity:.9}));
+      gg.push(P(circD(ix+S(46),iy+ih*0.66,S(13)),1,{w:S(3.5),opacity:.9}));
+      gg.push(P(circD(ix+S(110),iy+ih*0.66,S(13)),1,{w:S(3.5),opacity:.9}));
+      gg.push(P(`M ${ix+iw*0.62} ${iy+ih*0.66} L ${ix+iw*0.66} ${iy+ih*0.46} L ${ix+iw*0.90} ${iy+ih*0.46} L ${ix+iw*0.94} ${iy+ih*0.66} Z`,1,{w:S(4),opacity:.9}));
+      g.push(grp(gg.join(''),null,sp));
+      g.push(`<circle cx="${ix+iw-S(30)}" cy="${iy+S(30)}" r="${S(11)}" fill="${ACCENT}" opacity="${sp.toFixed(3)}"/>`);
+    }
+    g.push(P(wobRound(ix,iy,iw,ih,4102,1.6,S(20)),1,{w:S(4),opacity:.55*sp}));
+  }
+  const tp=clamp(dr*3-1.9,0,1);
+  const tx=px+PW-S(6), ty=bot-S(34);
+  g.push(`<g transform="rotate(-16 ${tx} ${ty})">`
+    + P(`M ${tx-S(52)} ${ty} C ${tx-S(56)} ${ty-S(96)}, ${tx-S(18)} ${ty-S(150)}, ${tx+S(18)} ${ty-S(146)}`
+       +` C ${tx+S(52)} ${ty-S(142)}, ${tx+S(56)} ${ty-S(40)}, ${tx+S(40)} ${ty+S(24)}`, tp,{w:S(5),fill:'#F7F5F0'})
+    + P(`M ${tx-S(34)} ${ty-S(104)} C ${tx-S(6)} ${ty-S(116)}, ${tx+S(20)} ${ty-S(110)}, ${tx+S(34)} ${ty-S(96)}`, tp,{w:S(3.5),opacity:.5})
+    + `</g>`);
+  [0.62,0.78].forEach((t2,i)=>{
+    const y=py+PH*t2, L=S(58), T=S(42), x0=px-S(30);
+    g.push(`<g transform="rotate(${i?5:-3} ${x0} ${y})">`
+      + P(`M ${x0} ${y-T/2} L ${x0+L-T*0.6} ${y-T/2} Q ${x0+L} ${y-T/2} ${x0+L} ${y}`
+         +` Q ${x0+L} ${y+T/2} ${x0+L-T*0.6} ${y+T/2} L ${x0} ${y+T/2} Z`, tp,{w:S(5),fill:'#F7F5F0'})
+      + `</g>`);
+  });
+  return g.join('');
+}
+
+/* a work van in marker line art, reused as the wedge signal and as "the real part" */
+function vanArt(x,y,sc,p,filled){
+  const g=[], S=v=>v*sc;
+  const bw=S(250), bh=S(110);
+  if(filled){
+    g.push(F(rectD(x,y,bw,bh),{fill:'#DCD7CE'}));
+    g.push(`<path d="M ${x+bw} ${y+bh} L ${x+bw} ${y+S(32)} L ${x+bw+S(68)} ${y+S(32)} L ${x+bw+S(114)} ${y+S(84)} L ${x+bw+S(114)} ${y+bh} Z" fill="#DCD7CE"/>`);
+    g.push(F(rectD(x+bw+S(12),y+S(42),S(48),S(34)),{fill:'#8C99A4'}));
+    g.push(F(rectD(x+S(28),y+S(24),S(150),S(58)),{fill:'#F2EFE8'}));
+    g.push(P(rectD(x+S(28),y+S(24),S(150),S(58)),1,{stroke:ACCENT,w:S(5)}));
+  }
+  g.push(P(`M ${x+bw} ${y} L ${x} ${y} L ${x} ${y+bh} L ${x+bw+S(114)} ${y+bh}`, clamp(p*3,0,1),{w:S(5)}));
+  g.push(P(`M ${x+bw} ${y+S(32)} L ${x+bw+S(68)} ${y+S(32)} L ${x+bw+S(114)} ${y+S(84)} L ${x+bw+S(114)} ${y+bh}`, clamp(p*3-0.6,0,1),{w:S(5)}));
+  if(!filled) g.push(P(rectD(x+S(28),y+S(24),S(150),S(58)), clamp(p*3-1.2,0,1),{w:S(4),opacity:.8}));
+  g.push(P(circD(x+S(74),y+bh,S(30)), clamp(p*3-1.5,0,1),{w:S(5),fill:filled?PLATE:'none'}));
+  g.push(P(circD(x+bw+S(48),y+bh,S(30)), clamp(p*3-1.7,0,1),{w:S(5),fill:filled?PLATE:'none'}));
+  return g.join('');
+}
+
+/* K1 — the phone that didn't ring */
+function k1(t){
+  const o=[];
+  o.push(grp(handPhone(470,455,0.98,{screen:'dark',draw:seg(t,0.5,2.4)})));
+  o.push(adSketch(1010,330,760,428,1,seg(t,2.0,4.2),9101));
+  const dim=1-0.55*easeIO(seg(t,6.0,8.0));
+  return grp(o.join(''),null,dim);
+}
+/* K2 — the Owner's line: you run the jobs, your marketing should run the next one */
+function k2(t){
+  const o=[];
+  o.push(P(lineD(200,760,1720,760), seg(t,8.4,9.4),{w:5,opacity:.75}));
+  o.push(vanArt(300,613,1.05,seg(t,8.8,10.6),false));  /* road at y=760: 760 - 140*1.05 */
+  const ax=1180, ay=430;
+  o.push(P(`M ${ax} ${ay+110} L ${ax+34} ${ay+34} L ${ax+256} ${ay+34} L ${ax+290} ${ay+110} Z`, seg(t,10.4,11.4),{w:5}));
+  o.push(P(rectD(ax+34,ay+110,222,220), seg(t,11.0,12.0),{w:5}));
+  /* a second job arriving: an accent arrow from the shop back toward the van */
+  o.push(P('M 1160 660 C 1020 720, 860 720, 720 690', seg(t,12.4,13.4),{stroke:ACCENT,w:7}));
+  o.push(P('M 760 672 L 716 690 L 762 708', seg(t,13.3,13.7),{stroke:ACCENT,w:7}));
+  return o.join('');
+}
+/* K4 — the phone rhyme: same hand, raised, filming */
+function k4(t){
+  return grp(handPhone(960,425,1.05,{screen:'film',draw:seg(t,25.4,27.0)}));
+}
+/* K5 — what the phone saw, full frame: the van stays inked, the world snaps */
+function k5(t,f){
+  const o=[], SNAP=Math.round(38.4*FPS);
+  const FX2=280, FY2=120, FW2=1360, FH2=765, HZ2=FY2+560;
+  o.push(P(wobbleRect(FX2,FY2,FW2,FH2,9400,3), seg(t,33.2,34.2),{w:6}));
+  const snapped=f>=SNAP;
+  if(snapped){
+    o.push(F(rectD(FX2+4,FY2+4,FW2-8,HZ2-FY2-4),{fill:'url(#skyGrad)'}));
+    o.push(F(rectD(FX2+4,HZ2,FW2-8,FY2+FH2-HZ2-4),{fill:'#565450'}));
+    o.push(F(rectD(FX2+90,HZ2-300,220,300),{fill:'#78848E'}));
+    o.push(F(rectD(FX2+FW2-330,HZ2-372,250,372),{fill:'#66717B'}));
+    o.push(`<ellipse cx="${FX2+680}" cy="${HZ2+6}" rx="252" ry="17" fill="#000" opacity="0.34" filter="url(#soft)"/>`);
+  } else {
+    const p=seg(t,34.4,36.4);
+    o.push(P(lineD(FX2+18,HZ2,FX2+FW2-18,HZ2), clamp(p*3,0,1),{w:4,opacity:.8}));
+    o.push(P(wobbleRect(FX2+90,HZ2-300,220,300,9401,3), clamp(p*3-0.6,0,1),{w:4,opacity:.8}));
+    o.push(P(wobbleRect(FX2+FW2-330,HZ2-372,250,372,9402,3), clamp(p*3-1.0,0,1),{w:4,opacity:.8}));
+  }
+  /* the van: drawn in ink BOTH before and after the snap — the part that is really yours */
+  o.push(vanArt(FX2+434,HZ2-189,1.35,seg(t,35.2,37.0),snapped));  /* HZ2 - 140*1.35 */
+  return o.join('');
+}
+/* K8 — endcard, then retract to the opening board so the loop hands off cleanly */
+function k8(t){
+  const o=[];
+  o.push(P(lineD(700,545,1220,545), seg(t,56.2,56.9),{stroke:ACCENT,w:10}));
+  return grp(o.join(''),null,1-seg(t,59.4,59.9));
+}
+
+function renderArtChallenger(t,f){
+  const o=[];
+  if(t<8.6)               o.push(grp(k1(t),  `translate(${wipe(t,8.0,8.6)} 0)`));
+  if(t>=8.0  && t<15.6)   o.push(grp(k2(t),  `translate(${wipe(t,15.0,15.6)} 0)`));
+  if(t>=15.0 && t<25.4)   o.push(grp(s34(t,f),`translate(${wipe(t,24.9,25.4)} 0)`));
+  if(t>=25.0 && t<33.4)   o.push(grp(k4(t),  `translate(${wipe(t,32.9,33.4)} 0)`));
+  if(t>=33.0 && t<42.4)   o.push(grp(k5(t,f),`translate(${wipe(t,41.9,42.4)} 0)`));
+  if(t>=42.0 && t<49.4)   o.push(grp(s7ch(t),`translate(${wipe(t,48.9,49.4)} 0)`));
+  if(t>=49.0 && t<55.9)   o.push(grp(s9(t,f),null, 1-seg(t,55.4,55.8)));
+  if(t>=55.5)             o.push(k8(t));
+  return o.join('');
+}
+/* the compliance beat, re-timed for the challenger (picture keeps the list; the words
+   carry the consequence, so the VO no longer reads what the screen already says) */
+function s7ch(t){
+  const o=[], d=-36.5+42.0;   /* shift the control's S7 clock forward by 5.5s */
+  const u=t-d;
+  o.push(P(lineD(182,392,182,672), seg(u,36.9,37.6),{w:6,opacity:.55}));
+  o.push(tick(200,436,seg(u,38.2,38.5)));
+  o.push(tick(200,532,seg(u,39.2,39.5)));
+  o.push(tick(200,628,seg(u,40.2,40.5)));
+  const ap=seg(u,37.2,38.0);
+  if(ap>0) o.push(grp(adFinal(SX,SY,SW,SH,SV),null,ap));
+  const a1=seg(u,38.2,38.5);
+  if(a1>0){ const x=SX+26,y=SY+24;
+    o.push(grp(F(rectD(x,y,210,40),{fill:'#F2EFE8',opacity:.95})+F(rectD(x+16,y+13,120,7),{fill:'#3A3A3A'})+F(rectD(x+146,y+13,48,7),{fill:ACCENT}),null,a1)); }
+  const a2=seg(u,39.2,39.5);
+  if(a2>0){ const x=SX+50,y=SY+SH-150;
+    o.push(grp(P(`M ${x} ${y} q 0 -36 32 -42 M ${x+52} ${y} q 0 -36 32 -42`,1,{stroke:'#F2EFE8',w:9,opacity:.85}),null,a2));
+    o.push(P(lineD(x-18,y-54,x+104,y+18), a2,{stroke:ACCENT,w:8})); }
+  const a3=seg(u,40.2,40.6);
+  if(a3>0){ const rx=SX+VAR[SV].cap[0]*SW+22, ry=SY+SH-20;
+    o.push(P(lineD(rx,ry,rx+SW*0.26,ry), a3,{stroke:ACCENT,w:7})); }
+  return o.join('');
+}
+
+/* =====================================================================
    FRAME ASSEMBLY
    ===================================================================== */
 function wipe(t,a,b){ return -W*easeIO(seg(t,a,b)); }   /* board clears left */
@@ -493,7 +684,7 @@ function renderArt(t,f){
 
 function renderText(t){
   const o=[];
-  for(const T of TEXTS){
+  for(const T of (CUT==='challenger'?TEXTS_CH:TEXTS)){
     let a=0;
     if(t>=T.in-FADE && t<=T.out+FADE){
       a = Math.min(seg(t,T.in-FADE,T.in), 1-seg(t,T.out,T.out+FADE));
@@ -513,7 +704,7 @@ function renderText(t){
 function render(f){
   f = clamp(Math.round(f),0,TOTAL-1);
   const t = f/FPS;
-  document.getElementById('scene').innerHTML = renderArt(t,f);
+  document.getElementById('scene').innerHTML = (CUT==='challenger') ? renderArtChallenger(t,f) : renderArt(t,f);
   document.getElementById('txt').innerHTML   = renderText(t);
   document.title = 'f'+f+' t'+t.toFixed(3);
   window.__frame = f;

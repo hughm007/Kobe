@@ -1,5 +1,5 @@
 ---
-title: "Service Pow intro video — benefit-led CHALLENGER, version 1"
+title: "Service Pow intro video — benefit-led CHALLENGER, version 2"
 type: report
 client: internal
 owner: Karl
@@ -11,170 +11,145 @@ tags: [company, video, intro-video, challenger, direct-response]
 
 # Challenger — the benefit cut
 
-**The control is not being replaced.** `script.md` / `storyboard.md` Rev 2 stand untouched and
-still render. This is a second spine built from the same code and judged beside it — the pattern
-the Owner asked for on 911 Drain.
-
-**What it changes, and nothing else:** stakes in the hook · every beat completes its benefit
-sentence · a drawn customer via the phone rhyme · a loop-safe ending · one beat cut.
+The control (`script.md` / `storyboard.md` Rev 2) is untouched and still renders. This is a second
+spine built from the same code, selected with `?cut=challenger`, and judged beside it.
 
 Evidence: `benefit-audit.md`.
 
 ---
 
-## 1. What is cut, and why
+## 1. Owner rulings, 2026-08-30
 
-**BUILD (the page beat) is cut entirely.** Two independent arguments landed on the same beat:
-
-1. **It implies a website is included and it isn't** — audit §10e. The pilot pack has no page, and
-   `pricing-and-packaging.md` has no website line at all. This is a claim defect, not a taste call.
-2. **The viewer is standing on a page Service Pow built.** Spending seconds saying "we also build
-   websites" *on a website you built* is the most redundant time in the film. The site is the proof;
-   the film should not narrate it.
-
-Captions and end cards survive as picture — the pack ships *"captioned, platform-ready"*, so those
-are honestly included. Only the **page** claim goes.
-
-**WHO is cut as a spoken beat.** The company is named on screen (the wordmark enters early and
-stays), so a muted viewer still knows who is talking. The VO gets the seconds instead.
-
-That frees ≈13 seconds. It goes to the hook, the offer, and silence.
-
-## 2. Timing spine
-
-| # | Beat | In | Out | Speech in | Speech out | Speech | Words | WPM |
-|---|---|---|---|---|---|---|---|---|
-| 1 | SILENT PHONE | 0.0 | 8.0 | 0.8 | 7.6 | 6.8 | 15 | **132** |
-| 2 | NOT BAD LUCK | 8.0 | 14.5 | 8.4 | 13.9 | 5.5 | 12 | **131** |
-| 3 | FOUR, NOT ONE | 14.5 | 24.5 | 14.9 | 23.9 | 9.0 | 18 | **120** |
-| 4 | YOUR PART IS SMALL | 24.5 | 32.5 | 24.9 | 31.9 | 7.0 | 14 | **120** |
-| 5 | IT LOOKS REAL | 32.5 | 42.5 | 32.9 | 41.9 | 9.0 | 20 | **133** |
-| 6 | NOTHING BITES YOU | 42.5 | 49.5 | 42.9 | 48.9 | 6.0 | 14 | **140** |
-| 7 | THE OFFER | 49.5 | 56.0 | 50.0 | 55.4 | 5.4 | 10 | **111** |
-| 8 | END (loop resolve) | 56.0 | 60.0 | — | — | — | 0 | — |
-
-**Pace checks** (thresholds live in `playbooks/ads/video-production.md`, never restated here):
-
-- Fastest line **140** — well under the ceiling ✅
-- **The CTA is now the slowest line in the film at 111 WPM.** In the control it was 143 and the
-  slowest beat was a compliance list. The calm has moved to where the ask is ✅
-- Rhythm ratio 140 ÷ 111 = **1.26** — over the floor ✅
-- Overall **103 words ÷ 48.7s = 127 WPM** (control: 144.6). Slower, calmer, more room
-- Silence **11.3s = 18.8%** of runtime (control: 12.2%)
-- Breath gaps: 0.8 · 1.0 · 1.0 · 1.0 · 1.0 · 1.1 — every one clear of the floor ✅
-
-## 3. The voiceover
-
-**1 · SILENT PHONE** (0.8 → 7.6)
-> "You paid for an ad. The phone didn't ring. And nobody can tell you why."
-
-**2 · NOT BAD LUCK** (8.4 → 13.9)
-> "That's not bad luck. One ad is only ever one guess."
-
-**3 · FOUR, NOT ONE** (14.9 → 23.9)
-> "So you get four. Two ideas, two hooks — run them all, and keep the one that pulls."
-
-**4 · YOUR PART IS SMALL** (24.9 → 31.9)
-> "Your part is clips off your phone, between jobs. Nobody comes to your site."
-
-**5 · IT LOOKS REAL** (32.9 → 41.9)
-> "The real parts are real — your van, your street. AI builds the rest, so it doesn't get skipped for looking fake."
-
-**6 · NOTHING BITES YOU** (42.9 → 48.9)
-> "And it's written so it can't get pulled for a rule you'd never heard of."
-
-**7 · THE OFFER** (50.0 → 55.4)
-> "So we'll make one for your business — before you ask."
->
-> **SIGNED 2026-08-28 — verbatim, not rewritten.** The cold read proposed appending *"Then you
-> decide"* to carry no-obligation explicitly. That is a change to a signed line and is put to the
-> Owner as a question, not made here.
-
-**8 · END** (56.0 → 60.0) — no VO.
-
-## 4. you : we — measured
-
-| | control | challenger |
+| # | Ruling | What it forces |
 |---|---|---|
-| VO words | 124 | **103** |
-| you / your | 4 | **12** |
-| we / our / Service Pow | 4 | **1** |
-| ratio | 4 : 4 | **12 : 1** ✅ |
+| 1 | **Autoplay-muted looping hero** on the site being built now | The burned text is the entire message. The loop handoff becomes mandatory, not cosmetic |
+| 2 | **60 seconds** | Seven benefit beats fit without rushing |
+| 3 | Endcard mirrors the site's primary button: **"Get your free growth audit."** | See §7 — this creates a conflict that needs a ruling |
+| 4 | Trades are the **wedge, not the ceiling**. Visuals do the targeting; one concise audience signal in VO; do not repeatedly name trades | The van, the shopfront and the jobsite carry recognition. The VO names the *day*, not the trade |
+| 5 | Owner-supplied line adopted verbatim as beat 2 | *"You're busy running the jobs. Your marketing should be busy bringing in the next one."* |
+| 6 | Drawn customer via the phone rhyme (A/B) | Built, prototyped through four attempts, in the cut |
 
-Target was ≥ 3:1. And unlike the control, the "you"s attach to **outcomes** — *you paid · the phone
-didn't ring · you get four · keep the one that pulls · your part · nobody comes to your site · a rule
-you'd never heard of.*
+## 2. What was cut from the control, and why
 
-**Verb ownership** (audit §10a) also flips: the viewer is now the subject of *paid · get · run ·
-keep · decide*, all active.
+**BUILD (the page beat) — cut.** Two independent arguments: it implies a website is included when
+websites are a separate, unpriced service line (`benefit-audit.md` §10e), **and** the viewer is
+standing on a page Service Pow built, so narrating "we also build websites" there is the most
+redundant time available.
 
-## 5. The phone rhyme — the drawn customer
+**WHO as a spoken beat — cut.** Beat 2 now carries the audience signal instead, and does it through
+the viewer's day rather than a category label. See §7b for the cost this creates.
 
-Owner ruling: a customer on screen, drawn, at the hook and the payoff. The cold read supplied a
-better structure than "a figure at each end" and it is adopted:
+## 3. Timing spine
 
-| Where | What is drawn | What it does |
-|---|---|---|
-| **Hook, ~1.2–6.0s** | A line-art hand holding a phone. Screen dark. **No notification.** Beside it, one lonely sketched ad | Gives *"the phone didn't ring"* a body to land on. No face, no identifiable person, nothing that reads as a testimonial |
-| **Beat 4, ~25.5–31.5s** | **The same hand, holding the same phone up, filming.** The footage plate lives *inside the phone's frame* and fills with the sketched jobsite, then snaps finished | Says *you shoot it · it's your phone · that's all we need* with no voiceover at all |
+| # | Beat | In | Out | Speech | Words | WPM |
+|---|---|---|---|---|---|---|
+| K1 | SILENT PHONE | 0.0 | 8.0 | 0.8–7.6 | 15 | **132** |
+| K2 | YOUR JOBS *(Owner's line)* | 8.0 | 15.0 | 8.4–14.6 | 15 | **145** |
+| K3 | FOUR, NOT ONE | 15.0 | 25.0 | 15.4–24.6 | 19 | **124** |
+| K4 | YOUR PART IS SMALL | 25.0 | 33.0 | 25.4–32.6 | 14 | **117** |
+| K5 | IT LOOKS REAL | 33.0 | 42.0 | 33.4–41.6 | 20 | **146** |
+| K6 | NOTHING BITES YOU | 42.0 | 49.0 | 42.4–48.6 | 14 | **135** |
+| K7 | THE OFFER *(signed)* | 49.0 | 55.5 | 49.5–55.0 | 10 | **109** |
+| K8 | ENDCARD → loop resolve | 55.5 | 60.0 | — | 0 | — |
 
-**The phone that stayed quiet becomes the phone that does the work.** This also deletes the film's
-worst frame: the naked grey rectangle at 0:31 is now a phone screen, which is what a grey rectangle
-is *supposed* to look like.
+Fastest **146** ✅ · **the CTA is the slowest line in the film at 109 WPM** ✅ · ratio 146 ÷ 109 =
+**1.34** ✅ · overall **107 words ÷ 49.3s = 130 WPM** (control 144.6) · silence **10.7s, 17.8%** ·
+every breath gap 0.8s or more ✅
 
-**Checkpoint:** the hand is the hardest thing in the film to draw and a clumsy one is worse than
-none. It gets rendered and sent to the Owner as a still **before any full render commits to it.**
-If it fails, the challenger proceeds artifact-only and that outcome is recorded here.
+## 4. Voiceover
 
-## 6. Burned text — muted is the design target
+1. "You paid for an ad. The phone didn't ring. And nobody can tell you why."
+2. "You're busy running the jobs. Your marketing should be busy bringing in the next one." — *Owner*
+3. "So you get four, not one. Two ideas, two hooks — run them all and keep the one that pulls."
+4. "Your part is clips off your phone, between jobs. Nobody comes to your site."
+5. "The real parts are real — your van, your street. AI builds the rest, so it doesn't get skipped for looking fake."
+6. "And it's written so it can't get pulled for a rule you'd never heard of."
+7. "So we'll make one for your business — before you ask." — **SIGNED 2026-08-28, verbatim**
+8. *(silence)*
 
-Every string still has to carry the benefit on its own, because muted is where this film lives.
-Full cps table computed at build time in `script-challenger.md`; the strings are:
+**you : we — measured.** Control 4 : 4 in 124 words. Challenger **13 : 1 in 107 words**, and the
+"you"s attach to outcomes, not deliverables.
 
-| # | Beat | String | Chars |
-|---|---|---|---|
-| C1 | SILENT PHONE | `You paid. It didn't ring.` | 25 |
-| C2 | NOT BAD LUCK | `One ad is one guess.` | 20 |
-| C3 | FOUR, NOT ONE | `2 ideas × 2 hooks` | 17 |
-| C4 | FOUR, NOT ONE | `Keep the one that pulls.` | 24 |
-| C5 | FOUR, NOT ONE | `4 ads · 5–7 days` | 16 |
-| C6 | YOUR PART | `Clips off your phone.` | 21 |
-| C7 | YOUR PART | `Nobody comes to your site.` | 26 |
-| C8 | IT LOOKS REAL | `Your van. Your street.` | 22 |
-| C9 | IT LOOKS REAL | `So it doesn't look fake.` | 24 |
-| C10 | NOTHING BITES | `Can't get pulled.` | 17 |
-| C11 | THE OFFER | `We make the first one before you ask.` | 37 |
-| C12 | END | `SERVICE POW` | 11 |
-| C13 | END | *(instruction — see §8)* | — |
+## 5. Burned text — this is the whole message, because muted is the placement
 
-Read cold and muted, that is now a **story**: you paid, it didn't ring · one ad is one guess · so
-you get four, keep the one that pulls · it's clips off your phone, nobody comes to your site · your
-van, your street, so it doesn't look fake · it can't get pulled · we make the first one before you
-ask. Compare the control's muted read-out in `benefit-audit.md` §1.
+| # | String | Chars | In | Out | cps |
+|---|---|---|---|---|---|
+| K1 | `You paid. It didn't ring.` | 25 | 2.6 | 7.4 | 5.2 |
+| K2 | `You're busy. Your ads aren't.` | 29 | 9.4 | 14.6 | 5.6 |
+| K3 | `2 ideas × 2 hooks` | 17 | 16.4 | 20.4 | 4.3 |
+| K4 | `Keep the one that pulls.` | 24 | 20.8 | 23.4 | 9.2 |
+| K5 | `4 ads · 5–7 days` | 16 | 23.6 | 24.9 | 12.3 |
+| K6 | `Clips off your phone.` | 21 | 26.6 | 29.6 | 7.0 |
+| K7 | `Nobody comes to your site.` | 26 | 29.9 | 32.8 | 9.0 |
+| K8 | `Your van. Your street.` | 22 | 35.0 | 38.2 | 6.9 |
+| K9 | `So it doesn't look fake.` | 24 | 38.5 | 41.8 | 7.3 |
+| K10 | `Can't get pulled.` | 17 | 44.0 | 48.6 | 3.7 |
+| K11 | `We make the first one before you ask.` | 37 | 50.4 | 55.2 | 7.7 |
+| K12 | `SERVICE POW` | 11 | 55.7 | 59.4 | 3.0 |
+| K13 | `Get your free growth audit.` | 27 | 55.9 | 59.4 | 7.7 |
 
-## 7. The loop fix
+Every string clear of the band. Only overlap is K12+K13 (38 new chars over 3.5s = **10.9 cps** ✅).
 
-Control: `PSNR(frame 1799, frame 0) = 19.51 dB` — a hard cut from a wordmark card to a bare board,
-which `video-production.md` step 4b says "reads broken".
+**Muted read-out** — the story a viewer with no sound receives:
 
-Challenger: the endcard **retracts** across 58.4–60.0 — the accent rule un-draws, the URL clears,
-and the board returns to the near-empty state frame 0 opens on, with the wordmark the last thing to
-go. Target: **PSNR ≥ 30 dB**, measured and reported, never claimed.
+> You paid. It didn't ring. → You're busy. Your ads aren't. → 2 ideas × 2 hooks → Keep the one that
+> pulls → 4 ads · 5–7 days → Clips off your phone → Nobody comes to your site → Your van. Your
+> street. → So it doesn't look fake. → Can't get pulled. → We make the first one before you ask.
 
-## 8. Open — the endcard's instruction
+Compare the control's, in `benefit-audit.md` §1. That one was a list of things a company makes.
 
-The control's endcard shows `servicepow.com`, which is the page the viewer is standing on (audit
-§10g). It should be an **instruction**, not an address.
+## 6. The pictures
 
-The natural instruction is whatever the page's own primary button says, word for word — but the
-Owner has said he does not like the current site and is rethinking it, so that string does not exist
-yet. **Held open.** Until it is answered the challenger's endcard carries the wordmark and a
-placeholder instruction marked as provisional, exactly as the endcard treatment itself is.
+| Beat | What is drawn |
+|---|---|
+| K1 | The hand holds a phone, **screen dark, nothing on it**, beside one lonely sketched ad |
+| K2 | A work van on a street and a shopfront, with an accent arrow curving from the shop back to the van — **the next job arriving.** This is where the trade wedge lands, visually, per ruling 4 |
+| K3 | The 2×2 grid and the snap — reused from the control unchanged |
+| K4 | **The phone rhyme.** The same hand, raised, filming; the jobsite lives inside the phone's screen with a record dot |
+| K5 | What the phone saw, full frame. The world snaps from line art to finished — **and the van keeps its ink outline through the snap.** The part that is really yours is the part that doesn't change |
+| K6 | The compliance ad and its three annotations, re-timed. **The picture keeps the list; the words carry the consequence** — fixing the duplication in `benefit-audit.md` §10c |
+| K7 | The van ad snapping finished — the signature move, applied to the viewer |
+| K8 | Wordmark, the button instruction, then everything retracts to the opening board |
 
-## 9. What is NOT changed from the control
+**The grey placeholder rectangle is gone from the film entirely.** The "real footage" idea is now
+carried by the phone in K4 and by the van keeping its outline in K5, so there is no frame where the
+proudest claim is illustrated by an absence.
 
-The visual system, the ad vocabulary, the snap, the palette variable, the render pipeline, the
-barred list, and the signed offer line. This is a copy-and-structure challenger, not a redesign.
+## 7. Two problems this version surfaces — both need an Owner ruling
+
+### 7a. The endcard offers something different from the voiceover — and it is in no company file
+
+The VO's signed CTA is **a spec ad**: *"we'll make one for your business — before you ask."*
+The endcard, per ruling 3, is **an audit**: *"Get your free growth audit."*
+
+A viewer hears one offer and reads another. Worse, verification found:
+
+| Check | Result |
+|---|---|
+| "growth audit" in `services.md`, `pricing-and-packaging.md`, `positioning-and-icp.md`, `company-profile.md` | **absent from all four** |
+| "free" used as an offer anywhere in the company files | **never** |
+
+This is the same class as email marketing and Google LSA — **advertising a service that is not
+recorded as live.** It may well be live and simply unrecorded, which is fine and takes one edit to
+`services.md`. But it cannot ship unrecorded. Three ways to resolve, for the Owner:
+
+1. **Record the audit as a real service** in `services.md`, and bridge the two offers in the film so
+   the audit is visibly the way the spec ad happens.
+2. **Change the endcard** to match the signed spec-ad CTA, and let the site's button differ.
+3. **Change the VO's CTA to the audit** — which requires a new ruling, because that line is signed.
+
+### 7b. On a looping hero, the company name arrives at second 55
+
+Cutting the spoken WHO beat also removed the early wordmark. A viewer who joins a loop at second 20
+and leaves at second 35 never learns who is talking. **Fix specified: a small persistent wordmark in
+the corner from ~2s to 55s** — standard for a hero loop, always present regardless of entry point,
+and it carries no cps cost because it never changes. Applied in the next render.
+
+## 8. The loop
+
+Control: `PSNR(1799, 0) = 19.51 dB` — a hard cut, which `video-production.md` step 4b says reads
+broken. Challenger: the endcard retracts across 59.4–59.9 so the last frame returns to the opening
+board. Measured and reported after render, never claimed.
 
 ---
 
@@ -182,4 +157,5 @@ barred list, and the signed offer line. This is a copy-and-structure challenger,
 
 | Rev | Date | Change |
 |---|---|---|
-| 1 | 2026-08-30 | First draft. Seven beats (BUILD and spoken-WHO cut), stakes hook, phone rhyme adopted from the independent read, you:we 12:1, CTA now the slowest line, loop resolve specified. |
+| 1 | 2026-08-30 | First draft — seven beats, stakes hook, phone rhyme, you:we 12:1 |
+| 2 | 2026-08-30 | Built. Six Owner rulings folded in: muted looping hero, 60s, the audit endcard string, trades-as-wedge with visuals doing the targeting, the Owner's own line adopted as beat 2, and the hand approved. Endcard/VO offer conflict raised as blocking. Loop-entry branding gap found and fixed. |

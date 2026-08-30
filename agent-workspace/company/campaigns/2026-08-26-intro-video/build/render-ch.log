@@ -1,0 +1,43 @@
+CUT: challenger
+CONTRAST RATIOS (measured, not asserted): {"ink_on_ground": 15.97, "accent_on_ground": 5.93, "light_on_plate": 12.4}
+  ink_on_ground       15.97  PASS >=4.5
+  accent_on_ground     5.93  PASS >=4.5
+  light_on_plate      12.40  PASS >=4.5
+  ... 50 frames, 5.2s
+  ... 100 frames, 10.4s
+  ... 150 frames, 15.5s
+  ... 200 frames, 20.6s
+  ... 250 frames, 25.9s
+  ... 300 frames, 30.5s
+  ... 350 frames, 35.6s
+  ... 400 frames, 40.8s
+  ... 450 frames, 45.7s
+  ... 500 frames, 50.4s
+  ... 550 frames, 55.6s
+  ... 600 frames, 60.8s
+  ... 650 frames, 65.8s
+  ... 700 frames, 70.9s
+  ... 750 frames, 75.9s
+  ... 800 frames, 80.5s
+  ... 850 frames, 85.6s
+  ... 900 frames, 90.7s
+  ... 950 frames, 95.8s
+  ... 1000 frames, 100.9s
+  ... 1050 frames, 105.6s
+  ... 1100 frames, 110.4s
+  ... 1150 frames, 115.5s
+  ... 1200 frames, 120.8s
+  ... 1250 frames, 126.4s
+  ... 1300 frames, 131.3s
+  ... 1350 frames, 135.9s
+  ... 1400 frames, 140.4s
+  ... 1450 frames, 145.4s
+  ... 1500 frames, 150.1s
+  ... 1550 frames, 154.7s
+  ... 1600 frames, 159.3s
+  ... 1650 frames, 164.5s
+  ... 1700 frames, 169.6s
+  ... 1750 frames, 174.5s
+  ... 1800 frames, 179.0s
+OK: 1800 frames -> /home/user/Kobe/agent-workspace/company/campaigns/2026-08-26-intro-video/build/frames/challenger  (179.1s)
+JS DIAGNOSTICS: none

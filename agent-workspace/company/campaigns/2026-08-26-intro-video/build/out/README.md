@@ -25,12 +25,34 @@ deterministic, so the file is reproducible byte-for-byte from `scenes.html` at a
 | Endcard | **provisional, type-only.** No logo file exists (`assets/` holds a README). The filename must keep `-provisional-endcard` until one does |
 | Delivered to | Owner, in session, for critique. **Not published anywhere** |
 
+## Also rendered — 2026-08-30, the benefit-led challenger
+
+| File | ffprobe |
+|---|---|
+| `servicepow-intro-60s-challenger-v1.mp4` | 1920×1080 · yuv420p · 30fps · 1800 frames · **60.000000 s** · 1,107,843 bytes |
+| `compare-control-vs-challenger.mp4` | 1920×552 · 30fps · 1800 frames · 60.000000 s — the two cuts side by side |
+
+**Loop handoff, measured** (`./loopcheck.sh full challenger`) — `video-production.md` step 4b says a
+hard cut back to frame 1 reads broken on an autoplay hero:
+
+| Cut | PSNR(frame 1799 → frame 0) |
+|---|---|
+| control | **19.51 dB** — a hard cut |
+| challenger | **inf** — the frames are pixel-identical. Seamless |
+
+Both are silent picture cuts. Per step 4b that is the correct target for an autoplay-muted hero;
+audio is a bonus layer, not a blocker.
+
 ## Reproduce it
 
 ```
 cd build
-python3 render.py --all --out full          # ~145s, 1800 PNGs into frames/full/
+python3 render.py --all --out full                        # control,    ~145s
+python3 render.py --cut challenger --all --out challenger  # challenger, ~180s
 ./render.sh full 0 servicepow-intro-60s-v1-provisional-endcard
+./render.sh challenger 0 servicepow-intro-60s-challenger-v1
+./loopcheck.sh full challenger      # prints the loop-handoff PSNR for both
+./compare.sh                        # side-by-side MP4
 ```
 
 `render.sh` prints its own ffprobe evidence. `frames/` is gitignored for the same reason.

@@ -866,3 +866,59 @@ unfixed by any of the above: the film is silent (VO written and timed, not recor
 footage" plate at 0:31 is a placeholder in the one beat about real footage, and `servicepow.com`
 remains **NOT VERIFIED** — blocked by this container's egress policy on three separate attempts,
 recorded rather than routed around.
+
+## 2026-08-30 — the intro video, judged by what the customer gets
+
+**Did.** Owner redirected: judge the film by how it shows the business benefiting customers, not by
+whether it is finished. Measured it against that and found one mechanical problem — **it is a
+capability list, not a benefit story.**
+
+*The measurements, in `company/campaigns/2026-08-26-intro-video/benefit-audit.md`.* Zero benefit
+connectives in any VO line or burned string. you:we running 4:4 across 124 words, with none of the
+four "you"s attached to an outcome. The viewer is the subject of two verbs in the whole film, both
+receptive; Service Pow is the subject of seven active ones. Six of eight beats state a feature and
+stop. `PSNR(frame 1799, frame 0) = 19.51 dB` — the loop handoff is a hard cut, which the video
+playbook says reads broken for an autoplay hero.
+
+*The root cause was a skipped artifact.* The **Feeling Spec** and **Sound Spine** were never written
+for this film; 911 Drain has both. You cannot leave a beat feeling-less if you are forced to name
+its feeling and its observable cause — so skipping it is what produced six feature-only beats. Both
+now written.
+
+*An independent adversarial read*, run with no production reasoning, found two things verification
+confirmed and the first pass missed. `services.md` says "client's real **phone** footage as hero
+shots" — the film said "your footage" and lost the most relieving fact in the offer, that there is
+no shoot day. And the BUILD beat implied a website was included when websites are a separate
+service line that `pricing-and-packaging.md` does not price at all. **Same claim class as the 5–7
+day conditional caught on 2026-08-28 — second instance, and the class is now due for promotion into
+the playbook.**
+
+*Built the challenger* (`challenger-board.md`, `?cut=challenger` in `scenes.html`, control
+untouched). Cut the page beat and the spoken WHO beat; put a cost in the hook; finished every
+benefit sentence. **107 words instead of 124, you:we 13:1, and the CTA is now the slowest line in
+the film at 109 WPM** where the control's slowest beat was a compliance list.
+
+*The drawn customer* arrived as a **phone rhyme**, not a figure: a hand holding a phone with a dark
+screen at the hook, the same hand raised and filming at the footage beat with the jobsite inside the
+screen. Four prototype attempts are committed as the record — the first failed outright (the wrist
+curled into a lasso, the fingers read as buttons) and the fix was not more detail but less: the grip
+is cropped by the frame edge. **The grey placeholder rectangle is gone from the film entirely** —
+the real/AI distinction is now carried by the van keeping its ink outline while the world around it
+snaps to filled.
+
+**Owner rulings.** Autoplay-muted looping hero · 60s · endcard mirrors the site button "Get your
+free growth audit." · trades are the wedge with the visuals doing the targeting and one concise
+audience signal in VO · the Owner's own line adopted verbatim as beat 2 · the hand approved.
+
+**Decided.** On a looping hero the company must be identifiable at every second, so a persistent
+low-opacity corner wordmark runs 1.5s–55s, off at both ends so the seamless loop survives.
+**Challenger `PSNR(1799, 0) = inf` — frame 1799 is pixel-identical to frame 0.**
+
+**Open, and blocking.** The endcard offers a **free growth audit**; the film's signed CTA offers a
+**spec ad**. They are different offers, and verification found "growth audit" in none of
+`services.md`, `pricing-and-packaging.md`, `positioning-and-icp.md` or `company-profile.md`, and
+"free" never used as an offer anywhere. That is the same class as email marketing and Google LSA —
+advertising something the workspace has no record of. Recorded in `company/OPEN-QUESTIONS.md` and
+`challenger-board.md` §7a with three ways to resolve. **Needs an Owner ruling before either cut
+ships.** Also still open: both quality gates have never run on either cut; brand direction A/B/C
+unpicked; audio unproduced (a bonus layer for this placement, not a blocker).
