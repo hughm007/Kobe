@@ -54,6 +54,9 @@
    ===================================================================== */
 
 const FPS = 30, TOTAL = 1800;              /* 60.000s */
+let CURF = 0;                              /* current frame, for the boil */
+const BOIL_ON = 3;                         /* redraw the wobble every 3 frames (10 Hz, 'on threes') */
+const boil = () => Math.floor(CURF / BOIL_ON) * 7919;
 const CUT = new URLSearchParams(location.search).get('cut') || 'control';
 const W = 1920, H = 1080;
 const ACCENT = '#1B5FA8', INK = '#1A1A1A', GROUND = '#F7F5F0',
@@ -91,12 +94,12 @@ function circD(cx,cy,r){                       /* one-path circle, draws clockwi
 }
 /* a hand-drawn rectangle: same corners, slight wobble, deterministic per seed */
 function wobbleRect(x,y,w,h,seed,amp=3){
-  const r=rnd(seed), o=()=> (r()-0.5)*2*amp;
+  const r=rnd(seed+boil()), o=()=> (r()-0.5)*2*amp;
   return `M ${x+o()} ${y+o()} L ${x+w+o()} ${y+o()} L ${x+w+o()} ${y+h+o()} L ${x+o()} ${y+h+o()} Z`;
 }
 /* rounded hand-drawn rect — the square-cornered wobbleRect above stays as the control uses it */
 function wobRound(x,y,w,h,seed,amp=3,r=20){
-  const q=rnd(seed), o=()=>(q()-0.5)*2*amp;
+  const q=rnd(seed+boil()), o=()=>(q()-0.5)*2*amp;
   return `M ${x+r+o()} ${y+o()} L ${x+w-r+o()} ${y+o()} Q ${x+w+o()} ${y+o()} ${x+w+o()} ${y+r+o()}`
        + ` L ${x+w+o()} ${y+h-r+o()} Q ${x+w+o()} ${y+h+o()} ${x+w-r+o()} ${y+h+o()}`
        + ` L ${x+r+o()} ${y+h+o()} Q ${x+o()} ${y+h+o()} ${x+o()} ${y+h-r+o()}`
@@ -233,9 +236,10 @@ function adFinal(x,y,w,h,v){
   o.push(F(rectD(cx0+14,cy0+ch*0.58,cw*0.36,h*0.021),{fill:'#6A6A6A'}));
   const px=x+w/2, py=y+h*0.46;
   o.push(`<path d="M ${px-w*0.026} ${py-h*0.066} L ${px+w*0.039} ${py} L ${px-w*0.026} ${py+h*0.066} Z" fill="#FFFFFF" opacity="0.22"/>`);
-  o.push(P(rectD(x,y,w,h),1,{w:3,opacity:.35,stroke:'#000'}));
+  o.push(P(wobbleRect(x,y,w,h,seed_edge(x,y),1.6),1,{w:3,opacity:.42,stroke:'#000'}));
   return o.join('');
 }
+const seed_edge=(x,y)=>((x*31+y*17)|0)+5000;
 const cellSketch=(x,y,v,p)=>adSketch(x,y,CW,CH,v,p,300+v);
 const cellFinal =(x,y,v)  =>adFinal (x,y,CW,CH,v);
 
@@ -470,7 +474,7 @@ function s9(t,f){
     g.push(P(`M ${vx+250} ${vy+72} L ${vx+318} ${vy+72} L ${vx+364} ${vy+124} L ${vx+364} ${vy+150}`,1,{w:4,opacity:.85}));
     g.push(F(circD(vx+74,vy+150,30),{fill:PLATE}));
     g.push(F(circD(vx+298,vy+150,30),{fill:PLATE}));
-    g.push(P(rectD(GX,GY,GW,GH),1,{w:5,opacity:.9}));
+    g.push(P(wobbleRect(GX,GY,GW,GH,601,2.2),1,{w:5,opacity:.9}));
     const cx=GX+GW/2, cy=GY+GH/2;
     o.push(grp(g.join(''), `translate(${cx} ${cy}) scale(${sc.toFixed(5)}) translate(${-cx} ${-cy})`));
   }
@@ -703,6 +707,7 @@ function renderText(t){
 
 function render(f){
   f = clamp(Math.round(f),0,TOTAL-1);
+  CURF = f;
   const t = f/FPS;
   document.getElementById('scene').innerHTML = (CUT==='challenger') ? renderArtChallenger(t,f) : renderArt(t,f);
   document.getElementById('txt').innerHTML   = renderText(t);
