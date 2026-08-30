@@ -162,10 +162,61 @@ and ~31% of runtime still carries no words. Shimmering lines do not fix an empty
   at full draw it closes. Partially an artifact of sampling mid-draw — but if a sampled frame reads
   that way, a paused viewer sees the same thing, so the finding stands at S2 for the sketch state.
 
-## 4. Kobe creative critic — ServicePow-6 + the Direct-Response lens
+## 4. Kobe creative critic — ServicePow-6 + the Direct-Response lens — **HARD FAIL, both cuts**
 
-*(pending — cold read of both contact sheets before any campaign document)*
+| Axis | Challenger | Control |
+|---|---|---|
+| Doesn't-look-AI | 7 | 7 |
+| Hook inside 2s | 3 | 2 |
+| Human presence | 4 | 1 |
+| Format fit | 5 | 4 |
+| Audio design | 1 | 1 |
+| Message + CTA clarity | 4 | 5 |
+| **Score (floor 8.0)** | **4.0** | **3.3** |
+
+**Nine semantic hard failures** across the two cuts — any one means NOT CLIENT READY. The three
+heaviest: the unsupported-claim triple (`Can't get pulled.` · the growth-audit CTA · "business"
+dropped from the turnaround claim in **both** cuts), the self-refuting strings, and the control's
+footage beat illustrated by an empty grey rectangle.
+
+**AI-artifact risk: 2/10 challenger, 1/10 control** — said plainly by the critic: *"the realism
+problem this playbook was built to solve does not exist in this artifact. Everything wrong with
+these films is a writing, pacing, claims and finishing problem — not a generation problem."*
+
+**Recommendation: take the CHALLENGER's spine** (wins 4 of 6 axes; the only human presence and the
+only real product demonstration) **and transplant three things from the control**: the labelled
+compliance triple, a named destination on the endcard, and the footage-hero phrasing — the last only
+when a real clip exists to put in the plate.
+
+**Kobe's single highest-leverage edit: open on the product, not the pain.** Grid already drawing at
+frame 1, `2 ideas × 2 hooks` inside six seconds, the reclaimed ~9s given to the offer line (currently
+the SHORTEST hold in the film at ~1.4s — the exact defect class of the 911 Drain price line, second
+occurrence) and to the endcard.
+
+**Disputes resolved by Kobe's frame-check:**
+- `no-flash-cuts` is a **FALSE POSITIVE** — its own detection: 6–7 real transitions, minimum gap
+  2.60s, no shot under 0.4s. The harness counts each frame of a multi-frame wipe as a cut. §2d closed.
+- Check 14 opening dead-space: the harness says WARN-unmeasurable; Kobe measured frame 0 at 0.000%
+  ink and calls it a FAIL in substance. Accepted.
+
+**Process finding, accepted as a rule:** the masters and frame directories mutated *during* the gate
+(the boil re-render ran underneath the review). **New rule: artifacts are frozen for the duration of
+a gate — gates run on copies with recorded hashes.** The critic gated the pre-boil masters; its
+verdict stands for those, and the repair render gets a fresh full gate anyway.
+
+**Could not run:** check 19 landing-page parity (egress-blocked — Owner must supply the page or
+eyeball it) · check 25 human-watched-end-to-end (Owner's tick, not the critic's).
 
 ## 5. Verdict
 
-*(pending both gates)*
+| Gate | Result |
+|---|---|
+| Machine QC | FAIL (freeze fixed by boil + wobble-everything rule; silent-audio needs a harness ruling; flash-cuts false-positive closed) |
+| Skeptic | **BLOCK** — 14 S4 / 23 S3 |
+| Kobe | **HARD FAIL** — 4.0 / 3.3 against a floor of 8.0 |
+
+**NOT CLIENT READY — nothing ships.** Both gates independently converge on the same repair: the
+challenger's spine, the control's substantiated claims, a product-first open, and every string
+re-laid into the safe band. One consolidated repair round (`repair-board.md`), then **both gates
+re-run in full on frozen artifacts.** This is the 911 Drain pattern at round one — roughly fifty
+defects caught at $0 before the homepage did the catching.

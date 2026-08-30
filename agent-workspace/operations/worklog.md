@@ -922,3 +922,28 @@ advertising something the workspace has no record of. Recorded in `company/OPEN-
 `challenger-board.md` §7a with three ways to resolve. **Needs an Owner ruling before either cut
 ships.** Also still open: both quality gates have never run on either cut; brand direction A/B/C
 unpicked; audio unproduced (a bonus layer for this placement, not a blocker).
+
+## 2026-08-31 — the dual gate ran for the first time, and blocked everything
+
+**Did.** First full gate round on the intro video — machine QC, then the Skeptic and Kobe in
+parallel isolation. All three failed it. Machine: 73% of both cuts frozen (fixed in-round with a
+10 Hz animation boil, 43.7s → 15.5s, remainder mapped to un-wobbled strokes). Skeptic: **BLOCK,
+14 S4 / 23 S3** — the realism claim written across a cartoon, an unsubstantiatable moderation
+guarantee, a CTA naming an offer in no company file, a loop that joins blank to blank. Kobe:
+**HARD FAIL, 4.0 / 3.3 vs a floor of 8.0**, nine semantic hard failures — but challenger wins 4 of
+6 axes and both gates converge on the same repair. AI-artifact risk 2/10 and 1/10: everything wrong
+is writing, pacing, claims and finishing — not generation.
+
+**Owned in the record:** I reintroduced the 5–7-days claim defect in the cut built to fix claim
+hygiene; my de-duplication "fix" stripped the checklist labels on a silent film; blocking check 28
+was never run and fails on 10 of 13 strings; the preflight ran after the build instead of before it;
+the boil re-render mutated artifacts under the gate mid-review.
+
+**Decided.** Artifacts freeze during gates (copies + hashes). Every stroke becomes a hand-drawn
+wobble line. Flash-cut FAIL closed as false-positive by Kobe's frame-check. Repair is one
+consolidated round — `repair-board.md`, R1–R15 — on the challenger's spine with the control's
+substantiated claims transplanted; then both gates re-run in full.
+
+**Open.** Growth audit (gates the endcard string) · a rights-clear clip (gates the realism claim's
+return) · brand A/B/C · harness `--allow-silent` ruling · learning candidate at two occurrences:
+the offer line gets the shortest hold.
