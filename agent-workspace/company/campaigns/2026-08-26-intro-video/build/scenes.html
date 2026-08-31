@@ -97,6 +97,15 @@ function wobbleRect(x,y,w,h,seed,amp=3){
   const r=rnd(seed+boil()), o=()=> (r()-0.5)*2*amp;
   return `M ${x+o()} ${y+o()} L ${x+w+o()} ${y+o()} L ${x+w+o()} ${y+h+o()} L ${x+o()} ${y+h+o()} Z`;
 }
+/* hand-drawn line: subdivided, seeded jitter, boils like every other stroke (R12).
+   Straight ruler lines are off-style in a marker film; this replaces lineD at draw sites. */
+function wline(x1,y1,x2,y2,seed,amp=2.2){
+  const q=rnd((seed||((x1*13+y2*7)|0))+boil()), o=()=>(q()-0.5)*2*amp;
+  const dx=x2-x1, dy=y2-y1, L=Math.hypot(dx,dy), n=Math.max(2,Math.round(L/90));
+  let d=`M ${x1+o()} ${y1+o()}`;
+  for(let i=1;i<=n;i++) d+=` L ${x1+dx*i/n+o()} ${y1+dy*i/n+o()}`;
+  return d;
+}
 /* rounded hand-drawn rect — the square-cornered wobbleRect above stays as the control uses it */
 function wobRound(x,y,w,h,seed,amp=3,r=20){
   const q=rnd(seed+boil()), o=()=>(q()-0.5)*2*amp;
