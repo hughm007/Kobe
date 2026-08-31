@@ -1,0 +1,73 @@
+<!-- =====================================================================
+  Service Pow homepage hero embed — handoff for the site build (2026-08-31)
+  Implements the bar-raiser delivery spec + the two WCAG Level A obligations:
+   · 2.2.2 Pause/Stop/Hide — keyboard-focusable pause control on a >5s autoplay
+   · 1.2.1 video-only alternative — the burned strings mirrored as HTML text
+  Plus: prefers-reduced-motion, play() rejection catch (iOS Low Power Mode),
+  poster wiring, letterbox-not-crop on narrow viewports.
+  Assets from build/out/delivery/: hero-h264.mp4, hero-vp9.webm, poster.webp/png.
+  ===================================================================== -->
+<section class="sp-hero" aria-label="Service Pow introduction">
+  <div class="sp-hero__frame">
+    <video id="sp-hero-video" class="sp-hero__video"
+           autoplay muted loop playsinline
+           poster="/media/poster.webp"
+           aria-describedby="sp-hero-transcript-note">
+      <source src="/media/hero-vp9.webm" type="video/webm">
+      <source src="/media/hero-h264.mp4" type="video/mp4">
+    </video>
+    <button id="sp-hero-toggle" class="sp-hero__toggle" type="button"
+            aria-label="Pause the introduction video" aria-pressed="false">⏸</button>
+  </div>
+
+  <!-- WCAG 1.2.1: the film's full text, as real HTML. Also the muted-fallback copy. -->
+  <details id="sp-hero-transcript-note" class="sp-hero__transcript">
+    <summary>What the video says (text version)</summary>
+    <p>4 video ads. 2 concepts × 2 hooks. You paid. It didn't ring. Your part: clips off
+    your phone. No film crew. No shoot day. Your van. Your street. AI builds the rest.
+    Keep the one that pulls. 5–7 business days from your footage. Disclosure handled.
+    No fake testimonials. Claims substantiated. We make the first one before you ask.
+    <strong>See one made for your business below.</strong></p>
+  </details>
+</section>
+
+<style>
+  .sp-hero__frame{position:relative;width:100%;background:#F7F5F0}
+  /* letterbox, never crop: R9's safe-band work survives every viewport */
+  .sp-hero__video{display:block;width:100%;height:auto;max-height:82vh;object-fit:contain;background:#F7F5F0}
+  .sp-hero__toggle{position:absolute;right:16px;bottom:16px;width:44px;height:44px;
+    border:2px solid #1A1A1A;border-radius:50%;background:#F7F5F0;color:#1A1A1A;
+    font-size:18px;cursor:pointer;opacity:.85}
+  .sp-hero__toggle:focus-visible{outline:3px solid #1B5FA8;outline-offset:2px}
+  .sp-hero__transcript{max-width:70ch;margin:.75rem auto;font-size:.9rem}
+</style>
+
+<script>
+(function(){
+  var v=document.getElementById('sp-hero-video'), b=document.getElementById('sp-hero-toggle');
+  function setUI(paused){
+    b.textContent = paused ? '▶' : '⏸';
+    b.setAttribute('aria-pressed', String(paused));
+    b.setAttribute('aria-label', paused ? 'Play the introduction video' : 'Pause the introduction video');
+  }
+  b.addEventListener('click', function(){
+    if (v.paused) { v.play().catch(function(){}); setUI(false); }
+    else { v.pause(); setUI(true); }
+  });
+  /* prefers-reduced-motion: never autoplay; show the poster, offer play */
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches){
+    v.removeAttribute('autoplay'); v.pause(); setUI(true);
+  } else {
+    /* iOS Low Power Mode & autoplay blockers reject play(): fall back to poster + play UI,
+       never a blank frame */
+    var p = v.play(); if (p && p.catch) p.catch(function(){ setUI(true); });
+  }
+})();
+</script>
+
+<!-- Ship checklist for this component (check 19 becomes a required pre-ship gate):
+  [ ] The finished spec ad exists ONE SCROLL below this hero (the endcard points at it — gap #1)
+  [ ] Every burned claim also appears as HTML text on the page
+  [ ] Page still states product/offer/CTA with the video element deleted
+  [ ] Cold phone test at 390px: strings legible, pause reachable by keyboard, Low Power Mode shows poster
+  [ ] The page's primary button copy reconciled with the film's endcard (growth-audit question) -->
