@@ -923,12 +923,12 @@ function r3sourceScreen(o2,t){
 /* B1 0-9 : the grid, already being made */
 function r1(t,f){
   const o=[];
-  const outline = (t<1.2) ? 0.4 + 0.6*seg(t,0,1.2) : 1;
+  const outline = (t<1.2) ? 0.55 + 0.45*seg(t,0,1.2) : 1;
   o.push(r3gridOutline(outline));
   o.push(r3gridCells(t,f,{}));
   const h={screen:'source', draw:1, tilt:-4};
-  o.push(grp(handPhone(1800,806,0.50,h)));
-  o.push(grp(r3sourceScreen(h,t), `rotate(-4 1800 806)`));
+  o.push(grp(handPhone(1794,800,0.56,h)));
+  o.push(grp(r3sourceScreen(h,t), `rotate(-4 1794 800)`));
   return o.join('');
 }
 /* B2 9-15 : the quiet phone + the lonely ad */
@@ -1067,11 +1067,11 @@ function r8b(t,f){
   if(up>0 && t<58.6) o.push(P(wline(700,470,700+520*up,470,9901), 1,{stroke:ACCENT,w:9,opacity:1-seg(t,58.5,58.6)}));
   /* seam restart: the marker begins the next grid while the hand re-enters */
   if(t>=58.9){
-    o.push(r3gridOutline(0.4*seg(t,58.9,60.0)));
+    o.push(r3gridOutline(0.55*seg(t,58.9,60.0)));
     const ent=easeOut(seg(t,58.9,60.0));
-    const hx=1800+(1-ent)*260, hy=806+(1-ent)*300;
+    const hx=1794+(1-ent)*260, hy=800+(1-ent)*300;
     const h={screen:'source', draw:1, tilt:-4};
-    o.push(grp(handPhone(hx, hy, 0.50, h)));
+    o.push(grp(handPhone(hx, hy, 0.56, h)));
     o.push(grp(r3sourceScreen(h,t), `rotate(-4 ${hx.toFixed(1)} ${hy.toFixed(1)})`));
   }
   return o.join('');
