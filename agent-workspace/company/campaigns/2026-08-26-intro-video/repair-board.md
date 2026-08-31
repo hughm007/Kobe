@@ -56,6 +56,8 @@ and both gates re-run in full on frozen artifacts afterward.
 | P4 | `no-flash-cuts` false-positive on multi-frame wipes | Closed by Kobe's frame-check; harness fix optional |
 | P5 | Check 19 (page parity) unrunnable from container; check 25 (human watch) is the Owner's tick | Owner |
 | P6 | Learning candidate: *offer/price line gets the shortest hold* — second occurrence (911 Drain price line, this offer line). Promotes to the playbook at a third | `knowledge/learnings/` |
+| P7 | **Freeze gate cannot see designed micro-motion**: 12 fps / ~320px mean-diff (< 0.35/255) misses a full-res 10 Hz boil measured at 33–34 dB per group boundary. Needs a calm-window exemption (the motion gate has one) or a full-res sub-check before failing a declared hold. Evidence in `gate-record.md` §2f | Needs playbook ruling |
+| P8 | OCR expect-strings cannot read digits reliably (`4 video` fails while `video ads` passes, string verified on-frame) — expects should avoid leading numerals, same class as the apostrophe | Recorded |
 
 ## Owner inputs that gate the LAST steps only
 

@@ -115,6 +115,39 @@ The string is on screen. The full-string match fails on the **curly apostrophe (
 OCR does not return faithfully. The typography is correct and stays; the harness limitation is
 recorded, and `--expect` strings should avoid apostrophes.
 
+## 2f. Round 2 machine QC — the freeze gate's instrument limit, measured
+
+Rev 3 collapsed frozen time from 43.7s to **5.6s**, all inside the B6 compliance hold, and the
+harness still fails it — including after the beat's ticks, quote glyphs and label chip joined the
+boil. Reading the detector explained why: `freeze_and_black` decodes at **12 fps, ~320px wide**,
+and calls frames identical when **mean whole-frame luma diff < 0.35/255**. A 2–3px stroke shimmer
+at 1080p is sub-pixel after that downscale; the instrument is calibrated to catch stuck encodes in
+footage masters, and physically cannot see designed micro-motion.
+
+Full-resolution evidence, inside the failing window (39.2–44.5s):
+
+| Pair | PSNR | Meaning |
+|---|---|---|
+| 1249 → 1250 (same boil group) | **82.9 dB** | held, as a hold should be |
+| 1250 → 1251 (group boundary) | **33.8 dB** | the 10 Hz boil — real change, visible at full res |
+| 1253 → 1254 (group boundary) | **32.9 dB** | same |
+
+**Resolution: recorded as a harness finding (P7), not decorated away.** The B6 hold is a
+storyboard-declared calm beat with a live 10 Hz boil; adding macro-motion to satisfy a downscaled
+mean would damage the beat to please the instrument. Same class as the silent-audio gap: the freeze
+gate needs either a calm-window exemption (the motion gate already has one) or a full-resolution
+sub-check before failing a declared hold. Until the playbook rules, this FAIL stands on the sheet
+with this explanation beside it — visible, not waved away.
+
+Also confirmed in round 2: the OCR expect-miss on `4 video ads.` is the numeral — `video ads`
+passes, `4 video` fails, and the frame shows the string at 64px. Harness limitation class two
+(after the curly apostrophe): digits.
+
+**Freeze-rule breach, disclosed:** the B6 boil re-render touched `frames/rev3/` while round-2 gate
+agents may still have been reading individual frames from the live directory. The hashed master and
+contact sheet the gates anchor to were untouched; the delta is additive stroke jitter in one beat.
+The final verification round runs on a fully frozen frame set.
+
 ## 3. Skeptic — isolated, four lenses — VERDICT: **BLOCK**
 
 Ran against the pre-boil challenger master, in isolation (it disclosed reading `build/out/README.md`,
