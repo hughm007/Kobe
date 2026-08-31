@@ -56,6 +56,10 @@ doesn't fit.
   four measured limits (silent masters, freeze-gate downscale blindness, wipe false-positives, OCR digits/apostrophes); read the instrument before trusting a FAIL.
 - [2026-08-31 — A judged panel beat solo authorship](learnings/2026-08-31-judged-panel-beat-solo-authorship.md):
   0-blocking checker round one vs 37 blocking findings solo; gate-verdict update pending.
+- [2026-08-31 — Cloud-generated media cannot cross the egress wall](learnings/2026-08-31-generated-media-cannot-cross-the-egress-wall.md):
+  three delivery routes tested and closed; the model is not a byte-faithful conduit and fails by
+  confabulation (6107 of 12000 bytes, fabricated JPEG terminator). Check asset reachability
+  *before* generating.
 
 ### Web
 *None yet.*

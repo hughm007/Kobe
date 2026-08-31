@@ -986,3 +986,53 @@ drafted for ratification; two new Owner questions filed (demo-spec-ad trade, con
 **Open — all Owner-side now (task #37):** the 5-minute cold watch (check 25) · the endcard/page
 parity call (the one S3) · check 19 on the live page · P2/P7 ratification · the 16:9 S2 named
 acceptance · brand A/B/C · growth audit · rights-clear clip · demo-spec-ad trade · contract terms.
+
+## 2026-08-31 — Intro video, round 4: the enrichment round
+
+**The ask.** Owner: *"use higgsfield and use seedance 2.5 to generate images to make this video
+look more visually appealing"*, plus *"I would also like a voice over."*
+
+**What happened to the plates.** 14 `soul_location` plates were generated (1.80 credits) and then
+refused, for two independent reasons.
+
+*Reason one — they lost the argument.* A 15-agent judged panel (three design spines, two lenses
+each, synthesis, three adversarial refutations) returned **refuted on all three refutations**. The
+decisive measurements: the film scores 9 on *Doesn't-look-AI* and "not AI" is a boolean, not a
+ratio; the proposed horizon clip would strand the van's contact ellipse (`cy=770, ry=7.8`) half on
+photographed sky; and a graded plate measures **chroma 8.84 against the existing gradient's 15.50**,
+so the photograph would have made the frame *less* colourful than what it replaced.
+
+*Reason two — they could never have shipped.* Generated media cannot reach this container. Three
+routes tested and closed: the CDN is 403 by organization policy, MCP exposes no media resources,
+and the model itself is not a byte-faithful base64 conduit — it reproduced 6,107 of 12,000 bytes
+and terminated them with a **fabricated but syntactically valid** JPEG end-marker. Written up as a
+learning; the rule earned is to check asset reachability *before* generating, not after.
+
+**What the panel was actually right about.** Its real finding was not "add photographs" — it was
+that *the film's two strongest sentences were illustrated by its two weakest pictures*. B4 ("AI
+builds the rest.") and B7 (the Owner-signed line) each resolved into literally two rectangles: a
+two-stop gradient over a flat `#565450` slab. Fixed in the film's own vocabulary with a new
+`streetWorld()` — hazed treeline, cloud banding, sidewalk, gutter, one centre line, boiling horizon.
+Measured B4 chroma **8.85 → 10.24**. Zero assets, zero credits, no claim exposure.
+
+**A real defect the plates were never needed to find.** `r5b` marks grid cell 0 as the winner three
+ways and the phone mini-ad is `adFinal(...,0)`, but `r6b` had `SV3=1` — so the beat burning
+*Disclosure handled / No fake testimonials / Claims substantiated* annotated **a different ad than
+the one the film had just told you won**. It survived two full gate rounds. Fixed and frame-checked;
+shipped as its own commit.
+
+**Audio.** Written, not produced. ElevenLabs is 403 at the gateway and the container has no local
+TTS of any kind. `voiceover-script.md` carries the script, bed and mix spec; an adversarial audit
+caught a claim breach ("you find out why" promises causal knowledge a four-variant pack cannot
+deliver) and five timing collisions at a realistic 140wpm read — both corrected. The hero is muted
+by design, so the VO's real homes are the 20s cutdown, the sales send and the click-through page.
+
+**QC.** Unchanged except one new frozen window at 53.9s, adjudicated as a **P7 instance, not a
+regression**: those endcard frames are byte-identical between renders, and at full resolution 30 of
+30 adjacent pairs differ at 35.9–51.7 dB. The detector cannot see a 10 Hz boil at 12fps/320px.
+Recorded, not gamed.
+
+**Open.** The dual re-gate has **not** been run — the round-3 verdicts do not transfer to this
+master. The hook is still the weakest beat (5.4% coverage, `hook-motion` 0.24 against a floor of
+1.0), diagnosed but not addressed. Owner-side items from task #37 all still stand, plus: ratify the
+plate refusal, and decide where the voiceover gets produced.

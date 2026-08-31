@@ -26,9 +26,13 @@ ACCENT = np.array([0x1B, 0x5F, 0xA8], dtype=np.int16)
 FPS = 30.0
 STEP = 20          # sample every Nth frame
 SUB = 4            # spatial subsample; 1920x1080 -> 480x270
-BEATS = [(0.0, 7.5, 'B1 hook'), (7.5, 15.0, 'B2'), (15.0, 22.5, 'B3'),
-         (22.5, 30.0, 'B4'), (30.0, 37.5, 'B5'), (37.5, 45.0, 'B6'),
-         (45.0, 52.5, 'B7'), (52.5, 60.0, 'B8/endcard')]
+# Fixed 7.5s blocks, NOT true beat boundaries -- the beats do not divide evenly.
+# The label names the dominant beat in the block, so a block can carry a frame or
+# two of its neighbour: the 30.0s block opens on the tail of B4's board wipe, which
+# is enough to move that block's mean on its own. Read these as time ranges.
+BEATS = [(0.0, 7.5, '0.0-7.5 B1'), (7.5, 15.0, '7.5-15 B2'), (15.0, 22.5, '15-22.5 B3'),
+         (22.5, 30.0, '22.5-30 B4'), (30.0, 37.5, '30-37.5 B5'), (37.5, 45.0, '37.5-45 B6'),
+         (45.0, 52.5, '45-52.5 B7'), (52.5, 60.0, '52.5-60 B8')]
 
 
 def measure(dirpath):

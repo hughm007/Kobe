@@ -337,3 +337,101 @@ re-frozen as `gates/round3-final/`.
 **Every FAIL on the delivered master is either a recorded instrument limit with measured evidence,
 or a verified false positive — none is a defect in the film.** The honest sheet ships with the
 artifact; nothing was suppressed to make it read clean.
+
+---
+
+# Round 4 — the enrichment round (2026-08-31)
+
+Triggered by the Owner: *"use higgsfield and use seedance 2.5 to generate images to
+make this video look more visually appealing"* + *"I would also like a voice over."*
+
+Frozen artifacts: `build/gates/round4-enriched/` — master
+`5f52c965…`, scenes.html `1425d4ba…`, frames-manifest `b77055f5…`.
+
+## 1. The plate question, judged and refused
+
+15 agents: three independent design spines (diegetic-only / world-plates /
+restraint), two lenses each, a synthesis, then three adversarial refutations.
+
+| Spine | Mean | Regress risk |
+|---|---|---|
+| world | 8.0 | yes |
+| diegetic | 8.0 | yes |
+| restraint | 7.5–8.5 | **no** |
+
+The synthesis picked an amended world spine — 2 plates, above the horizon only.
+**All three refutations returned `refuted: true`.** The three findings that killed it:
+
+1. **"Not AI" is a boolean, not a ratio.** The film scores 9 on *Doesn't-look-AI*.
+   One photograph spends that; 85% ink does not buy it back.
+2. **The horizon clip inverts the cel/background relationship.** `vanArt`
+   (scenes.html:690) emits its contact ellipse at `cy=770, ry=7.8` — centred on the
+   clip line — so 7.8px of the van's only ground-contact cue would be painted onto
+   photographed sky. Same at B7 (`cy=R7HZ=660`).
+3. **The grade loses colour.** A graded plate measures **chroma 8.84** against
+   `skyGrad`'s **15.50**. The photograph would make the frame *less* colourful than
+   the gradient it replaced.
+
+Independently of the verdict, the plates could not have shipped: generated media
+cannot reach this container (three routes tested — see the egress learning). Two
+independent reasons, same answer. **Zero plates in the film.**
+
+## 2. What shipped instead
+
+Exactly three changed runs, confirmed by frame diff against the previous master
+(every other sampled frame byte-identical):
+
+| Run | Change |
+|---|---|
+| 28.0–30.0s | `streetWorld()` at B4 |
+| 38.7–45.3s | `SV3` 1 → 0, the compliance-beat continuity fix |
+| 49.3–52.7s | `streetWorld()` at B7 |
+
+**The B6 defect.** `r5b` marks cell 0 as the winner three ways — accent circle, tick,
+and `dimLosers && i!==0` — and `r3sourceScreen` renders the phone mini-ad as
+`adFinal(...,0)`. `r6b` set `SV3=1`, so the beat burning *Disclosure handled / No fake
+testimonials / Claims substantiated* annotated a **different ad than the one the film
+had just declared the winner**. Survived two full gate rounds. Frame-checked at 32.0s
+and 43.0s after the fix: the circled winner and the annotated compliance ad now match.
+
+## 3. Measured delta
+
+| Metric | Before | After |
+|---|---|---|
+| B4 chroma | 8.85 | **10.24** |
+| B7 chroma | 8.10 | **8.74** |
+| Film-wide chroma | 7.68 | 8.02 |
+| Coverage | 15.30% | 15.31% |
+| Loop seam PSNR(1799→0) | 24.013 dB | **24.013 dB** (frames 0/1799 byte-identical) |
+| Master size | 4,907,027 | 5,046,402 (+2.8%) |
+
+Measured with `build/visual-density.py`, added this round so "more visually
+appealing" is a delta rather than an opinion.
+
+## 4. QC adjudication
+
+Unchanged from round 3: the two audio FAILs (P2, silent by design), `no-flash-cuts`
+(P4, known false positive), `hook-motion` WARN.
+
+**One new line: a fifth frozen window, `53.9s+4.7s`.** Adjudicated as a **P7 instance,
+not a regression**:
+
+- The B8/endcard source frames are **byte-identical** between the two renders
+  (`maxdiff 0` across 53.7–58.8s). The film did not change there. The detector's
+  verdict flipped because earlier frames changed the encoder's bit allocation and
+  that hold sits on the threshold.
+- At full resolution, **30 of 30 adjacent frame pairs in the window differ**, PSNR
+  35.9–51.7 dB. The endcard is actively redrawing at 10 Hz. The check works at
+  12fps/~320px with a <0.35/255 mean-diff floor and cannot see it.
+
+Recorded, not gamed. Adding motion to an endcard purely to satisfy a mis-calibrated
+detector would be exactly the instrument-gaming the house rule forbids.
+
+## 5. Still open
+
+- **Dual re-gate not run.** This master is not gate-cleared; the round-3 verdicts
+  (Skeptic 0 S4 / 1 S3, Kobe 8.2) do **not** transfer. Skeptic + Kobe on the changed
+  beats is the next step.
+- **The hook is still the weakest beat**: 5.4% coverage, `hook-motion` 0.24 against a
+  floor of 1.0. Diagnosed, not addressed — it needs its own round.
+- **Audio not produced.** See `voiceover-script.md` §5.

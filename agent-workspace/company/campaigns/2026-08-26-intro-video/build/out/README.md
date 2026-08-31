@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-08-31
 tags: [company, video, intro-video, build]
 ---
 
@@ -84,3 +84,30 @@ instrument before trusting the number."
 
 Embed contract for the site build: `../site-handoff/hero-embed.html` (WCAG 2.2.2 pause + 1.2.1
 text alternative + reduced-motion + play() fallback + letterbox rule + the check-19 ship list).
+
+## Round 4 — the enriched master, 2026-08-31
+
+| | |
+|---|---|
+| File | `servicepow-intro-60s-rev3b.mp4` |
+| ffprobe | 1920x1080 · yuv420p · 30/1 fps · **1800 frames** · **60.000000 s** · 5,046,402 bytes |
+| Changed vs `-rev3` | exactly three runs, everything else byte-identical: **28.0-30.0s** (B4 `streetWorld`), **38.7-45.3s** (`SV3` continuity fix), **49.3-52.7s** (B7 `streetWorld`) |
+| Audio | **still none.** ElevenLabs is 403 at the egress gateway and there is no local TTS — see `../voiceover-script.md` §5 |
+| Generated assets | **zero.** 14 plates were made and refused; see `../gate-record.md` round 4 |
+| Gate status | **not re-gated.** Round-3 verdicts do not transfer to this master |
+
+Delivery encodes re-cut from it: `hero-h264.mp4` 3.18 MB (crf23, ≤5 MB ✅) ·
+`hero-vp9.webm` 3.59 MB (crf36, <=4 MB target) ·
+posters unchanged (frame 0 is byte-identical).
+
+Loop handoff re-measured, unchanged: **PSNR(1799 -> 0) = 24.013 dB**, frames 0 and 1799
+byte-identical to the previous master.
+
+Frozen with hashes at `gates/round4-enriched/` (gitignored locally; SHA256SUMS is the record).
+
+```
+python3 render.py --cut rev3 --all --out rev3b
+./render.sh rev3b 0 servicepow-intro-60s-rev3b
+python3 visual-density.py frames/rev3 frames/rev3b     # the before/after delta
+```
+

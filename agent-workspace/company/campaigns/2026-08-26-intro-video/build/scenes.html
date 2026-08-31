@@ -39,6 +39,23 @@
       <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stop-color="#AFC2D4"/><stop offset="1" stop-color="#EDE7DC"/>
       </linearGradient>
+      <!-- The world the snap pays out into. B4 and B7 carry the film's two strongest
+           lines and used to be a two-stop gradient over a flat slab; these give the
+           street air above the horizon and a surface below it. Values are chosen so
+           ink at #1A1A1A clears 4.5:1 everywhere over them, and so nothing in the
+           band out-brightens the cream ground -- the paper stays the brightest
+           surface in the film. -->
+      <linearGradient id="skyDeep" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#A4BAD0"/><stop offset="0.42" stop-color="#C6D5E0"/>
+        <stop offset="0.78" stop-color="#E2DED4"/><stop offset="1" stop-color="#EFE9DD"/>
+      </linearGradient>
+      <linearGradient id="roadGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#7A776F"/><stop offset="0.35" stop-color="#6E6B64"/>
+        <stop offset="1" stop-color="#5F5D57"/>
+      </linearGradient>
+      <linearGradient id="walkGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#8E8B82"/><stop offset="1" stop-color="#7C7970"/>
+      </linearGradient>
     </defs>
     <g id="scene"></g>
   </svg>
@@ -969,6 +986,91 @@ function r3b(t){
   }
   return o.join('');
 }
+/* ---------------------------------------------------------------------------
+   streetWorld — what the snap pays out into.
+
+   B4 and B7 carry the film's two strongest sentences ("AI builds the rest." and
+   the Owner-signed "We make the first one before you ask.") and both used to
+   resolve into exactly two rectangles: a two-stop gradient and a flat #565450
+   slab. The film's best lines were illustrated by its worst pictures.
+
+   This draws the same stage-flat world the film already uses -- sky above the
+   horizon, ground below it, objects standing ON the line -- but gives it air and
+   a surface: haze-graded distance, a sidewalk the van parks against, a road that
+   recedes by dash spacing rather than by a vanishing point that would fight the
+   flat convention and strand the van's contact shadow.
+
+   Deterministic: the silhouette is seeded and does NOT boil (a flickering
+   treeline would pulse on a second clock, which the polish pass specifically
+   de-synced). Only the kerb and horizon strokes boil, and they are what keep the
+   post-snap hold from reading as a frozen section.
+--------------------------------------------------------------------------- */
+function streetWorld(x,y,w,h,hz,sc,seed){
+  const o=[];
+  const skyH = hz - y, gndH = (y + h) - hz;
+  o.push(F(rectD(x,y,w,skyH),{fill:'url(#skyDeep)'}));
+
+  /* cloud banding: wide, soft, low-contrast. Kept out of the upper-left, where
+     the text rail and the persistent corner wordmark sit. */
+  const qc = rnd(seed+11);
+  for(let i=0;i<4;i++){
+    const cw = w*(0.20+qc()*0.20), ch = skyH*(0.045+qc()*0.035);
+    const cx = x + w*(0.34+qc()*0.62), cy = y + skyH*(0.10+qc()*0.42);
+    o.push(F(`M ${cx-cw/2} ${cy} q ${cw*0.16} ${-ch} ${cw*0.40} ${-ch*0.72}`
+           + ` q ${cw*0.22} ${-ch*0.5} ${cw*0.44} ${ch*0.10}`
+           + ` q ${cw*0.20} ${ch*0.2} ${cw*0.16} ${ch*0.62} Z`,
+           {fill:'#FFFFFF', opacity:0.20}));
+  }
+
+  /* distance: rooflines and tree canopies just above the horizon, hazed back so
+     they read as depth rather than as another subject competing with the van. */
+  const qs = rnd(seed+29);
+  let sx = x - 40;
+  const band = Math.max(26, skyH*0.11);
+  const sil = [];
+  while(sx < x + w + 40){
+    if(qs() < 0.46){                                   /* a roof */
+      const bw = 70*sc + qs()*120*sc, bh = band*(0.45+qs()*0.5);
+      sil.push(`M ${sx} ${hz} L ${sx} ${hz-bh*0.55} L ${sx+bw/2} ${hz-bh}`
+             + ` L ${sx+bw} ${hz-bh*0.55} L ${sx+bw} ${hz} Z`);
+      sx += bw + 10*sc;
+    } else {                                            /* a tree */
+      const r = band*(0.34+qs()*0.34);
+      sil.push(`M ${sx-r} ${hz} q 0 ${-r*1.5} ${r} ${-r*1.6} q ${r} ${r*0.1} ${r} ${r*1.6} Z`);
+      sx += r*2 + 14*sc;
+    }
+  }
+  o.push(F(sil.join(' '), {fill:'#7C8B86', opacity:0.30}));
+
+  /* ground */
+  o.push(F(rectD(x,hz,w,gndH),{fill:'url(#roadGrad)'}));
+  const walkH = Math.min(30*sc, gndH*0.34);
+  o.push(F(rectD(x,hz,w,walkH),{fill:'url(#walkGrad)'}));
+  o.push(P(wline(x+6,hz+walkH,x+w-6,hz+walkH,seed+41,1.6*sc), 1,
+           {w:Math.max(2,3*sc), opacity:.42}));
+
+  /* The camera is side-on and the van is parked at the kerb, so the road runs
+     left-to-right across frame -- which means ONE centre line, not stacked rows.
+     Rows of dashes read as a highway seen from above and fight the flat stage. */
+  const roadTop = hz + walkH, roadH = (y+h) - roadTop;
+  if(roadH > 26*sc){
+    /* gutter: the road darkens into the kerb. A soft band reads as a real street
+       edge; the flat-rectangle "tarmac texture" this replaced read as render
+       artifacts, because hard corners survive any opacity on a smooth gradient. */
+    o.push(F(rectD(x,roadTop,w,Math.max(6,14*sc)),{fill:'#3E3C38', opacity:0.22}));
+    o.push(F(rectD(x,roadTop,w,Math.max(3,7*sc)), {fill:'#3E3C38', opacity:0.20}));
+    const yy = roadTop + roadH*0.52, dw = 62*sc, gap = 52*sc, th = Math.max(2,5*sc);
+    for(let px = x + 18*sc; px < x + w - dw; px += dw + gap)
+      o.push(F(rectD(px,yy,dw,th),{fill:'#D8D2C4', opacity:0.42}));
+  }
+
+  /* the horizon itself, as ink: the only hard edge in the picture is a boiling
+     marker line, which is also what keeps this hold alive to the freeze check. */
+  o.push(P(wline(x+8,hz,x+w-8,hz,seed+73,2.0*sc), 1,
+           {w:Math.max(3,5*sc), opacity:.85}));
+  return o.join('');
+}
+
 /* B4 23-30 : the clip becomes the board; env snaps, the van keeps its ink */
 const R4_HZ=770;
 function r4b(t,f){
@@ -977,8 +1079,7 @@ function r4b(t,f){
   const gp = easeOut(seg(t,23.0,24.0));      /* the clip growing out of the phone */
   const g=[];
   if(snapped){
-    g.push(F(rectD(0,0,W,R4_HZ),{fill:'url(#skyGrad)'}));
-    g.push(F(rectD(0,R4_HZ,W,H-R4_HZ),{fill:'#565450'}));
+    g.push(streetWorld(0,0,W,H,R4_HZ,1.0,9510));
   } else {
     g.push(P(wline(60,R4_HZ,1860,R4_HZ,9501), seg(t,23.2,24.0),{w:5,opacity:.85}));
     g.push(P(wline(140,200,520,200,9502), seg(t,24.2,24.8),{w:4,opacity:.5}));
@@ -1046,8 +1147,7 @@ function r7b(t,f){
   const snapped=f>=SNAP;
   const g=[];
   if(snapped){
-    g.push(F(rectD(R7F.x+4,R7F.y+4,R7F.w-8,R7HZ-R7F.y-4),{fill:'url(#skyGrad)'}));
-    g.push(F(rectD(R7F.x+4,R7HZ,R7F.w-8,R7F.y+R7F.h-R7HZ-4),{fill:'#565450'}));
+    g.push(streetWorld(R7F.x+4,R7F.y+4,R7F.w-8,R7F.h-8,R7HZ,0.56,9810));
   } else {
     g.push(P(wline(R7F.x+30,R7HZ,R7F.x+R7F.w-30,R7HZ,9802), seg(t,46.4,47.0),{w:4,opacity:.8}));
   }
