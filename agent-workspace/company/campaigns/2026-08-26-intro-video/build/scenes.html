@@ -257,17 +257,36 @@ function adSketch(x,y,w,h,v,p,seed,noBorder){
            clamp(q*3-2.4,0,1), {w:4,opacity:.55}));
   return o.join('');
 }
+/* ?plates=1 puts real footage inside the finished ads. Off by default, so a render
+   without the plate files on disk is byte-identical to the cut that has been gated.
+   The images are the ad's BACKGROUND, not a patch in the middle of it: a video ad is
+   a frame of footage with UI over it, and the flat #232323 body with a light grey
+   rectangle where the picture should be is precisely what made every depicted ad read
+   as a wireframe. Files live beside scenes.html in plates/ and are only present in the
+   Higgsfield sandbox, which can reach the asset CDN this container cannot. */
+const PLATES = new URLSearchParams(location.search).get('plates')==='1';
+const PLATE_IMG = ['plates/a0.jpg','plates/a1.jpg','plates/a2.jpg','plates/a3.jpg'];
+
 function adFinal(x,y,w,h,v){
   const o=[], V=VAR[v], U=u=>x+u*w, Y=q=>y+q*h;
-  o.push(F(rectD(x,y,w,h),{fill:PLATE}));
-  if(V.hz) o.push(F(rectD(x,y,w,V.hz*h),{fill:'#2E2E2E'}));
+  if(PLATES){
+    o.push(`<image href="${PLATE_IMG[v%4]}" x="${x}" y="${y}" width="${w}" height="${h}" preserveAspectRatio="xMidYMid slice"/>`);
+    /* grade: the caption pill, the play glyph and the accent all sit on top and must
+       keep their contrast against whatever the photograph happens to be doing. */
+    o.push(F(rectD(x,y,w,h),{fill:'#141414',opacity:.42}));
+  } else {
+    o.push(F(rectD(x,y,w,h),{fill:PLATE}));
+  }
+  if(V.hz) o.push(F(rectD(x,y,w,V.hz*h),{fill:'#2E2E2E',opacity:PLATES?.34:1}));
   const a=V.acc;
   if(a.k==='bar')  o.push(F(rectD(U(a.b[0]),Y(a.b[1]),a.b[2]*w,a.b[3]*h),{fill:ACCENT}));
   if(a.k==='circ') o.push(F(circD(U(a.c[0]),Y(a.c[1]),a.c[2]*h),{fill:ACCENT}));
   if(a.k==='diag') o.push(`<path d="M ${U(a.d[0])} ${Y(a.d[1])} L ${U(a.d[2])} ${Y(a.d[3])} L ${U(a.d[0])} ${Y(a.d[1])-h*0.32} Z" fill="${ACCENT}" opacity="0.9"/>`);
   if(a.k==='band') o.push(F(rectD(U(a.b[0]),Y(a.b[1]),a.b[2]*w,a.b[3]*h),{fill:ACCENT}));
   const s=V.subj;
-  o.push(F(rectD(U(s[0]),Y(s[1]),s[2]*w,s[3]*h),{fill:LIGHT}));
+  /* with a photograph behind it this stops being "where the picture goes" and becomes
+     a UI card sitting on the footage, so it drops to a translucent panel */
+  o.push(F(rectD(U(s[0]),Y(s[1]),s[2]*w,s[3]*h),{fill:LIGHT,opacity:PLATES?.30:1}));
   const cx0=U(V.cap[0])+8, cy0=y+h-h*0.17, cw=V.cap[1]*w, ch=h*0.105;
   o.push(F(rectD(cx0,cy0,cw,ch),{fill:'#F2EFE8',opacity:.94}));
   o.push(F(rectD(cx0+14,cy0+ch*0.24,cw*0.55,h*0.021),{fill:'#3A3A3A'}));
