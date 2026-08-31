@@ -54,6 +54,18 @@ function life(tIn, tOut, rise, fall) {
   ]};
 }
 
+/* Comes in and never leaves. The beat boundary is the cut, so a
+   structural layer must still be ON SCREEN when the next beat opens --
+   otherwise both sides fade to nothing and the seam is bare ground.
+   Measured: frames at 15.0s and 23.0s were a single colour. */
+function hold(tIn, rise) {
+  const r = rise == null ? 0.32 : rise;
+  const a = Math.max(0.001, tIn);
+  return { property: 'opacity', keyframes: [
+    { at: 0, value: 0 }, { at: a, value: 0 }, { at: a + r, value: 1 },
+  ]};
+}
+
 /* A burned line: word-staggered in, faded out. The scene-sized wrapper
    keeps the opacity chain off the text so it never fights the stagger. */
 function Line(o) {
@@ -88,7 +100,7 @@ function Slab(o) {
     <rect x={o.x} y={o.y} width={o.w} height={o.h} fill={o.fill || CARD} radius={o.r || 0}
           animate={[
             { property: 'scale', from: 0.985, to: 1, at: o.in, duration: 0.9, easing: 'smooth' },
-            life(o.in, o.out, 0.5, 0.4),
+            hold(o.in, 0.5),
           ]} />
   );
 }
@@ -121,7 +133,7 @@ function AdCard(o) {
         { at: 0, value: 0 }, { at: a, value: 0 }, { at: a + 0.30, value: 1 },
         { at: a + 1.50, value: 0.24 }, { at: Math.max(a + 1.6, d - 0.34), value: 0.24 },
         { at: d, value: 0 }] }
-    : life(o.in, o.out, 0.30, 0.34);
+    : (o.keep ? hold(o.in, 0.30) : life(o.in, o.out, 0.30, 0.34));
 
   const tracks = [
     { property: 'offsetY', from: 46, to: 0, at: o.in, duration: 0.62, easing: 'house' },
@@ -144,7 +156,7 @@ function AdRow(o) {
   for (let i = 0; i < 4; i++) {
     out.push(AdCard({
       x: o.x + i * (cw + gap), y: o.y, w: cw, h: ch,
-      in: o.in + i * st, out: o.out,
+      in: o.in + i * st, out: o.out, keep: o.keep,
       state: o.winner === i ? 'won' : (o.winner != null ? 'lost' : (o.q ? 'q' : 'blank')),
     }));
   }
@@ -183,7 +195,7 @@ export default async (ctx) => {
       {/* the phone that never rang */}
       <group x={1264} y={168} width={540} height={720}
              animate={[{ property: 'offsetY', from: 38, to: 0, at: 0.25, duration: 0.8, easing: 'smooth' },
-                       life(0.25, 4.75, 0.45, 0.4)]}>
+                       life(0.25, 5.35, 0.45, 0.4)]}>
         <rect x={0} y={0} width={540} height={720} radius={46} fill={CARD} />
         <rect x={22} y={22} width={496} height={676} radius={34} fill="#0B0A09" />
         {icon('phone-off', { x: 226, y: 168, size: 88, color: INK_FAINT })}
@@ -200,7 +212,7 @@ export default async (ctx) => {
 
       {Line({ text: 'Don’t bet your spend\non one ad. We build four.', in: 4.9, out: 9.0,
               x: M, y: 232, w: 960, size: 88 })}
-      {AdRow({ x: M, y: 560, in: 5.5, out: 9.4 })}
+      {AdRow({ x: M, y: 560, in: 5.2, out: 9.5, keep: true })}
     </group>,
     { at: 0, dur: 9.5, name: 's1-pain' },
   );
@@ -211,7 +223,7 @@ export default async (ctx) => {
       {Line({ text: 'And you still\ndon’t know why.', in: 0.5, out: 4.9,
               x: M, y: 300, w: 820, size: 116 })}
       {Rule({ x: M, y: 604, w: 260, in: 0.9, out: 4.9 })}
-      {AdRow({ x: 1010, y: 250, cw: 380, ch: 254, gap: 30, in: 0.2, out: 5.5, q: true })}
+      {AdRow({ x: 1010, y: 250, cw: 380, ch: 254, gap: 30, in: 0.2, out: 5.7, q: true, keep: true })}
       <text x={1010} y={790} width={820} fontFamily={BODY} fontSize={30}
             fontWeight={600} color={INK_DIM}
             animate={[life(2.4, 5.4, 0.4, 0.4)]}>Four guesses. No read on any of them.</text>
@@ -226,7 +238,7 @@ export default async (ctx) => {
 
       <group x={1240} y={130} width={520} height={800} origin="center"
              animate={[{ property: 'scale', from: 0.95, to: 1, at: 0.2, duration: 0.7, easing: 'house' },
-                       life(0.2, 7.8, 0.4, 0.4)]}>
+                       hold(0.2, 0.4)]}>
         <rect x={0} y={0} width={520} height={800} radius={46} fill={CARD} />
         <rect x={22} y={22} width={476} height={756} radius={34} fill="#0B0A09" />
         <rect x={44} y={150} width={432} height={470} radius={14} fill={CARD_HI} />
@@ -247,8 +259,8 @@ export default async (ctx) => {
 
       {Line({ text: 'No film crew.\nNo shoot day.', in: 4.6, out: 7.6,
               x: M, y: 258, w: 860, size: 96 })}
-      {KillChip({ x: M, y: 540, w: 400, text: 'FILM CREW', in: 5.1, out: 7.6 })}
-      {KillChip({ x: M, y: 632, w: 400, text: 'SHOOT DAY', in: 5.4, out: 7.6 })}
+      {KillChip({ x: M, y: 540, w: 400, text: 'FILM CREW', in: 5.1, out: 8.0 })}
+      {KillChip({ x: M, y: 632, w: 400, text: 'SHOOT DAY', in: 5.4, out: 8.0 })}
     </group>,
     { at: 15.2, dur: 8.0, name: 's3-your-part' },
   );
@@ -268,7 +280,7 @@ export default async (ctx) => {
           <group x={M + i * (cw + gap)} y={470} width={cw} height={300}
                  animate={[
                    { property: 'offsetY', from: 42, to: 0, at: tIn, duration: 0.6, easing: 'house' },
-                   life(tIn, 6.7, 0.3, 0.34),
+                   hold(tIn, 0.3),
                  ]}>
             <rect x={0} y={0} width={cw} height={300} radius={16} fill={yours ? CARD_HI : CARD} />
             <rect x={0} y={0} width={cw} height={300} radius={16} fill={ACCENT_D}
@@ -293,7 +305,7 @@ export default async (ctx) => {
     <group x={0} y={0} width={W} height={H}>
       {Line({ text: 'Keep the one\nthat pulls.', in: 0.3, out: 3.6, x: M, y: 300, w: 720, size: 118 })}
       {Rule({ x: M, y: 612, w: 260, in: 0.7, out: 3.6 })}
-      {AdRow({ x: 940, y: 300, cw: 400, ch: 268, gap: 34, in: 0.2, out: 4.2, winner: 1 })}
+      {AdRow({ x: 940, y: 300, cw: 400, ch: 268, gap: 34, in: 0.2, out: 4.2, winner: 1, keep: true })}
 
       {Line({ text: '5–7 business days\nfrom your footage.', in: 3.9, out: 8.1,
               x: M, y: 300, w: 900, size: 96 })}
@@ -317,7 +329,7 @@ export default async (ctx) => {
       {Slab({ x: 0, y: 0, w: 760, h: H, fill: '#121110', in: 0.0, out: 6.9 })}
       <group x={252} y={396} width={260} height={260} origin="center"
              animate={[{ property: 'scale', from: 0.9, to: 1, at: 0.2, duration: 0.6, easing: 'house' },
-                       life(0.2, 6.6, 0.4, 0.4)]}>
+                       hold(0.2, 0.4)]}>
         <rect x={0} y={0} width={260} height={260} radius={130} fill={ACCENT_D} />
         {icon('check', { x: 74, y: 74, size: 112, color: INK })}
       </group>
@@ -331,7 +343,7 @@ export default async (ctx) => {
             <group x={900} y={286 + i * 152} width={900} height={110}
                    animate={[{ property: 'offsetX', from: 46, to: 0, at: row[1],
                                duration: 0.5, easing: 'house' },
-                             life(row[1], 6.5, 0.3, 0.36)]}>
+                             hold(row[1], 0.3)]}>
               <rect x={0} y={0} width={900} height={110} radius={16} fill={CARD} />
               {icon('check', { x: 34, y: 32, size: 46, color: ACCENT })}
               <text x={110} y={30} width={760} fontFamily={BODY} fontSize={42}
@@ -347,7 +359,7 @@ export default async (ctx) => {
   p.compose(
     <group x={0} y={0} width={W} height={H}>
       {Slab({ x: 1060, y: 0, w: 860, h: H, fill: '#121110', in: 0.0, out: 8.1 })}
-      {AdCard({ x: 1250, y: 268, w: 480, h: 500, in: 0.6, out: 7.9, state: 'won' })}
+      {AdCard({ x: 1250, y: 268, w: 480, h: 500, in: 0.6, out: 8.1, state: 'won', keep: true })}
       <text x={1250} y={812} width={480} align="center" fontFamily={BODY} fontSize={26}
             fontWeight={700} color={ACCENT}
             animate={[life(1.4, 7.9, 0.4, 0.4)]}>BUILT BEFORE YOU ASK</text>
@@ -380,6 +392,26 @@ export default async (ctx) => {
             animate={[life(1.6, 5.8, 0.4, 0.4)]}>Free · No purchase required · No obligation</text>
     </group>,
     { at: 53.7, dur: 6.3, name: 's8-cta' },
+  );
+
+  /* ---- persistent chrome, all 60s -----------------------------
+     Editorial furniture that never leaves. Two jobs: it guarantees no
+     frame is ever a single flat colour, and the progress hairline puts
+     a moving element in every one of the 1800 frames. */
+  p.compose(
+    <group x={0} y={0} width={W} height={H}>
+      <rect x={0} y={0} width={W} height={2} fill={RULE} />
+      <rect x={0} y={H - 6} width={W} height={6} fill={RULE} />
+      <rect x={0} y={H - 6} width={W} height={6} fill={ACCENT}
+            animate={[{ property: 'scaleX', from: 0, to: 1, at: 0, duration: 60, easing: 'linear' }]} />
+      <rect x={64} y={140} width={2} height={H - 300} fill={RULE} />
+      <rect x={W - 66} y={140} width={2} height={H - 300} fill={RULE} />
+      <text x={64} y={74} width={600} fontFamily={BODY} fontSize={20}
+            fontWeight={700} letterSpacing={4} color={INK_FAINT}>SERVICE POW</text>
+      <text x={W - 664} y={74} width={600} align="right" fontFamily={BODY} fontSize={20}
+            fontWeight={600} letterSpacing={4} color={INK_FAINT}>AI VIDEO ADS FOR SERVICE BUSINESSES</text>
+    </group>,
+    { at: 0, dur: 60, name: 'chrome' },
   );
 
   /* proof frames — one per scene, at a readable hold */
