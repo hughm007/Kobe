@@ -77,6 +77,16 @@ The first seconds decide everything: on Meta, roughly half of a campaign's value
 - **A meaningful visual change lands every ≤3 seconds** (cut, zoom step, text beat, or angle change ≥30°).
 - Post-ship targets (S9): hook rate ≥25–30% Meta / ≥30% TikTok / ≥25% Shorts; hold rate ≥50%; average watch ≥50% of duration. Below-benchmark hooks feed the next concept's WHY.
 
+### THE PROBE PASS (v1.0 — 2026-08-31, promoted at third occurrence; ADVISORY tier)
+
+Before any full render and before any gate on a code-rendered build: render a probe set — ~12
+spread frames plus every snap and seam frame — and **look at each one as a stranger**. Clean code
+is not evidence; across three consecutive build rounds of the company intro video, 15 composition
+defects (collisions, unfinished draw states, floating objects, wrong-nesting transforms) were
+invisible to code review and JS diagnostics, and all 15 were visible in the first probe frame that
+showed them. Evidence: `knowledge/learnings/2026-08-31-frames-catch-what-code-review-cannot.md`.
+Advisory, not a blocking check — it changes when you look, not what blocks.
+
 ### THE PERFORMANCE CHALLENGER RULE (v1.0 — 2026-08-26, Owner-directed; ADVISORY tier)
 Production QA answers "is it correct?" Performance-Marketing QA answers "will someone care?"
 **Correctness is the floor. Conversion is the objective.** The standing question, asked of

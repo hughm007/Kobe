@@ -947,3 +947,16 @@ substantiated claims transplanted; then both gates re-run in full.
 **Open.** Growth audit (gates the endcard string) · a rights-clear clip (gates the realism claim's
 return) · brand A/B/C · harness `--allow-silent` ruling · learning candidate at two occurrences:
 the offer line gets the shortest hold.
+
+## 2026-08-31 (addendum) — the knowledge loop caught up with the fails
+
+Owner directive: log and learn from every fail as we go. Audit found the campaign's fails living
+in gate documents but not in `knowledge/learnings/` — eight files written, each one finding,
+each with its measured evidence: frames-catch-what-code-review-cannot (15 defects, 3/3 rounds —
+**third occurrence, PROMOTED** as the Probe Pass advisory in the video playbook, validator green) ·
+claim-qualifiers-drop-in-transcription (2, watching) · offer-line-shortest-hold (2, watching) ·
+placement-relative-copy-reading · code-rendered-films-freeze-without-a-boil ·
+gates-need-frozen-artifacts · harness-instrument-limits (four, all measured) ·
+judged-panel-beat-solo-authorship (design-time evidence; gate verdict pending, file to be updated).
+Pattern-watch table now carries six rows including the 911 Drain "secondary-location" class at 3,
+**due for promotion** — its learning file is the next knowledge debt.
