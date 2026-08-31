@@ -95,6 +95,8 @@ the section below.
 | The offer/price line gets the shortest hold | 2 (911 Drain price line · intro offer line) | Watching — a third promotes it into check 32's scope for burned text |
 | "Secondary-location" resolution misses (a fix applied at the named spot while other cells still assert the old answer) | 3 (911 Drain rounds 10, 14, 15) | **Due for promotion** — evidence in the 911 Drain campaign bible §14; needs its learning file written and a playbook line |
 | Flash-cut detector false-positives on multi-frame wipes | 2 (gate rounds 1 and 2) | Watching — harness fix proposed (P4) |
+| Build location must be chosen by where the heaviest inputs live | 1 ([build-where-the-assets-are](learnings/2026-08-31-build-where-the-assets-are.md)) | Forming — one measurement, but the measurement is unambiguous (half a build round spent on transport) |
+| The expensive gate belongs at publish, not on drafts | 1 ([first-artifact-in-ten-minutes](learnings/2026-08-31-first-artifact-in-ten-minutes.md)) | Forming — Owner-stated; changes the default order of work |
 
 ## Promoted to playbooks
 

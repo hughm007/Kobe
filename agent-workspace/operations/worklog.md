@@ -1123,3 +1123,50 @@ not dropped. `human presence` likely stays at 6 until it lands.
 **Open:** Rev 4 has not been gated — new copy, new artifact, and the round-6 verdicts were
 issued against `-rev3c`. Audio still blocked. Publishing is the Owner's action; the master,
 both delivery encodes, posters and the embed handoff are frozen and ready.
+
+---
+
+## 2026-08-31 (later) — the vehicle changed
+
+The Owner asked, directly, whether to continue: *"way too long of a process... I would
+rather have something made for me that I can look at within 10 minutes then ask me
+questions to make it better together, than take like 15 hours."*
+
+**Answer given: continue the film, abandon the build path.** Four causes, only one of them
+creative.
+
+1. The feedback loop ran backwards — hours of gated work before he saw a frame.
+2. A publish-grade dual gate was pointed at drafts.
+3. Code-drawn SVG line art is inherently sparse. "Blank and boring" is the medium, not a
+   defect to patch out.
+4. Roughly half the recent hours were transport, because the render container is
+   firewalled from the Higgsfield asset CDN.
+
+**What changed.** The film was rebuilt as a higgsedit project inside the Higgsfield
+sandbox, where the assets already live. `higgsedit/edit.jsx` is the whole edit: eight
+composed scenes of native clips over the produced voiceover. Render dropped from ~20
+minutes to ~35 seconds.
+
+**What carried over unchanged:** the pain-first Rev 4 string table and its exact timings
+(the voiceover is mixed against them), the documented free growth audit as the single
+conversion path, the claim boundaries, and the 15-line voiceover itself.
+
+**What machine QC caught, in about forty seconds.** Cut 01 had frames at 15.0s and 23.0s
+with standard deviation 0.00 and exactly one distinct colour — completely blank. My bug:
+every element's opacity chain faded to zero before its beat ended, so at each scene seam
+both sides were transparent at once. Fixed with a `hold()` chain for structural layers
+plus a persistent chrome layer across all 60s. Cut 02 has **zero** blank frames; the seams
+went from 1 distinct colour to 319–524.
+
+**Verified on cut 02:** 1920×1080 · 30fps · 1800 frames · 60.000000s · −13.9 LUFS ·
+−1.0 dBTP · speech in all twelve 5s buckets.
+
+**Honest gaps.** The `fable_editor` tool that issues a live editor link is not available in
+this session, so the shared-timeline loop in the approved plan does not hold — iteration is
+MP4-and-contact-sheet, at roughly two minutes a revision. I cannot see the frames myself
+(the build container cannot fetch the CDN the renders are on), so visual judgment is the
+Owner's; mine is mechanical. The cut has not been gated, deliberately. The dark ground is a
+proposal, one constant from reversible. No generated imagery has been bought — that needs a
+stated count and a go.
+
+**Learnings:** `build-where-the-assets-are`, `first-artifact-in-ten-minutes`. Both indexed.
