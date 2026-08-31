@@ -111,3 +111,21 @@ python3 render.py --cut rev3 --all --out rev3b
 python3 visual-density.py frames/rev3 frames/rev3b     # the before/after delta
 ```
 
+## Round 5 — the hook, 2026-08-31 (current master)
+
+| | |
+|---|---|
+| File | `servicepow-intro-60s-rev3c.mp4` |
+| ffprobe | 1920x1080 · yuv420p · 30/1 fps · **1800 frames** · **60.000000 s** · 5,208,487 bytes |
+| Changed vs `-rev3b` | **B1 only** (sketch timing). Every other beat byte-identical |
+| Loop seam | **PSNR(1799 -> 0) = 24.013 dB**, frames 0 and 1799 byte-identical across rounds 4 and 5 |
+| Delivery | `hero-h264.mp4` 3.14 MB (<=5 ✅) · `hero-vp9.webm` 3.74 MB (<=4 ✅) · posters unchanged |
+| Frozen | `gates/round5-hook/` — master `4276ead2…`, scenes.html `4fa55a76…`, frames-manifest `8a484338…` |
+| Gate status | **NOT re-gated.** Round-3 verdicts do not transfer |
+
+```
+python3 render.py --cut rev3 --all --out rev3c
+./render.sh rev3c 0 servicepow-intro-60s-rev3c
+python3 visual-density.py frames/rev3b frames/rev3c
+```
+

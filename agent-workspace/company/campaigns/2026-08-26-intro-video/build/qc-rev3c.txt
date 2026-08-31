@@ -1,0 +1,20 @@
+
+== out/servicepow-intro-60s-rev3c.mp4 ==
+  resolution                              PASS          1920x1080 (min dim >= 1080)
+  fps                                     PASS          30.000
+  pix_fmt                                 PASS          yuv420p
+  audio-48k-stereo                        FAIL          no audio stream
+  audio-peak/not-silent                   FAIL          volumedetect produced nothing
+  no-frozen-sections                      FAIL          ['39.2s+1.2s', '40.6s+1.2s', '41.9s+2.3s', '44.4s+0.8s', '53.9s+4.7s']
+  no-black-sections                       PASS          none >= 0.3s
+  motion-gate                             PASS          edge travel 6.94 px/frame >= 0.6
+  hook-motion                             WARN          first 1.2s edge travel 0.25 (floor 1.0, WARN only)
+  no-flash-cuts                           FAIL          18 detected cuts; shots < 0.4s: 10 (scene-detect — frame-check before trusting a FAIL on a whip-heavy edit)
+  aspect                                  PASS          declared 16:9, got 1920x1080
+  duration                                PASS          declared 60.0s, got 60.00s (+/-2%)
+  expect:video ads                        PASS          found on screen
+  expect:concepts                         PASS          found on screen
+  expect:business days from your footage  PASS          found on screen
+  expect:before you ask                   PASS          found on screen
+  expect:See one made for your business   PASS          found on screen
+  OVERALL: FAIL

@@ -435,3 +435,55 @@ detector would be exactly the instrument-gaming the house rule forbids.
 - **The hook is still the weakest beat**: 5.4% coverage, `hook-motion` 0.24 against a
   floor of 1.0. Diagnosed, not addressed — it needs its own round.
 - **Audio not produced.** See `voiceover-script.md` §5.
+
+---
+
+# Round 5 — the hook (2026-08-31)
+
+The hook was the emptiest measured beat in the film and the first thing anyone sees:
+**5.38% coverage**, against 15.3% film-wide. Cause, read off the code rather than
+guessed: `r3gridOutline` completed at 1.2s and `r3gridCells` did not start sketching
+until `4.8+i*0.4`. That left **3.6 seconds of four empty rectangles** in the three
+seconds that decide whether anyone keeps watching.
+
+## What changed — timing only
+
+| | Before | After |
+|---|---|---|
+| Outline completes | 1.2s | 0.7s |
+| Cell *i* sketches | `4.8+0.4i` → `6.4+0.4i` | `0.75+0.62i` → `3.55+0.62i` |
+
+No copy, no layout, no new elements. The four sketches now stagger across the dead
+zone and all complete by 5.6s, holding ~1.4s before the snap at f210 — which also
+fixes a smaller existing oddity, where cell 3's sketch used to run to 7.6s and get
+cut off mid-draw by the snap at 7.0s.
+
+**Frame 0 is untouched.** It is loop-locked: the seam at 58.9s already draws 55% of
+the next grid, and frame 0 continues that stroke. Verified — frames 0 and 1799 are
+byte-identical to the previous master and the seam holds at **PSNR 24.013 dB**.
+
+## Measured
+
+| | Before | After |
+|---|---|---|
+| B1 coverage | 5.38% | **6.14%** (+14%) |
+| Film-wide coverage | 15.31% | 15.41% |
+| Every other beat | — | **byte-identical** |
+| `hook-motion` (harness) | 0.24 | 0.25 |
+
+## On `hook-motion`, honestly
+
+It stays a WARN at 0.25 against a floor of 1.0, and this round barely moved it. Two
+reasons, both structural rather than fixable by tuning:
+
+1. The check samples **only the first 1.2s**, and frame 0 is loop-locked to frame
+   1799. A hero that hands off seamlessly is *quiet by construction* at t=0 — the
+   floor and the seam requirement pull in opposite directions.
+2. `adSketch` spends its first `p*2.2` of progress redrawing the ad's own border,
+   which lands exactly on the outline already on screen. Early sketch progress is
+   therefore invisible: real interior content does not appear until ~2.3s, outside
+   the sampled window.
+
+Recorded, not chased. Moving frame 0 to satisfy the metric would break the loop the
+Owner approved. **A candidate playbook ruling:** `hook-motion` should exempt, or
+measure differently, any master whose seam PSNR indicates a deliberate loop handoff.

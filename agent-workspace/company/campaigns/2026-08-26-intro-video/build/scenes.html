@@ -917,7 +917,13 @@ function r3gridCells(t,f,opts){
       }
       o.push(cell);
     } else {
-      const sk=seg(t,4.8+i*0.4,6.4+i*0.4);
+      /* The hook used to hold four empty outlines from 1.2s to 4.8s -- 3.6 seconds
+         of nothing in the three seconds that decide whether anyone keeps watching,
+         and the emptiest measured beat in the film (5.4% coverage). The sketches
+         now start as the outlines land and stagger across the dead zone, so the
+         hook shows the thing the film is about: four ads being drawn. Timing only
+         -- no copy, no layout, no change to frame 0, which is loop-locked to 1799. */
+      const sk=seg(t,0.75+i*0.62,3.55+i*0.62);
       if(sk>0) o.push(adSketch(x,y,RW3,RH3,i,sk,9200+i));
     }
   }
@@ -946,7 +952,11 @@ function r3sourceScreen(o2,t){
 /* B1 0-9 : the grid, already being made */
 function r1(t,f){
   const o=[];
-  const outline = (t<1.2) ? 0.55 + 0.45*seg(t,0,1.2) : 1;
+  /* frame 0 opens at 0.55 because the seam at 58.9 already drew that much of the
+     next grid -- the loop hands off mid-stroke. Closing the remaining 45% by 0.7s
+     rather than 1.2s puts real ink motion inside the window the hook-motion check
+     samples, without moving frame 0 itself. */
+  const outline = (t<0.7) ? 0.55 + 0.45*seg(t,0,0.7) : 1;
   o.push(r3gridOutline(outline));
   o.push(r3gridCells(t,f,{}));
   const h={screen:'source', draw:1, tilt:-4};
