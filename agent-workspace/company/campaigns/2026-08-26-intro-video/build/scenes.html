@@ -339,7 +339,8 @@ function s56(t){
    A ticking checklist is the most generic visual in explainer video. The fix is
    to give it something to annotate: each tick lands a real change on a real ad. */
 function tick(x,y,p){
-  return P(`M ${x} ${y} L ${x+18} ${y+22} L ${x+52} ${y-26}`, p, {stroke:ACCENT,w:9});
+  const q=rnd(((x*7+y*3)|0)+boil()), o=()=>(q()-0.5)*3.2;
+  return P(`M ${x+o()} ${y+o()} L ${x+18+o()} ${y+22+o()} L ${x+52+o()} ${y-26+o()}`, p, {stroke:ACCENT,w:9});
 }
 const SV=1, SX=1040, SY=330, SW=700, SH=394;
 function s7(t){
@@ -1010,10 +1011,12 @@ function r6b(t){
   o.push(tick(1160,518,seg(t,41.7,42.0)));
   const a1=seg(t,38.9,39.2);
   if(a1>0){ const x=AX+28,y=AY+26;
-    o.push(grp(F(rectD(x,y,220,42),{fill:'#F2EFE8',opacity:.95})+F(rectD(x+16,y+14,126,7),{fill:'#3A3A3A'})+F(rectD(x+152,y+14,50,7),{fill:ACCENT}),null,a1)); }
+    o.push(grp(F(rectD(x,y,220,42),{fill:'#F2EFE8',opacity:.95})+F(rectD(x+16,y+14,126,7),{fill:'#3A3A3A'})+F(rectD(x+152,y+14,50,7),{fill:ACCENT})
+      +P(wobbleRect(x,y,220,42,9712,1.8),1,{w:3,opacity:.6}),null,a1)); }
   const a2=seg(t,40.3,40.6);
   if(a2>0){ const x=AX+54,y=AY+AH-156;
-    o.push(grp(P(`M ${x} ${y} q 0 -38 34 -44 M ${x+56} ${y} q 0 -38 34 -44`,1,{stroke:'#F2EFE8',w:9,opacity:.85}),null,a2));
+    { const q=rnd(9711+boil()), j=()=>(q()-0.5)*3.5;
+      o.push(grp(P(`M ${x+j()} ${y+j()} q 0 -38 34 -44 M ${x+56+j()} ${y+j()} q 0 -38 34 -44`,1,{stroke:'#F2EFE8',w:9,opacity:.85}),null,a2)); }
     o.push(P(wline(x-18,y-56,x+110,y+18,9702), a2,{stroke:ACCENT,w:8})); }
   const a3=seg(t,41.7,42.2);
   if(a3>0){ const rx=AX+VAR[1].cap[0]*AW+24, ry=AY+AH-22;
