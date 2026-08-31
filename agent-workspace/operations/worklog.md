@@ -1036,3 +1036,48 @@ Recorded, not gamed.
 master. The hook is still the weakest beat (5.4% coverage, `hook-motion` 0.24 against a floor of
 1.0), diagnosed but not addressed. Owner-side items from task #37 all still stand, plus: ratify the
 plate refusal, and decide where the voiceover gets produced.
+
+## 2026-08-31 — Intro video, round 6: the dual gate blocked it, and was right
+
+Ran the first full dual gate since the enrichment: 19 agents — four Skeptic lenses in
+isolation with no production reasoning, adversarial verification of every blocking finding, the
+creative critic, an adjudicator.
+
+**Verdict on `-rev3c`: BLOCK.** Thirteen findings at S3+, including one S4. Adversarial
+verification killed nine of twelve, which is the verification stage doing its job. Three stood:
+
+1. **The drawn street leaked outside its own picture frame at B7** — raised independently by two
+   lenses. This one was mine, introduced this session. `streetWorld()` starts its treeline at
+   `x-40` and runs to `x+w+40`; at B4 the call is full-bleed so the canvas clips it, but B7 calls
+   it into an inset frame and a tree and a roof floated on bare cream beside the frame for the
+   whole 4.2s of the Owner-signed line. Measured 1,917 stray pixels left, 1,628 right; after
+   clipping, 8 and 19. **The general lesson: a helper written for a full-bleed call and reused
+   inside a frame will leak, and the full-bleed call will never show it.**
+2. **The film went to 0.082% ink for ~0.3s at 23.1s** — nothing on the canvas but the 26px corner
+   mark, immediately before its biggest claim. Present in *every master to date*, including the
+   one that passed at 8.2. `no-black-sections` cannot see it because the frame is cream. Now
+   1.005%.
+3. **B6 annotations orphaned** — ticks and lasso held ten frames after their labels popped.
+   Verification downgraded it to S1; fixed anyway, and binding the fade to the labels
+   incidentally cleared a long-standing frozen-section window (5 → 4).
+
+**Creative critic: 7.7, below the 8.0 floor** — down from 8.2, with zero semantic hard failures.
+The drop is carried by *hook inside 2s* (6) and *human presence* (6), neither of which this round
+set out to fix, plus *audio design* (7) scoring a silent film, which is standing limit P2.
+
+Also restored `expect:Disclosure handled` to the QC invocation. The gate caught that it had been
+quietly dropped from the round-4/5 runs rather than kept with its OCR note. It still FAILs, which
+is the point — a check removed is a regression nobody will notice.
+
+Also restructured the WCAG 1.2.1 text alternative in `site-handoff/hero-embed.html`. As one
+run-on paragraph the burned strings read "4 video ads. 2 concepts × 2 hooks. You paid. It didn't
+ring." — offer then failure, adjacent, in Service Pow's own indexable HTML. Same words, now a
+labelled `<dl>` so the arc is explicit.
+
+**Open:** `-rev3d` fixes all three upheld blockers but **has not itself been gated** — the BLOCK
+was issued against `-rev3c`, and a fresh Skeptic pass needs Owner authorization. The gate also
+returned six items it says are the Owner's call, not ours: the van's blank sign panel; whether
+`Your van. Your street.` narrows the door too far (TripNerd is a non-trade client); the offer's
+missing terms; whether `Keep the one that pulls.` implies a test `services.md` excludes; pain-first
+vs offer-first ordering; and the three checks nobody can run for us — a human cold-watch muted on
+a phone, landing-page parity (servicepow.com is still egress-blocked), and that re-gate.

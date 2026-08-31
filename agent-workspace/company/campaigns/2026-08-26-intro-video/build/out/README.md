@@ -129,3 +129,25 @@ python3 render.py --cut rev3 --all --out rev3c
 python3 visual-density.py frames/rev3b frames/rev3c
 ```
 
+## Round 6 — gate fixes, 2026-08-31 (CURRENT MASTER)
+
+| | |
+|---|---|
+| File | `servicepow-intro-60s-rev3d.mp4` |
+| ffprobe | 1920x1080 · yuv420p · 30/1 fps · **1800 frames** · **60.000000 s** · 5,062,642 bytes |
+| Fixes vs `-rev3c` | the three blockers the dual gate upheld: B7 street leaking outside its frame, the 0.3s near-blank at 23.1s, B6 annotations orphaned after their labels |
+| Loop seam | PSNR(1799 -> 0) = **24.013 dB**, unchanged since Rev 3 |
+| Delivery | `hero-h264.mp4` **3.00 MB** (<=5 ✅) · `hero-vp9.webm` **3.61 MB** (<=4 ✅) |
+| Frozen | `gates/round6-gatefix/` — master `98f65579…`, scenes.html `cbc92c71…`, frames-manifest `297579fa…` |
+| Gate status | **BLOCK was issued against `-rev3c`. `-rev3d` fixes all three upheld blockers but has NOT itself been gated.** |
+
+Measured against the originally delivered Rev 3: B4 chroma 8.85 -> 10.24, B7 8.10 -> 8.69,
+B1 coverage 5.38% -> 6.16%, film-wide chroma 7.68 -> 8.01. B7 coverage reads 15.44 -> 15.20
+**because the leaked silhouette pixels outside the frame are now correctly clipped away.**
+
+```
+python3 render.py --cut rev3 --all --out rev3d
+./render.sh rev3d 0 servicepow-intro-60s-rev3d
+python3 visual-density.py frames/rev3 frames/rev3d
+```
+

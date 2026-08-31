@@ -232,10 +232,17 @@ const VAR=[
 ];
 /* One ad, sketched then finished. Used at four sizes: the lone hook ad (S1),
    the four grid cells (S3/S4) and the annotated compliance ad (S7). */
-function adSketch(x,y,w,h,v,p,seed){
+/* noBorder: the caller has already drawn this rectangle (the rev3 grid draws its
+   outlines in r3gridOutline). Without it the sketch spends its first 54.5% of
+   progress redrawing a border that is already on screen, so nothing new appears
+   for the first half of every draw -- which is why the hook read as four frozen
+   empty boxes even after the sketches were re-timed. It also drew a second, differently
+   seeded wobble on top of the first. Optional and defaulted off, so the control and
+   challenger call sites are untouched. */
+function adSketch(x,y,w,h,v,p,seed,noBorder){
   const o=[], V=VAR[v], U=u=>x+u*w, Y=q=>y+q*h;
-  o.push(P(wobbleRect(x,y,w,h,seed,3), clamp(p*2.2,0,1), {w:5}));
-  const q=clamp(p*2.2-1.2,0,1);
+  if(!noBorder) o.push(P(wobbleRect(x,y,w,h,seed,3), clamp(p*2.2,0,1), {w:5}));
+  const q = noBorder ? clamp(p*1.35,0,1) : clamp(p*2.2-1.2,0,1);
   if(V.hz) o.push(P(lineD(x+12,Y(V.hz),x+w-12,Y(V.hz)), clamp(q*3,0,1), {w:4,opacity:.8}));
   const s=V.subj;
   o.push(P(wobbleRect(U(s[0]),Y(s[1]),s[2]*w,s[3]*h,seed+20,2), clamp(q*3-0.6,0,1), {w:4,opacity:.85}));
@@ -923,8 +930,8 @@ function r3gridCells(t,f,opts){
          now start as the outlines land and stagger across the dead zone, so the
          hook shows the thing the film is about: four ads being drawn. Timing only
          -- no copy, no layout, no change to frame 0, which is loop-locked to 1799. */
-      const sk=seg(t,0.75+i*0.62,3.55+i*0.62);
-      if(sk>0) o.push(adSketch(x,y,RW3,RH3,i,sk,9200+i));
+      const sk=seg(t,0.55+i*0.62,3.35+i*0.62);
+      if(sk>0) o.push(adSketch(x,y,RW3,RH3,i,sk,9200+i,true));
     }
   }
   /* accent brackets: rows = concepts, columns = hooks, co-timed with the claim */
@@ -1078,7 +1085,18 @@ function streetWorld(x,y,w,h,hz,sc,seed){
      marker line, which is also what keeps this hold alive to the freeze check. */
   o.push(P(wline(x+8,hz,x+w-8,hz,seed+73,2.0*sc), 1,
            {w:Math.max(3,5*sc), opacity:.85}));
-  return o.join('');
+
+  /* CLIP TO THE REGION. The silhouette loop deliberately starts at x-40 and runs to
+     x+w+40 so the treeline is not obviously cropped at the edges, and the cloud
+     centres can reach x+w*0.96 with a half-width of w*0.20. At B4 that is harmless
+     because the call is full-bleed and the canvas clips it. At B7 the call is an
+     inset frame, and both escaped onto the bare cream board -- tree and roof shapes
+     floating beside the frame for the whole 4.2s of the Owner-signed line. Caught by
+     two independent gate lenses; verified at frame 1530 as 1,917 stray pixels left
+     of the frame and 1,628 right of it. */
+  const cid = 'sw' + seed;
+  return `<defs><clipPath id="${cid}"><rect x="${x}" y="${y}" width="${w}" height="${h}"/></clipPath></defs>`
+       + `<g clip-path="url(#${cid})">${o.join('')}</g>`;
 }
 
 /* B4 23-30 : the clip becomes the board; env snaps, the van keeps its ink */
@@ -1088,10 +1106,18 @@ function r4b(t,f){
   const snapped=f>=SNAP;
   const gp = easeOut(seg(t,23.0,24.0));      /* the clip growing out of the phone */
   const g=[];
+  /* The board itself, while it grows. Without this the frame fell to 0.082% ink for
+     ~0.3s at 23.07-23.27 -- nothing on a 1920x1080 canvas but the 26px corner mark at
+     40% opacity -- because the board started growing at 23.0 but held no content until
+     23.2. Cream, not black, so no-black-sections could never see it; it was in every
+     master to date. Drawing the board's own edge means the growth is never empty, and
+     it fades as the world fills in. Stroke 14 at the 0.24 opening scale reads ~3.4px. */
+  if(gp<1) g.push(P(wobbleRect(8,8,W-16,H-16,9505,4), 1,
+                    {w:14, opacity:0.85*(1-easeOut(gp))}));
   if(snapped){
     g.push(streetWorld(0,0,W,H,R4_HZ,1.0,9510));
   } else {
-    g.push(P(wline(60,R4_HZ,1860,R4_HZ,9501), seg(t,23.2,24.0),{w:5,opacity:.85}));
+    g.push(P(wline(60,R4_HZ,1860,R4_HZ,9501), seg(t,23.02,23.8),{w:5,opacity:.85}));
     g.push(P(wline(140,200,520,200,9502), seg(t,24.2,24.8),{w:4,opacity:.5}));
     g.push(P(wline(1450,160,1810,160,9503), seg(t,24.4,25.0),{w:4,opacity:.5}));
   }
@@ -1147,7 +1173,11 @@ function r6b(t){
     o.push(P(wline(rx,ry,rx+AW*0.26,ry,9703), a3,{stroke:ACCENT,w:7})); }
   const cc=seg(t,44.2,45.0);
   if(cc>0) o.push(P(`M 1740 300 C 1806 420, 1788 560, 1560 592 C 1300 626, 1120 596, 1108 452 C 1098 330, 1300 296, 1520 300 C 1610 302, 1690 296, 1736 312`, cc,{stroke:ACCENT,w:6,opacity:.8}));
-  return o.join('');
+  /* The three labels (R10/R11/R12) are all out at 45.1, but this annotation layer was
+     not tied to them -- so three blue checkmarks and a large blue oval enclosing empty
+     cream held the right half of the frame for ten frames after the words they tick
+     had gone. Fade the layer out with the strings it annotates. */
+  return grp(o.join(''), null, 1 - seg(t,45.05,45.45));
 }
 /* B7 45.5-53 : the viewer's ad, drawn fresh, snapped, shown on the phone */
 const R7F={x:560,y:190,w:1000,h:563}, R7HZ=190+470;

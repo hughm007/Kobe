@@ -487,3 +487,94 @@ reasons, both structural rather than fixable by tuning:
 Recorded, not chased. Moving frame 0 to satisfy the metric would break the loop the
 Owner approved. **A candidate playbook ruling:** `hook-motion` should exempt, or
 measure differently, any master whose seam PSNR indicates a deliberate loop handoff.
+
+---
+
+# Round 6 — the dual gate, and the three defects it caught (2026-08-31)
+
+The first full dual gate since the enrichment. 19 agents: four Skeptic lenses in
+isolation with no production reasoning, adversarial verification of every blocking
+finding, the creative critic, and an adjudicator.
+
+## Verdict on the gated master (`-rev3c`): **BLOCK**
+
+Four lenses raised **13 findings at S3 or above, including one S4.** Adversarial
+verification killed 9 of 12 — which is the system working, and the reason the
+verification stage exists. What survived:
+
+| Finding | Verdict | Status |
+|---|---|---|
+| **B7: the drawn street renders outside its own picture frame** — raised independently by the client lens AND the creative-director lens | **STANDS** (both) | **FIXED** |
+| **The film goes to 0.082% ink for ~0.3s at 23.07–23.27s** — nothing on a 1920x1080 canvas but the 26px corner mark | **STANDS** | **FIXED** |
+| B6 annotations orphaned: ticks and lasso held 10 frames after their labels popped | corrected to S1 | **FIXED anyway** |
+
+Nine findings did not survive verification, among them the S4 (the competitor lens's
+"SERVICE POW / You paid. It didn't ring." adjacency — refuted at the frame it cited,
+which contains two other elements the finding claimed were absent).
+
+## The B7 leak was mine, and it is the instructive one
+
+`streetWorld()` starts its treeline at `sx = x - 40` and runs to `x + w + 40` so the
+silhouette is not obviously cropped; clouds can reach `x + w*1.16`. At B4 the call is
+full-bleed and the canvas clips it. At B7 the call is an **inset frame**, and both
+escaped onto the bare cream board — a tree dome and a roof floating beside the frame,
+next to the word "first", for the whole 4.2s of the Owner-signed line.
+
+Measured at frame 1530: **1,917 stray pixels left of the frame, 1,628 right.**
+After the clip: **8 and 19** — antialiasing at the boundary.
+
+**The lesson, and it is a general one:** a helper written for a full-bleed call and
+reused inside a frame will leak, and the full-bleed call will never show it. Any
+region-drawing helper clips to its own region, at the helper, not at the call site.
+
+## The near-blank frame had survived every previous round
+
+0.082% ink for ~0.3s, immediately before the film's biggest claim. It is in **every
+master to date**, including the one that passed at 8.2. `no-black-sections` could
+never see it because the frame is cream, not black. The board began growing out of the
+phone at 23.0 but held no ink until 23.2; it now draws its own edge while it grows.
+Measured after: **0.082% → 1.005%.**
+
+## Creative critic: **7.7**, below the 8.0 floor
+
+| Axis | Score |
+|---|---|
+| Doesn't-look-AI | 9 |
+| Format fit | 9 |
+| Message / CTA clarity | 9 |
+| Audio design | 7 |
+| Hook inside 2s | 6 |
+| Human presence | 6 |
+| AI-artifact risk | 1 (low is good) |
+
+**Zero semantic hard failures**, all 12 swept against rendered frames. The drop from
+8.2 is carried by *hook inside 2s* and *human presence* — neither of which this round
+set out to fix, and *audio design* scoring a silent film, which is standing limit P2.
+
+## Machine QC on the fixed master (`-rev3d`)
+
+`no-frozen-sections` **improves from 5 windows to 4**: binding the B6 annotation fade
+to its labels also broke up the 44.4s hold. The remaining four are P7 instances.
+`expect:Disclosure handled` has been **restored** — the gate flagged that it had been
+dropped from the round-4/5 runs rather than kept with its note. It FAILs, as it always
+has (P8, OCR cannot read that glyph run), and that is exactly why it belongs in the
+file: a check removed is a regression nobody will notice.
+
+## Honest status
+
+`-rev3d` fixes all three upheld blockers, each verified by measurement. **It has not
+itself been through the gate.** The BLOCK verdict was issued against `-rev3c`; a fresh
+Skeptic pass on `-rev3d` is the next step and needs Owner authorization.
+
+## What the gate says is the Owner's call, not ours
+
+- The van's blank sign panel — three of four lenses called it a defect.
+- `Your van. Your street.` narrows the front door to businesses that own a vehicle;
+  TripNerd is an active non-trade client.
+- The offer's terms are absent: nothing on screen says free, no cost, or no obligation.
+- `Keep the one that pulls.` shows Service Pow running a test that `services.md`
+  excludes from every package.
+- Pain-first vs offer-first ordering: the DR read and the rival read point opposite ways.
+- The three nobody can run for us: a human cold-watch muted on a phone, landing-page
+  parity for the endcard CTA (servicepow.com is still egress-blocked), and
+  authorization for the fresh Skeptic pass.
