@@ -40,7 +40,18 @@ is present at ≥1 Hz (any pair under ~50 dB), report
 `HELD (declared calm; native-res motion verified at N Hz)` instead of FAIL. Undeclared freezes keep
 the hard FAIL — the stuck-encode case this check exists for is untouched.
 
-## Not drafted, deliberately
+## P4 — flash-cut detection ignores multi-frame transitions (THIRD occurrence — promotion earned)
 
-The flash-cut false-positive (P4) stays a frame-check instruction rather than a code change — two
-occurrences; a third earns the amendment per the promotion rule.
+**Problem.** The scene-detect counts each frame of a multi-frame wipe as a separate cut and flags
+the 2-frame snap as a sub-0.4s shot. Frame-checked false in gate rounds 1 and 2 (Kobe found 6–7
+real transitions, none under 0.4s, against 15–18 reported); recurred identically on the final
+master. Three occurrences — the promotion rule is met.
+
+**Draft ruling.** Before reporting `no-flash-cuts` FAIL, merge detected cut events closer than
+0.35s into a single transition event; report the merged count beside the raw count. The check's
+purpose — catching strobe-cut edits — is untouched; a genuine flash cut still reads as many
+*separated* events.
+
+**OCR glyph ledger (P8, extended):** apostrophes · leading digits · **leading capitals grazed by
+an adjacent boiling stroke** (`Disclosure handled`: `isclosure`/`handled` PASS, full string FAIL).
+Expect-strings should start two glyphs inside the burned text.

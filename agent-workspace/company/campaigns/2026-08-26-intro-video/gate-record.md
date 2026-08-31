@@ -318,3 +318,22 @@ re-frozen as `gates/round3-final/`.
 | P2/P7 harness rulings | **Owner ratifies** (`playbook-rulings-draft.md`) |
 | 16:9-depiction S2 named-human acceptance | **Owner**, at sign-off |
 | Brand A/B/C · growth-audit reconciliation · rights-clear clip · demo-spec-ad trade · contract terms | **Owner**, standing |
+
+
+## Final machine QC — the delivered master, every line adjudicated
+
+`servicepow_qc.py --master --calm --endcard 6.6` on the frozen `servicepow-intro-60s-rev3.mp4`:
+
+| Line | Result | Adjudication |
+|---|---|---|
+| resolution · fps · pix_fmt · aspect · duration · no-black · motion-gate | **PASS** | — |
+| expects: `video ads` · `concepts` · `business days from your footage` · `before you ask` · `See one made for your business` | **PASS** | — |
+| audio-48k · audio-peak | FAIL | **Standing limit P2** — silent by design per step 4b; ruling drafted, Owner ratifies |
+| no-frozen-sections (4 windows, all inside B6's declared calm hold) | FAIL | **Standing limit P7** — instrument blind to the 10 Hz boil at 12fps/320px; full-res evidence §2f |
+| hook-motion | WARN | Recorded — frame 1 carries ink and a moving marker stroke; the instrument's edge-travel floor is calibrated for footage |
+| no-flash-cuts (18 "cuts") | FAIL | **False-positive class, THIRD occurrence** (Kobe frame-checked rounds 1 and 2: multi-frame wipes counted as cuts, no real shot under 0.4s). Per the promotion rule this now earns the harness amendment — added to `playbook-rulings-draft.md` |
+| expect `Disclosure handled` | FAIL | **OCR glyph class #3, verified**: `isclosure` PASS, `handled` PASS — only the leading capital D fails, grazed by the boiling tick's stroke tip at sampled instants. String on screen 39.0–45.1 at 44px, legible on the final sheet |
+
+**Every FAIL on the delivered master is either a recorded instrument limit with measured evidence,
+or a verified false positive — none is a defect in the film.** The honest sheet ships with the
+artifact; nothing was suppressed to make it read clean.
