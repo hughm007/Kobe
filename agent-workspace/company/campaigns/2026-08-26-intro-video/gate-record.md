@@ -420,9 +420,21 @@ not a regression**:
   (`maxdiff 0` across 53.7–58.8s). The film did not change there. The detector's
   verdict flipped because earlier frames changed the encoder's bit allocation and
   that hold sits on the threshold.
-- At full resolution, **30 of 30 adjacent frame pairs in the window differ**, PSNR
-  35.9–51.7 dB. The endcard is actively redrawing at 10 Hz. The check works at
-  12fps/~320px with a <0.35/255 mean-diff floor and cannot see it.
+- ~~At full resolution, **30 of 30 adjacent frame pairs in the window differ**, PSNR
+  35.9–51.7 dB.~~ **CORRECTED 2026-08-31 — this evidence was over-broad and the round-6
+  critic was right to check it.** I sampled 54.0–55.0s, which is *inside the retraction*,
+  and generalised the result to the whole window. Re-measured on the delivered frames:
+
+  | Window | Adjacent pairs differing |
+  |---|---|
+  | 54.0–55.0s — during the retraction (what I actually sampled) | 30 / 30 |
+  | 55.3–56.3s — the static hold | **10 / 30** |
+  | 56.7–57.7s — the static hold | **10 / 30** |
+
+  Two of every three pairs in the hold are byte-identical, which is exactly what a 10 Hz
+  boil on a 30fps timeline produces. **The conclusion survives — the endcard is redrawing,
+  not frozen — but the number as written did not.** The lesson is the one this campaign
+  keeps re-learning: sample the window you are actually claiming about.
 
 Recorded, not gamed. Adding motion to an endcard purely to satisfy a mis-calibrated
 detector would be exactly the instrument-gaming the house rule forbids.
@@ -578,3 +590,76 @@ Skeptic pass on `-rev3d` is the next step and needs Owner authorization.
 - The three nobody can run for us: a human cold-watch muted on a phone, landing-page
   parity for the endcard CTA (servicepow.com is still egress-blocked), and
   authorization for the fresh Skeptic pass.
+
+---
+
+# Rev 4 — pain first, a documented offer, and the hand (2026-08-31)
+
+Three Owner rulings, executed under a same-day publish deadline.
+
+## 1. The offer was documented before a word of copy changed
+
+`Get your free growth audit.` was killed at **S4** in an earlier round — "names an offer
+that exists in no company document." The Owner has now defined it and it is written into
+[`services.md` §0](../../services.md): scope bounded to what is public or supplied, a
+three-part deliverable, terms (free · no purchase required · no obligation), and four
+claim boundaries written as prohibitions. `OPEN-QUESTIONS.md` closed.
+
+**The S4 is cleared by the documentation, not by the copy.** That ordering was the point.
+
+## 2. Pain first
+
+| | Before | Rev 4 |
+|---|---|---|
+| 0.5s | `4 video ads.` | **`You paid. It didn't ring.`** |
+| 4.9s | `2 concepts × 2 hooks` | **`Don't bet your spend on one ad. We build four.`** |
+| 10.0s | `You paid. It didn't ring.` | **`And you still don't know why.`** |
+| 50.6s | — | **`It starts with a free growth audit.`** (the seed) |
+| 53.9s | `See one made for your business ↓` | **`Get your free growth audit. ↓`** |
+
+The DR lens had measured the defect: the deliverable was named at 0.5s and the reason to
+want it did not arrive until 9.0s. Now the pain opens on near-empty paper — the emptiness
+*is* the point — the four ads draw as the answer arrives, and they snap finished at f210
+as the visual proof of the sentence rather than a second explanation after it.
+
+`And you still don't know why.` replaces the pain at B2 rather than repeating it: the
+quiet phone beside one lonely ad now carries the *stakes*, which is what justifies four
+creatives. Per the Owner the value is **optionality, not volume** — never a quantity claim.
+
+**Two collisions caught by frame-check and fixed before render:** the longer strings ran
+into the grid cells (x=680) at 5–8s and into the B7 frame (x=560) at 52s. Rail widths
+constrained to 500/500/420.
+
+## 3. The hand
+
+- **Amputation closed.** `p4` lagged `p3` by 0.7 of the stage clock, so the forearm drew
+  complete with no hand on it. `1.6 → 1.05` closes the gap to ~2 frames. Frame-checked
+  across 49.4–50.4s: the arm still leads (its joins hide behind the phone) but no frame
+  holds a limb ending in nothing.
+- **Nails → pads.** The three fingertips wrap the near edge with the palm behind, so the
+  viewer sees pads. They carried nails — the hand drawn back-to-front. Replaced with a
+  crease across the joint.
+
+## 4. Measured
+
+| | Rev 3d | Rev 4 |
+|---|---|---|
+| Loop seam PSNR(1799→0) | 24.013 dB | **24.021 dB** |
+| Near-blank at 23.1s | 0.082% → 1.005% (round 6) | **1.48%** |
+| `expect:free growth audit` | — | **PASS** — the new CTA reads on screen |
+| `expect:We build four` | — | **PASS** |
+| Frozen windows | 4 | 4 (unchanged; 3× B6 + endcard, all P7) |
+| Master | 5,062,642 | 5,079,388 · 1800 frames · 60.000000s |
+
+## 5. Not done, and why
+
+- **The drawn customer is NOT in this cut.** The Owner approved it with an explicit
+  condition — stills first, and *"if either figure makes the film cheaper, more
+  cartoonish, more AI-generated or more cluttered, remove it rather than forcing human
+  presence. Quality over satisfying a rubric."* A credible drawn human is the hardest
+  thing in this film; the hand took four prototype rounds. Attempting it against a
+  same-day deadline is the exact circumstance that produces the version that gets
+  removed. **Deferred, not dropped.** `human presence` will likely stay at 6 until it lands.
+- **No fresh dual gate.** The round-6 gate ran on `-rev3c`. This is a new artifact with
+  new copy and it has not been gated.
+- **No audio.** Unchanged: ElevenLabs 403 at the gateway, no local TTS.

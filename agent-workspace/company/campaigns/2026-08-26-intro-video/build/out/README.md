@@ -151,3 +151,22 @@ python3 render.py --cut rev3 --all --out rev3d
 python3 visual-density.py frames/rev3 frames/rev3d
 ```
 
+## Rev 4 — pain first, documented offer, 2026-08-31 (CURRENT MASTER)
+
+| | |
+|---|---|
+| File | `servicepow-intro-60s-rev4.mp4` |
+| ffprobe | 1920x1080 · yuv420p · 30/1 fps · **1800 frames** · **60.000000 s** · 5,079,388 bytes |
+| Opening | **`You paid. It didn't ring.` at 0.5s** — the pain now precedes the offer |
+| CTA | **`Get your free growth audit. ↓`**, seeded at 50.6s so the endcard is never new information |
+| Loop seam | PSNR(1799 -> 0) = **24.021 dB** |
+| Delivery | `hero-h264.mp4` **3.01 MB** (<=5 ✅) · `hero-vp9.webm` **3.61 MB** (<=4 ✅) |
+| Frozen | `gates/rev4-final/` — master `aff2719f…`, scenes.html `36328a67…`, frames-manifest `e34af239…` |
+| Gate status | **NOT gated.** New copy, new artifact. The round-6 verdicts were issued against `-rev3c` |
+
+```
+python3 render.py --cut rev3 --all --out rev4
+./render.sh rev4 0 servicepow-intro-60s-rev4
+python3 visual-density.py frames/rev3d frames/rev4
+```
+

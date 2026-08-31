@@ -1,0 +1,2 @@
+frames: 1800
+frames-manifest sha256: e34af2394c5c3a2e1e62d7950aab771a13ee721129ca593c43003e310b3c7a68

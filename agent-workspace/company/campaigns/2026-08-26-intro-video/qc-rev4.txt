@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/user/Kobe/agent-workspace/playbooks/ads/scripts/servicepow_qc.py", line 522, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/user/Kobe/agent-workspace/playbooks/ads/scripts/servicepow_qc.py", line 509, in main
+    rows, overall = check_file(path, master=args.master, calm=args.calm,
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/Kobe/agent-workspace/playbooks/ads/scripts/servicepow_qc.py", line 265, in check_file
+    meta = ffprobe(path)
+           ^^^^^^^^^^^^^
+  File "/home/user/Kobe/agent-workspace/playbooks/ads/scripts/servicepow_qc.py", line 90, in ffprobe
+    raise RuntimeError(f"ffprobe failed on {path}: {p.stderr.strip()[:200]}")
+RuntimeError: ffprobe failed on out/servicepow-intro-60s-rev4.mp4: 

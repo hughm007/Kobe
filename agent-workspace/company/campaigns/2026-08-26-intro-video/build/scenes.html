@@ -573,8 +573,13 @@ function handPhone(cx, cy, sc, o2={}){
   /* draw-on stages: phone -> screen -> arm -> digits. The phone body fill is
      complete BEFORE any hand stroke starts, so the joins the hand hides behind
      the phone are never exposed mid-draw. */
+  /* p4 used to lag p3 by 0.7 of the stage clock, so the forearm was fully drawn and
+     the hand did not exist yet -- a phone resting on a tapered limb ending in nothing.
+     The gate scored it under human presence, at the payoff beat, under the signed line,
+     recurring every 60s on a loop. 1.05 closes the gap to ~2 frames: the arm still
+     leads (its joins hide behind the phone) but no frame holds an amputation. */
   const p1=clamp(dr*2.6,0,1), p2=clamp(dr*2.6-0.5,0,1),
-        p3=clamp(dr*2.6-0.9,0,1), p4=clamp(dr*2.6-1.6,0,1);
+        p3=clamp(dr*2.6-0.9,0,1), p4=clamp(dr*2.6-1.05,0,1);
   /* independent jitter stream per body part, so draw-stage gating never
      re-deals another part's wobble (deterministic: seed + boil only) */
   const mkJ=seed=>{const q=rnd(seed+boil(seed));return()=>(q()-0.5)*4.8;};
@@ -649,12 +654,16 @@ function handPhone(cx, cy, sc, o2={}){
     g.push(P(wobRound(ix,iy,iw,ih,4102,1.6,S(20)),1,{w:S(4),opacity:.55*p2}));
   }
 
-  /* ---- 5 · three fingertips wrapping the LEFT edge: closed capsules + nails ---- */
+  /* ---- 5 · three fingertips wrapping the LEFT edge: closed capsules, PAD side ---- */
+  /* These used to carry nails. The palm is behind the phone and the tips come around
+     the near edge, so the viewer sees pads -- a nail here is the hand drawn
+     back-to-front, and at this scale (B3 holds it at ~40% of frame height) it reads
+     as one. Replaced with a soft crease across the joint, which is what a pad shows. */
   [[0.42,S(74),-4,4721],[0.555,S(84),0,4722],[0.69,S(78),4,4723]].forEach(([fy,len,ang,seed])=>{
     const rad=S(27), byy=py+PH*fy, bxx=px-S(36);
     const d=wobRound(0,-rad,len,rad*2,seed,1.8,rad);
-    const nl=wobRound(len-S(30),-S(12),S(24),S(24),seed+9,1,S(12));
-    g.push(grp(F(d,{fill:SKIN,opacity:p4})+P(d,p4,{w:S(5)})+P(nl,p4,{w:S(3.5),opacity:.75}),
+    const cr=wline(len-S(34),-rad+S(7),len-S(34),rad-S(7),seed+9,1.2*sc);
+    g.push(grp(F(d,{fill:SKIN,opacity:p4})+P(d,p4,{w:S(5)})+P(cr,p4,{w:S(3),opacity:.42}),
                `translate(${bxx} ${byy}) rotate(${ang})`));
   });
 
@@ -847,9 +856,14 @@ function s7ch(t){
    grid is already being drawn. Frame 0 == frame 1799 + one frame of marker.
    ===================================================================== */
 const TEXTS_R3 = [
- {id:'R1', s:'4 video ads.',                          in:0.5, out:4.5, x:110, y:324, sz:64, a:'l', w:600},
- {id:'R2', s:'2 concepts × 2 hooks',             in:4.8, out:8.6, x:110, y:713, sz:52, a:'l', w:600},
- {id:'R3', s:'You paid. It didn’t ring.',        in:9.6, out:14.4,x:110, y:367, sz:60, a:'l', w:640},
+ /* Rev 4, Owner-directed: PAIN FIRST. The film used to name the deliverable at 0.5s
+    and not reach the reason to want it until 9.0s -- the offer arriving eight and a
+    half seconds ahead of the problem. The pain now opens on near-empty paper (which
+    is the point: nothing worked), the four ads draw as the answer arrives, and they
+    snap finished at f210 as the visual proof of the sentence. */
+ {id:'R1', s:'You paid. It didn’t ring.',        in:0.5, out:4.4, x:110, y:324, sz:64, a:'l', w:500},
+ {id:'R2', s:'Don’t bet your spend\non one ad.\nWe build four.', in:4.9, out:9.0, x:110, y:672, sz:52, a:'l', w:500},
+ {id:'R3', s:'And you still don’t know why.',    in:10.0,out:14.4,x:110, y:367, sz:60, a:'l', w:640},
  {id:'R4', s:'Your part: clips off your phone.',      in:15.5,out:19.5,x:110, y:324, sz:52, a:'l', w:620},
  {id:'R5', s:'No film crew. No shoot day.',           in:19.8,out:22.8,x:110, y:410, sz:52, a:'l', w:620},
  {id:'R6', s:'Your van. Your street.',                in:23.5,out:26.9,x:110, y:259, sz:56, a:'l', w:640},
@@ -859,8 +873,11 @@ const TEXTS_R3 = [
  {id:'R10',s:'Disclosure handled',                    in:39.0,out:45.1,x:1210,y:346, sz:44, a:'l', w:620},
  {id:'R11',s:'No fake testimonials',                  in:40.5,out:45.1,x:1210,y:432, sz:44, a:'l', w:620},
  {id:'R12',s:'Claims substantiated',                  in:41.9,out:45.1,x:1210,y:518, sz:44, a:'l', w:620},
- {id:'R13',s:'We make the first one before you ask.', in:46.0,out:52.9,x:110, y:648, sz:50, a:'l', w:420},
- {id:'R14',s:'See one made for your business ↓',  in:53.8,out:58.8,x:960, y:562, sz:64, a:'c', w:1400},
+ {id:'R13',s:'We make the first one before you ask.', in:46.0,out:50.2,x:110, y:648, sz:50, a:'l', w:420},
+ /* The audit seed. repair-board R6 makes this a standing condition: the endcard may
+    never be the first time the viewer meets the offer. Named here, asked for there. */
+ {id:'R14',s:'It starts with a free growth audit.', in:50.6,out:53.4,x:110, y:648, sz:46, a:'l', w:420},
+ {id:'R15',s:'Get your free growth audit. ↓',   in:53.9,out:58.8,x:960, y:562, sz:64, a:'c', w:1400},
 ];
 
 /* ---- the corner wordmark + the endcard wordmark: BOTH SVG text, so the

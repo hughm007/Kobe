@@ -1081,3 +1081,45 @@ returned six items it says are the Owner's call, not ours: the van's blank sign 
 missing terms; whether `Keep the one that pulls.` implies a test `services.md` excludes; pain-first
 vs offer-first ordering; and the three checks nobody can run for us — a human cold-watch muted on
 a phone, landing-page parity (servicepow.com is still egress-blocked), and that re-gate.
+
+## 2026-08-31 — Intro video, Rev 4: pain first, and an offer that is finally documented
+
+Owner set a same-day publish deadline and three rulings.
+
+**The offer got documented before the copy used it.** `Get your free growth audit.` had been
+killed at S4 in an earlier round for naming an offer that existed in no company file. The
+Owner defined it; `services.md` gains a section 0 — scope bounded to what is public or
+supplied, a three-part deliverable, terms, and four claim boundaries written as prohibitions
+(no revenue claims, no guarantees, no private-account analysis, nothing about information
+not supplied). `OPEN-QUESTIONS.md` closed. **The S4 is cleared by the documentation, not by
+the copy** — that ordering was the whole point of doing it first.
+
+**Pain first.** The DR lens had measured the defect: the deliverable was named at 0.5s and
+the reason to want it didn't arrive until 9.0s. Now `You paid. It didn't ring.` opens on
+near-empty paper, `Don't bet your spend on one ad. We build four.` answers it, and the four
+ads snap finished at f210 as the visual proof rather than a second explanation. B2 becomes
+the stakes — `And you still don't know why.` — which is what actually justifies four
+creatives. Per the Owner the value is optionality, not volume.
+
+Frame-check caught two collisions before the render: the longer strings ran into the grid
+cells at 5–8s and the B7 frame at 52s. Rail widths constrained.
+
+**The hand.** `p4` lagged `p3` by 0.7 of the stage clock, so the forearm drew complete with
+no hand on it — an amputation at the payoff, recurring every 60s on a loop. Closed to ~2
+frames. The three fingertips also carried nails while the palm is behind the phone, so the
+hand was drawn back-to-front; nails became pad creases.
+
+**A correction I owed.** Round 4's gate record claimed "30 of 30 adjacent endcard frame pairs
+differ." The round-6 critic checked it and was right. I had sampled 54.0–55.0s, which is
+inside the retraction, and generalised to the whole window; in the static hold only 10 of 30
+differ. The conclusion survives, the number didn't. Corrected in place.
+
+**Deferred: the drawn customer.** Approved with an explicit condition — stills first, and
+remove it rather than force it if it cheapens the film. A credible drawn human is the hardest
+thing here (the hand took four prototype rounds), and attempting it against a same-day
+deadline is exactly the circumstance that produces the version that gets removed. Deferred,
+not dropped. `human presence` likely stays at 6 until it lands.
+
+**Open:** Rev 4 has not been gated — new copy, new artifact, and the round-6 verdicts were
+issued against `-rev3c`. Audio still blocked. Publishing is the Owner's action; the master,
+both delivery encodes, posters and the embed handoff are frozen and ready.
