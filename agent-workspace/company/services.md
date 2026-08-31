@@ -5,12 +5,48 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-08-31
 tags: [company, services]
 source: Drive "ServicePow OS 2" — 04, 14, 36, 37, 40-42 (synced 2026-08-25)
 ---
 
 # Services
+
+## 0. Free Growth Audit — the lead-generation front door
+
+**Owner-confirmed 2026-08-31.** This is the offer the website's primary button carries and
+the single conversion path the intro video drives to. It sits *before* everything below:
+the funnel is **pain → capability → proof → free growth audit**, and the audit is how a
+sales conversation starts.
+
+> A free, no-obligation review of a prospective client's current marketing and growth
+> system, designed to identify the highest-impact opportunities, leaks and next actions.
+
+**What it may review** — as relevant, and only from what is publicly available or what the
+prospect supplies:
+
+brand and first impression · website and landing-page conversion · Google Business Profile
+and local search presence · reviews and reputation · advertising and creative where visible
+· competitor positioning · lead capture · speed-to-lead and missed-call handling · follow-up
+and CRM systems · tracking and attribution where information is supplied.
+
+**What the prospect receives:**
+
+1. The biggest problems and opportunities we identify.
+2. The highest-priority recommended actions.
+3. Where Service Pow could potentially help.
+
+**Terms:** free · no purchase required · no obligation.
+
+**Never promised, in any copy, on any surface** — these are the claim boundaries, not
+stylistic preferences:
+
+- ❌ revenue increases or any performance figure
+- ❌ guaranteed results
+- ❌ private-account analysis — we review what is public or what the prospect hands us
+- ❌ access to or review of information the prospect has not supplied
+
+Copy referring to the audit is bound by `../operations/compliance.md` like any other claim.
 
 ## 1. AI video ad production — the primary offering
 
