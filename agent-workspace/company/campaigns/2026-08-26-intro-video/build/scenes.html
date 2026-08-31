@@ -1011,7 +1011,11 @@ function r5b(t,f){
 }
 /* B6 38.5-45.5 : the labelled triple, each tick proven on the ad */
 function r6b(t){
-  const o=[], AX=140, AY=300, AW=760, AH=428, SV3=1;
+  /* SV3 must be the cell r5b circles as the winner (RC[0], variant 0): B5 circles it,
+     ticks it and leaves it undimmed while the other three drop to 0.30, and the phone
+     mini-ad is adFinal(...,0) too. Proving compliance on a different ad than the one
+     just declared the winner made the film contradict itself. */
+  const o=[], AX=140, AY=300, AW=760, AH=428, SV3=0;
   const ap=seg(t,38.5,39.0);
   if(ap>0) o.push(grp(adFinal(AX,AY,AW,AH,SV3),null,ap));
   o.push(P(wline(1150,320,1150,560,9701), seg(t,38.6,39.0),{w:5,opacity:.55}));
@@ -1028,7 +1032,7 @@ function r6b(t){
       o.push(grp(P(`M ${x+j()} ${y+j()} q 0 -38 34 -44 M ${x+56+j()} ${y+j()} q 0 -38 34 -44`,1,{stroke:'#F2EFE8',w:9,opacity:.85}),null,a2)); }
     o.push(P(wline(x-18,y-56,x+110,y+18,9702), a2,{stroke:ACCENT,w:8})); }
   const a3=seg(t,41.7,42.2);
-  if(a3>0){ const rx=AX+VAR[1].cap[0]*AW+24, ry=AY+AH-22;
+  if(a3>0){ const rx=AX+VAR[SV3].cap[0]*AW+24, ry=AY+AH-22;
     o.push(P(wline(rx,ry,rx+AW*0.26,ry,9703), a3,{stroke:ACCENT,w:7})); }
   const cc=seg(t,44.2,45.0);
   if(cc>0) o.push(P(`M 1740 300 C 1806 420, 1788 560, 1560 592 C 1300 626, 1120 596, 1108 452 C 1098 330, 1300 296, 1520 300 C 1610 302, 1690 296, 1736 312`, cc,{stroke:ACCENT,w:6,opacity:.8}));
