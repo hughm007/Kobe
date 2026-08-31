@@ -3,7 +3,7 @@ title: "Intro video — voiceover script, bed and mix spec (Revision 2, audit-co
 type: brief
 client: internal
 owner: Karl
-status: draft
+status: active
 created: 2026-08-31
 updated: 2026-08-31
 tags: [intro-video, audio, voiceover, blocked]
@@ -11,9 +11,14 @@ tags: [intro-video, audio, voiceover, blocked]
 
 # Intro video — voiceover script, bed and mix spec
 
-> **Status: written, not produced.** Audio generation is blocked from the build
-> container (see §5). This document is the production-ready spec, not a delivered
-> asset. Nothing here has been heard by anyone.
+> **Status: PRODUCED 2026-08-31.** The voiceover exists and is in the delivered master.
+> Owner instruction: *"any captions you planned to have is what the voice over will
+> read"* — so the VO reads the fifteen burned strings verbatim rather than the separate
+> script in §2, which is kept below as the alternative take.
+>
+> **Nobody has heard it yet.** It was generated, placed, mixed and measured, but this
+> container cannot play audio. Loudness and speech-presence are verified numerically
+> (§7); the performance is not.
 
 ## 1. What this is for — read this before budgeting it
 
@@ -140,3 +145,56 @@ harness. P2 would be sidestepped for one file, not solved.
   campaign's own rule is that both gates re-run in full on frozen artifacts after
   any repair, so the 8.2 and the 0-S4 Skeptic verdict do not transfer to a scored
   cut.
+
+---
+
+## 7. What was actually produced — 2026-08-31
+
+**Engine:** Higgsfield `seed_audio`, preset voice **Holden** (male, US), 15 separate
+generations at 0.2 credits each = **3.0 credits**. ElevenLabs stayed unreachable; the
+Owner's instruction *"use higgsfield to make the voiceover"* is what unblocked this.
+
+**Script:** the fifteen burned strings, read verbatim. `5–7` was spoken as
+"Five to seven" so the reader would not say the en dash.
+
+**Placement.** The generated files carry leading and trailing silence, so the lines were
+placed by measured file duration rather than by caption in-time, then re-spaced to remove
+five collisions. Final delays (ms): 500 · 3800 · 10700 · 15500 · 19000 · 24200 · 27200 ·
+31000 · 34100 · 38600 · 41100 · 44600 · 47200 · 50300 · 53900. Tightest inter-line gap
+0.22s; nothing crosses the loop seam at 58.9s.
+
+**Mix.** `adelay` per line → `amix` (normalize off) → `loudnorm I=-14 TP=-1.0 LRA=9` →
+48 kHz → `apad whole_dur=60`. Muxed with `-c:v copy`, so **the picture is not re-encoded**
+and the gated video is bit-for-bit intact. AAC 192 kbps stereo.
+
+**Measured on the delivered file:**
+
+| | |
+|---|---|
+| Integrated loudness | **−13.9 LUFS** (target −14) |
+| True peak | **−1.0 dBFS** |
+| Loudness range | 4.3 LU |
+| Duration / frames | **60.000000 s · 1800 frames** |
+| Speech present | every 5-second bucket, RMS 2150–4410 |
+| Round-trip | downloaded from the delivery URL, **md5 matches** the built file |
+
+This also clears standing limit **P2** for this master — `audio-48k-stereo` and
+`audio-peak` now pass. It does **not** retire P2: the silent hero and the 20s cutdown
+still need a legitimate-silence mode in the harness.
+
+## 8. How it was assembled — the route, for the next person
+
+The build container is denied the Higgsfield CDN by organization policy; the Higgsfield
+sandbox can reach it and has ffmpeg but no browser. Measured:
+
+| Route | build container | sandbox |
+|---|---|---|
+| `raw.githubusercontent.com` | ✅ 200 | ✅ 200 |
+| Higgsfield asset + audio CDN | ❌ 403 CONNECT | ✅ |
+| S3 bucket, unsigned GET | ❌ 403 AccessDenied | — |
+
+So: video travels **build → GitHub → sandbox**, audio is generated **Higgsfield → sandbox**,
+the sandbox muxes, and the result returns through a **`media_upload` presigned PUT**, which
+is the one writable channel out of the sandbox. Both channels are sanctioned; nothing
+routes around the egress policy.
+

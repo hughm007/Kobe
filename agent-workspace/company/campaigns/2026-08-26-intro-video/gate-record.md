@@ -663,3 +663,54 @@ constrained to 500/500/420.
 - **No fresh dual gate.** The round-6 gate ran on `-rev3c`. This is a new artifact with
   new copy and it has not been gated.
 - **No audio.** Unchanged: ElevenLabs 403 at the gateway, no local TTS.
+
+---
+
+# Rev 4 + voiceover (2026-08-31)
+
+Owner: *"use higgsfield to make the voiceover"* and *"any captions you planned to have is
+what the voice over will read."* That instruction is what unblocked audio — ElevenLabs is
+still 403 at the gateway and there is still no local TTS.
+
+## Delivered
+
+| | |
+|---|---|
+| **With voiceover** | `83ee5b29-a2a5-48a3-bfdc-050df0170e65.mp4` · 4,354,008 bytes |
+| **With voiceover + footage in the ad wells** | `0048eb61-e4d6-44d0-a349-ec4d3eaf8a2d.mp4` · 5,180,101 bytes |
+
+Both 1920×1080 · 30fps · 1800 frames · 60.000000s. Spend this round: **3.0 credits** (15
+voice lines at 0.2); the four plates were already generated and cost nothing further.
+
+## The voiceover is verified, but it has not been heard
+
+−13.9 LUFS integrated, −1.0 dBFS true peak, LRA 4.3, speech present in every five-second
+bucket, and the file downloaded back from the delivery URL **md5-matches** what was built.
+Muxed `-c:v copy`, so the gated picture is bit-for-bit intact.
+
+**What is NOT verified: the performance.** This container cannot play audio. Tone, pace and
+whether Holden is the right voice are unjudged — that is an Owner listen, not a measurement.
+
+## The plated version is honest about being marginal
+
+The gate's standing complaint is that every depicted ad is "a flat plate where the footage
+would be." Compositing measured out exactly as intended — picture wells went from **sd 1.09
+(flat grey) to sd 45.7–66.4 (photographic)**, with the text rail unchanged at sd 0.01 → 0.02
+as a control.
+
+**But I pulled the frame and looked at it, and it is not the improvement the Owner asked
+for.** The ad's picture well is 147×100 px in a 1920 frame — about 30×20 on a phone — so a
+photograph there reads as a dark smudge, not as footage. It clears the placeholder tell at
+desktop size and no more.
+
+**The version that would work is already written and pushed**, behind `?plates=1` in
+`scenes.html`: the photograph becomes the ad's *background*, graded 42%, with the caption
+pill, play glyph and accent riding on top — which is what a video ad actually looks like.
+Default-off and verified byte-identical to the gated render.
+
+**Why it did not ship:** that needs a real render, and the render needs a browser where the
+plate files are. The build container has Chromium but is denied the asset CDN; the Higgsfield
+sandbox can reach the CDN but has no browser and is reaped every few minutes, which killed a
+`playwright install` twice. Unsigned S3 GET is 403, so the plates cannot be pulled to the
+renderer either. **Not a design problem — a transport one, and it is one browser install away
+from being solved.**
