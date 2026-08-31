@@ -66,3 +66,21 @@ python3 render.py --cut challenger --all --out challenger  # challenger, ~180s
 
 The 20s social cutdown (`script.md` §6) is spec-only and stays that way until the 60s is signed.
 It is a **re-render at new timings**, not a crop — burned text at 20s pace needs its own cps pass.
+
+## Delivery encodes — 2026-08-31 (`out/delivery/`)
+
+| File | Size | Target | Verdict |
+|---|---|---|---|
+| `hero-h264.mp4` (crf23, faststart, no audio) | **2.76 MB** | ≤5 MB | ✅ |
+| `hero-vp9.webm` (crf36) | 3.23 MB | ≤4 MB | ✅ |
+| `poster.png` / `poster.webp` (frame 0) | 63 KB / 16 KB | — | ✅ |
+
+**Boil survival at delivery bitrate — verified by eye, not by the number.** The 200% crop compare
+(`crop-src-f750.png` vs `crop-h264-f750.png`, committed) shows clean marker edges with no mosquito
+noise and no vector-smoothing at crf23. The crop PSNR of 21.97 dB is confounded: the extraction
+landed on a neighboring 10 Hz boil state, so the metric measured the boil's own stroke jitter, not
+codec damage — the same instrument lesson as gate-record §2f, third instance of "check the
+instrument before trusting the number."
+
+Embed contract for the site build: `../site-handoff/hero-embed.html` (WCAG 2.2.2 pause + 1.2.1
+text alternative + reduced-motion + play() fallback + letterbox rule + the check-19 ship list).
