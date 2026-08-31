@@ -253,3 +253,68 @@ challenger's spine, the control's substantiated claims, a product-first open, an
 re-laid into the safe band. One consolidated repair round (`repair-board.md`), then **both gates
 re-run in full on frozen artifacts.** This is the 911 Drain pattern at round one — roughly fifty
 defects caught at $0 before the homepage did the catching.
+
+
+---
+
+# ROUND 2 — Rev 3 on frozen artifacts (2026-08-31)
+
+20 agents: 8 beat inspectors → adversarial refutation → Skeptic Pass 3 (isolated) + Kobe (cold,
+comparative). Frozen set: `build/gates/round2-rev3/` (SHA-256 recorded).
+
+## Inspectors: 30 findings → 10 blocking candidates → **2 survived refutation** (8 refuted)
+
+| # | Confirmed S3 | Fix applied same day |
+|---|---|---|
+| 1 | B3: the van's ladder-rack stroke escaped the phone-screen clip, crossing the bezel and ending on a fingertip (4s steady state) | The in-screen jobsite group is now clipped to the screen rect AND rotated with the phone; composition re-laid so van and shopfront sit on the horizon with the job-arrow connecting them |
+| 2 | B8: the endcard wordmark's ink center sat at x=1034.5 vs underline/CTA at ~958 — an SVG text-anchor bug, static for the film's longest hold | Wordmark repositioned so ink centers at 960; the retraction lerp follows. Verified on the re-rendered frame |
+
+## Skeptic Pass 3: **0 × S4, 1 × S3, 5 × S2, 6 × S1** (round 1: 14 S4 / 23 S3)
+
+*"The repair held everywhere except the one promise the film makes about the page beneath it."*
+
+- **The S3 (page parity):** `See one made for your business ↓` requires a real below-fold
+  fulfillment — a finished spec ad, or a reworded instruction (e.g. `Get one made for your
+  business ↓` pointing at a request form). Converges independently with the bar-raiser's gap #1.
+  **Page-side, Owner-facing; the film's wording swaps in one line + a 6s re-render either way.**
+- S2s: grid cells were four unrelated layouts (fixed same day — rows are now concept siblings,
+  columns the hooks); 16:9 depiction of a product that ships native 9:16 (accepted with rationale:
+  the film makes no aspect claim; needs the Owner's named acceptance at sign-off); agency register
+  in "concepts/hooks/pulls" (accepted: two are services.md verbatim; "pulls" is trade vernacular);
+  horizontal crop risk on the left rail (discharged: the embed contract mandates
+  letterbox-never-crop); zero seconds of a real ad (deferred to the below-fold proof — which is
+  why the S3 must clear).
+- Loop/seam/muted read: **checked, clean** — every 10s entry window gives a legible statement in ~8s.
+
+## Kobe: **ServicePow-6 midpoint 8.2 — above the 8.0 floor. No axis ≤ 6. Zero semantic hard failures (all 12 checked).**
+
+| Axis | R1 | R2 |
+|---|---|---|
+| Doesn't-look-AI | 7 | **9** |
+| Hook inside 2s | 3 | **8** |
+| Human presence | 4 | **7** |
+| Format fit | 5 | **9** |
+| Audio design | 1 | **7** (placement rule applied and stated) |
+| Message + CTA | 4 | **9** |
+
+Verdict **REVISE, "nothing wrong with the film; the label is procedural"** — withheld on three
+unrun gates only: check 19 (the page doesn't exist yet), check 25 (no human has cold-watched any
+cut), and check 23 (no Skeptic artifact was filed in the campaign folder at review time — this
+section IS that filing). The audio-family checks await the P2 ruling.
+
+## Polish pass applied after the verdicts (one pass, scoped by them)
+
+Inspector S3 ×2 fixed · rows-as-siblings · boil phase de-sync (the picture no longer pulses on one
+clock) · global ease-out on every draw-on · B3 composition re-laid. Final render re-measured and
+re-frozen as `gates/round3-final/`.
+
+## What remains, and whose it is
+
+| Item | Whose |
+|---|---|
+| The S3: below-fold spec ad exists, or the instruction rewords | **Owner** (site build) — the film accepts either in one line |
+| Check 25: a human cold-watch, muted, on a phone, with the 10-second questions | **Owner, ~5 minutes** |
+| Check 19: open the live page beside the film | **Owner** (egress-blocked from the container) |
+| P2/P7 harness rulings | **Owner ratifies** (`playbook-rulings-draft.md`) |
+| 16:9-depiction S2 named-human acceptance | **Owner**, at sign-off |
+| Brand A/B/C · growth-audit reconciliation · rights-clear clip · demo-spec-ad trade · contract terms | **Owner**, standing |

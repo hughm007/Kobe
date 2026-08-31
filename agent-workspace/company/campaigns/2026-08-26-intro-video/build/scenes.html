@@ -56,7 +56,7 @@
 const FPS = 30, TOTAL = 1800;              /* 60.000s */
 let CURF = 0;                              /* current frame, for the boil */
 const BOIL_ON = 3;                         /* redraw the wobble every 3 frames (10 Hz, 'on threes') */
-const boil = () => Math.floor(CURF / BOIL_ON) * 7919;
+const boil = (s=0) => Math.floor((CURF + (s % BOIL_ON)) / BOIL_ON) * 7919;
 const CUT = new URLSearchParams(location.search).get('cut') || 'control';
 const W = 1920, H = 1080;
 const ACCENT = '#1B5FA8', INK = '#1A1A1A', GROUND = '#F7F5F0',
@@ -78,6 +78,7 @@ function push(s){A.push(s)}
 /* draw-on stroke: pathLength normalised so one dash covers any path */
 function P(d,p,o={}){
   if(p<=0) return '';
+  if(p<1) p = easeOut(clamp(p,0,1));   /* bar-raiser craft 2: no linear reveals */
   const st=o.stroke||INK, sw=o.w||5, op=o.opacity==null?1:o.opacity;
   return `<path d="${d}" fill="none" stroke="${st}" stroke-width="${sw}" opacity="${op}"`
        + ` stroke-linecap="round" stroke-linejoin="round" pathLength="1"`
@@ -94,13 +95,14 @@ function circD(cx,cy,r){                       /* one-path circle, draws clockwi
 }
 /* a hand-drawn rectangle: same corners, slight wobble, deterministic per seed */
 function wobbleRect(x,y,w,h,seed,amp=3){
-  const r=rnd(seed+boil()), o=()=> (r()-0.5)*2*amp;
+  const r=rnd(seed+boil(seed)), o=()=> (r()-0.5)*2*amp;
   return `M ${x+o()} ${y+o()} L ${x+w+o()} ${y+o()} L ${x+w+o()} ${y+h+o()} L ${x+o()} ${y+h+o()} Z`;
 }
 /* hand-drawn line: subdivided, seeded jitter, boils like every other stroke (R12).
    Straight ruler lines are off-style in a marker film; this replaces lineD at draw sites. */
 function wline(x1,y1,x2,y2,seed,amp=2.2){
-  const q=rnd((seed||((x1*13+y2*7)|0))+boil()), o=()=>(q()-0.5)*2*amp;
+  const s0=seed||((x1*13+y2*7)|0);
+  const q=rnd(s0+boil(s0)), o=()=>(q()-0.5)*2*amp;
   const dx=x2-x1, dy=y2-y1, L=Math.hypot(dx,dy), n=Math.max(2,Math.round(L/90));
   let d=`M ${x1+o()} ${y1+o()}`;
   for(let i=1;i<=n;i++) d+=` L ${x1+dx*i/n+o()} ${y1+dy*i/n+o()}`;
@@ -108,7 +110,7 @@ function wline(x1,y1,x2,y2,seed,amp=2.2){
 }
 /* rounded hand-drawn rect — the square-cornered wobbleRect above stays as the control uses it */
 function wobRound(x,y,w,h,seed,amp=3,r=20){
-  const q=rnd(seed+boil()), o=()=>(q()-0.5)*2*amp;
+  const q=rnd(seed+boil(seed)), o=()=>(q()-0.5)*2*amp;
   return `M ${x+r+o()} ${y+o()} L ${x+w-r+o()} ${y+o()} Q ${x+w+o()} ${y+o()} ${x+w+o()} ${y+r+o()}`
        + ` L ${x+w+o()} ${y+h-r+o()} Q ${x+w+o()} ${y+h+o()} ${x+w-r+o()} ${y+h+o()}`
        + ` L ${x+r+o()} ${y+h+o()} Q ${x+o()} ${y+h+o()} ${x+o()} ${y+h-r+o()}`
@@ -202,10 +204,13 @@ function s2(t){
 /* ---- S3/S4 PACKS : the 2x2 grid and THE SNAP ---- */
 const CELLS=[[320,250],[980,250],[320,620],[980,620]];
 const CW=620, CH=330;
+/* Rows are CONCEPT siblings (same skeleton: hz, subject, caption slot), columns are the
+   HOOKS (different accent event). The 2x2 claim is now visible as structure: row 1 =
+   concept A with two hooks, row 2 = concept B with two hooks. (Skeptic round-2 S2.) */
 const VAR=[
  {hz:.62, subj:[.10,.28,.30,.34], acc:{k:'bar', b:[.62,.68,.30,.09]}, cap:[.05,.50]},
- {hz:null,subj:[.30,.18,.40,.52], acc:{k:'circ',c:[.83,.24,.095]},    cap:[.05,.38]},
- {hz:.55, subj:[.56,.22,.34,.33], acc:{k:'diag',d:[.04,.50,.34,.16]}, cap:[.44,.50]},
+ {hz:.62, subj:[.10,.28,.30,.34], acc:{k:'circ',c:[.83,.24,.095]},    cap:[.05,.50]},
+ {hz:null,subj:[.36,.34,.28,.40], acc:{k:'diag',d:[.04,.50,.34,.16]}, cap:[.05,.44]},
  {hz:null,subj:[.36,.34,.28,.40], acc:{k:'band',b:[0,.05,1,.13]},     cap:[.05,.44]}
 ];
 /* One ad, sketched then finished. Used at four sizes: the lone hook ad (S1),
@@ -339,7 +344,7 @@ function s56(t){
    A ticking checklist is the most generic visual in explainer video. The fix is
    to give it something to annotate: each tick lands a real change on a real ad. */
 function tick(x,y,p){
-  const q=rnd(((x*7+y*3)|0)+boil()), o=()=>(q()-0.5)*3.2;
+  const s0=(x*7+y*3)|0; const q=rnd(s0+boil(s0)), o=()=>(q()-0.5)*3.2;
   return P(`M ${x+o()} ${y+o()} L ${x+18+o()} ${y+22+o()} L ${x+52+o()} ${y-26+o()}`, p, {stroke:ACCENT,w:9});
 }
 const SV=1, SX=1040, SY=330, SW=700, SH=394;
@@ -548,7 +553,7 @@ function handPhone(cx, cy, sc, o2={}){
         p3=clamp(dr*2.6-0.9,0,1), p4=clamp(dr*2.6-1.6,0,1);
   /* independent jitter stream per body part, so draw-stage gating never
      re-deals another part's wobble (deterministic: seed + boil only) */
-  const mkJ=seed=>{const q=rnd(seed+boil());return()=>(q()-0.5)*4.8;};
+  const mkJ=seed=>{const q=rnd(seed+boil(seed));return()=>(q()-0.5)*4.8;};
 
   /* ---- 1 · pinky under the bottom edge, tip peeking at the lower-left corner ---- */
   {
@@ -661,7 +666,7 @@ function vanArt(x,y,sc,p,filled){
   const densify=pts=>{const o=[];for(let i=0;i<pts.length;i++){o.push(pts[i]);
     if(i<pts.length-1){const a=pts[i],b=pts[i+1],L=Math.hypot(b[0]-a[0],b[1]-a[1]),n=Math.floor(L/34);
       for(let k=1;k<=n;k++)o.push([a[0]+(b[0]-a[0])*k/(n+1),a[1]+(b[1]-a[1])*k/(n+1)]);}}return o;};
-  const wob=(pts,seed,amp,close)=>{const r=rnd(seed+boil()),j=()=>(r()-0.5)*2*amp*sc;let d='';
+  const wob=(pts,seed,amp,close)=>{const r=rnd(seed+boil(seed)),j=()=>(r()-0.5)*2*amp*sc;let d='';
     densify(pts).forEach((pt,i)=>{d+=`${i?' L':'M'} ${(x+S(pt[0])+j()).toFixed(2)} ${(y+S(pt[1])+j()).toFixed(2)}`;});
     return close?d+' Z':d;};
   const flat=pts=>{let d='';pts.forEach((pt,i)=>{
@@ -678,7 +683,7 @@ function vanArt(x,y,sc,p,filled){
   const PAN=[[42,22],[198,22],[198,66],[42,66]];
   const tire=c=>arcp(c,111,29,-90,270,14), hub=c=>arcp(c,111,11.5,-90,270,10);
   const RW=84, FW=288;
-  const multi=(segs,seed,amp)=>{const r=rnd(seed+boil()),j=()=>(r()-0.5)*2*amp*sc;let d='';
+  const multi=(segs,seed,amp)=>{const r=rnd(seed+boil(seed)),j=()=>(r()-0.5)*2*amp*sc;let d='';
     segs.forEach(s2=>{d+=`M ${(x+S(s2[0])+j()).toFixed(2)} ${(y+S(s2[1])+j()).toFixed(2)}`
                        +` L ${(x+S(s2[2])+j()).toFixed(2)} ${(y+S(s2[3])+j()).toFixed(2)} `;});return d;};
   const rungSegs=[];for(let u=0;u<=300;u+=25)rungSegs.push([u,-7.5,u,0.5]);
@@ -845,10 +850,10 @@ function r3marks(t){
   const o=[ markText(CORNER.x, CORNER.y, CORNER.size, CORNER.op) ];   /* never off, never moves */
   if(t>=53.0 && t<59.3){
     const inP = easeOut(seg(t,53.0,53.6));
-    if(t<58.5){ o.push(markText(600, 425, 96, inP)); }
+    if(t<58.5){ o.push(markText(526, 425, 96, inP)); }
     else {
       const k = easeIO(seg(t,58.5,59.3));
-      o.push(markText(lerp(600,CORNER.x,k), lerp(425,CORNER.y,k), lerp(96,CORNER.size,k), lerp(1,0,k)));
+      o.push(markText(lerp(526,CORNER.x,k), lerp(425,CORNER.y,k), lerp(96,CORNER.size,k), lerp(1,0,k)));
     }
   }
   return o.join('');
@@ -948,15 +953,19 @@ function r3b(t){
   o.push(grp(handPhone(1050,520,1.02,h)));
   if(h.__ix){
     const ix=h.__ix, iy=h.__iy, iw=h.__iw, ih=h.__ih, hz=iy+ih*0.60;
+    inner.push(`<clipPath id="b3clip"><rect x="${ix}" y="${iy}" width="${iw}" height="${ih}" rx="18"/></clipPath>`);
     const p=seg(t,16.6,19.0);
-    inner.push(grp(vanArt(ix+iw*0.06, hz-ih*0.001-140*0.20, 0.20, p, false)));
-    inner.push(shopArt(ix+iw*0.62, hz, 0.30, clamp(p*1.4-0.4,0,1), false));
+    /* fill the frame: van low-left, shopfront low-right, both ON the horizon line */
+    inner.push(grp(vanArt(ix+iw*0.05, hz-140*0.30, 0.30, p, false)));
+    inner.push(shopArt(ix+iw*0.60, hz, 0.44, clamp(p*1.4-0.4,0,1), false));
     const ap=seg(t,20.0,21.0);
     if(ap>0){
-      inner.push(P(`M ${ix+iw*0.72} ${hz+ih*0.16} C ${ix+iw*0.55} ${hz+ih*0.26}, ${ix+iw*0.38} ${hz+ih*0.26}, ${ix+iw*0.24} ${hz+ih*0.18}`, ap,{stroke:ACCENT,w:5}));
-      inner.push(P(`M ${ix+iw*0.30} ${hz+ih*0.135} L ${ix+iw*0.235} ${hz+ih*0.183} L ${ix+iw*0.31} ${hz+ih*0.225}`, clamp(ap*3-2,0,1),{stroke:ACCENT,w:5}));
+      /* the next job: a short accent arc from the shopfront's door to the van's cab */
+      inner.push(P(`M ${ix+iw*0.66} ${hz-ih*0.015} C ${ix+iw*0.55} ${hz+ih*0.055}, ${ix+iw*0.44} ${hz+ih*0.055}, ${ix+iw*0.36} ${hz+ih*0.005}`, ap,{stroke:ACCENT,w:5}));
+      inner.push(P(`M ${ix+iw*0.405} ${hz-ih*0.028} L ${ix+iw*0.352} ${hz+ih*0.004} L ${ix+iw*0.415} ${hz+ih*0.032}`, clamp(ap*3-2,0,1),{stroke:ACCENT,w:5}));
     }
-    o.push(inner.join(''));
+    const defs=inner.shift();
+    o.push(grp(defs+`<g clip-path="url(#b3clip)">${inner.join('')}</g>`, `rotate(7 1050 520)`));
   }
   return o.join('');
 }
@@ -1015,7 +1024,7 @@ function r6b(t){
       +P(wobbleRect(x,y,220,42,9712,1.8),1,{w:3,opacity:.6}),null,a1)); }
   const a2=seg(t,40.3,40.6);
   if(a2>0){ const x=AX+54,y=AY+AH-156;
-    { const q=rnd(9711+boil()), j=()=>(q()-0.5)*3.5;
+    { const q=rnd(9711+boil(9711)), j=()=>(q()-0.5)*3.5;
       o.push(grp(P(`M ${x+j()} ${y+j()} q 0 -38 34 -44 M ${x+56+j()} ${y+j()} q 0 -38 34 -44`,1,{stroke:'#F2EFE8',w:9,opacity:.85}),null,a2)); }
     o.push(P(wline(x-18,y-56,x+110,y+18,9702), a2,{stroke:ACCENT,w:8})); }
   const a3=seg(t,41.7,42.2);

@@ -20,10 +20,11 @@ Same film, same constraint set, two authoring modes:
   **PASS, 0 blocking of 8 issues, round one.** Measured deltas: max cps 12.3→9.0, offer hold
   1.4s→4.2s, safe-band violations 10/13→0/14, seam blank→drawn-through.
 
-## Honest scope
-Design-time evidence only so far — the round-2 gate verdict on the rendered Rev 3 is the real test
-and was pending when this was written; update this file with it. Cost: ~1M subagent tokens, $0
-external spend.
+## Honest scope — RESOLVED 2026-08-31, same day
+The round-2 gate verdict landed: **Skeptic 0 S4 / 1 S3** (the one S3 is a page-side parity
+condition, not the film) vs solo's 14 S4 / 23 S3, and **Kobe 8.2 vs the 8.0 floor** (solo: 4.0)
+with zero semantic hard failures. The panel's design survived the adversary. Cost: ~2.6M subagent
+tokens across design + gate rounds, $0 external spend.
 
 ## The rule this earns (forming)
 When the artifact is high-stakes and the author has already produced repeat defect classes on it,
