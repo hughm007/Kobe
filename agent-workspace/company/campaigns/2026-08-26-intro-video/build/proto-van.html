@@ -1,0 +1,128 @@
+<!doctype html><meta charset="utf-8"><title>work van — line-art prototype</title>
+<style>
+ *{margin:0;padding:0;box-sizing:border-box}
+ body{background:#F7F5F0}
+ #s{position:relative;width:1920px;height:1080px;background:#F7F5F0;
+    font-family:'Liberation Sans',Arial,sans-serif}
+</style>
+<div id="s"><svg id="a" viewBox="0 0 1920 1080" width="1920" height="1080" shape-rendering="geometricPrecision"></svg></div>
+<script>
+/* ---- helpers copied verbatim from scenes.html so the proto proves the real thing ---- */
+const ACCENT='#1B5FA8', INK='#1A1A1A', PLATE='#232323';
+let CURF=0;
+const BOIL_ON=3;
+const boil=()=>Math.floor(CURF/BOIL_ON)*7919;
+const clamp=(x,a,b)=>x<a?a:(x>b?b:x);
+function rnd(seed){let s=seed>>>0;return()=>{s^=s<<13;s>>>=0;s^=s>>17;s^=s<<5;s>>>=0;return s/4294967296;}}
+function P(d,p,o={}){
+  if(p<=0) return '';
+  const st=o.stroke||INK, sw=o.w||5, op=o.opacity==null?1:o.opacity;
+  return `<path d="${d}" fill="none" stroke="${st}" stroke-width="${sw}" opacity="${op}"`
+       + ` stroke-linecap="round" stroke-linejoin="round" pathLength="1"`
+       + ` stroke-dasharray="1" stroke-dashoffset="${(1-p).toFixed(5)}"/>`;
+}
+function F(d,o={}){
+  const f=o.fill||INK, op=o.opacity==null?1:o.opacity;
+  return `<path d="${d}" fill="${f}" opacity="${op.toFixed(4)}" stroke="none"/>`;
+}
+const rectD=(x,y,w,h)=>`M ${x} ${y} L ${x+w} ${y} L ${x+w} ${y+h} L ${x} ${y+h} Z`;
+const lineD=(x1,y1,x2,y2)=>`M ${x1} ${y1} L ${x2} ${y2}`;
+
+/* VANART-BEGIN */
+/* a US work van in marker line art, reused as the wedge signal and as "the real part".
+   Unibody cargo-van profile (Transit-class): continuous roofline into the cab, short
+   raked hood, ladder rack with a ladder up top, tow mirror, rear step bumper. The
+   chassis line arcs OVER each wheel (wheel wells cut into the body); tires touch the
+   ground at y + 140*sc, same contract as before. Shadow (filled state) is a flat drawn
+   ellipse — same rendering language as the ink, no blur. Wobble is seeded + boils. */
+function vanArt(x,y,sc,p,filled){
+  if(p<=0&&!filled) return '';
+  const g=[], S=v=>v*sc, q=v=>clamp(p*2.8-v,0,1), qf=v=>clamp(p*7-v,0,1);
+  const arcp=(cx,cy,r,a0,a1,n)=>{const o=[];for(let i=0;i<=n;i++){
+    const a=(a0+(a1-a0)*i/n)*Math.PI/180;o.push([cx+r*Math.cos(a),cy+r*Math.sin(a)]);}return o;};
+  const densify=pts=>{const o=[];for(let i=0;i<pts.length;i++){o.push(pts[i]);
+    if(i<pts.length-1){const a=pts[i],b=pts[i+1],L=Math.hypot(b[0]-a[0],b[1]-a[1]),n=Math.floor(L/34);
+      for(let k=1;k<=n;k++)o.push([a[0]+(b[0]-a[0])*k/(n+1),a[1]+(b[1]-a[1])*k/(n+1)]);}}return o;};
+  const wob=(pts,seed,amp,close)=>{const r=rnd(seed+boil()),j=()=>(r()-0.5)*2*amp*sc;let d='';
+    densify(pts).forEach((pt,i)=>{d+=`${i?' L':'M'} ${(x+S(pt[0])+j()).toFixed(2)} ${(y+S(pt[1])+j()).toFixed(2)}`;});
+    return close?d+' Z':d;};
+  const flat=pts=>{let d='';pts.forEach((pt,i)=>{
+    d+=`${i?' L':'M'} ${(x+S(pt[0])).toFixed(2)} ${(y+S(pt[1])).toFixed(2)}`;});return d+' Z';};
+
+  /* geometry, unscaled: ground at v=140, nose at u=359, ladder overhangs the tail */
+  const SIL=[[12,112],[7,104],[6,26],[9,14],[24,8],[254,8],[264,11],[302,54],[311,57],
+             [340,59],[350,63],[357,71],[359,92],[357,104],[350,112],[326,112],
+             ...arcp(288,110,38,3.0,-183.0,10),[122,112],...arcp(84,110,38,3.0,-183.0,10)];
+  const WSH=[[258,16],[268,16],[300,52],[290,52]], DWIN=[[232,18],[257,18],[284,48],[232,48]];
+  const MARM=[[283,31],[307,32]], MIR=[[305,24],[318,25],[317,45],[304,44]];
+  const HLT=[[342,62],[355,65],[355,73],[342,70]];
+  const FBP=[[338,102],[357,102],[357,107],[350,112],[338,112]], RBP=[[-2,102],[14,102],[14,115],[-2,115]];
+  const PAN=[[42,22],[198,22],[198,66],[42,66]];
+  const tire=c=>arcp(c,111,29,-90,270,14), hub=c=>arcp(c,111,11.5,-90,270,10);
+  const RW=84, FW=288;
+  const multi=(segs,seed,amp)=>{const r=rnd(seed+boil()),j=()=>(r()-0.5)*2*amp*sc;let d='';
+    segs.forEach(s2=>{d+=`M ${(x+S(s2[0])+j()).toFixed(2)} ${(y+S(s2[1])+j()).toFixed(2)}`
+                       +` L ${(x+S(s2[2])+j()).toFixed(2)} ${(y+S(s2[3])+j()).toFixed(2)} `;});return d;};
+  const rungSegs=[];for(let u=0;u<=300;u+=25)rungSegs.push([u,-7.5,u,0.5]);
+
+  if(filled){
+    g.push(`<ellipse cx="${(x+S(172)).toFixed(1)}" cy="${(y+S(140)).toFixed(1)}" rx="${S(176).toFixed(1)}" ry="${S(6).toFixed(1)}" fill="${INK}" opacity="0.16"/>`);
+    g.push(F(flat(RBP),{fill:'#4A4845'}));
+    g.push(F(flat(SIL),{fill:'#DCD7CE'}));
+    g.push(F(flat(FBP),{fill:'#4A4845'}));
+    g.push(F(flat(WSH),{fill:'#8C99A4'})); g.push(F(flat(DWIN),{fill:'#8C99A4'}));
+    g.push(F(flat(MIR),{fill:'#4A4845'})); g.push(F(flat(HLT),{fill:'#E8E4DC'}));
+    g.push(F(flat(tire(RW)),{fill:PLATE})); g.push(F(flat(tire(FW)),{fill:PLATE}));
+    g.push(F(flat(hub(RW)),{fill:'#8C8A85'})); g.push(F(flat(hub(FW)),{fill:'#8C8A85'}));
+    g.push(F(flat(PAN),{fill:'#F2EFE8'}));
+  }
+  /* ink — silhouette first, then glass + door, wheels, front gear, rack + ladder, panel */
+  g.push(P(wob(SIL,7301,2.2,true), q(0),{w:S(5)}));
+  g.push(P(wob([[230,18],[230,106]],7302,1.8), q(0.7),{w:S(4)}));
+  g.push(P(wob(WSH,7303,1.4,true), q(0.8),{w:S(4),opacity:.9}));
+  g.push(P(wob(DWIN,7304,1.4,true), q(0.9),{w:S(4),opacity:.9}));
+  g.push(P(wob([[239,55],[250,55]],7305,1), q(0.95),{w:S(4)}));
+  g.push(P(wob(tire(RW),7306,1.8,true), q(1.0),{w:S(5)}));
+  g.push(P(wob(tire(FW),7307,1.8,true), q(1.15),{w:S(5)}));
+  g.push(P(wob(hub(RW),7308,1.2,true), q(1.3),{w:S(3.5),opacity:.85}));
+  g.push(P(wob(hub(FW),7309,1.2,true), q(1.3),{w:S(3.5),opacity:.85}));
+  g.push(P(wob(MARM,7310,1), q(1.25),{w:S(4)}));
+  g.push(P(wob(MIR,7311,1.2,true), q(1.25),{w:S(4)}));
+  g.push(P(wob(HLT,7312,1.2,true), q(1.3),{w:S(4),opacity:.9}));
+  g.push(P(wob(FBP,7313,1.4,true), q(1.35),{w:S(4)}));
+  g.push(P(wob(RBP,7314,1.4,true), q(1.35),{w:S(4)}));
+  g.push(P(wob([[10,30],[10,48]],7316,1), q(1.4),{w:S(4),opacity:.85}));
+  g.push(P(wob([[-16,1],[308,1]],7318,1.6), q(1.4),{w:S(4)}));
+  g.push(P(wob([[-16,-8],[308,-8]],7319,1.6), q(1.45),{w:S(4)}));
+  g.push(P(multi([[56,8,56,1.5],[158,8,158,1.5],[252,8,252,1.5]],7317,1.2), qf(3.6),{w:S(4)}));
+  g.push(P(multi(rungSegs,7320,1.2), qf(5.6),{w:S(3.5),opacity:.9}));
+  g.push(P(wob(PAN,7315,1.4,true), filled?1:q(1.7),
+           {stroke:filled?ACCENT:INK, w:filled?S(5):S(4), opacity:filled?1:.8}));
+  return g.join('');
+}
+/* VANART-END */
+
+/* ---- contact sheet: sketch progress, finished, and both scene contexts ---- */
+function cell(label,lx,ly){return `<text x="${lx}" y="${ly}" font-size="22" letter-spacing="3" fill="#1A1A1A" opacity="0.55" font-family="Liberation Sans">${label}</text>`;}
+function draw(){
+  const o=[];
+  /* row 1: sketch draw-on at three p values, sc=1.4 */
+  o.push(cell('SKETCH P=0.35',60,50)); o.push(vanArt(70,120,1.4,0.35,false));
+  o.push(cell('SKETCH P=0.70',700,50)); o.push(vanArt(710,120,1.4,0.70,false));
+  o.push(cell('SKETCH P=1.0 + ROAD (K2)',1340,50)); o.push(vanArt(1350,120,1.4,1.0,false));
+  o.push(P(lineD(1310,120+196,1900,120+196),1,{w:5,opacity:.75}));
+  /* row 2 left: finished, plain */
+  o.push(cell('FINISHED SC=1.4',60,470)); o.push(vanArt(70,540,1.4,1,true));
+  /* row 2 mid: K5 mimic — sky + asphalt, finished van, flat shadow */
+  const FX=700,FY=430,FW=560,FH=420,HZ=FY+240;
+  o.push(`<rect x="${FX}" y="${FY}" width="${FW}" height="${HZ-FY}" fill="#AFC2D4"/>`);
+  o.push(`<rect x="${FX}" y="${HZ}" width="${FW}" height="${FY+FH-HZ}" fill="#565450"/>`);
+  o.push(cell('FINISHED IN K5 CONTEXT',700,420));
+  o.push(vanArt(FX+95,HZ-140,1.0,1,true));
+  /* row 2 right: finished big for detail check */
+  o.push(cell('FINISHED SC=1.55 DETAIL',1310,470)); o.push(vanArt(1320,560,1.55,1,true));
+  document.getElementById('a').innerHTML=o.join('');
+}
+window.setFrame=f=>{CURF=f;draw();};
+draw();
+</script>

@@ -1,0 +1,185 @@
+<!doctype html><meta charset="utf-8"><title>hand + phone — v5 prototype</title>
+<style>
+ *{margin:0;padding:0;box-sizing:border-box}
+ body{background:#F7F5F0}
+ #s{position:relative;width:1920px;height:1080px;background:#F7F5F0;overflow:hidden;
+    font-family:'Liberation Sans',Arial,sans-serif}
+ .cap{position:absolute;font-size:22px;letter-spacing:.16em;text-transform:uppercase;opacity:.55;color:#1A1A1A}
+</style>
+<div id="s">
+  <svg id="a" viewBox="0 0 1920 1080" width="1920" height="1080" shape-rendering="geometricPrecision"></svg>
+  <div class="cap" style="left:300px;top:1006px">A &nbsp;·&nbsp; hook — held, screen dark</div>
+  <div class="cap" style="left:1210px;top:1006px">B &nbsp;·&nbsp; beat 4 — raised, filming</div>
+</div>
+<script>
+/* ===== helpers copied 1:1 from scenes.html so the function drops straight in ===== */
+const W=1920, H=1080;
+const ACCENT='#1B5FA8', INK='#1A1A1A', GROUND='#F7F5F0';
+let CURF=0; const BOIL_ON=3;
+const boil=()=>Math.floor(CURF/BOIL_ON)*7919;
+const clamp=(x,a,b)=>x<a?a:(x>b?b:x);
+function rnd(seed){let s=seed>>>0;return()=>{s^=s<<13;s>>>=0;s^=s>>17;s^=s<<5;s>>>=0;return s/4294967296;}}
+function P(d,p,o={}){
+  if(p<=0) return '';
+  const st=o.stroke||INK, sw=o.w||5, op=o.opacity==null?1:o.opacity;
+  return `<path d="${d}" fill="none" stroke="${st}" stroke-width="${sw}" opacity="${op}"`
+       + ` stroke-linecap="round" stroke-linejoin="round" pathLength="1"`
+       + ` stroke-dasharray="1" stroke-dashoffset="${(1-p).toFixed(5)}"/>`;
+}
+function F(d,o={}){
+  const f=o.fill||INK, op=o.opacity==null?1:o.opacity;
+  return `<path d="${d}" fill="${f}" opacity="${op.toFixed(4)}" stroke="none"/>`;
+}
+const rectD=(x,y,w,h)=>`M ${x} ${y} L ${x+w} ${y} L ${x+w} ${y+h} L ${x} ${y+h} Z`;
+function wobbleRect(x,y,w,h,seed,amp=3){
+  const r=rnd(seed+boil()), o=()=> (r()-0.5)*2*amp;
+  return `M ${x+o()} ${y+o()} L ${x+w+o()} ${y+o()} L ${x+w+o()} ${y+h+o()} L ${x+o()} ${y+h+o()} Z`;
+}
+function wline(x1,y1,x2,y2,seed,amp=2.2){
+  const q=rnd((seed||((x1*13+y2*7)|0))+boil()), o=()=>(q()-0.5)*2*amp;
+  const dx=x2-x1, dy=y2-y1, L=Math.hypot(dx,dy), n=Math.max(2,Math.round(L/90));
+  let d=`M ${x1+o()} ${y1+o()}`;
+  for(let i=1;i<=n;i++) d+=` L ${x1+dx*i/n+o()} ${y1+dy*i/n+o()}`;
+  return d;
+}
+function wobRound(x,y,w,h,seed,amp=3,r=20){
+  const q=rnd(seed+boil()), o=()=>(q()-0.5)*2*amp;
+  return `M ${x+r+o()} ${y+o()} L ${x+w-r+o()} ${y+o()} Q ${x+w+o()} ${y+o()} ${x+w+o()} ${y+r+o()}`
+       + ` L ${x+w+o()} ${y+h-r+o()} Q ${x+w+o()} ${y+h+o()} ${x+w-r+o()} ${y+h+o()}`
+       + ` L ${x+r+o()} ${y+h+o()} Q ${x+o()} ${y+h+o()} ${x+o()} ${y+h-r+o()}`
+       + ` L ${x+o()} ${y+r+o()} Q ${x+o()} ${y+o()} ${x+r+o()} ${y+o()} Z`;
+}
+function grp(inner,tf,op){
+  return `<g${tf?` transform="${tf}"`:''}${op!=null?` opacity="${op.toFixed(4)}"`:''}>${inner}</g>`;
+}
+
+/* =====================================================================
+   handPhone v5 — a LEFT hand seen from the front, palm behind the phone.
+   What v4 got wrong: a symmetric blob under the phone, two open loops, a
+   floating thumb, an open cuff curve. v5 draws only what a photo shows:
+     · forearm entering from the bottom frame edge (the crop IS the body)
+     · palm heel + thumb-web bulge at the lower right, behind the phone
+     · pinky peeking under the bottom edge (the classic phone grip)
+     · three fingertips wrapping the LEFT edge — closed capsules w/ nails
+     · thumb up the RIGHT bezel, base merged into the palm bulge
+   Every path is CLOSED or hidden behind the phone body fill. No open ends.
+   ===================================================================== */
+function handPhone(cx, cy, sc, o2={}){
+  const g=[], S=v=>v*sc;
+  const PW=S(300), PH=S(560), px=cx-PW/2, py=cy-PH/2, bot=py+PH, right=px+PW;
+  const dr = o2.draw==null?1:o2.draw;
+  const film = o2.screen==='film';
+  const tilt = o2.tilt==null ? (film? 7 : -6) : o2.tilt;
+  const SKIN='#F2EFE8';
+  /* draw-on stages: phone -> screen -> arm -> digits. The phone body fill is
+     complete BEFORE any hand stroke starts, so the joins the hand hides behind
+     the phone are never exposed mid-draw. */
+  const p1=clamp(dr*2.6,0,1), p2=clamp(dr*2.6-0.5,0,1),
+        p3=clamp(dr*2.6-0.9,0,1), p4=clamp(dr*2.6-1.6,0,1);
+  /* independent jitter stream per body part, so draw-stage gating never
+     re-deals another part's wobble (deterministic: seed + boil only) */
+  const mkJ=seed=>{const q=rnd(seed+boil());return()=>(q()-0.5)*4.8;};
+
+  /* ---- 1 · pinky under the bottom edge, tip peeking at the lower-left corner ---- */
+  {
+    const bx=px+S(218), by=bot+S(24), len=S(216), rad=S(24);
+    const d=wobRound(-len,-rad,len+S(30),rad*2,4711,1.8,rad);
+    const nl=wobRound(-len+S(6),-S(11),S(26),S(22),4712,1,S(11));
+    g.push(grp(F(d,{fill:SKIN,opacity:p4})+P(d,p4,{w:S(5)})+P(nl,p4,{w:S(3.5),opacity:.75}),
+               `translate(${bx} ${by}) rotate(-2)`));
+  }
+
+  /* ---- 2 · palm heel + forearm, ONE closed path, cropped by the frame ---- */
+  {
+    const J=mkJ(4741);
+    const ang=film?0.24:0.56;                       /* wrist lean, radians */
+    const dx=Math.sin(ang), dy=Math.cos(ang), nx=dy, ny=-dx;
+    const w0x=right-S(70), w0y=bot+S(115), hw=S(80);
+    const WLx=w0x-hw*nx, WLy=w0y-hw*ny, WRx=w0x+hw*nx, WRy=w0y+hw*ny;
+    const LL=(H+160-WLy)/dy, LR=(H+160-WRy)/dy;
+    const ELx=WLx+dx*LL, ELy=WLy+dy*LL, ERx=WRx+dx*LR, ERy=WRy+dy*LR;
+    const mLx=(WLx+ELx)/2, mLy=(WLy+ELy)/2, mRx=(WRx+ERx)/2, mRy=(WRy+ERy)/2;
+    const d=`M ${px+S(150)} ${bot-S(36)}`                              /* hidden */
+      +` C ${px+S(120)+J()} ${bot-S(4)+J()}, ${px+S(102)+J()} ${bot+S(24)+J()}, ${px+S(108)+J()} ${bot+S(56)+J()}`
+      +` C ${px+S(118)+J()} ${bot+S(104)+J()}, ${WLx-S(30)+J()} ${WLy-S(60)+J()}, ${WLx+J()} ${WLy+J()}`
+      +` L ${mLx+J()} ${mLy+J()} L ${ELx} ${ELy}`                      /* off frame */
+      +` L ${ERx} ${ERy} L ${mRx+J()} ${mRy+J()} L ${WRx+J()} ${WRy+J()}`
+      +` C ${right+S(46)+J()} ${bot+S(40)+J()}, ${right+S(58)+J()} ${bot+S(10)+J()}, ${right+S(54)+J()} ${bot-S(30)+J()}`
+      +` C ${right+S(46)+J()} ${bot-S(86)+J()}, ${right+S(12)+J()} ${bot-S(130)+J()}, ${right-S(34)} ${bot-S(150)}` /* hidden */
+      +` L ${px+S(150)} ${bot-S(36)} Z`;
+    g.push(F(d,{fill:SKIN,opacity:p3}));
+    g.push(P(d,p3,{w:S(5)}));
+  }
+
+  /* ---- 3 · phone body: filled so it occludes the hand joins behind it ---- */
+  const bodyD=wobRound(px,py,PW,PH,4101,2.2,S(34));
+  g.push(F(bodyD,{fill:GROUND,opacity:p1}));
+  g.push(P(bodyD,p1,{w:S(6)}));
+
+  /* ---- 4 · screen ---- */
+  const ix=px+S(22), iy=py+S(34), iw=PW-S(44), ih=PH-S(76);
+  if(p2>0 && o2.screen){
+    o2.__ix=ix; o2.__iy=iy; o2.__iw=iw; o2.__ih=ih;
+    g.push(F(rectD(ix,iy,iw,ih),{fill:o2.screen==='dark'?'#DEDAD2':'#EFECE4',opacity:p2}));
+    if(film){
+      const J=mkJ(4742), hz=iy+ih*0.60, gg=[];
+      /* viewfinder inset — a closed frame, the camera-UI cue */
+      gg.push(P(wobRound(ix+S(13),iy+S(13),iw-S(26),ih-S(26),4108,1.4,S(14)),1,{w:S(3),opacity:.5}));
+      /* horizon meets the screen border on both sides — no loose ends */
+      gg.push(P(wline(ix+S(2),hz,ix+iw-S(2),hz,4104,2),1,{w:S(4),opacity:.8}));
+      /* a house on the horizon: closed pentagon + closed door */
+      const hx=ix+iw*0.09, hwd=iw*0.42, wt=hz-ih*0.13, at=hz-ih*0.215;
+      gg.push(P(`M ${hx+J()} ${hz+J()} L ${hx+J()} ${wt+J()} L ${hx+hwd/2+J()} ${at+J()}`
+              +` L ${hx+hwd+J()} ${wt+J()} L ${hx+hwd+J()} ${hz+J()} Z`,1,{w:S(4),opacity:.9}));
+      gg.push(P(wobbleRect(hx+hwd*0.40,hz-ih*0.065,hwd*0.22,ih*0.065,4105,1.6),1,{w:S(3.5),opacity:.85}));
+      /* a second building, closed, footed on the horizon */
+      gg.push(P(wobbleRect(ix+iw*0.60,hz-ih*0.165,iw*0.27,ih*0.165,4106,2),1,{w:S(4),opacity:.9}));
+      /* a traffic cone in the foreground — the "work happening here" cue */
+      const cxx=ix+iw*0.70, cb=hz+ih*0.115, ch=ih*0.085, cw=iw*0.10;
+      gg.push(P(`M ${cxx-cw/2+J()} ${cb+J()} L ${cxx-cw*0.16+J()} ${cb-ch+J()}`
+              +` L ${cxx+cw*0.16+J()} ${cb-ch+J()} L ${cxx+cw/2+J()} ${cb+J()} Z`,1,{w:S(4),opacity:.85}));
+      gg.push(P(wobbleRect(cxx-cw*0.72,cb,cw*1.44,ih*0.016,4107,1.2),1,{w:S(3.5),opacity:.85}));
+      g.push(grp(gg.join(''),null,p2));
+      /* record mark: dot + ring, unmistakably "filming" */
+      g.push(`<circle cx="${ix+iw-S(38)}" cy="${iy+S(38)}" r="${S(10)}" fill="${ACCENT}" opacity="${p2.toFixed(3)}"/>`);
+      g.push(P(`M ${ix+iw-S(38)} ${iy+S(21)} A ${S(17)} ${S(17)} 0 1 1 ${ix+iw-S(38.01)} ${iy+S(21)} Z`,p2,{stroke:ACCENT,w:S(3.5),opacity:.9}));
+    }
+    g.push(P(wobRound(ix,iy,iw,ih,4102,1.6,S(20)),1,{w:S(4),opacity:.55*p2}));
+  }
+
+  /* ---- 5 · three fingertips wrapping the LEFT edge: closed capsules + nails ---- */
+  [[0.42,S(74),-4,4721],[0.555,S(84),0,4722],[0.69,S(78),4,4723]].forEach(([fy,len,ang,seed])=>{
+    const rad=S(27), byy=py+PH*fy, bxx=px-S(36);
+    const d=wobRound(0,-rad,len,rad*2,seed,1.8,rad);
+    const nl=wobRound(len-S(30),-S(12),S(24),S(24),seed+9,1,S(12));
+    g.push(grp(F(d,{fill:SKIN,opacity:p4})+P(d,p4,{w:S(5)})+P(nl,p4,{w:S(3.5),opacity:.75}),
+               `translate(${bxx} ${byy}) rotate(${ang})`));
+  });
+
+  /* ---- 6 · thumb up the RIGHT bezel, base rooted in the palm bulge ---- */
+  {
+    const J=mkJ(4743);
+    const d=`M ${right+S(50)+J()} ${bot+S(4)+J()}`
+      +` C ${right+S(50)+J()} ${bot-S(56)+J()}, ${right+S(32)+J()} ${bot-S(130)+J()}, ${right+S(10)+J()} ${bot-S(172)+J()}`
+      +` C ${right+S(8)+J()} ${bot-S(194)+J()}, ${right-S(20)+J()} ${bot-S(194)+J()}, ${right-S(26)+J()} ${bot-S(172)+J()}`
+      +` C ${right-S(30)+J()} ${bot-S(130)+J()}, ${right-S(24)+J()} ${bot-S(66)+J()}, ${right-S(16)+J()} ${bot-S(18)+J()}`
+      +` C ${right+S(6)+J()} ${bot+S(2)+J()}, ${right+S(28)+J()} ${bot+S(8)+J()}, ${right+S(50)} ${bot+S(4)} Z`;
+    const nl=wobRound(-S(15),-S(19),S(30),S(38),4731,1,S(15));
+    g.push(F(d,{fill:SKIN,opacity:p4}));
+    g.push(P(d,p4,{w:S(5)}));
+    g.push(grp(P(nl,p4,{w:S(3.5),opacity:.75}),
+               `translate(${right-S(8)} ${bot-S(166)}) rotate(8)`));
+  }
+
+  return grp(g.join(''), `rotate(${tilt} ${cx} ${cy})`);
+}
+
+/* ===== prototype stage: the two states at their real call-site scales ===== */
+function renderProto(drA=1,drB=1){
+  const A=[];
+  A.push(grp(handPhone(470,455,0.98,{screen:'dark',draw:drA})));
+  A.push(grp(handPhone(1400,425,1.05,{screen:'film',draw:drB})));
+  document.getElementById('a').innerHTML=A.join('');
+}
+renderProto();
+</script>

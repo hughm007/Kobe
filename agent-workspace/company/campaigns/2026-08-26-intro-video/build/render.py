@@ -26,7 +26,7 @@ def main():
     ap.add_argument("--all",   action="store_true")
     ap.add_argument("--out",   default="frames")
     ap.add_argument("--every", type=int, default=1, help="stride, for contact sheets")
-    ap.add_argument("--cut",   default="control", choices=["control","challenger"])
+    ap.add_argument("--cut",   default="control", choices=["control","challenger","rev3"])
     a = ap.parse_args()
 
     start = 0 if a.all else a.start

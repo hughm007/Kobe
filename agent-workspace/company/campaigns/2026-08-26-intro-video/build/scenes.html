@@ -522,68 +522,199 @@ const TEXTS_CH = [
  {id:'K13',s:'Get your free growth audit.',        in:55.9,out:59.4,x:960, y:632, sz:44, a:'c', w:1100}
 ];
 
-/* ---- the hand: v4 geometry. Grip cropped by the frame; nothing crosses the screen. ---- */
+/* =====================================================================
+   handPhone v5 — a LEFT hand seen from the front, palm behind the phone.
+   What v4 got wrong: a symmetric blob under the phone, two open loops, a
+   floating thumb, an open cuff curve. v5 draws only what a photo shows:
+     · forearm entering from the bottom frame edge (the crop IS the body)
+     · palm heel + thumb-web bulge at the lower right, behind the phone
+     · pinky peeking under the bottom edge (the classic phone grip)
+     · three fingertips wrapping the LEFT edge — closed capsules w/ nails
+     · thumb up the RIGHT bezel, base merged into the palm bulge
+   Every path is CLOSED or hidden behind the phone body fill. No open ends.
+   ===================================================================== */
 function handPhone(cx, cy, sc, o2={}){
   const g=[], S=v=>v*sc;
-  const PW=S(300), PH=S(560), px=cx-PW/2, py=cy-PH/2, bot=py+PH;
+  const PW=S(300), PH=S(560), px=cx-PW/2, py=cy-PH/2, bot=py+PH, right=px+PW;
   const dr = o2.draw==null?1:o2.draw;
-  g.push(P(`M ${px+S(4)} ${bot+S(170)} C ${px-S(24)} ${bot+S(66)}, ${px-S(10)} ${bot-S(2)}, ${px+S(56)} ${bot-S(22)}`
-          +` L ${px+PW-S(40)} ${bot-S(22)} C ${px+PW+S(18)} ${bot-S(6)}, ${px+PW+S(34)} ${bot+S(74)}, ${px+PW+S(16)} ${bot+S(170)}`,
-          clamp(dr*3,0,1),{w:S(5)}));
-  g.push(P(`M ${px+S(2)} ${bot+S(150)} C ${px+S(90)} ${bot+S(186)}, ${px+PW-S(70)} ${bot+S(186)}, ${px+PW+S(18)} ${bot+S(150)}`,
-          clamp(dr*3-0.5,0,1),{w:S(5)}));
-  g.push(P(wobRound(px,py,PW,PH,4101,2.2,S(34)), clamp(dr*3-0.9,0,1),{w:S(6)}));
-  const ix=px+S(22), iy=py+S(34), iw=PW-S(44), ih=PH-S(76);
-  const sp=clamp(dr*3-1.4,0,1);
-  if(o2.screen==='dark') o2.screenFill='#DEDAD2';
-  if(sp>0 && o2.screen){
-    o2.__ix=ix; o2.__iy=iy; o2.__iw=iw; o2.__ih=ih;
-    g.push(F(rectD(ix,iy,iw,ih),{fill:o2.screen==='dark'?'#DEDAD2':'#EFECE4',opacity:sp}));
-    if(o2.screen==='film'){
-      const gg=[];
-      gg.push(P(lineD(ix+S(14),iy+ih*0.66,ix+iw-S(14),iy+ih*0.66),1,{w:S(4),opacity:.8}));
-      gg.push(P(wobbleRect(ix+S(24),iy+ih*0.42,iw*0.44,ih*0.24,4103,2),1,{w:S(4),opacity:.9}));
-      gg.push(P(circD(ix+S(46),iy+ih*0.66,S(13)),1,{w:S(3.5),opacity:.9}));
-      gg.push(P(circD(ix+S(110),iy+ih*0.66,S(13)),1,{w:S(3.5),opacity:.9}));
-      gg.push(P(`M ${ix+iw*0.62} ${iy+ih*0.66} L ${ix+iw*0.66} ${iy+ih*0.46} L ${ix+iw*0.90} ${iy+ih*0.46} L ${ix+iw*0.94} ${iy+ih*0.66} Z`,1,{w:S(4),opacity:.9}));
-      g.push(grp(gg.join(''),null,sp));
-      g.push(`<circle cx="${ix+iw-S(30)}" cy="${iy+S(30)}" r="${S(11)}" fill="${ACCENT}" opacity="${sp.toFixed(3)}"/>`);
-    }
-    g.push(P(wobRound(ix,iy,iw,ih,4102,1.6,S(20)),1,{w:S(4),opacity:.55*sp}));
+  const film = o2.screen==='film';
+  const tilt = o2.tilt==null ? (film? 7 : -6) : o2.tilt;
+  const SKIN='#F2EFE8';
+  /* draw-on stages: phone -> screen -> arm -> digits. The phone body fill is
+     complete BEFORE any hand stroke starts, so the joins the hand hides behind
+     the phone are never exposed mid-draw. */
+  const p1=clamp(dr*2.6,0,1), p2=clamp(dr*2.6-0.5,0,1),
+        p3=clamp(dr*2.6-0.9,0,1), p4=clamp(dr*2.6-1.6,0,1);
+  /* independent jitter stream per body part, so draw-stage gating never
+     re-deals another part's wobble (deterministic: seed + boil only) */
+  const mkJ=seed=>{const q=rnd(seed+boil());return()=>(q()-0.5)*4.8;};
+
+  /* ---- 1 · pinky under the bottom edge, tip peeking at the lower-left corner ---- */
+  {
+    const bx=px+S(218), by=bot+S(24), len=S(216), rad=S(24);
+    const d=wobRound(-len,-rad,len+S(30),rad*2,4711,1.8,rad);
+    const nl=wobRound(-len+S(6),-S(11),S(26),S(22),4712,1,S(11));
+    g.push(grp(F(d,{fill:SKIN,opacity:p4})+P(d,p4,{w:S(5)})+P(nl,p4,{w:S(3.5),opacity:.75}),
+               `translate(${bx} ${by}) rotate(-2)`));
   }
-  const tp=clamp(dr*3-1.9,0,1);
-  const tx=px+PW-S(6), ty=bot-S(34);
-  g.push(`<g transform="rotate(-16 ${tx} ${ty})">`
-    + P(`M ${tx-S(52)} ${ty} C ${tx-S(56)} ${ty-S(96)}, ${tx-S(18)} ${ty-S(150)}, ${tx+S(18)} ${ty-S(146)}`
-       +` C ${tx+S(52)} ${ty-S(142)}, ${tx+S(56)} ${ty-S(40)}, ${tx+S(40)} ${ty+S(24)}`, tp,{w:S(5),fill:'#F7F5F0'})
-    + P(`M ${tx-S(34)} ${ty-S(104)} C ${tx-S(6)} ${ty-S(116)}, ${tx+S(20)} ${ty-S(110)}, ${tx+S(34)} ${ty-S(96)}`, tp,{w:S(3.5),opacity:.5})
-    + `</g>`);
-  [0.62,0.78].forEach((t2,i)=>{
-    const y=py+PH*t2, L=S(58), T=S(42), x0=px-S(30);
-    g.push(`<g transform="rotate(${i?5:-3} ${x0} ${y})">`
-      + P(`M ${x0} ${y-T/2} L ${x0+L-T*0.6} ${y-T/2} Q ${x0+L} ${y-T/2} ${x0+L} ${y}`
-         +` Q ${x0+L} ${y+T/2} ${x0+L-T*0.6} ${y+T/2} L ${x0} ${y+T/2} Z`, tp,{w:S(5),fill:'#F7F5F0'})
-      + `</g>`);
+
+  /* ---- 2 · palm heel + forearm, ONE closed path, cropped by the frame ---- */
+  {
+    const J=mkJ(4741);
+    const ang=film?0.24:0.56;                       /* wrist lean, radians */
+    const dx=Math.sin(ang), dy=Math.cos(ang), nx=dy, ny=-dx;
+    const w0x=right-S(70), w0y=bot+S(115), hw=S(80);
+    const WLx=w0x-hw*nx, WLy=w0y-hw*ny, WRx=w0x+hw*nx, WRy=w0y+hw*ny;
+    const LL=(H+160-WLy)/dy, LR=(H+160-WRy)/dy;
+    const ELx=WLx+dx*LL, ELy=WLy+dy*LL, ERx=WRx+dx*LR, ERy=WRy+dy*LR;
+    const mLx=(WLx+ELx)/2, mLy=(WLy+ELy)/2, mRx=(WRx+ERx)/2, mRy=(WRy+ERy)/2;
+    const d=`M ${px+S(150)} ${bot-S(36)}`                              /* hidden */
+      +` C ${px+S(120)+J()} ${bot-S(4)+J()}, ${px+S(102)+J()} ${bot+S(24)+J()}, ${px+S(108)+J()} ${bot+S(56)+J()}`
+      +` C ${px+S(118)+J()} ${bot+S(104)+J()}, ${WLx-S(30)+J()} ${WLy-S(60)+J()}, ${WLx+J()} ${WLy+J()}`
+      +` L ${mLx+J()} ${mLy+J()} L ${ELx} ${ELy}`                      /* off frame */
+      +` L ${ERx} ${ERy} L ${mRx+J()} ${mRy+J()} L ${WRx+J()} ${WRy+J()}`
+      +` C ${right+S(46)+J()} ${bot+S(40)+J()}, ${right+S(58)+J()} ${bot+S(10)+J()}, ${right+S(54)+J()} ${bot-S(30)+J()}`
+      +` C ${right+S(46)+J()} ${bot-S(86)+J()}, ${right+S(12)+J()} ${bot-S(130)+J()}, ${right-S(34)} ${bot-S(150)}` /* hidden */
+      +` L ${px+S(150)} ${bot-S(36)} Z`;
+    g.push(F(d,{fill:SKIN,opacity:p3}));
+    g.push(P(d,p3,{w:S(5)}));
+  }
+
+  /* ---- 3 · phone body: filled so it occludes the hand joins behind it ---- */
+  const bodyD=wobRound(px,py,PW,PH,4101,2.2,S(34));
+  g.push(F(bodyD,{fill:GROUND,opacity:p1}));
+  g.push(P(bodyD,p1,{w:S(6)}));
+
+  /* ---- 4 · screen ---- */
+  const ix=px+S(22), iy=py+S(34), iw=PW-S(44), ih=PH-S(76);
+  if(p2>0 && o2.screen){
+    o2.__ix=ix; o2.__iy=iy; o2.__iw=iw; o2.__ih=ih;
+    g.push(F(rectD(ix,iy,iw,ih),{fill:o2.screen==='dark'?'#DEDAD2':'#EFECE4',opacity:p2}));
+    if(film){
+      const J=mkJ(4742), hz=iy+ih*0.60, gg=[];
+      /* plainFilm: viewfinder + horizon + record only — the caller draws its own scene */
+      /* viewfinder inset — a closed frame, the camera-UI cue */
+      gg.push(P(wobRound(ix+S(13),iy+S(13),iw-S(26),ih-S(26),4108,1.4,S(14)),1,{w:S(3),opacity:.5}));
+      /* horizon meets the screen border on both sides — no loose ends */
+      gg.push(P(wline(ix+S(2),hz,ix+iw-S(2),hz,4104,2),1,{w:S(4),opacity:.8}));
+      if(!o2.plainFilm){
+      /* a house on the horizon: closed pentagon + closed door */
+      const hx=ix+iw*0.09, hwd=iw*0.42, wt=hz-ih*0.13, at=hz-ih*0.215;
+      gg.push(P(`M ${hx+J()} ${hz+J()} L ${hx+J()} ${wt+J()} L ${hx+hwd/2+J()} ${at+J()}`
+              +` L ${hx+hwd+J()} ${wt+J()} L ${hx+hwd+J()} ${hz+J()} Z`,1,{w:S(4),opacity:.9}));
+      gg.push(P(wobbleRect(hx+hwd*0.40,hz-ih*0.065,hwd*0.22,ih*0.065,4105,1.6),1,{w:S(3.5),opacity:.85}));
+      /* a second building, closed, footed on the horizon */
+      gg.push(P(wobbleRect(ix+iw*0.60,hz-ih*0.165,iw*0.27,ih*0.165,4106,2),1,{w:S(4),opacity:.9}));
+      /* a traffic cone in the foreground — the "work happening here" cue */
+      const cxx=ix+iw*0.70, cb=hz+ih*0.115, ch=ih*0.085, cw=iw*0.10;
+      gg.push(P(`M ${cxx-cw/2+J()} ${cb+J()} L ${cxx-cw*0.16+J()} ${cb-ch+J()}`
+              +` L ${cxx+cw*0.16+J()} ${cb-ch+J()} L ${cxx+cw/2+J()} ${cb+J()} Z`,1,{w:S(4),opacity:.85}));
+      gg.push(P(wobbleRect(cxx-cw*0.72,cb,cw*1.44,ih*0.016,4107,1.2),1,{w:S(3.5),opacity:.85}));
+      }
+      g.push(grp(gg.join(''),null,p2));
+      /* record mark: dot + ring, unmistakably "filming" */
+      g.push(`<circle cx="${ix+iw-S(38)}" cy="${iy+S(38)}" r="${S(10)}" fill="${ACCENT}" opacity="${p2.toFixed(3)}"/>`);
+      g.push(P(`M ${ix+iw-S(38)} ${iy+S(21)} A ${S(17)} ${S(17)} 0 1 1 ${ix+iw-S(38.01)} ${iy+S(21)} Z`,p2,{stroke:ACCENT,w:S(3.5),opacity:.9}));
+    }
+    g.push(P(wobRound(ix,iy,iw,ih,4102,1.6,S(20)),1,{w:S(4),opacity:.55*p2}));
+  }
+
+  /* ---- 5 · three fingertips wrapping the LEFT edge: closed capsules + nails ---- */
+  [[0.42,S(74),-4,4721],[0.555,S(84),0,4722],[0.69,S(78),4,4723]].forEach(([fy,len,ang,seed])=>{
+    const rad=S(27), byy=py+PH*fy, bxx=px-S(36);
+    const d=wobRound(0,-rad,len,rad*2,seed,1.8,rad);
+    const nl=wobRound(len-S(30),-S(12),S(24),S(24),seed+9,1,S(12));
+    g.push(grp(F(d,{fill:SKIN,opacity:p4})+P(d,p4,{w:S(5)})+P(nl,p4,{w:S(3.5),opacity:.75}),
+               `translate(${bxx} ${byy}) rotate(${ang})`));
   });
-  return g.join('');
+
+  /* ---- 6 · thumb up the RIGHT bezel, base rooted in the palm bulge ---- */
+  {
+    const J=mkJ(4743);
+    const d=`M ${right+S(50)+J()} ${bot+S(4)+J()}`
+      +` C ${right+S(50)+J()} ${bot-S(56)+J()}, ${right+S(32)+J()} ${bot-S(130)+J()}, ${right+S(10)+J()} ${bot-S(172)+J()}`
+      +` C ${right+S(8)+J()} ${bot-S(194)+J()}, ${right-S(20)+J()} ${bot-S(194)+J()}, ${right-S(26)+J()} ${bot-S(172)+J()}`
+      +` C ${right-S(30)+J()} ${bot-S(130)+J()}, ${right-S(24)+J()} ${bot-S(66)+J()}, ${right-S(16)+J()} ${bot-S(18)+J()}`
+      +` C ${right+S(6)+J()} ${bot+S(2)+J()}, ${right+S(28)+J()} ${bot+S(8)+J()}, ${right+S(50)} ${bot+S(4)} Z`;
+    const nl=wobRound(-S(15),-S(19),S(30),S(38),4731,1,S(15));
+    g.push(F(d,{fill:SKIN,opacity:p4}));
+    g.push(P(d,p4,{w:S(5)}));
+    g.push(grp(P(nl,p4,{w:S(3.5),opacity:.75}),
+               `translate(${right-S(8)} ${bot-S(166)}) rotate(8)`));
+  }
+
+  return grp(g.join(''), `rotate(${tilt} ${cx} ${cy})`);
 }
 
-/* a work van in marker line art, reused as the wedge signal and as "the real part" */
+/* a US work van in marker line art, reused as the wedge signal and as "the real part".
+   Unibody cargo-van profile (Transit-class): continuous roofline into the cab, short
+   raked hood, ladder rack with a ladder up top, tow mirror, rear step bumper. The
+   chassis line arcs OVER each wheel (wheel wells cut into the body); tires touch the
+   ground at y + 140*sc, same contract as before. Shadow (filled state) is a flat drawn
+   ellipse — same rendering language as the ink, no blur. Wobble is seeded + boils. */
 function vanArt(x,y,sc,p,filled){
-  const g=[], S=v=>v*sc;
-  const bw=S(250), bh=S(110);
+  if(p<=0&&!filled) return '';
+  const g=[], S=v=>v*sc, q=v=>clamp(p*2.8-v,0,1), qf=v=>clamp(p*7-v,0,1);
+  const arcp=(cx,cy,r,a0,a1,n)=>{const o=[];for(let i=0;i<=n;i++){
+    const a=(a0+(a1-a0)*i/n)*Math.PI/180;o.push([cx+r*Math.cos(a),cy+r*Math.sin(a)]);}return o;};
+  const densify=pts=>{const o=[];for(let i=0;i<pts.length;i++){o.push(pts[i]);
+    if(i<pts.length-1){const a=pts[i],b=pts[i+1],L=Math.hypot(b[0]-a[0],b[1]-a[1]),n=Math.floor(L/34);
+      for(let k=1;k<=n;k++)o.push([a[0]+(b[0]-a[0])*k/(n+1),a[1]+(b[1]-a[1])*k/(n+1)]);}}return o;};
+  const wob=(pts,seed,amp,close)=>{const r=rnd(seed+boil()),j=()=>(r()-0.5)*2*amp*sc;let d='';
+    densify(pts).forEach((pt,i)=>{d+=`${i?' L':'M'} ${(x+S(pt[0])+j()).toFixed(2)} ${(y+S(pt[1])+j()).toFixed(2)}`;});
+    return close?d+' Z':d;};
+  const flat=pts=>{let d='';pts.forEach((pt,i)=>{
+    d+=`${i?' L':'M'} ${(x+S(pt[0])).toFixed(2)} ${(y+S(pt[1])).toFixed(2)}`;});return d+' Z';};
+
+  /* geometry, unscaled: ground at v=140, nose at u=359, ladder overhangs the tail */
+  const SIL=[[12,112],[7,104],[6,26],[9,14],[24,8],[254,8],[264,11],[302,54],[311,57],
+             [340,59],[350,63],[357,71],[359,92],[357,104],[350,112],[326,112],
+             ...arcp(288,110,38,3.0,-183.0,10),[122,112],...arcp(84,110,38,3.0,-183.0,10)];
+  const WSH=[[258,16],[268,16],[300,52],[290,52]], DWIN=[[232,18],[257,18],[284,48],[232,48]];
+  const MARM=[[283,31],[307,32]], MIR=[[305,24],[318,25],[317,45],[304,44]];
+  const HLT=[[342,62],[355,65],[355,73],[342,70]];
+  const FBP=[[338,102],[357,102],[357,107],[350,112],[338,112]], RBP=[[-2,102],[14,102],[14,115],[-2,115]];
+  const PAN=[[42,22],[198,22],[198,66],[42,66]];
+  const tire=c=>arcp(c,111,29,-90,270,14), hub=c=>arcp(c,111,11.5,-90,270,10);
+  const RW=84, FW=288;
+  const multi=(segs,seed,amp)=>{const r=rnd(seed+boil()),j=()=>(r()-0.5)*2*amp*sc;let d='';
+    segs.forEach(s2=>{d+=`M ${(x+S(s2[0])+j()).toFixed(2)} ${(y+S(s2[1])+j()).toFixed(2)}`
+                       +` L ${(x+S(s2[2])+j()).toFixed(2)} ${(y+S(s2[3])+j()).toFixed(2)} `;});return d;};
+  const rungSegs=[];for(let u=0;u<=300;u+=25)rungSegs.push([u,-7.5,u,0.5]);
+
   if(filled){
-    g.push(F(rectD(x,y,bw,bh),{fill:'#DCD7CE'}));
-    g.push(`<path d="M ${x+bw} ${y+bh} L ${x+bw} ${y+S(32)} L ${x+bw+S(68)} ${y+S(32)} L ${x+bw+S(114)} ${y+S(84)} L ${x+bw+S(114)} ${y+bh} Z" fill="#DCD7CE"/>`);
-    g.push(F(rectD(x+bw+S(12),y+S(42),S(48),S(34)),{fill:'#8C99A4'}));
-    g.push(F(rectD(x+S(28),y+S(24),S(150),S(58)),{fill:'#F2EFE8'}));
-    g.push(P(rectD(x+S(28),y+S(24),S(150),S(58)),1,{stroke:ACCENT,w:S(5)}));
+    g.push(`<ellipse cx="${(x+S(172)).toFixed(1)}" cy="${(y+S(140)).toFixed(1)}" rx="${S(176).toFixed(1)}" ry="${S(6).toFixed(1)}" fill="${INK}" opacity="0.16"/>`);
+    g.push(F(flat(RBP),{fill:'#4A4845'}));
+    g.push(F(flat(SIL),{fill:'#DCD7CE'}));
+    g.push(F(flat(FBP),{fill:'#4A4845'}));
+    g.push(F(flat(WSH),{fill:'#8C99A4'})); g.push(F(flat(DWIN),{fill:'#8C99A4'}));
+    g.push(F(flat(MIR),{fill:'#4A4845'})); g.push(F(flat(HLT),{fill:'#E8E4DC'}));
+    g.push(F(flat(tire(RW)),{fill:PLATE})); g.push(F(flat(tire(FW)),{fill:PLATE}));
+    g.push(F(flat(hub(RW)),{fill:'#8C8A85'})); g.push(F(flat(hub(FW)),{fill:'#8C8A85'}));
+    g.push(F(flat(PAN),{fill:'#F2EFE8'}));
   }
-  g.push(P(`M ${x+bw} ${y} L ${x} ${y} L ${x} ${y+bh} L ${x+bw+S(114)} ${y+bh}`, clamp(p*3,0,1),{w:S(5)}));
-  g.push(P(`M ${x+bw} ${y+S(32)} L ${x+bw+S(68)} ${y+S(32)} L ${x+bw+S(114)} ${y+S(84)} L ${x+bw+S(114)} ${y+bh}`, clamp(p*3-0.6,0,1),{w:S(5)}));
-  if(!filled) g.push(P(rectD(x+S(28),y+S(24),S(150),S(58)), clamp(p*3-1.2,0,1),{w:S(4),opacity:.8}));
-  g.push(P(circD(x+S(74),y+bh,S(30)), clamp(p*3-1.5,0,1),{w:S(5),fill:filled?PLATE:'none'}));
-  g.push(P(circD(x+bw+S(48),y+bh,S(30)), clamp(p*3-1.7,0,1),{w:S(5),fill:filled?PLATE:'none'}));
+  /* ink — silhouette first, then glass + door, wheels, front gear, rack + ladder, panel */
+  g.push(P(wob(SIL,7301,2.2,true), q(0),{w:S(5)}));
+  g.push(P(wob([[230,18],[230,106]],7302,1.8), q(0.7),{w:S(4)}));
+  g.push(P(wob(WSH,7303,1.4,true), q(0.8),{w:S(4),opacity:.9}));
+  g.push(P(wob(DWIN,7304,1.4,true), q(0.9),{w:S(4),opacity:.9}));
+  g.push(P(wob([[239,55],[250,55]],7305,1), q(0.95),{w:S(4)}));
+  g.push(P(wob(tire(RW),7306,1.8,true), q(1.0),{w:S(5)}));
+  g.push(P(wob(tire(FW),7307,1.8,true), q(1.15),{w:S(5)}));
+  g.push(P(wob(hub(RW),7308,1.2,true), q(1.3),{w:S(3.5),opacity:.85}));
+  g.push(P(wob(hub(FW),7309,1.2,true), q(1.3),{w:S(3.5),opacity:.85}));
+  g.push(P(wob(MARM,7310,1), q(1.25),{w:S(4)}));
+  g.push(P(wob(MIR,7311,1.2,true), q(1.25),{w:S(4)}));
+  g.push(P(wob(HLT,7312,1.2,true), q(1.3),{w:S(4),opacity:.9}));
+  g.push(P(wob(FBP,7313,1.4,true), q(1.35),{w:S(4)}));
+  g.push(P(wob(RBP,7314,1.4,true), q(1.35),{w:S(4)}));
+  g.push(P(wob([[10,30],[10,48]],7316,1), q(1.4),{w:S(4),opacity:.85}));
+  g.push(P(wob([[-16,1],[308,1]],7318,1.6), q(1.4),{w:S(4)}));
+  g.push(P(wob([[-16,-8],[308,-8]],7319,1.6), q(1.45),{w:S(4)}));
+  g.push(P(multi([[56,8,56,1.5],[158,8,158,1.5],[252,8,252,1.5]],7317,1.2), qf(3.6),{w:S(4)}));
+  g.push(P(multi(rungSegs,7320,1.2), qf(5.6),{w:S(3.5),opacity:.9}));
+  g.push(P(wob(PAN,7315,1.4,true), filled?1:q(1.7),
+           {stroke:filled?ACCENT:INK, w:filled?S(5):S(4), opacity:filled?1:.8}));
   return g.join('');
 }
 
@@ -678,6 +809,289 @@ function s7ch(t){
 }
 
 /* =====================================================================
+   REV3 CUT  (?cut=rev3)
+   The judged synthesis: STORY-LOOP chassis, PRODUCT-FIRST hook and proof
+   moves, fewest-words dwell doctrine. Left text rail at x=110; every string
+   inside the 15-70% band; three snaps at frames 210 / 822 / 1464; the seam
+   hands the endcard wordmark into the persistent corner mark while the next
+   grid is already being drawn. Frame 0 == frame 1799 + one frame of marker.
+   ===================================================================== */
+const TEXTS_R3 = [
+ {id:'R1', s:'4 video ads.',                          in:0.5, out:4.5, x:110, y:324, sz:64, a:'l', w:600},
+ {id:'R2', s:'2 concepts × 2 hooks',             in:4.8, out:8.6, x:110, y:713, sz:52, a:'l', w:600},
+ {id:'R3', s:'You paid. It didn’t ring.',        in:9.6, out:14.4,x:110, y:367, sz:60, a:'l', w:640},
+ {id:'R4', s:'Your part: clips off your phone.',      in:15.5,out:19.5,x:110, y:324, sz:52, a:'l', w:620},
+ {id:'R5', s:'No film crew. No shoot day.',           in:19.8,out:22.8,x:110, y:410, sz:52, a:'l', w:620},
+ {id:'R6', s:'Your van. Your street.',                in:23.5,out:26.9,x:110, y:259, sz:56, a:'l', w:640},
+ {id:'R7', s:'AI builds the rest.',                   in:27.2,out:29.8,x:110, y:259, sz:56, a:'l', w:640},
+ {id:'R8', s:'Keep the one that pulls.',              in:30.5,out:33.8,x:110, y:691, sz:52, a:'l', w:560},
+ {id:'R9', s:'5–7 business days from your footage.',in:34.1,out:38.3,x:110,y:302,sz:46, a:'l', w:560},
+ {id:'R10',s:'Disclosure handled',                    in:39.0,out:45.1,x:1210,y:346, sz:44, a:'l', w:620},
+ {id:'R11',s:'No fake testimonials',                  in:40.5,out:45.1,x:1210,y:432, sz:44, a:'l', w:620},
+ {id:'R12',s:'Claims substantiated',                  in:41.9,out:45.1,x:1210,y:518, sz:44, a:'l', w:620},
+ {id:'R13',s:'We make the first one before you ask.', in:46.0,out:52.9,x:110, y:648, sz:50, a:'l', w:420},
+ {id:'R14',s:'See one made for your business ↓',  in:53.8,out:58.8,x:960, y:562, sz:64, a:'c', w:1400},
+];
+
+/* ---- the corner wordmark + the endcard wordmark: BOTH SVG text, so the
+   58.5-59.3 retraction merges into an identical renderer, not a lookalike. ---- */
+function markText(x,y,size,op){
+  return `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" font-family="Liberation Sans,Arial" font-weight="700"`
+       + ` letter-spacing="${(size*0.20).toFixed(2)}" font-size="${size.toFixed(1)}" fill="${INK}" opacity="${op.toFixed(3)}">SERVICE POW</text>`;
+}
+const CORNER = {x:96, y:186, size:26, op:0.40};
+function r3marks(t){
+  const o=[ markText(CORNER.x, CORNER.y, CORNER.size, CORNER.op) ];   /* never off, never moves */
+  if(t>=53.0 && t<59.3){
+    const inP = easeOut(seg(t,53.0,53.6));
+    if(t<58.5){ o.push(markText(600, 425, 96, inP)); }
+    else {
+      const k = easeIO(seg(t,58.5,59.3));
+      o.push(markText(lerp(600,CORNER.x,k), lerp(425,CORNER.y,k), lerp(96,CORNER.size,k), lerp(1,0,k)));
+    }
+  }
+  return o.join('');
+}
+
+/* ---- shopfront, sketch + finished, ground contract: base sits at y ---- */
+function shopArt(x,y,sc,p,filled){
+  const g=[], S=v=>v*sc;
+  if(filled){
+    g.push(`<ellipse cx="${x+S(120)}" cy="${y}" rx="${S(140)}" ry="${S(6)}" fill="${INK}" opacity="0.16"/>`);
+    g.push(F(`M ${x+S(20)} ${y} L ${x+S(20)} ${y-S(150)} L ${x+S(220)} ${y-S(150)} L ${x+S(220)} ${y} Z`,{fill:'#78848E'}));
+    g.push(`<path d="M ${x} ${y-S(150)} L ${x+S(30)} ${y-S(210)} L ${x+S(210)} ${y-S(210)} L ${x+S(240)} ${y-S(150)} Z" fill="${ACCENT}"/>`);
+    g.push(F(rectD(x+S(85),y-S(100),S(70),S(100)),{fill:'#4A4845'}));
+  }
+  g.push(P(wobbleRect(x+S(20),y-S(150),S(200),S(150),8101,2), clamp(p*2.2,0,1),{w:S(5)}));
+  g.push(P(`M ${x} ${y-S(150)} L ${x+S(30)} ${y-S(210)} L ${x+S(210)} ${y-S(210)} L ${x+S(240)} ${y-S(150)} Z`, clamp(p*2.2-0.5,0,1),{w:S(5)}));
+  g.push(P(wobbleRect(x+S(85),y-S(100),S(70),S(100),8102,1.6), clamp(p*2.2-1,0,1),{w:S(4),opacity:.85}));
+  return g.join('');
+}
+
+/* ---- the rev3 grid: four cells right of the text rail, one continuous
+   outline stroke across all four (the marker line the seam hands into). ---- */
+const RC=[[680,215],[1260,215],[680,555],[1260,555]], RW3=490, RH3=295;
+function r3gridOutline(prog){
+  const o=[];
+  for(let i=0;i<4;i++){
+    const pp=clamp(prog*4-i,0,1);
+    if(pp>0) o.push(P(wobbleRect(RC[i][0],RC[i][1],RW3,RH3,300+i,3), pp, {w:5}));
+  }
+  return o.join('');
+}
+function r3gridCells(t,f,opts){
+  const o=[], SNAP=210;
+  const snapped = f>=SNAP || opts.finished;
+  for(let i=0;i<4;i++){
+    const [x,y]=RC[i];
+    if(snapped){
+      let cell = adFinal(x,y,RW3,RH3,i);
+      if(opts.dimLosers && i!==0) cell = grp(cell,null,0.30);
+      if(f>=SNAP && f<SNAP+5 && !opts.finished){
+        const k=clamp((f-SNAP)/4,0,1), sc2=1+0.030*(1-easeOut(k));
+        const cx=x+RW3/2, cy=y+RH3/2;
+        cell = grp(cell, `translate(${cx} ${cy}) scale(${sc2.toFixed(5)}) translate(${-cx} ${-cy})`);
+      }
+      o.push(cell);
+    } else {
+      const sk=seg(t,4.8+i*0.4,6.4+i*0.4);
+      if(sk>0) o.push(adSketch(x,y,RW3,RH3,i,sk,9200+i));
+    }
+  }
+  /* accent brackets: rows = concepts, columns = hooks, co-timed with the claim */
+  const bp=seg(t, opts.finished?-2:5.2, opts.finished?-1:7.0);
+  if(bp>0 && !opts.noBrackets){
+    o.push(P(wline(656,215,656,510,9301), clamp(bp*2,0,1), {stroke:ACCENT,w:6,opacity:.8}));
+    o.push(P(wline(656,555,656,850,9302), clamp(bp*2,0,1), {stroke:ACCENT,w:6,opacity:.8}));
+    o.push(P(wline(680,192,1170,192,9303), clamp(bp*2-0.6,0,1), {stroke:ACCENT,w:6,opacity:.8}));
+    o.push(P(wline(1260,192,1750,192,9304), clamp(bp*2-0.6,0,1), {stroke:ACCENT,w:6,opacity:.8}));
+  }
+  return o.join('');
+}
+/* mini finished ad inside a phone screen (SOURCE state), with a play bar */
+function r3sourceScreen(o2,t){
+  if(!o2.__ix) return '';
+  const ix=o2.__ix, iy=o2.__iy, iw=o2.__iw, ih=o2.__ih;
+  const aw=iw*0.86, ah=aw*9/16, ax=ix+(iw-aw)/2, ay=iy+ih*0.30;
+  const barP = t<10 ? (1.1+t)/10.1 : seg(t,58.9,60.0)*1.1/10.1;
+  return grp(
+    adFinal(ax,ay,aw,ah,0)
+    + F(rectD(ax,ay+ah+8,aw,5),{fill:'#B5B0A6'})
+    + F(rectD(ax,ay+ah+8,aw*clamp(barP,0,1),5),{fill:ACCENT}), null, 1);
+}
+
+/* B1 0-9 : the grid, already being made */
+function r1(t,f){
+  const o=[];
+  const outline = (t<1.2) ? 0.4 + 0.6*seg(t,0,1.2) : 1;
+  o.push(r3gridOutline(outline));
+  o.push(r3gridCells(t,f,{}));
+  const h={screen:'source', draw:1, tilt:-4};
+  o.push(grp(handPhone(1800,806,0.50,h)));
+  o.push(grp(r3sourceScreen(h,t), `rotate(-4 1800 806)`));
+  return o.join('');
+}
+/* B2 9-15 : the quiet phone + the lonely ad */
+function r2b(t){
+  const o=[];
+  const h={screen:'dark', draw:seg(t,9.2,10.4), tilt:-6};
+  o.push(grp(handPhone(430,650,0.85,h)));
+  o.push(adSketch(1000,330,640,360,1,seg(t,9.8,12.0),9401));
+  return o.join('');
+}
+/* B3 15-23 : the filming phone, jobsite inside the screen */
+function r3b(t){
+  const o=[];
+  const h={screen:'film', plainFilm:true, draw:seg(t,15.0,16.4), tilt:7};
+  const inner=[];
+  o.push(grp(handPhone(1050,520,1.02,h)));
+  if(h.__ix){
+    const ix=h.__ix, iy=h.__iy, iw=h.__iw, ih=h.__ih, hz=iy+ih*0.60;
+    const p=seg(t,16.6,19.0);
+    inner.push(grp(vanArt(ix+iw*0.06, hz-ih*0.001-140*0.20, 0.20, p, false)));
+    inner.push(shopArt(ix+iw*0.62, hz, 0.30, clamp(p*1.4-0.4,0,1), false));
+    const ap=seg(t,20.0,21.0);
+    if(ap>0){
+      inner.push(P(`M ${ix+iw*0.72} ${hz+ih*0.16} C ${ix+iw*0.55} ${hz+ih*0.26}, ${ix+iw*0.38} ${hz+ih*0.26}, ${ix+iw*0.24} ${hz+ih*0.18}`, ap,{stroke:ACCENT,w:5}));
+      inner.push(P(`M ${ix+iw*0.30} ${hz+ih*0.135} L ${ix+iw*0.235} ${hz+ih*0.183} L ${ix+iw*0.31} ${hz+ih*0.225}`, clamp(ap*3-2,0,1),{stroke:ACCENT,w:5}));
+    }
+    o.push(inner.join(''));
+  }
+  return o.join('');
+}
+/* B4 23-30 : the clip becomes the board; env snaps, the van keeps its ink */
+const R4_HZ=770;
+function r4b(t,f){
+  const o=[], SNAP=822;
+  const snapped=f>=SNAP;
+  const gp = easeOut(seg(t,23.0,24.0));      /* the clip growing out of the phone */
+  const g=[];
+  if(snapped){
+    g.push(F(rectD(0,0,W,R4_HZ),{fill:'url(#skyGrad)'}));
+    g.push(F(rectD(0,R4_HZ,W,H-R4_HZ),{fill:'#565450'}));
+  } else {
+    g.push(P(wline(60,R4_HZ,1860,R4_HZ,9501), seg(t,23.2,24.0),{w:5,opacity:.85}));
+    g.push(P(wline(140,200,520,200,9502), seg(t,24.2,24.8),{w:4,opacity:.5}));
+    g.push(P(wline(1450,160,1810,160,9503), seg(t,24.4,25.0),{w:4,opacity:.5}));
+  }
+  g.push(shopArt(1400,R4_HZ,1.15,seg(t,24.6,26.2),snapped));
+  g.push(vanArt(700,R4_HZ-140*1.30,1.30,seg(t,23.8,25.6),snapped));
+  const cx=960, cy=540, sc0=0.24;
+  const tf = gp<1 ? `translate(${(1050+ (cx-1050)*gp).toFixed(1)} ${(520+(cy-520)*gp).toFixed(1)}) scale(${(sc0+(1-sc0)*gp).toFixed(4)}) translate(${-cx} ${-cy})` : null;
+  return grp(g.join(''), tf);
+}
+/* B5 30-38.5 : the winner circled, the turnaround held */
+function r5b(t,f){
+  const o=[];
+  const slide = lerp(-W,0,easeIO(seg(t,30.0,30.5)));
+  const g=[];
+  g.push(r3gridOutline(1));
+  g.push(r3gridCells(t,f,{finished:true, dimLosers:t>=31.4, noBrackets:true}));
+  const cp=seg(t,30.3,31.1);
+  if(cp>0){
+    const cx=RC[0][0]+RW3/2, cy=RC[0][1]+RH3/2;
+    g.push(P(`M ${cx+RW3*0.58} ${cy} C ${cx+RW3*0.58} ${cy-RH3*0.72}, ${cx-RW3*0.60} ${cy-RH3*0.74}, ${cx-RW3*0.62} ${cy}`
+           +` C ${cx-RW3*0.63} ${cy+RH3*0.74}, ${cx+RW3*0.56} ${cy+RH3*0.76}, ${cx+RW3*0.58} ${cy+RH3*0.06}`, cp,{stroke:ACCENT,w:7}));
+  }
+  const tk=seg(t,31.6,32.1);
+  if(tk>0) g.push(P(`M ${RC[0][0]-58} ${RC[0][1]+150} L ${RC[0][0]-38} ${RC[0][1]+174} L ${RC[0][0]-6} ${RC[0][1]+126}`, tk,{stroke:ACCENT,w:8}));
+  const up=seg(t,34.4,36.0);
+  if(up>0) g.push(P(wline(110,352,110+560*up,352,9601), 1,{stroke:ACCENT,w:6,opacity:.85}));
+  return grp(g.join(''), `translate(${slide.toFixed(1)} 0)`);
+}
+/* B6 38.5-45.5 : the labelled triple, each tick proven on the ad */
+function r6b(t){
+  const o=[], AX=140, AY=300, AW=760, AH=428, SV3=1;
+  const ap=seg(t,38.5,39.0);
+  if(ap>0) o.push(grp(adFinal(AX,AY,AW,AH,SV3),null,ap));
+  o.push(P(wline(1150,320,1150,560,9701), seg(t,38.6,39.0),{w:5,opacity:.55}));
+  o.push(tick(1160,346,seg(t,38.9,39.2)));
+  o.push(tick(1160,432,seg(t,40.3,40.6)));
+  o.push(tick(1160,518,seg(t,41.7,42.0)));
+  const a1=seg(t,38.9,39.2);
+  if(a1>0){ const x=AX+28,y=AY+26;
+    o.push(grp(F(rectD(x,y,220,42),{fill:'#F2EFE8',opacity:.95})+F(rectD(x+16,y+14,126,7),{fill:'#3A3A3A'})+F(rectD(x+152,y+14,50,7),{fill:ACCENT}),null,a1)); }
+  const a2=seg(t,40.3,40.6);
+  if(a2>0){ const x=AX+54,y=AY+AH-156;
+    o.push(grp(P(`M ${x} ${y} q 0 -38 34 -44 M ${x+56} ${y} q 0 -38 34 -44`,1,{stroke:'#F2EFE8',w:9,opacity:.85}),null,a2));
+    o.push(P(wline(x-18,y-56,x+110,y+18,9702), a2,{stroke:ACCENT,w:8})); }
+  const a3=seg(t,41.7,42.2);
+  if(a3>0){ const rx=AX+VAR[1].cap[0]*AW+24, ry=AY+AH-22;
+    o.push(P(wline(rx,ry,rx+AW*0.26,ry,9703), a3,{stroke:ACCENT,w:7})); }
+  const cc=seg(t,44.2,45.0);
+  if(cc>0) o.push(P(`M 1740 300 C 1806 420, 1788 560, 1560 592 C 1300 626, 1120 596, 1108 452 C 1098 330, 1300 296, 1520 300 C 1610 302, 1690 296, 1736 312`, cc,{stroke:ACCENT,w:6,opacity:.8}));
+  return o.join('');
+}
+/* B7 45.5-53 : the viewer's ad, drawn fresh, snapped, shown on the phone */
+const R7F={x:560,y:190,w:1000,h:563}, R7HZ=190+470;
+function r7b(t,f){
+  const o=[], SNAP=1464;
+  o.push(P(wobbleRect(R7F.x,R7F.y,R7F.w,R7F.h,9801,3), seg(t,45.5,46.3),{w:6}));
+  const snapped=f>=SNAP;
+  const g=[];
+  if(snapped){
+    g.push(F(rectD(R7F.x+4,R7F.y+4,R7F.w-8,R7HZ-R7F.y-4),{fill:'url(#skyGrad)'}));
+    g.push(F(rectD(R7F.x+4,R7HZ,R7F.w-8,R7F.y+R7F.h-R7HZ-4),{fill:'#565450'}));
+  } else {
+    g.push(P(wline(R7F.x+30,R7HZ,R7F.x+R7F.w-30,R7HZ,9802), seg(t,46.4,47.0),{w:4,opacity:.8}));
+  }
+  g.push(vanArt(R7F.x+120, R7HZ-140*0.95, 0.95, seg(t,46.6,48.2), snapped));
+  g.push(shopArt(R7F.x+660, R7HZ, 0.85, seg(t,47.2,48.4), snapped));
+  if(snapped && f<SNAP+5){
+    const k=clamp((f-SNAP)/4,0,1), sc2=1+0.030*(1-easeOut(k));
+    const cx=R7F.x+R7F.w/2, cy=R7F.y+R7F.h/2;
+    o.push(grp(g.join(''), `translate(${cx} ${cy}) scale(${sc2.toFixed(5)}) translate(${-cx} ${-cy})`));
+  } else o.push(g.join(''));
+  if(t>=49.4){
+    const h={screen:'source', draw:seg(t,49.4,50.4), tilt:-4};
+    o.push(grp(handPhone(1760,830,0.46,h)));
+    o.push(grp(r3sourceScreen(h,t), `rotate(-4 1760 830)`));
+  }
+  return o.join('');
+}
+/* B8 53-60 : endcard, then the promise performed (the seam) */
+function r8b(t,f){
+  const o=[];
+  const rec = easeIO(seg(t,53.0,53.8));
+  if(t<55.0){
+    const sc2=lerp(1,0.30,rec), cx=960, cy=470;
+    o.push(grp(
+      P(wobbleRect(R7F.x,R7F.y,R7F.w,R7F.h,9801,3),1,{w:6})
+      + F(rectD(R7F.x+4,R7F.y+4,R7F.w-8,R7HZ-R7F.y-4),{fill:'url(#skyGrad)'})
+      + F(rectD(R7F.x+4,R7HZ,R7F.w-8,R7F.y+R7F.h-R7HZ-4),{fill:'#565450'})
+      + vanArt(R7F.x+120,R7HZ-140*0.95,0.95,1,true) + shopArt(R7F.x+660,R7HZ,0.85,1,true),
+      `translate(${lerp(0,-620,rec).toFixed(1)} ${lerp(0,-190,rec).toFixed(1)}) translate(${cx} ${cy}) scale(${sc2.toFixed(4)}) translate(${-cx} ${-cy})`,
+      1-seg(t,54.2,55.0)));
+  }
+  const up=seg(t,53.6,54.2);
+  if(up>0 && t<58.6) o.push(P(wline(700,470,700+520*up,470,9901), 1,{stroke:ACCENT,w:9,opacity:1-seg(t,58.5,58.6)}));
+  /* seam restart: the marker begins the next grid while the hand re-enters */
+  if(t>=58.9){
+    o.push(r3gridOutline(0.4*seg(t,58.9,60.0)));
+    const ent=easeOut(seg(t,58.9,60.0));
+    const hx=1800+(1-ent)*260, hy=806+(1-ent)*300;
+    const h={screen:'source', draw:1, tilt:-4};
+    o.push(grp(handPhone(hx, hy, 0.50, h)));
+    o.push(grp(r3sourceScreen(h,t), `rotate(-4 ${hx.toFixed(1)} ${hy.toFixed(1)})`));
+  }
+  return o.join('');
+}
+
+function renderArtRev3(t,f){
+  const o=[];
+  if(t<9.6)               o.push(grp(r1(t,f),  `translate(${wipe(t,9.0,9.6)} 0)`));
+  if(t>=9.0  && t<15.4)   o.push(grp(r2b(t),   `translate(${wipe(t,14.9,15.4)} 0)`));
+  if(t>=15.0 && t<23.0)   o.push(grp(r3b(t),   null, 1-seg(t,22.6,23.0)));
+  if(t>=23.0 && t<30.4)   o.push(grp(r4b(t,f), `translate(${wipe(t,29.9,30.4)} 0)`));
+  if(t>=30.0 && t<38.9)   o.push(grp(r5b(t,f), null, 1-seg(t,38.5,38.9)));
+  if(t>=38.5 && t<45.9)   o.push(grp(r6b(t),   null, 1-seg(t,45.5,45.9)));
+  if(t>=45.5 && t<53.0)   o.push(r7b(t,f));
+  if(t>=53.0)             o.push(r8b(t,f));
+  o.push(r3marks(t));
+  return o.join('');
+}
+
+/* =====================================================================
    FRAME ASSEMBLY
    ===================================================================== */
 function wipe(t,a,b){ return -W*easeIO(seg(t,a,b)); }   /* board clears left */
@@ -697,7 +1111,7 @@ function renderArt(t,f){
 
 function renderText(t){
   const o=[];
-  for(const T of (CUT==='challenger'?TEXTS_CH:TEXTS)){
+  for(const T of (CUT==='rev3'?TEXTS_R3:CUT==='challenger'?TEXTS_CH:TEXTS)){
     let a=0;
     if(t>=T.in-FADE && t<=T.out+FADE){
       a = Math.min(seg(t,T.in-FADE,T.in), 1-seg(t,T.out,T.out+FADE));
@@ -718,7 +1132,7 @@ function render(f){
   f = clamp(Math.round(f),0,TOTAL-1);
   CURF = f;
   const t = f/FPS;
-  document.getElementById('scene').innerHTML = (CUT==='challenger') ? renderArtChallenger(t,f) : renderArt(t,f);
+  document.getElementById('scene').innerHTML = (CUT==='rev3') ? renderArtRev3(t,f) : (CUT==='challenger') ? renderArtChallenger(t,f) : renderArt(t,f);
   document.getElementById('txt').innerHTML   = renderText(t);
   document.title = 'f'+f+' t'+t.toFixed(3);
   window.__frame = f;
