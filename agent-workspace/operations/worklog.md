@@ -960,3 +960,29 @@ gates-need-frozen-artifacts · harness-instrument-limits (four, all measured) ·
 judged-panel-beat-solo-authorship (design-time evidence; gate verdict pending, file to be updated).
 Pattern-watch table now carries six rows including the 911 Drain "secondary-location" class at 3,
 **due for promotion** — its learning file is the next knowledge debt.
+
+## 2026-08-31 (close) — Rev 3 through the full ultracode loop: designed by panel, gated twice, delivered
+
+**Did.** The complete arc in one day: judged design round (3 rival spines, 3 judges, synthesis,
+adversarial check — PASS round one) → integration with the prototyped hand v5 and van v5 →
+render + seam/dual-target measurement → gate round 2 on frozen artifacts (8 beat inspectors,
+adversarial refutation, Skeptic Pass 3, Kobe rescore) → the verdict-scoped polish pass → final
+render, QC, delivery encodes, freeze with hashes, handoff to the Owner.
+
+**The numbers that matter.** Skeptic: 14 S4/23 S3 → **0 S4/1 S3** (the survivor is page-side:
+the endcard's promise needs the below-fold spec ad or a one-line reword). Kobe: 4.0 → **8.2 vs
+the 8.0 floor**, zero semantic hard failures, every axis up (hook 3→8, format fit 5→9,
+message+CTA 4→9). Inspectors found 2 S3 craft bugs no gate caught (ladder-rack escaping the
+screen clip; the endcard wordmark 75px off its own underline) — both fixed same day. Seam:
+24.0 dB inside the film's own 24.7–27.3 boil range, ink 1.96/1.88%. Delivery: h264 3.06MB,
+vp9 3.68MB, boil survives crf23 by eye. Frozen: `gates/round3-final/` incl. a frames-manifest
+hash. **$0 spend, zero credits, nothing published, all session.**
+
+**Bar-raiser round** filed a sourced brief + 11 ranked gaps; its critic caught the deepest one —
+the endcard points at a spec ad that does not exist anywhere — which the Skeptic then converged
+on independently. Site handoff written with both WCAG Level A obligations; P2/P7 harness rulings
+drafted for ratification; two new Owner questions filed (demo-spec-ad trade, contract terms).
+
+**Open — all Owner-side now (task #37):** the 5-minute cold watch (check 25) · the endcard/page
+parity call (the one S3) · check 19 on the live page · P2/P7 ratification · the 16:9 S2 named
+acceptance · brand A/B/C · growth audit · rights-clear clip · demo-spec-ad trade · contract terms.
