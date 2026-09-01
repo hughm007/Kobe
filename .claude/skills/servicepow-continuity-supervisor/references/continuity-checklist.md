@@ -1,6 +1,8 @@
 # Continuity checklist
 
-Run against every newly generated shot, against the bibles in the Campaign Bible section 8.
+Run against every newly generated shot, against the continuity annex in the Campaign Bible
+(at the location assigned per
+`../../servicepow-campaign-director/references/bible-contract.md`).
 Judge at **delivery size and speed**. Record drift precisely, not impressionistically.
 
 ## Zero tolerance (any drift = FIX or REGENERATE)
@@ -8,7 +10,9 @@ Judge at **delivery size and speed**. Record drift precisely, not impressionisti
 - **Face** — bone structure, age read, distinguishing features, skin tone
 - **Product** — geometry, packaging, proportions, colour, materials, orientation
 - **Legible text** — any readable word on screen, including signage and vehicle wraps
-- **Brand marks** — see `servicepow-brand-fidelity`; these should be composited, not generated
+- **Brand marks** — DEFER to `../../servicepow-brand-fidelity/SKILL.md`, the single owner of
+  mark correctness under `../../_servicepow/policies/brand-assets.md` (BC-21). Here: flag any
+  suspected mark drift to brand-fidelity; do not rule on it.
 
 ## Characters
 
@@ -23,23 +27,29 @@ Judge at **delivery size and speed**. Record drift precisely, not impressionisti
 
 ## Products
 
-Geometry · packaging · scale relative to hands and environment · colour under this shot's light ·
-materials and finish · logo placement and orientation · which way it faces.
+Geometry · packaging · scale relative to hands and environment · colour under this shot's
+light · materials and finish · which way it faces. Mark placement looking wrong → flag to
+brand-fidelity (see Zero tolerance).
 
 ## Locations
 
-Architecture · room layout · prop positions · furniture · weather · time of day · light through
-windows consistent with stated time.
+Architecture · room layout · prop positions · furniture · weather · time of day · light
+through windows consistent with stated time.
 
 ## Lighting
 
-Direction (key from the same side) · quality (hard/soft) · colour temperature · practical sources
-visible in frame and consistent between shots.
+Direction (key from the same side) · quality (hard/soft) · colour temperature · practical
+sources visible in frame and consistent between shots.
 
 ## Camera
 
-Lens family (a long-lens ad does not suddenly go wide-angle) · height · movement philosophy ·
-**180-degree line** maintained · screen direction consistent.
+| Field | Check |
+|---|---|
+| Lens family | a long-lens sequence does not suddenly go wide-angle |
+| Height | consistent with the bible's stated camera height |
+| Movement philosophy | matches the bible (locked / handheld / drifting) |
+| 180-degree line | DEFER — verify per the editor's grammar, `../../servicepow-cinematography-editor/SKILL.md` (single owner) |
+| Screen direction | DEFER — verify per the editor's grammar, `../../servicepow-cinematography-editor/SKILL.md` (single owner) |
 
 ## Colour
 
@@ -47,8 +57,11 @@ Palette · white balance · grade. A shot that grades differently reads as a dif
 
 ## Audio
 
-Room tone matches the space · ambience continuous across the cut · music state consistent with
-the beat · one continuous audio bed (LB26).
+| Field | Check |
+|---|---|
+| Ambience vs beat | ambience and music state consistent with the beat map's expectations recorded in the bible |
+| Room tone | DEFER — enforced by `../../servicepow-audio-director/SKILL.md` (single owner); pass it the space description per shot |
+| Continuous bed | DEFER — bed continuity across cuts is enforced by `../../servicepow-audio-director/SKILL.md` |
 
 ## Temporal state tracking
 
@@ -60,13 +73,14 @@ Keep a running state table for the sequence. At each shot, what should be true?
 | Sleeves | rolled | rolled from shot 3 onward |
 | Tool | on the floor, right of frame | set down in shot 5 |
 
-**Objects do not reset. People do not teleport. Clothes do not randomly change. Products do not
-mutate.**
+**Objects do not reset. People do not teleport. Clothes do not randomly change. Products do
+not mutate.**
 
 ## Verdicts
 
 - **ACCEPT** — invisible at delivery size and speed. Record it anyway.
 - **FIX** — correctable with an edit op (cheaper than regeneration; try this first).
-- **REGENERATE** — with tightened references, not just a reworded prompt.
+- **REGENERATE** — with tightened references, not just a reworded prompt. Regeneration is
+  spend: `../../_servicepow/policies/generation-and-spend.md` applies.
 - **RAISE CONFLICT** — the requirement exceeds what the models can hold; the shot needs a
   different production method.

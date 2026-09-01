@@ -3,7 +3,6 @@ title: "<CLIENT> — <CAMPAIGN NAME>"
 type: campaign-bible
 client: <client-slug>
 campaign_id: <YYYY-MM-DD-short-slug>
-owner: Karl
 status: DRAFT
 created: <YYYY-MM-DD>
 updated: <YYYY-MM-DD>
@@ -13,10 +12,12 @@ tags: [campaign, bible]
 # <CLIENT> — <CAMPAIGN NAME>
 
 > **This file is the single source of truth for this campaign.** One campaign, one idea, one
-> world, one message. Every skill reads it before acting and writes only its own section.
-> Disagreement goes to `## CONFLICTS` — never a silent rewrite.
+> world, one message. Every skill reads it before acting and writes only its own section —
+> section ownership, read/write rules and the approval-state chain are defined in the Campaign
+> Director's bible contract. Disagreement goes to `## CONFLICTS` — never a silent rewrite.
 >
-> Evidence labels are mandatory: **CONFIRMED · INFERRED · UNKNOWN · HYPOTHESIS**.
+> Evidence labels are mandatory on every material statement:
+> **CONFIRMED · INFERRED · UNKNOWN · HYPOTHESIS**.
 
 | | |
 |---|---|
@@ -32,7 +33,8 @@ tags: [campaign, bible]
 ---
 
 ## 1. Ground truth
-*Owner: `servicepow-client-intelligence`. Never invent. Label everything.*
+*Owner: `servicepow-client-intelligence` (including §1.1 and §1.2). Never invent. Label
+everything.*
 
 **Business:**
 **Product / service:**
@@ -40,13 +42,13 @@ tags: [campaign, bible]
 **Pricing / offer mechanics:**
 **Competitors:**
 **Differentiation:**
-**Proof available:**
+**Proof available (Evidence Record IDs where filed):**
 **Objections:**
 **Buying process:**
 **Existing assets:**
 **Constraints (legal, licence, brand):**
 
-### Voice of customer
+### 1.1 Voice of customer
 *Real customer language only. No invented personas. Cite sources.*
 
 **Repeated pains:**
@@ -56,8 +58,8 @@ tags: [campaign, bible]
 **Fears:**
 **High-intent moments:**
 
-### Open UNKNOWNs blocking work
-| Question | Blocks | Who can answer |
+### 1.2 Open UNKNOWNs blocking work
+| Question | Blocks | Role that can answer |
 |---|---|---|
 | | | |
 
@@ -74,10 +76,11 @@ fixes a weak proposition; if WEAK, say what would fix it before spending.*
 **Target:**
 **Awareness level:**
 **Core message:**
-**Angle (chosen, and the ranked alternatives):**
+**THE ANGLE (chosen, and the ranked alternatives):**
 **Core promise:**
-**Proof strategy:**
+**Proof strategy (Evidence Record citations or acquisition plan):**
 **Objection strategy:**
+**Platform:**
 **CTA:**
 **Success metric:**
 
@@ -88,14 +91,15 @@ fixes a weak proposition; if WEAK, say what would fix it before spending.*
 
 **APPROVED CONCEPT FAMILY:**
 **Why this one:**
-**ANGLE (one line):**
-**Client's last three angles** *(pasted as evidence — no paste means the angle gate did not run):*
+**ANGLE (one line, inherited from §2):**
+**Client's last three angles** *(pasted as rotation evidence — no paste means the angle gate
+(BC-24) did not run):*
 1.
 2.
 3.
 
-**Anti-Generic Gate — the logo-swap test:** *(Could a competitor run this exact ad changing only
-logo, name and CTA? YES → rework a meaningful element.)*
+**Anti-Generic Gate — logo-swap and memory tests (BC-24):** *(Could a competitor run this
+exact ad changing only logo, name and CTA? YES → rework a meaningful element.)*
 
 **Stakes check:** wants · could miss · continues if unsolved · success feels like · why now
 
@@ -109,7 +113,8 @@ exception and needs a reason written here.)*
 | B | | | | |
 | C | | | | |
 
-**Hook Tournament:** ___ candidates in → ___ survivors. *(Or the written exemption and its reason.)*
+**Hook Tournament:** ___ candidates in → ___ survivors. *(Or the written exemption and its
+reason.)*
 
 **Rejected concepts and beaten hooks, and why:** *(kept — the reasoning is the asset, and the
 beaten hooks are where the next pack starts)*
@@ -137,22 +142,27 @@ beaten hooks are where the next pack starts)*
 ---
 
 ## 5. Script
-*Owner: `servicepow-script-director`. Written to be spoken, not read.*
+*Owner: `servicepow-script-director`. Written to be spoken, not read. Includes performance
+marks, per-beat mapping, timing estimate, Evidence Record IDs beside every claim, and the
+verbatim declared-lines list (the downstream input for BC-27).*
 
 ---
 
-## 6. Shot list
-*Owner: `servicepow-storyboard-director`. No filler shots — every shot earns its place.*
-*Full list in `shotlist.md`; summary here.*
+## 6. Storyboard
+*Owner: `servicepow-storyboard-director`. No filler shots — every shot earns its place.
+Full storyboard with all ten fields per shot lives in `shotlist.md` beside this file;
+summary here.*
 
-| # | Beat | Dur | Purpose | Contributes | Model req |
-|---|---|---|---|---|---|
-| | | | | | |
+| # | Beat | Dur | Story job | Source (generate / reference / real / composite) | Motion axis (BC-31) | Real reference cited (BC-34) |
+|---|---|---|---|---|---|---|
+| | | | | | | |
 
 **Visual language:**
 **Camera language:**
 **Lighting language:**
 **Colour language:**
+**Feeling Spec:** *(pointer or inline)*
+**Sound Spine:** *(pointer or inline)*
 
 ---
 
@@ -161,98 +171,122 @@ beaten hooks are where the next pack starts)*
 
 **Characters:**
 **Character references (real files, cited):**
-**Performance direction (want / feel / think / just happened / looking at / hiding):**
+**Per-beat actor briefs (want / feel / think / just happened / looking at / hiding /
+intensity):**
+**Restraint instructions:**
+**Inspection verdicts on generated footage (ACCEPT / FIX / REGENERATE / REDESIGN SHOT, with
+the specific tell):**
 
 ---
 
-## 8. Continuity rules
-*Owner: `servicepow-continuity-supervisor`. Detail in `continuity/`.*
+## 8. Continuity annex
+*Owner: `servicepow-continuity-supervisor`. Detail in `continuity/`. The audio entry here is
+cross-shot CONSISTENCY expectations only — audio design belongs to §11.*
 
 **Character bible:**
 **Product bible:**
 **Location bible:**
-**Lighting:**
-**Camera:**
-**Colour:**
-**Audio / room tone:**
-**Temporal continuity notes:**
+**Lighting bible:**
+**Camera bible:**
+**Colour bible:**
+**Audio bible (room tone / ambience expectations that must hold across shots):**
+**Per-shot drift verdicts (field · ruling · action):**
+**Temporal state table:**
 
 ---
 
 ## 9. Brand and product fidelity
-*Owner: `servicepow-brand-fidelity`. Hard gates — near-correct branding is incorrect branding.*
+*Owner: `servicepow-brand-fidelity`. Identity assets enter production only as real client
+files, composited — per the company brand-assets policy (BC-21).*
 
-**Brand references (real client files):**
+**Brand references (real client files, cited):**
 **Product references:**
-**NEVER GENERATE (composite from real assets only):** logo · wordmark · packaging text ·
-typography · UI · legal copy — *(LB24)*
-**Legal / licence copy that must appear:**
+**Identity-asset inventory (each identity asset → the real file it traces to; missing assets
+named):**
+**Per-shot COMPOSITE determinations (recorded in the storyboard's source field):**
+**Legal / licence copy that must appear, with placement constraints:**
+**Review verdicts per asset (PASS / FAIL + reason):**
 
 ---
 
 ## 10. Production plan
-*Owner: `servicepow-higgsfield-production`. The shot chooses the model.*
+*Owner: `servicepow-higgsfield-production`. The shot chooses the method; the method and live
+tool state choose the model — models, costs and balances are queried at run time per the
+generation-and-spend policy, never written here as fixed facts.*
 
 **Production method per shot:** full generation / reference-driven / real product + AI env /
 real footage + AI / compositing / traditional edit / hybrid
-**Model routing:** *(see `higgsfield-capability-map.md` — never hardcode "best model" here)*
-**Credit budget:** **Spent to date:**
+**Model routing (per-shot table with reason, backup, references, risks, expected cost):**
+**Credit budget:**   **Spent to date:**
 **Regeneration strategy:**
 **Known production risks:**
 
 ---
 
-## 11. Audio
-*Owner: `servicepow-audio-director`.*
+## 11. Audio design
+*Owner: `servicepow-audio-director`. Cross-shot audio consistency expectations live in §8;
+this section is the audio design itself.*
 
-**Audio language:**
-**Music direction:**
-**Foley / product sounds:**
-**Silence usage:**
-**One continuous audio bed?** *(LB26)*
+**Audio language (room-tone map per location, ambience, foley, product sounds):**
+**Music direction (keyed to the beat map, with the state change per beat):**
+**Silence placement (with the beat each silence serves):**
+**Per-cut audio bridging (J-cuts, L-cuts, sound bridges, keyed to the cut list):**
+**Crowd-vocal treatment per crowd shot:**
+**Beds routed to speech-free verification (BC-26):**
+**Declared lines confirmed verbatim for master speech verification (BC-27):** ☐
 
 ---
 
 ## 12. Edit logic
 *Owner: `servicepow-cinematography-editor`.*
 
-**Cut reasons per transition:**
-**Pacing:**
-**Screen direction / eyelines / 180:**
+**Cut list with a stated reason per transition:**
+**Pacing notes:**
+**Screen grammar (180-degree line / screen direction / eyelines / geography / match on
+action):**
 
 ---
 
-## 13. QC — gate 1 of 2: the score
-*Owner: `servicepow-creative-critic` (Kobe). Independent evaluation.*
+## 13. QC verdict — gate 1 of 2: the score
+*Owner: `servicepow-creative-critic`. Independent evaluation — issued without reference to,
+or waiting on, §14.*
 
-**Verdict:** NOT RUN / HARD FAIL / REVISE / CLIENT READY
-**Card used:** ServicePow-6 (client-facing) / 9-axis rough card *(rough cuts only — may never
-clear a deliverable)*
-**ServicePow-6 scores:** *(reported as `X ± 1.5`, gated on the midpoint, no offset applied)*
+**Verdict:** NOT RUN / HARD FAIL / REVISE / CLIENT READY / CANNOT ASSESS
+**Card used:** ServicePow-6 (client-facing) / rough card *(rough cuts only — may never clear
+a deliverable)*
+**ServicePow-6 result:** *(reported as `midpoint ± 1.5`, gated on the midpoint, no offset
+applied — BC-22)*
 **Lead variant scored in full:**   **Siblings scored on hook / flow / CTA:**
-**AI artifact risk (1–10):**
-**Hard failures found:**
-**Human watched end to end:** ☐ *(LB29 — the only semantic gate)*
-**Human Taste Gate — would Karl be proud to put his name on this?** ☐
+**AI-artifact risk (n/10) and what gives it away:**
+**Registry verification status (passed / failed / could-not-run, by BC id):**
+**Semantic hard failures (timestamps or shot numbers, or "none"):**
+**Specific fix per failure, routed to the owning skill:**
+**Human watched end to end (BC-25):** ☐
+**Human Taste Gate (answered by the APPROVER — proud to put our name on this?):** ☐
 
 ---
 
-## 14. Skeptic — gate 2 of 2: the attack
-*Owner: `servicepow-skeptic`. Given the artifact and the brief only — **never** the production
-reasoning. Both gates must pass; a score never argues down a severity.*
+## 14. Skeptic verdicts — gate 2 of 2: the attack
+*Written by: `servicepow-campaign-director`, transcribing the isolated Skeptic subagent's
+verdict blocks verbatim; content authored by `servicepow-skeptic`, which never receives
+production reasoning and never writes this file itself. Both gates must pass; a score never
+argues down a severity (BC-23).*
 
-| Pass | When | Result | Highest severity |
-|---|---|---|---|
-| 1 — storyboard | before any generation spend | NOT RUN / CLEAR / findings | |
-| 2 — candidate footage | before the edit locks | NOT RUN / CLEAR / findings | |
-| 3 — finished ad | before delivery | NOT RUN / CLEAR / findings | |
+| Pass | Artifact | When | Verdict (PASS / CONDITIONAL / BLOCK / VOID / NOT RUN) | Highest severity |
+|---|---|---|---|---|
+| 1 | storyboard | before any generation spend | | |
+| 2 | candidate footage | before the edit locks | | |
+| 3 | finished master | before delivery | | |
 
-**Findings (S3 or S4 blocks):**
-**Re-run after repair:** ☐
+**Verdict transcripts (verbatim):**
+
+**Findings (S3 or S4 blocks; a VOID blocks):**
+**CONDITIONAL acceptances (each issue individually, accepted by the APPROVER):**
+**Re-run after repair (fresh subagent, fresh packet):** ☐
 
 ---
 
-## CONFLICTS
+## 15. CONFLICTS
 *Append-only. Raised by any skill, resolved only by `servicepow-campaign-director`.*
 
 <!-- ### CONFLICT <date> · raised by <skill> · status: OPEN
@@ -263,7 +297,7 @@ reasoning. Both gates must pass; a score never argues down a severity.*
 **Cost of not changing:**
 -->
 
-## Decision log
-| Date | Decision | By | Why |
+## 16. Decision log
+| Date | Decision | By (role) | Why |
 |---|---|---|---|
 | | | | |

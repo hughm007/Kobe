@@ -1,0 +1,178 @@
+{
+  "profile": "ad-production",
+  "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
+  "canonical_commit": "a20f54db589fa46fa56881908f27df8743a484fc",
+  "generated_at": "20260901T214812Z",
+  "skills": [
+    "servicepow-campaign-director",
+    "servicepow-client-intelligence",
+    "servicepow-strategy",
+    "servicepow-creative-director",
+    "servicepow-creative-spine",
+    "servicepow-script-director",
+    "servicepow-storyboard-director",
+    "servicepow-brand-fidelity",
+    "servicepow-continuity-supervisor",
+    "servicepow-human-performance-realism",
+    "servicepow-higgsfield-production",
+    "servicepow-cinematography-editor",
+    "servicepow-audio-director",
+    "servicepow-creative-critic",
+    "servicepow-skeptic",
+    "servicepow-competitive-intelligence"
+  ],
+  "files": {
+    "_servicepow/LAW.md": {
+      "sha256": "e7c1be455938d1dfcb49c2dbc1f800a662d801784d96a47b47ad86d17165bf7d",
+      "canonical": "profiles/ad-production.law.md"
+    },
+    "_servicepow/README.md": {
+      "sha256": "027ef3e4b2bcd220993bcfa3acd5b2aa08bb25424f3fe6789cfb2646dcf14ab8",
+      "canonical": "GENERATED"
+    },
+    "_servicepow/data/blocking-checks.yaml": {
+      "sha256": "ec0daac48fbeae409959a012d475d1c9e061688097e8ea8013a5a686555ce6dd",
+      "canonical": "data/blocking-checks.yaml"
+    },
+    "_servicepow/data/roles.md": {
+      "sha256": "349f71032952cca70bbe2e881805a1ea63ddcaa300a349f7276d13fa1a76679f",
+      "canonical": "data/roles.md"
+    },
+    "_servicepow/policies/brand-assets.md": {
+      "sha256": "7b1941b4b415d4a04e23a74f1ec8442f207fd1b4c1cb6cacc660485f0eaab1b7",
+      "canonical": "policies/brand-assets.md"
+    },
+    "_servicepow/policies/claims-and-proof.md": {
+      "sha256": "643984f4896502e965ecc2d67ef5959e92e47ce2ba5b59865076452f8252818d",
+      "canonical": "policies/claims-and-proof.md"
+    },
+    "_servicepow/policies/generation-and-spend.md": {
+      "sha256": "8812cdfcdbf4d8863a87aa4efd0f42f4bbfe36a99c1473ec452b959ebac33288",
+      "canonical": "policies/generation-and-spend.md"
+    },
+    "_servicepow/policies/realism-and-disclosure.md": {
+      "sha256": "195c16718380b94bf5fc96f87e4eaf173643dabf61a61375d936bb5cda76533f",
+      "canonical": "policies/realism-and-disclosure.md"
+    },
+    "_servicepow/vendor/higgsfield/PRECEDENCE.md": {
+      "sha256": "7bd58e11b9cd3a4295edbf549912386838ffb76ccde5be838dca1ccccabdae34",
+      "canonical": "vendor/higgsfield/PRECEDENCE.md"
+    },
+    "_servicepow/vendor/higgsfield/pin.json": {
+      "sha256": "b4214172fd21d6b7d5e0dc56414696b50b5401417ea3b7d8b50bcdab65bf67a7",
+      "canonical": "vendor/higgsfield/pin.json"
+    },
+    "servicepow-audio-director/SKILL.md": {
+      "sha256": "e978c823ddc739df26f5b5f27b9c44d7d916b2178a12f2416c9d47d18545c637",
+      "canonical": "skills/servicepow-audio-director/SKILL.md"
+    },
+    "servicepow-brand-fidelity/SKILL.md": {
+      "sha256": "bbd345345af54ef38c29c202776db249f89225b7864740a9b3fb990545e663de",
+      "canonical": "skills/servicepow-brand-fidelity/SKILL.md"
+    },
+    "servicepow-campaign-director/SKILL.md": {
+      "sha256": "09bf8dc059d7b332cceef75014f6a44a60fac382ecb8df36306f52821c7a7d6b",
+      "canonical": "skills/servicepow-campaign-director/SKILL.md"
+    },
+    "servicepow-campaign-director/references/bible-contract.md": {
+      "sha256": "7e8cb04f39d6c1052ea93b387c45237e87afe28eae3ed92f58244f4d76b6c13d",
+      "canonical": "skills/servicepow-campaign-director/references/bible-contract.md"
+    },
+    "servicepow-campaign-director/templates/campaign-bible.md": {
+      "sha256": "f4da3d6ab481c5cc22978c1cf323102b761a6ee27c259f18d8455cc7fe42c964",
+      "canonical": "skills/servicepow-campaign-director/templates/campaign-bible.md"
+    },
+    "servicepow-cinematography-editor/SKILL.md": {
+      "sha256": "b0ef0b0b4083636763479edaf69af72ae9f83633c009c657be3f75ead6cdc533",
+      "canonical": "skills/servicepow-cinematography-editor/SKILL.md"
+    },
+    "servicepow-client-intelligence/SKILL.md": {
+      "sha256": "dad57c992a7565f497fb70e50fa5fa19ad41df6494473f770c895bd0fb014f4d",
+      "canonical": "skills/servicepow-client-intelligence/SKILL.md"
+    },
+    "servicepow-client-intelligence/references/evidence-ladder.md": {
+      "sha256": "40eef8e1a02737c373aa8535d593110cd067af127731104258efe13d2c85cf1a",
+      "canonical": "skills/servicepow-client-intelligence/references/evidence-ladder.md"
+    },
+    "servicepow-client-intelligence/references/voc-method.md": {
+      "sha256": "83f420864360300aeeb488375b0e193bc77ca1b3ce9a42f0d2438fe86139dd55",
+      "canonical": "skills/servicepow-client-intelligence/references/voc-method.md"
+    },
+    "servicepow-competitive-intelligence/SKILL.md": {
+      "sha256": "119c6187dec09cf6ea81b54937d478c4124a8f37eaca5c6c1b0693a72edec10c",
+      "canonical": "skills/servicepow-competitive-intelligence/SKILL.md"
+    },
+    "servicepow-competitive-intelligence/references/extraction-schema.md": {
+      "sha256": "08b2ff76b0ad3d331f69fb815a75ba8798ecc3447786cb8b884c5b4006234026",
+      "canonical": "skills/servicepow-competitive-intelligence/references/extraction-schema.md"
+    },
+    "servicepow-continuity-supervisor/SKILL.md": {
+      "sha256": "f4c889cadaa5467712614637d881522fdc885d76353616b89a9f7081402ae653",
+      "canonical": "skills/servicepow-continuity-supervisor/SKILL.md"
+    },
+    "servicepow-continuity-supervisor/references/continuity-checklist.md": {
+      "sha256": "d392732ebd8a88c03a15c2c5cc69ff94d1f5af2f98658af64812076b773de47c",
+      "canonical": "skills/servicepow-continuity-supervisor/references/continuity-checklist.md"
+    },
+    "servicepow-creative-critic/SKILL.md": {
+      "sha256": "ad4cd447d8e01662e2210db433289d63122dd0a8554c31e311777b9313fe655b",
+      "canonical": "skills/servicepow-creative-critic/SKILL.md"
+    },
+    "servicepow-creative-critic/references/scorecard.md": {
+      "sha256": "a7fa1ea198d19177af7ff1b7779f2f15e27052640b998408b136caca786e21cc",
+      "canonical": "skills/servicepow-creative-critic/references/scorecard.md"
+    },
+    "servicepow-creative-director/SKILL.md": {
+      "sha256": "7a57ceafdd24d22b28d58f6ab04a4e70d281a989675f4320961050c349611732",
+      "canonical": "skills/servicepow-creative-director/SKILL.md"
+    },
+    "servicepow-creative-director/references/advertising-standard.md": {
+      "sha256": "83f1ee5dc0e36fc5aaa468a335852bce1384e9e7d726b83dac736f96e0b6f838",
+      "canonical": "skills/servicepow-creative-director/references/advertising-standard.md"
+    },
+    "servicepow-creative-spine/SKILL.md": {
+      "sha256": "359b5ccf71ad9cb2c6fdc53cdd01edae79a95abe8d5e02072a4f1699884b2c27",
+      "canonical": "skills/servicepow-creative-spine/SKILL.md"
+    },
+    "servicepow-creative-spine/references/anti-choppy.md": {
+      "sha256": "17e691c4bbb7334ebf80d0f49b12f84b0b8f7d54e9b27e95cb8f5ca785a564b9",
+      "canonical": "skills/servicepow-creative-spine/references/anti-choppy.md"
+    },
+    "servicepow-higgsfield-production/SKILL.md": {
+      "sha256": "6b9729478e90e169e22156def214866a7cb92ec7ed5e6a9b5ccb28a6574698e7",
+      "canonical": "skills/servicepow-higgsfield-production/SKILL.md"
+    },
+    "servicepow-higgsfield-production/templates/routing-record.md": {
+      "sha256": "b88bdb9dfd8af46ad9c4ff61db269556dc28df0352b9f11b30a43da12b94db72",
+      "canonical": "skills/servicepow-higgsfield-production/templates/routing-record.md"
+    },
+    "servicepow-human-performance-realism/SKILL.md": {
+      "sha256": "fea9208a85e85b61f2d522450a088198cf837290d7fc068d61c2acdc941c8bed",
+      "canonical": "skills/servicepow-human-performance-realism/SKILL.md"
+    },
+    "servicepow-human-performance-realism/references/realism-inspection.md": {
+      "sha256": "267186f420c9e36ecdd41ad045b0ee03afee393329f7e5f0ebfd3166d0eb7299",
+      "canonical": "skills/servicepow-human-performance-realism/references/realism-inspection.md"
+    },
+    "servicepow-script-director/SKILL.md": {
+      "sha256": "aa648eb1392756b3e727b32517aedb5ea4e6dfa1ba90fc1e0b70e260670f25d0",
+      "canonical": "skills/servicepow-script-director/SKILL.md"
+    },
+    "servicepow-skeptic/SKILL.md": {
+      "sha256": "aa877541386e851ff51e68b374226ef5a299674cb336646fd2885f1430444033",
+      "canonical": "skills/servicepow-skeptic/SKILL.md"
+    },
+    "servicepow-storyboard-director/SKILL.md": {
+      "sha256": "4fb4af6570bb5d946b6e645224f91087ba204ac9e68316465bdd294b8b4b0607",
+      "canonical": "skills/servicepow-storyboard-director/SKILL.md"
+    },
+    "servicepow-storyboard-director/references/shot-fields.md": {
+      "sha256": "023a6353c9dd624319948720c71bb243ac6373698bb7320e2fb857635a479090",
+      "canonical": "skills/servicepow-storyboard-director/references/shot-fields.md"
+    },
+    "servicepow-strategy/SKILL.md": {
+      "sha256": "6b4337f903d22046f6ec5140695ff79bc9cf5479e59fb3327feaec0ea2a7b56e",
+      "canonical": "skills/servicepow-strategy/SKILL.md"
+    }
+  }
+}

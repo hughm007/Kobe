@@ -1,0 +1,18 @@
+{
+  "vendor": "higgsfield",
+  "source": "higgsfield-ai/skills (github)",
+  "frontmatter_version": "0.12.0",
+  "installed_at": "/Users/wyattjohnson/servicepow-v2/.agents/skills/ (bulk install 2026-08-31)",
+  "recorded": "2026-09-01",
+  "note": "Hashes are the skills-CLI computedHash values from the consumer lock. Upstream is never edited by Service Pow.",
+  "skills": {
+    "higgsfield-brandkit": "3c5b83c84675165be9395e01b574b92813385187912bf07cf9e1dceb4d0b67b1",
+    "higgsfield-generate": "28871703b1a3a3cbedbf174330babcc257735a7707becd338c23d72ae5aaa2b8",
+    "higgsfield-marketplace-cards": "7a08d374b9f962737fb8c8ff7f8e323fc4d2ab02281b6723c4631146b4892701",
+    "higgsfield-product-photoshoot": "11ed02298e09d067f96b7347d34e1dea8abb3ca058f714ac3cf70602176a4263",
+    "higgsfield-soul-id": "ff8418fe5fe936d65898601e28bb282c4c47c0fc0cd5c3e54e1c75565609683a",
+    "higgsfield-video-explainer": "d8643f2e983acde62e2e2d0c047912f295851dff5f967d7214fbaedadc3bc5ad",
+    "higgsfield-websites": "dafe6953f4b0e34b4dffddb39783f81d117481b193c9a141281f20c7746daf11",
+    "higgsfield-youtube-thumbnail": "aade6ad4febf121bfd20feefb21c4e838043ac3d08edb33ea9e2574569d4b381"
+  }
+}

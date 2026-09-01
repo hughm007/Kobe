@@ -12,12 +12,14 @@ source: servicepow-ad-producer v4.0 (2026-08-20), imported and split 2026-08-26.
 
 # Video production — the blocking tier
 
-> ## ⚠ THIS FILE OWNS WHAT BLOCKS DELIVERY
-> **Canonical (decision [0005](../../knowledge/decisions/0005-v40-consolidation.md)).** The
-> blocking checks and their count, the gate chain, and the client-ready score live here and
-> nowhere else. Every other file — skills, scorecards, the claude.ai `servicepow-ad-producer`
-> skill — **points here and must not restate the count** (LB50: one number, one file; and within
-> a file, one place).
+> ## ⚠ OWNERSHIP MOVED — SUPERSEDED 2026-09-01 (Service Pow AI OS, Run 2)
+> **The canonical home of the blocking checks, their count, and the delivery gates is now the
+> Service Pow AI OS**: `~/servicepow-ai-os/data/blocking-checks.yaml` (count is DERIVED by
+> `~/servicepow-ai-os/scripts/validate.py`; no file states it), with company law in
+> `~/servicepow-ai-os/policies/` and the reasoning skills in `~/servicepow-ai-os/skills/`.
+> This file remains as the historical import of ad-producer v4.0 (decision
+> [0005](../../knowledge/decisions/0005-v40-consolidation.md)) — its list below is a dated
+> snapshot, NOT the operative gate. Do not cite this file as an owner; point at the registry.
 >
 > **Three corrections applied on import**, because v4.0 contradicted itself:
 > the count is **34** (v4.0 said 31 in three places while §8B said 34) · `Real-ref` is the
@@ -231,7 +233,7 @@ Motion:      [REQUIRED — which of the FIVE MOTION AXES this shot uses (LB46): 
 
 ---
 
-<!-- CANONICAL: blocking-check-count = 34 -->
+<!-- HISTORICAL SNAPSHOT — canonical count now DERIVED from ~/servicepow-ai-os/data/blocking-checks.yaml -->
 ## What actually blocks delivery — the 34
 **The audit counted ~600 discrete checks per ad across this skill, the lesson bank, four overlapping final checklists and the Skeptic passes. That is not rigour — for a one-person shop it guarantees silent skipping, and a check everyone skips is worse than no check.** §94 forbids it. So the rules are now tiered.
 

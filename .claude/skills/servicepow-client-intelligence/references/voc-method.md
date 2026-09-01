@@ -1,8 +1,8 @@
 # Voice of customer — method
 
 **The rule: no invented personas.** Either quote a real customer or mark it UNKNOWN. A persona
-assembled from demographic guesses is filler that feels like research, which makes it worse than
-an honest gap.
+assembled from demographic guesses is filler that feels like research, which makes it worse
+than an honest gap.
 
 ## Where to look, in order of value
 
@@ -41,6 +41,11 @@ Seen in <n> independent reviews.
 Frequency claims need counting, not impressions. "Several people mentioned" is not evidence;
 "7 of 40 reviews mentioned" is.
 
+Any VOC finding that could surface in a deliverable as a factual claim (a star rating, a
+review count, a performance statement) is routed into an Evidence Record per
+`../../_servicepow/policies/claims-and-proof.md` §2 — the quote alone is research, not
+substantiation.
+
 ## The translation rule
 
 When the customer and the brand use different words, **the customer's word wins in ad copy.**
@@ -55,16 +60,17 @@ When the customer and the brand use different words, **the customer's word wins 
 
 Say so. Write:
 
-> **Voice of customer — UNKNOWN.** Searched: <sources tried>, <date>. No usable customer language
-> found. Recommend: <the cheapest way to get it — ask the client for call recordings, read the
-> next 20 reviews as they arrive, ask the crew what customers say on the doorstep>.
+> **Voice of customer — UNKNOWN.** Searched: <sources tried>, <date>. No usable customer
+> language found. Recommend: <the cheapest way to get it — ask the client for call recordings,
+> read the next 20 reviews as they arrive, ask the crew what customers say on the doorstep>.
 
-Then any language used in the ad is labelled HYPOTHESIS and is a testable variable — not an
-assumed truth.
+Then any language used in the deliverable is labelled HYPOTHESIS and is a testable variable —
+not an assumed truth.
 
 ## What never happens here
 
 - Inventing a quote, a persona, a demographic or a frequency
 - Presenting INFERRED language as customer language
-- Writing a testimonial — for a real or synthetic person
-  (see `agent-workspace/operations/compliance.md`: never as a customer; fine as an actor)
+- Writing a testimonial for any person, real or synthetic — the synthetic-people rules in
+  `../../_servicepow/policies/realism-and-disclosure.md` §2 (registry gate BC-17) govern what a
+  generated person may and may not be presented as
