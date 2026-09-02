@@ -21,7 +21,8 @@ source to make it agree with us — we subordinate it by architecture:
 5. **Technical truth flows the other way.** Current model IDs, capabilities, prices, plan and
    balance come from the vendor runtime (`higgsfield model list`, `account status`,
    `generate cost`). Service Pow doctrine never hardcodes them; where vendor docs and the live
-   CLI disagree, the live CLI wins.
+   CLI disagree, the live CLI wins. Operation states are classified per
+   `vendor/CAPABILITY-LADDER.md`.
 
 Known upstream frictions (recorded, not "fixed" upstream): quality-default + no-pre-estimate UX
 rules conflict with our ladder; broad ad triggers conflict with our director; brandkit generates

@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "a20f54db589fa46fa56881908f27df8743a484fc",
-  "generated_at": "20260901T214812Z",
+  "canonical_commit": "8cbcc43c011778e2a63632032758a2f1198072d8",
+  "generated_at": "20260901T224928Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -19,11 +19,18 @@
     "servicepow-audio-director",
     "servicepow-creative-critic",
     "servicepow-skeptic",
-    "servicepow-competitive-intelligence"
+    "servicepow-competitive-intelligence",
+    "servicepow-outbound-director",
+    "claude-ads-audit",
+    "ab-testing",
+    "analytics",
+    "local-seo-manager",
+    "twilio-compliance-traffic",
+    "twilio-messaging-channel-advisor"
   ],
   "files": {
     "_servicepow/LAW.md": {
-      "sha256": "e7c1be455938d1dfcb49c2dbc1f800a662d801784d96a47b47ad86d17165bf7d",
+      "sha256": "3c99d5594c90e1633cfc1b4620d6d6fb55e601f8a33a984b6d5e86b07d0ed2ae",
       "canonical": "profiles/ad-production.law.md"
     },
     "_servicepow/README.md": {
@@ -47,20 +54,244 @@
       "canonical": "policies/claims-and-proof.md"
     },
     "_servicepow/policies/generation-and-spend.md": {
-      "sha256": "8812cdfcdbf4d8863a87aa4efd0f42f4bbfe36a99c1473ec452b959ebac33288",
+      "sha256": "4d2b6649f002f5237e28d80d24b26669c3ab6b4e70a98d7a6a13385078d9750c",
       "canonical": "policies/generation-and-spend.md"
     },
     "_servicepow/policies/realism-and-disclosure.md": {
       "sha256": "195c16718380b94bf5fc96f87e4eaf173643dabf61a61375d936bb5cda76533f",
       "canonical": "policies/realism-and-disclosure.md"
     },
+    "_servicepow/vendor/CAPABILITY-LADDER.md": {
+      "sha256": "5d4ab0413fbe2b00e859820c9d421ac3df3b4f3365f218a1595d14bc8536a7c9",
+      "canonical": "vendor/CAPABILITY-LADDER.md"
+    },
     "_servicepow/vendor/higgsfield/PRECEDENCE.md": {
-      "sha256": "7bd58e11b9cd3a4295edbf549912386838ffb76ccde5be838dca1ccccabdae34",
+      "sha256": "028f335850ed1b6486d6841517c519137da1d7bb68e6263cb89224d15d461daa",
       "canonical": "vendor/higgsfield/PRECEDENCE.md"
     },
     "_servicepow/vendor/higgsfield/pin.json": {
       "sha256": "b4214172fd21d6b7d5e0dc56414696b50b5401417ea3b7d8b50bcdab65bf67a7",
       "canonical": "vendor/higgsfield/pin.json"
+    },
+    "ab-testing/SKILL.md": {
+      "sha256": "1fd229160f6014f3f2d7c92cc7d2f991fbf8dc9ed68aac9793c71b408a6d1144",
+      "canonical": "vendor/coreyhaines-marketing/skills/ab-testing/SKILL.md"
+    },
+    "ab-testing/evals/evals.json": {
+      "sha256": "215cb581a3ef018365a4c9a9145ee5ae8bfc93e48ebeab9417224ccf3e89c6b8",
+      "canonical": "vendor/coreyhaines-marketing/skills/ab-testing/evals/evals.json"
+    },
+    "ab-testing/references/sample-size-guide.md": {
+      "sha256": "96aef9d20c4607662beb924fa31260dee4c0db0c1dd6b607cdb3c4c701f9efd2",
+      "canonical": "vendor/coreyhaines-marketing/skills/ab-testing/references/sample-size-guide.md"
+    },
+    "ab-testing/references/test-templates.md": {
+      "sha256": "761a40b9de8d16f18fa7f60b59e77aa749607ac8014af43e0b022f47fa87c812",
+      "canonical": "vendor/coreyhaines-marketing/skills/ab-testing/references/test-templates.md"
+    },
+    "analytics/SKILL.md": {
+      "sha256": "3eda97d96b2329daa933b6fdb94bf81aaa1196e3e344e56a8805f972a7438404",
+      "canonical": "vendor/coreyhaines-marketing/skills/analytics/SKILL.md"
+    },
+    "analytics/evals/evals.json": {
+      "sha256": "56932e864114d69a61b6b55e639d207329c0a8b7df8b61a0e1188b249cbef1e8",
+      "canonical": "vendor/coreyhaines-marketing/skills/analytics/evals/evals.json"
+    },
+    "analytics/references/event-library.md": {
+      "sha256": "efc7bdb0a7b3efdea9e67ff0d1bc894dcf89ec9b9b8f3414f123d12bee109412",
+      "canonical": "vendor/coreyhaines-marketing/skills/analytics/references/event-library.md"
+    },
+    "analytics/references/ga4-implementation.md": {
+      "sha256": "f33fd6db0cbdb1bdc183af5f52bedd956d14680e54bca2e2c3917de29698636e",
+      "canonical": "vendor/coreyhaines-marketing/skills/analytics/references/ga4-implementation.md"
+    },
+    "analytics/references/gtm-implementation.md": {
+      "sha256": "112da33832439d2ae0b2729e5031fc927df444cd1ae8eb20542d45c1b5690f52",
+      "canonical": "vendor/coreyhaines-marketing/skills/analytics/references/gtm-implementation.md"
+    },
+    "claude-ads-audit/SKILL.md": {
+      "sha256": "46ecbd2925781449e6bffbc7e1dcc5c413b54bd4d59c2228c7ab2c05953bdc52",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/SKILL.md"
+    },
+    "claude-ads-audit/references/additional-platforms.md": {
+      "sha256": "0008ac1fa05a8a91a0db9877022603a7b4c33019c5ff01658612aadad06e1f33",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/additional-platforms.md"
+    },
+    "claude-ads-audit/references/amazon-audit.md": {
+      "sha256": "5ee2ffbb3180eb683a34fa38df70f597a3b9aaec9ee01683f01f7a99bc168f2a",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/amazon-audit.md"
+    },
+    "claude-ads-audit/references/apple-audit.md": {
+      "sha256": "f114dd8b8af0bd39c439935a51c831b39fa62412fd13baacd3e4f22a3076c930",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/apple-audit.md"
+    },
+    "claude-ads-audit/references/automation-tier-classifier.md": {
+      "sha256": "acac058a3365556c17e18b503224b7d0adb0f706e23108cbd42c3e59b1da4d73",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/automation-tier-classifier.md"
+    },
+    "claude-ads-audit/references/benchmarks.md": {
+      "sha256": "793ac2554ca74c79aefad49297ddb0c35de099aa0202ee43e5646b4214e90394",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/benchmarks.md"
+    },
+    "claude-ads-audit/references/bidding-strategies.md": {
+      "sha256": "70602e10289bb3b1bf226359c729cf30072432154b7cff42df075739cc00489c",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/bidding-strategies.md"
+    },
+    "claude-ads-audit/references/budget-allocation.md": {
+      "sha256": "db57270f15f26658210e2cd4992c083eb4fabadd74f7c81876f6824e48b89130",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/budget-allocation.md"
+    },
+    "claude-ads-audit/references/compliance-requirements.md": {
+      "sha256": "cf9d969d6a76b6788acb20c02152d7906c3c33f9d14fb29b65fd00feb2549b73",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/compliance-requirements.md"
+    },
+    "claude-ads-audit/references/compliance.md": {
+      "sha256": "fef712af4fe91eecf1a226bad258cccec7e0eca7858bb6eb40987189ed85684d",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/compliance.md"
+    },
+    "claude-ads-audit/references/conversion-tracking.md": {
+      "sha256": "691b62271bef064898fa4b2b4c14dbc2b58f0d12b68bac7dbc8fbcf5cab5e81b",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/conversion-tracking.md"
+    },
+    "claude-ads-audit/references/copy-frameworks.md": {
+      "sha256": "f3acff06cc46703c7e819a70034d97ea62ca2c2690ddb571e5bca688c4474b60",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/copy-frameworks.md"
+    },
+    "claude-ads-audit/references/creative-source-registry.md": {
+      "sha256": "028ae0f17379d7fa504964bc9222b73c30883811f1c9908f3fbfd821b3e097f8",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/creative-source-registry.md"
+    },
+    "claude-ads-audit/references/gaql-notes.md": {
+      "sha256": "2860285f983b6e88b61fc03afaabb6f9300411dddfbee3376b16b6cfb7e4afb1",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/gaql-notes.md"
+    },
+    "claude-ads-audit/references/google-audit.md": {
+      "sha256": "a4f0f088e40e5dc9dd1c1a29cd363fc4e2ae64dae62c0b557a45bd8f3b41d373",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/google-audit.md"
+    },
+    "claude-ads-audit/references/google-creative-specs.md": {
+      "sha256": "19dc49b02cb5fb987e5dbc8fcfba45ab8266fd00d8328b6c1e9d03656b64b51e",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/google-creative-specs.md"
+    },
+    "claude-ads-audit/references/image-providers.md": {
+      "sha256": "3a750ef89d3407556adb6fd486b09be7f06b3a39bb6f0c53ca764dfb9221a607",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/image-providers.md"
+    },
+    "claude-ads-audit/references/linkedin-audit.md": {
+      "sha256": "5d046f150a34dd205913f363951952ff011bc1cdf7ea4d2a5257ef2308eb5459",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/linkedin-audit.md"
+    },
+    "claude-ads-audit/references/linkedin-creative-specs.md": {
+      "sha256": "2d05a0979d5242ab4e5569b12298f8cd98e759061896c7d8e17a05c3958cd6b7",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/linkedin-creative-specs.md"
+    },
+    "claude-ads-audit/references/mcp-integration.md": {
+      "sha256": "f54067f158fe25e10fe4bc4c781b268c14c6299ed55a078cd402e6a703ec7ec9",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/mcp-integration.md"
+    },
+    "claude-ads-audit/references/meta-ai-stack.md": {
+      "sha256": "9202022581046fc598fa2a8ebd222eb7fc5af67faf900865907b360f8af9684c",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/meta-ai-stack.md"
+    },
+    "claude-ads-audit/references/meta-audit.md": {
+      "sha256": "26979ad229332f2ed888e21df9b7052a5f826f45bd902910bb7091b1e46f3cef",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/meta-audit.md"
+    },
+    "claude-ads-audit/references/meta-creative-specs.md": {
+      "sha256": "8b32cbc92f9353686d2dd89e3e437971a7af65421b85ee40be13389cb24bb5c9",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/meta-creative-specs.md"
+    },
+    "claude-ads-audit/references/microsoft-audit.md": {
+      "sha256": "c8502d348c18e40f89954fd492d98e12eb865f10051b16df49125d4b7a8dc41d",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/microsoft-audit.md"
+    },
+    "claude-ads-audit/references/microsoft-creative-specs.md": {
+      "sha256": "132f15475f6bd64a7f3819956429bafd0b45e3d1d04bf9a4ff2c355cafc423f0",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/microsoft-creative-specs.md"
+    },
+    "claude-ads-audit/references/pinterest-audit.md": {
+      "sha256": "18a5101c5eac6a6e24846bb43efa8ea0943b150f88fc8b931ec661391e055e8b",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/pinterest-audit.md"
+    },
+    "claude-ads-audit/references/platform-specs.md": {
+      "sha256": "1e1f1db3887c1132c48523f75bb939b561e9ecb3e5e8c9ad7eedbc5ee5142958",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/platform-specs.md"
+    },
+    "claude-ads-audit/references/prompt-patterns.md": {
+      "sha256": "46a543c20c930ec62b2f60257c12b27a56e8cf0c1c98cdb40a241827c813765c",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/prompt-patterns.md"
+    },
+    "claude-ads-audit/references/reddit-audit.md": {
+      "sha256": "6b1bbb44c7cc237143051ce6fdb729fc4d94e534bea3deac60eecb7f15cbe65c",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/reddit-audit.md"
+    },
+    "claude-ads-audit/references/scoring-system.md": {
+      "sha256": "65830c4d54252d768450ec709e8a6480fb04db828dbc28bcee775ffaa9c510a2",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/scoring-system.md"
+    },
+    "claude-ads-audit/references/snapchat-audit.md": {
+      "sha256": "bb5b345ce08b51f9b2f78e25cf162f947c2f60a8dc9cbc14c2dc9a6ffc29e1ea",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/snapchat-audit.md"
+    },
+    "claude-ads-audit/references/status-contract.md": {
+      "sha256": "4563012dd531092d2e5f80cd0202b5e5c739d103f3c0330eae77613511aa5d62",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/status-contract.md"
+    },
+    "claude-ads-audit/references/thinking-framework.md": {
+      "sha256": "dcf617715b2c807b84a52d076efc85c463e9ed3ed29ee8a02f07a8aaa5441bc6",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/thinking-framework.md"
+    },
+    "claude-ads-audit/references/tiktok-audit.md": {
+      "sha256": "8858fd5749bcef308373d37ebc9d64c69eebd235318f1746258a0563bcd18c49",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/tiktok-audit.md"
+    },
+    "claude-ads-audit/references/tiktok-creative-specs.md": {
+      "sha256": "860d1aa9b7cd93b4ad621a35d3784ca162bc5e5c87164e672850421112ad0b96",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/tiktok-creative-specs.md"
+    },
+    "claude-ads-audit/references/voice-to-style.md": {
+      "sha256": "1ff93c3da63fb27278b7388c2de106163ed799be831399c6094463d0357aa8c5",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/voice-to-style.md"
+    },
+    "claude-ads-audit/references/x-audit.md": {
+      "sha256": "92fa5a98ff1e0c1a43d8e7b667494cb49eedca53ae46db553f5c37195ad9e500",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/x-audit.md"
+    },
+    "claude-ads-audit/references/youtube-audit.md": {
+      "sha256": "b795934abdc3a03118bcfc261b27d48c278fb1b8faf4d6fa2cfb8dd93daa7b70",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/youtube-audit.md"
+    },
+    "claude-ads-audit/references/youtube-creative-specs.md": {
+      "sha256": "698ac98fcd9ad7c6cc6a61d4ff6682efeeff5f9a68b05a82d0b030037bd14c66",
+      "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/youtube-creative-specs.md"
+    },
+    "local-seo-manager/SKILL.md": {
+      "sha256": "6d93fc13f7e0bd4907722c5950aa0e7803e186d941405cec9bdccc553e027ecc",
+      "canonical": "vendor/alirezarezvani-marketing/skills/local-seo-manager/SKILL.md"
+    },
+    "local-seo-manager/references/local-schema-types.md": {
+      "sha256": "2a71ad3929ef27532ca86dc7f79adf33348e42632aaeeb8952bc4d7f2eb7f378",
+      "canonical": "vendor/alirezarezvani-marketing/skills/local-seo-manager/references/local-schema-types.md"
+    },
+    "local-seo-manager/references/local-seo-checklist.md": {
+      "sha256": "20970b1758856b8876acf120c11d7096f45c365426437006b249e1e33c32981e",
+      "canonical": "vendor/alirezarezvani-marketing/skills/local-seo-manager/references/local-seo-checklist.md"
+    },
+    "local-seo-manager/references/review-response-templates.md": {
+      "sha256": "2881365051d4fb817ad2986e254f236d7c9256832556552ad83295335d470496",
+      "canonical": "vendor/alirezarezvani-marketing/skills/local-seo-manager/references/review-response-templates.md"
+    },
+    "local-seo-manager/scripts/nap_checker.py": {
+      "sha256": "34419852ce87ba6b4badf8531527b515a625b195b64e366169eb7a584b62c64a",
+      "canonical": "vendor/alirezarezvani-marketing/skills/local-seo-manager/scripts/nap_checker.py"
+    },
+    "local-seo-manager/scripts/schema_generator.py": {
+      "sha256": "f946833921e84939f4ffe25c32396836cdc011d299cdd3c4bd0d7552772d1c51",
+      "canonical": "vendor/alirezarezvani-marketing/skills/local-seo-manager/scripts/schema_generator.py"
+    },
+    "local-seo-manager/scripts/service_area_generator.py": {
+      "sha256": "66322ef7a9d7994614a0ff8a8ca9fa2c438a191f79fa2ca2e7981654e6c3a349",
+      "canonical": "vendor/alirezarezvani-marketing/skills/local-seo-manager/scripts/service_area_generator.py"
     },
     "servicepow-audio-director/SKILL.md": {
       "sha256": "e978c823ddc739df26f5b5f27b9c44d7d916b2178a12f2416c9d47d18545c637",
@@ -77,6 +308,10 @@
     "servicepow-campaign-director/references/bible-contract.md": {
       "sha256": "7e8cb04f39d6c1052ea93b387c45237e87afe28eae3ed92f58244f4d76b6c13d",
       "canonical": "skills/servicepow-campaign-director/references/bible-contract.md"
+    },
+    "servicepow-campaign-director/references/local-service-gates.md": {
+      "sha256": "d6b235ddf09f49563ab87eebc77cd662fb1318590d9f07603a0264b9d4540d7f",
+      "canonical": "skills/servicepow-campaign-director/references/local-service-gates.md"
     },
     "servicepow-campaign-director/templates/campaign-bible.md": {
       "sha256": "f4da3d6ab481c5cc22978c1cf323102b761a6ee27c259f18d8455cc7fe42c964",
@@ -130,6 +365,10 @@
       "sha256": "83f1ee5dc0e36fc5aaa468a335852bce1384e9e7d726b83dac736f96e0b6f838",
       "canonical": "skills/servicepow-creative-director/references/advertising-standard.md"
     },
+    "servicepow-creative-director/references/grounded-inputs.md": {
+      "sha256": "860f4a401ca5ebbb18cbdc360215281654cff7724bbceac236345a80584c8d2b",
+      "canonical": "skills/servicepow-creative-director/references/grounded-inputs.md"
+    },
     "servicepow-creative-spine/SKILL.md": {
       "sha256": "359b5ccf71ad9cb2c6fdc53cdd01edae79a95abe8d5e02072a4f1699884b2c27",
       "canonical": "skills/servicepow-creative-spine/SKILL.md"
@@ -154,6 +393,22 @@
       "sha256": "267186f420c9e36ecdd41ad045b0ee03afee393329f7e5f0ebfd3166d0eb7299",
       "canonical": "skills/servicepow-human-performance-realism/references/realism-inspection.md"
     },
+    "servicepow-outbound-director/SKILL.md": {
+      "sha256": "0d1ca42be458f62e58b0d4b043cda62feff4ec5a06dcd1ca4e9595b80242f032",
+      "canonical": "skills/servicepow-outbound-director/SKILL.md"
+    },
+    "servicepow-outbound-director/references/deliverability.md": {
+      "sha256": "bedb94586953848ab8c78ebd0f77d3b48c1b022a064c0f3c742b32016789a7a7",
+      "canonical": "skills/servicepow-outbound-director/references/deliverability.md"
+    },
+    "servicepow-outbound-director/references/personalization-tiers.md": {
+      "sha256": "c531ce7cee08048eb3a65c4147bd20af89c234d94516901e5798f159aaeaa978",
+      "canonical": "skills/servicepow-outbound-director/references/personalization-tiers.md"
+    },
+    "servicepow-outbound-director/references/qualification-rubric.md": {
+      "sha256": "575e7bb6372a8a6e0e72dff4f6777b6693e024f84a115c50a65fed2cf7558ea4",
+      "canonical": "skills/servicepow-outbound-director/references/qualification-rubric.md"
+    },
     "servicepow-script-director/SKILL.md": {
       "sha256": "aa648eb1392756b3e727b32517aedb5ea4e6dfa1ba90fc1e0b70e260670f25d0",
       "canonical": "skills/servicepow-script-director/SKILL.md"
@@ -161,6 +416,10 @@
     "servicepow-skeptic/SKILL.md": {
       "sha256": "aa877541386e851ff51e68b374226ef5a299674cb336646fd2885f1430444033",
       "canonical": "skills/servicepow-skeptic/SKILL.md"
+    },
+    "servicepow-skeptic/references/audit-honesty.md": {
+      "sha256": "eb8d537bf7b1ddd79750c5b85ebabc508f0d8b1fa888ff19cf9b59d478251c5c",
+      "canonical": "skills/servicepow-skeptic/references/audit-honesty.md"
     },
     "servicepow-storyboard-director/SKILL.md": {
       "sha256": "4fb4af6570bb5d946b6e645224f91087ba204ac9e68316465bdd294b8b4b0607",
@@ -173,6 +432,22 @@
     "servicepow-strategy/SKILL.md": {
       "sha256": "6b4337f903d22046f6ec5140695ff79bc9cf5479e59fb3327feaec0ea2a7b56e",
       "canonical": "skills/servicepow-strategy/SKILL.md"
+    },
+    "twilio-compliance-traffic/SKILL.md": {
+      "sha256": "9b6b5789abbdcd3b1f9f46bd2fe103138ddb4cf8452fa99bc0440c606c34bfa8",
+      "canonical": "vendor/twilio-ai/skills/twilio-compliance-traffic/SKILL.md"
+    },
+    "twilio-compliance-traffic/agents/openai.yaml": {
+      "sha256": "84a6faf29e1fed90d61bd575530ac635aee2f0b404bc870fc738b3ea3a1e9443",
+      "canonical": "vendor/twilio-ai/skills/twilio-compliance-traffic/agents/openai.yaml"
+    },
+    "twilio-messaging-channel-advisor/SKILL.md": {
+      "sha256": "c7854ff6b7441ca562d91092e1da49c9c944050d6f6095d53c3ada1c2712892b",
+      "canonical": "vendor/twilio-ai/skills/twilio-messaging-channel-advisor/SKILL.md"
+    },
+    "twilio-messaging-channel-advisor/agents/openai.yaml": {
+      "sha256": "3686f8b41b945c32da45030c6ee4bdc5689fdbb5575aa3b334d6bb4ba2179e0c",
+      "canonical": "vendor/twilio-ai/skills/twilio-messaging-channel-advisor/agents/openai.yaml"
     }
   }
 }

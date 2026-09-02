@@ -9,7 +9,9 @@ For any campaign/client generation spend, in order:
    generated; see `policies/realism-and-disclosure.md`) before any model is named.
 2. **Inspect live tool state.** Available models, workflows, params, plan, and balance are
    queried from the runtime (e.g. `higgsfield model list`, `higgsfield account status`,
-   `higgsfield generate cost …`) at decision time. **Model IDs, plans, and credit balances are
+   `higgsfield generate cost …`) at decision time, and every external tool operation is
+   classified per the capability ladder (`vendor/CAPABILITY-LADDER.md`) — plans rely only on
+   live-verified states. **Model IDs, plans, and credit balances are
    never hardcoded in doctrine** — any such number found in an active file is stale by
    definition and a validator failure.
 3. **Expected cost stated** where the runtime can price it; summed for the plan.
