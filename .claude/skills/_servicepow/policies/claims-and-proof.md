@@ -29,16 +29,24 @@ The single acceptable bar is a **filed Evidence Record**. A written client confi
 email is sufficient** to create one; a signed sheet is a stronger form of the same record, not a
 different standard. No skill may impose a stricter or looser bar than this section.
 
-Every Evidence Record gets an ID and lives in the client KB:
+Every Evidence Record gets an ID and lives in a KB:
 
 ```
-EV-<client>-<nnn>
+EV-<subject>-<nnn>
   claim:        the exact wording approved for use
   evidence:     what supports it (email, document, measurement, contract)
   source:       who provided it, and when
+  verified:     the date the evidence was last checked against reality
+  approver:     the role that signed it off
   scope/expiry: where it may be used; when it must be re-confirmed
   status:       APPROVED | RESTRICTED | WITHDRAWN
 ```
+
+**Two homes, one structure.** `<subject>` is the client slug for a claim about that client,
+and `sp` for a claim Service Pow makes about ITSELF. Claims about Service Pow live in the
+Service Pow self-KB and never in a client KB — a client KB holds claims about that client
+only. Service Pow's own records are signed off by the APPROVER rather than a CLIENT_APPROVER,
+since there is no client to confirm them; everything else about the record is identical.
 
 Deliverables cite Evidence IDs, never re-argue the evidence. A claim without a citable
 `EV-` record is an unsubstantiated claim. Registry gate: blocking-check registry, check BC-16.

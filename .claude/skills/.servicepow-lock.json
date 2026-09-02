@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "8cbcc43c011778e2a63632032758a2f1198072d8",
-  "generated_at": "20260901T224928Z",
+  "canonical_commit": "71dc0f5a31eb2781412b419e6729dcdbe1abeaab",
+  "generated_at": "20260902T012955Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -38,11 +38,11 @@
       "canonical": "GENERATED"
     },
     "_servicepow/data/blocking-checks.yaml": {
-      "sha256": "ec0daac48fbeae409959a012d475d1c9e061688097e8ea8013a5a686555ce6dd",
+      "sha256": "93212c48abb8fb393c7c897364788c1f330083f7acdb8029311a33887f821723",
       "canonical": "data/blocking-checks.yaml"
     },
     "_servicepow/data/roles.md": {
-      "sha256": "349f71032952cca70bbe2e881805a1ea63ddcaa300a349f7276d13fa1a76679f",
+      "sha256": "7111b89b4d982cd3d0d4ce044b98e5f9c9e5c1679a50b6b991eae41688e1c981",
       "canonical": "data/roles.md"
     },
     "_servicepow/policies/brand-assets.md": {
@@ -50,7 +50,7 @@
       "canonical": "policies/brand-assets.md"
     },
     "_servicepow/policies/claims-and-proof.md": {
-      "sha256": "643984f4896502e965ecc2d67ef5959e92e47ce2ba5b59865076452f8252818d",
+      "sha256": "4f61abccc1ab9f14eeeccaa035d550fde3893a6c5793a8cf5ae7668e8d44cc11",
       "canonical": "policies/claims-and-proof.md"
     },
     "_servicepow/policies/generation-and-spend.md": {
@@ -62,7 +62,7 @@
       "canonical": "policies/realism-and-disclosure.md"
     },
     "_servicepow/vendor/CAPABILITY-LADDER.md": {
-      "sha256": "5d4ab0413fbe2b00e859820c9d421ac3df3b4f3365f218a1595d14bc8536a7c9",
+      "sha256": "1057e894d3be48514b133f833f177bd9e1e112841ddc8157b18f44629fbb22ad",
       "canonical": "vendor/CAPABILITY-LADDER.md"
     },
     "_servicepow/vendor/higgsfield/PRECEDENCE.md": {
@@ -394,12 +394,20 @@
       "canonical": "skills/servicepow-human-performance-realism/references/realism-inspection.md"
     },
     "servicepow-outbound-director/SKILL.md": {
-      "sha256": "0d1ca42be458f62e58b0d4b043cda62feff4ec5a06dcd1ca4e9595b80242f032",
+      "sha256": "39e1d083a2460910faef1f43d7510f16a65f02710ccee42bcf41971e4537546b",
       "canonical": "skills/servicepow-outbound-director/SKILL.md"
     },
     "servicepow-outbound-director/references/deliverability.md": {
       "sha256": "bedb94586953848ab8c78ebd0f77d3b48c1b022a064c0f3c742b32016789a7a7",
       "canonical": "skills/servicepow-outbound-director/references/deliverability.md"
+    },
+    "servicepow-outbound-director/references/execution-gate.md": {
+      "sha256": "7e28fc14b208adabddb7aad92e08b0565022ddc2f3b43d428539c8fcdd9411b7",
+      "canonical": "skills/servicepow-outbound-director/references/execution-gate.md"
+    },
+    "servicepow-outbound-director/references/outbound-log.md": {
+      "sha256": "225d57bc5c24c9530a30c59a125f7a9de27a5f50e62af3a30a2af2ef8057ada1",
+      "canonical": "skills/servicepow-outbound-director/references/outbound-log.md"
     },
     "servicepow-outbound-director/references/personalization-tiers.md": {
       "sha256": "c531ce7cee08048eb3a65c4147bd20af89c234d94516901e5798f159aaeaa978",

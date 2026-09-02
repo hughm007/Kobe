@@ -31,5 +31,19 @@ Confirm the account and least-privilege scope → prefer metadata and bounded qu
 large extracts → validate arguments against a local allowlist → redact credentials, personal
 data and account IDs from durable artifacts.
 
+## Vendor skills never own a Service Pow motion
+A vendored skill supplies subordinate technical or compliance intelligence. It never owns,
+initiates, or authorizes a Service Pow motion, and its trigger phrases never transfer
+ownership of one. Where a vendored description overlaps a motion Service Pow owns — outbound
+execution being the live case — the Service Pow director owns the workflow and the gate, and
+the vendored skill is consulted inside it.
+
+Concretely, for outbound: the Twilio skills advise on channel choice and consent law; they do
+not decide whether a message is sent, to whom, or how many. The execution gate is the
+outbound Director's and the APPROVER's. A vendored skill whose description claims broad
+outbound intent must be recorded as subordinate in the validator's subordination set before it
+is installed; an unrecorded one is a validator failure, so a future vendor drop cannot quietly
+reclaim the motion.
+
 Binding: `policies/generation-and-spend.md` step 2 (live tool state) uses this ladder;
 `vendor/higgsfield/PRECEDENCE.md` rule 5 inherits it.
