@@ -1,0 +1,11 @@
+# APPROVER packet — pilot-01. Fields per execution-gate.md section 2 (BC-36).
+# PLANNING PACKET. Nothing is sent, scheduled, or loaded into any tool.
+cohort: "One trade x one metro, website-status Hot only (no site found / social only), High or Medium confidence, max 50 rows. Definition is final; the 50 rows are NOT yet researched, so no enumerated list exists yet."
+copy: "Three plain-text emails, exact text in pilot-01-plan.md section 7, claim-limited to EV-sp-001. No SMS, no call script in this pilot."
+channel: "email only"
+volume: "50 recipients, 10 per day across 5 working days, 3 steps per recipient, 150 sends total across the sequence"
+cost: "UNKNOWN pending quotes: 1 domain registration, 2 mailbox seats, optional warmup tooling. Enrichment and sending platform excluded at zero. Requires SPEND_APPROVER two-step gate before any purchase."
+suppression: "Checked 2026-09-01 against suppression-list.md: zero live entries exist, so no cohort row can currently be suppressed. Re-check required at qualification and again immediately before send."
+compliance: "Commercial-email legal floor: identification, honest subject, working unsubscribe, prompt suppression. Physical postal address REQUIRED in footer and not yet supplied. TCPA not engaged - no SMS or voice touch in this pilot."
+infrastructure: "1 dedicated sending domain (never the primary), 2 mailboxes at 5 per day each, all four DNS records verified, 2 to 3 week warmup completed. NONE of this exists yet; capability state is discovered."
+capacity: "Recorded 2026-09-01: 10 per day, 50 per week, email only. Ceiling 50 rows for this run. Engagement onboarding capacity still UNKNOWN."
