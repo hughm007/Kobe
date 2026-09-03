@@ -11,6 +11,10 @@ source: Drive "ServicePow OS 2" — 04_CLIENT_MASTER_LIST.md, 16/17_CREATIVE_LIB
 ---
 
 # 911 Drain — Brand Guide
+> **HEX values measured from the real logo file 2026-09-03** (Pillow dominant-cluster
+> measurement; see intake-record.md §4): black `#000000`, white `#FFFFFF`, red `#F43221`,
+> grey `#C1C1C1`. Measurement is VERIFIED; adoption as canonical palette awaits owner
+> confirmation. Typeface remains CLIENT INPUT REQUIRED.
 
 How this client sounds and looks. **This governs every asset produced for them** — it
 overrides Service Pow's own house voice and visual identity in all their materials.
