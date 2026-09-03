@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "6474c94c32e254c39d464b1ac99234ac7224932b",
-  "generated_at": "20260903T200041Z",
+  "canonical_commit": "783d1830543e059da0a3606efc6097be21890403",
+  "generated_at": "20260903T202643Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -322,7 +322,7 @@
       "canonical": "skills/servicepow-brand-fidelity/SKILL.md"
     },
     "servicepow-campaign-director/SKILL.md": {
-      "sha256": "2d8f929d32b3f07e59f1655df98ccac1fb312485af172699fb9363989280f36a",
+      "sha256": "cb9113a9edaa53e85150dc4d9e48c1c19a4744546a65b193f2670b75c47dc883",
       "canonical": "skills/servicepow-campaign-director/SKILL.md"
     },
     "servicepow-campaign-director/references/bible-contract.md": {
@@ -542,7 +542,7 @@
       "canonical": "skills/servicepow-video-production/scripts/servicepow_performance_qc.py"
     },
     "servicepow-video-production/scripts/servicepow_qc.py": {
-      "sha256": "4a9206c618280bc4e4281761a9ed79abefe63a10413bca0c0e08926b94eb184d",
+      "sha256": "cd48e66268f9df22dbf2d4fd5bc3c8d5412c7accbcc6c8aa14f8dde9d3caa743",
       "canonical": "skills/servicepow-video-production/scripts/servicepow_qc.py"
     },
     "servicepow-video-production/scripts/servicepow_source_qc.py": {

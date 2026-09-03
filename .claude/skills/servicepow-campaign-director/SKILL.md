@@ -246,5 +246,8 @@ quality gates re-run after the fix lands. At campaign close, learning capture (W
 ## REFERENCE FILES
 
 - `templates/campaign-bible.md` — the Bible template (instantiated per campaign)
-- `references/bible-contract.md` — section ownership, read/write rules, approval-state chain.
+- `references/bible-contract.md`
+- `references/local-service-gates.md` — the five engagement gates that bind BEFORE any
+  paid-media plan for a local-service client (context, evidence, regulatory, measurement,
+  capability — never plan on discovered features). — section ownership, read/write rules, approval-state chain.
   These two files are the only home of Bible structure and ownership.

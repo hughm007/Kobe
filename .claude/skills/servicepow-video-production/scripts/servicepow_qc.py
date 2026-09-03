@@ -16,7 +16,7 @@ Usage (unchanged from the documented interface):
   python3 servicepow_qc.py --gate-clips clip.mp4 --accept-indeterminate "Karl"
   python3 servicepow_qc.py clip.mp4 --calm                        # storyboard-declared calm beat
   python3 servicepow_qc.py final.mp4 --master --aspect 9:16 --duration 17 \
-      --expect "480-992-3541" --expect "ROC 366870"
+      --expect "555-0100" --expect "ROC 000000"
 
 Thresholds (from measurement.md — change only with owner sign-off + a validation run):
   motion floor        edge travel >= 1.6 px/frame   (PROVISIONAL, n=2; calm beats: 0.6)
