@@ -350,6 +350,10 @@ ingested file cites its Drive source and sync date in frontmatter.
   what failed: [`knowledge/EVIDENCE-INDEX.md`](knowledge/EVIDENCE-INDEX.md); how to re-prove
   it: canonical `tests/regression.md`. Connector states:
   [`operations/connector-register.md`](operations/connector-register.md).
+- **Where the system lives, and the branch rule:**
+  [`operations/repo-and-branches.md`](operations/repo-and-branches.md). Three repos, all with
+  `main` as the default branch — a plain clone is the entry point, no branch knowledge needed.
+  **Durable work is not durable until it is on `main`.**
 - The open questions that remain are mostly **business risks recorded nowhere**
   (partnership percentages, unsigned claims sheet, unverified sewer scope) — see the
   re-tiered [`company/OPEN-QUESTIONS.md`](company/OPEN-QUESTIONS.md).
