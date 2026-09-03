@@ -11,7 +11,7 @@ description: >
   only on both quality-gate verdicts per the canonical blocking-check registry. It coordinates
   — it does not do the specialist work itself. Do NOT use for a single standalone image or
   shot prompt with no campaign behind it, for editing an existing non-campaign asset, or for
-  non-advertising marketing work such as a client report or a website build.
+  non-advertising marketing work such as a client report; website builds route to servicepow-website-production.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
   version: 2.1.0
@@ -39,7 +39,7 @@ client · rebuild an ad or campaign that failed · "what should we run for <clie
 generic advertising request lands here first; this skill decides which specialists run.
 
 Does not fire on: one-off image generation, prompt-writing for a single standalone shot,
-a client report, or website work. A single asset **inside** a campaign still belongs here —
+a client report; website work routes to `servicepow-website-production`. A single asset **inside** a campaign still belongs here —
 the Bible scales down; it does not get waived.
 
 ## INPUTS

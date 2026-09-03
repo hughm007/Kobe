@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "0d465b08499115172556e1594b4b17c668a52e9e",
-  "generated_at": "20260903T185857Z",
+  "canonical_commit": "e3706403e9a5e715ccc2273b32730792fad452b8",
+  "generated_at": "20260903T192400Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -16,12 +16,14 @@
     "servicepow-human-performance-realism",
     "servicepow-higgsfield-production",
     "servicepow-video-production",
+    "servicepow-website-production",
     "servicepow-cinematography-editor",
     "servicepow-audio-director",
     "servicepow-creative-critic",
     "servicepow-skeptic",
     "servicepow-competitive-intelligence",
     "servicepow-outbound-director",
+    "frontend-design",
     "claude-ads-audit",
     "ab-testing",
     "analytics",
@@ -39,7 +41,7 @@
       "canonical": "GENERATED"
     },
     "_servicepow/data/blocking-checks.yaml": {
-      "sha256": "aebcabbc3768dc49e980c92924455e91d703e693a60a4dcba74358ab90435f41",
+      "sha256": "1246cfc149afaaba2a188cedaff9147684a706110a077d6871a19ef141604d19",
       "canonical": "data/blocking-checks.yaml"
     },
     "_servicepow/data/roles.md": {
@@ -266,6 +268,14 @@
       "sha256": "698ac98fcd9ad7c6cc6a61d4ff6682efeeff5f9a68b05a82d0b030037bd14c66",
       "canonical": "vendor/claude-ads/skills/claude-ads-audit/references/youtube-creative-specs.md"
     },
+    "frontend-design/LICENSE.txt": {
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "canonical": "vendor/anthropic-frontend-design/skills/frontend-design/LICENSE.txt"
+    },
+    "frontend-design/SKILL.md": {
+      "sha256": "1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd",
+      "canonical": "vendor/anthropic-frontend-design/skills/frontend-design/SKILL.md"
+    },
     "local-seo-manager/SKILL.md": {
       "sha256": "6d93fc13f7e0bd4907722c5950aa0e7803e186d941405cec9bdccc553e027ecc",
       "canonical": "vendor/alirezarezvani-marketing/skills/local-seo-manager/SKILL.md"
@@ -303,7 +313,7 @@
       "canonical": "skills/servicepow-brand-fidelity/SKILL.md"
     },
     "servicepow-campaign-director/SKILL.md": {
-      "sha256": "a92bb47c6ed381ca635b725bf2434a63bc5904f2ca6293ca902a096c0c6d655f",
+      "sha256": "31d0766ae2fa03cc446398cbf0360ef82da639606758eaa8a4c5bc42304f611e",
       "canonical": "skills/servicepow-campaign-director/SKILL.md"
     },
     "servicepow-campaign-director/references/bible-contract.md": {
@@ -471,8 +481,12 @@
       "canonical": "skills/servicepow-video-production/references/real-footage-requests.md"
     },
     "servicepow-video-production/scripts/README.md": {
-      "sha256": "edc730f91c401cd3057a8401a7f5527ec779fa205bce4bb36b54821b0351459a",
+      "sha256": "ddc0d260a070377162a5d0d802067ce670f58c75aed80e20c0e2173d78e38d7d",
       "canonical": "skills/servicepow-video-production/scripts/README.md"
+    },
+    "servicepow-video-production/scripts/servicepow_biomech_qc.py": {
+      "sha256": "c9ca74fee63e278802fdaa7212d1b4756a59e2ff00fcdac5e4ed36e65b60e353",
+      "canonical": "skills/servicepow-video-production/scripts/servicepow_biomech_qc.py"
     },
     "servicepow-video-production/scripts/servicepow_kenburns.sh": {
       "sha256": "273aa6f0888353f16d8069db461eb1d86645804388ee34ba2ae3689fd43d6b5c",
@@ -482,9 +496,17 @@
       "sha256": "374d56816baf30628892a8fa3d48f95f40da58f73b9ea680e992d238148c0180",
       "canonical": "skills/servicepow-video-production/scripts/servicepow_overlay.py"
     },
+    "servicepow-video-production/scripts/servicepow_performance_qc.py": {
+      "sha256": "bc8c46ccee69165062213578d5a36860980acadf48f719c25d0c38fa5aa4f100",
+      "canonical": "skills/servicepow-video-production/scripts/servicepow_performance_qc.py"
+    },
     "servicepow-video-production/scripts/servicepow_qc.py": {
       "sha256": "4a9206c618280bc4e4281761a9ed79abefe63a10413bca0c0e08926b94eb184d",
       "canonical": "skills/servicepow-video-production/scripts/servicepow_qc.py"
+    },
+    "servicepow-video-production/scripts/servicepow_source_qc.py": {
+      "sha256": "8f343282af1b6aed0d70436e41d777f7ce65edba5d882e3abc5df30a7167726e",
+      "canonical": "skills/servicepow-video-production/scripts/servicepow_source_qc.py"
     },
     "servicepow-video-production/scripts/servicepow_video.py": {
       "sha256": "6fd5746bbb4b01c5e1bdb8753e9f0d774337762a30938792065b5d5540c32e7d",
@@ -493,6 +515,30 @@
     "servicepow-video-production/templates/plan-example.json": {
       "sha256": "444d15ac497dbc9db8c404456dfe6797774f753923c581c0b2b21bf0568ed271",
       "canonical": "skills/servicepow-video-production/templates/plan-example.json"
+    },
+    "servicepow-website-production/SKILL.md": {
+      "sha256": "256a109c77822a495f135eca755725ef61bc5a716a8567796508c4ca94641f0e",
+      "canonical": "skills/servicepow-website-production/SKILL.md"
+    },
+    "servicepow-website-production/references/site-process.md": {
+      "sha256": "99f8f4aa7acbbe7c9500bc91451be15203b4165fc3fef2ae7bec50060a2fb5e6",
+      "canonical": "skills/servicepow-website-production/references/site-process.md"
+    },
+    "servicepow-website-production/references/web-qa-gates.md": {
+      "sha256": "ce016724e426d7471b0881c6e021a006e30f9a21a04b887c02d85a7cba9a8057",
+      "canonical": "skills/servicepow-website-production/references/web-qa-gates.md"
+    },
+    "servicepow-website-production/scripts/README.md": {
+      "sha256": "21a75cb0fb655120c27ce80daa9485fea7e794278a9c8b38cbfd4ca4abf16e50",
+      "canonical": "skills/servicepow-website-production/scripts/README.md"
+    },
+    "servicepow-website-production/scripts/servicepow_web_qc.py": {
+      "sha256": "429c594a94259b9405cb8cd627329d910fc14425447c83de47a8937b5b4ba0b3",
+      "canonical": "skills/servicepow-website-production/scripts/servicepow_web_qc.py"
+    },
+    "servicepow-website-production/scripts/web-qa.spec.template.ts": {
+      "sha256": "01af12cecb5db237aa52067e155403ca939860e89e44b46209838988fb92ddae",
+      "canonical": "skills/servicepow-website-production/scripts/web-qa.spec.template.ts"
     },
     "twilio-compliance-traffic/SKILL.md": {
       "sha256": "9b6b5789abbdcd3b1f9f46bd2fe103138ddb4cf8452fa99bc0440c606c34bfa8",

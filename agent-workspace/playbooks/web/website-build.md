@@ -9,6 +9,10 @@ updated: 2026-08-24
 tags: [web, build, launch, process]
 ---
 
+> **CANONICAL OWNER (Run 13):** this process now lives in the installed skill
+> `.claude/skills/servicepow-website-production/` (references/site-process.md + executable
+> gates). This playbook copy is a consumer pointer; where they differ, the skill wins.
+
 # Website Build
 
 **When to use:** any new website or full rebuild.

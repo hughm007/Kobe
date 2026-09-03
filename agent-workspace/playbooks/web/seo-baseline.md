@@ -9,6 +9,10 @@ updated: 2026-08-24
 tags: [web, seo, technical, launch]
 ---
 
+> **CANONICAL OWNER (Run 13):** this process now lives in the installed skill
+> `.claude/skills/servicepow-website-production/` (references/site-process.md + executable
+> gates). This playbook copy is a consumer pointer; where they differ, the skill wins.
+
 # SEO Baseline
 
 **When to use:** every site Service Pow ships, and as an audit of any site we inherit.
