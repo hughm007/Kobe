@@ -15,7 +15,7 @@ description: >
   teardowns. Generic advertising requests belong to servicepow-campaign-director.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # Client Intelligence
@@ -138,3 +138,11 @@ UNKNOWN is marked resolved in the client KB's open-questions record.
 → `servicepow-strategy`. Blocking UNKNOWNs go to `servicepow-campaign-director` for
 escalation. Disagreements with an approved upstream decision follow the conflict protocol in
 `references/evidence-ladder.md` — never a silent fix.
+
+## REFERENCE FILES
+
+- `references/evidence-ladder.md` — the evidence-class ladder every fact carries.
+- `references/voc-method.md` — voice-of-customer method.
+- `references/asset-intake.md` — client-asset intake: transport (Drive-preferred) →
+  hashed, provenance-tracked register rows via `scripts/servicepow_asset_ingest.py`;
+  provenance starts UNKNOWN and is never invented; per-client isolation law.

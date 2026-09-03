@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "f0b50116e44564e283e7f4b595a9c99da1367a35",
-  "generated_at": "20260903T203837Z",
+  "canonical_commit": "a021d74db84ec6e52fda6e940529adfe7420040c",
+  "generated_at": "20260903T205421Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -350,8 +350,12 @@
       "canonical": "skills/servicepow-cinematography-editor/SKILL.md"
     },
     "servicepow-client-intelligence/SKILL.md": {
-      "sha256": "dad57c992a7565f497fb70e50fa5fa19ad41df6494473f770c895bd0fb014f4d",
+      "sha256": "b1966e84ad5ff417f4de669e991372696eda569c759fb46b1d27b2323f193da1",
       "canonical": "skills/servicepow-client-intelligence/SKILL.md"
+    },
+    "servicepow-client-intelligence/references/asset-intake.md": {
+      "sha256": "d50e03531313531d78992b5ad1c91d92fc17805846f3bff5934f0580bc128b6c",
+      "canonical": "skills/servicepow-client-intelligence/references/asset-intake.md"
     },
     "servicepow-client-intelligence/references/evidence-ladder.md": {
       "sha256": "40eef8e1a02737c373aa8535d593110cd067af127731104258efe13d2c85cf1a",
@@ -360,6 +364,10 @@
     "servicepow-client-intelligence/references/voc-method.md": {
       "sha256": "83f420864360300aeeb488375b0e193bc77ca1b3ce9a42f0d2438fe86139dd55",
       "canonical": "skills/servicepow-client-intelligence/references/voc-method.md"
+    },
+    "servicepow-client-intelligence/scripts/servicepow_asset_ingest.py": {
+      "sha256": "3b759a8afd126eda12d427407e8e3d3ed4f122f778a05e12a2a979f8587925a6",
+      "canonical": "skills/servicepow-client-intelligence/scripts/servicepow_asset_ingest.py"
     },
     "servicepow-competitive-intelligence/SKILL.md": {
       "sha256": "119c6187dec09cf6ea81b54937d478c4124a8f37eaca5c6c1b0693a72edec10c",

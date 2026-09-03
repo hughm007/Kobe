@@ -22,6 +22,7 @@ Governing law: `.claude/skills/_servicepow/policies/baseline-and-regression.md`.
 | Web QC harness, mutation-proven | canonical `tests/fixtures/web/` + Run 13 record |
 | Cold-session discoverability (video/web/static/intake) | canonical `tests/fresh-session/*.js` — all PASSED with independent graders |
 | Multi-client generalization, zero contamination, zero invented facts | Run 16 fixtures `clients/{desert-aire-cooling,molar-bright-dental,copperline-coffee}/` (marked TEST CLIENT) |
+| Drive-fed asset intake: hash/provenance/isolation proven, cold-discoverable | canonical `servicepow-client-intelligence/references/asset-intake.md` + `scripts/servicepow_asset_ingest.py`; runtime `operations/drive-intake-procedure.md`; fixture rows in `clients/desert-aire-cooling/asset-register.md`; cold sim PASS 2026-09-03 |
 | Real-intake research finds real defects | `clients/911drain/intake-record.md` (live-site sewer + same-visit findings, measured palette) |
 
 ## FAILED (kept as evidence — do not re-run to rediscover)
