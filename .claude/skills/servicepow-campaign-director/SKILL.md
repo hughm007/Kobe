@@ -122,8 +122,9 @@ decision, never a silent omission:
       rewritten); after a repair, **only the gates invalidated by the changed elements
       re-run** (targeted re-verification, proven by hash), never a fresh full round.
       Owner direction on the draft outranks gate rounds on the draft.
-      Execution mechanics for production (preflight, routing, recovery, assembly, the three
-      QA layers) are owned by `servicepow-video-production` and are not re-litigated here.
+      Execution mechanics for production are owned by the deliverable's execution owner —
+      `servicepow-video-production` for video, `servicepow-static-ads` for static ad sets —
+      and are not re-litigated here.
    9. `servicepow-cinematography-editor` — assembly and screen grammar (§12).
    10. `servicepow-audio-director` — the audio world (§11).
    11. **Readiness verification — the dual gate.** `servicepow-creative-critic` grades

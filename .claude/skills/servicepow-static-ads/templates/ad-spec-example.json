@@ -1,0 +1,12 @@
+{
+  "name": "client-campaign-C1-H1-story-v1",
+  "placement": "story",
+  "background": {"color": [17,17,17]},
+  "logo": {"file": "REAL-logo.png", "width_frac": 0.5, "pos": "bottom-center"},
+  "blocks": [
+    {"role":"headline","text":"Still draining slow?","size":88,"y_frac":0.30,"bold":true},
+    {"role":"support","text":"That clog is still growing.","size":44,"y_frac":0.44,"chip":true},
+    {"role":"cta","text":"Call 480-555-0100","size":52,"y_frac":0.58,"bold":true,"chip":true},
+    {"role":"legal","text":"Licensed - ROC 000000","size":26,"y_frac":0.70,"fill":[200,200,200]}
+  ]
+}

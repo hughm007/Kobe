@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "e3706403e9a5e715ccc2273b32730792fad452b8",
-  "generated_at": "20260903T192400Z",
+  "canonical_commit": "c3012e30e3ae3069bbe329d3914075db069f321a",
+  "generated_at": "20260903T193918Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -17,6 +17,7 @@
     "servicepow-higgsfield-production",
     "servicepow-video-production",
     "servicepow-website-production",
+    "servicepow-static-ads",
     "servicepow-cinematography-editor",
     "servicepow-audio-director",
     "servicepow-creative-critic",
@@ -32,6 +33,14 @@
     "twilio-messaging-channel-advisor"
   ],
   "files": {
+    "react-best-practices/SKILL.md": {
+      "sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355",
+      "canonical": "PIN:vercel:skills/react-best-practices/SKILL.md"
+    },
+    "vercel-optimize/SKILL.md": {
+      "sha256": "95ae2683b30d892d165af92a350c5628b68106f395a59b448857b654e306ed91",
+      "canonical": "PIN:vercel:skills/vercel-optimize/SKILL.md"
+    },
     "_servicepow/LAW.md": {
       "sha256": "3c99d5594c90e1633cfc1b4620d6d6fb55e601f8a33a984b6d5e86b07d0ed2ae",
       "canonical": "profiles/ad-production.law.md"
@@ -41,7 +50,7 @@
       "canonical": "GENERATED"
     },
     "_servicepow/data/blocking-checks.yaml": {
-      "sha256": "1246cfc149afaaba2a188cedaff9147684a706110a077d6871a19ef141604d19",
+      "sha256": "2fb04ae233f8fdb7a54f39087ff5fbf017e10f2807a6c810c3f5cf2e43ce3e02",
       "canonical": "data/blocking-checks.yaml"
     },
     "_servicepow/data/roles.md": {
@@ -313,7 +322,7 @@
       "canonical": "skills/servicepow-brand-fidelity/SKILL.md"
     },
     "servicepow-campaign-director/SKILL.md": {
-      "sha256": "31d0766ae2fa03cc446398cbf0360ef82da639606758eaa8a4c5bc42304f611e",
+      "sha256": "2d8f929d32b3f07e59f1655df98ccac1fb312485af172699fb9363989280f36a",
       "canonical": "skills/servicepow-campaign-director/SKILL.md"
     },
     "servicepow-campaign-director/references/bible-contract.md": {
@@ -447,6 +456,38 @@
     "servicepow-skeptic/references/audit-honesty.md": {
       "sha256": "eb8d537bf7b1ddd79750c5b85ebabc508f0d8b1fa888ff19cf9b59d478251c5c",
       "canonical": "skills/servicepow-skeptic/references/audit-honesty.md"
+    },
+    "servicepow-static-ads/SKILL.md": {
+      "sha256": "7691ddf877a29900603488bf8465a079fc645fd0f74a387f2291026e19dc65ed",
+      "canonical": "skills/servicepow-static-ads/SKILL.md"
+    },
+    "servicepow-static-ads/references/layout-and-hierarchy.md": {
+      "sha256": "99be6a97016c022743b54ff6ec52d36f70a0e6688faf83c373bd4e59b29dccd9",
+      "canonical": "skills/servicepow-static-ads/references/layout-and-hierarchy.md"
+    },
+    "servicepow-static-ads/references/placements-and-export.md": {
+      "sha256": "3cb723c382ae5f24b8b6e18965596b7e9ad22a15d9a8bb8a8d0a988666524df1",
+      "canonical": "skills/servicepow-static-ads/references/placements-and-export.md"
+    },
+    "servicepow-static-ads/references/static-qa-gates.md": {
+      "sha256": "b59773708c3f64658bdf721b6a6d5c154a01f8bd3901bef3c1193b154b867bd0",
+      "canonical": "skills/servicepow-static-ads/references/static-qa-gates.md"
+    },
+    "servicepow-static-ads/scripts/README.md": {
+      "sha256": "76dd17f9b79378fc456280d31bc2fd22ca57314525cb288b7acb6cf88c9c0e40",
+      "canonical": "skills/servicepow-static-ads/scripts/README.md"
+    },
+    "servicepow-static-ads/scripts/servicepow_static_compose.py": {
+      "sha256": "56dfd13c0100c49b4fcbd4b321ffc0d6a9a9211360a1f2f9922fa666336441f7",
+      "canonical": "skills/servicepow-static-ads/scripts/servicepow_static_compose.py"
+    },
+    "servicepow-static-ads/scripts/servicepow_static_qc.py": {
+      "sha256": "f6f250529c502ef760a9405c18232d1b81a4014661b172b9f039e9b1281f623b",
+      "canonical": "skills/servicepow-static-ads/scripts/servicepow_static_qc.py"
+    },
+    "servicepow-static-ads/templates/ad-spec-example.json": {
+      "sha256": "52a44f9c08f974ec6186f86225e969bc395512abd7e24864ced84b0c656d8c23",
+      "canonical": "skills/servicepow-static-ads/templates/ad-spec-example.json"
     },
     "servicepow-storyboard-director/SKILL.md": {
       "sha256": "d7734eb171c2e7f37391e290cb9084162458bb9fbec1f75ef5b6a29d4b9240ff",
