@@ -26,3 +26,9 @@ fixture added and the gate PROVEN to fire; Canva Phase 3/3 spec written before c
 bannered/repaired; this ledger's narrative gap closed in `worklog.md`. Full floor re-run, held
 exactly. BASELINE NOT ADVANCED (doc repair is not capability gain). servicepow.com conflict
 locked as decision 0006 — OWNER DECISION REQUIRED, `plumbing` READ-ONLY.
+2026-09-03 post-main-fix verification: `multi-client-stress` re-run unmodified against Kobe `main`
+(== origin/main, clone-identical): GENERAL, zero 911drain contamination, zero invented facts,
+applies-scoping correct 9/9, owner decisions identified not guessed. Kobe = cold-session-proven
+operational memory. Auditor findings F1-F8 recorded in EVIDENCE-INDEX with smallest corrections;
+F1 (ingest doctrine overstates tool) and F3 (stranded worktree commits) are the two that matter.
+Receipt: operations/receipts/2026-09-03-multi-client-stress-post-main-fix.json. Baseline NOT advanced.

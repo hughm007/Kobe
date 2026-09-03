@@ -1231,3 +1231,25 @@ documentation is not a capability improvement.
 **Open:** owner ruling on decision 0006 · owner approval to connect Canva (spec pre-written at
 [`connector-phase-3-canva-bakeoff.md`](connector-phase-3-canva-bakeoff.md)) · the PENDING
 OWNER DATA list in the Evidence Index.
+
+---
+
+## 2026-09-03 (close) — the stranger test, after the branch fix
+
+Owner approved one agent run: the multi-client stress sim, unmodified, against Kobe `main`
+(byte-identical to a fresh clone). Purpose: prove a cold operator entering the normal way
+recovers the current system. **It does.** GENERAL; zero 911 Drain contamination in either grep
+direction; zero invented facts; every gate correctly applies-scoped; the dental plan escalated to
+the APPROVER *before* intake on two grounds; the coffee plan correctly noted it is *not*
+regulated; decision 0006 was read as blocking servicepow.com only; the Vercel scope was read as
+fixture-plus-per-client only. Nobody guessed at an owner decision.
+
+The auditor also earned its keep. The one finding that matters: the Drive ingest doctrine claims
+the tool refuses a foreign *destination*; the code refuses a foreign *inbox* and trusts
+`--client-dir`. True on the read side, overstated on the write side. Recorded as F1 with two
+smallest corrections; fixing the code is a proven-capability change and goes through the baseline
+law, not through a verification run. Second: a locked local worktree holds two real commits —
+the Direction A identity work — that never reached `main`. Same disease as the branch defect,
+caught by the same cure. Recorded in `repo-and-branches.md` for review; not merged blind.
+
+Full output filed as a receipt. Baseline not advanced. Canva still not connected.

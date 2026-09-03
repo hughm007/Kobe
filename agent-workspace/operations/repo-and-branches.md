@@ -46,6 +46,14 @@ default. No history was rewritten and nothing was deleted.
 **Standing rule:** if you finish durable work on a session branch, get it onto `main` before the
 session ends. A record only reachable by knowing a branch name is not a durable record.
 
+## Stranded work found 2026-09-03 (owner/next-session review)
+Local git worktree `.claude/worktrees/vivid-drifting-walrus/` on branch `worktree-vivid-drifting-walrus`
+(`7f4cc87`) holds **two commits not on `main`**: "Direction A selected: the identity system, and
+the design brief for the site redesign" and its worklog entry (7 files, incl. `tokens.css`). It is
+local only — a fresh clone does not see it — but it is exactly the class of defect this file exists
+for. Review, merge or cherry-pick what is still wanted into `main`, then `git worktree remove`.
+Keep the branch.
+
 ## Housekeeping (recorded, not urgent)
 `install.py` displaces the previous skill install into `.claude/skills-archive/<timestamp>/` on
 every run. These snapshots are untracked and accumulate (11 as of 2026-09-03). They are
