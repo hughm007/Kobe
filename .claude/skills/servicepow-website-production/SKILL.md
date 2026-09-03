@@ -11,7 +11,7 @@ description: >
   deployment always requires explicit human approval — preview builds only by default.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Website Production — the owner
@@ -65,7 +65,9 @@ process detail in `references/site-process.md` and the gate definitions in
    commit, semantic and accessible as built (not retrofitted), performance as built
    (image budgets, lazy loading), forms wired for real submission tests, analytics-ready.
    Distinctive-not-generic is a gate, not a taste note (the AI-look kill applies to sites
-   as it does to ads). Preview deployments for every review round.
+   as it does to ads). **Preview deployments for every review round, each with a filed
+   receipt** (`references/deployment-receipts.md`); step-8 gates run against the real
+   preview URL, never simulated evidence.
 8. **EXECUTABLE QA — the web gate battery** (BC-44..BC-49, definitions in
    `references/web-qa-gates.md`): responsive/no-overflow at the width battery · functional
    (links, buttons, **forms submitted as a real test**) · accessibility floor ·
@@ -80,8 +82,9 @@ process detail in `references/site-process.md` and the gate definitions in
     gates; prove untouched pages unchanged (build diff / route-level checks).
 11. **OWNER REVIEW.** Scores recorded, never invented.
 12. **DEPLOYMENT — human-gated (BC-50).** Preview is the default terminal state. Production
-    deploy/domain cutover happens only on explicit operator/APPROVER approval, recorded in
-    the project log. Post-launch: the checklist in `references/site-process.md` §post-launch
+    deploy/domain cutover happens only on explicit operator/APPROVER approval, recorded as the `approval` line of
+    the production deployment receipt (`references/deployment-receipts.md`) — a production
+    deploy without that line is a BC-50 violation regardless of mechanism. Post-launch: the checklist in `references/site-process.md` §post-launch
     (redirects, indexing, form deliverability re-test).
 13. **LEARNING CAPTURE.** What converted, what the client corrected, which gate caught
     what — dated, into the shared learnings system.
@@ -124,3 +127,10 @@ Ad campaigns for the finished site → `servicepow-campaign-director` (parity no
 Local-search execution beyond the baseline → the vendored `local-seo-manager` inside this
 workflow. Ongoing performance/cost tuning → the pinned Vercel skills as advisors. This
 skill owns no ad creative, no claims rulings, and no outbound.
+
+## REFERENCE FILES
+
+- `references/site-process.md` — discovery through post-launch.
+- `references/web-qa-gates.md` — BC-44..BC-50 definitions.
+- `references/deployment-receipts.md` — preview→gate→approve→deploy loop + receipt format.
+- `scripts/README.md` — the executable toolkit.
