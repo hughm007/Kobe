@@ -16,15 +16,16 @@ tools refused on the test deployment and get_deployment 404'd a live id — trea
 read-back as unreliable; verify URLs by direct HTTP probe and file receipts with UNKNOWNs
 marked. Rendered QA falls back to the identical local build when the URL is protected.
 
-## ⚠ DISCOVERY — parallel production reality (OWNER TRIAGE REQUIRED)
-The team's only standing project is **"plumbing"** ← private repo `karlmalik/Plumbing` —
-**this is the LIVE servicepow.com**, actively developed via Cursor (latest production deploy
-2026-09-02), containing an internal Ops SaaS at /app (leads→quotes→invoices, Supabase auth,
-SendGrid, staff portals, LSA/review tooling, a $597 answering product, an AI Visibility SKU).
-The workspace doctrine (decision 0002) and the servicepow-v2 repo describe a DIFFERENT site.
-Two parallel realities now exist for servicepow.com. **RULE: the `plumbing` project is
-READ-ONLY evidence for this workspace — never deploy to, modify, or promote it from here.**
-Owner decides which reality is canonical.
+## ⛔ PARALLEL PRODUCTION REALITY — OWNER DECISION REQUIRED
+The team's only standing project, **"plumbing"**, IS the live servicepow.com and conflicts
+with the workspace's doctrine site (`servicepow-v2`, decision 0002). The conflict is recorded
+and locked in **[`decisions/0006-servicepow-com-production-reality.md`](../knowledge/decisions/0006-servicepow-com-production-reality.md)** —
+that file owns the decision; this one does not restate it.
+
+**RULE IN FORCE HERE: the `plumbing` project is READ-ONLY from this workspace** — never deploy
+to, modify, promote, pause or relink it. No session resolves the conflict; the owner rules and
+the ruling is written into 0006. This blocks servicepow.com only — client work and connector
+testing continue normally.
 
 ## Procedure (per engagement project)
 1. Each client site gets ITS OWN Vercel project — never a shared one, never `plumbing`.

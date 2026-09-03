@@ -43,6 +43,7 @@ with the `NEEDS INPUT` markers in the files themselves.
 | ☐ | **911 Drain: does CR-37 cover advertised sewer repair?** Verify with Will or the AZ ROC. Until then no asset carries "sewer" — and the wrap already does (tagline drift). | `../clients/911drain/brand-guide.md` |
 | ☐ | 911 Drain: "daily POV videos" promise vs. ~4 finished ads/month real capacity — stale promise or unkept one? Needs Karl + Will. | `../clients/911drain/client-brief.md` |
 | ☐ | 36-month exit strategy: terms, targets, milestones — none recorded. | `../clients/911drain/client-brief.md` |
+| ⛔ | **NEW 2026-09-03 — servicepow.com has two production realities.** The live site is the Vercel `plumbing` project (Cursor-built, Ops SaaS at `/app`); the workspace doctrine and `servicepow-v2` describe a different site. **OWNER DECISION REQUIRED — no session may resolve, merge, retire or redefine either side; `plumbing` is READ-ONLY.** Five sub-questions and the amendment procedure are in the decision record. Blocks servicepow.com only — not client work, not connector testing. | [`../knowledge/decisions/0006-servicepow-com-production-reality.md`](../knowledge/decisions/0006-servicepow-com-production-reality.md) |
 
 ## Tier 2 — client-facing gaps
 

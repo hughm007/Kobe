@@ -19,3 +19,10 @@ QC 12/12). R13 website owner (BC-44..50, harness mutation-proven; cold sim PASS)
 (evidence classes; live-site compliance findings; 3-lane cross-consistency PASS). R16 multi-client
 stress: GENERAL, zero contamination, zero invented facts; wiring defect + QC-docstring vector fixed.
 BASELINE V1 tagged. Connector audit 2026-09-03 → operations/connector-register.md.
+2026-09-03 hardening (cold-session audit D1-D6): evidence row committed; static fixtures made
+self-contained (synthetic fixture mark replaced an out-of-repo client logo); BC-54 near-duplicate
+fixture added and the gate PROVEN to fire; Canva Phase 3/3 spec written before connection
+(`connector-phase-3-canva-bakeoff.md`); dead paths in decision 0004 + agent-workspace/CLAUDE.md
+bannered/repaired; this ledger's narrative gap closed in `worklog.md`. Full floor re-run, held
+exactly. BASELINE NOT ADVANCED (doc repair is not capability gain). servicepow.com conflict
+locked as decision 0006 — OWNER DECISION REQUIRED, `plumbing` READ-ONLY.

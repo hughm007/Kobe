@@ -26,6 +26,9 @@ open the file.
 | 2026-08-24 | [Workspace structure and conventions](decisions/0001-workspace-structure.md) | Accepted |
 | 2026-08-24 | [Websites built as code with Claude, hosted on Vercel](decisions/0002-web-delivery-model.md) | Accepted |
 | 2026-08-25 | [Orion and the Company OS — who governs what](decisions/0003-orion-and-the-company-os.md) | Accepted |
+| 2026-08-26 | [One rule, one home: the canonical source of truth](decisions/0004-canonical-source-of-truth.md) | Accepted — **mechanism superseded 2026-09-01**, see its banner |
+| 2026-08-26 | [v4.0 consolidation](decisions/0005-v40-consolidation.md) | Accepted |
+| 2026-09-03 | [servicepow.com production reality — `plumbing` vs `servicepow-v2`](decisions/0006-servicepow-com-production-reality.md) | ⛔ **OWNER DECISION REQUIRED — no session may resolve it** |
 
 ## Learnings
 

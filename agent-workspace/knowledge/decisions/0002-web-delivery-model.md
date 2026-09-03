@@ -11,6 +11,14 @@ tags: [decision, web, delivery, vercel, foundational]
 
 # 0002 — Websites are built as code with Claude and hosted on Vercel
 
+> **⛔ Open conflict as of 2026-09-03 — affects servicepow.com ONLY, not client sites.**
+> This decision describes a servicepow.com that is not the one currently live. The live site is
+> the Vercel `plumbing` project, developed outside this workspace. Whether 0002 stands, is
+> amended, or is superseded is an **owner decision recorded in
+> [`0006`](0006-servicepow-com-production-reality.md)** — no session may settle it, and
+> `plumbing` is READ-ONLY from here. **For client websites this decision is unaffected and
+> remains in force.**
+
 **Status:** Accepted — recording existing practice
 **Date:** 2026-08-24
 **Decided by:** Karl

@@ -1170,3 +1170,64 @@ proposal, one constant from reversible. No generated imagery has been bought —
 stated count and a go.
 
 **Learnings:** `build-where-the-assets-are`, `first-artifact-in-ten-minutes`. Both indexed.
+
+---
+
+## 2026-09-01 → 2026-09-03 — Runs 9-16, Baseline V1, and Connector Phases 1-2
+
+**Gap note.** This log stopped at 2026-08-31 while sixteen runs of work continued. The
+compressed outcome record was kept correctly in
+[`run-ledger.md`](run-ledger.md) throughout, and evidence paths in
+[`../knowledge/EVIDENCE-INDEX.md`](../knowledge/EVIDENCE-INDEX.md). Those two files remain
+the record of what is proven — this entry is the narrative that was missing, written
+2026-09-03 to close discrepancy D6. **It restates no counts and owns no rules**; it points.
+
+**The shape of it.** R9-R10 found the real creative problem: the system could produce
+beautiful, empty B-roll, and the owner scored the realistic lane 4/10 against 7/10
+illustrated. R11-R12 turned that into one production system rather than a pile of skills —
+Scale Doctrine, single authorities, `applies`-scoped gates, toolkits living inside the skill
+that owns them. R13 and R14 gave the website and static lanes real owners with
+*mutation-proven* harnesses: gates that were shown to catch planted defects, not just to
+pass clean work. R15 put it against a real client (911 Drain) and it found real compliance
+defects on the live site. R16 stress-tested it against three fresh clients at once — verdict
+GENERAL, zero cross-client contamination, zero invented facts — and surfaced two defects
+(an orphaned gate reference, a real client's NAP/licence sitting in a shared QC docstring),
+both fixed.
+
+**Then the thing that mattered most: BASELINE V1.** The system had become good enough that
+the risk shifted from "can it do the work" to "can a future session quietly make it worse."
+`baseline-and-regression.md` was ratified as always-on law — the workspace is the durable
+source of truth, and the capability floor moves up, never silently down. Tagged
+`baseline-v1` across canonical, Kobe and servicepow-v2.
+
+**Connector Phase 1/3 — Google Drive → PROVEN.** The pipe was probed live and the ingest
+tool proved the record: hashed rows, provenance starting at UNKNOWN, per-client isolation
+refusal fired on a live attempt. The honest finding was recorded alongside the pass —
+**there is no media in Drive yet**, so the pipe is proven and empty.
+
+**Connector Phase 2/3 — Vercel → PROVEN.** A real preview was deployed to a fixture project
+with the live projects untouched; MCP read-back turned out to be unreliable (a 404 on a live
+id, a refused share link) and that was written down rather than smoothed over, with the
+identical-local QA fallback exercised instead. A BC-50 attack simulation tried to get an
+unauthorized production deploy and was refused with correct doctrine.
+
+**And the discovery that stopped the phase from being tidy.** The Vercel team's only standing
+project, `plumbing`, **is the live servicepow.com** — Cursor-built, carrying an Ops SaaS at
+`/app` — running in parallel to the doctrine site this workspace describes. Two realities,
+one domain. It is not a session's call to make. Locked as
+[`decision 0006`](../knowledge/decisions/0006-servicepow-com-production-reality.md),
+`plumbing` READ-ONLY, awaiting the owner.
+
+**2026-09-03 (later) — a cold session audited the baseline and found six defects.** A fresh
+session recovered the whole system from disk with no conversation history — which is the
+property the durability law exists to produce — and then found what the record had missed:
+an uncommitted evidence row; static fixtures that only ran because a real client's logo
+happened to sit at a path outside the repo; a regression doc claiming a duplicate-detection
+proof the fixtures never exercised; the Canva Phase 3/3 plan never written down at all; dead
+paths in decision 0004; and this log's own sixteen-run gap. All six were repaired the same
+day, the floor was re-verified, and **the baseline was deliberately NOT advanced** — repairing
+documentation is not a capability improvement.
+
+**Open:** owner ruling on decision 0006 · owner approval to connect Canva (spec pre-written at
+[`connector-phase-3-canva-bakeoff.md`](connector-phase-3-canva-bakeoff.md)) · the PENDING
+OWNER DATA list in the Evidence Index.

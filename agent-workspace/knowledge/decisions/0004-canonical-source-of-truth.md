@@ -3,13 +3,48 @@ title: "0004 — One rule, one home: the canonical source of truth"
 type: decision
 client: internal
 owner: Karl
-status: accepted
+status: accepted — mechanism superseded 2026-09-01 (see banner)
 created: 2026-08-26
-updated: 2026-08-26
-tags: [architecture, canonical, source-of-truth, ad-producer]
+updated: 2026-09-03
+superseded_by: Service Pow AI OS (Run 2, 2026-09-01) — ~/servicepow-ai-os
+tags: [architecture, canonical, source-of-truth, ad-producer, superseded-mechanism]
 ---
 
 # 0004 — One rule, one home
+
+> ## ⚠ MECHANISM SUPERSEDED 2026-09-01 — READ BEFORE FOLLOWING ANY PATH BELOW
+> **The principle of this decision stands and is still in force:** one rule, one home;
+> everyone else points, nobody restates; a canonical source the working tools cannot read is
+> not canonical.
+>
+> **The homes named below are historical.** Since the Service Pow AI OS (Run 2, 2026-09-01)
+> the canonical repository is **`~/servicepow-ai-os`**, and Kobe is a *generated consumer* of
+> a profile install. Current homes:
+>
+> | Category | Home as of 2026-09-01 |
+> |---|---|
+> | Company law (always on) | `~/servicepow-ai-os/policies/` |
+> | **Delivery gates** | `~/servicepow-ai-os/data/blocking-checks.yaml` — **count is DERIVED by `scripts/validate.py`; no file states it in prose** |
+> | Reasoning skills / procedure | `~/servicepow-ai-os/skills/` (installed to `.claude/skills/`) |
+> | Baseline + regression law | `~/servicepow-ai-os/policies/baseline-and-regression.md` |
+> | Baseline registry / restore points | `~/servicepow-ai-os/data/baselines.md` |
+> | Deployment-local law digest | `.claude/skills/_servicepow/LAW.md` |
+>
+> **Three paths in the table below no longer exist — do not follow them:**
+> - `agent-workspace/playbooks/ads/video-production.md` is **no longer the owner of production
+>   law**. It survives as the bannered historical import of ad-producer v4.0 (decision 0005);
+>   its check list is a dated snapshot, not the operative gate.
+> - `.claude/skills/_shared/scripts/validate_skills.py` — **gone**; replaced by
+>   `~/servicepow-ai-os/scripts/validate.py`.
+> - `.claude/skills/servicepow-higgsfield-intelligence/` — **gone**; the vendor lane is
+>   `servicepow-higgsfield-production` under `vendor/higgsfield/PRECEDENCE.md`.
+>
+> **The count "34" stated in the Consequences section is a 2026-08-26 historical figure.**
+> Stating a gate count in prose is now forbidden (`LAW.md` §3). The registry derives the live
+> count; at the time of this banner it derives 55.
+>
+> Nothing below has been edited. This banner exists so a cold session entering through
+> `decisions/` cannot follow a dead path into an obsolete production model.
 
 **Status:** Accepted, 2026-08-26. Supersedes the precedence claim in
 [`0003`](0003-orion-and-the-company-os.md) that the claude.ai skill wins on conflict.

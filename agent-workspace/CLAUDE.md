@@ -332,11 +332,24 @@ ingested file cites its Drive source and sync date in frontmatter.
   (CR-37 residential-only), brand facts, and live compliance blockers. Read the brief
   *and* the brand guide before any work for them; the compliance constraints in the
   brief are blocking, not advisory.
-- **Creative work has a gate:** the blocking checks + ServicePow-6 scoring in
-  [`playbooks/ads/video-production.md`](playbooks/ads/video-production.md) — which owns
-  that list and its count; never restate either here — and the claims discipline in
-  [`operations/compliance.md`](operations/compliance.md). Beneath it sit four reference
-  files: the lesson bank, the hard boundaries, prompt craft and measurement.
+- **Creative work has a gate:** the blocking-check registry, owned since 2026-09-01 by the
+  Service Pow AI OS at `.claude/skills/_servicepow/data/blocking-checks.yaml` (installed from
+  canonical `~/servicepow-ai-os`) — **never restate that list or its count here or anywhere;
+  the count is derived by the validator.** Company law is always on in
+  `.claude/skills/_servicepow/policies/`, summarised in
+  [`../CLAUDE.md`](../CLAUDE.md) → `_servicepow/LAW.md`, plus the claims discipline in
+  [`operations/compliance.md`](operations/compliance.md).
+  [`playbooks/ads/video-production.md`](playbooks/ads/video-production.md) is **no longer the
+  owner** — it survives as the bannered historical import of ad-producer v4.0 (see
+  [decision 0004's banner](knowledge/decisions/0004-canonical-source-of-truth.md) and
+  [0005](knowledge/decisions/0005-v40-consolidation.md)); its check list is a dated snapshot,
+  not the operative gate. Its four reference files (lesson bank, hard boundaries, prompt
+  craft, measurement) remain useful reading.
+- **The floor is protected:** `_servicepow/policies/baseline-and-regression.md` is always-on
+  law. Current floor and how to restore it: canonical `data/baselines.md`; what is proven and
+  what failed: [`knowledge/EVIDENCE-INDEX.md`](knowledge/EVIDENCE-INDEX.md); how to re-prove
+  it: canonical `tests/regression.md`. Connector states:
+  [`operations/connector-register.md`](operations/connector-register.md).
 - The open questions that remain are mostly **business risks recorded nowhere**
   (partnership percentages, unsigned claims sheet, unverified sewer scope) — see the
   re-tiered [`company/OPEN-QUESTIONS.md`](company/OPEN-QUESTIONS.md).
