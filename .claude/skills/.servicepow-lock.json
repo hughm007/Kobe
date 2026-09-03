@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "783d1830543e059da0a3606efc6097be21890403",
-  "generated_at": "20260903T202643Z",
+  "canonical_commit": "f0b50116e44564e283e7f4b595a9c99da1367a35",
+  "generated_at": "20260903T203837Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -42,7 +42,7 @@
       "canonical": "PIN:vercel:skills/vercel-optimize/SKILL.md"
     },
     "_servicepow/LAW.md": {
-      "sha256": "3c99d5594c90e1633cfc1b4620d6d6fb55e601f8a33a984b6d5e86b07d0ed2ae",
+      "sha256": "56c073540b68bb6f664351276e5bdf7303ee9429eb82875b093e744d03f7f009",
       "canonical": "profiles/ad-production.law.md"
     },
     "_servicepow/README.md": {
@@ -56,6 +56,10 @@
     "_servicepow/data/roles.md": {
       "sha256": "7111b89b4d982cd3d0d4ce044b98e5f9c9e5c1679a50b6b991eae41688e1c981",
       "canonical": "data/roles.md"
+    },
+    "_servicepow/policies/baseline-and-regression.md": {
+      "sha256": "fc659f5d78d4bd47a7babc5e170818288348605dcd8693c8778d2970a1b91fb9",
+      "canonical": "policies/baseline-and-regression.md"
     },
     "_servicepow/policies/brand-assets.md": {
       "sha256": "7b1941b4b415d4a04e23a74f1ec8442f207fd1b4c1cb6cacc660485f0eaab1b7",

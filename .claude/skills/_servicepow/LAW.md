@@ -28,3 +28,8 @@ Canonical source: `~/servicepow-ai-os`. This project is a consumer.
    per `_servicepow/vendor/CAPABILITY-LADDER.md`.
 8. **Outbound is gated like spend**: `servicepow-outbound-director` owns Service Pow's own
    acquisition; nothing sends without its APPROVER packet.
+
+**Baseline law:** `_servicepow/policies/baseline-and-regression.md` binds all work here —
+the workspace is the durable source of truth, and the verified capability floor never
+moves down without explicit owner approval (BASELINE → change → regression test → evidence
+→ canonical; restore via the baseline tags).
