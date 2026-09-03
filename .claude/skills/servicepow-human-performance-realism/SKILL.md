@@ -14,7 +14,7 @@ description: >
   (servicepow-campaign-director).
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # Human Performance Realism
@@ -25,6 +25,17 @@ Believable people. The audience cannot articulate why a generated human feels wr
 always feel it — and it costs the work its credibility in under a second.
 
 **Realism comes from restrained physical behaviour, not from more acting.**
+
+## SCOPE CORRECTION (evidence, 2026-09-02 — binds this skill)
+
+Controlled production evidence: generated close-up humans and hands-on-tool performance
+repeatedly failed client-readiness (staged poses, anatomy merges, "AI person" verdicts).
+Accordingly: in the REALISTIC lane, close-up human performance and precise hand mechanics
+route to REAL FOOTAGE or are designed out (`../servicepow-higgsfield-production/references/shot-routing.md`)
+— this skill does not direct a generator to attempt them harder. Its work applies to:
+background and mid-shot generated humans (inspection + rejection), the illustrated lane's
+characters, actor briefs for REAL-footage direction, and the performance QA of any human
+that does appear. Re-test the boundary as models change; move it on evidence only.
 
 ## TRIGGER
 

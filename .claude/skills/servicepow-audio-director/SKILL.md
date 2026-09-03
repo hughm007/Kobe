@@ -13,7 +13,7 @@ description: >
   servicepow-campaign-director.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # Audio Director
@@ -83,6 +83,14 @@ sonic logos, VO recordings) · platform loudness target declared for the placeme
    (`../servicepow-campaign-director/references/bible-contract.md`).
 
 ## DECISION RULES
+
+### The decoupling law (owner-ruled 2026-09-02)
+The video lane delivers a SILENT visual master; audio is produced as its own chain
+(script -> voice -> music/SFX -> mix -> loudness QA) and muxed after. No generation model is
+ever selected for its bundled audio; vendor `generate_audio` stays off. Voice-fit floor:
+trim leading/trailing silence BEFORE judging a take against the script's timing windows —
+a voice that cannot fit the locked windows fails before taste enters. Mix output is 48kHz
+explicitly. No deliverable is CLIENT READY while obviously synthetic or poor audio remains.
 
 ### The audio-bed law (CANONICAL: audio-bed-law)
 

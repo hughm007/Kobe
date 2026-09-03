@@ -1,0 +1,164 @@
+{
+  "campaign": "run9-hardening",
+  "created": "2026-09-02",
+  "build_root": "/Users/wyattjohnson/Kobe/agent-workspace/company/campaigns/2026-09-02-run9-hardening/build",
+  "elements": {
+    "C1-body-01": {
+      "state": "EXISTS",
+      "version": 1,
+      "path": "/Users/wyattjohnson/Kobe/agent-workspace/company/campaigns/2026-09-02-run9-hardening/build/assets/C1-body-01-v1.mp4",
+      "sha256": "bcf763eb24b0e647e312c44d3ff76c5bcb759852e60e8ce503869375c7665352",
+      "concept": "C1",
+      "role": "body",
+      "shared_across_hooks": true,
+      "prompt": "Slow dolly in across a scuffed workbench in a dim garage, a phone screen lighting up face-down among pipe wrenches, warm practical light, no people, cinematic"
+    },
+    "C1-body-02": {
+      "state": "EXISTS",
+      "version": 1,
+      "path": "/Users/wyattjohnson/Kobe/agent-workspace/company/campaigns/2026-09-02-run9-hardening/build/assets/C1-body-02-v1.mp4",
+      "sha256": "89cf1bcdf4abbe99ef3d48c379af1e57a16c61094b0a6b1497f015083bf32073",
+      "concept": "C1",
+      "role": "body",
+      "shared_across_hooks": true,
+      "prompt": "Handheld drift along a work van parked outside a suburban house at dusk, tailgate open, tools stowed, quiet street, no people, cinematic"
+    },
+    "C1-hook-H1": {
+      "state": "EXISTS",
+      "version": 1,
+      "path": "/Users/wyattjohnson/Kobe/agent-workspace/company/campaigns/2026-09-02-run9-hardening/build/assets/C1-hook-H1-v1.mp4",
+      "sha256": "b5f7d5ad7493702fdd3fb51b1b5fb226612ff87bf435731265f2a7f5f2257298",
+      "concept": "C1",
+      "role": "hook",
+      "hook": "H1",
+      "shared_across_hooks": false,
+      "prompt": "Opening establishing shot with a slow tracking move: a tradesman workbench at dusk, a phone lighting up unanswered among tools, natural light, documentary feel, no text, no people"
+    },
+    "C1-hook-H2": {
+      "state": "EXISTS",
+      "version": 1,
+      "path": "/Users/wyattjohnson/Kobe/agent-workspace/company/campaigns/2026-09-02-run9-hardening/build/assets/C1-hook-H2-v1.mp4",
+      "sha256": "36e1e2dd52330792001ad288ddf64a63b00d37ffa0ed2024a97a29ed463f7776",
+      "concept": "C1",
+      "role": "hook",
+      "hook": "H2",
+      "shared_across_hooks": false,
+      "prompt": "Opening extreme close detail with a slow tilt across it: a tradesman workbench at dusk, a phone lighting up unanswered among tools, shallow focus, no text, no people"
+    },
+    "C2-body-01": {
+      "state": "EXISTS",
+      "version": 1,
+      "path": "/Users/wyattjohnson/Kobe/agent-workspace/company/campaigns/2026-09-02-run9-hardening/build/assets/C2-body-01-v1.mp4",
+      "sha256": "529e3f72995cc3c4700a3d88e27808e0d742007e983634c1071d92351a91d450",
+      "concept": "C2",
+      "role": "body",
+      "shared_across_hooks": true,
+      "prompt": "Slow push in overhead on a kitchen counter at night, a phone glowing with a blank search field, water beading near the sink, no people, moody"
+    },
+    "C2-body-02": {
+      "state": "EXISTS",
+      "version": 1,
+      "path": "/Users/wyattjohnson/Kobe/agent-workspace/company/campaigns/2026-09-02-run9-hardening/build/assets/C2-body-02-v1.mp4",
+      "sha256": "8bac9a8a53b762caffcf8296f27ee87dd032da3510ae19799976b61b6b86ae10",
+      "concept": "C2",
+      "role": "body",
+      "shared_across_hooks": true,
+      "prompt": "Slow push in on a dripping pipe under a kitchen sink, torchlight, a drop falling and rippling in a pool, no people, macro cinematic"
+    },
+    "C2-hook-H1": {
+      "state": "EXISTS",
+      "version": 1,
+      "path": "/Users/wyattjohnson/Kobe/agent-workspace/company/campaigns/2026-09-02-run9-hardening/build/assets/C2-hook-H1-v1.mp4",
+      "sha256": "4f2c6377a1d192f56532450ed82049efa985d2038e8bd84fd3c0ec7c6a2470b1",
+      "concept": "C2",
+      "role": "hook",
+      "hook": "H1",
+      "shared_across_hooks": false,
+      "prompt": "Opening establishing shot with a slow tracking move: a homeowner's phone at night showing a search with nothing credible to pick, natural light, documentary feel, no text, no people"
+    },
+    "C2-hook-H2": {
+      "state": "FAILED",
+      "version": 0,
+      "path": null,
+      "sha256": null,
+      "concept": "C2",
+      "role": "hook",
+      "hook": "H2",
+      "shared_across_hooks": false,
+      "prompt": "Opening extreme close detail with a slow tilt across it: a homeowner's phone at night showing a search with nothing credible to pick, shallow focus, no text, no people"
+    },
+    "shared-cta-01": {
+      "state": "EXISTS",
+      "version": 1,
+      "path": "/Users/wyattjohnson/Kobe/agent-workspace/company/campaigns/2026-09-02-run9-hardening/build/assets/shared-cta-01-v1.mp4",
+      "sha256": "8dddb35fd614e5fe77e665a8c1b744858ff2bf20c77e1c9974d5442e5455899d",
+      "concept": "SHARED",
+      "role": "cta",
+      "shared_across_hooks": true,
+      "prompt": "Slow pan across a clean empty workbench surface in soft even light, space for text, no people, no logos, no signage"
+    }
+  },
+  "variants": {
+    "C1-H1": {
+      "concept": "C1",
+      "hook": "H1",
+      "state": "PLANNED",
+      "elements": [
+        "C1-hook-H1",
+        "C1-body-01",
+        "C1-body-02",
+        "shared-cta-01"
+      ],
+      "output": null,
+      "sha256": null
+    },
+    "C1-H2": {
+      "concept": "C1",
+      "hook": "H2",
+      "state": "PLANNED",
+      "elements": [
+        "C1-hook-H2",
+        "C1-body-01",
+        "C1-body-02",
+        "shared-cta-01"
+      ],
+      "output": null,
+      "sha256": null
+    },
+    "C2-H1": {
+      "concept": "C2",
+      "hook": "H1",
+      "state": "PLANNED",
+      "elements": [
+        "C2-hook-H1",
+        "C2-body-01",
+        "C2-body-02",
+        "shared-cta-01"
+      ],
+      "output": null,
+      "sha256": null
+    },
+    "C2-H2": {
+      "concept": "C2",
+      "hook": "H2",
+      "state": "PLANNED",
+      "elements": [
+        "C2-hook-H2",
+        "C2-body-01",
+        "C2-body-02",
+        "shared-cta-01"
+      ],
+      "output": null,
+      "sha256": null
+    }
+  },
+  "economics": {
+    "generation_attempts": 9,
+    "failed_generations": 1,
+    "targeted_repairs": 0,
+    "full_rebuilds": 0,
+    "assemblies": 0
+  },
+  "freezes": {},
+  "updated": "2026-09-02T19:33:29Z"
+}

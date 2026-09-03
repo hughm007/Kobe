@@ -15,7 +15,7 @@ description: >
   not for post-generation QC.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # Higgsfield Production
@@ -65,7 +65,9 @@ Generic advertising requests belong to servicepow-campaign-director.
    in the client KB with source, date, and evidence status. Model IDs, prices, plans, and
    balances are never written into durable doctrine (`../_servicepow/policies/generation-and-spend.md` §1);
    an undated capability claim is treated as unknown.
-2. **Choose the production method per shot, before any model is named:** full generation ·
+2. **Choose the production method per shot, before any model is named** — per
+   `references/shot-routing.md`, the single home of the routing table, its evidence, and the
+   preflight-before-spend and recover-before-regenerate rules (registry gate BC-43): full generation ·
    reference-driven generation · real product + AI environment · real footage + AI ·
    compositing · traditional editing · hybrid. Method is constrained by policy before
    preference: shots containing exact identity assets are COMPOSITE shots

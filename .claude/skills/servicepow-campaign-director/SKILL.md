@@ -14,7 +14,7 @@ description: >
   non-advertising marketing work such as a client report or a website build.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # Campaign Director
@@ -94,6 +94,13 @@ angle *(recorded, never automatically obeyed — see DECISION RULES)*.
    8. Generation runs. During it: `servicepow-continuity-supervisor` checks each shot for
       drift (§8) and `servicepow-human-performance-realism` inspects generated humans as
       footage lands. **Skeptic Pass 2** attacks candidate footage before the edit locks.
+      **FIRST-ARTIFACT RULE (owner-ruled 2026-08-31, evidence-confirmed 2026-09-02):** a
+      first viewable artifact reaches the owner EARLY — before any heavy multi-agent gate
+      runs on drafts. Cheap, high-information checks come first; the expensive dual gate
+      runs ONCE, LATE, on frozen hash-locked artifacts (never on work that is still being
+      rewritten). Owner direction on the draft outranks gate rounds on the draft.
+      Execution mechanics for production (preflight, routing, recovery, assembly, the three
+      QA layers) are owned by `servicepow-video-production` and are not re-litigated here.
    9. `servicepow-cinematography-editor` — assembly and screen grammar (§12).
    10. `servicepow-audio-director` — the audio world (§11).
    11. **Readiness verification — the dual gate.** `servicepow-creative-critic` grades

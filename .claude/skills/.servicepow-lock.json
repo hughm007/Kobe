@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "71dc0f5a31eb2781412b419e6729dcdbe1abeaab",
-  "generated_at": "20260902T012955Z",
+  "canonical_commit": "acdc156bd2bc2e216fe4799dde9cf8cf0d622c03",
+  "generated_at": "20260903T044824Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -15,6 +15,7 @@
     "servicepow-continuity-supervisor",
     "servicepow-human-performance-realism",
     "servicepow-higgsfield-production",
+    "servicepow-video-production",
     "servicepow-cinematography-editor",
     "servicepow-audio-director",
     "servicepow-creative-critic",
@@ -38,7 +39,7 @@
       "canonical": "GENERATED"
     },
     "_servicepow/data/blocking-checks.yaml": {
-      "sha256": "93212c48abb8fb393c7c897364788c1f330083f7acdb8029311a33887f821723",
+      "sha256": "0cf1bc1d52d447513999043afe33a8c4134e36b93057ccd70b24667309ddbed1",
       "canonical": "data/blocking-checks.yaml"
     },
     "_servicepow/data/roles.md": {
@@ -294,7 +295,7 @@
       "canonical": "vendor/alirezarezvani-marketing/skills/local-seo-manager/scripts/service_area_generator.py"
     },
     "servicepow-audio-director/SKILL.md": {
-      "sha256": "e978c823ddc739df26f5b5f27b9c44d7d916b2178a12f2416c9d47d18545c637",
+      "sha256": "6ea43fb5a3e6c091ead91ed8c9f20f974479cb25b2c69ecce80080c61d407fe3",
       "canonical": "skills/servicepow-audio-director/SKILL.md"
     },
     "servicepow-brand-fidelity/SKILL.md": {
@@ -302,7 +303,7 @@
       "canonical": "skills/servicepow-brand-fidelity/SKILL.md"
     },
     "servicepow-campaign-director/SKILL.md": {
-      "sha256": "09bf8dc059d7b332cceef75014f6a44a60fac382ecb8df36306f52821c7a7d6b",
+      "sha256": "6ab214531786963cdf0cddc8b8ec0336a438f4f154fdd7eaec29aa08af4678ef",
       "canonical": "skills/servicepow-campaign-director/SKILL.md"
     },
     "servicepow-campaign-director/references/bible-contract.md": {
@@ -378,15 +379,19 @@
       "canonical": "skills/servicepow-creative-spine/references/anti-choppy.md"
     },
     "servicepow-higgsfield-production/SKILL.md": {
-      "sha256": "6b9729478e90e169e22156def214866a7cb92ec7ed5e6a9b5ccb28a6574698e7",
+      "sha256": "3b1477a636e221bc871becc47f8f1a435060c48377e675e20a32b9a6b151b904",
       "canonical": "skills/servicepow-higgsfield-production/SKILL.md"
+    },
+    "servicepow-higgsfield-production/references/shot-routing.md": {
+      "sha256": "64587eb50f005d2d39be1a0ff0b5e8d5b378abdab445d62bef1a6bb58704f000",
+      "canonical": "skills/servicepow-higgsfield-production/references/shot-routing.md"
     },
     "servicepow-higgsfield-production/templates/routing-record.md": {
       "sha256": "b88bdb9dfd8af46ad9c4ff61db269556dc28df0352b9f11b30a43da12b94db72",
       "canonical": "skills/servicepow-higgsfield-production/templates/routing-record.md"
     },
     "servicepow-human-performance-realism/SKILL.md": {
-      "sha256": "fea9208a85e85b61f2d522450a088198cf837290d7fc068d61c2acdc941c8bed",
+      "sha256": "7683a352f4931f4c201ff299d222ef1acbd16581f242b34cc1af88d62adf7c09",
       "canonical": "skills/servicepow-human-performance-realism/SKILL.md"
     },
     "servicepow-human-performance-realism/references/realism-inspection.md": {
@@ -440,6 +445,22 @@
     "servicepow-strategy/SKILL.md": {
       "sha256": "6b4337f903d22046f6ec5140695ff79bc9cf5479e59fb3327feaec0ea2a7b56e",
       "canonical": "skills/servicepow-strategy/SKILL.md"
+    },
+    "servicepow-video-production/SKILL.md": {
+      "sha256": "74e9fe6c2d992e713bd5234a6ad8fafbc54d6b3c3963331a39096c78c08bb20a",
+      "canonical": "skills/servicepow-video-production/SKILL.md"
+    },
+    "servicepow-video-production/references/pipeline.md": {
+      "sha256": "a3eb29eaac0577bf9534617f85ebd5c0341b544654ca2d5f9a90634e6765cc8b",
+      "canonical": "skills/servicepow-video-production/references/pipeline.md"
+    },
+    "servicepow-video-production/references/qa2-physical-realism.md": {
+      "sha256": "46624bba5573d193d765afeadfca80fc1e8ea54f31b6d5245b143c381bc8fa10",
+      "canonical": "skills/servicepow-video-production/references/qa2-physical-realism.md"
+    },
+    "servicepow-video-production/references/real-footage-requests.md": {
+      "sha256": "fdf9231d8b7fcef6f6880439d50f55e38e86e1a51ca5a368ed7156ff21b955e3",
+      "canonical": "skills/servicepow-video-production/references/real-footage-requests.md"
     },
     "twilio-compliance-traffic/SKILL.md": {
       "sha256": "9b6b5789abbdcd3b1f9f46bd2fe103138ddb4cf8452fa99bc0440c606c34bfa8",

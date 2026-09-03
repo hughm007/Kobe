@@ -1,0 +1,42 @@
+{
+  "campaign": "run9-hardening",
+  "brief_source": "Service Pow internal. Offer bounded by EV-sp-001 (Free Growth Audit).",
+  "claims_note": "No performance figures, no guarantees, no synthetic person as a customer. Object and environment shots only.",
+  "concepts": [
+    {
+      "id": "C1",
+      "name": "The Missed Call",
+      "visual": "a tradesman workbench at dusk, a phone lighting up unanswered among tools",
+      "body_shots": 2,
+      "body_prompts": [
+        "Slow dolly in across a scuffed workbench in a dim garage, a phone screen lighting up face-down among pipe wrenches, warm practical light, no people, cinematic",
+        "Handheld drift along a work van parked outside a suburban house at dusk, tailgate open, tools stowed, quiet street, no people, cinematic"
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "The Empty Search",
+      "visual": "a homeowner's phone at night showing a search with nothing credible to pick",
+      "body_shots": 2,
+      "body_prompts": [
+        "Slow push in overhead on a kitchen counter at night, a phone glowing with a blank search field, water beading near the sink, no people, moody",
+        "Slow push in on a dripping pipe under a kitchen sink, torchlight, a drop falling and rippling in a pool, no people, macro cinematic"
+      ]
+    }
+  ],
+  "hooks": [
+    {
+      "id": "H1",
+      "style": "plain statement",
+      "prompt_template": "Opening establishing shot with a slow tracking move: {concept}, natural light, documentary feel, no text, no people"
+    },
+    {
+      "id": "H2",
+      "style": "tight detail",
+      "prompt_template": "Opening extreme close detail with a slow tilt across it: {concept}, shallow focus, no text, no people"
+    }
+  ],
+  "cta": {
+    "prompt": "Slow pan across a clean empty workbench surface in soft even light, space for text, no people, no logos, no signage"
+  }
+}
