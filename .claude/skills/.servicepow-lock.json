@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "c3012e30e3ae3069bbe329d3914075db069f321a",
-  "generated_at": "20260903T193918Z",
+  "canonical_commit": "6474c94c32e254c39d464b1ac99234ac7224932b",
+  "generated_at": "20260903T200041Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -406,7 +406,7 @@
       "canonical": "skills/servicepow-higgsfield-production/SKILL.md"
     },
     "servicepow-higgsfield-production/references/shot-routing.md": {
-      "sha256": "6258a1d801dae64db37d6b60efe071a519ceb14545c161541be8c7093f057762",
+      "sha256": "3223ffbee56040c718e087721b12b9ca0c60a002c289c7cd130243b583f00691",
       "canonical": "skills/servicepow-higgsfield-production/references/shot-routing.md"
     },
     "servicepow-higgsfield-production/templates/routing-record.md": {
@@ -558,7 +558,7 @@
       "canonical": "skills/servicepow-video-production/templates/plan-example.json"
     },
     "servicepow-website-production/SKILL.md": {
-      "sha256": "256a109c77822a495f135eca755725ef61bc5a716a8567796508c4ca94641f0e",
+      "sha256": "40800886bd894e6474786450c2be581aa8c9e88e78452afa54f1fb55b6f4954d",
       "canonical": "skills/servicepow-website-production/SKILL.md"
     },
     "servicepow-website-production/references/site-process.md": {

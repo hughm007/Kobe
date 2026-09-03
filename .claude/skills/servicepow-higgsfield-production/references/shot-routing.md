@@ -21,7 +21,7 @@ home of routing doctrine. A campaign does not have a model; a shot does.
 | Residential exteriors, neighbourhoods, service-area atmosphere | GENERATE (environment models rated strongest) | owner review 2026-09-02 |
 | Interior service environments, no precise hand mechanics | GENERATE + mandatory inspect | 4/4 believable environments in production |
 | Readable text, numbers, offers, disclosures, screen UI | **COMPOSITE always** | 3/3 generated-text runs defective |
-| Hands manipulating tools; precise trade mechanics | **REAL FOOTAGE (request) or AVOID** | 0/6 usable across two controlled tests |
+| Hands manipulating tools; precise trade mechanics | **REAL FOOTAGE (request) or AVOID** | 0/6 usable across three controlled tests (the third methodologically invalid but confirming) |
 | Brand marks, wordmark, wrap, logo | **REAL FILE, never generated** | brand-assets policy; LB24 class |
 | Identifiable people, close-up performance | REAL FOOTAGE with consent; illustrated lane; or AVOID | staged/anatomy failures; full-scene refs duplicate real people (rights) |
 | Process/mechanism explanation | ILLUSTRATE (Lane B) | illustrated lane owner-rated above realistic |

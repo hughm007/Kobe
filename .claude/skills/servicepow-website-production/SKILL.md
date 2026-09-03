@@ -100,7 +100,7 @@ process detail in `references/site-process.md` and the gate definitions in
 
 BC-44 responsive · BC-45 functional · BC-46 client-information correctness · BC-47
 accessibility · BC-48 performance · BC-49 SEO baseline · BC-50 deployment approval — all
-`applies: web` — plus the shared BC-16/19/20/21 (claims, parity, rights, brand) and the
+`applies: web` — plus the shared BC-16/20/21 (claims, rights, brand; BC-19 parity is an AD gate — this lane is its destination side) and the
 dual gate BC-22/BC-23.
 
 ## POLICY BINDINGS
