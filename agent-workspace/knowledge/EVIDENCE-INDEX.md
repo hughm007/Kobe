@@ -45,6 +45,24 @@ windows (owner ear NOT yet ruled) · Canva/Swipekit value (see connector registe
 UNTESTED; Canva's Phase 3/3 bake-off is fully specified but **not run and not connected**:
 `operations/connector-phase-3-canva-bakeoff.md`).
 
+## ⚠ DURABILITY RISK — the default branch does not carry this record (found 2026-09-03)
+**A plain `git clone` of the Kobe remote does NOT reproduce Baseline V1.** The remote's default
+branch (`origin/HEAD` → `claude/agent-workspace-setup-vgoi8u`) sits at `d0a09e1`, **106 commits
+behind** the branch that actually holds the durable record
+(`claude/voice-first-agent-core-dysy9h`). Verified missing from the default branch: this file,
+`connector-register.md`, `run-ledger.md`, `decisions/0006`, the Canva Phase 3/3 spec — and the
+`baseline-v1` tag exists only on the working branch.
+
+Everything IS fully reproducible from `claude/voice-first-agent-core-dysy9h` (proved by cold
+clone 2026-09-03). But the durability law's stated property — a fresh session reconstructing the
+system from disk alone — depends on landing on the right branch, and a default clone does not.
+
+**OWNER DECISION REQUIRED — a session must not change a remote's default branch or merge 106
+commits on its own judgment.** Options: repoint `origin/HEAD` to the working branch; merge the
+working branch into the default; or rename/retire the stale default. Until then, every restore
+procedure must name the branch explicitly. Canonical (`servicepow-ai-os`) and `servicepow-v2`
+are **not** affected — both are on `main` and clone correctly.
+
 ## OPEN — OWNER DECISION REQUIRED (not resolvable by any session)
 servicepow.com production reality: the live `plumbing` project vs the `servicepow-v2` doctrine
 site — `knowledge/decisions/0006-servicepow-com-production-reality.md`. `plumbing` is READ-ONLY
