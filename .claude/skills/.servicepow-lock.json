@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "16ea082000cb46cfc005d41f70af889686a36550",
-  "generated_at": "20260903T210752Z",
+  "canonical_commit": "e6050a6533da221e6fe5f2604a99006790bf648d",
+  "generated_at": "20260903T213304Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
