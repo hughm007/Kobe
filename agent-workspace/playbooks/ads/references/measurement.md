@@ -30,8 +30,7 @@ source: servicepow-ad-producer v4.0 §7–§7D (2026-08-20), imported verbatim 2
 
 ## 7. MACHINE QC — the code-enforced gate
 
-`scripts/servicepow_qc.py` runs inside the Higgsfield sandbox (ffmpeg + numpy preinstalled). The sandbox is ephemeral — **cat the script in at the start of every QC step**, then:
-
+`scripts/servicepow_qc.py` runs locally via the venv shipped with the installed skill — see the canonical toolkit and bootstrap in `servicepow-video-production/scripts/README.md` (numpy + Pillow in `.qcvenv`). The old ephemeral-sandbox instruction is retired.
 ```
 python3 servicepow_qc.py clip1.mp4 clip2.mp4          # source clips
 python3 servicepow_qc.py final.mp4 --master --sheet    # edited master + contact sheet

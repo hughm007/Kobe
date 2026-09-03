@@ -21,9 +21,7 @@ prompt_version · generation_cost · generation_time · accept_reject · failure
 realism_score · physical_correctness_score · advertising_usefulness_score ·
 client_confidence_score`
 
-`failure_reason` is a closed vocabulary: `AI_LOOK · BAD_ANATOMY · BAD_DEVICE · WRONG_TOOL ·
-MECHANICALLY_IMPOSSIBLE · WRONG_TRADE · GENERIC · OFF_BRAND · BAD_MOTION ·
-UNUSABLE_COMPOSITION · BAD_TEXT · CONTINUITY_FAILURE · WEAK_PERFORMANCE`.
+`failure_reason` uses the closed vocabulary whose SINGLE home is the installed skill's `servicepow-video-production/references/qa2-physical-realism.md` (14 terms incl. RIGHTS_DUPLICATION) — never restated here.
 
 ## Risk classes — HIGH-RISK is no longer one category
 Splitting it, because each needs different references, models and QA:

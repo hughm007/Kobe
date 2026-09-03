@@ -89,7 +89,7 @@ never-stall parking rule there governs waiting at any of these gates):
 | → `CONCEPT APPROVED` | APPROVER approves the concept and pack (§3) |
 | → `STORYBOARD APPROVED` | APPROVER approves the storyboard (§6) — after brand-fidelity COMPOSITE marking, Skeptic Pass 1, and the actor briefs; the storyboard-stage registry checks (BC-24, BC-31, BC-34) are settled here |
 | → `IN PRODUCTION` | SPEND_APPROVER authorizes the priced plan (§10) through the two-step gate in `../../_servicepow/policies/generation-and-spend.md`; generation spend begins only after this point |
-| → `QC PASSED` | **Both** independent gates recorded: the critic's verdict (§13, BC-22) **and** the Skeptic's Pass 3 verdict (§14, BC-23). Neither waits for, nor sees, the other; the Campaign Director sequences them independently and gates on both. After any repair, both re-run |
+| → `QC PASSED` | **Both** independent gates recorded: the critic's verdict (§13, BC-22) **and** the Skeptic's Pass 3 verdict (§14, BC-23). Neither waits for, nor sees, the other; the Campaign Director sequences them independently and gates on both. After a repair, only the gates invalidated by the changed elements re-run (targeted re-verification, proven by hash) |
 | → `CLIENT READY` | A human has watched the master end to end (BC-25), the Human Taste Gate is answered, the full canonical blocking-check registry (`../../_servicepow/data/blocking-checks.yaml`) verifies, and the APPROVER signs final readiness |
 | → `DELIVERED` | CLIENT_APPROVER sign-off on the deliverable |
 

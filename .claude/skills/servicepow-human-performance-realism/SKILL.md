@@ -172,8 +172,7 @@ Optional:
 
 ## HANDOFF
 
-→ `servicepow-storyboard-director` (direction folds into shots) and
-`servicepow-higgsfield-production` (performance requirements constrain routing). Inspection
+→ back to the Campaign Director: actor briefs fold into the storyboard AT the pre-gate constraint pass (never a post-storyboard loop), then on to production. Inspection
 findings — including non-focal tell notes — feed `servicepow-creative-critic`, whose
 AI-artifact risk score owns the master-level call. Control returns to the Campaign Director.
 

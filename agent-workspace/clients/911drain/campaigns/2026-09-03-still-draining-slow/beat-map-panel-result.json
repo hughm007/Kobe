@@ -1,0 +1,270 @@
+{
+  "summary": "Judged panel: 3 rival beat maps for the 911drain illustrated ad, 3 judges, synthesis",
+  "agentCount": 7,
+  "logs": [],
+  "result": {
+    "final": {
+      "beats": [
+        {
+          "t": "0-2.5",
+          "job": "hook",
+          "visual": "Bold flat 2D illustration, 9:16, brand palette only (911drain red, near-black, warm off-white). Top-down view of a warm off-white sink basin filling most of the frame against a near-black field. A shallow pool of pale grey standing water with one single lazy spiral line over the black drain opening; three thin red concentric ripple rings radiate outward from the drain so it reads as a target at thumbnail size. Thick clean outlines, flat shapes, flat even color, no gradients, no rendered lighting, no people, no text anywhere in the image.",
+          "overlay_text": "Still draining slow?",
+          "motion": "slow push-in toward the drain opening at the center of the ripple rings"
+        },
+        {
+          "t": "2.5-5.5",
+          "job": "problem-to-cause bridge",
+          "visual": "Bold flat 2D illustration, 9:16, one tall vertical composition built for a downward pan. Top: the same sink in side profile — near-black basin on a warm off-white counter, grey standing water with a slow swirl line over the drain mouth. A straight near-black drain line runs down the frame, through a flat floor line, into a technical-diagram cutaway below: the drain pipe sliced open lengthwise on a warm off-white engineering plate with thin ruled corner marks. Inside the pipe, dark buildup drawn as layered tree-ring growth bands with 911drain-red striations, grey water channel still open through the middle. One clean leader line with an EMPTY label plate points from the buildup toward the frame edge (all labels composited, never drawn). Flat shapes, thick outlines, no people, no text in image.",
+          "overlay_text": "That slow swirl isn't the sink. It's the pipe.",
+          "motion": "one unbroken slow pan downward — from the swirl, along the drain line, ending framed on the cutaway"
+        },
+        {
+          "t": "5.5-9.5",
+          "job": "mechanism (the one crossfade time-lapse)",
+          "visual": "Deliberate technical-diagram cutaway, bold flat 2D, 9:16, LOCKED identical framing for both stills. STILL A: close cutaway of the P-trap and drain pipe sliced lengthwise on a warm off-white engineering plate with ruled corner marks; interior walls coated with a thin ring of buildup drawn as layered tree-ring bands (near-black with red striations), a wide grey water channel open through the middle; two clean leader lines run to EMPTY label plates at the frame edge (text composited, not drawn). STILL B (crossfade target): identical plate, identical camera, only the clog changes — tree-ring buildup grown thick and layered, water channel narrowed to a thin grey sliver. No people, no hands, no text in either image.",
+          "overlay_text": "Line 1 (at 5.5s): \"PIPE CUTAWAY — inside your drain.\"  Line 2 (at 7.5s, timed to the crossfade): \"That clog is still growing.\"",
+          "motion": "slow push-in on Still A, then the single A-to-B crossfade time-lapse into Still B (the ad's only crossfade)"
+        },
+        {
+          "t": "9.5-11.5",
+          "job": "turn",
+          "visual": "Bold flat 2D split composition, 9:16. Top half: the sink basin brim-full of still GREY water, waterline at the rim, no swirl at all — the drain has stopped. Bottom half: the same cutaway plate now fully occluded — the tree-ring buildup meeting itself wall-to-wall as a solid dark mass with red striations — grey water stacked behind it, with three flat red chevron pressure arrows pointing upward toward the floor line and a thin red vignette at the frame edges. Water is grey everywhere, never red or discolored. Brand palette only, no people, no text in image.",
+          "overlay_text": "Line 1: \"This is how a backup starts.\"  Line 2 (at 10.5s): \"Don't wait for it.\"",
+          "motion": "slow push-in on the fully blocked cross-section in the bottom half"
+        },
+        {
+          "t": "11.5-14.0",
+          "job": "payoff",
+          "visual": "Bold flat 2D cutaway that EXACTLY mirrors beat 3's locked framing: the same engineering plate, pipe interior now completely clean and open — a bright warm off-white channel with smooth flat horizontal grey water-flow lines running full-bore, every tree-ring gone, the leader lines and empty label plates now pointing at clear pipe. Composed in the same tall frame directly beneath the plate: a small flat red service van silhouette with a tiny light-bar on a near-black road line under a flat crescent moon (night / always-on cue). Van unmarked — no logos, no people, no text in image.",
+          "overlay_text": "Licensed 24/7 emergency drain repair — East Valley.",
+          "motion": "one single slow pull-back that reveals the clean pipe plate and the van together in frame — no second camera move"
+        },
+        {
+          "t": "14.0-17.0",
+          "job": "brand endcard",
+          "visual": "FIXED ENDCARD, entered on a HARD CUT at exactly 14.0s — no crossfade in or out. The real 911 Drain logo asset — red \"911\" + white \"drain\" on black, with its built-in \"24/7 EMERGENCY DRAIN REPAIR\" tagline exactly as it exists in the logo file (placed as supplied, never re-illustrated) — centered on a near-black field with generous clear space and a thin red rule beneath it separating the composited contact block. Nothing else in the illustration layer; phone and license are composited overlay text only.",
+          "overlay_text": "Line 1 (large): \"480-992-3541\"  Line 2: \"Licensed • AZ ROC 366870 — look us up.\"",
+          "motion": "static hold (at most an imperceptible slow push on the logo)"
+        }
+      ],
+      "hook_line": "Still draining slow?",
+      "vo_lines": [
+        "That slow drain isn't the sink. It's a clog forming inside the pipe.",
+        "Buildup narrows the pipe from the inside — and it keeps growing while you wait.",
+        "Left alone, this is how a backup starts.",
+        "Licensed emergency drain repair, day or night, across the East Valley."
+      ],
+      "rationale": "Spine: Map 1 — it took first place from two of three judges and was the only map with zero compliance or feasibility violations (6 stills, exactly one two-still crossfade, no people, all copy inside the approved word set). Its bullseye hook, split-frame turn, and mirrored clean-pipe payoff are all retained. Grafts: (1) Map 2's symptom-to-cause vertical pan replaces Map 1's sun-to-moon beat 2 — every judge flagged it as a steal, and it converts three seconds of mood into the ad's causal argument (\"That slow swirl isn't the sink. It's the pipe.\") while pre-introducing the cutaway so beat 3's locked close-up reads as a zoom, not a new location; (2) Map 2's engineering-plate language — ruled corner marks, leader lines, EMPTY label plates for composited type — is drawn into every cutaway, the cleanest solve for \"deliberately labeled\" under the no-text-in-illustration rule; (3) Map 3's tree-ring rendering of the buildup replaces lumpy gunk shapes — growth rings read as accretion-over-time instantly, silent, in flat 2D. Violations fixed: the time-lapse is a strict two-still A/B crossfade on the mechanism beat (the literal read of the one-crossfade budget — Map 2's three-stage version and Map 3's misplaced dishes time-lapse are both rejected); no numeric timelines anywhere (\"Weeks 1→4→8\" and \"Day 30\" dropped as invented specificity — growth is asserted only as \"still growing\"); the endcard is a hard cut fixed at 14.0s (Map 3's crossfade-to-endcard rejected); water stays grey in the turn beat with red only on chevrons, clog, and vignette, per the sewage-read advisory; beat 5's flagged double motion collapses to one pull-back by composing pipe and van in a single tall frame; beat 1 specifies flat even color, avoiding Map 3's \"soft morning light\" gradient drift. Silent-first: six overlay moments carry the full arc without audio. VO is claim-safe and digit-free — no \"911,\" no phone, no ROC, \"24/7\" voiced as \"day or night\" — and never touches sewer, commercial, prices, or guarantees."
+    },
+    "judges": [
+      {
+        "ranking": [
+          2,
+          1,
+          3
+        ],
+        "violations": [
+          "Map 3, beat 5 (11.5-14.0): motion ends with 'crossfade to endcard' — a second crossfade beyond the single budgeted crossfade time-lapse (already spent in beat 2), and it softens the required hard-fixed endcard start at 14.0s. Cut to the endcard instead.",
+          "Map 3, beat 2 vs beat 3: the one permitted crossfade time-lapse is spent on dishes stacking (problem/emotion), leaving the mechanism beat (6.0-9.5) with no growth progression — the brief's core promise ('the clog forming INSIDE the pipe' shown growing) is under-served relative to the stated mechanism-beats-emotion priority. Borderline against the production spec's intent, flagged because the time-lapse budget is singular.",
+          "Map 2, beat 3 (6.0-9.5): three stills crossfaded = two crossfade transitions. Defensible as 'one crossfade time-lapse' (one sequence), but Map 1's two-still version is the literal read of the constraint; confirm the animator can treat a 3-stage sequence as the single time-lapse before locking.",
+          "Map 2, beat 3 overlay: 'Weeks 1 -> 4 -> 8: the clog builds from the inside' asserts a fabricated clog-growth timeline with composited date stamps — borderline invented stat under the no-invented-stats rule. Safe rewrite: drop the week numbers ('Week after week, it builds from the inside') and leave the date-stamp plate empty or unnumbered."
+        ]
+      },
+      {
+        "ranking": [
+          1,
+          2,
+          3
+        ],
+        "violations": [
+          "Map 2 beat 3 (6.0-9.5s): three stills crossfaded = two crossfade transitions; the production budget is one crossfade time-lapse. Cut to two stages (matching Map 1's A/B structure) to stay inside capability.",
+          "Map 2 beat 3 overlay 'Weeks 1 → 4 → 8: the clog builds from the inside': an invented clog-growth timeline — fabricated specificity under the no-invented-stats rule, and it hurts believability with the plumbing-literate target, since clogs don't build on a schedule. Replace with non-numeric progression ('It only grows.').",
+          "Map 3 beat 2 (2.5-6.0s): a three-still crossfade time-lapse (two crossfades) spent on the sink symptom — over the one-crossfade budget, and it burns the ad's only time-lapse on dishes instead of the mechanism the brief says is the star.",
+          "Map 3 beat 5 motion 'crossfade to endcard': a third crossfade, and it softens the endcard entry that the brief requires to be FIXED at exactly 14.0s. Map 3 totals three crossfades against a budget of one.",
+          "Map 3 beat 1 overlay 'Day 30. Still draining slow.': borderline — 'Day 30' is invented specificity aimed at the viewer's own procrastination rather than a business stat, so it is lower-risk than Map 2's weeks claim, but the number is safer removed.",
+          "Map 2 beat 4 (advisory, not a listed-rule breach): tinting the rising water column 911drain red as an 'alarm cue' risks being read as sewage imagery; keep the water grey and put the red on the pressure chevrons and vignette instead, given the hard 'never show sewer' rule."
+        ]
+      },
+      {
+        "ranking": [
+          1,
+          2,
+          3
+        ],
+        "violations": [
+          "MAP 2 beat 3 (6.0-9.5): overlay 'Weeks 1 → 4 → 8: the clog builds from the inside' plus composited date-stamp week markers asserts a specific quantified clog-formation timeline — this collides with the no-invented-stats rule; soften to non-numeric ('Week after week, it keeps building').",
+          "MAP 2 beat 3 (6.0-9.5): three stills crossfaded = two crossfade transitions, stretching the 'one crossfade time-lapse' production budget (borderline — defensible as one time-lapse sequence, but MAP 1's two-still A→B version is the safer read of the constraint).",
+          "MAP 3 beat 2 (2.5-6.0): spends the single allowed crossfade time-lapse on the sink/dishes (symptom/emotion) instead of the clog growing inside the pipe — so the mechanism beat (6.0-9.5) is a static push with no growth shown, inverting 'mechanism beats emotion' and wasting the ad's one camera-can't-show move.",
+          "MAP 3 beat 5 (11.5-14.0): 'crossfade to endcard' adds a second crossfade beyond the one-time-lapse budget AND erodes the fixed-endcard requirement (endcard must be a hard fixed hold from 14.0).",
+          "MAP 3 beat 2 (2.5-6.0): prop continuity across the three crossfade stills (mug moves, kid's cup appears, lighting shifts morning→night) is the hardest generation task in any map — locked framing with changing set dressing is where flat-illustration consistency typically breaks.",
+          "MAP 3 beat 1 (0-2.5): 'soft morning light' invites gradients/rendered lighting, drifting from the bold-flat 2D lane (minor style risk, not a claims violation).",
+          "MAP 1: no compliance or feasibility violations found — 6 stills, exactly one two-still crossfade on the mechanism beat, no people, unmarked van, all claims within the allowed word set; only note is beat 5's double motion (pull-back then pan down) is tight in 2.5s."
+        ]
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Author"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Judge"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 3,
+      "title": "Synthesize"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "author-1",
+      "phaseIndex": 1,
+      "phaseTitle": "Author",
+      "agentId": "ac397b6a5f7d83428",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1788411292864,
+      "queuedAt": 1788411286245,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Still draining slow?",
+      "promptPreview": "CLIENT: 911 Drain LLC — emergency residential DRAIN repair, East Valley AZ (Mesa/Gilbert/Chandler/Queen Creek). Phone 480-992-3541. License AZ ROC 366870 (must appear on-screen in ads). Real logo: red \"911\" + white \"drain\" on black, tagline \"24/7 EMERGENCY DRAIN REPAIR\" lives inside the logo art.\nHARD CLAIM RULES: never say/show \"sewer\", never \"commercial\", no prices, no guarantees, no invented st…",
+      "lastProgressAt": 1788411396455,
+      "tokens": 24837,
+      "toolCalls": 1,
+      "durationMs": 103590,
+      "resultPreview": "{\"beats\":[{\"t\":\"0-2.5\",\"job\":\"hook\",\"visual\":\"Bold flat 2D illustration, 9:16, brand palette only (911drain red, near-black, warm off-white). Top-down view of a warm off-white sink basin filling most of the frame against a near-black field. A shallow pool of pale grey standing water sits in the basin with one single lazy spiral line over the black drain opening; three thin red concentric ripple ri…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "author-2",
+      "phaseIndex": 1,
+      "phaseTitle": "Author",
+      "agentId": "af88d1a10e803163e",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1788411291158,
+      "queuedAt": 1788411286245,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "INSIDE YOUR SLOW DRAIN. RIGHT NOW.",
+      "promptPreview": "CLIENT: 911 Drain LLC — emergency residential DRAIN repair, East Valley AZ (Mesa/Gilbert/Chandler/Queen Creek). Phone 480-992-3541. License AZ ROC 366870 (must appear on-screen in ads). Real logo: red \"911\" + white \"drain\" on black, tagline \"24/7 EMERGENCY DRAIN REPAIR\" lives inside the logo art.\nHARD CLAIM RULES: never say/show \"sewer\", never \"commercial\", no prices, no guarantees, no invented st…",
+      "lastProgressAt": 1788411358094,
+      "tokens": 24841,
+      "toolCalls": 1,
+      "durationMs": 66259,
+      "resultPreview": "{\"beats\":[{\"t\":\"0-3.0\",\"job\":\"hook\",\"visual\":\"Bold flat 2D cutaway cross-section of a residential drain pipe, drawn as a deliberate technical diagram in brand palette: warm off-white background, near-black pipe walls sliced open lengthwise, interior channel narrowed by a thick ring of dark buildup (hair, grease, gunk rendered as layered flat shapes with 911drain-red accent striations). A thin tric…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "author-3",
+      "phaseIndex": 1,
+      "phaseTitle": "Author",
+      "agentId": "a255fe400a473e95f",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1788411290405,
+      "queuedAt": 1788411286245,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Day 30. Still draining slow.",
+      "promptPreview": "CLIENT: 911 Drain LLC — emergency residential DRAIN repair, East Valley AZ (Mesa/Gilbert/Chandler/Queen Creek). Phone 480-992-3541. License AZ ROC 366870 (must appear on-screen in ads). Real logo: red \"911\" + white \"drain\" on black, tagline \"24/7 EMERGENCY DRAIN REPAIR\" lives inside the logo art.\nHARD CLAIM RULES: never say/show \"sewer\", never \"commercial\", no prices, no guarantees, no invented st…",
+      "lastProgressAt": 1788411366364,
+      "tokens": 24825,
+      "toolCalls": 1,
+      "durationMs": 75957,
+      "resultPreview": "{\"beats\":[{\"t\":\"0-2.5\",\"job\":\"hook\",\"visual\":\"Flat 2D illustration, 9:16. A warm off-white kitchen in soft morning light: one near-black sink basin center-frame holding a shallow pool of grey water with a single lazy off-center swirl that barely moves. A red coffee mug with a thin steam curl sits on the counter; a blank wall-calendar grid hangs beside the window (empty squares, no numbers). Bold b…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "judge-1",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "a463ab41534286212",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1788411399492,
+      "queuedAt": 1788411397883,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "CLIENT: 911 Drain LLC — emergency residential DRAIN repair, East Valley AZ (Mesa/Gilbert/Chandler/Queen Creek). Phone 480-992-3541. License AZ ROC 366870 (must appear on-screen in ads). Real logo: red \"911\" + white \"drain\" on black, tagline \"24/7 EMERGENCY DRAIN REPAIR\" lives inside the logo art.\nHARD CLAIM RULES: never say/show \"sewer\", never \"commercial\", no prices, no guarantees, no invented st…",
+      "lastProgressAt": 1788411505102,
+      "tokens": 29177,
+      "toolCalls": 1,
+      "durationMs": 105609,
+      "resultPreview": "{\"ranking\":[2,1,3],\"steal\":[\"Map 1: the drain-as-bullseye hook composition — concentric red ripple rings on a near-black field turn the drain mouth into a literal target, and the push-in gives it motion; it reads at thumbnail size in a third of a second, the fastest-parsing frame-one of the three.\",\"Map 2: cold-opening on the cutaway itself — frame one IS the un-filmable mechanism, with second-per…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "judge-2",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "acb71841a4e16e739",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1788411399761,
+      "queuedAt": 1788411397884,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "CLIENT: 911 Drain LLC — emergency residential DRAIN repair, East Valley AZ (Mesa/Gilbert/Chandler/Queen Creek). Phone 480-992-3541. License AZ ROC 366870 (must appear on-screen in ads). Real logo: red \"911\" + white \"drain\" on black, tagline \"24/7 EMERGENCY DRAIN REPAIR\" lives inside the logo art.\nHARD CLAIM RULES: never say/show \"sewer\", never \"commercial\", no prices, no guarantees, no invented st…",
+      "lastProgressAt": 1788411532762,
+      "tokens": 29186,
+      "toolCalls": 1,
+      "durationMs": 131703,
+      "resultPreview": "{\"ranking\":[1,2,3],\"steal\":[\"Map 1: the beat-4 split frame — brim-full sink stacked directly above the fully occluded cutaway with upward pressure arrows, so symptom and cause are on screen simultaneously; it is the single clearest cause-effect frame in any map and makes 'This is how a backup starts' land without voiceover.\",\"Map 2: the beat-2 symptom-to-cause pan — one unbroken vertical camera mo…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "judge-3",
+      "phaseIndex": 2,
+      "phaseTitle": "Judge",
+      "agentId": "a5caadf004c766a78",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1788411399629,
+      "queuedAt": 1788411397884,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "CLIENT: 911 Drain LLC — emergency residential DRAIN repair, East Valley AZ (Mesa/Gilbert/Chandler/Queen Creek). Phone 480-992-3541. License AZ ROC 366870 (must appear on-screen in ads). Real logo: red \"911\" + white \"drain\" on black, tagline \"24/7 EMERGENCY DRAIN REPAIR\" lives inside the logo art.\nHARD CLAIM RULES: never say/show \"sewer\", never \"commercial\", no prices, no guarantees, no invented st…",
+      "lastProgressAt": 1788411493129,
+      "tokens": 29199,
+      "toolCalls": 1,
+      "durationMs": 92071,
+      "resultPreview": "{\"ranking\":[1,2,3],\"steal\":[\"MAP 1: the payoff cutaway that exactly mirrors beat 3's mechanism framing — 'clean and open' reads instantly as the reversal of 'clogged' with zero new visual vocabulary, and it keeps the resolve mechanism-first instead of emotion-first.\",\"MAP 2: empty label plates, leader lines, and engineering-plate corner rules drawn INTO the artwork as designed slots for composited…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "synthesis",
+      "phaseIndex": 3,
+      "phaseTitle": "Synthesize",
+      "agentId": "afdda7c8b8ac578ea",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1788411535875,
+      "queuedAt": 1788411534342,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "Still draining slow?",
+      "promptPreview": "CLIENT: 911 Drain LLC — emergency residential DRAIN repair, East Valley AZ (Mesa/Gilbert/Chandler/Queen Creek). Phone 480-992-3541. License AZ ROC 366870 (must appear on-screen in ads). Real logo: red \"911\" + white \"drain\" on black, tagline \"24/7 EMERGENCY DRAIN REPAIR\" lives inside the logo art.\nHARD CLAIM RULES: never say/show \"sewer\", never \"commercial\", no prices, no guarantees, no invented st…",
+      "lastProgressAt": 1788411625596,
+      "tokens": 33372,
+      "toolCalls": 1,
+      "durationMs": 89720,
+      "resultPreview": "{\"beats\":[{\"t\":\"0-2.5\",\"job\":\"hook\",\"visual\":\"Bold flat 2D illustration, 9:16, brand palette only (911drain red, near-black, warm off-white). Top-down view of a warm off-white sink basin filling most of the frame against a near-black field. A shallow pool of pale grey standing water with one single lazy spiral line over the black drain opening; three thin red concentric ripple rings radiate outwar…"
+    }
+  ],
+  "totalTokens": 195437,
+  "totalToolCalls": 7
+}

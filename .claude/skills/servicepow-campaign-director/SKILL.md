@@ -55,6 +55,23 @@ angle *(recorded, never automatically obeyed — see DECISION RULES)*.
 
 ## WORKFLOW
 
+**THE SCALE DOCTRINE (Run 12 — one production system).** There is ONE production system with
+two formally defined depths. Depth is declared in the Bible header and is an APPROVER-visible
+decision, never a silent omission:
+
+- **FULL** — new client, new concept family, realistic lane, generated people, or anything
+  going to paid media for the first time: every phase below runs.
+- **SLIM** — a variant, a one-off in an already-approved concept family, or an
+  illustrated-lane piece with no people: instantiated from
+  `templates/campaign-bible-slim.md`. Phases 3.2–3.5 may be compressed into the slim Bible's
+  CONCEPT block (panel or single-author, recorded which), and the storyboard may compress to
+  the shot manifest of `servicepow-video-production` — but the **NEVER-DROPS MINIMUM** always
+  runs: client standing facts + asset register read · claims bounds stated · per-shot routing
+  record · preflight · production through `servicepow-video-production` · QA1 machine · QA2
+  physical/trade · **Skeptic pass (isolated — an in-session review panel does not satisfy
+  BC-23)** · **creative-critic scorecard (BC-22, the only client-ready score)** · owner
+  review · learning capture. A run that drops any of these is not SLIM; it is out of system.
+
 1. **Locate or create the Bible.** One campaign, one Bible:
    `campaigns/<YYYY-MM-DD-short-slug>/campaign-bible.md` inside the client's area of the
    client KB, instantiated from `templates/campaign-bible.md`. Supporting artifacts sit beside
@@ -79,26 +96,32 @@ angle *(recorded, never automatically obeyed — see DECISION RULES)*.
    4. `servicepow-creative-spine` — spine and beat map (§4).
    5. `servicepow-script-director` — script with performance marks and declared lines (§5).
    6. `servicepow-storyboard-director` — the storyboard artifact (§6). Then, **before the
-      storyboard gate**, all three of:
+      storyboard gate**, all four of:
       - `servicepow-brand-fidelity` — pre-generation COMPOSITE marking of identity-bearing
         shots (§9);
       - **Skeptic Pass 1** — per-shot generation-risk classification, run under the isolation
         protocol in step 5 below (§14);
-      - `servicepow-human-performance-realism` — actor briefs for every generated person (§7).
+      - `servicepow-human-performance-realism` — actor briefs for every generated person (§7);
+      - `servicepow-continuity-supervisor` — continuity bibles written BEFORE the first
+        generation (§8; its own gate requires this — it re-checks for drift during step 8).
       **[APPROVER gate: storyboard → `STORYBOARD APPROVED`** — the storyboard-stage registry
       checks (BC-24, BC-31, BC-34) and Pass 1 method changes are settled here, before a single
       unit of spend**]**
    7. `servicepow-higgsfield-production` — per-shot routing and the priced plan (§10).
       **[SPEND_APPROVER gate: the two-step spend gate per
       `../_servicepow/policies/generation-and-spend.md` → `IN PRODUCTION`]**
-   8. Generation runs. During it: `servicepow-continuity-supervisor` checks each shot for
-      drift (§8) and `servicepow-human-performance-realism` inspects generated humans as
+   8. **Production executes through `servicepow-video-production`** — preflight (BC-43),
+      routing per the single router, generate/recover, inspect-and-lock, assembly, composited
+      text, silent master. During it: `servicepow-continuity-supervisor` re-checks each shot
+      for drift (§8) and `servicepow-human-performance-realism` inspects generated humans as
       footage lands. **Skeptic Pass 2** attacks candidate footage before the edit locks.
       **FIRST-ARTIFACT RULE (owner-ruled 2026-08-31, evidence-confirmed 2026-09-02):** a
       first viewable artifact reaches the owner EARLY — before any heavy multi-agent gate
       runs on drafts. Cheap, high-information checks come first; the expensive dual gate
       runs ONCE, LATE, on frozen hash-locked artifacts (never on work that is still being
-      rewritten). Owner direction on the draft outranks gate rounds on the draft.
+      rewritten); after a repair, **only the gates invalidated by the changed elements
+      re-run** (targeted re-verification, proven by hash), never a fresh full round.
+      Owner direction on the draft outranks gate rounds on the draft.
       Execution mechanics for production (preflight, routing, recovery, assembly, the three
       QA layers) are owned by `servicepow-video-production` and are not re-litigated here.
    9. `servicepow-cinematography-editor` — assembly and screen grammar (§12).
@@ -107,8 +130,11 @@ angle *(recorded, never automatically obeyed — see DECISION RULES)*.
        (§13, BC-22) and **Skeptic Pass 3** attacks the finished master (§14, BC-23).
        Sequenced **independently**: the critic does not wait for the Skeptic, the Skeptic
        does not wait for the critic, and neither sees the other's output. Gate on **both**.
-       **[APPROVER gate: readiness — human watch (BC-25), Human Taste Gate, full registry
-       verified → `CLIENT READY`]**
+       On both verdicts landing clean the Bible records `QC PASSED`, then:
+       **[APPROVER gate: readiness — human watch (BC-25), Human Taste Gate, every
+       APPLICABLE registry check verified (per each check's `applies` field — checks scoped
+       to other deliverable types or motions are recorded N/A, not blocking) →
+       `CLIENT READY`]**
    12. Delivery on CLIENT_APPROVER sign-off → `DELIVERED`, then learning capture (step 8).
 
 4. **Run one phase at a time.** Hand the specialist the Bible path and its assigned section.
@@ -166,7 +192,7 @@ angle *(recorded, never automatically obeyed — see DECISION RULES)*.
 ## POLICY BINDINGS
 
 - `../_servicepow/data/blocking-checks.yaml` — the canonical blocking-check registry; final
-  readiness requires every check verified, and this skill gates readiness specifically on
+  readiness requires every APPLICABLE check verified (per the registry `applies` field), and this skill gates readiness specifically on
   BC-22 (critic score floor), BC-23 (Skeptic verdict), and BC-25 (human watch), with BC-24,
   BC-31 and BC-34 settled at the storyboard gate.
 - `../_servicepow/data/roles.md` — defines APPROVER, SPEND_APPROVER, and CLIENT_APPROVER,

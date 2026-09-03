@@ -13,7 +13,7 @@ description: >
   job; and generic advertising requests belong to servicepow-campaign-director.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # Creative Critic
@@ -39,7 +39,9 @@ readiness on both.
 ## RUN THIS COLD
 
 Run the critic in a fresh context, given only: the original brief, the target customer, the
-business objective, the Campaign Bible and the creative itself.
+business objective, the Campaign Bible, the creative itself, **and the mechanical inputs its
+workflow requires — the QC receipts and any forwarded tell notes** (facts, not the maker's
+reasoning; the cold rule bars narrative justification, never evidence).
 
 **Do not accept the creator's reasoning as evidence.** A critic that inherits the justification
 for a choice will accept the choice. If a shot needs an explanation to survive, it has already
@@ -84,9 +86,11 @@ Optional:
    why believe it, what to do next. Any unanswered is a clarity failure.
 3. **Run the semantic hard-failure sweep** (`references/scorecard.md` §1). Any hit = NOT CLIENT
    READY. Stop scoring games here — a hard failure is not offset by a high average.
-4. **Verify the registry ran** before any aesthetic judgment: every check in the canonical
-   blocking-check registry has a receipt — passed, failed, or could not run. A gate that could
-   not be run is a **BLOCK, not a note**. Two the critic confirms rather than assumes: BC-19
+4. **Verify the registry ran** before any aesthetic judgment: every APPLICABLE check in the
+   canonical blocking-check registry has a receipt — passed, failed, or could not run; a check
+   whose `applies` field does not match this deliverable's type/motion is recorded **N/A, not
+   a block** (Run 12 applicability law). An APPLICABLE gate that could not be run is a
+   **BLOCK, not a note**. Two the critic confirms rather than assumes: BC-19
    (open the destination page — never infer parity) and BC-25 (record honestly whether a human
    watched end to end — the critic cannot supply this).
 5. **Pick the card.** A **rough cut** gets the 9-axis rough card (`references/scorecard.md` §5)

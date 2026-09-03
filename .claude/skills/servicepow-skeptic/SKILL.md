@@ -15,7 +15,7 @@ description: >
   malformed packet voids the run, and a VOID is itself a delivery block.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # The Skeptic
@@ -30,6 +30,20 @@ them see it.
 Version 2.0.0 makes the Skeptic's independence **mechanical, not aspirational**: the skill
 verifies its own isolation before it judges anything, and refuses to judge when isolation
 cannot be proven (see ISOLATION PROTOCOL).
+
+## ISOLATION AT OPERATOR SPEED (Run 12)
+
+A pass satisfies the isolation protocol when it runs as a **fresh background agent** (a
+spawned subagent/workflow agent with no conversation history) handed only the Isolation
+Packet. This takes minutes and is the standard mechanism for SLIM-depth runs. **An
+in-session review panel — however adversarial its prompt — does NOT satisfy BC-23**: it
+shares the producing context and is contaminated by definition.
+
+The contamination VOID scan applies to the packet's **framing and instructions**, not to
+quoted artifact content: artifact fields that legitimately contain words like "draft",
+"budget" or "credits" (a storyboard's 3-draft HERO marking, a Bible's credit ledger, quoted
+policy text in the RUBRIC) do not void the pass. What voids it is the INVOKER talking to the
+Skeptic about history, cost pressure, or hoped-for outcomes.
 
 ## TRIGGER
 

@@ -12,7 +12,7 @@ description: >
   belong to the campaign chain; this skill turns them into the finished file.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Video Production — the executable spine
@@ -35,8 +35,12 @@ execution and its gates.
 
 The approved concept/script with timing table · the client KB **including the asset
 register** (real files, provenance, what must never be generated) · the capability evidence
-in `../servicepow-higgsfield-production/references/shot-routing.md` · the deployment's
-production toolkit (state-ledger/QC scripts in the ads playbook of the workspace).
+in `../servicepow-higgsfield-production/references/shot-routing.md` · **this skill's own
+toolkit in `scripts/`** — `scripts/servicepow_video.py` (state ledger, preflight, generate/
+recover, assemble, freeze/verify, econ), `scripts/servicepow_qc.py` (QA1 harness),
+`scripts/servicepow_overlay.py` (composited text), `scripts/servicepow_kenburns.sh`
+(illustrated-lane motion), with environment bootstrap in `scripts/README.md` and the plan
+schema in `templates/plan-example.json`.
 
 ## WORKFLOW
 
@@ -48,8 +52,10 @@ production toolkit (state-ledger/QC scripts in the ads playbook of the workspace
    shot declares a JOB; a shot whose removal costs only atmosphere is cut. Shots the stack
    repeatedly fails at (see routing evidence) are designed OUT, not attempted harder —
    without ever accepting inaccuracy as the price.
-3. **Risk routing per shot** — `GENERATE / COMPOSITE / ILLUSTRATE / REAL ASSET /
-   REQUEST FOOTAGE / AVOID`, per the router owned by higgsfield-production. Readable text,
+3. **Risk routing per shot** — the canonical route enum owned by
+   `../servicepow-higgsfield-production/references/shot-routing.md` (GENERATE /
+   REFERENCE-GROUNDED / COMPOSITE / ILLUSTRATE / REAL-ASSET / REQUEST-FOOTAGE / EDIT-ONLY /
+   AVOID). Readable text,
    numbers, offers and disclosures are **always composited**, never generated (BC-42).
    Real footage requests use `references/real-footage-requests.md` and go to the owner
    explicitly.
@@ -70,9 +76,12 @@ production toolkit (state-ledger/QC scripts in the ads playbook of the workspace
    silence before judging fit** → mix → loudness QA. A voice that cannot fit the locked
    timing windows fails before taste enters.
 9. **QA, three layers, in order:** QA1 technical (machine harness) · QA2 physical + trade
-   realism (BC-41, `references/qa2-physical-realism.md`) · QA3 advertising + client
-   readiness (hook, clarity, offer, CTA, brand, client-confidence ≥8 to count as
-   client-ready).
+   realism (BC-41, `references/qa2-physical-realism.md`) · QA3 advertising self-check
+   (`references/qa3-precheck.md`) feeding the **single readiness authority:
+   `../servicepow-creative-critic/` owns THE client-ready score (ServicePow-6, BC-22)** —
+   this skill's client_confidence field is a logging signal, never a rival verdict. The
+   Skeptic pass (BC-23) runs isolated: a fresh agent with an Isolation Packet; an
+   in-session review panel does not satisfy it.
 10. **Targeted revision.** Freeze → repair only the failed element → verify by hash that
     everything else is byte-identical. Approved work never regresses.
 11. **Owner review** — the owner's scores are the datum; they are recorded, never invented.
@@ -120,3 +129,6 @@ the learning loop. This skill owns no strategy, no claims rulings, and no spend 
 - `references/pipeline.md` — the executable path, stage by stage, with the proven fixes.
 - `references/qa2-physical-realism.md` — the QA2 checklist and rejection vocabulary.
 - `references/real-footage-requests.md` — the request format and standing 911-class examples.
+- `references/qa3-precheck.md` — the pre-critic advertising self-check (no verdict authority).
+- `scripts/README.md` — the toolkit, environment bootstrap, and platform limits.
+- `templates/plan-example.json` — the plan schema `scripts/servicepow_video.py init` consumes.

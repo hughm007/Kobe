@@ -1,0 +1,20 @@
+{
+  "campaign": "example-two-concepts",
+  "concepts": [
+    {
+      "id": "C1",
+      "name": "The Missed Call",
+      "visual": "a tradesman workbench at dusk, a phone lighting up unanswered",
+      "body_shots": 2,
+      "body_prompts": [
+        "Slow dolly across a workbench, phone lighting up face-down among tools, no people",
+        "Handheld drift along a work van at dusk outside a suburban house, no people"
+      ]
+    }
+  ],
+  "hooks": [
+    { "id": "H1", "prompt_template": "Opening establishing shot with a slow tracking move: {concept}, no text, no people" },
+    { "id": "H2", "prompt_template": "Opening extreme close detail with a slow tilt: {concept}, no text, no people" }
+  ],
+  "cta": { "prompt": "Slow pan across a clean surface with space for composited text, no people, no logos" }
+}

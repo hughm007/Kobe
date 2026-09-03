@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "acdc156bd2bc2e216fe4799dde9cf8cf0d622c03",
-  "generated_at": "20260903T044824Z",
+  "canonical_commit": "0d465b08499115172556e1594b4b17c668a52e9e",
+  "generated_at": "20260903T185857Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -39,7 +39,7 @@
       "canonical": "GENERATED"
     },
     "_servicepow/data/blocking-checks.yaml": {
-      "sha256": "0cf1bc1d52d447513999043afe33a8c4134e36b93057ccd70b24667309ddbed1",
+      "sha256": "aebcabbc3768dc49e980c92924455e91d703e693a60a4dcba74358ab90435f41",
       "canonical": "data/blocking-checks.yaml"
     },
     "_servicepow/data/roles.md": {
@@ -303,16 +303,20 @@
       "canonical": "skills/servicepow-brand-fidelity/SKILL.md"
     },
     "servicepow-campaign-director/SKILL.md": {
-      "sha256": "6ab214531786963cdf0cddc8b8ec0336a438f4f154fdd7eaec29aa08af4678ef",
+      "sha256": "a92bb47c6ed381ca635b725bf2434a63bc5904f2ca6293ca902a096c0c6d655f",
       "canonical": "skills/servicepow-campaign-director/SKILL.md"
     },
     "servicepow-campaign-director/references/bible-contract.md": {
-      "sha256": "7e8cb04f39d6c1052ea93b387c45237e87afe28eae3ed92f58244f4d76b6c13d",
+      "sha256": "c162a8eb2cd70021a0ebc7cdd39a8d29760adf256e9810924e699d261497bd34",
       "canonical": "skills/servicepow-campaign-director/references/bible-contract.md"
     },
     "servicepow-campaign-director/references/local-service-gates.md": {
       "sha256": "d6b235ddf09f49563ab87eebc77cd662fb1318590d9f07603a0264b9d4540d7f",
       "canonical": "skills/servicepow-campaign-director/references/local-service-gates.md"
+    },
+    "servicepow-campaign-director/templates/campaign-bible-slim.md": {
+      "sha256": "29c8d85aaa59a57fcc470e090508ae002b56aa3e6f66a4c936d6dbbc61eb0fb4",
+      "canonical": "skills/servicepow-campaign-director/templates/campaign-bible-slim.md"
     },
     "servicepow-campaign-director/templates/campaign-bible.md": {
       "sha256": "f4da3d6ab481c5cc22978c1cf323102b761a6ee27c259f18d8455cc7fe42c964",
@@ -343,7 +347,7 @@
       "canonical": "skills/servicepow-competitive-intelligence/references/extraction-schema.md"
     },
     "servicepow-continuity-supervisor/SKILL.md": {
-      "sha256": "f4c889cadaa5467712614637d881522fdc885d76353616b89a9f7081402ae653",
+      "sha256": "f25a908f07350ea93d70c585e4a02c1087d9433d915ed31347df29995ddb8e4d",
       "canonical": "skills/servicepow-continuity-supervisor/SKILL.md"
     },
     "servicepow-continuity-supervisor/references/continuity-checklist.md": {
@@ -351,7 +355,7 @@
       "canonical": "skills/servicepow-continuity-supervisor/references/continuity-checklist.md"
     },
     "servicepow-creative-critic/SKILL.md": {
-      "sha256": "ad4cd447d8e01662e2210db433289d63122dd0a8554c31e311777b9313fe655b",
+      "sha256": "db6254f4a2bf2635653040334f6e006b85a2cda7714674ee75a77ad3c350f33d",
       "canonical": "skills/servicepow-creative-critic/SKILL.md"
     },
     "servicepow-creative-critic/references/scorecard.md": {
@@ -379,11 +383,11 @@
       "canonical": "skills/servicepow-creative-spine/references/anti-choppy.md"
     },
     "servicepow-higgsfield-production/SKILL.md": {
-      "sha256": "3b1477a636e221bc871becc47f8f1a435060c48377e675e20a32b9a6b151b904",
+      "sha256": "e5018e1c38353e92a8a8880968dc4448e7682549438f1b9dbe4918af5c407e49",
       "canonical": "skills/servicepow-higgsfield-production/SKILL.md"
     },
     "servicepow-higgsfield-production/references/shot-routing.md": {
-      "sha256": "64587eb50f005d2d39be1a0ff0b5e8d5b378abdab445d62bef1a6bb58704f000",
+      "sha256": "6258a1d801dae64db37d6b60efe071a519ceb14545c161541be8c7093f057762",
       "canonical": "skills/servicepow-higgsfield-production/references/shot-routing.md"
     },
     "servicepow-higgsfield-production/templates/routing-record.md": {
@@ -391,7 +395,7 @@
       "canonical": "skills/servicepow-higgsfield-production/templates/routing-record.md"
     },
     "servicepow-human-performance-realism/SKILL.md": {
-      "sha256": "7683a352f4931f4c201ff299d222ef1acbd16581f242b34cc1af88d62adf7c09",
+      "sha256": "a42f4055a93b07b27c0f9147f9b526bdf5edef338360d7d7d5f253289be4e561",
       "canonical": "skills/servicepow-human-performance-realism/SKILL.md"
     },
     "servicepow-human-performance-realism/references/realism-inspection.md": {
@@ -427,7 +431,7 @@
       "canonical": "skills/servicepow-script-director/SKILL.md"
     },
     "servicepow-skeptic/SKILL.md": {
-      "sha256": "aa877541386e851ff51e68b374226ef5a299674cb336646fd2885f1430444033",
+      "sha256": "dd8b005834c1fa17c6e55ebbe57e37e6f6041eecff5624d354151cf64a8552a4",
       "canonical": "skills/servicepow-skeptic/SKILL.md"
     },
     "servicepow-skeptic/references/audit-honesty.md": {
@@ -435,7 +439,7 @@
       "canonical": "skills/servicepow-skeptic/references/audit-honesty.md"
     },
     "servicepow-storyboard-director/SKILL.md": {
-      "sha256": "4fb4af6570bb5d946b6e645224f91087ba204ac9e68316465bdd294b8b4b0607",
+      "sha256": "d7734eb171c2e7f37391e290cb9084162458bb9fbec1f75ef5b6a29d4b9240ff",
       "canonical": "skills/servicepow-storyboard-director/SKILL.md"
     },
     "servicepow-storyboard-director/references/shot-fields.md": {
@@ -447,20 +451,48 @@
       "canonical": "skills/servicepow-strategy/SKILL.md"
     },
     "servicepow-video-production/SKILL.md": {
-      "sha256": "74e9fe6c2d992e713bd5234a6ad8fafbc54d6b3c3963331a39096c78c08bb20a",
+      "sha256": "36f93f900358876327a88e24c87d7799d72e1a9bb8bfea8df31881c48c37be82",
       "canonical": "skills/servicepow-video-production/SKILL.md"
     },
     "servicepow-video-production/references/pipeline.md": {
-      "sha256": "a3eb29eaac0577bf9534617f85ebd5c0341b544654ca2d5f9a90634e6765cc8b",
+      "sha256": "5ab31960f98913c1b7fbe2d07eabb96e204afc9951647063e8d55bbd5716b6d2",
       "canonical": "skills/servicepow-video-production/references/pipeline.md"
     },
     "servicepow-video-production/references/qa2-physical-realism.md": {
       "sha256": "46624bba5573d193d765afeadfca80fc1e8ea54f31b6d5245b143c381bc8fa10",
       "canonical": "skills/servicepow-video-production/references/qa2-physical-realism.md"
     },
+    "servicepow-video-production/references/qa3-precheck.md": {
+      "sha256": "da10c619d533d659f80e6ca32dfda5a90404acb925b2dc9f49895198e5ad2828",
+      "canonical": "skills/servicepow-video-production/references/qa3-precheck.md"
+    },
     "servicepow-video-production/references/real-footage-requests.md": {
       "sha256": "fdf9231d8b7fcef6f6880439d50f55e38e86e1a51ca5a368ed7156ff21b955e3",
       "canonical": "skills/servicepow-video-production/references/real-footage-requests.md"
+    },
+    "servicepow-video-production/scripts/README.md": {
+      "sha256": "edc730f91c401cd3057a8401a7f5527ec779fa205bce4bb36b54821b0351459a",
+      "canonical": "skills/servicepow-video-production/scripts/README.md"
+    },
+    "servicepow-video-production/scripts/servicepow_kenburns.sh": {
+      "sha256": "273aa6f0888353f16d8069db461eb1d86645804388ee34ba2ae3689fd43d6b5c",
+      "canonical": "skills/servicepow-video-production/scripts/servicepow_kenburns.sh"
+    },
+    "servicepow-video-production/scripts/servicepow_overlay.py": {
+      "sha256": "374d56816baf30628892a8fa3d48f95f40da58f73b9ea680e992d238148c0180",
+      "canonical": "skills/servicepow-video-production/scripts/servicepow_overlay.py"
+    },
+    "servicepow-video-production/scripts/servicepow_qc.py": {
+      "sha256": "4a9206c618280bc4e4281761a9ed79abefe63a10413bca0c0e08926b94eb184d",
+      "canonical": "skills/servicepow-video-production/scripts/servicepow_qc.py"
+    },
+    "servicepow-video-production/scripts/servicepow_video.py": {
+      "sha256": "6fd5746bbb4b01c5e1bdb8753e9f0d774337762a30938792065b5d5540c32e7d",
+      "canonical": "skills/servicepow-video-production/scripts/servicepow_video.py"
+    },
+    "servicepow-video-production/templates/plan-example.json": {
+      "sha256": "444d15ac497dbc9db8c404456dfe6797774f753923c581c0b2b21bf0568ed271",
+      "canonical": "skills/servicepow-video-production/templates/plan-example.json"
     },
     "twilio-compliance-traffic/SKILL.md": {
       "sha256": "9b6b5789abbdcd3b1f9f46bd2fe103138ddb4cf8452fa99bc0440c606c34bfa8",

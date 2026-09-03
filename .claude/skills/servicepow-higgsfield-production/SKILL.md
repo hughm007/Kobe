@@ -15,7 +15,7 @@ description: >
   not for post-generation QC.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
-  version: 2.1.0
+  version: 2.2.0
 ---
 
 # Higgsfield Production
@@ -65,11 +65,12 @@ Generic advertising requests belong to servicepow-campaign-director.
    in the client KB with source, date, and evidence status. Model IDs, prices, plans, and
    balances are never written into durable doctrine (`../_servicepow/policies/generation-and-spend.md` §1);
    an undated capability claim is treated as unknown.
-2. **Choose the production method per shot, before any model is named** — per
+2. **Choose the production method per shot, before any model is named**, using the canonical
+   route enum (GENERATE / REFERENCE-GROUNDED / COMPOSITE / ILLUSTRATE / REAL-ASSET /
+   REQUEST-FOOTAGE / EDIT-ONLY / AVOID) — per
    `references/shot-routing.md`, the single home of the routing table, its evidence, and the
-   preflight-before-spend and recover-before-regenerate rules (registry gate BC-43): full generation ·
-   reference-driven generation · real product + AI environment · real footage + AI ·
-   compositing · traditional editing · hybrid. Method is constrained by policy before
+   preflight-before-spend and recover-before-regenerate rules (registry gate BC-43): hybrids are declared as a primary route plus
+   modifiers. Method is constrained by policy before
    preference: shots containing exact identity assets are COMPOSITE shots
    (`../_servicepow/policies/brand-assets.md`), and the footage hierarchy plus the
    skilled-labour-in-progress rule (`../_servicepow/policies/realism-and-disclosure.md`)
@@ -164,9 +165,9 @@ what was routed, what is blocked, and any open conflict.
 
 ## HANDOFF
 
-Approved plan → OPERATOR executes generation in ladder order →
-`servicepow-continuity-supervisor` (drift checks between generations) →
-`servicepow-cinematography-editor`. Failed generations return here for re-routing, with the
+Approved plan → OPERATOR executes generation in ladder order, returning to the Campaign
+Director between phases (no lateral state): drift checks by
+`servicepow-continuity-supervisor`, then assembly by `servicepow-cinematography-editor`. Failed generations return here for re-routing, with the
 failure logged first. Capability learnings land in the client KB per LEARNING BEHAVIOR.
 
 ## REFERENCE FILES

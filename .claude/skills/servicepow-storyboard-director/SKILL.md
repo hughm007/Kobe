@@ -12,7 +12,7 @@ description: >
   standalone shot prompt, and never for adding an eleventh field.
 license: Proprietary — Service Pow internal. Not for redistribution.
 metadata:
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # Storyboard Director
@@ -83,7 +83,7 @@ KB) · budget ceiling
     model from live tool state at run time; nothing here names one.
 11. **Write the storyboard section of the Campaign Bible** (placed per the Campaign Director's
     contract) **and the full list to `shotlist.md`** in the campaign workspace. The storyboard
-    **is the Master Timeline seed** — clip order, story jobs, audio spine, continuity locks per
+    **is the assembly-manifest seed (consumed as the shot manifest of `../servicepow-video-production/`)** — clip order, story jobs, audio spine, continuity locks per
     joint.
 
 ## DECISION RULES

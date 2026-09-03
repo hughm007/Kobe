@@ -22,13 +22,16 @@ Codified from the first complete client-brand production (17s 9:16, machine QC 1
 | References | Full-scene reference images cause DUPLICATION of scene/person, not principle transfer — rights-unusable | 2/2 copied outputs |
 | References | Never use an AI-generated image as ground-truth reference for judging physical correctness | 1 invalid experiment |
 | Variants | Shared elements generate once and are inherited; hooks vary | 43% reuse before any spend |
+| QA2 | **Every designed text slot is verified populated** before submission — empty label plates read as broken work | 3 reviewers unanimously killed a cut for it (2026-09-03) |
+| Audio | Budget VO lines at the voice's MEASURED read rate (~2.4 words/sec current preset) at SCRIPT time, and trim silence before judging any take | 3 of 4 lines blew their windows (2026-09-03) |
+| Recovery | Only the newest completed job not older than this run may be claimed, and it ingests marked RECOVERED (QA2 mandatory) | a naive grep could ingest the wrong asset |
 
 ## Learning capture
 Every generated asset writes one observation row:
 `model · shot_job · risk_class · reference_used · prompt_version · cost · time ·
 accept/reject · failure_reason (closed vocabulary) · realism · physical · advertising ·
 client_confidence`
-Rejection vocabulary lives in `qa2-physical-realism.md`. One result = observation; two
+Rejection vocabulary: `qa2-physical-realism.md` is the SINGLE home of the closed list (14 terms incl. RIGHTS_DUPLICATION); no other file restates it. One result = observation; two
 similar = provisional pattern; three controlled = candidate rule; cross-client = capability.
 
 ## The economics to record per ad

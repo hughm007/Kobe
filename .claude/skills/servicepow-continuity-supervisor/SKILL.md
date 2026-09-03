@@ -137,7 +137,8 @@ any open CONFLICT.
 ## HANDOFF
 
 Drift needing a new production approach → `servicepow-higgsfield-production`. Suspected
-brand-mark drift → `servicepow-brand-fidelity`. Clean sequence →
+brand-mark drift → `servicepow-brand-fidelity`. All routes run VIA the Campaign
+Director (no lateral state): clean sequence → next phase
 `servicepow-cinematography-editor`; audio expectations per beat →
 `servicepow-audio-director`. Findings feed `servicepow-creative-critic`.
 

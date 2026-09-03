@@ -1,4 +1,17 @@
 # Shot-level routing — the evidence-backed router (single owner: this skill)
+
+## THE ROUTE ENUM (canonical — every skill uses exactly these values)
+GENERATE · REFERENCE-GROUNDED · COMPOSITE · ILLUSTRATE · REAL-ASSET · REQUEST-FOOTAGE · EDIT-ONLY · AVOID
+Storyboard route flags, video-production manifests, and routing records all use this enum
+verbatim. No skill defines a rival vocabulary.
+
+## THE LANES (canonical definitions)
+**LANE A — REALISTIC:** photoreal generated or real footage for service-business advertising.
+Close-up humans and precise hand mechanics route to REQUEST-FOOTAGE or AVOID here.
+**LANE B — ILLUSTRATED:** deliberately non-photoreal (flat illustration, diagram, cutaway,
+explainer). Cutaway visualizations are legal ONLY in this lane and are labeled as deliberate.
+A deliverable declares its lane in the Bible; the lanes are judged on separate standards and
+never mixed by accident.
 Absorbed 2026-09-02 from the deployment-side funnel/router notes; this file is now the ONE
 home of routing doctrine. A campaign does not have a model; a shot does.
 
