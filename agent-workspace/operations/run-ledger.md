@@ -48,3 +48,7 @@ in Canva. Baseline NOT advanced. Decision 0006 untouched.
 font-family field; weight = normal|bold only → cannot author typography by API. Owner recorded trial
 facts (ends 2026-10-04, US$25/mo+tax, 1 seat, no add-ons/renewal authorised, decide by 2026-10-01).
 Typography study rerouted to the local composer path (test-scoped renderer, canonical QC as judge).
+2026-09-04 Canva Brand Kit (owner-built in UI): canonical ID kAHUQhq3Ihc "Service Pow — Core Brand",
+connector-verified unique + mark thumbnail; duplicate kAHUQs_27AM deleted and #B9D9E6→#B9D0E6
+corrected by owner; unnamed default kAHUQtGS0Bs untouched. Palettes/fonts/logo are OWNER/UI-VERIFIED
+only — connector cannot inspect kit contents. No Brand Template. Baseline NOT advanced.
