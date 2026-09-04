@@ -39,3 +39,8 @@ regression step 6. F3: stranded worktree commits inspected individually — the 
 identity decision (935db03) and its worklog (7f4cc87) were unique and still relevant; preserved
 selectively onto main; worktree removed, branch kept + archive tag. Floor re-run, held exactly.
 BASELINE NOT ADVANCED (isolation hardening is not a lane-capability gain; owner may rule otherwise).
+2026-09-04 Connector Phase 3/3 §4 step 2 (Canva read-only probe) → OUTCOME B. Connected, read
+access PROVEN, 34 tools (16 RO / 18 mutating), no scope errors; zero brand kits / brand templates /
+autofill designs; manifest-grade geometry only via editing transaction → REJECTED for the gated
+lane, PROVISIONAL candidate for ungated client-editable handoff. Nothing created/edited/exported
+in Canva. Baseline NOT advanced. Decision 0006 untouched.

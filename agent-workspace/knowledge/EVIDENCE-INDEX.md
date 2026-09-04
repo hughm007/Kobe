@@ -39,13 +39,14 @@ Governing law: `.claude/skills/_servicepow/policies/baseline-and-regression.md`.
 | Model-rendered readable text: 3/3 defective | reftest RESULT + router |
 | Built-in generation audio | owner verdict; audio decoupled (audio-director law) |
 | Realistic mood B-roll as advertising (owner 4/10) | run9-hardening record + Run 10 root-cause analysis |
+| **Canva as a gated static-production path — Outcome B, REJECTED 2026-09-04** (do not re-probe to rediscover) | Phase 3/3 §4 step 2 read-only probe per `operations/connector-phase-3-canva-bakeoff.md`. Connected; read access PROVEN (7 read-only calls, zero permission/scope errors); 34 tools = 16 read-only + 18 mutating/output-producing. Account: zero brand kits, zero brand templates, zero autofill-capable designs. Read-only path yields readable text only — manifest-grade geometry/font/color exists but only via an editing transaction (mutating-class), so BC-52 cannot be machine-measured without mutation → REJECTED for the gated lane by the spec's pre-committed §2 rule. Exact-pixel export supported by schema, not exercised. Probe design: `DAHRoaLJd4w`, 1 page, 794×1123, empty dataset; personal content withheld. Register row carries the two owner options |
 
 ## PROVISIONAL (patterns, not rules — counts per the 1/2/3 evidence ladder)
 Illustrated-lane reference-chaining continuity (2/2) · isolated-object references transfer
 identity not interaction (1 valid observation) · Seed Audio "Grady" voice fits timing
-windows (owner ear NOT yet ruled) · Canva/Swipekit value (see connector register — both still
-UNTESTED; Canva's Phase 3/3 bake-off is fully specified but **not run and not connected**:
-`operations/connector-phase-3-canva-bakeoff.md`).
+windows (owner ear NOT yet ruled) · Swipekit value (UNTESTED) · **Canva as an ungated
+client-editable handoff surface** (PROVISIONAL *candidate* only — not tested, not routed; see the
+FAILED table for the gated-lane verdict).
 
 ## Cold-clone recovery — RESOLVED 2026-09-03
 A plain `git clone` of **any** of the three repos' default branches now lands on the current

@@ -3,15 +3,19 @@ title: "Connector Phase 3/3 — Canva controlled bake-off (SPECIFICATION, not ye
 type: procedure
 client: internal
 owner: APPROVER
-status: awaiting-owner-approval-to-connect
+status: probe-complete — Outcome B recorded 2026-09-04 (register/Evidence Index/run ledger)
 created: 2026-09-03
 tags: [connectors, canva, static, bake-off, regression]
 ---
 # Connector Phase 3/3 — Canva controlled bake-off
 
-**State: Canva is UNTESTED and NOT CONNECTED.** Nothing in this file may be executed until the
-owner explicitly approves the connection. This document exists so the test is specified
-*before* it runs and cannot be redesigned around its own result.
+**State 2026-09-04: §4 step 2 executed read-only → Outcome B.** Read access PROVEN; zero brand
+kits/templates/autofill designs; manifest-grade geometry reachable only through an editing
+transaction → REJECTED for the gated lane, PROVISIONAL candidate for the ungated handoff use.
+Verdict and evidence live in `connector-register.md` and `knowledge/EVIDENCE-INDEX.md`; nothing
+below was altered. Steps 3-5 are **not** authorised — they require the owner's decision recorded
+in the register's next-gate cell. This document existed so the test was specified *before* it ran
+and could not be redesigned around its own result; that held.
 
 Governing law: `.claude/skills/_servicepow/policies/baseline-and-regression.md` §4 —
 connectors augment the system, never redesign it; one successful test is PROVISIONAL, not
