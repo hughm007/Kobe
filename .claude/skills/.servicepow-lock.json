@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "e6050a6533da221e6fe5f2604a99006790bf648d",
-  "generated_at": "20260903T213304Z",
+  "canonical_commit": "2874cf94e64229633b801e916cf648d3a5733c78",
+  "generated_at": "20260904T165513Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -354,7 +354,7 @@
       "canonical": "skills/servicepow-client-intelligence/SKILL.md"
     },
     "servicepow-client-intelligence/references/asset-intake.md": {
-      "sha256": "d50e03531313531d78992b5ad1c91d92fc17805846f3bff5934f0580bc128b6c",
+      "sha256": "ae0556138692a1a6176e9f7c0f7c6ed185302ddd86e5cda0ae7be6a17bf177e6",
       "canonical": "skills/servicepow-client-intelligence/references/asset-intake.md"
     },
     "servicepow-client-intelligence/references/evidence-ladder.md": {
@@ -366,7 +366,7 @@
       "canonical": "skills/servicepow-client-intelligence/references/voc-method.md"
     },
     "servicepow-client-intelligence/scripts/servicepow_asset_ingest.py": {
-      "sha256": "3b759a8afd126eda12d427407e8e3d3ed4f122f778a05e12a2a979f8587925a6",
+      "sha256": "b332ddcdf6ec2e37da027be1cfcbd62d6008d32a9ec3cf5f503ccc4d01910859",
       "canonical": "skills/servicepow-client-intelligence/scripts/servicepow_asset_ingest.py"
     },
     "servicepow-competitive-intelligence/SKILL.md": {

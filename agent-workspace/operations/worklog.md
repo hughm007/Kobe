@@ -923,6 +923,74 @@ advertising something the workspace has no record of. Recorded in `company/OPEN-
 ships.** Also still open: both quality gates have never run on either cut; brand direction A/B/C
 unpicked; audio unproduced (a bonus layer for this placement, not a blocker).
 
+## 2026-08-30 — Direction A picked and built out; the website redesign audited and blocked
+
+*Separate worktree, running alongside the intro-video work. Nothing of that agent's was touched;
+the two branches met cleanly at rebase.*
+
+**The Owner picked Direction A — THE FRAME, anchor `#17457A`** — with a constraint that matters
+more than the hex: *the blue is an anchor, not an atmosphere.* Recognition rides on typography,
+composition, whitespace and the work itself; the blue appears only where a decision is being made.
+Service Pow should read as a premium creative and technology company that happens to be
+exceptionally good at marketing home-service businesses — never a trades template.
+
+**The favicon weakness is fixed by weight, not by a second mark.** The 2026-08-28 proposal flagged
+A's one real flaw: brackets need something inside them, so the mark reduces badly, and the Owner
+ruled out the obvious dodge of putting a letter inside them. The frame now stays hairline at lockup
+sizes and becomes **solid mass** at icon sizes — a filled tile with two heavy brackets knocked out
+on the diagonal. Nothing depends on a hairline surviving 16px. Drawn on a 32-unit grid because
+32×32 is a real favicon size, not an abstraction, and tested at 16px beside real favicons rather
+than judged at display size.
+
+**Twenty contrast pairs measured, twenty pass** (`contrast.py`). The system rule that accent is
+never used for body text means text contrast holds by construction, not by vigilance. One warm
+secondary (`#8A5310`) exists but is scoped to data-positive emphasis in diagrams — never a CTA,
+never a heading, never decoration.
+
+**`visual-identity.md` loses three `NEEDS INPUT` blocks** — Logo, Color, Layout are now decided.
+**The endcard accent is unblocked:** `#17457A`, one CSS variable, one re-render. Still open: the
+licensed typeface (the licence has to cover client-facing use), the wordmark that depends on it,
+and vector masters into `assets/`.
+
+**The website redesign is audited and cannot start.** The site is **not in this repo** —
+servicepow.com is the Vercel project `plumbing` off `karlmalik/Plumbing`, Next.js, and no copy
+exists on this machine. `gh` is now installed but not authenticated, so the build work is blocked
+on the Owner running `gh auth login`. Full audit and plan in
+`company/website/2026-08-30-redesign/plan.md`.
+
+**What the audit found is not a design problem.** Six conflicts between the live site and the
+workspace, and design does not fix any of them:
+
+- The site **sells Google LSA management** at $500/mo or 15% of spend. `services.md` says LSA is
+  "still in research… never describe it as running."
+- **Live pricing contradicts the rate card**, and Social Launch at $1,200/mo sits *below* the
+  $1,500/mo retainer floor that nobody quotes under without logged approval.
+- The site and `services.md` **describe two different businesses** — a full local-trades growth
+  system versus AI video ad packs as the primary offering.
+- The **Results section already publishes 911 Drain by name** while Tier 2's citable-client
+  question is open and Tier 1's claims sheet is unsigned.
+- The homepage **stat row renders `0 / 0 / 0+ / 0`** in server HTML. The real values (`1`,
+  `30 days`, `12+`, `4`) sit in the RSC payload behind an animated counter that starts at zero.
+  Unverified in a real browser — Playwright is not installed here. Those four numbers are claim
+  surfaces either way.
+- The hero runs **two competing CTAs**, against the pattern's one-primary-action rule.
+
+**The class is now confirmed three times over.** The other agent found the same shape independently
+today — the endcard's "free growth audit" appears in no company file. LSA, email marketing, the
+growth audit, and now the site's LSA line and its pricing: **the live surfaces are advertising
+things the workspace has no record of.** That is no longer a series of one-offs. Either the
+workspace is systematically behind what Service Pow actually sells, or the surfaces have drifted
+ahead of what it can defend. **It needs one Owner ruling covering the whole class, not four
+separate ones** — and until it lands, the redesign copy has nothing stable to sit on.
+
+**Also open:** `brand-voice.md` is still empty end to end, so every headline written against the
+new system is a proposal rather than house style.
+
+> *Recovered 2026-09-04 from the stranded worktree branch `worktree-vivid-drifting-walrus`
+> (commit `7f4cc87`), inserted here in chronological position. See `repo-and-branches.md`.*
+
+---
+
 ## 2026-08-31 — the dual gate ran for the first time, and blocked everything
 
 **Did.** First full gate round on the intro video — machine QC, then the Skeptic and Kobe in
@@ -1253,3 +1321,25 @@ the Direction A identity work — that never reached `main`. Same disease as the
 caught by the same cure. Recorded in `repo-and-branches.md` for review; not merged blind.
 
 Full output filed as a receipt. Baseline not advanced. Canva still not connected.
+
+---
+
+## 2026-09-04 — F1 and F3 closed; nothing else touched
+
+**F1.** The stress auditor was right: the ingest doctrine promised destination refusal and the
+code delivered inbox refusal. Fixed the smallest way that is actually correct — the destination
+must be a registered client KB (direct child of `clients/`, not `_template`, carrying a
+`client-brief.md`); an external staging inbox is never accepted from inside another client's
+tree or from an ancestor of the client dir; and every check runs before a single byte moves,
+which also fixed a quiet bug where an empty inbox created the register *after* refusing. Nineteen
+cases with a whole-tree hash after each refusal. The Drive staging path is one of the nineteen.
+
+**F3.** The worktree held the owner's brand decision — Direction A, THE FRAME — and `main` had
+no idea. OPEN-QUESTIONS on `main` still said the three directions were out for selection. That is
+a lost owner ruling, not a stale branch. Taken onto `main` file by file; the branch's
+OPEN-QUESTIONS was *older* than main's for everything except that one row, so only that row moved.
+The redesign audit also turns out to be the first record of the `plumbing` reality, 2026-08-30 —
+pointed at from decision 0006 as evidence, not as a ruling.
+
+Floor re-run and held. Baseline not advanced: an isolation fix protects the multi-client property
+but does not raise what video, website or static can do. Canva still not connected.

@@ -46,13 +46,19 @@ default. No history was rewritten and nothing was deleted.
 **Standing rule:** if you finish durable work on a session branch, get it onto `main` before the
 session ends. A record only reachable by knowing a branch name is not a durable record.
 
-## Stranded work found 2026-09-03 (owner/next-session review)
-Local git worktree `.claude/worktrees/vivid-drifting-walrus/` on branch `worktree-vivid-drifting-walrus`
-(`7f4cc87`) holds **two commits not on `main`**: "Direction A selected: the identity system, and
-the design brief for the site redesign" and its worklog entry (7 files, incl. `tokens.css`). It is
-local only — a fresh clone does not see it — but it is exactly the class of defect this file exists
-for. Review, merge or cherry-pick what is still wanted into `main`, then `git worktree remove`.
-Keep the branch.
+## Stranded work — found 2026-09-03, resolved 2026-09-04
+A locked local worktree (`.claude/worktrees/vivid-drifting-walrus/`, branch
+`worktree-vivid-drifting-walrus`) held two commits never merged to `main`, from a session on
+2026-08-30 whose base predated the 08-31 work. Inspected individually, not merged blind:
+
+| Commit | Contents | On `main` already? | Still relevant? | Disposition |
+|---|---|---|---|---|
+| `935db03` | **The owner's Service Pow identity decision** — Direction A "THE FRAME", anchor `#17457A`, the two-weight reduction system, app mark SVG, `tokens.css`, `contrast.py` (20/20 pairs measured), a 433-line servicepow.com audit (`plan.md`) that recorded the `plumbing` fact four days before Connector Phase 2 did | **No** — `main` still showed the identity as "IN PROGRESS, three directions sent for selection" | **Yes** — Service Pow's own brand; unblocks the endcard accent and every Service Pow-branded asset | **Preserved selectively**: the 4 new files and `visual-identity.md` taken whole (main unchanged since the base); `OPEN-QUESTIONS.md` updated for the identity row **only** — the branch's copy predated the 08-31 answers, so main's later state wins for every other row; `plan.md` bannered to point at decision 0006 |
+| `7f4cc87` | Its worklog entry (63 lines) | No | Yes — history | Spliced into `worklog.md` in chronological position with a recovery note |
+
+Worktree removed (`git worktree remove`), branch kept, commits tagged
+`archive/worktree-vivid-drifting-walrus`. A future cold session finding that branch should treat
+it as **preserved, not pending** — nothing on it is missing from `main`.
 
 ## Housekeeping (recorded, not urgent)
 `install.py` displaces the previous skill install into `.claude/skills-archive/<timestamp>/` on

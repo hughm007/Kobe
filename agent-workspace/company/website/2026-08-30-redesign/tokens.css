@@ -1,0 +1,142 @@
+/* ============================================================================
+   Service Pow — design tokens
+   Identity: Direction A, THE FRAME. Anchor #17457A.
+
+   The blue is the anchor, not the atmosphere. Recognition is carried by
+   typography, composition, whitespace and the work itself; the blue appears
+   where a decision is being made — CTAs, interaction states, navigation
+   moments, diagram emphasis, the mark.
+
+   Every ratio in the comments is measured by ./contrast.py, not estimated.
+   Run it before changing any value here.
+   ========================================================================== */
+
+:root {
+  /* ---- ink · primary typography -------------------------------------------
+     Cool near-black, never #000 — it sits with the blue instead of fighting it. */
+  --sp-ink-900: #12161B;   /* body and headings      17.13:1 on paper */
+  --sp-ink-700: #39414C;   /* secondary text          9.74:1 on paper */
+  --sp-ink-500: #5F6875;   /* meta, captions          5.32:1 on paper */
+  --sp-ink-400: #828B99;   /* large or disabled only  3.25:1 on paper */
+
+  /* ---- paper · warm, not sterile ------------------------------------------
+     Warm off-white is the ground. Pure white is reserved for lift, so
+     elevation reads as tone rather than shadow. */
+  --sp-paper:        #FAF8F5;
+  --sp-paper-raised: #FFFFFF;
+  --sp-paper-sunk:   #F2EFEA;
+  --sp-rule:         #E4DFD8;   /* hairline borders — archetype I uses rules, not shadows */
+  --sp-rule-strong:  #CFC8BE;
+
+  /* ---- brand · deep ink blue ---------------------------------------------- */
+  --sp-blue-900: #0B2340;  /* darkest ground, inverted sections */
+  --sp-blue-800: #0F3157;  /* pressed                12.40:1 with paper label */
+  --sp-blue-700: #133B69;  /* hover                  10.67:1 with paper label */
+  --sp-blue-600: #17457A;  /* THE brand value         9.13:1 both directions */
+  --sp-blue-500: #1E5896;  /* accents on dark grounds */
+  --sp-blue-400: #3C7CBF;  /* focus ring on dark      3.63:1 on blue-900 */
+  --sp-blue-200: #B9D0E6;  /* muted text on dark      9.96:1 on blue-900 */
+  --sp-blue-100: #DCE8F3;  /* subtle fills */
+  --sp-blue-50:  #F0F5FA;  /* faintest wash */
+
+  /* ---- signal · optional, and deliberately hard to reach -------------------
+     One warm counterweight to the blue. Permitted ONLY for data-positive
+     emphasis in diagrams and charts. Never a CTA, never a heading, never
+     decoration. If a design works without it, it does not get used. */
+  --sp-signal-700: #8A5310;  /* data label on paper     5.96:1 */
+  --sp-signal-600: #A9661B;  /* mark on dark, non-text  3.98:1 */
+
+  /* ---- semantic roles -----------------------------------------------------
+     Components reference these, never the scales above. */
+  --sp-text:            var(--sp-ink-900);
+  --sp-text-secondary:  var(--sp-ink-700);
+  --sp-text-meta:       var(--sp-ink-500);
+  --sp-bg:              var(--sp-paper);
+  --sp-bg-raised:       var(--sp-paper-raised);
+  --sp-border:          var(--sp-rule);
+  --sp-action:          var(--sp-blue-600);
+  --sp-action-hover:    var(--sp-blue-700);
+  --sp-action-active:   var(--sp-blue-800);
+  --sp-action-label:    var(--sp-paper);
+  --sp-focus:           var(--sp-blue-600);
+  --sp-link:            var(--sp-blue-600);
+  --sp-link-hover:      var(--sp-blue-700);
+
+  /* ---- type ---------------------------------------------------------------
+     STAND-IN STACKS. The licensed faces are not chosen yet and the licence
+     must cover client-facing use (visual-identity.md). Swapping them is a
+     two-line change here and nowhere else. */
+  --sp-font-display: ui-serif, Georgia, "Times New Roman", serif;
+  --sp-font-text:    ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --sp-font-mono:    ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Fluid scale. Type grows SUB-LINEARLY with the viewport and then stops —
+     this is half the fix for the zoomed-in desktop feel. Body barely moves. */
+  --sp-fs-display: clamp(2.5rem, 1.6rem + 3.6vw, 4.5rem);   /* 40 → 72 */
+  --sp-fs-h1:      clamp(2rem,   1.5rem + 2.1vw, 3.25rem);  /* 32 → 52 */
+  --sp-fs-h2:      clamp(1.625rem, 1.35rem + 1.2vw, 2.375rem); /* 26 → 38 */
+  --sp-fs-h3:      clamp(1.3125rem, 1.22rem + 0.4vw, 1.625rem); /* 21 → 26 */
+  --sp-fs-body:    clamp(1rem, 0.98rem + 0.08vw, 1.0625rem);   /* 16 → 17 */
+  --sp-fs-small:   0.875rem;                                    /* 14, fixed */
+  --sp-fs-eyebrow: 0.75rem;                                     /* 12, fixed */
+
+  --sp-lh-display: 1.05;
+  --sp-lh-heading: 1.15;
+  --sp-lh-body:    1.55;
+
+  --sp-tracking-display: -0.02em;
+  --sp-tracking-eyebrow:  0.12em;
+
+  --sp-measure-prose:   66ch;
+  --sp-measure-display: 20ch;
+
+  /* ---- space · 4px base ---------------------------------------------------
+     Section rhythm STEPS at breakpoints (see below) rather than scaling
+     continuously. The other half of the desktop fix. */
+  --sp-1: 0.25rem;  --sp-2: 0.5rem;   --sp-3: 0.75rem;  --sp-4: 1rem;
+  --sp-6: 1.5rem;   --sp-8: 2rem;     --sp-12: 3rem;    --sp-16: 4rem;
+  --sp-24: 6rem;    --sp-32: 8rem;
+
+  --sp-section-y: var(--sp-16);   /* 64px mobile */
+  --sp-gutter:    1.25rem;        /* 20px mobile */
+
+  /* ---- containers · three widths, not one -------------------------------- */
+  --sp-w-prose:   45rem;   /* 720px — body copy, FAQ, case narrative */
+  --sp-w-content: 75rem;   /* 1200px — standard sections */
+  --sp-w-wide:    90rem;   /* 1440px — hero, portfolio grid, full-bleed media */
+
+  /* ---- radius · small and consistent ------------------------------------- */
+  --sp-radius-sm: 4px;
+  --sp-radius-md: 8px;
+  --sp-radius-tile: 22%;   /* the app mark's squircle, proportional */
+
+  /* ---- motion ------------------------------------------------------------ */
+  --sp-dur-fast: 120ms;
+  --sp-dur:      200ms;
+  --sp-ease:     cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+/* Stepped rhythm: sections stop growing once the layout is comfortable. */
+@media (min-width: 48rem) {
+  :root { --sp-section-y: var(--sp-24); --sp-gutter: 2rem; }
+}
+@media (min-width: 75rem) {
+  :root { --sp-section-y: var(--sp-32); --sp-gutter: 3rem; }
+}
+/* Deliberately no further step. Past 1200px the page gains margin, not scale. */
+
+/* Focus is never removed — rule 1 of design-intelligence.md. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--sp-focus);
+  outline-offset: 2px;
+  border-radius: var(--sp-radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

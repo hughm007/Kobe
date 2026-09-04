@@ -49,6 +49,12 @@ Two different live realities exist for the same domain.
 
 Both are real. Neither is wrong on its own terms. They cannot both be servicepow.com.
 
+**Earlier evidence, recovered 2026-09-04.** The `plumbing` fact was first recorded on
+**2026-08-30** in `company/website/2026-08-30-redesign/plan.md` §1.1 (a site audit that also
+found six content/compliance conflicts between the live site and the workspace docs), on a
+worktree branch that never reached `main` until 2026-09-04. It is input to this decision, not a
+resolution of it.
+
 ## Why a session must not settle it
 
 The two realities encode different answers to questions only the owner can answer: whether

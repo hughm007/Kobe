@@ -32,3 +32,10 @@ applies-scoping correct 9/9, owner decisions identified not guessed. Kobe = cold
 operational memory. Auditor findings F1-F8 recorded in EVIDENCE-INDEX with smallest corrections;
 F1 (ingest doctrine overstates tool) and F3 (stranded worktree commits) are the two that matter.
 Receipt: operations/receipts/2026-09-03-multi-client-stress-post-main-fix.json. Baseline NOT advanced.
+2026-09-04 F1+F3 closed. F1: write-side client isolation enforced in the ingest tool (destination
+must be a registered clients/<slug> with client-brief.md; external inbox never inside another
+client; every check before any write) — canonical 2874cf9, tests/ingest_isolation_test.py 19/19,
+regression step 6. F3: stranded worktree commits inspected individually — the owner's Direction A
+identity decision (935db03) and its worklog (7f4cc87) were unique and still relevant; preserved
+selectively onto main; worktree removed, branch kept + archive tag. Floor re-run, held exactly.
+BASELINE NOT ADVANCED (isolation hardening is not a lane-capability gain; owner may rule otherwise).
