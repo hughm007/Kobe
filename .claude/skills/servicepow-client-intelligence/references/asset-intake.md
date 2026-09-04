@@ -16,10 +16,20 @@ path. The pipe never becomes the truth store — the client KB does.
   be used as real material in client-facing work (the LB24 class rule).
 
 ## Isolation law
-Files land only inside their own client's KB area; the ingest tool refuses any destination
-outside the named client's folder. One client's Drive folder is never mounted, copied, or
-referenced into another client's area. Registers are per-client; there is no shared media
-pool.
+Files land only inside their own client's KB area, and the ingest tool enforces this on **both
+sides, before it writes anything**:
+- **Destination** — `--client-dir` must be a registered client KB: a direct child of `clients/`,
+  not a template or hidden entry, carrying a `client-brief.md`. A typo, a `..` traversal, a
+  non-client folder or a path outside the workspace is refused outright.
+- **Inbox** — by default the inbox must sit inside that same client's tree. A download staging
+  dir is allowed only with `--allow-external-inbox`, and even then never one inside another
+  client's tree and never an ancestor of the client dir.
+- A refusal exits non-zero and leaves the filesystem untouched — no `assets/`, no register, no
+  rows, no moved files. Cross-client write leakage is an automatic production failure; the
+  proof is `tests/ingest_isolation_test.py` in the canonical repo.
+
+One client's Drive folder is never mounted, copied, or referenced into another client's area.
+Registers are per-client; there is no shared media pool.
 
 ## Routing
 Ingested rows route by the canonical enum: confirmed-real marks/photos/footage → REAL-ASSET
