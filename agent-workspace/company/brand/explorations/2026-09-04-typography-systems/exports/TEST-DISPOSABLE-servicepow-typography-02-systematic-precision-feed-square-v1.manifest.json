@@ -1,0 +1,109 @@
+{
+ "placement": "feed-square",
+ "size": [
+  1080,
+  1080
+ ],
+ "safe": [
+  54,
+  54,
+  1026,
+  1026
+ ],
+ "system": "Page 2 \u2014 Systematic Precision",
+ "elements": [
+  {
+   "role": "eyebrow",
+   "box": [
+    54,
+    97,
+    564,
+    137
+   ],
+   "font_px": 28,
+   "text": "SERVICE POW / TYPOGRAPHY STUDY",
+   "contrast": 5.32,
+   "font": {
+    "file": "IBMPlexMono-Regular.ttf",
+    "axes": {}
+   },
+   "lines": 1
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    174,
+    772,
+    397
+   ],
+   "font_px": 92,
+   "text": "Creative systems built to perform.",
+   "contrast": 17.13,
+   "font": {
+    "file": "IBMPlexSerif-Light.ttf",
+    "axes": {}
+   },
+   "lines": 2
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    470,
+    818,
+    640
+   ],
+   "font_px": 44,
+   "text": "Research, strategy, production, and measurement\u2014connected through one deliberate operating system.",
+   "contrast": 9.74,
+   "font": {
+    "file": "IBMPlexSans-VF.ttf",
+    "axes": {
+     "Weight": 400,
+     "Width": 100
+    }
+   },
+   "lines": 3
+  },
+  {
+   "role": "cta",
+   "box": [
+    54,
+    712,
+    599,
+    780
+   ],
+   "font_px": 56,
+   "text": "BUILD WITH INTENT",
+   "contrast": 9.13,
+   "font": {
+    "file": "IBMPlexSans-VF.ttf",
+    "axes": {
+     "Weight": 600,
+     "Width": 100
+    }
+   },
+   "lines": 1
+  },
+  {
+   "role": "meta",
+   "box": [
+    54,
+    940,
+    598,
+    980
+   ],
+   "font_px": 28,
+   "text": "THE FRAME / CONTROLLED TYPE TEST",
+   "contrast": 5.32,
+   "font": {
+    "file": "IBMPlexMono-Regular.ttf",
+    "axes": {}
+   },
+   "lines": 1
+  }
+ ],
+ "file": "TEST-DISPOSABLE-servicepow-typography-02-systematic-precision-feed-square-v1.png",
+ "sha256": "e8744202c1bf43d2"
+}

@@ -1,0 +1,116 @@
+{
+ "placement": "feed-square",
+ "size": [
+  1080,
+  1080
+ ],
+ "safe": [
+  54,
+  54,
+  1026,
+  1026
+ ],
+ "system": "Page 1 \u2014 Editorial Frame",
+ "elements": [
+  {
+   "role": "eyebrow",
+   "box": [
+    54,
+    97,
+    564,
+    137
+   ],
+   "font_px": 28,
+   "text": "SERVICE POW / TYPOGRAPHY STUDY",
+   "contrast": 5.32,
+   "font": {
+    "file": "JetBrainsMono-VF.ttf",
+    "axes": {
+     "Weight": 400
+    }
+   },
+   "lines": 1
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    174,
+    792,
+    397
+   ],
+   "font_px": 92,
+   "text": "Creative systems built to perform.",
+   "contrast": 17.13,
+   "font": {
+    "file": "Fraunces-VF.ttf",
+    "axes": {
+     "Optical Size": 92,
+     "Weight": 300,
+     "Softness": 0,
+     "Wonky": 0
+    }
+   },
+   "lines": 2
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    470,
+    828,
+    640
+   ],
+   "font_px": 44,
+   "text": "Research, strategy, production, and measurement\u2014connected through one deliberate operating system.",
+   "contrast": 9.74,
+   "font": {
+    "file": "WorkSans-VF.ttf",
+    "axes": {
+     "Weight": 400
+    }
+   },
+   "lines": 3
+  },
+  {
+   "role": "cta",
+   "box": [
+    54,
+    712,
+    613,
+    780
+   ],
+   "font_px": 56,
+   "text": "BUILD WITH INTENT",
+   "contrast": 9.13,
+   "font": {
+    "file": "WorkSans-VF.ttf",
+    "axes": {
+     "Weight": 700
+    }
+   },
+   "lines": 1
+  },
+  {
+   "role": "meta",
+   "box": [
+    54,
+    940,
+    598,
+    980
+   ],
+   "font_px": 28,
+   "text": "THE FRAME / CONTROLLED TYPE TEST",
+   "contrast": 5.32,
+   "font": {
+    "file": "JetBrainsMono-VF.ttf",
+    "axes": {
+     "Weight": 400
+    }
+   },
+   "lines": 1
+  }
+ ],
+ "file": "TEST-DISPOSABLE-servicepow-typography-01-editorial-frame-feed-square-v1.png",
+ "sha256": "f8ed6d7f058637c7"
+}

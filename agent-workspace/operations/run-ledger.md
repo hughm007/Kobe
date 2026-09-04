@@ -44,3 +44,7 @@ access PROVEN, 34 tools (16 RO / 18 mutating), no scope errors; zero brand kits 
 autofill designs; manifest-grade geometry only via editing transaction → REJECTED for the gated
 lane, PROVISIONAL candidate for ungated client-editable handoff. Nothing created/edited/exported
 in Canva. Baseline NOT advanced. Decision 0006 untouched.
+2026-09-04 Canva authoring probe (schema, zero mutations): no blank-design tool; edit-design has no
+font-family field; weight = normal|bold only → cannot author typography by API. Owner recorded trial
+facts (ends 2026-10-04, US$25/mo+tax, 1 seat, no add-ons/renewal authorised, decide by 2026-10-01).
+Typography study rerouted to the local composer path (test-scoped renderer, canonical QC as judge).
