@@ -29,6 +29,7 @@ open the file.
 | 2026-08-26 | [One rule, one home: the canonical source of truth](decisions/0004-canonical-source-of-truth.md) | Accepted — **mechanism superseded 2026-09-01**, see its banner |
 | 2026-08-26 | [v4.0 consolidation](decisions/0005-v40-consolidation.md) | Accepted |
 | 2026-09-03 | [servicepow.com production reality — `plumbing` vs `servicepow-v2`](decisions/0006-servicepow-com-production-reality.md) | ⛔ **OWNER DECISION REQUIRED — no session may resolve it** |
+| 2026-09-04 | [Service Pow typography system: Fraunces · Work Sans · JetBrains Mono](decisions/0007-typography-system.md) | Accepted |
 
 ## Learnings
 

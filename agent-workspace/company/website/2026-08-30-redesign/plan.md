@@ -179,6 +179,11 @@ request. **The real typeface is not yet chosen and must be licensed for client-f
 (`visual-identity.md` requires the licence recorded). Until then the system ships on a documented
 stand-in and the swap is one token.
 
+> **2026-09-04:** the typeface is now decided — Fraunces (display) · Work Sans (text) ·
+> JetBrains Mono (mono), [decision 0007](../../../knowledge/decisions/0007-typography-system.md).
+> The `tokens.css` swap itself is **deferred by owner instruction** and remains a separate,
+> gated change; this plan's build sequencing is unaffected.
+
 Base 16px. Fluid scale using `clamp()` so type grows **sub-linearly** with the viewport — this is
 the core of the desktop-scaling fix:
 

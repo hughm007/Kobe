@@ -22,6 +22,11 @@ does not answer it.
 
 ---
 
+> **Typeface resolved 2026-09-04.** The Liberation Sans stand-in named below was replaced by
+> the owner-approved system — Fraunces · Work Sans · JetBrains Mono —
+> [decision 0007](../../../../knowledge/decisions/0007-typography-system.md). The boards in
+> this folder remain as rendered (stand-in type) and are historical; nothing below was edited.
+
 ## 1. The brief, derived not invented
 
 | Input | Source | What it forces |

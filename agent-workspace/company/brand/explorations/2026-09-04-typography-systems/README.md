@@ -3,16 +3,17 @@ title: "Typography systems study — three candidates, identical layout, owner d
 type: research
 client: internal
 owner: APPROVER
-status: awaiting-owner-visual-decision
+status: decided — System 1 approved, see decision 0007
 created: 2026-09-04
 updated: 2026-09-04
 tags: [brand, typography, identity, the-frame, study, test-disposable]
 ---
 # Typography systems — controlled comparison (2026-09-04)
 
-**Decision status: NONE. No typeface is approved.** `visual-identity.md` is unchanged and its
-Typography section is still `NEEDS INPUT`. This folder holds the evidence for the owner's
-visual decision, nothing more.
+**Decision 2026-09-04: System 1 — Editorial Frame — approved by the owner**
+([decision 0007](../../../../knowledge/decisions/0007-typography-system.md)); operating rules
+recorded in `visual-identity.md`. This folder is retained as the evidence behind that decision.
+Pages 2 and 3 are kept as considered-and-rejected options.
 
 ## Why this ran locally and not in Canva
 The owner authorised a disposable Canva typography test; the Canva connector cannot execute it
@@ -68,6 +69,7 @@ widths differ (headline right edges 792 / 772 / 812).
 `exports/*.png` + `*.manifest.json` (per page) · `comparison-sheet.png` · `render.py` ·
 `facts.json`. Names carry `TEST-DISPOSABLE` — nothing here is a deliverable.
 
-## Not done, by instruction
-No winner selected · `visual-identity.md` untouched · baseline not advanced · nothing created
-in Canva · fonts not uploaded anywhere.
+## Scope note
+The study rendered Fraunces at **300** for the display line; the approved rule makes **400 the
+standard** and permits 300 only at ≥72px with visual verification (the 92px headline here
+qualifies). Baseline not advanced · nothing created in Canva · fonts not uploaded anywhere.

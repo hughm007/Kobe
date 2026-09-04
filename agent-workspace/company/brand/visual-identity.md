@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: draft
 created: 2026-08-24
-updated: 2026-08-30
+updated: 2026-09-04
 tags: [company, brand, design, visual]
 ---
 
@@ -18,9 +18,11 @@ For client work, use the client's own brand guide — never Service Pow's.
 
 > **Direction selected 2026-08-30 — A, THE FRAME, anchor `#17457A`.** Owner decision against
 > [`explorations/2026-08-28-identity-directions/proposal.md`](explorations/2026-08-28-identity-directions/proposal.md).
-> Colour and layout below are now decided. **Typography is still open** — the licensed face
-> has not been chosen. Tokens ship in
-> [`../website/2026-08-30-redesign/tokens.css`](../website/2026-08-30-redesign/tokens.css);
+> Colour and layout below are decided. **Typography decided 2026-09-04 —
+> [decision 0007](../../knowledge/decisions/0007-typography-system.md): Fraunces · Work Sans ·
+> JetBrains Mono.** Tokens ship in
+> [`../website/2026-08-30-redesign/tokens.css`](../website/2026-08-30-redesign/tokens.css)
+> (still carrying the stand-in stacks by owner instruction — the token swap is deferred);
 > ratios are measured by `contrast.py` in the same folder, 20/20 pairs passing.
 
 **The governing principle.** The blue is the *anchor*, not the atmosphere. Recognition is
@@ -57,8 +59,8 @@ the hairline lockup is not used below 120px wide — below that, the app mark re
 
 **Misuse — never do this:** don't stretch or rotate · don't recolour the tile · don't add
 effects, shadows or gradients · don't place the hairline lockup on busy imagery (use the solid
-app mark) · don't rebuild the brackets at a different weight ratio · don't set the wordmark in a
-substitute typeface once the real face is licensed · don't put a letter inside the brackets.
+app mark) · don't rebuild the brackets at a different weight ratio · don't set the wordmark in any
+typeface other than Fraunces (decision 0007) · don't put a letter inside the brackets.
 
 ## Color
 
@@ -99,17 +101,25 @@ alternative here rather than letting each designer improvise one.
 
 ## Typography
 
-**NEEDS INPUT:**
+**Decided 2026-09-04 — [decision 0007](../../knowledge/decisions/0007-typography-system.md).**
+Owner-approved on visual review of the controlled three-system study
+([`explorations/2026-09-04-typography-systems/`](explorations/2026-09-04-typography-systems/README.md),
+canonical static QC 75/75). All three faces are **OFL 1.1** (verified from Google Fonts
+metadata): licensed for commercial, client-facing use, self-hosted on the web, and used from
+Canva's library — nothing uploaded, nothing purchased.
 
-| Role | Typeface | Weight | Notes |
+| Role | Typeface | Weights | Rules |
 |---|---|---|---|
-| Headings | | | |
-| Body | | | |
-| UI / small print | | | |
-| Web fallback stack | | | |
+| Display | **Fraunces** | **400 standard** for static ads, video ads, social, presentations and normal web headings · **300 only ≥72px** with legibility visually verified | **WONK = 0** · **SOFT 0–25** · optical size explicitly controlled where the environment allows · never paragraphs, legal text, buttons or dense UI |
+| Body / functional | **Work Sans** | **400** body · **500** supporting text and interface labels · **600** subheadings and emphasised information · **700 CTA labels only** | The default functional face across web, advertising, presentations and documents |
+| Metadata / technical | **JetBrains Mono** | **400** metadata, captions, technical labels, measurements, controlled eyebrow text · **500** limited emphasis | Never long body copy or primary headlines |
 
-Include licensing — self-hosted, Google Fonts, Adobe Fonts, or a purchased license — and
-whether that license covers client-facing use.
+**Web fallback stacks** live in `tokens.css` and are unchanged for now (owner-deferred):
+the production token swap is a separate, gated change. No other weights, variants or
+pairings are approved.
+
+**Still open in this section:** the wordmark/lockup artwork (now unblocked) and vector
+masters into `assets/` with a pointer file.
 
 ## Imagery and graphics
 
