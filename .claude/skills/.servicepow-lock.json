@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "2874cf94e64229633b801e916cf648d3a5733c78",
-  "generated_at": "20260904T165513Z",
+  "canonical_commit": "b196d855d09ab94b7f0fb8973a0216a8556c4ad4",
+  "generated_at": "20260905T015209Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -470,8 +470,12 @@
       "canonical": "skills/servicepow-skeptic/references/audit-honesty.md"
     },
     "servicepow-static-ads/SKILL.md": {
-      "sha256": "7691ddf877a29900603488bf8465a079fc645fd0f74a387f2291026e19dc65ed",
+      "sha256": "f290fb6c1d7bd7eff2c25c29e2736f512d9fdcaf0bd6e4ca34d3a242d9db668a",
       "canonical": "skills/servicepow-static-ads/SKILL.md"
+    },
+    "servicepow-static-ads/references/canva-copy-fit-gate.md": {
+      "sha256": "afd7c687e1d6773ff43b0942883f58f9798da55dcecd62a94733c1f78577be89",
+      "canonical": "skills/servicepow-static-ads/references/canva-copy-fit-gate.md"
     },
     "servicepow-static-ads/references/layout-and-hierarchy.md": {
       "sha256": "99be6a97016c022743b54ff6ec52d36f70a0e6688faf83c373bd4e59b29dccd9",
@@ -486,8 +490,12 @@
       "canonical": "skills/servicepow-static-ads/references/static-qa-gates.md"
     },
     "servicepow-static-ads/scripts/README.md": {
-      "sha256": "76dd17f9b79378fc456280d31bc2fd22ca57314525cb288b7acb6cf88c9c0e40",
+      "sha256": "37213ab22cb363cb6dba88dec70190d7ba8f4358fa6017fa7e3f5b446caeb395",
       "canonical": "skills/servicepow-static-ads/scripts/README.md"
+    },
+    "servicepow-static-ads/scripts/servicepow_canva_fit.py": {
+      "sha256": "bd39bd8f49e3a2de2b519a38b98d04cce46c50a3edc04a763d2e4c5b4a4e7e6d",
+      "canonical": "skills/servicepow-static-ads/scripts/servicepow_canva_fit.py"
     },
     "servicepow-static-ads/scripts/servicepow_static_compose.py": {
       "sha256": "56dfd13c0100c49b4fcbd4b321ffc0d6a9a9211360a1f2f9922fa666336441f7",

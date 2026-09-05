@@ -86,6 +86,18 @@ law in `references/layout-and-hierarchy.md` · the placement matrix in
 12. **DELIVERY + LEARNING.** Export set + manifests + gate receipts to the client KB
     deliverables area; which hooks/layouts drove results feeds back when placements run.
 
+## TEMPLATE-BOUND EDITING — the Canva channel
+
+A second, narrower path for statics that must stay client-editable: a human instantiates an
+approved Service Pow Brand Template into a design; this skill replaces the client-specific
+text inside an editing transaction and decides commit or cancel with the copy-fit gate
+(`references/canva-copy-fit-gate.md`, tool `scripts/servicepow_canva_fit.py`). The gate reads
+the geometry back before any commit and refuses wrapping, container growth, safe-zone breaches
+and new overlaps; on refusal it cancels the transaction and offers shorter copy. It never
+changes size, position or copy on its own. Everything committed this way is still a draft
+until steps 6, 8 and 9 above have run on it. Runtime facts for the connected account live in
+the deployment's operations procedure, not here.
+
 ## DECISION RULES
 
 - **Text is typographic. Always.** If a viewer must read it, a model must not paint it.

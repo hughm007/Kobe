@@ -9,7 +9,7 @@ tags: [connectors, canva, static, bake-off, regression]
 ---
 # Connector Phase 3/3 — Canva controlled bake-off
 
-**State 2026-09-04: §4 step 2 executed read-only → Outcome B.** Read access PROVEN; zero brand
+**State 2026-09-04 (late): the template-bound editing test showed `read-design` with an open transaction DOES expose element geometry and formatting — the Outcome A data path exists via a transaction (mutating-class read). Recorded in the register; the gated-lane verdict stands until the owner rules on a transaction-based adapter.** Earlier the same day: **§4 step 2 executed read-only → Outcome B.** Read access PROVEN; zero brand
 kits/templates/autofill designs; manifest-grade geometry reachable only through an editing
 transaction → REJECTED for the gated lane, PROVISIONAL candidate for the ungated handoff use.
 Verdict and evidence live in `connector-register.md` and `knowledge/EVIDENCE-INDEX.md`; nothing

@@ -52,3 +52,9 @@ Typography study rerouted to the local composer path (test-scoped renderer, cano
 connector-verified unique + mark thumbnail; duplicate kAHUQs_27AM deleted and #B9D9E6→#B9D0E6
 corrected by owner; unnamed default kAHUQtGS0Bs untouched. Palettes/fonts/logo are OWNER/UI-VERIFIED
 only — connector cannot inspect kit contents. No Brand Template. Baseline NOT advanced.
+2026-09-04 Canva template-bound editing test → PROVISIONAL. Brand Template EAHUResUDmY published
+(source design converted, kit association unverified); auto draft creation BLOCKED by permissions
+(twice, incl. after reconnect); owner instantiated DAHUSZ8nCr8 manually; connector replace_text exact
++ formatting-preserving; transaction read exposes full geometry; text boxes auto-grow on wrap
+(headline overlapped support, CTA wrapped); sizes are points (px×0.75). Copy-fit gate added to
+canonical (servicepow_canva_fit.py + reference + tests/canva_fit_test.py, 8/8). Baseline NOT advanced.

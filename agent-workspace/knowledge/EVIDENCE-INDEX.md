@@ -40,14 +40,18 @@ Governing law: `.claude/skills/_servicepow/policies/baseline-and-regression.md`.
 | Model-rendered readable text: 3/3 defective | reftest RESULT + router |
 | Built-in generation audio | owner verdict; audio decoupled (audio-director law) |
 | Realistic mood B-roll as advertising (owner 4/10) | run9-hardening record + Run 10 root-cause analysis |
+| **Canva automatic draft creation from Brand Template `EAHUResUDmY` — BLOCKED by permissions** (do not re-attempt without a Canva-side permission change) | `create-brand-template-draft` refused "User does not have permission to access brand template" 2026-09-04, twice — before and after the owner disconnected/reconnected the connector with team integration access confirmed. Publish works; read-back and draft do not. Scope unnamed by Canva help |
+| **Unconstrained copy replacement in a Canva template reflows the layout** | captured page documents `tests/fixtures/canva/before.json` → `after-fail.json`: headline 228.8→347.8 px (3 lines, overlaps support at y=470); CTA chip 99.9→177.9 px (label wrapped). Now caught by `servicepow_canva_fit.py` (regression `tests/canva_fit_test.py`) |
 | **Canva as a gated static-production path — Outcome B, REJECTED 2026-09-04** (do not re-probe to rediscover) | Phase 3/3 §4 step 2 read-only probe per `operations/connector-phase-3-canva-bakeoff.md`. Connected; read access PROVEN (7 read-only calls, zero permission/scope errors); 34 tools = 16 read-only + 18 mutating/output-producing. Account: zero brand kits, zero brand templates, zero autofill-capable designs. Read-only path yields readable text only — manifest-grade geometry/font/color exists but only via an editing transaction (mutating-class), so BC-52 cannot be machine-measured without mutation → REJECTED for the gated lane by the spec's pre-committed §2 rule. Exact-pixel export supported by schema, not exercised. Probe design: `DAHRoaLJd4w`, 1 page, 794×1123, empty dataset; personal content withheld. **Authoring side confirmed 2026-09-04 from schemas (no mutation):** no blank-design creation path; no font-family parameter in any edit operation; weight limited to normal/bold — the connector cannot author a typographic static, only edit within a template. Trial economics and the 2026-10-01 decision deadline are in the register row |
 
 ## PROVISIONAL (patterns, not rules — counts per the 1/2/3 evidence ladder)
 Illustrated-lane reference-chaining continuity (2/2) · isolated-object references transfer
 identity not interaction (1 valid observation) · Seed Audio "Grady" voice fits timing
-windows (owner ear NOT yet ruled) · Swipekit value (UNTESTED) · **Canva as an ungated
-client-editable handoff surface** (PROVISIONAL *candidate* only — not tested, not routed; see the
-FAILED table for the gated-lane verdict).
+windows (owner ear NOT yet ruled) · Swipekit value (UNTESTED) · **Canva template-bound editing (human
+instantiates the Brand Template, Claude replaces text inside a transaction, gate decides
+commit/cancel) — PROVISIONAL, 1 successful test 2026-09-04 on `DAHUSZ8nCr8`:** exact,
+formatting-preserving `replace_text`; transaction read exposes full geometry/formatting; gate
+tool + regression in canonical. Not routed to client work until a second independent run.
 
 ## Cold-clone recovery — RESOLVED 2026-09-03
 A plain `git clone` of **any** of the three repos' default branches now lands on the current
