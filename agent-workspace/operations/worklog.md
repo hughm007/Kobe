@@ -1343,3 +1343,40 @@ pointed at from decision 0006 as evidence, not as a ruling.
 
 Floor re-run and held. Baseline not advanced: an isolation fix protects the multi-client property
 but does not raise what video, website or static can do. Canva still not connected.
+
+---
+
+## 2026-09-06 — Canva template-bound editing: second independent run → PROVEN
+
+**Did:** Ran the owner's controlled two-phase test on a fresh owner-instantiated design
+(`DAHUcEAAcO0`, from Brand Template `EAHUResUDmY`). Phase A had to refuse: the three longer
+replacements reflowed the headline to three lines (228.8→347.8 px, overlapping the support copy)
+and wrapped the CTA (99.9→177.9 px); the copy-fit gate failed it (44 passed / 3 failed), the
+transaction was cancelled, and the after-cancel page document hashed identical to the before-state.
+Phase B had to pass: shorter copy held every height, the gate passed 47/0, the commit went through,
+and the committed page read back identical to the gated after-state with the eyebrow and meta text
+untouched. Nothing exported, published, shared or deleted; no other design, template or kit touched;
+no browser automation. Evidence filed as
+[`receipts/2026-09-06-canva-template-bound-run-2/`](receipts/2026-09-06-canva-template-bound-run-2/RECEIPT.md).
+
+**Decided (owner, applied):** the copy-fit gate is a mandatory blocking check for this lane; the
+human-instantiates / Claude-edits lane moves PROVISIONAL → PROVEN on this second independent run;
+automatic draft creation stays FAILED/BLOCKED and was not re-attempted. Register score 6 → 7 —
+the evidence moved it, and the auto-draft block keeps it below the other PROVEN connectors. The
+Canva row also had six cells in a five-column table since the 2026-09-04 append (its next-gate text
+sat in an overflow cell); repaired to five, dropping only the superseded "earns PROVISIONAL before
+2026-10-01" sentence.
+
+**Learned:** three connector facts, now in [`canva-procedure.md`](canva-procedure.md) — `updated_at`
+moves on a read-only call; the persisted thumbnail can serve a stale pre-commit render; locator ids
+are stable across UI instantiations of the same template.
+
+**Baseline:** floor re-run in full, held exactly (numbers quoted from tool output in the run
+ledger). Canonical untouched at `b196d85`. **Not advanced** — connector promotion is §4 governance,
+as with Drive and Vercel; a baseline advance is the owner's ruling, not a session's.
+
+**Open:** the owner's trial decision by 2026-10-01 (this lane now has evidenced value); decision
+0006; the PENDING OWNER DATA list; gated-lane adapter (a) still unruled.
+
+**Next:** the first real client use of the lane runs `canva-procedure.md` end to end, with the dual
+quality gate, claims and brand law after the commit.

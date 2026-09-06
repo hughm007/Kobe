@@ -1,0 +1,18 @@
+=== PHASE B COMMITTED-STATE VERIFICATION ===
+B3 gated after-state page sha256 : b6cc2b5a67e6c02e79fae3fb2367e3b05df1a2c63ba58b7bb314ffae8e452ff9
+C2 committed read-back page sha256: b6cc2b5a67e6c02e79fae3fb2367e3b05df1a2c63ba58b7bb314ffae8e452ff9
+COMMITTED PAGE == GATED AFTER-STATE (byte-identical canonical JSON): True
+
+per-element: clean-before -> committed
+  LBWszQQNwwW37nf9 shape geometry(top/left/width/height) SAME [702.0,54.0,599.0,99.888] formatting SAME text EXACT-NEW=OK -> "LET'S TALK"
+  LBvLXwHrH28jPBY7 text  geometry(top/left/width/height) SAME [97.0,54.0,600.0,33.400] formatting SAME text UNCHANGED=OK -> 'SERVICE POW / TYPOGRAPHY STUDY'
+  LBlQwnhrnVWQ2LZt text  geometry(top/left/width/height) SAME [174.0,54.0,738.0,228.800] formatting SAME text EXACT-NEW=OK -> 'Marketing built to work.'
+  LBmcZwj8JwvLWMxx text  geometry(top/left/width/height) SAME [470.0,54.0,774.0,166.600] formatting SAME text EXACT-NEW=OK -> 'Strategy and production, connected through one measurable system.'
+  LBZQ0Vkvj5hPmZrM text  geometry(top/left/width/height) SAME [940.0,54.0,544.0,33.400] formatting SAME text UNCHANGED=OK -> 'THE FRAME / CONTROLLED TYPE TEST'
+  height float repr: CTA shape 99.88799999999999 (before) vs 99.888 (after/committed) — same value to 1e-9; other elements identical repr
+dims/background/isEditable identical: True
+persisted plain-read text lines: ["LET'S TALK", 'SERVICE POW / TYPOGRAPHY STUDY', 'Marketing built to work.', 'Strategy and production, connected through one measurable system.', 'THE FRAME / CONTROLLED TYPE TEST']
+persisted text == expected (CTA, eyebrow, headline, support, meta): True
+persisted updated_at: 1788713908
+
+COMMITTED-STATE: PASS — exact copy and geometry

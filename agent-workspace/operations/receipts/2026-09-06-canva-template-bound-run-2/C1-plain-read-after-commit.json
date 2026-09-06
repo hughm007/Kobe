@@ -1,0 +1,31 @@
+{
+ "page_metadata": [
+  {
+   "id": "PBG5d0ZbZDw9hHMQ",
+   "index": 1,
+   "page_number": 1,
+   "dimensions": {
+    "width": 1080,
+    "height": 1080
+   },
+   "design_type": "unknown"
+  }
+ ],
+ "design_metadata": {
+  "id": "DAHUcEAAcO0",
+  "title": "Copy of TEST-DISPOSABLE — Service Pow Editorial Frame 1080sq v1",
+  "owner": {
+   "user_id": "oUY_SnvM74QIV77agHl9nM",
+   "team_id": "oBY_SfnifLj2FiwXPYAPtE"
+  },
+  "created_at": 1788712816,
+  "updated_at": 1788713908,
+  "page_count": 1,
+  "design_types": [
+   "unknown"
+  ],
+  "urls": "<per-call share links stripped from the receipt>"
+ },
+ "design_content": "LET'S TALK\nSERVICE POW / TYPOGRAPHY STUDY\nMarketing built to work.\nStrategy and production, connected through one measurable system.\nTHE FRAME / CONTROLLED TYPE TEST",
+ "thumbnail_note": "persisted-state thumbnail URL carried hash:1337921774 with fallbackstale=T and rendered the PRE-commit image at read time (render lag); text field above is the persisted content"
+}

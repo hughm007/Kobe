@@ -1,0 +1,19 @@
+=== PHASE A RETURN-TO-CLEAN VERIFICATION ===
+A1 before-A page sha256 : 5946fbb0e01d1bbb985214dfd8d113384d24cb21147767f1d9427f958908dea1
+B1 after-cancel page sha256: 5946fbb0e01d1bbb985214dfd8d113384d24cb21147767f1d9427f958908dea1
+A3 edited (uncommitted) sha256: 71366a5d34588aed90fcba7851676c5ed497778e6f1de9d7596cb089e52e822e (differs, as it must)
+FULL PAGE DOCUMENT IDENTICAL (geometry, formatting, text, background, nineSlice): True
+edited doc != clean doc: True
+plain read text identical: True
+plain read page_metadata identical: True
+  metadata id identical: True
+  metadata title identical: True
+  metadata owner identical: True
+  metadata created_at identical: True
+  metadata page_count identical: True
+  metadata design_types identical: True
+  metadata urls (per-call share links) identical: False
+  metadata updated_at: 1788713087 -> 1788713599 (delta 512s)
+  thumbnail content hash in URL: before 'hash:-1261005525' / after 'hash:-1261005525' -> identical render
+
+RETURN-TO-CLEAN: PASS — exact

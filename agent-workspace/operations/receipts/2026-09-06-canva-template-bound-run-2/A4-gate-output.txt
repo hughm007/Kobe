@@ -1,0 +1,50 @@
+PASS  dims: 1080x1080
+PASS  element-set: 5 before / 5 after
+PASS  A:geometry:top:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'START YOUR PROJECT': 702.0 -> 702.0
+PASS  A:geometry:left:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'START YOUR PROJECT': 54.0 -> 54.0
+PASS  A:geometry:width:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'START YOUR PROJECT': 599.0 -> 599.0
+PASS  C:safe-zone:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'START YOUR PROJECT': box [54, 702, 653, 880] vs safe [54,54,1026,1026]
+PASS  E:formatting:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'START YOUR PROJECT': unchanged
+PASS  F:edited-text:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'START YOUR PROJECT': exact
+PASS  A:geometry:top:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': 97.0 -> 97.0
+PASS  A:geometry:left:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': 54.0 -> 54.0
+PASS  A:geometry:width:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': 600.0 -> 600.0
+PASS  B:growth:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': 33.4 -> 33.4
+PASS  C:safe-zone:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': box [54, 97, 654, 130] vs safe [54,54,1026,1026]
+PASS  E:formatting:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': unchanged
+PASS  F:unedited-text:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': unchanged
+PASS  A:geometry:top:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing systems built to p': 174.0 -> 174.0
+PASS  A:geometry:left:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing systems built to p': 54.0 -> 54.0
+PASS  A:geometry:width:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing systems built to p': 738.0 -> 738.0
+PASS  C:safe-zone:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing systems built to p': box [54, 174, 792, 522] vs safe [54,54,1026,1026]
+PASS  E:formatting:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing systems built to p': unchanged
+PASS  F:edited-text:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing systems built to p': exact
+PASS  A:geometry:top:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy, creative, and prod': 470.0 -> 470.0
+PASS  A:geometry:left:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy, creative, and prod': 54.0 -> 54.0
+PASS  A:geometry:width:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy, creative, and prod': 774.0 -> 774.0
+PASS  B:growth:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy, creative, and prod': 166.6 -> 166.6
+PASS  C:safe-zone:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy, creative, and prod': box [54, 470, 828, 637] vs safe [54,54,1026,1026]
+PASS  E:formatting:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy, creative, and prod': unchanged
+PASS  F:edited-text:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy, creative, and prod': exact
+PASS  A:geometry:top:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': 940.0 -> 940.0
+PASS  A:geometry:left:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': 54.0 -> 54.0
+PASS  A:geometry:width:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': 544.0 -> 544.0
+PASS  B:growth:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': 33.4 -> 33.4
+PASS  C:safe-zone:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': box [54, 940, 598, 973] vs safe [54,54,1026,1026]
+PASS  E:formatting:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': unchanged
+PASS  F:unedited-text:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': unchanged
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'START YOUR PROJECT'~PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'START YOUR PROJECT'~PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing systems built to p': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'START YOUR PROJECT'~PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy, creative, and prod': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'START YOUR PROJECT'~PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU'~PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing systems built to p': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU'~PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy, creative, and prod': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU'~PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing systems built to p'~PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy, creative, and prod'~PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': clear
+FAIL  B:growth:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'START YOUR PROJECT': 99.9 -> 177.9 px — copy wrapped/container grew; budget ≈ 10 chars for 'START YOUR PROJECT' (18 now)
+FAIL  B:growth:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing systems built to p': 228.8 -> 347.8 px — copy wrapped/container grew; budget ≈ 23 chars for 'Marketing systems built to perform.' (35 now)
+FAIL  D:overlap:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing systems built to p'~PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy, creative, and prod': new overlap
+
+CANVA-FIT: FAIL (44 passed, 3 failed) — CANCEL TRANSACTION
+gate exit code: 1

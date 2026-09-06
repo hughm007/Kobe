@@ -1,0 +1,50 @@
+PASS  dims: 1080x1080
+PASS  element-set: 5 before / 5 after
+PASS  A:geometry:top:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'LET'S TALK': 702.0 -> 702.0
+PASS  A:geometry:left:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'LET'S TALK': 54.0 -> 54.0
+PASS  A:geometry:width:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'LET'S TALK': 599.0 -> 599.0
+PASS  B:growth:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'LET'S TALK': 99.9 -> 99.9
+PASS  C:safe-zone:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'LET'S TALK': box [54, 702, 653, 802] vs safe [54,54,1026,1026]
+PASS  E:formatting:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'LET'S TALK': unchanged
+PASS  F:edited-text:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'LET'S TALK': exact
+PASS  A:geometry:top:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': 97.0 -> 97.0
+PASS  A:geometry:left:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': 54.0 -> 54.0
+PASS  A:geometry:width:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': 600.0 -> 600.0
+PASS  B:growth:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': 33.4 -> 33.4
+PASS  C:safe-zone:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': box [54, 97, 654, 130] vs safe [54,54,1026,1026]
+PASS  E:formatting:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': unchanged
+PASS  F:unedited-text:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': unchanged
+PASS  A:geometry:top:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing built to work.': 174.0 -> 174.0
+PASS  A:geometry:left:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing built to work.': 54.0 -> 54.0
+PASS  A:geometry:width:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing built to work.': 738.0 -> 738.0
+PASS  B:growth:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing built to work.': 228.8 -> 228.8
+PASS  C:safe-zone:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing built to work.': box [54, 174, 792, 403] vs safe [54,54,1026,1026]
+PASS  E:formatting:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing built to work.': unchanged
+PASS  F:edited-text:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing built to work.': exact
+PASS  A:geometry:top:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy and production, con': 470.0 -> 470.0
+PASS  A:geometry:left:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy and production, con': 54.0 -> 54.0
+PASS  A:geometry:width:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy and production, con': 774.0 -> 774.0
+PASS  B:growth:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy and production, con': 166.6 -> 166.6
+PASS  C:safe-zone:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy and production, con': box [54, 470, 828, 637] vs safe [54,54,1026,1026]
+PASS  E:formatting:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy and production, con': unchanged
+PASS  F:edited-text:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy and production, con': exact
+PASS  A:geometry:top:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': 940.0 -> 940.0
+PASS  A:geometry:left:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': 54.0 -> 54.0
+PASS  A:geometry:width:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': 544.0 -> 544.0
+PASS  B:growth:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': 33.4 -> 33.4
+PASS  C:safe-zone:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': box [54, 940, 598, 973] vs safe [54,54,1026,1026]
+PASS  E:formatting:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': unchanged
+PASS  F:unedited-text:PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': unchanged
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'LET'S TALK'~PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'LET'S TALK'~PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing built to work.': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'LET'S TALK'~PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy and production, con': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBWszQQNwwW37nf9:shape:'LET'S TALK'~PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU'~PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing built to work.': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU'~PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy and production, con': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBvLXwHrH28jPBY7:text:'SERVICE POW / TYPOGRAPHY STU'~PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing built to work.'~PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy and production, con': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBlQwnhrnVWQ2LZt:text:'Marketing built to work.'~PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': clear
+PASS  D:overlap:PBG5d0ZbZDw9hHMQ-LBmcZwj8JwvLWMxx:text:'Strategy and production, con'~PBG5d0ZbZDw9hHMQ-LBZQ0Vkvj5hPmZrM:text:'THE FRAME / CONTROLLED TYPE ': clear
+
+CANVA-FIT: PASS (47 passed, 0 failed) — COMMIT ALLOWED
+gate exit code: 0

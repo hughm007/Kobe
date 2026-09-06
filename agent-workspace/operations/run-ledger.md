@@ -58,3 +58,16 @@ only — connector cannot inspect kit contents. No Brand Template. Baseline NOT 
 + formatting-preserving; transaction read exposes full geometry; text boxes auto-grow on wrap
 (headline overlapped support, CTA wrapped); sizes are points (px×0.75). Copy-fit gate added to
 canonical (servicepow_canva_fit.py + reference + tests/canva_fit_test.py, 8/8). Baseline NOT advanced.
+2026-09-06 Canva template-bound editing, second independent run → PROVEN (human-instantiates / Claude-edits
+lane only). Owner decisions applied: copy-fit gate = MANDATORY BLOCKING; no advance above PROVISIONAL without
+this test; auto draft creation stays FAILED/BLOCKED (not re-attempted). Fresh owner-instantiated design
+DAHUcEAAcO0. Phase A required refusal: gate FAIL (44 passed, 3 failed — headline 228.8→347.8 px + new overlap
+on support, CTA 99.9→177.9 px) → cancel → after-cancel page sha256-identical to before. Phase B required pass:
+gate PASS (47 passed, 0 failed) → commit → committed page sha256-identical to the gated after-state, copy exact,
+geometry/formatting frozen, eyebrow + meta untouched. No export/publish/share/delete, no other design, no browser
+automation. Receipt operations/receipts/2026-09-06-canva-template-bound-run-2/. Floor re-run, held exactly:
+validator 15 check groups passed, 0 failures (both deployments in sync); web PASS 24/0, bad FAIL 1/14; static
+PASS 41/0, planted FAIL 56/6, BC-54 pair FAIL 40/1 diff=0.029; ingest isolation PASS 19/19; canva-fit PASS 8/8;
+video preflight PASS 6/6. Canonical untouched (b196d85); cold sims not run (no doctrine change, step 9 rule).
+BASELINE NOT ADVANCED — connector promotion is §4 governance, not a §3 lane-capability gain (precedent: Drive,
+Vercel PROVEN without advance); a baseline advance is the owner's ruling.
