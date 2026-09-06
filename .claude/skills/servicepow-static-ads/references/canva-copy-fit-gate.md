@@ -23,7 +23,7 @@ height. Nothing in the edit call reports this. The geometry must be read back an
 4. **Run the gate:** `servicepow_canva_fit.py --before <before.json> --after <after.json>
    --expect <expect.json>` (expect = `{locator_id: exact new text}`). It checks:
    A geometry frozen (top/left/width) · **B no height growth** (wrapping or container growth)
-   · C every box inside the safe zone (54 px on a 1080 canvas; pass `--safe` otherwise) ·
+   · C every essential box inside the safe zone (54 px on a 1080 canvas; pass `--safe` otherwise) ·
    **D no new overlap** between any two boxes · E formatting frozen · F edited text exact and
    every other element byte-identical.
 5. **Any FAIL → do not commit.** `edit-design` `finalize: cancel`. Report the failing element,
@@ -41,11 +41,24 @@ brand marks (`../../_servicepow/policies/brand-assets.md`), client facts (BC-55)
 dual quality gate still apply to anything that leaves for a client. A committed Canva edit
 is a draft until those run.
 
+## Bleed imagery — the one narrow exception (owner ruling 2026-09-06)
+Text-free background photography, colour fields, gradient masks, shadows and decorative bleed
+elements may touch or cross the canvas edge; the gate reports them as `C:bleed-exempt` instead
+of failing them. Nothing else is relaxed: any element carrying text (headline, support, eyebrow,
+CTA chip, legal) must stay inside the zone, and the logo or any essential subject detail is
+passed by locator id via `--essential` so it is never exempt even though it carries no text.
+Two checks stay human because the page document cannot see pixels: bleed imagery must not
+reduce the measured contrast under any text box below the layout law's floor, and it must not
+hide the plumbing problem the ad exists to show. Record the essential ids in the deployment's
+Canva procedure alongside the template's element map.
+
 ## Units
 Canva's editor size field is in **points**; transaction reads report `fontSize` in pixels.
 On a 1080×1080 design, target px × 0.75 is the point size to type in the editor.
 
 ## Regression
 `tests/fixtures/canva/` holds the captured before/after documents from the first test;
-`tests/canva_fit_test.py` proves the gate refuses that case (both growths, the new overlap)
-and allows a same-length case. It runs in the regression harness.
+`tests/canva_fit_test.py` proves the gate refuses that case (both growths, the new overlap),
+allows a same-length case, exempts a text-free full-bleed photo, and still refuses a headline,
+CTA, logo or legal line off the zone (`tests/fixtures/canva/bleed-*.json`). It runs in the
+regression harness.

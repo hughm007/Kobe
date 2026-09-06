@@ -53,6 +53,14 @@ Receipt of the second run: `receipts/2026-09-06-canva-template-bound-run-2/RECEI
    prove the exact return to the before-state. File before/after page documents, gate output and
    the verification under `operations/receipts/` (strip per-call share links; keep ids and times).
 
+## Safe zone and bleed imagery (owner ruling 2026-09-06)
+The gate's check C now exempts text-free elements that touch or cross the canvas edge
+(background photography, colour fields, gradient masks, shadows). Everything that carries text
+stays inside the 54 px zone, and the logo is passed as `--essential <locator id>` so it is never
+exempt. Human checks that ride with every bleed layout: measured contrast under each text box
+stays above the layout law's floor, and the bleed never hides the plumbing problem. Canonical
+proof: `tests/canva_fit_test.py` cases 9-14 (`tests/fixtures/canva/bleed-*.json`).
+
 ## Units
 Canva's size field is **points**. On a 1080×1080 design, **target px × 0.75** gave the correct
 point size (92 px → 69, 44 → 33, 56 → 42, 28 → 21). Transaction reads report `fontSize` in px.

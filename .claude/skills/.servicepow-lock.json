@@ -1,8 +1,8 @@
 {
   "profile": "ad-production",
   "canonical_root": "/Users/wyattjohnson/servicepow-ai-os",
-  "canonical_commit": "b196d855d09ab94b7f0fb8973a0216a8556c4ad4",
-  "generated_at": "20260905T015209Z",
+  "canonical_commit": "e7d0ea12df9a53ae7c426deecb23f566f1462e24",
+  "generated_at": "20260906T200720Z",
   "skills": [
     "servicepow-campaign-director",
     "servicepow-client-intelligence",
@@ -474,7 +474,7 @@
       "canonical": "skills/servicepow-static-ads/SKILL.md"
     },
     "servicepow-static-ads/references/canva-copy-fit-gate.md": {
-      "sha256": "afd7c687e1d6773ff43b0942883f58f9798da55dcecd62a94733c1f78577be89",
+      "sha256": "65c53695ed488fd3f2ddbfb3cbe860f9e40c6826d815331b821a55a1dc1ddf61",
       "canonical": "skills/servicepow-static-ads/references/canva-copy-fit-gate.md"
     },
     "servicepow-static-ads/references/layout-and-hierarchy.md": {
@@ -494,7 +494,7 @@
       "canonical": "skills/servicepow-static-ads/scripts/README.md"
     },
     "servicepow-static-ads/scripts/servicepow_canva_fit.py": {
-      "sha256": "bd39bd8f49e3a2de2b519a38b98d04cce46c50a3edc04a763d2e4c5b4a4e7e6d",
+      "sha256": "103813f033db1d40805ea79d727a680a402e6ea77587be1ecece25ec8c55f392",
       "canonical": "skills/servicepow-static-ads/scripts/servicepow_canva_fit.py"
     },
     "servicepow-static-ads/scripts/servicepow_static_compose.py": {

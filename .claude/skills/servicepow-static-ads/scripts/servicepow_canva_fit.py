@@ -4,6 +4,7 @@ Canva editing transaction. Stdlib only.
 
 usage: servicepow_canva_fit.py --before before.json --after after.json
                                [--safe 54] [--expect expect.json]
+                               [--essential LOCATOR_ID[,LOCATOR_ID...]]
   before.json / after.json : the `page` object returned by `read-design` (with
                              open_transaction) and by `edit-design` — or the full
                              read-design response (design_content.pages[0] is used).
@@ -14,7 +15,13 @@ Checks (all must pass before a commit is allowed):
   A  geometry frozen   top / left / width unchanged for every element
   B  no growth         height unchanged — a taller text box means the copy wrapped; a taller
                        shape means its container grew around wrapped text
-  C  safe zone         every box inside the safe margin (default 54 px on a 1080 canvas)
+  C  safe zone         every ESSENTIAL box inside the safe margin (default 54 px on a 1080
+                       canvas). Narrow exception (owner ruling 2026-09-06): an element that
+                       carries NO text and BLEEDS (touches or crosses a canvas edge) is a
+                       background photo / colour field / mask and is exempt; it is reported
+                       as C:bleed-exempt. Anything with text is never exempt, and ids passed
+                       via --essential (the logo, any essential subject detail) are never
+                       exempt even when text-free. Bleed elements still pass A/B/E/F.
   D  no new overlap    no pair of boxes intersects that did not intersect before
   E  formatting frozen fontSize / weight / style / color / align / lineHeight /
                        letterSpacing / fontRef unchanged
@@ -55,9 +62,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--before", required=True); ap.add_argument("--after", required=True)
     ap.add_argument("--safe", type=float, default=54.0); ap.add_argument("--expect")
+    ap.add_argument("--essential", default="", help="locator ids (or trailing element ids) never exempt from the safe zone, e.g. the logo")
     a = ap.parse_args()
     B = load_page(a.before); A = load_page(a.after)
     expect = json.loads(open(a.expect).read()) if a.expect else {}
+    essential = {x.strip() for x in a.essential.split(",") if x.strip()}
     W, H = A["dimensions"]["width"], A["dimensions"]["height"]
     lo, hi_x, hi_y = a.safe, W - a.safe, H - a.safe
     bi = {e["id"]: e for e in B["elements"]}; ai = {e["id"]: e for e in A["elements"]}
@@ -78,7 +87,13 @@ def main():
             detail += f" px — copy wrapped/container grew; budget ≈ {budget} chars for '{text_of(e)}' ({len(text_of(e))} now)"
         gate(f"B:growth:{L}", not grew, detail)
         x0, y0, x1, y1 = box(e)
-        gate(f"C:safe-zone:{L}", x0 >= lo - TOL and y0 >= lo - TOL and x1 <= hi_x + TOL and y1 <= hi_y + TOL, f"box {[round(v) for v in (x0,y0,x1,y1)]} vs safe [{lo:.0f},{lo:.0f},{hi_x:.0f},{hi_y:.0f}]")
+        loc0 = e.get("locator_id", eid)
+        bleeds = x0 <= TOL or y0 <= TOL or x1 >= W - TOL or y1 >= H - TOL
+        is_essential = loc0 in essential or eid in essential
+        if not text_of(e).strip() and bleeds and not is_essential:
+            gate(f"C:bleed-exempt:{L}", True, f"text-free bleed element, box {[round(v) for v in (x0,y0,x1,y1)]} — safe zone not applied (owner ruling 2026-09-06); contrast under text and visibility of the plumbing problem remain human checks")
+        else:
+            gate(f"C:safe-zone:{L}", x0 >= lo - TOL and y0 >= lo - TOL and x1 <= hi_x + TOL and y1 <= hi_y + TOL, f"box {[round(v) for v in (x0,y0,x1,y1)]} vs safe [{lo:.0f},{lo:.0f},{hi_x:.0f},{hi_y:.0f}]" + (" (essential — never exempt)" if is_essential else ""))
         gate(f"E:formatting:{L}", fmt_of(e) == fmt_of(b), "unchanged" if fmt_of(e) == fmt_of(b) else f"{fmt_of(b)} -> {fmt_of(e)}")
         loc = e.get("locator_id", eid)
         if loc in expect: gate(f"F:edited-text:{L}", text_of(e) == expect[loc], "exact" if text_of(e) == expect[loc] else f"got '{text_of(e)}'")

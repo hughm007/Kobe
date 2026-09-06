@@ -71,3 +71,8 @@ PASS 41/0, planted FAIL 56/6, BC-54 pair FAIL 40/1 diff=0.029; ingest isolation 
 video preflight PASS 6/6. Canonical untouched (b196d85); cold sims not run (no doctrine change, step 9 rule).
 BASELINE NOT ADVANCED — connector promotion is §4 governance, not a §3 lane-capability gain (precedent: Drive,
 Vercel PROVEN without advance); a baseline advance is the owner's ruling.
+2026-09-06 (later) Copy-fit gate narrow amendment, OWNER-RULED: text-free bleed elements exempt from the
+safe-zone check (reported C:bleed-exempt); text, CTA, legal and --essential ids (logo) never exempt.
+Canonical: gate + reference + tests/canva_fit_test.py 8→14 cases (bleed pass + five off-zone refusals)
++ regression.md step 7. Installed to Kobe; validator 15 check groups passed, 0 failures. No other rule
+relaxed. BASELINE NOT ADVANCED (owner: not for this amendment alone).
