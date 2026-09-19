@@ -1,0 +1,323 @@
+ServicePOW V3 Website — Build Audit for Claude
+Code
+Reviewed: localhost:4312 (the active V3 dev build), 2026-09-19 Reviewer: Claude, via live
+browser inspection (visual screenshots, rendered DOM, computed CSS, console, network,
+structured-data extraction) Purpose: Hand this to Claude Code, running against the actual
+servicepow-v2 repo / v3 branch, as a punch list to fix and a status check against the fixes
+Karl already approved on 2026-09-18.
+
+
+How to use this document
+Every finding below quotes the exact visible copy on the page it's on, so you can grep the repo
+for that string to find the right component fast. Where I could verify something in the rendered
+DOM or computed styles (not just visually), I've marked it VERIFIED with the evidence.
+Everything else is a visual read of the live build and should be treated as OBSERVED, not
+code-inspected — confirm against source before editing.
+
+No screenshot image files could be exported from this review session (the
+Chrome-extension browser tool this session used has no file-export path to disk in this
+environment — I checked directly, it's not a shortcut I skipped). The screenshots I took are
+visible earlier in this chat thread if you want to eyeball them. But since you'll be running against
+the live localhost:4312 build yourself, the more useful thing I can hand you is what's below:
+exact copy, exact computed values, and exact DOM-level bugs, tied to specific sections —
+that's more actionable for editing code than a picture would be anyway. If you want pixel
+references, load localhost:4312 yourself and follow the section order below.
+
+
+
+
+Bottom line
+The build is a legitimate, well-typeset B2B site — strong hierarchy, consistent Archivo/Hanken
+Grotesk pairing, disciplined ivory/navy/gold palette, no fabricated stats, no console errors, no
+broken requests. It is not yet at the "futuristic, screaming we are the future" bar Karl set (the
+@webloved TikTok reference, Spline/Three.js-style interaction quality, Apple-level polish). Right
+now it reads as a clean, competent trade-services marketing site. The motion is basic
+CSS/scroll transitions, not the choreographed "disciplined spectacle" he asked for — the three
+intended wow-moments (growth system, ad-testing showcase, converging final CTA) exist as
+content sections, not as spectacle. That's the biggest gap between what's built and what he's
+asked for, and it's a design/animation investment, not a bug fix.
+Below that ambition-level gap, there are concrete, fixable issues — several of which are things
+Karl already approved fixing on 2026-09-18 and that are still not shipped in this build. Fix
+those first; they're free wins with a standing sign-off.
+
+
+
+
+Priority 1 — Approved fixes from 2026-09-18 that are still
+outstanding
+Karl signed off on a conversion-first audit list on 2026-09-18. Checking this build against it:
+
+
+ Approved item                    Status in this build              Evidence
+
+ Wire GA4 + lead webhook          Still not done                    No gtag, dataLayer, or
+                                                                    GTM script anywhere in the
+                                                                    page; no analytics network
+                                                                    calls fired on load. VERIFIED
+                                                                    via
+                                                                    window.dataLayer/windo
+                                                                    w.gtag check and full page
+                                                                    HTML scan.
+
+ Re-export upscaled portfolio     Partially done                    Most sampled images (16 on
+ images at 2×                                                       the homepage) are served at
+                                                                    ≥1× their display size. At
+                                                                    least one work-sample
+                                                                    thumbnail is still upscaled —
+                                                                    natural resolution (101×218)
+                                                                    is smaller than its rendered
+                                                                    size (139×300), i.e. it's being
+                                                                    stretched past its native
+                                                                    resolution and will look soft.
+                                                                    VERIFIED via
+                                                                    naturalWidth/clientWid
+                                                                    th comparison. Worth a full
+                                                                    pass on /work and the
+                                                                    homepage "Ad Creative" grid
+                                                                    specifically, not just this one
+                                                                    instance.
+
+ Drop the Company field from      Not done                          The /growth-audit form
+ the audit form                                                     still has a "Company
+Approved item                Status in this build   Evidence
+
+                                                    (optional)" field. It was
+                                                    marked optional, not
+                                                    removed. OBSERVED
+                                                    directly on the form.
+
+Sharpen the hero subhead     Appears done           Current subhead: "Brand,
+                                                    website, and ads for
+                                                    plumbing, HVAC, electrical,
+                                                    and roofing companies —
+                                                    built for the moment a
+                                                    homeowner is deciding who
+                                                    to call." — specific, names
+                                                    the trades, names the
+                                                    moment. Looks like this
+                                                    shipped.
+
+Reframe the single-client    Appears done           Homepage and /about both
+proof                                               frame 911 Drain explicitly as
+                                                    one real project ("An
+                                                    emergency plumbing brand,
+                                                    built from zero") rather than
+                                                    implying a client roster. No
+                                                    fabricated numbers found
+                                                    anywhere on the pages
+                                                    reviewed.
+
+Fix the duplicate sys-flow   Still broken           The "How It Connects"
+DOM                                                 staircase section's content is
+                                                    genuinely duplicated in the
+                                                    DOM — not a visual illusion.
+                                                    The text node "Get found"
+                                                    appears twice, and both
+                                                    copies are visible/rendered
+                                                    (offsetParent !== null
+                                                    on both), not one hidden for
+                                                    mobile/accessibility.
+                                                    VERIFIED via direct DOM
+                                                    query. This likely means the
+                                                    scroll-driven staircase
+                                                    animation and a static
+                                                    fallback (or two versions of
+ Approved item                    Status in this build             Evidence
+
+                                                                   the same component) are
+                                                                   both mounting at once. Worth
+                                                                   checking whether this is
+                                                                   intentional (e.g., one instance
+                                                                   is meant to be sr-only or
+                                                                   display:none at this
+                                                                   breakpoint and isn't) or a
+                                                                   leftover duplicate component.
+
+ Add FAQPage /                    Half done                        FAQPage and
+ LocalBusiness schema                                              Organization JSON-LD
+                                                                   are both present and valid.
+                                                                   LocalBusiness schema is
+                                                                   missing — only those two
+                                                                   @types exist on the page.
+                                                                   For a trades-marketing
+                                                                   business whose own funnel
+                                                                   starts with "Get found," this is
+                                                                   worth adding to
+                                                                   ServicePOW's own site, not
+                                                                   just something it sells clients.
+                                                                   VERIFIED via JSON-LD
+                                                                   script scan.
+
+
+Recommendation: Before any new design work, close out the Company field removal, the
+LocalBusiness schema, and the duplicate DOM — all three are small, scoped, and already
+signed off. The GA4/webhook wiring is the one with the most business cost sitting undone (no
+lead or traffic data at all right now).
+
+
+
+
+Priority 2 — New issues found in this pass
+1. Hero carousel mockups render at partial opacity on first paint. On a couple of loads, the
+three phone-mockup images in the hero (911 Drain, TripNerd) rendered visibly ghosted/faded —
+well below full opacity — rather than their normal full-contrast state. This reads as an
+entrance-animation (fade-in) that either fires inconsistently or whose "resting" state is too faint.
+Karl's standing creative rule is explicit: avoid ghosted/faded imagery. OBSERVED, and
+inconsistent across reloads — worth reproducing deliberately (throttle CPU/network, reload a
+few times) rather than assuming it's a one-off. If it's a scroll- or load-triggered opacity animation,
+check its initial/rest opacity value and easing.
+
+2. Hero H1 line-height is smaller than its own font-size. Computed styles: font-size:
+43.578px, line-height: 40.963px on the four-line hero heading ("Good work / deserves /
+to get / noticed."). Line-height under font-size is unusual — it can look fine at this exact viewport
+and still crowd or clip ascenders/descenders at other zoom levels, font-loading states, or if the
+copy changes length. VERIFIED via computed style. Recommend setting line-height to a small
+positive multiple of font-size (e.g. 0.95–1.05em, explicitly, not smaller than 1) rather than
+whatever's currently producing a sub-1 ratio.
+
+3. Primary CTA button text renders at 11.5px. The "Free Growth Audit" nav button computed
+to font-size: 11.52px, padding: 10px 16px, border-radius: 0. That's small for a
+primary conversion button — it reads fine in caps at this size but is below the ~14px floor
+typically recommended for interactive text, and this is the button carrying the entire site's
+primary conversion action. VERIFIED via computed style. Worth bumping a step and confirming
+the tap target is still comfortable on mobile (the nav button is even more cramped at the 390px
+viewport).
+
+4. Awkward empty gap in the mobile hero. At 390×844, there's a large blank vertical gap
+(roughly 350–460px in scroll position) between the hero's "CAROUSEL / WEBSITE / STATIC
+AD" strip and the "SELECTED WORK" heading that follows. Nothing renders there — it isn't a
+loading image, it's dead space. OBSERVED. This is the kind of specific thing that adds up to the
+"overlong mobile experience" Karl flagged in the earlier design review; worth checking the
+mobile spacing/margin tokens around that section boundary specifically rather than a general
+mobile pass.
+
+5. /pricing retainer tiers may have changed since the last documented review, worth
+confirming as intentional. This build shows exactly two Monthly Growth System tiers — Social
+Launch ($1,200-tier, from the earlier notes) and Lead Engine (from $2,500/mo, marked "our
+recommended starting point"). The previously-documented third tier, "Full Pipeline," does not
+appear anywhere in the current page (checked the rendered HTML directly, not just the visible
+viewport). If dropping Full Pipeline was a deliberate scope simplification, this looks like a clean
+resolution to the "lacked distinct documented scope" problem flagged earlier. If it was dropped
+by accident, that's a real gap — confirm which before treating it as fixed. VERIFIED absence in
+HTML; the reason for its absence is not verifiable from the browser.
+
+6. Below-the-fold sections may not be present in the initial server-rendered HTML. On a
+fresh /pricing load, document.body.innerText returned only ~3,000 characters — just
+the hero and "Foundations" tier cards — while the full page (confirmed by scrolling) is much
+longer. The rest of the page's text wasn't in the DOM until scrolled into view. If this is
+implemented as client-side mount-on-scroll rather than server-rendered-and-then-animated-in,
+it's worth checking: content that isn't in the initial HTML response is invisible to anything that
+doesn't execute JS and scroll (this matters for SEO crawlers and for the FAQPage/future
+LocalBusiness schema actually matching what's rendered). OBSERVED, worth a source
+check rather than a guess — Next.js SSRs by default, so this would have to be a deliberate
+client-only conditional render.
+
+
+
+
+Priority 3 — The ambition gap (design/animation, not bugs)
+This is the honest read on "make it look more professional and advanced," separate from
+bug-fixing:
+
+   -​   What's working: consistent type system (Archivo for display, Hanken Grotesk for body),
+        a real palette (warm ivory rgb(246,244,239) background, near-black navy text, gold
+        #F4B318 for action), sharp 0-radius geometry that reads intentional rather than default,
+        real work shown instead of fabricated stats, monospace micro-labels (STAGE 01 — 07,
+        WHO WE SERVE) giving it a technical/systems feel that fits "for the trades, built like
+        software."
+   -​   What's missing against the stated bar: the reference points Karl gave (the
+        @webloved TikTok, Parker & Sons "Not Your Average Joe," Apple-tier polish,
+        Spline/Three.js-style scenes) all imply choreographed motion and depth — parallax, 3D,
+        scroll-linked reveals with real easing craft, a cursor or interaction layer that feels alive.
+        What's here is mostly static layout with basic transitions. The "How It Connects"
+        staircase is the one section attempting a signature moment, and it's currently
+        undermined by the duplicate-DOM bug above. The "Ad Creative" section and the final
+        CTA ("Start with a clear plan") are both plain content blocks, not the "wow moments" the
+        three-moment plan called for.
+   -​   Recommendation: treat this as a separate, larger scope item from the bug list above —
+        it's an animation/interaction design pass (GSAP ScrollTrigger, since that's already
+        cleared for commercial use per your build notes), not a two-line fix. I'd sequence it after
+        Priority 1 and 2 are closed, since right now the foundation has real cracks (duplicate
+        DOM, no analytics, a form field that was supposed to be gone) that would undercut any
+        amount of animation polish layered on top.
+
+
+
+
+Site map (confirmed via nav + routing)
+   -​   / — home (7 sections: hero, selected work, ad creative, what we do, how it connects,
+        working with ServicePOW, key questions, growth-audit CTA, footer)
+   -​   /work — full case studies (911Drain case study confirmed live)
+   -​   /services — five disciplines breakdown (Brand, Websites, Advertising & creative,
+        Social & Google presence, Strategy & audits)
+   -​   /trades — not opened in this pass; referenced from /services as "trade playbooks"
+   -​   /pricing — Foundations (one-time) + Monthly Growth System (retainer) tiers,
+        cards/compare toggle
+   -​   /about — company narrative, built around the 911Drain 2:30am story
+   -​   /growth-audit — lead form (name, email required; company, phone optional;
+        website/GBP URL field with a "don't have one yet" checkbox; trade dropdown;
+        city/service area; free-text problem field)
+
+
+
+
+Section-by-section copy reference (homepage)
+For locating components quickly. Exact copy as rendered:
+
+Hero: "BRAND · WEBSITES · ADS — FOR THE TRADES" / "Good work deserves to get
+noticed." / subhead as quoted above / CTAs "Get a free growth audit" and "See our work" /
+ticker strip "BUILT FOR PLUMBING · HVAC · ELECTRICAL · ROOFING · RETAINERS ARE
+MONTH-TO-MONTH · LAUNCH TIMELINE AGREED IN WRITING AT KICKOFF"
+
+Selected work: "SELECTED WORK" / "A brand, a website, and an ad — built as one." / 911
+Drain case study with tags BRAND / WEBSITE / WRAP DESIGN / LAUNCH AD
+
+Ad creative: "AD CREATIVE" / "Static ads and social carousels, built to the platform." / 911
+Drain 1:1 set + TripNerd 4:5 carousel (three of six slides shown)
+
+What we do: "WHAT WE DO" / "Websites, ads, and content that get you chosen." / five
+numbered rows (Brand, Websites, Advertising & creative, Social & Google presence, Strategy &
+audits)
+
+How it connects: "HOW IT CONNECTS" / "Most trade marketing is a pile of vendors. Yours
+should be one system." / seven-stage staircase (Get found → Get attention → Understand the
+offer → Build trust → Make contact easy → Stay visible → Measure interest) — this is the
+section with the duplicate-DOM bug
+
+Working with ServicePOW: "WORKING WITH SERVICE POW" / "Audit. Build. Launch.
+Improve." / four numbered stages on a navy background
+
+Key questions: "KEY QUESTIONS" / "Straight answers, before you ask." / 5-item accordion
+FAQ, first item open by default
+
+Final CTA + footer: "FREE · NO STRINGS ATTACHED" / "Start with a clear plan." / gold
+full-bleed CTA block / standard footer with Explore and Who We Serve link columns
+Technical findings reference (for direct verification in code)
+  -​   Body font: "Hanken Grotesk", "Hanken Grotesk Fallback". Headings:
+       Archivo, "Archivo Fallback".
+  -​   Body background: rgb(246, 244, 239). Hero H1 color: rgb(27, 33, 41).
+  -​   CTA button: bg rgb(244, 179, 24), text rgb(10, 17, 28), border-radius:
+       0px, font-weight: 600, font-size: 11.52px.
+  -​   favicon: /favicon.svg. canonical: https://servicepow.com/ (pointing at
+       production domain from the dev build — expected, just confirming it's not pointing
+       somewhere wrong).
+  -​   JSON-LD @types present: Organization, FAQPage. LocalBusiness absent.
+  -​   16 <img> elements on the homepage, 0 missing alt text — good baseline accessibility
+       hygiene.
+  -​   No console errors and no failed/404 network requests on / (dev-only HMR/React
+       DevTools log lines are expected noise, not issues).
+  -​   window.dataLayer / window.gtag: both undefined. No googletagmanager
+       reference anywhere in the page source.
+
+
+
+
+What I'd check next (not verifiable from the browser alone)
+  -​   Whether LEAD_WEBHOOK_URL (flagged as never-supplied in the last documented
+       review) has since been set, and where /growth-audit form submissions actually go
+       right now.
+  -​   Whether the "Full Pipeline" pricing tier was deliberately cut or is missing by accident.
+  -​   Lighthouse scores against Karl's stated targets (performance/accessibility/best
+       practices/SEO ≥90-95) — I didn't run Lighthouse in this session; recommend running it
+       directly against localhost:4312 before calling any of the above done.
+
