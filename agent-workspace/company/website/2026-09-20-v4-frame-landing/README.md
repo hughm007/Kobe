@@ -1,23 +1,61 @@
 ---
-title: "Service POW website V4 — THE FRAME on white (landing page rebuild)"
+title: "Service POW website V4 — POW: the real logo on cream (landing page rebuild + polish)"
 type: report
 client: internal
 owner: Karl
-status: preview build on a branch — awaiting owner review; NOT deployed (BC-50)
+status: polished preview on a branch — owner review via artifact; NOT deployed (BC-50); live preview blocked on Vercel GitHub App access
 created: 2026-09-20
 updated: 2026-09-21
-tags: [company, website, v4, landing-page, design-system, the-frame, preview]
+tags: [company, website, v4, landing-page, design-system, pow, logo, preview]
 repo: hughm007/servicepow-v2
 branch: claude/v4-frame-landing
-commit: 38b9e44
+commit: 46f0207  # 38b9e44 = the blue/Fraunces first pass, superseded
 inputs:
   - "Owner brief 2026-09-20: 'too bland, don't like the landing page, could look cleaner'; references uxstudioteam.com, majortom.com"
   - "servicepow-site-current_2.zip (V3 screenshots only — no source), README-FOR-CLAUDE-CODE.md, capture-screenshots.mjs"
   - "servicepow_explainer_compressed.mp4 (2:02, 1920×1080 H.264 + AAC, 24.4 MB)"
   - "2026-09-19-v3-progression/plan.md (the decision memo this build acts on)"
+  - "Owner ruling 2026-09-21: the supplied logo (cream ground, black 'Service', gold starburst 'POW') and its colour scheme are the identity to follow; 'polish the website and give me an access link'"
+review: https://claude.ai/artifact/Dd9xr2cowYQFhDeczaP3kt
 ---
 
-# Service POW website V4 — THE FRAME on white
+# Service POW website V4 — POW: the real logo on cream
+
+## 2026-09-21 — polish pass (commit `46f0207`), supersedes the sections that say "blue"
+
+Karl supplied the logo and ruled it the identity to follow. The build was re-skinned from the
+recorded blue/Fraunces direction to the logo's own scheme. **Owner decision 1 below is therefore
+resolved in favour of the logo** — `visual-identity.md` and decision 0007 now need amending to
+match, not the other way round. **FACT:** the record still describes the blue pass; the table in
+"What was built" is superseded by this block where the two differ.
+
+| Axis | Now | Source |
+|---|---|---|
+| Ground | paper `#FFFAEE` · raised `#FFFFFF` · sunk `#F6F0DD` · hairlines `#E6DFCB` · inverted `#151618` / `#0D0E0F` | sampled from the logo file |
+| Ink | `#111213` / `#3A3C40` / `#63666C` | logo black |
+| Accent | gold `#FDB611` (hover `#E6A300`) **only** as: primary CTA (ink label), active nav underline, focus on dark, the one route line in the system diagram, the burst. Never as text on cream. | brand-assets policy; axe contrast |
+| Logo | the real PNG, never redrawn (`public/brand/logo.png`; `logo-on-dark.png` = same file with the "Service" lettering recoloured cream, burst untouched); favicon + touch icon are crops | brand-assets policy |
+| Type | **Archivo** variable, width axis (hero wdth 114 / wght 800) · Work Sans text · JetBrains Mono labels | matches the logo's grotesk |
+| Signature | `.frame` two-corner bracket, unchanged | |
+
+Everything else in the build (page order, claims removed, form, motion, explainer) is as recorded
+below. Re-verified after the re-skin: build + `tsc` clean; Playwright 9/9 (overflow, console,
+axe on `/`, `/pricing`, `/growth-audit`, `/work/911drain`, form fallback); all 12 routes
+re-captured at 1440 and 390 — `evidence/` now holds the **gold** renders (the blue crops were
+replaced).
+
+**Access link delivered:** a review page with every route at both widths, what changed, what was
+verified, and the live-preview instructions — https://claude.ai/artifact/Dd9xr2cowYQFhDeczaP3kt
+(private to Karl's account until shared from the page).
+
+**Live preview — blocked, one owner action.** Vercel `create_git_project` returned
+`repo_not_found`: the Vercel GitHub App is not granted access to the private
+`hughm007/servicepow-v2`, and no Vercel token exists in this environment. File-based deploys
+were rejected (the 7.3 MB explainer would have to pass through the model as base64). Fix: Vercel →
+Add New → Project → Import → "Adjust GitHub App permissions" → add `servicepow-v2` → import with
+defaults, **no domain attached** (decision 0006). After that every push to the branch previews
+automatically. Deploy receipt (BC-48) and Lighthouse remain owed until then.
+
 
 ## Read this first
 
@@ -115,9 +153,9 @@ Chromium); the explainer's captions (none exist — WCAG 1.2.2, `CONTENT-NEEDED.
 
 ## Owner decisions this build makes visible
 
-1. **Type and colour.** This is the identity of record (Direction A + decision 0007). If Karl
-   prefers V3's Archivo/gold, it is a three-line swap in `layout.tsx` + `globals.css` — but then
-   0007 and `visual-identity.md` must be amended, not silently overridden again.
+1. **Type and colour — RESOLVED 2026-09-21.** Karl ruled for the logo's cream/black/gold with
+   Archivo. Applied in `46f0207`. Open follow-up: amend decision 0007 and `visual-identity.md` to
+   the logo scheme so the record stops describing blue/Fraunces.
 2. **$1,500/mo.** The entry tier now sits at the documented floor. Confirm, or log an approval for
    a lower number.
 3. **911drain naming** (unchanged from the memo).
@@ -128,8 +166,11 @@ Chromium); the explainer's captions (none exist — WCAG 1.2.2, `CONTENT-NEEDED.
 
 ## Files
 
-- `evidence/` — before (V3 screenshots the owner supplied) and after (V4 renders at 1440 and 390).
-- Source: `hughm007/servicepow-v2` @ `claude/v4-frame-landing` (`38b9e44`); design note at
-  `docs/06-THE-FRAME-ON-WHITE.md`; asset gaps at `CONTENT-NEEDED.md`.
+- `evidence/` — before (V3 screenshots the owner supplied) and after (the **gold** V4 renders:
+  full home at 960 wide, page tops at 1200 wide, phone tops at 390).
+- Review page (all 12 routes, both widths, full length): https://claude.ai/artifact/Dd9xr2cowYQFhDeczaP3kt
+- Source: `hughm007/servicepow-v2` @ `claude/v4-frame-landing` (`46f0207`; the blue first pass is
+  `38b9e44`); design note at `docs/06-THE-FRAME-ON-WHITE.md` (rewritten for the POW scheme);
+  asset gaps at `CONTENT-NEEDED.md`.
 - The 24 MB explainer master is not committed anywhere (repo policy: large binaries stay out);
   the 7.3 MB web encode is in `public/brand/`.
