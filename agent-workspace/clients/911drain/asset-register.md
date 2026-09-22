@@ -5,7 +5,7 @@ client: 911drain
 owner: APPROVER
 status: active
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-22
 tags: [assets, register, brand, compliance]
 ---
 
@@ -41,6 +41,9 @@ Canonical location (all rows): `servicepow-v2/public/work/911drain/`
 | SP-911-008 | WEB SCREENSHOT | `site-desktop.jpg` | dae674b9 | yes (screenshot) | UNKNOWN | n/a | n/a | no | Proof-of-work only |
 | SP-911-009 | WEB SCREENSHOT | `site-mobile.jpg` | ec3f3774 | yes (screenshot) | UNKNOWN | n/a | n/a | no | Proof-of-work only |
 | SP-911-010 | POSTER | `commercial-poster.jpg` | fe1278f7 | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | no | Poster frame for 007 |
+| SP-911-011 | STATIC AD | `servicepow-v2/public/work/ads/911drain-hard-water.webp` (1080x1350) | — | **NO — owner confirmed AI-made or AI-edited, 2026-09-22** | Owner-supplied | n/a | n/a | no | Shown on the ServicePOW site with an AI-imagery note and "claims are 911 Drain LLC's own". Claims inside (24/7, licensed) still need the signed claims sheet (SP-911-024) before launch |
+| SP-911-012 | STATIC AD | `servicepow-v2/public/work/ads/911drain-clogged-drain.webp` (1080x1350) | — | **NO — owner confirmed AI-made or AI-edited, 2026-09-22** | Owner-supplied | n/a | n/a | no | As SP-911-011 |
+| SP-911-013 | STATIC AD | `servicepow-v2/public/work/ads/911drain-emergency-plumber.webp` (1080x1350) | — | **NO — owner confirmed AI-made or AI-edited, 2026-09-22** | Owner-supplied | n/a | n/a | no | **Van livery reads "DRAIN & SEWER REPAIR" (SP-911-023).** Held off the ServicePOW site with the wrap (SP-911-002) — `case-studies.json` → `holds.sewer-scope` — owner decision 2026-09-22 |
 
 ## Non-file assets that still bind production
 | ID | Type | Value | Restriction |
