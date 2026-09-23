@@ -1435,3 +1435,20 @@ quality gate, claims and brand law after the commit.
 **Open**
 - Owner watch with sound (LB29); which Wyatt take; the same compliance flags as v3b plus the
   clubhouse-as-real-building note; faint alignment line on the ball.
+
+## 2026-09-23 (evening) — TripNerd 17th-hole advert v5: owner's final corrections, client-ready candidate
+
+**Done**
+- Rebuilt as v5 (30.2 s) to the owner's rounds 3 and 4: 4K drive-up; one continuous 10 s walk from the real lounge photo to the front row; static putter; single stroke; real-speed ball drop; from the raised cup to the end card one clip; everyone in the 360 on their feet facing the green; a golf commentator (preset voice, fictional "Tremaine", hushed controls) from the putter close-up to the make; one generated roar source placed by its measured attack; the owner's cloned voice on the end card only; "Every eye on one putt." removed; grain removed and CRF 15.
+- Two masters uploaded (v5b recommended, v5 first pass). Record: `clients/tripnerd/deliverables/2026-09-23-17th-hole-v5.md`; build script v5 (multi-track audio), shot JSON, sources in `17th-hole-v3-build/`. v4 marked superseded.
+- Spend 616.90 credits (8,777.94 → 8,161.04); 4K and long-clip unit costs priced from the runtime first.
+- Research workflow (8 agents) delivered commentary anatomy, roar mix plan and the seed_audio controls in time to shape v5b; its prompt panel, judge and skeptic had not returned at render time.
+
+**Decided**
+- 360: chose the take with everyone standing and facing the green (backs/profiles) over two fuller-turn takes that showed seated guests mid-roar or a laughing generated face near camera.
+- Commentary: fictional player name (rights), Barrett preset, four lines, burst then lay out.
+- Kept three captions; dropped the putt caption per the owner.
+
+**Open**
+- Owner watch with sound (nobody here can hear it); confirm the "me" voice is the owner's; the usual paid-media flags (AI disclosure, guest consent, tournament mark on the cup).
+- Fold in the skeptic's findings when the workflow returns.

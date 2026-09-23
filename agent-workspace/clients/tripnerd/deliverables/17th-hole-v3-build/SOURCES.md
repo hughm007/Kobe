@@ -41,3 +41,22 @@ Result host `https://d8j0ntlcm91z4.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq
 
 Real references imported from Wikimedia Commons for the golf beats (CC licences, reference use only, nothing is composited into the cut):
 7768abcc Golf_ball_2015.JPG (CC BY 4.0) · 51c6af69 Golf_ball_near_hole.jpg (CC0) · edfd8706 DZ6_2506 putter setup (CC BY-SA 4.0) · dbf8b05a TPC_Sawgrass_17.jpg · 70c2aa08 Golfball.jpg · 32591000 Players 2014 17th-hole crowd panorama · a3f2ce3e TPC at Sawgrass clubhouse.
+
+## v5 additions (2026-09-23, evening)
+
+| File | Beat | Higgsfield asset |
+|---|---|---|
+| d81.mp4 | drive-up, Kling 3.0 4K image-to-video from frame 0.8 s of c11 (uploaded as image 5be1254f) | hf_20260923_174325_4405d626-f682-4f66-8845-7b62b2602f1a.mp4 |
+| d82.mp4 / d83.mp4 | drive-up alternates: Kling 4K second prompt; Gemini 1.1 4K (unused) | hf_20260923_174325_2b7c1439-…; hf_20260923_174326_60d3536c-… |
+| w0.mp4 | continuous 10 s walk: lounge → balcony → front row (start_image 982bb467, refs a9f0153a, 3f9237a2, d56a7fb6) | hf_20260923_173732_9b3f3833-7380-4006-9f75-a7eee1c25b53.mp4 |
+| w1.mp4 / w2.mp4 | 5 s walk alternates (lounge→balcony; rows→seat), unused | hf_20260923_173728_97880feb-…; hf_20260923_173728_cfe40a88-… |
+| b1.mp4 | ball drop at real speed, Gemini 1.1 1080p (used from 0.4 s) | hf_20260923_173728_adf7904a-df4d-4454-9118-9ea20dd6ffd0.mp4 |
+| b2.mp4 | ball toward camera alternate (unused) | hf_20260923_173728_7afd04e1-… |
+| c1.mp4 | cup thrust + turn, everyone on their feet facing the green, settles on the gallery and green (used) | hf_20260923_173729_0075f47f-deb6-4b74-a3fd-63ef0506220c.mp4 |
+| c2.mp4 / c3.mp4 | 360 alternates (seated guests mid-roar; a laughing face near camera), unused | hf_20260923_173728_fd449936-…; hf_20260923_174647_057f9c88-… |
+| cm_h1..h4.wav | commentator, preset "Barrett" (d603a8cd-…), hushed controls | hf_20260923_17534x_{d55bb9a9, 27713156, b7765e03, 8e5cfd52}-….wav |
+| cm_barrett_*.wav, cm_grady_*.wav, cm_desmond_*.wav, cm_L3.wav | plain-delivery commentator takes (v5 first pass / unused) | 17444x–17501x wavs |
+| roar1.mp3 | gallery roar, mirelo_text_to_audio 12 s (used; attack at 4.4 s) | hf_20260923_174334_9c47dd20-c0b9-40ca-b35b-fb76614b4f01.mp3 |
+| roar2.mp3 | roar alternate, double attack (unused) | hf_20260923_174334_d3a578b5-… |
+| me1.wav / me2.wav | end-card line, element voice "me" (d1d23c03-…) | hf_20260923_174334_d4207fbf-…; …_3945769d-… |
+| v5.mp4 / v5b.mp4 | masters | ac6363bb-e670-4e90-be5d-b89c1f5a1b90.mp4 / 779af833-2d95-44e9-bf04-24d7569580ca.mp4 (upload host) |

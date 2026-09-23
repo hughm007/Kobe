@@ -38,6 +38,7 @@ Grouped by theme. Add themes as they emerge — don't force a learning into a he
 doesn't fit.
 
 ### Advertising
+- [2026-09-23 — Broadcast commentary and a gallery roar in an AI cut](learnings/2026-09-23-hushed-commentary-and-one-roar.md): seed_audio loudness/speech/pitch controls, one measured roar source placed by its attack, faster-whisper transcript QC, and a sandbox shell gotcha.
 - [2026-08-25 — Checks beat prose](learnings/2026-08-25-checks-beat-prose.md): the v8
   "2:07 AM" kill showed binary blocking checks catch what quality prose never does;
   the 31-check gate exists because scores alone passed a dead ad.
