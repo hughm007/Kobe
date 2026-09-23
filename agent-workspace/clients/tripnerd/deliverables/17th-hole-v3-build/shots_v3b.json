@@ -1,0 +1,20 @@
+{"out":"TRIPNERD_17_suiteon17_9x16_30s_v3b.mp4","logo":"logo.png","vo":"vo.wav","vo_at":21.3,"vo_gain":1.8,
+"shots":[
+{"src":"s01.mp4","in":0.0,"out":2.6,"vol":0.7,"lp":3500},
+{"src":"s02.mp4","in":0.4,"out":3.9,"vol":0.8,"lp":3500},
+{"src":"s03.mp4","in":0.0,"out":2.9,"vol":0.55,"lp":2500},
+{"src":"s05.mp4","in":1.3,"out":4.4,"vol":0.65,"lp":3000},
+{"src":"s06.mp4","in":1.0,"out":4.2,"vol":0.85},
+{"src":"s07.mp4","in":0.0,"out":5.0,"vol":1.0},
+{"src":"s08.mp4","in":0.4,"out":2.7,"vol":0.9,"asrc":"s07.mp4","ain":0.2},
+{"src":"s09.mp4","in":0.8,"out":3.2,"vol":0.85,"asrc":"s07.mp4","ain":2.4},
+{"src":"s10.mp4","in":1.0,"out":3.0,"vol":0.8,"asrc":"s07.mp4","ain":1.2}],
+"cues":[
+{"t0":0.3,"t1":2.4,"text":"Every golf fan\nknows this hole.","size":62,"y":0.62},
+{"t0":3.0,"t1":5.8,"text":"Almost none have\nseen it from here.","size":62,"y":0.62},
+{"t0":9.6,"t1":11.8,"text":"Every eye\non one putt.","size":62,"y":0.62},
+{"t0":15.6,"t1":17.4,"text":"When 17 goes off...","size":62,"y":0.62},
+{"t0":17.8,"t1":20.0,"text":"...you're right here.","size":62,"y":0.62},
+{"t0":20.6,"t1":22.5,"text":"Your suite. On 17.","size":76,"y":0.60},
+{"t0":23.0,"t1":26.7,"text":"Bring the people\nwho deserve it.","size":62,"y":0.62}],
+"endcard":{"dur":3.0,"line1":"Your suite. On 17.","line2":"Talk to a Nerd","line3":"tripnerd.com"}}
