@@ -14,7 +14,7 @@ supersedes: 2026-09-23-17th-hole-v5.md (method change: owner and agent lock each
 
 Working method from 2026-09-23 evening: one frame (one clip, 3–5 s) at a time, built, watched by the owner, corrected, locked, then the next. Nothing is assembled until all frames are locked.
 
-## Frame 1 — the hook (aerial of the island green) — PROPOSED v2 after realism review, awaiting owner lock
+## Frame 1 — the hook (aerial of the island green) — LOCKED 2026-09-23 (owner kept the recommended cut v2b: still 304 / Kling take 404, 3.3 s, both captions, ends wide)
 
 **Why this hook (agent's call between the two owner-approved options):** the muffled-roar-behind-the-door hook is audio-led, and most social viewing starts muted; the island green from the air is recognisable to a golf fan in under a second with the sound off, and environments plus camera moves are the models' strength. The muffled-roar idea is kept for frame 2 (the door) as a sound bridge.
 
@@ -30,7 +30,7 @@ QC frame strip: `…/b04e9b9c-ddab-46df-bf16-5a5c64b5f3c5.jpg`
 
 **Rules:** LB24 no marks generated (suites' banners plain); LB25 no faces (people are dots); LB30 real references drove the still; no claims.
 **Spend for frame 1:** 244 credits (8,161.04 → 7,917.04): 4 video takes at 4K/1080p, 3 stills, 3 exploratory takes.
-**Open on this frame:** owner watch of v2b (or v2a); caption wording and whether to keep captions on the hook at all; final length (3.0–3.5 s); whether the drone should end closer to the suites (a second take can start from the same still).
+**Locked as v2b.** Earlier open items, now closed by the lock: caption wording and whether to keep captions on the hook at all; final length (3.0–3.5 s); whether the drone should end closer to the suites (a second take can start from the same still).
 
 
 ### Frame 1 realism review (owner asked: "make sure there's no way you can make it better", 2026-09-23 evening)
@@ -52,6 +52,9 @@ QC frame strip: `…/b04e9b9c-ddab-46df-bf16-5a5c64b5f3c5.jpg`
 **Real footage search (FACT):** Adobe Stock has no TPC Sawgrass footage or stills (searched, generic courses only). Flickr aerials of the hole are all-rights-reserved or non-commercial. Wikimedia Commons has no video and no tournament-day aerial. Getty has editorial drone stills, unusable for an advert. So the frame stays generated and disclosed; real client footage would still replace it if TripNerd has drone of the hole.
 
 **Spend for the review:** 72 credits (7,917.04 → 7,845.04): 4 stills at 3 each, 2 Kling 4K takes at 30 each. Frame 1 total to date: 316 credits.
+
+## Frame 2 — the arrival (after the aerial) — IDEATION, five flow options put to the owner 2026-09-23
+See the owner message of this date; the log is updated once an option is chosen.
 
 ## Assets that carry over unchanged if the owner keeps them
 Door approach (real sign photo clip s01), 10 s continuous walk-in (w0), static putter (s03), single stroke (s05), real-speed ball drop (b1), cup thrust and turn (c1), commentator lines (Barrett preset, hushed controls), roar (roar1), owner end-card line (me1). Each will be re-presented as its own frame for lock.
