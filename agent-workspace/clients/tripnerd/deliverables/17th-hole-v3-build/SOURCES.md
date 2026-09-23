@@ -60,3 +60,20 @@ Real references imported from Wikimedia Commons for the golf beats (CC licences,
 | roar2.mp3 | roar alternate, double attack (unused) | hf_20260923_174334_d3a578b5-… |
 | me1.wav / me2.wav | end-card line, element voice "me" (d1d23c03-…) | hf_20260923_174334_d4207fbf-…; …_3945769d-… |
 | v5.mp4 / v5b.mp4 | masters | ac6363bb-e670-4e90-be5d-b89c1f5a1b90.mp4 / 779af833-2d95-44e9-bf04-24d7569580ca.mp4 (upload host) |
+
+## v6 frame 1 (hook) — 2026-09-23, frame-by-frame method
+
+| File | Beat | Higgsfield asset |
+|---|---|---|
+| still 7dbb2185 | frame 1 v1 still, Nano Banana 2 4K with three references (walkway too long, no bunker) | hf_20260923_184103_7dbb2185-2eab-47f9-95da-861f3338dec1.png |
+| k221.mp4 | frame 1 v1 take, Kling 3.0 4K from 7dbb2185 | hf_20260923_184638_d55620e3-418b-45d3-a85b-b953b3650723.mp4 |
+| f1_preview.mp4 | frame 1 v1 preview (superseded) | 789bcb9e-da27-4922-9c17-6d67a92dc671.mp4 (upload host) |
+| stills 301 / 302 | realism review, Nano Banana 2 4K, no references (accurate / dock-like walkway) | hf_20260923_191630_c13edb17-…png / hf_20260923_191629_52c82d24-…png |
+| stills 303 / 304 | realism review, Nano Banana 2 4K, four references (crowd on walkway / accurate, chosen) | hf_20260923_191716_0fc1c7e7-…png / hf_20260923_191717_c6ad90ac-d338-40ad-85d8-5765a6baa425.png |
+| k401.mp4 | Kling 3.0 4K take from still 301 (alternate) | hf_20260923_192243_7feba77f-ce59-4b2e-bcf6-9f2b20ae7b87.mp4 |
+| k404.mp4 | Kling 3.0 4K take from still 304 (recommended) | hf_20260923_192243_bb4eb9ba-2b0c-407b-8149-ecdc65821cbe.mp4 |
+| f1_preview_v2a.mp4 / f1_preview_v2b.mp4 | frame 1 v2 previews, 3.3 s, captions composited | c89d5283-7953-4c7c-9aa5-a7bfefd1ded3.mp4 / 7636b096-aa84-4962-939e-1f7257770019.mp4 (upload host) |
+| QC | still comparison; take frame sheets 401 / 404; preview QC strips | b30b9118-…jpg; 2c94bb16-…jpg / 18b9b39b-…jpg; cf28b6b1-…jpg (upload host) |
+| layout refs | stitched public satellite tiles (z17/z18/z19 first pass; z19/z20 re-centred), Commons contact sheets | 40609fe3, 734f17b0, f45d6817, ad4b9efe, 31348a51; b8547a8d, 94a84eb8 (upload host) |
+
+References (reference use only, nothing composited): e8f362f0 TournamentPlayersClub_Sawgrass17thHole.jpg (public domain) · 33fe5c97 / db720ce7 Players 2014 17th-hole photos (CC BY 2.0, watermark band cropped) · 075709df TPC_Sawgrass_17.jpg 2008 sunset (CC BY-SA 2.0) · satellite tiles (layout check only, not used in any generation that shipped except as reference 2 to stills 303/304).

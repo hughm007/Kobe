@@ -1,3 +1,4 @@
+- [2026-09-23 — Famous landmark: model memory beat references; satellite tile as the geometry check](learnings/2026-09-23-famous-landmark-model-memory-beats-references.md): for the TPC Sawgrass island green, text-only Nano Banana 2 stills had the right bunker and walkway while referenced stills imported crowd artefacts; a stitched satellite tile caught two layout errors that oblique-photo QC had missed.
 - [2026-09-23 — Reference-driven macro beat: three-model 720p test, Gemini won, units became drawings](learnings/2026-09-23-reference-driven-macro-beat-model-test.md): for a close-up physical beat, test Seedance / Gemini / Wan at 720p first; Gemini followed the cup references, and a measurement in its prompt was drawn as a label at 1080p.
 ---
 title: Knowledge Index

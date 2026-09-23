@@ -1452,3 +1452,17 @@ quality gate, claims and brand law after the commit.
 **Open**
 - Owner watch with sound (nobody here can hear it); confirm the "me" voice is the owner's; the usual paid-media flags (AI disclosure, guest consent, tournament mark on the cup).
 - Fold in the skeptic's findings when the workflow returns.
+
+## 2026-09-23 (late evening) — TripNerd 17th-hole v6: frame-by-frame method, frame 1 built and realism-reviewed
+
+**Done**
+- Owner changed the method: one frame at a time, locked together. Frame 1 hook chosen by the agent between two owner-approved options (island green from the air over the muffled-roar door; the door keeps the roar as frame 2's sound bridge).
+- Frame 1 v1 built (still-first, Kling 4K) and reported; owner asked for a five-minute realism pass with web references.
+- Realism pass: stitched public satellite tiles of the hole in the vendor sandbox and read them against the Commons photos; found two layout errors (walkway too long and wide, no front pot bunker). Four new stills, two Kling 4K takes, two previews (v2b recommended, v2a alternate). Record: `clients/tripnerd/deliverables/2026-09-23-17th-hole-v6-frame-log.md`; assets in `17th-hole-v3-build/SOURCES.md`.
+- Learning filed: model memory beat references for a world-famous landmark; satellite tile as the cheap geometry check (`knowledge/learnings/2026-09-23-famous-landmark-model-memory-beats-references.md`, indexed).
+- Spend: frame 1 v1 244 credits; review 72 credits (7,917.04 → 7,845.04). Two of the four stills went out without references by my mistake (6 credits); by luck they were the accurate ones, which is the learning.
+- Real-footage search: Adobe Stock, Flickr, Commons, Getty — nothing usable for an advert. Owner photo library: no Apple Photos connector; Google Drive is connected.
+
+**Open**
+- Owner lock of frame 1 (v2b or v2a; captions; length; end position). Then frame 2 (the suite door with the muffled roar).
+- This session's egress blocks Commons, Flickr and the CloudFront hosts from the shell; all fetching and viewing goes through the vendor sandbox and the Adobe preview tool.
