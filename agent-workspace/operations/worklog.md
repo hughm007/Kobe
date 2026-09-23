@@ -1380,3 +1380,29 @@ as with Drive and Vercel; a baseline advance is the owner's ruling, not a sessio
 
 **Next:** the first real client use of the lane runs `canva-procedure.md` end to end, with the dual
 quality gate, claims and brand law after the commit.
+
+## 2026-09-23 — TripNerd 17th-hole 30s advert v3b (cloud session) + Service Pow pricing rubric proposal
+
+**Done**
+- Pricing: market-researched client-facing pricing page published (private artifact
+  `https://claude.ai/artifact/FBsxESpEBvbBuTNPoRkBct`) and the proposal with seven owner
+  decisions written to `company/pricing-rubric-proposal-2026-09-22.md`. Floors in
+  `pricing-and-packaging.md` untouched. Three deviations flagged for Karl: paid-ad rights
+  included, Starter $2,500, ad-account management as a priced optional line.
+- TripNerd: rebuilt the 17th-hole suites advert to the owner's evening brief (crisp real
+  Hole 17, POV cup toast into a 360 of the real suite, celebration, end card, spoken close).
+  Master v3b in the Higgsfield account; record, build script, shot plan and source map in
+  `clients/tripnerd/deliverables/`. 9 Seedance clips + 3 voice takes generated (≈540 credits).
+- Old all-AI advert (AdvertV3.MOV) and the Mac media library were not reachable from the
+  cloud session; its beat structure was used from the handoff brief and a frame.
+
+**Decided**
+- Cut the generated golfer close-up (soft background twice, fake cap mark once); the golf
+  beats are grass-level, wide stroke and the drop, all with the far bank sharp.
+- Chose the 360 take that starts on the real POV photo over the references-only take.
+- Voice is a generic preset narrator; the two cloned voices in the account were not used.
+
+**Open**
+- Owner watch end to end with sound (nobody has heard the mix).
+- Guest consent, platform AI disclosure, tournament-mark licence position before paid media.
+- Pricing page conflicts with live servicepow.com packages (decision 0006) until reconciled.

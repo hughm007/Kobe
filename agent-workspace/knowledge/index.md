@@ -76,6 +76,8 @@ doesn't fit.
 
 ### Clients and process
 *None yet.*
+- [2026-09-23 — A vendor's cloud sandbox gives a cloud session hands and eyes](learnings/2026-09-23-vendor-sandbox-gives-a-cloud-session-hands-and-eyes.md):
+  the egress wall stands, but assembly can run in Higgsfield's own sandbox and QC frames come back through a connector that fetches public URLs; reused clips may carry no audio.
 
 ## Research
 
@@ -99,7 +101,7 @@ the section below.
 | The offer/price line gets the shortest hold | 2 (911 Drain price line · intro offer line) | Watching — a third promotes it into check 32's scope for burned text |
 | "Secondary-location" resolution misses (a fix applied at the named spot while other cells still assert the old answer) | 3 (911 Drain rounds 10, 14, 15) | **Due for promotion** — evidence in the 911 Drain campaign bible §14; needs its learning file written and a playbook line |
 | Flash-cut detector false-positives on multi-frame wipes | 2 (gate rounds 1 and 2) | Watching — harness fix proposed (P4) |
-| Build location must be chosen by where the heaviest inputs live | 1 ([build-where-the-assets-are](learnings/2026-08-31-build-where-the-assets-are.md)) | Forming — one measurement, but the measurement is unambiguous (half a build round spent on transport) |
+| Build location must be chosen by where the heaviest inputs live | 2 ([build-where-the-assets-are](learnings/2026-08-31-build-where-the-assets-are.md), [vendor-sandbox-gives-hands-and-eyes](learnings/2026-09-23-vendor-sandbox-gives-a-cloud-session-hands-and-eyes.md)) | Watching — second measurement from the other side: when the inputs live with the vendor, build in the vendor's sandbox |
 | The expensive gate belongs at publish, not on drafts | 1 ([first-artifact-in-ten-minutes](learnings/2026-08-31-first-artifact-in-ten-minutes.md)) | Forming — Owner-stated; changes the default order of work |
 
 ## Promoted to playbooks
