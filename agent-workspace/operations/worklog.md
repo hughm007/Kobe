@@ -1473,3 +1473,8 @@ quality gate, claims and brand law after the commit.
 - Chose the cut on the promise: frame 2 is the seat's view from the front row of the suite balcony, caption "Until now.", roar bridging the cut. Three text-only 4K stills, one Kling 4K take, frame-2 preview and a frame 1 → frame 2 flow reel uploaded. Record in the v6 frame log; assets in SOURCES.
 - Spend 39 credits (7,845.04 → 7,806.04 expected; verified in the report).
 - Open: owner lock of frame 2 (chair in or out, caption, push speed); then frame 3.
+
+## 2026-09-23 (late night) — TripNerd v7 draft with real client photos
+- Owner: frame 2 "still seems fake", asked for real client footage. Checked access honestly: no computer/Photos access; Google Drive has 29 TripNerd photos (Wyatt, 22 Sep), no event video. Pulled all 29 through the Drive connector (base64 tool results decoded locally), uploaded to Higgsfield, contact-sheeted.
+- Built v7 draft (30 s): locked frames 1–2, three real photos as Ken Burns shots (no AI on real pixels), putt beat, roar, end card with the real logo. Link and flags in the v6 frame log. No generation spend (balance 7,806.04).
+- Open: owner watch; guest consent for faces; venue framing; re-normalise loudness; then lock frames 3+ or re-cut.

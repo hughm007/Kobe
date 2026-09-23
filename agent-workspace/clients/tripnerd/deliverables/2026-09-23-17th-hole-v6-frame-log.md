@@ -70,6 +70,21 @@ QC frame strip: `…/b04e9b9c-ddab-46df-bf16-5a5c64b5f3c5.jpg`
 **Spend for frame 2:** 39 credits (3 stills at 3, one Kling 4K take at 30).
 **Open on this frame:** owner watch; keep the chair in shot or use the no-chair alternate (504, not yet animated); caption "Until now." wording; whether the rail should stay in frame longer (a gentler push is a second take from the same still).
 
+
+## v7 draft — real client photos in the cut (2026-09-23, night) — DRAFT, awaiting owner watch
+
+**Trigger:** owner said the seat frame "still kind of seems fake" and asked for real client footage, with access to their photos and computer.
+
+**Access, FACT:** no computer or Apple Photos access exists in this session (no Remote Control session, no Photos connector). Google Drive is connected and holds 29 TripNerd photos uploaded by Wyatt on 2026-09-22 (IMG_1899–IMG_2036, iPhone, 1536x2048), one branded review slide, the social-direction deck, and one 578 MB .mov from Dec 2025 beside a "Google Earth" folder (not pulled; too large for the connector path and probably not event footage). No event video exists on the Drive.
+
+**What the photos are:** a TripNerd hospitality house on a tournament week (branded table drape, private-party banner, bar with the course behind, buffet, guests with drinks on the porch and lawn). Two photos show tournament marks (IMG_1899 information cards, IMG_1985 banner) and are excluded. All 29 imported to Higgsfield (media ids in `slots_tn.json` in the scratchpad; contact sheets 5f556b0a, 8dde6275).
+
+**v7 draft (30.0 s):** `https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/89e2915b-a1f0-47c7-bb86-6742d5980383.mp4` · QC 1 fps `…/bf0282b8-1dec-41a6-b743-ac0d7ae19301.jpg` · first 8 s at 4 fps `…/8b9c9497-cbf9-488f-ae74-c4cde884e9b4.jpg`.
+Timeline: 0–3.3 frame 1 (locked) · 3.3–6.6 frame 2 · 6.6–9.1 REAL IMG_1901 branded table (push-in) · 9.1–11.4 REAL IMG_1915 bar with the course (pull-out) · 11.4–13.9 REAL IMG_1930 six guests with drinks, caption "Bring your people." · 13.9–15.4 putter (s03) · 15.4–18.4 stroke (s05) · 18.4–21.5 ball drop (b1) · 21.5–26.0 cup and 360 (c1) · 26.0–30.0 end card with the real logo file. Real photos are moved with a Ken Burns zoom in ffmpeg only, no AI touches the real pixels. Audio: roar swell across the frame 1→2 cut, commentator lines shifted +0.9 s from v5b, roar at 16.65, owner line at 26.9; −13.0 LUFS integrated, −1.3 dB peak, not yet re-normalised to −14/−1. Not heard (LB29).
+Build: `17th-hole-v3-build/build_v7.py` + `shots_v7.json` (Ken Burns "still" shots added to the v5 assembler).
+
+**Flags before this can ship:** (1) guest likeness: IMG_1930 shows six guests' faces; TripNerd must confirm consent or the shot swaps for a backs-only frame (IMG_2036, IMG_2033); (2) venue: the photos are from a different tournament week than the 17th-hole product; the cut presents them as "what a TripNerd trip looks like", not as the 17th suite; owner to confirm that framing; (3) the cup in c1 still carries a tournament mark (known from v5); (4) the "Until now." cue runs 3.8–6.5 on this cut.
+
 ## Assets that carry over unchanged if the owner keeps them
 Door approach (real sign photo clip s01), 10 s continuous walk-in (w0), static putter (s03), single stroke (s05), real-speed ball drop (b1), cup thrust and turn (c1), commentator lines (Barrett preset, hushed controls), roar (roar1), owner end-card line (me1). Each will be re-presented as its own frame for lock.
 
