@@ -77,3 +77,13 @@ Real references imported from Wikimedia Commons for the golf beats (CC licences,
 | layout refs | stitched public satellite tiles (z17/z18/z19 first pass; z19/z20 re-centred), Commons contact sheets | 40609fe3, 734f17b0, f45d6817, ad4b9efe, 31348a51; b8547a8d, 94a84eb8 (upload host) |
 
 References (reference use only, nothing composited): e8f362f0 TournamentPlayersClub_Sawgrass17thHole.jpg (public domain) · 33fe5c97 / db720ce7 Players 2014 17th-hole photos (CC BY 2.0, watermark band cropped) · 075709df TPC_Sawgrass_17.jpg 2008 sunset (CC BY-SA 2.0) · satellite tiles (layout check only, not used in any generation that shipped except as reference 2 to stills 303/304).
+
+## v6 frame 2 (the seat's view) — 2026-09-23
+
+| File | Beat | Higgsfield asset |
+|---|---|---|
+| still 501 (chosen) / 502 / 504 | front-row balcony view of the green, Nano Banana 2 4K, text-only | hf_20260923_193441_48454683-728a-4788-9e06-938d66399394.png / hf_20260923_193443_d133d4d5-…png / hf_20260923_193558_c3610e4c-…png |
+| k_a.mp4 | Kling 3.0 4K take from still 501, push forward and rise | hf_20260923_193552_a64dfeb8-c86f-4f1e-9654-56d76f4eae16.mp4 |
+| f2_preview_a.mp4 | frame 2 preview, 3.3 s, caption "Until now.", roar1 bridge mixed under native audio | 5896180b-2e1c-4216-a241-5bafd0be0e39.mp4 (upload host) |
+| f1f2_flow.mp4 | frame 1 (v2b) + frame 2 concatenated, 6.6 s | 703bbe4a-5d55-4881-ae8c-2c7d3cf4f408.mp4 (upload host) |
+| QC | take frame sheet; preview and flow QC strips | a33cf9be-…jpg; a7557bd9-…jpg (upload host) |

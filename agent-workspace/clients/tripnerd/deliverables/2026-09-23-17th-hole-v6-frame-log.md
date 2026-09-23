@@ -53,8 +53,22 @@ QC frame strip: `…/b04e9b9c-ddab-46df-bf16-5a5c64b5f3c5.jpg`
 
 **Spend for the review:** 72 credits (7,917.04 → 7,845.04): 4 stills at 3 each, 2 Kling 4K takes at 30 each. Frame 1 total to date: 316 credits.
 
-## Frame 2 — the arrival (after the aerial) — IDEATION, five flow options put to the owner 2026-09-23
-See the owner message of this date; the log is updated once an option is chosen.
+## Frame 2 — the seat's view (reverse angle from the front row) — PROPOSED, awaiting owner lock
+
+**Brief from the owner:** after frame 1, use only the strengths (environments, camera moves, real-photo first frames, macro, sound design, composited type); never show the weaknesses (generated faces or people at readable distance). Five flow options were offered; the owner delegated the choice.
+
+**Choice:** the cut on the promise. Frame 1 ends on "You've never sat here."; frame 2 opens on that seat: the front row of the suite balcony (white rail with padded navy top, one empty chair at lower left), the island green straight ahead across the water, tree island right, grandstand and tee-side structures beyond. Caption "Until now." composited at 0.5 s. The crowd roar rises across the cut (roar1 from 3.9 s, attack at 0.5 s of the frame, under the take's own ambience). No people in the foreground; golfers and spectators are dots. Camera pushes forward and rises a little, as a guest leaning in toward the rail.
+
+**Previews:**
+- Frame 2 alone (3.3 s): `https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/5896180b-2e1c-4216-a241-5bafd0be0e39.mp4`
+- Frame 1 → frame 2 flow reel (6.6 s, the locked v2b followed by frame 2, one audio bed across the cut): `https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/703bbe4a-5d55-4881-ae8c-2c7d3cf4f408.mp4`
+- QC strips (frame 2, then the flow reel): `…/a7557bd9-d9e0-4047-bff6-3489553e57b6.jpg`; take frame sheet `…/a33cf9be-166b-42b6-be0d-731dab92a46c.jpg`.
+
+**How it was made:** three text-only Nano Banana 2 4K stills (501 with chair and rail, chosen, job 48454683; 502 sunnier sky, tiny golfers on the green, not continuous with frame 1's light; 504 same light as 501 without the chair, job c3610e4c, kept as alternate). A fourth referenced still failed to submit (a guessed media id), no charge. Kling 3.0 4K take from 501 (job a64dfeb8, `hf_20260923_193552_a64dfeb8-…mp4`), 5 s; used 0.0–3.3 s. Cut with the frame-1 script (`f1build.py`, caption cue passed as JSON) and one roar track mixed under the native audio. Audio not heard (LB29).
+
+**Rules:** LB24 no marks (rail, roofs, banners plain); LB25 no faces, no foreground people; LB33 pure-AI clip under 5 s; no claims. Sound-off viewers get the promise-and-payoff cut and the caption; sound-on viewers get the roar bridge.
+**Spend for frame 2:** 39 credits (3 stills at 3, one Kling 4K take at 30).
+**Open on this frame:** owner watch; keep the chair in shot or use the no-chair alternate (504, not yet animated); caption "Until now." wording; whether the rail should stay in frame longer (a gentler push is a second take from the same still).
 
 ## Assets that carry over unchanged if the owner keeps them
 Door approach (real sign photo clip s01), 10 s continuous walk-in (w0), static putter (s03), single stroke (s05), real-speed ball drop (b1), cup thrust and turn (c1), commentator lines (Barrett preset, hushed controls), roar (roar1), owner end-card line (me1). Each will be re-presented as its own frame for lock.

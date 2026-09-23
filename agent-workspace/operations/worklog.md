@@ -1466,3 +1466,10 @@ quality gate, claims and brand law after the commit.
 **Open**
 - Owner lock of frame 1 (v2b or v2a; captions; length; end position). Then frame 2 (the suite door with the muffled roar).
 - This session's egress blocks Commons, Flickr and the CloudFront hosts from the shell; all fetching and viewing goes through the vendor sandbox and the Adobe preview tool.
+
+## 2026-09-23 (night) — TripNerd v6: frame 1 locked, frame 2 built
+
+- Owner locked frame 1 as the recommended v2b cut. Asked for five flow ideas for frame 2, then delegated the choice with the rule "strengths only, never the weaknesses".
+- Chose the cut on the promise: frame 2 is the seat's view from the front row of the suite balcony, caption "Until now.", roar bridging the cut. Three text-only 4K stills, one Kling 4K take, frame-2 preview and a frame 1 → frame 2 flow reel uploaded. Record in the v6 frame log; assets in SOURCES.
+- Spend 39 credits (7,845.04 → 7,806.04 expected; verified in the report).
+- Open: owner lock of frame 2 (chair in or out, caption, push speed); then frame 3.
