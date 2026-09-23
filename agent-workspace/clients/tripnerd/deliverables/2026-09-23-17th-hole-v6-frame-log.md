@@ -71,7 +71,9 @@ QC frame strip: `…/b04e9b9c-ddab-46df-bf16-5a5c64b5f3c5.jpg`
 **Open on this frame:** owner watch; keep the chair in shot or use the no-chair alternate (504, not yet animated); caption "Until now." wording; whether the rail should stay in frame longer (a gentler push is a second take from the same still).
 
 
-## v7 draft — real client photos in the cut (2026-09-23, night) — DRAFT, awaiting owner watch
+## v7 draft — real client photos in the cut (2026-09-23, night) — SET ASIDE by the owner
+
+Owner: building the full 30 s broke the frame-by-frame method. Back to frame 3, one frame at a time. The real photos and the Ken Burns shot type stay available for whichever frame they fit.
 
 **Trigger:** owner said the seat frame "still kind of seems fake" and asked for real client footage, with access to their photos and computer.
 
