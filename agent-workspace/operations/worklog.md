@@ -1406,3 +1406,32 @@ quality gate, claims and brand law after the commit.
 - Owner watch end to end with sound (nobody has heard the mix).
 - Guest consent, platform AI disclosure, tournament-mark licence position before paid media.
 - Pricing page conflicts with live servicepow.com packages (decision 0006) until reconciled.
+
+## 2026-09-23 (afternoon) — TripNerd 17th-hole advert v4: owner revision rounds 1 and 2 applied
+
+**Done**
+- Rebuilt the advert as v4 (26.8 s, two masters differing only in the Wyatt voice take) to
+  the owner's nine notes: new drive-up → walk-in → look-around/sit-down → putt → drop → cup
+  → 360 → end card; static putter close-up; real-reference ball drop (three-model 720p test,
+  Gemini 1080p final); J-cut roar; crowd-filled 360; the two repeated celebration clips cut;
+  Wyatt's real voice from the account. Record: `clients/tripnerd/deliverables/2026-09-23-17th-hole-v4.md`;
+  build script, shot JSON and source map in `17th-hole-v3-build/`.
+- Spend 463.75 credits (balance 9,241.69 → 8,777.94), within the prior-approved
+  proceed-and-inform pattern; cost ladder followed for the ball drop.
+- Learning recorded: reference-driven macro beat model test; units in a Gemini prompt were
+  drawn as a label at 1080p.
+- The shot-design workflow (8 agents) finished after the shots were already generated; its
+  drive-up design (oak-canopy boulevard, tents, generated first-frame still, owner-supplied
+  phone clip preferred) is on file in the session tasks output but was not used. The
+  clubhouse-approach drive-up from a Commons reference tested well on frame sheets.
+
+**Decided**
+- 360 take: chose the backs-and-profiles take (LB25) over the take whose crowd was denser
+  but showed a generated face laughing at readable distance.
+- Sit-down take: chose the take that keeps the island green's water and bulkhead; the other
+  lost the water and surrounded the green with people.
+- Ball drop: started the Gemini clip at 1.0 s to cut a rendered "108 mm" label.
+
+**Open**
+- Owner watch with sound (LB29); which Wyatt take; the same compliance flags as v3b plus the
+  clubhouse-as-real-building note; faint alignment line on the ball.

@@ -1,3 +1,4 @@
+- [2026-09-23 — Reference-driven macro beat: three-model 720p test, Gemini won, units became drawings](learnings/2026-09-23-reference-driven-macro-beat-model-test.md): for a close-up physical beat, test Seedance / Gemini / Wan at 720p first; Gemini followed the cup references, and a measurement in its prompt was drawn as a label at 1080p.
 ---
 title: Knowledge Index
 type: research
