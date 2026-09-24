@@ -1478,3 +1478,8 @@ quality gate, claims and brand law after the commit.
 - Owner: frame 2 "still seems fake", asked for real client footage. Checked access honestly: no computer/Photos access; Google Drive has 29 TripNerd photos (Wyatt, 22 Sep), no event video. Pulled all 29 through the Drive connector (base64 tool results decoded locally), uploaded to Higgsfield, contact-sheeted.
 - Built v7 draft (30 s): locked frames 1–2, three real photos as Ken Burns shots (no AI on real pixels), putt beat, roar, end card with the real logo. Link and flags in the v6 frame log. No generation spend (balance 7,806.04).
 - Open: owner watch; guest consent for faces; venue framing; re-normalise loudness; then lock frames 3+ or re-cut.
+
+## 2026-09-24 — TripNerd 20 s hosting spot: end card replaced, build reverse-engineered into a recipe
+- Owner supplied `TripNerd_20s_1080p_1.mp4` as the direction to match. Analysed in the vendor sandbox (cuts, word-level transcript, sheets). Card replaced with brand blue + real logo + "Hospitality. Handled." below the logo + CTA + URL; audio untouched. Record: `clients/tripnerd/deliverables/2026-09-24-hosting-spot-endcard-fix.md`.
+- Routine written: `playbooks/ads/recipes/hosting-spot-20s.md` (+ `hosting-spot-20s.shots.json`), the 4·2·2·2·3·4·3 spine with inputs, copy table, build steps, QC and variants. Card generator and swap script saved in the build folder.
+- Spend none. Open: owner watch; tournament-mark and consent flags on the reference; the frame-by-frame 17th-hole advert is paused at frame 3 pending the owner's footage route.
