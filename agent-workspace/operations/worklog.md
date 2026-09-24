@@ -1483,3 +1483,8 @@ quality gate, claims and brand law after the commit.
 - Owner supplied `TripNerd_20s_1080p_1.mp4` as the direction to match. Analysed in the vendor sandbox (cuts, word-level transcript, sheets). Card replaced with brand blue + real logo + "Hospitality. Handled." below the logo + CTA + URL; audio untouched. Record: `clients/tripnerd/deliverables/2026-09-24-hosting-spot-endcard-fix.md`.
 - Routine written: `playbooks/ads/recipes/hosting-spot-20s.md` (+ `hosting-spot-20s.shots.json`), the 4·2·2·2·3·4·3 spine with inputs, copy table, build steps, QC and variants. Card generator and swap script saved in the build folder.
 - Spend none. Open: owner watch; tournament-mark and consent flags on the reference; the frame-by-frame 17th-hole advert is paused at frame 3 pending the owner's footage route.
+
+## 2026-09-24 (evening) — TripNerd 20 s hosting spot: polo "TripNers" fixed, v6 delivered
+- Owner spotted "TripNers" on the woman's polo in the connections shot. Tracked the text across the 60 frames of 8.0–10.0 s, filled it with fabric, composited the real wordmark (official logo file) sized by height with a relief shadow, fabric-masked so hair and skin never take it. Three passes (v4 width-matched read weak, v5 brightness-matched, v6 delivered). Audio and the rest of the picture untouched; loudness identical. Record in `clients/tripnerd/deliverables/2026-09-24-hosting-spot-endcard-fix.md`; script `17th-hole-v3-build/polofix.py`.
+- Recipe updated: garment wordmark spelling is now a pre-delivery check.
+- Spend none (sandbox only). Open: owner watch of 8–10 s in motion; the carried flags (THE PLAYERS mark, "VIP", consent, loudness); 17th-hole advert still paused at frame 3 pending the owner's footage route.
