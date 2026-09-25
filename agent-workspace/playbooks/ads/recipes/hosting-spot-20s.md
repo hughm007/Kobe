@@ -98,3 +98,6 @@ the card. Run it as written; change only the inputs table and the copy table.
 - `knowledge/learnings/2026-09-23-famous-landmark-model-memory-beats-references.md`
 - `knowledge/learnings/2026-09-23-reference-driven-macro-beat-model-test.md`
 - `playbooks/ads/video-production.md` (blocking tier) and the canonical blocking-check registry
+
+## Swapping the opening shot (added 2026-09-25)
+Replace the picture only; the audio bed stays. Re-set the opening overlays on the new shot from the measured positions (`17th-hole-v3-build/title_overlay.py`), fade-in included, and concat with the body (`17th-hole-v3-build/opening_swap.sh`). Before trusting the cut point, diff the frames either side of it: phone editors let text layers overrun a cut by a frame (the owner's export did), so start the body on the first clean frame and lengthen the opening by the same count. Record: `clients/tripnerd/deliverables/2026-09-25-hosting-spot-drone-opening.md`.
