@@ -3,9 +3,9 @@ title: "TripNerd hosting spot (25.8 s owner cut) — opening clip replaced with 
 type: deliverable
 client: tripnerd
 owner: Karl
-status: delivered for owner watch
+status: client approved 8.4/10 (2026-09-27); see "Client approved adverts/"
 created: 2026-09-25
-updated: 2026-09-25
+updated: 2026-09-27
 tags: [client, deliverable, video, opening-swap, 16x9]
 ---
 

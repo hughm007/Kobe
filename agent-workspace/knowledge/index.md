@@ -1,5 +1,3 @@
-- [2026-09-23 — Famous landmark: model memory beat references; satellite tile as the geometry check](learnings/2026-09-23-famous-landmark-model-memory-beats-references.md): for the TPC Sawgrass island green, text-only Nano Banana 2 stills had the right bunker and walkway while referenced stills imported crowd artefacts; a stitched satellite tile caught two layout errors that oblique-photo QC had missed.
-- [2026-09-23 — Reference-driven macro beat: three-model 720p test, Gemini won, units became drawings](learnings/2026-09-23-reference-driven-macro-beat-model-test.md): for a close-up physical beat, test Seedance / Gemini / Wan at 720p first; Gemini followed the cup references, and a measurement in its prompt was drawn as a label at 1080p.
 ---
 title: Knowledge Index
 type: research
@@ -7,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-09-27
 tags: [index, knowledge]
 ---
 
@@ -39,6 +37,9 @@ Grouped by theme. Add themes as they emerge — don't force a learning into a he
 doesn't fit.
 
 ### Advertising
+- [2026-09-27 — Strengths-only production scored 8.4/10; the whole deduction was master resolution](learnings/2026-09-27-strengths-only-realism-scored-8-4-master-resolution-capped-it.md): owner credited realism to generating only what the model does well and compositing real material; the only points lost were to a 720p body upscaled next to a native 1080p opening.
+- [2026-09-23 — Famous landmark: model memory beat references; satellite tile as the geometry check](learnings/2026-09-23-famous-landmark-model-memory-beats-references.md): for the TPC Sawgrass island green, text-only Nano Banana 2 stills had the right bunker and walkway while referenced stills imported crowd artefacts; a stitched satellite tile caught two layout errors that oblique-photo QC had missed.
+- [2026-09-23 — Reference-driven macro beat: three-model 720p test, Gemini won, units became drawings](learnings/2026-09-23-reference-driven-macro-beat-model-test.md): for a close-up physical beat, test Seedance / Gemini / Wan at 720p first; Gemini followed the cup references, and a measurement in its prompt was drawn as a label at 1080p.
 - [2026-09-23 — Broadcast commentary and a gallery roar in an AI cut](learnings/2026-09-23-hushed-commentary-and-one-roar.md): seed_audio loudness/speech/pitch controls, one measured roar source placed by its attack, faster-whisper transcript QC, and a sandbox shell gotcha.
 - [2026-08-25 — Checks beat prose](learnings/2026-08-25-checks-beat-prose.md): the v8
   "2:07 AM" kill showed binary blocking checks catch what quality prose never does;
