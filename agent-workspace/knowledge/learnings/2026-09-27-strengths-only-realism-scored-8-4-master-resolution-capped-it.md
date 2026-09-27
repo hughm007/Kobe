@@ -55,9 +55,10 @@ mechanically certain, the score attribution is the owner's own words.
 ## What we'd do next
 
 Re-master this advert at native resolution once the owner supplies the raw suite clips or a 1080p/4K
-export of the cut (the 0–20 s body already exists at 1080p). Make "body at native delivery resolution,
-no upscaled source" a pre-assembly check; verify against the canonical blocking-check registry before
-adding, so the rule has one home.
+export of the cut (the 0–20 s body already exists at 1080p). The canonical blocking-check registry
+already carries a "Resolution" check, but it reads the master's container against the placement spec,
+which a 720p body upscaled into a 1080p file passes. Proposal for the registry owner: extend that
+check's description to "and no source segment upscaled to reach it" so the rule keeps its one home.
 
 ## Promotion
 
