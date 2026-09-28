@@ -3,7 +3,7 @@ title: "TripNerd — YOUR PEOPLE (30 s) — frame-by-frame production brief for 
 type: storyboard
 client: tripnerd
 campaign_id: 2026-09-28-ten-scripts
-status: STORYBOARD v9 — eight Skeptic Pass 1 rounds applied; rights cleared 2026-09-28 (Taylor's standing authorization); a fresh Skeptic run on the final version happens before any spend; then owner approval (approval = storyboard and spend sign-off)
+status: STORYBOARD v9 — FINAL for handoff to ChatGPT; rights cleared 2026-09-28 (Taylor's standing authorization); the owner approves each still before it is animated
 created: 2026-09-28
 updated: 2026-09-28
 tags: [campaign, storyboard, shotlist, higgsfield, chatgpt]
