@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-09-28
 tags: [index, knowledge]
 ---
 
@@ -18,6 +18,8 @@ This is a map, not an archive. Keep entries to one line each — enough to know 
 open the file.
 
 ---
+
+> **Baseline evidence:** what is PROVEN / FAILED / PROVISIONAL lives in [EVIDENCE-INDEX.md](EVIDENCE-INDEX.md) — start there for the verified baseline.
 
 ## Decisions
 
@@ -39,7 +41,7 @@ doesn't fit.
 ### Advertising
 - [2026-08-25 — Checks beat prose](learnings/2026-08-25-checks-beat-prose.md): the v8
   "2:07 AM" kill showed binary blocking checks catch what quality prose never does;
-  the 31-check gate exists because scores alone passed a dead ad.
+  the blocking-check gate exists because scores alone passed a dead ad.
 - [2026-08-26 — Correctness is the floor, conversion is the objective](learnings/2026-08-26-correctness-floor-conversion-objective.md):
   Owner-directed promotion; produced the DR lens and the Performance Challenger Rule.
 - [2026-08-31 — Frames catch what code review cannot](learnings/2026-08-31-frames-catch-what-code-review-cannot.md):
@@ -52,6 +54,9 @@ doesn't fit.
   four S3/S4s from strings that self-refuted on their own surface, picture, or loop order.
 - [2026-08-31 — Code-rendered films freeze without a boil](learnings/2026-08-31-code-rendered-films-freeze-without-a-boil.md):
   73% still images until every stroke boiled; measured down to declared calm holds.
+- [Decouple audio from visual generation](learnings/2026-09-02-audio-decoupled-from-visual.md) — never pick a video model for its bundled audio.
+- [Photorealism is not physical correctness](learnings/2026-09-02-photorealism-is-not-physical-correctness.md) — trade and device shots need reference grounding.
+- [Model performance observations](learnings/2026-09-02-model-performance-observations.md) — provisional, Run 9/10 only.
 
 ### Clients and process (advertising ops)
 - [2026-08-31 — Gates need frozen artifacts](learnings/2026-08-31-gates-need-frozen-artifacts.md):
@@ -67,6 +72,8 @@ doesn't fit.
   three delivery routes tested and closed; the model is not a byte-faithful conduit and fails by
   confabulation (6107 of 12000 bytes, fabricated JPEG terminator). Check asset reachability
   *before* generating.
+- [911 Drain's assets were misfiled, not missing](learnings/2026-09-02-client-assets-were-misfiled-not-missing.md) — the ad system could not see them.
+- [Discoverability is a production capability](learnings/2026-09-02-asset-discoverability-is-a-production-capability.md) — 'does not exist' ≠ 'cannot be discovered'.
 
 ### Web
 *None yet.*
@@ -84,6 +91,11 @@ doesn't fit.
 | 2026-08-25 | Design intelligence — the ServicePow Style Bank archetypes, hard laws, and how they translate to static + motion work | [research/design-intelligence.md](research/design-intelligence.md) |
 
 ---
+- [Intro video Rev 3 — bar-raiser brief](research/2026-08-31-hero-video-bar-raiser.md) — hero video craft + delivery research.
+
+## Production log
+
+- [911 Drain 'Look Us Up' — Skeptic Pass-1 findings](production-log/2026-08-26-lookusup-pass1-findings.md) — paper stage, two rounds.
 
 ## Patterns to watch
 
@@ -109,5 +121,5 @@ playbook rule stays visible.
 
 | Pattern | Playbook | Learnings behind it |
 |---|---|---|
-| Blocking checks + ServicePow-6 scoring before any ad ships | [playbooks/ads/video-production.md](../playbooks/ads/video-production.md) | Imported from the Drive OS (19_PRODUCTION_LEARNINGS); local trail starts with checks-beat-prose |
+| Blocking checks + ServicePow-6 scoring before any ad ships | canonical registry `.claude/skills/_servicepow/data/blocking-checks.yaml` (historical trail: [playbooks/ads/video-production.md](../playbooks/ads/video-production.md), superseded 2026-09-01) | Imported from the Drive OS (19_PRODUCTION_LEARNINGS); local trail starts with checks-beat-prose |
 | Performance Challenger Rule — production QA paired with performance-marketing QA; clever-mechanism packs ship a problem/solution-first challenger and the market decides | [playbooks/ads/video-production.md](../playbooks/ads/video-production.md) (Doctrine, advisory tier) + the creative-critic Direct-Response lens | [correctness-floor-conversion-objective](learnings/2026-08-26-correctness-floor-conversion-objective.md) — promoted at occurrence #1 by explicit Owner directive, recorded as such |

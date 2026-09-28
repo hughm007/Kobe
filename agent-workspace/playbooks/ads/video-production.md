@@ -3,10 +3,10 @@ title: Video Production — what blocks delivery, and the pipeline that gets the
 type: playbook
 client: internal
 owner: Karl
-status: active
+status: superseded
 created: 2026-08-25
 updated: 2026-08-26
-tags: [ads, video, quality, qc, canonical, blocking]
+tags: [ads, video, quality, qc, blocking, historical]
 source: servicepow-ad-producer v4.0 (2026-08-20), imported and split 2026-08-26. Verbatim archive at agent-workspace/archive/servicepow-ad-producer-v4.0-VERBATIM.md. See decision 0005.
 ---
 

@@ -16,7 +16,7 @@ The complete `servicepow-ad-producer` SKILL.md (v4.0 ServicePow Video OS — Ope
 2026-08-20), exactly as pasted. **This file is the audit trail, not the operating rules.**
 
 Its content has been split into canonical homes — see
-[`decision 0005`](../agent-workspace/knowledge/decisions/0005-v40-consolidation.md).
+[`decision 0005`](../knowledge/decisions/0005-v40-consolidation.md).
 Three internal contradictions were corrected during that split and are **preserved uncorrected
 here** so the record stays honest:
 

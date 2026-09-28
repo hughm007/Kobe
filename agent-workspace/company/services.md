@@ -62,7 +62,7 @@ plus a 1:1/16:9 cutdown, captioned, platform-ready.
 - **Hybrid real+AI is the default promise:** client's real phone footage as hero shots,
   AI environments and B-roll. This beats the "it looks AI" objection and is the moat.
 - Production runs through the Video Production playbook and its blocking checks —
-  see `../playbooks/ads/video-production.md`. Nothing ships around the gates.
+  see the canonical blocking-check registry (`.claude/skills/_servicepow/data/blocking-checks.yaml`). Nothing ships around the gates.
 
 ## 2. Email marketing — demand capture and nurture
 

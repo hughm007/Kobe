@@ -48,8 +48,11 @@ Then, in order:
 | Client | Folder | Status | Services | Owner |
 |---|---|---|---|---|
 | 911 Drain | [`911drain/`](911drain/) | **Active** — main account | **NEEDS INPUT** | Karl |
-| TripNerd | [`tripnerd/`](tripnerd/) | Prospect | — | Karl |
-| WaveReaction | [`wavereaction/`](wavereaction/) | Prospect | — | Karl |
+| TripNerd | [`tripnerd/`](tripnerd/) | **Active** (brief: VERIFIED) | — | Karl |
+| WaveReaction | [`wavereaction/`](wavereaction/) | **Unknown — NEEDS INPUT** (brief says operator-confirmed client; CLAUDE.md and OPEN-QUESTIONS say unknown). Treat as prospect-gated until the owner confirms. | — | Karl |
+| Copperline Coffee | [`copperline-coffee/`](copperline-coffee/) | **TEST CLIENT** — Run 16 fixture. Never do client work. | — | — |
+| Desert Aire Cooling | [`desert-aire-cooling/`](desert-aire-cooling/) | **TEST CLIENT** — Run 16 fixture. Never do client work. | — | — |
+| Molar Bright Dental | [`molar-bright-dental/`](molar-bright-dental/) | **TEST CLIENT** — Run 16 fixture. Never do client work. | — | — |
 
 ### Active vs. prospect
 

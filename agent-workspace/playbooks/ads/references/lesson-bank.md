@@ -10,6 +10,8 @@ tags: [ads, lessons, advisory, canonical]
 source: servicepow-ad-producer v4.0 §11 (2026-08-20), imported verbatim 2026-08-26. See decision 0005.
 ---
 
+> ⚠ **Note (2026-09-28):** the gate count and `video-production.md` cited below are historical. Delivery gates live only in the canonical blocking-check registry (`.claude/skills/_servicepow/data/blocking-checks.yaml`); LAW §3 forbids stating its count. Body below is verbatim evidence.
+
 # Lesson Bank — LB1–LB52
 
 <!-- CANONICAL: lesson-bank -->

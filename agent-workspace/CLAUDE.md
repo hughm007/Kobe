@@ -117,7 +117,7 @@ Never end a working session without doing this:
 2. **Capture anything learned** — if you discovered something that would change how the
    next campaign, build or pitch is run, write it to `knowledge/learnings/` (see §7).
 3. **Update the affected index** — `knowledge/index.md` if you added knowledge, the
-   client folder README if you added client work.
+   client's `campaigns/README.md` (campaign index) if you added client work.
 4. **Leave no orphans** — files in `inbox/` are triaged, drafts are either finished,
    clearly marked `status: draft`, or deleted.
 
