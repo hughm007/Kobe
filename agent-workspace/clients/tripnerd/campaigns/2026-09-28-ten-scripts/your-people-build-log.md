@@ -52,7 +52,31 @@ packed grandstands).
 | Take B | `d1c0aede-24f8-4cff-a100-d13d9861f99f`: head still until ~2.5 s, deliberate ~1 s lean, settled by 3.5 s; brim edge peeks a few px during the lean |
 | Checks (both) | first frame = master, last frame = end still (mean diff 2.8 / 2.7, compression level); static structure drift ≤0.17 px (camera locked); other five heads change ≤1.8 (breathing only); no warping of cap, hair, neck or son's hand in mid-motion frames |
 | Recommendation | Take B: the lean lands just after "Bring your people." (22.05) and settles 0.5 s before the cut to F8 |
-| Status | awaiting owner approval |
+| Status | **REJECTED by owner**: "looks very fake… everyone not move and just the older man tilt his head… basic, boring, not realistic". Director agrees: both takes break the brief's own "no figure frozen like a mannequin" rule (other five heads change ≤1.8 over 4 s). Root cause: the locked start/end method left the generator no room; the stillness concept was over-tightened across eight risk rounds. |
+
+## Real client footage: how guests actually behave (studied 2026-09-28, owner's instruction)
+Sources in Higgsfield media: `d925d5be` (= V23, 54 s, 720x1280, suite walk-through) and `2911d9d6` (= V24, 31 s,
+suite view of the 17th, the roar). Other client phone clips: `45e0a985`, `2585923a`, `e037067e` (walking in the
+gallery). Reading only; faces are real guests and never go to a generator.
+- **FACT:** guests are never a still line. Within any 5 s: weight shifts, a head turns to the neighbour and back,
+  a drink lifts, a hand goes to sunglasses or cap, a glance over the shoulder (V23 41–48 s).
+- **FACT:** pairs and threes talk sideways, heads turned toward each other, bodies still facing the green (V23 41–43 s,
+  49–51 s).
+- **FACT:** at the front ledge people lean on forearms or perch on high stools; drinks sit on the ledge (V23 50–53 s;
+  V24 0–1 s).
+- **FACT:** the arms-up reaction happens in the gallery below; in the suite the reaction is smaller: standing
+  taller, leaning forward, turning to each other (V24 15–19 s).
+- **FACT:** even a guest simply watching sways and moves his hands (V23 43–48 s).
+- **FACT:** the real view from the suite shows the lake and the island green (a small green ringed with yellow
+  flowers) with grandstands behind (V23 29–36 s, V24 8.5–9 s).
+
+## F7 animation, round 2 (reactions from the real footage)
+| Item | Value |
+|---|---|
+| Method | start image only (master v2 `6551ac57`), no end image, Kling 3.0 4k, 5 s, sound off, locked-off camera (push stays in the edit); scripted small reactions taken from the footage above; faces kept away from the camera; no generated clapping (house rule, owner agreed) |
+| Cost | **FACT:** 30 credits per 5 s take (live); two takes = 60 |
+| Takes | `0f0bdb10-d94f-4294-895e-b05b79c27baf`, `76e7a550-51ad-4cc2-84f7-9a327fc34f90` |
+| Status | rendering |
 
 **Learning:** asking the image model to "tip the head" produces a turn toward profile. A geometric rotation plus a
 blend pass holds the exact angle. Use the same route for F8's end still (the son's 30° turn).
