@@ -41,7 +41,7 @@ tags: [architecture, canonical, source-of-truth, ad-producer, superseded-mechani
 >
 > **The count "34" stated in the Consequences section is a 2026-08-26 historical figure.**
 > Stating a gate count in prose is now forbidden (`LAW.md` §3). The registry derives the live
-> count; at the time of this banner it derives 55.
+> count — see the canonical blocking-check registry.
 >
 > Nothing below has been edited. This banner exists so a cold session entering through
 > `decisions/` cannot follow a dead path into an obsolete production model.

@@ -42,7 +42,7 @@ production and strategy.
 | Currency | **USD** |
 | Websites | Built as code with Claude, hosted on **Vercel** — see [decision 0002](knowledge/decisions/0002-web-delivery-model.md) |
 | Advertising | Meta (Facebook + Instagram), Google, TikTok, LinkedIn, plus client-directed |
-| Clients | **911 Drain** (main account — a **revenue/exit partnership**, not a retainer; see its brief) · **TripNerd** (active) · WaveReaction (status unknown — open question) |
+| Clients | **911 Drain** (main account — a **revenue/exit partnership**, not a retainer; see its brief) · **TripNerd** (active) · WaveReaction (status unknown — open question) · *copperline-coffee, desert-aire-cooling, molar-bright-dental are Run 16 TEST fixtures, not clients* |
 
 Service Pow is a one-person business augmented by this agent. There is no second reviewer:
 [`operations/quality-bar.md`](operations/quality-bar.md) is the only gate between a draft
@@ -119,7 +119,8 @@ Never end a working session without doing this:
 3. **Update the affected index** — `knowledge/index.md` if you added knowledge, the
    client's `campaigns/README.md` (campaign index) if you added client work.
 4. **Leave no orphans** — files in `inbox/` are triaged, drafts are either finished,
-   clearly marked `status: draft`, or deleted.
+   clearly marked `status: draft`, or moved to `archive/` with `status: archived` and a note —
+   never deleted (§10).
 
 ---
 
@@ -229,9 +230,11 @@ Full detail is in [`playbooks/`](playbooks/README.md). The non-negotiables:
 **Websites** — Discovery before design; content before layout; every build ships with
 analytics, a sitemap, meta titles/descriptions, and a working contact path that has been
 tested end to end. Nothing goes live without the pre-launch checklist in
-[`playbooks/web/website-build.md`](playbooks/web/website-build.md) fully ticked.
+[`playbooks/web/website-build.md`](playbooks/web/website-build.md) fully ticked. Canonical owner:
+the `servicepow-website-production` skill — where they differ, the skill wins.
 
-**Advertising** — Every campaign has a written objective, a target cost-per-outcome, a
+**Advertising** — Every ad or campaign request routes to `servicepow-campaign-director`
+(root LAW §1); generation and media spend pass the SPEND_APPROVER gate. Every campaign has a written objective, a target cost-per-outcome, a
 defined audience, and a stated measurement window *before* budget is spent. No creative
 enters a test without a hypothesis attached. Learnings are logged whether the campaign
 won or lost — losses are usually the more instructive file.
@@ -346,9 +349,10 @@ ingested file cites its Drive source and sync date in frontmatter.
   not the operative gate. Its four reference files (lesson bank, hard boundaries, prompt
   craft, measurement) remain useful reading.
 - **The floor is protected:** `_servicepow/policies/baseline-and-regression.md` is always-on
-  law. Current floor and how to restore it: canonical `data/baselines.md`; what is proven and
+  law. Current floor and how to restore it: `data/baselines.md` in `hughm007/servicepow-ai-os`
+  (Kobe restore tag: `baseline-v1` — `git fetch --tags`); what is proven and
   what failed: [`knowledge/EVIDENCE-INDEX.md`](knowledge/EVIDENCE-INDEX.md); how to re-prove
-  it: canonical `tests/regression.md`. Connector states:
+  it: `tests/regression.md` in `hughm007/servicepow-ai-os`. Connector states:
   [`operations/connector-register.md`](operations/connector-register.md).
 - **Where the system lives, and the branch rule:**
   [`operations/repo-and-branches.md`](operations/repo-and-branches.md). Three repos, all with

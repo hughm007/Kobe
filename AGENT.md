@@ -76,6 +76,9 @@ registry; adding a fourth capability later means writing a tool, never editing t
 | **Draft copy and messages** | `write_draft` | Only on overwrite. A new draft file writes freely. |
 | **Capture to the worklog** | `append_worklog`, `write_learning` | No — append-only, and `write_learning` creates a new file |
 | *(supporting)* **Manage its own memory** | `remember`, `forget`, `list_memories` | `forget` is gated — it destroys data |
+| **Delegate coding work** | `delegate_coding_task`, `check_coding_job`, `list_coding_jobs` | `delegate_coding_task` always — it edits a repo and spends API money. Checking/listing is not gated. |
+| **Draft static ads** | `make_static_ad` | Only on overwrite of an existing ad |
+| **Switch its own model** | `set_model`, `current_model` | `set_model` always (changes a setting); `current_model` is not gated |
 
 Drafting is always fine. **Dispatching is not** — same rule as CLAUDE.md §10.
 
@@ -153,7 +156,7 @@ absent human, and it never proceeds by assuming permission.
 | | |
 |---|---|
 | Language | Python 3.11, managed with `uv`. No framework — the harness stays small and readable. |
-| Brain | `claude-opus-5` via the official `anthropic` SDK, adaptive thinking, streaming. Behind a seam (`provider.py`) — it is the only module that imports the SDK. |
+| Brain | default from `orion.toml` `[model]` (runtime override: `state/model-override.json` via `set_model`), via the official `anthropic` SDK, adaptive thinking, streaming. Behind a seam (`provider.py`) — it is the only module that imports the SDK. |
 | Ears | Deepgram, behind a seam (`voice/stt.py`): give it audio, get back text. |
 | Mouth | ElevenLabs, behind a seam (`voice/tts.py`): give it text, it speaks. Voice `KyjzVGDMoVqkKJdc4UFh`. |
 | Config | `orion/orion.toml` — model, effort, voice, intervals, thresholds, quiet hours, gated tools. Tuning is an edit, never a code change. |
