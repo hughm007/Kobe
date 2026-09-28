@@ -3,7 +3,7 @@ title: "TripNerd — YOUR PEOPLE (30 s) — frame-by-frame production brief for 
 type: storyboard
 client: tripnerd
 campaign_id: 2026-09-28-ten-scripts
-status: STORYBOARD v9 — eight Skeptic Pass 1 rounds applied; BLOCKED on rights (S4) until Taylor confirms in writing; a fresh Skeptic run on the final version happens before any spend; then owner approval (approval = storyboard and spend sign-off)
+status: STORYBOARD v9 — eight Skeptic Pass 1 rounds applied; rights cleared 2026-09-28 (Taylor's standing authorization); a fresh Skeptic run on the final version happens before any spend; then owner approval (approval = storyboard and spend sign-off)
 created: 2026-09-28
 updated: 2026-09-28
 tags: [campaign, storyboard, shotlist, higgsfield, chatgpt]
@@ -19,14 +19,12 @@ owner locking each frame before the next.
 0. **Format.** The master is **16:9**, for YouTube, desktop and 16:9 in-feed placements, like the owner's last two
    approved spots. A vertical 9:16 version is a separate film with its own storyboard (F7's line-up does not fit
    a vertical crop). Do not crop this one.
-1. **Rights before spend, with no override.** No generation starts, and no reference crop is attached to any
-   generator, until Taylor's written confirmation is filed in the campaign bible. It must cover three things:
-   - that TripNerd may show the venue and the tournament in advertising;
-   - that TripNerd may use its own on-site footage, including as generation references;
-   - that a host's group can stand together at the front rail of the suite, as the film shows.
-
-   There is no venue-free version of this film. Roles: the SPEND_APPROVER releases spend once the confirmation is
-   filed, and the APPROVER signs off the storyboard and any creative option.
+1. **Rights: cleared.** Taylor has authorised the use of all TripNerd photos, videos and assets in its
+   advertising (standing authorization, filed 2026-09-28 in the client brief and the campaign bible). That covers
+   showing the suite and the view, and attaching the reference crops to the generators. The real suite footage
+   shows guests standing at the rail over 17 (V23 51.4–53.4 s). What it cannot cover stays out: no tournament
+   name, mark, player or sign (rule 7, section 9). Roles: the SPEND_APPROVER releases spend, and the APPROVER
+   signs off the storyboard and any creative option.
 2. **Work order is not film order.** The **F7 still is made and approved before any other still.** It fixes the
    cast, the clothes, the suite and the light. Every other still is made *from* it.
 3. **Two steps per generated frame:** Step A makes the still, Step B animates it. F5, F7 and F8 are generated
@@ -151,7 +149,7 @@ another guest's soft shoulder or head, with the view beyond.
 with arms across shoulders), IMG_2036 (a group from behind), IMG_1928 (cups at chest height).
 
 **On the owner's computer:** V24 10.0–11.2 s (the gallery holding its breath) · V24 13.4–16.4 s and V08 (a real
-roar, **not cleared**, see section 6).
+roar, cleared, see section 6).
 
 ## 3. Continuity bible — hold these in every frame
 
@@ -583,9 +581,9 @@ bought for this film.
 - **Search terms:** "golf gallery roar putt", "golf crowd applause outdoor".
 - **Reject:** stadium, arena, football and indoor crowds. A golf-literate viewer hears the difference at once.
 - **Screen every bed** by listening with headphones. Reject any intelligible name, fan shout or PA announcement.
-- **Client recordings (V24, V08):** replace the library only if Taylor confirms **in writing** both of these:
-  that TripNerd staff or guests filmed them on site, and that the tournament's terms allow their commercial use.
-  Never use a roar lifted from a broadcast.
+- **Client recordings (V24, V08):** cleared under Taylor's standing authorization. The real roar from the suite
+  may replace or sit under the library roar if it passes the same headphone screen and is clean enough (phone
+  audio often carries wind and clipping). Never use a roar lifted from a broadcast.
 - **Mix:** the crowd directly below the suite is off-screen and close, so it is the loud layer. The far bank is a
   distant layer under it.
 
@@ -634,18 +632,12 @@ F4 is a phone shoot. The licensed crowd audio is a separate small purchase.
   hand) signs a release.
 - The view is never shown closer or larger than it is from the suite.
 - AI disclosure is switched on at upload on every platform.
-- **Venue, tournament and footage rights: the open S4 blocker, a gate before spend and before any delivery.**
-  - The island green at the 17th is recognisable even with every letter removed. The reference crops also come
-    from TripNerd's own footage filmed there.
-  - TripNerd has suites there, but nothing on file says it may show the venue and the tournament in advertising,
-    or use its on-site footage commercially.
-  - **Taylor confirms in writing** (rule 1) before any generation or reference use, and before the film is
-    delivered for any external use, paid or organic. The confirmation covers three points:
-    - showing the venue and the tournament;
-    - using the on-site footage;
-    - that a host's group can stand together at the front rail.
-  - There is no override.
-  - There is no venue-free version of this film. If the answer is no, the concept changes.
+- **Venue and footage rights: cleared (2026-09-28).** Taylor has authorised the use of all TripNerd photos,
+  videos and assets in its advertising, as a standing authorization. That covers the on-site footage, its use as
+  generation references, and showing the suite and its view. The real footage shows guests at the rail over 17
+  (V23), so the film's front-rail group is true to the product.
+- **What the authorization cannot cover:** the tournament's own marks, name, players and signage. None appear
+  (rule 7 and the lines above). No identifiable real guest appears either.
 
 ## 10. Skeptic Pass 1
 

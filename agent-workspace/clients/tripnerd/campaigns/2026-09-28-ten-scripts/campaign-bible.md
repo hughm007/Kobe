@@ -25,7 +25,7 @@ tags: [campaign, bible]
 | **Objective** | Package enquiries ("Talk to a Nerd") — INFERRED |
 | **KPI + target** | UNKNOWN (owner) |
 | **Budget (credits / $)** | UNKNOWN; spend zero at this stage |
-| **Approval status** | Owner picked YOUR PEOPLE (strategy and concept accepted by choice). STORYBOARD v9 awaiting owner approval, which is also the spend gate. **BLOCKED (Skeptic S4): venue, tournament, on-site-footage and front-rail access need Taylor's written confirmation before any generation and before delivery. No override.** |
+| **Approval status** | Owner picked YOUR PEOPLE (strategy and concept accepted by choice). STORYBOARD v9 awaiting owner approval, which is also the spend gate. Rights S4 **closed 2026-09-28** by fact: Taylor's standing authorization to use all TripNerd photos, videos and assets in advertising (`../../client-brief.md`). Binding Skeptic Pass 1 on v9 runs before spend. |
 
 ---
 
@@ -39,6 +39,7 @@ tags: [campaign, bible]
 **Differentiation:** INFERRED — turnkey hospitality (check-in, bar, food, seating) with a real seat on 17; the "Nerd" brand voice.
 **Proof available:** CONFIRMED real suite and house footage; real staff and setups. Reviews/years-in-business exist per the brief but have no Evidence Record → not used in copy.
 **Objections:** INFERRED — "worth the money?", "is it really that close?", "who handles the logistics?".
+**Media rights:** CONFIRMED 2026-09-28 — Taylor's standing authorization: any TripNerd photo, video or asset may be used in TripNerd advertising, including as generation references (owner, in writing; see `../../client-brief.md`). Third-party marks and identifiable guests' likenesses are outside it. Guests standing at the rail over 17: CONFIRMED in V23 51.4–53.4 s.
 **Existing assets:** see `media-catalog.md`; official logo files; the owner-approved hosting spot (8.4/10); the locked 17th-hole frame 1 and the drone orbit.
 **Constraints:** CONFIRMED — never show or name the Masters/Augusta; THE PLAYERS is a registered mark (owner keeps it, flagged); generated faces never perform emotion at readable distance; pure-generated shots ≤ 5 s; one sound bed; disclosure on every platform; consent for guest faces; real logo only as the real file; no synthetic testimonials.
 
@@ -49,7 +50,7 @@ UNKNOWN — no verbatims on file. Owner's own words about what works: "the reali
 | Question | Blocks | Role that can answer |
 |---|---|---|
 | Which product: suite on 17, the house, or both | script choice, venue framing | APPROVER |
-| Guest consent by group | any face in 3, 4, 6, 7 | CLIENT_APPROVER |
+| Guest consent by group (TripNerd's own media rights are cleared; this is the guests' likeness only) | any identifiable real face in 3, 4, 6, 7 | CLIENT_APPROVER |
 | Package sheet (what is included) | typed claims in 4 and 8; "VIP" anywhere | CLIENT_APPROVER |
 | Platform and format first | compose (9:16 vs 16:9) | APPROVER |
 | Raw suite clips + 25-video library at full res | realism of 1, 2, 3, 5, 7, 10 | owner (Taylor) |
@@ -586,3 +587,4 @@ evaluators' output withheld.
 | 2026-09-28 | Owner: scripts need not be built around real footage where Higgsfield (with Claude or ChatGPT) can make a shot look real. v2 is generation-first with real footage as upgrades; ranking redone: Empty Suite, The Roar, Your People (Day One/Two/Three runner-up). Performed-emotion ban and FTC form rule still apply. Evidence recorded: the approved 8.4 spot shows a calm generated actor in a medium shot passes this owner's realism bar | Owner / Director |
 | 2026-09-28 | YOUR PEOPLE storyboard taken through seven isolated Skeptic Pass 1 rounds (v1→v8). Generation risk narrowed each round (S3/S4 count 4→1→S4 only; HIGH shots now given prescribed method changes). The remaining blocker is a fact, not a design: venue, tournament and on-site-footage rights (S4). The storyboard goes to the owner for approval now; spend waits for Taylor's written confirmation, and the Skeptic re-run before spend covers v8. | Director |
 | 2026-09-28 | Eighth Skeptic round applied (v9): F5, F7 and F8 locked in generation with pushes in the edit; rights override removed. Further Pass 1 runs held until Taylor's written confirmation is filed; the binding re-run is on the final storyboard immediately before spend. | Director |
+| 2026-09-28 | Owner relays Taylor's standing authorization: any TripNerd photo, video or asset may be used in its advertising; always assume it for TripNerd. Rights S4 closed by fact; recorded in the client brief. Client roar recordings (V24, V08) cleared, subject to the audio screen. Out of scope of the authorization: third-party marks and identifiable guests' likenesses. Binding Skeptic Pass 1 on v9 launched. | Owner / Director |
