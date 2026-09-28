@@ -38,6 +38,7 @@ Then, in order:
 ├── client-brief.md          who they are, what they want, how we're measured
 ├── brand-guide.md           their voice, their look — governs all their materials
 ├── access-and-accounts.md   where access lives and who holds it (never the credentials)
+├── asset-register.md        real client files: sha256, provenance, never-generate flags (ingest appends here)
 ├── campaigns/               one folder or file per campaign
 ├── deliverables/            finished work sent to the client
 └── notes/                   dated meeting and call notes

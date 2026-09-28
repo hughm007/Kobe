@@ -41,7 +41,9 @@ default. No history was rewritten and nothing was deleted.
 - `claude/env-file-setup-vfr4ix` — one unique commit (a 4-line `.env` gitignore) whose content
   is present verbatim in the root `.gitignore` on `main`. Superseded, not merged; preserved as
   tag **`archive/env-file-setup-vfr4ix`** so it stays discoverable.
-- `claude/voice-first-agent-core-dysy9h` — the branch the work was on; `main` is at its HEAD.
+- `claude/voice-first-agent-core-dysy9h` — the branch the work was on; `main` was created at its HEAD
+  (`2272c45`) and has since moved ahead. Fully contained in `main`; retained as history — clone
+  `main`, not this branch.
 
 **Standing rule:** if you finish durable work on a session branch, get it onto `main` before the
 session ends. A record only reachable by knowing a branch name is not a durable record.

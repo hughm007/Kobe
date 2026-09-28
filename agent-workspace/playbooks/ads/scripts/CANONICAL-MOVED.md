@@ -6,7 +6,9 @@ The canonical source of the video toolkit is the installed skill:
 
 Six files here are byte-identical to canonical (verified 2026-09-28). **`servicepow_video.py`
 here is OLDER and unsafe**: it assembles with the ffmpeg concat *demuxer* (the frozen-tail defect
-the canonical uniform-timebase law fixed). Kept only as evidence per
+the canonical uniform-timebase law fixed), and it lacks the canonical recovery-matching law (no
+`run_started` check), so it can ingest an earlier run's completed paid job as the current shot.
+Kept only as evidence per
 `_servicepow/policies/baseline-and-regression.md` §3.
 
 `servicepow_clip_ledger.jsonl` here is the historical clip-gate ledger — evidence, keep it.
