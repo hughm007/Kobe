@@ -42,6 +42,8 @@ Canonical location (all rows): `servicepow-v2/public/work/911drain/`
 | SP-911-009 | WEB SCREENSHOT | `site-mobile.jpg` | ec3f3774 | yes (screenshot) | UNKNOWN | n/a | n/a | no | Proof-of-work only |
 | SP-911-010 | POSTER | `commercial-poster.jpg` | fe1278f7 | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | no | Poster frame for 007 |
 
+> **Copy note (2026-09-28):** a byte-identical copy of SP-911-001 also sits at `campaigns/2026-09-02-lookusup-proto/refs/logo-REAL.png` (same sha256 `052c9548`). The `-REAL` suffix predates this register and is **not** a verification — its status is **UNKNOWN**, exactly like the canonical file. This register is the authority, not filenames.
+
 ## Non-file assets that still bind production
 | ID | Type | Value | Restriction |
 |---|---|---|---|

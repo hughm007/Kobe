@@ -38,3 +38,16 @@ Thumbs.db
 .idea/
 *.swp
 *~
+
+# Toolkit venvs — installed skill READMEs bootstrap `.qcvenv` next to the scripts.
+.qcvenv/
+
+# ORION.app build output — orion/macos/build.sh builds in-tree.
+orion/macos/ORION.app/
+orion/macos/orion.iconset/
+
+# install.py displaces each previous skill install into .claude/skills-archive/<ts>/
+# (repo-and-branches.md "Housekeeping": untracked, recoverable from canonical, noise).
+# Ignore future snapshots; keep the one tracked pre-AI-OS snapshot as evidence.
+.claude/skills-archive/*
+!.claude/skills-archive/20260901T214812Z/
