@@ -25,7 +25,7 @@ tags: [campaign, bible]
 | **Objective** | Package enquiries ("Talk to a Nerd") — INFERRED |
 | **KPI + target** | UNKNOWN (owner) |
 | **Budget (credits / $)** | UNKNOWN; spend zero at this stage |
-| **Approval status** | Owner picked YOUR PEOPLE (strategy and concept accepted by choice); STORYBOARD awaiting owner approval, which is also the spend gate |
+| **Approval status** | Owner picked YOUR PEOPLE (strategy and concept accepted by choice). STORYBOARD v8 awaiting owner approval, which is also the spend gate. **BLOCKED (Skeptic S4): venue, tournament and on-site-footage rights need Taylor's written confirmation before spend and before delivery.** |
 
 ---
 
@@ -89,9 +89,9 @@ Written in `scripts.md` with beat tables, sources, VO with performance marks, an
 
 ## 6. Storyboard — YOUR PEOPLE (owner's pick, 2026-09-28)
 Full shot list with the ten fields per shot, still and motion prompts, reject lists and fallbacks:
-`your-people-frame-by-frame.md` (v7). 30.0 s, 16:9, 24 fps, 9 shots (average 3.3 s; no generated shot over 4.5 s
+`your-people-frame-by-frame.md` (v8). 30.0 s, 16:9, 24 fps, 9 shots (average 3.3 s; no generated shot over 4.5 s
 on screen). Build order: the F7 still first, then cast crops C1–C6; every other still is derived from them. Hero
-beats F5 and F7 each name two motion axes.
+beat F7 names two motion axes.
 **Real-reference law (BC-34):** generated shots attach only the three mark-free, player-free crops R-VIEW (aaf2c1f4), R-FRAME
 (f564a3a2) and R-RAIL (6a26be6c); the superseded crops 1f4a5b57 and 2f8b2d78 are never attached. The source frames 7c9be9e1 / 4c463ea4 / 4ec88dba / fe30cf32 and the captioned
 c2a0c138 / 9111e76a / e5329451 / 4b183815 are never attached. Behaviour references are reading only: 7c9be9e1 and
@@ -113,8 +113,8 @@ marks anywhere; clothing, cups and lanyards specified plain. No tournament marks
 
 ## 10. Production routing (operator: ChatGPT with Higgsfield)
 Stills: Nano Banana 2, 4K, 16:9, with the mark-free reference crops attached. Motion: Kling 3.0 4k for every
-generated shot (5 s; F7 and F8 keyframed with an end_image made by inpaint plus a crop; F8 at 3 s). No
-compositing layers. ESTIMATE about 475 credits with two takes per shot, before fallbacks; re-price live before the spend gate.
+generated shot (F5, F7 and F8 keyframed with an end_image made by crop, plus inpaint on F7 and F8, each used in
+full). No compositing layers. ESTIMATE about 475 credits with two takes per shot, before fallbacks; re-price live before the spend gate.
 
 ---
 
@@ -458,6 +458,69 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 - **F7 master:** free hands and lower garments specified.
 - **Wording:** "toward", not "against".
 
+### Pass 1, seventh run — YOUR PEOPLE storyboard v7 (2026-09-28), transcribed verbatim
+
+```
+SKEPTIC VERDICT — Pass 1
+Verdict: BLOCK
+Findings:
+- [S4] Whole film (rights) — The film's entire subject is an identifiable venue, but the rights basis for showing the venue and tournament in advertising is not on file. The film is also generated from crops of on-site footage whose commercial use is unconfirmed; the storyboard demands that proof for the client's on-site roar audio but not for these crops. Nothing can be delivered until written confirmation covering both is recorded. Rule 1's owner waiver would let generation start with no venue-free fallback if the answer is no.
+- [S2] F7 (20.75–24.75) — The prompt asks for "small natural weight shifts" in five figures and a rising crowd, yet the reject list kills any hand sliding on the rail, any cup changing level and anything past the rail sharpening. The shot asks for the very motion that fails it, across eight hands on the rail, two cups and a crowd.
+- [S2] F7→F8 cut (24.75) — Dad's tipped head is not pinned on either side of this cut. F7 uses only the first 4.0 s of a 5 s interpolation, so its end still never reaches the screen. F8's start still is built from the F5 and F6 stills and the cast crops, all with dad upright. The tip angle and cap position on each side of the cut therefore come from separate generations, and nothing checks that they match.
+- [S2] F8 (24.75) — F8 is meant to open with the son's turn already under way, but F7 rejects any head turn except dad's, and no reject limits the son's head angle in F8's first used frame. A turn that starts early makes his head jump across the cut by an uncontrolled amount.
+- [S2] F8 (end still) — The end-still instruction turns "head, neck and collar" about 45° together. A polo collar stays with the shoulders when the head turns, so a collar that rotates with the head would be locked into a keyframe at the payoff's focal point.
+- [S2] F8 (24.75–27.00) — The 45° turn goes from a left-rear three-quarter view (left ear, left cheek edge) to a right-rear three-quarter view (right cheek edge). The interpolator has to swap one ear and cheek edge for the other on an almost featureless back of head. That setup often gives a flat morph instead of a rotation, and here it sits in the film's closing focal area.
+- [S2] F5 (HERO) — The son's arm across dad's shoulders, with his hand resting on the far shoulder, has to hold through F8, yet F5 runs on start_image only and keeps keyframing as a fallback. Its foreground extra also shows a head near the lens (F7's extra is a shoulder only), which invites the turn the reject list forbids.
+- [S2] F2 (4.25–8.25) — At the ~0.5 m spacing given in F3, the 1.3 m frame leaves guest 4's head only a few centimetres past the right edge. Almost any truck right brings in a person the start still does not contain, so Kling has to invent him. Unlike F3, F2's reject list has no "another head enters".
+- [S2] Light (all generated shots vs F4) — The guests stand in the suite's opening under a white top frame, with the sun high behind the camera, meaning behind and above the suite. Under the suite's cover that puts the rail in shade, but the light spec never says so, and F4 is shot in direct sun from behind-left. Either the generated guests get direct sun the suite would block, or F4's sunlit hand will not match them.
+- [S2] F7 (20.75, roar) — The roar breaks on the cut to the first wide, right after the six watched the putt, and five of the six do not react at all. To a viewer who knows golf, a group unmoved by a roar they just watched reads as sound laid over frozen people. It also contradicts the brother-in-law who "has not shut up about this place".
+- [S1] F8 (motion floor) — The film's closing payoff names one motion axis and is not marked HERO; if it is a hero beat, it falls below the two-axis motion floor.
+- [S1] F8 (sound) — F8 is the only shot with no sound line, although this is where the roar layers have to fall to the near-silence under the end-card VO at 27.40.
+- [S1] Soft extra (F5/F7) — The same extra (dark-grey shirt, brown hair) sits lower-right by dad's end in F5 and in the outer lower-left corner in F7, which puts one person on opposite sides of the room.
+- [S1] F4 (12.75–15.00) — A standard phone camera app gives a fast tap-to-focus snap, not a controllable slow pull, so F4's focus-change motion may read as an autofocus jump.
+- [S1] F7/F8, and F5 if keyframed (pro-mode contingency) — If 4k mode refuses end_image, the keyframed payoff shots drop to pro mode (not 4k) while the rest stay 4k. The grade match fixes colour, not the difference in resolution and detail.
+- [S1] F1/F7 geography — F1 needs a white column at guest 1's left, but the spec for the F7 master still, which every other still is made from, places no columns or top frame. Column positions are left to chance in the one frame that sets the geography.
+Shot risk:
+- F1 — MEDIUM
+- F2 — MEDIUM
+- F3 — LOW
+- F4 — real clip, not generated; fallback 2 (generated still) — MEDIUM
+- F5 — HIGH — Make the listed keyframed method the primary method (start_image plus an end still that is the approved F5 still cropped 5% from the right and bottom), so the arm and hand are pinned at both ends. Reduce the foreground extra to a soft shoulder with no head, as in F7.
+- F6 — MEDIUM
+- F7 — HIGH — Simpler action: prompt only the camera push, dad's head tip, breathing and a light breeze, with no weight shifts and no rising crowd. Use a take length whose used window ends on the pinned end still (for example, a 4 s take used in full, if the live listing accepts 4 s), so the cut into F8 lands on a fixed frame.
+- F8 — HIGH — Simpler action: a smaller turn of about 30°, ending with the back of the son's head square to the lens and both ears even, so no far-side cheek has to appear. Keep the collar with the shoulders in the end still. Attach the approved F7 end still when making F8's start still, so dad's head tip matches.
+- F9 — composite, not generated
+Isolation: packet verified; production reasoning, cost, draft history, and other evaluators' output withheld.
+```
+
+**Director's resolution (v8 of the storyboard):** the three HIGH method changes applied as prescribed, plus most S2 and S1 items.
+
+**The S4 stays open. Only a fact can close it:** Taylor's written confirmation covering both the venue and tournament depiction and the use of TripNerd's on-site footage, including as generation references. The owner waiver was removed from rule 1. An owner decision to spend before the answer would be recorded with its risk, since there is no venue-free version.
+
+- **F5:** keyframed as primary (a 3 s take used in full, end still = the F5 still cropped 5 %). The foreground extra was removed from F5. F5 is now a non-hero beat with one axis, and F7 is the film's hero beat.
+- **F7:**
+  - The prompt is now only the push, dad's head tip, breathing and a breeze. The weight shifts and the rising crowd are removed.
+  - A 4 s take (inside the live 3–15 s range) is used in full, so the picture ends on the approved end still.
+  - The master still now places a column at each end and the top frame.
+  - The dad-inpaint mask keeps the collar out.
+- **Timeline** (keeps F8 used in full): F5 runs 15.00–18.00, F6 18.00–20.00, F7 20.00–24.00 and F8 24.00–27.00.
+  - Sound cues moved to match: hush by 17.75, "ooh" from 18.45, roar at 20.00, VO "Bring your people." at 22.05, roar tail to near silence by 26.80.
+  - The fallbacks were re-timed, and none exceeds 5.0 s.
+- **F8:**
+  - A 30° turn ending square-on with both ears even.
+  - The collar stays with the shoulders and out of the mask.
+  - The start still attaches the F7 end still, so dad's tip matches.
+  - The 3 s take is used in full, from the son facing the green to the completed turn, with no cut-on-action jump. A reject is added for the son's head starting turned.
+  - It now has a sound line.
+  - The fallback re-runs F7 as a 5 s take used in full, with the card at 25.00.
+- **F2:** a push-in instead of the truck, so no new person enters, and "another head enters" was added as a reject.
+- **Light:** the guests stand in the suite's open shade with a bright view, as in R-FRAME. F4 is shot in open shade with a bright background, and the stock fallback was matched to that.
+- **F4:** a manual focus control (for example the free Blackmagic Camera app) for a slow pull.
+- **Pro-mode contingency:** now includes an upscale.
+- **Left open for owner acceptance (S2, creative):**
+  - Five of six stay still under the roar. That is the concept ("nobody cheers"); an optional small reaction can be added by inpaint at approval.
+  - F8 is non-hero with one axis (S1).
+
 ## 16. Decision log
 | Date | Decision | By |
 |---|---|---|
@@ -467,3 +530,5 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 | 2026-09-28 | "VIP", prices, dates, superlatives excluded from every script pending Evidence Records | Director (claims policy) |
 | 2026-09-28 | Owner picked YOUR PEOPLE and asked for a frame-by-frame brief for ChatGPT to generate one frame at a time in Higgsfield. Storyboard written; location re-based on the real suite footage (view across the water to the green's wooden edge and a white grandstand, white posts and rail, high afternoon sun). Hand-landing risk designed out: the son's arm is already across dad's shoulders. The dad's-hand shot offered as real footage. New end card built with "Talk to a Nerd" because the existing card says "VIP" | Owner / Director |
 | 2026-09-28 | Owner: scripts need not be built around real footage where Higgsfield (with Claude or ChatGPT) can make a shot look real. v2 is generation-first with real footage as upgrades; ranking redone: Empty Suite, The Roar, Your People (Day One/Two/Three runner-up). Performed-emotion ban and FTC form rule still apply. Evidence recorded: the approved 8.4 spot shows a calm generated actor in a medium shot passes this owner's realism bar | Owner / Director |
+
+| 2026-09-28 | YOUR PEOPLE storyboard taken through seven isolated Skeptic Pass 1 rounds (v1→v8). Generation risk narrowed each round (S3/S4 count 4→1→S4 only; HIGH shots now given prescribed method changes). The remaining blocker is a fact, not a design: venue, tournament and on-site-footage rights (S4). The storyboard goes to the owner for approval now; spend waits for Taylor's written confirmation, and the Skeptic re-run before spend covers v8. | Director |
