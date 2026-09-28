@@ -75,10 +75,15 @@ gallery). Reading only; faces are real guests and never go to a generator.
 |---|---|
 | Method | start image only (master v2 `6551ac57`), no end image, Kling 3.0 4k, 5 s, sound off, locked-off camera (push stays in the edit); scripted small reactions taken from the footage above; faces kept away from the camera; no generated clapping (house rule, owner agreed) |
 | Cost | **FACT:** 30 credits per 5 s take (live); two takes = 60 |
-| Takes | `0f0bdb10-d94f-4294-895e-b05b79c27baf`, `76e7a550-51ad-4cc2-84f7-9a327fc34f90` |
-| Status | rendering |
+| Takes | C `0f0bdb10-d94f-4294-895e-b05b79c27baf`, D `76e7a550-51ad-4cc2-84f7-9a327fc34f90` (both 3840x2160, 24 fps, 121 frames) |
+| Checks | all six now move (head-region change 20–87 vs ≤1.8 in round 1); camera drift ≤1 px; no single-frame pops except the son's arm re-wrapping at 2.5 s (C); cups upright; son's and dad's faces hidden in C |
+| Take C | reactions start ~1.0 s; client nods and straightens; the woman turns to the man in white (profile with a smile visible for ~1 s at 1.5–2.0 s), then puts her arm round his waist; he drinks; brother-in-law leans on the rail; son pulls dad in until their heads touch (3.5–5.0 s), faces hidden |
+| Take D | similar, but dad turns into a smiling three-quarter profile at 2.5 s (a generated face performing emotion) and ends in a two-armed hug; rejected on the face |
+| Recommendation | Take C, used 1.0–5.0 s. Flags for the owner: the woman's smiling profile (~1 s, small in the wide frame); the pair now reads as a couple. C's head-to-head ending is the payoff the brief gave to F8, so F8 is up for review. |
+| Status | awaiting owner decision |
+
+Spend so far this build: 132 credits (24 stills, 48 F7 round 1, 60 F7 round 2).
 
 **Learning:** asking the image model to "tip the head" produces a turn toward profile. A geometric rotation plus a
 blend pass holds the exact angle. Use the same route for F8's end still (the son's 30° turn).
 
-Spend so far this build: 72 credits (24 on stills, 48 on the F7 animation).
