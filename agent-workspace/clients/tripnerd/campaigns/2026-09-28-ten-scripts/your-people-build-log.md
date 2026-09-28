@@ -28,6 +28,22 @@ Built one frame at a time with the owner, who approves each frame before the nex
 | Fix | two Nano Banana 2 edit takes (`f6950e94` used, `889b5aac` rejected: fleck and smudge remained), 6 credits; patches composited at (918–958, 1112–1180) and (898–976, 1390–1428) |
 | Result | **F7 master v2**: PNG media `6551ac57-4ce2-4ff6-86ab-b6e04310578c`, JPEG `a508efb8-e5f3-49bf-9fea-fbb3f46a6390` |
 | Open judgment calls | the island green itself is not identifiable (view reads as water, green bank, grandstands); the soft foreground shoulder is only a sliver, so the occlusion beat will not read |
+| Status | **APPROVED by owner 2026-09-28**; both judgment calls accepted |
+
+**Owner direction (standing, all later frames):** wherever the green or course shows, it must read as the 17th,
+or at least as a tournament course of the kind TripNerd sells packages for (water, the green's wooden edge,
+packed grandstands).
+
+## F7 end still (dad's head tipped toward his son)
+| Item | Value |
+|---|---|
+| Prompt route | two Nano Banana 2 takes (`94b53f23`, `1aee99b1`) **rejected**: both turned the head into profile (brim and cheek visible) instead of a 15° tip |
+| Method used | geometric: dad's head cut out (OpenCV GrabCut in the Higgsfield sandbox), rotated 15° toward the son about the base of the neck, background behind it cloned level from the adjacent soft grandstand; then a Nano Banana 2 blend pass on that guide (`ec221f28` used; `6bc8d060` straightened the tip, not used; earlier pass on a rougher guide `bcfa871a`/`253cec3b` kept a tilted background band, not used); only the head area of the blend pass composited onto master v2 |
+| Result | **F7 end still**: PNG `0acd03d4-aae1-4598-bc82-f52cac2b32a4`, JPEG `b4d3f303-badb-4955-968f-7de2f873e656`; pixels outside (2977–3422, 486–891) identical to master v2 |
+| Checks | back of cap still to camera, no face, collar and son's hand unchanged, background level, neck joins collar |
 | Status | awaiting owner approval |
 
-Spend so far this build: 6 credits.
+**Learning:** asking the image model to "tip the head" produces a turn toward profile. A geometric rotation plus a
+blend pass holds the exact angle. Use the same route for F8's end still (the son's 30° turn).
+
+Spend so far this build: 24 credits (live balance 12,800.39).
