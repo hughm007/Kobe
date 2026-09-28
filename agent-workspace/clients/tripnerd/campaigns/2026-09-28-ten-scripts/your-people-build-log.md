@@ -41,9 +41,20 @@ packed grandstands).
 | Method used | geometric: dad's head cut out (OpenCV GrabCut in the Higgsfield sandbox), rotated 15° toward the son about the base of the neck, background behind it cloned level from the adjacent soft grandstand; then a Nano Banana 2 blend pass on that guide (`ec221f28` used; `6bc8d060` straightened the tip, not used; earlier pass on a rougher guide `bcfa871a`/`253cec3b` kept a tilted background band, not used); only the head area of the blend pass composited onto master v2 |
 | Result | **F7 end still**: PNG `0acd03d4-aae1-4598-bc82-f52cac2b32a4`, JPEG `b4d3f303-badb-4955-968f-7de2f873e656`; pixels outside (2977–3422, 486–891) identical to master v2 |
 | Checks | back of cap still to camera, no face, collar and son's hand unchanged, background level, neck joins collar |
+| Status | **APPROVED by owner 2026-09-28** |
+
+## F7 animation
+| Item | Value |
+|---|---|
+| Settings | Kling 3.0, mode 4k, sound off, 4 s, 16:9, start = master v2 `6551ac57`, end = end still `0acd03d4`; brief's F7 motion prompt; Higgsfield's "IN THE DARK" preset suggestion declined |
+| Live facts | **FACT:** 24 credits per 4 s take; `end_image` works in mode 4k (the brief's untested point is now tested); output 3840x2160, 24 fps, 97 frames, 4.04 s |
+| Take A | `0af7b910-294d-4937-9c69-28fe1b7d5235`: head lean slow and continuous from ~1.0 s to the last frame (still moving at the cut) |
+| Take B | `d1c0aede-24f8-4cff-a100-d13d9861f99f`: head still until ~2.5 s, deliberate ~1 s lean, settled by 3.5 s; brim edge peeks a few px during the lean |
+| Checks (both) | first frame = master, last frame = end still (mean diff 2.8 / 2.7, compression level); static structure drift ≤0.17 px (camera locked); other five heads change ≤1.8 (breathing only); no warping of cap, hair, neck or son's hand in mid-motion frames |
+| Recommendation | Take B: the lean lands just after "Bring your people." (22.05) and settles 0.5 s before the cut to F8 |
 | Status | awaiting owner approval |
 
 **Learning:** asking the image model to "tip the head" produces a turn toward profile. A geometric rotation plus a
 blend pass holds the exact angle. Use the same route for F8's end still (the son's 30° turn).
 
-Spend so far this build: 24 credits (live balance 12,800.39).
+Spend so far this build: 72 credits (24 on stills, 48 on the F7 animation).
