@@ -25,7 +25,7 @@ tags: [campaign, bible]
 | **Objective** | Package enquiries ("Talk to a Nerd") — INFERRED |
 | **KPI + target** | UNKNOWN (owner) |
 | **Budget (credits / $)** | UNKNOWN; spend zero at this stage |
-| **Approval status** | DRAFT — awaiting owner choice of script(s) → STRATEGY APPROVED + CONCEPT APPROVED together |
+| **Approval status** | Owner picked YOUR PEOPLE (strategy and concept accepted by choice); STORYBOARD awaiting owner approval, which is also the spend gate |
 
 ---
 
@@ -87,6 +87,35 @@ Written in `scripts.md` with beat tables, sources, VO with performance marks, an
 
 ---
 
+## 6. Storyboard — YOUR PEOPLE (owner's pick, 2026-09-28)
+Full shot list with the ten fields per shot, still and motion prompts, reject lists and fallbacks:
+`your-people-frame-by-frame.md`. 30.0 s, 16:9, 24 fps, 9 shots (average 3.3 s). Build order F7 master plate
+first, every other still derived from it. Hero beat F7 names two motion axes.
+**Real-reference law (BC-34):** F1, F2, F5, F6, F7, F8 cite real client media (owner's suite footage frames
+c2a0c138 / 9111e76a / e5329451 / 4b183815; V24; P085; IMG_1928 / IMG_2031 for behaviour). F3 (pointing) and F4
+(older hand on a rail) carry **NO REFERENCE FOUND — HIGH RISK**, surfaced to the owner; F4 has a real-footage
+alternative (phone clip).
+
+## 7. Performance direction
+Actor briefs per character in the storyboard section 4. Nobody faces the camera; the payoff is backs, stillness
+and one head turn away from the lens.
+
+## 8. Continuity annex
+Continuity bible in the storyboard section 3 (location matched to the real suite footage, 5600 K high afternoon
+sun, cast and wardrobe table, temporal state: cups, the son's arm, sunglasses). Per-shot drift verdicts to be
+written as takes land.
+
+## 9. Brand fidelity (composite marking)
+COMPOSITE: F9 end card (real logo file 46ae277a; card 963af612 built from it) and every caption. No generated
+marks anywhere; clothing, cups and lanyards specified plain. No tournament marks, scoreboards or player names.
+
+## 10. Production routing (operator: ChatGPT with Higgsfield)
+Stills: Nano Banana 2, 4K, 16:9, with reference frames attached. Motion: Kling 3.0 4k, 5 s, start_image
+(proven on the locked frame 1). F7: Seedance 2.5 omni_reference start_image, 1080p (proven on the balcony
+eruption clip). ESTIMATE about 590 credits with two takes per shot; re-price live before the spend gate.
+
+---
+
 ## 14. Skeptic verdicts
 None yet — no pass has run (nothing to attack until a script is chosen and storyboarded).
 
@@ -97,4 +126,5 @@ None yet — no pass has run (nothing to attack until a script is chosen and sto
 | 2026-09-28 | Depth SLIM; strategy and concept drafted together and parked with the owner; no spend | Director |
 | 2026-09-28 | The 29 house photos identified as Masters-week material; only mark-free frames may be used, and the house is never named | Director (policy) |
 | 2026-09-28 | "VIP", prices, dates, superlatives excluded from every script pending Evidence Records | Director (claims policy) |
+| 2026-09-28 | Owner picked YOUR PEOPLE and asked for a frame-by-frame brief for ChatGPT to generate one frame at a time in Higgsfield. Storyboard written; location re-based on the real suite footage (view across the water to the green's wooden edge and a white grandstand, white posts and rail, high afternoon sun). Hand-landing risk designed out: the son's arm is already across dad's shoulders. The dad's-hand shot offered as real footage. New end card built with "Talk to a Nerd" because the existing card says "VIP" | Owner / Director |
 | 2026-09-28 | Owner: scripts need not be built around real footage where Higgsfield (with Claude or ChatGPT) can make a shot look real. v2 is generation-first with real footage as upgrades; ranking redone: Empty Suite, The Roar, Your People (Day One/Two/Three runner-up). Performed-emotion ban and FTC form rule still apply. Evidence recorded: the approved 8.4 spot shows a calm generated actor in a medium shot passes this owner's realism bar | Owner / Director |
