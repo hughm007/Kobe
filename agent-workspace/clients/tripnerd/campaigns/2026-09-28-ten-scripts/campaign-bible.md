@@ -200,6 +200,45 @@ evaluators' output withheld.
 
 **Director's resolution (v3 of the storyboard):** all applied. F3: one still, the hand hidden behind his head for the whole shot, arm still, a nod, push-in instead of a truck. F7: one shared motion (ease upright, hands stay on the rail, cups at chest height) plus dad's lean; guest 4's lean and the arm tightening dropped; end still made from the start still (outpaint the suite's white open-front frame and a light-grey chair back, both seen in the real frame 7c9be9e1; masked inpaint of the guests only); near bank hidden behind the rail and guests. Roar: licensed library by default; client recording only with Taylor's written confirmation; mix places the loud layer off-screen below the suite. Crowd rule and depth of field on every generated shot. Mandatory lettering sweep on every still and every animation; big screen defocused flat colour. End stills built by edit on F7 and F8. F6: a generated still matched to the clean real frames by default (the owner's MOV carries a burned-in caption and is 720p); the raw clip only if sharper than 1080p after the crop and cleaned of marks; players hidden behind the shoulder layer. F4 continuity: left hand, band, oxford cuff, round white rail, background colours of the view; band and watch added to dad's cast spec. Per-lens green-size targets. Placement declared 16:9; vertical is a separate storyboard. Colours changed so no two neighbours match (charcoal, sage). Card rebuilt with "Talk to a Nerd" (4824f6d7). Clean, caption-free reference frames uploaded (7c9be9e1, 4c463ea4, 4ec88dba, fe30cf32); the captioned ones are marked never to attach.
 
+### Pass 1, third run — YOUR PEOPLE storyboard v3 (2026-09-28), transcribed verbatim
+
+```
+SKEPTIC VERDICT — Pass 1
+Verdict: BLOCK
+Findings:
+- [S3] F3 — The staging contradicts itself: the push-in changes the parallax between his head and his hand, and the nod moves his head, so a head that hides the pointing hand in the start still will not keep it hidden for 4.5 s. That leaves a half-revealed pointing hand beside the ear in the focal area, invented by the generator, with no real reference for the pose.
+- [S2] F3 — Seen from behind with the hand hidden, a forward-raised arm looks the same as a hand held to the face (phone call, drinking, wiping), so the "point" may not read and the "has not shut up" beat is left to the VO alone.
+- [S3] F6 — The flagstick and the sharp background green stay in frame and empty through the putter click and 1.8 s of rolling silence, so a golf-literate audience watches a putt with no player and no ball reaching the hole right before the roar.
+- [S2] F6 — The background is a single still plate under a wind-only soundtrack, so the pin flag, roof flags and water inlet sit frozen for 2 s and the shot reads as a photograph.
+- [S2] F6 — F6 is left out of the soft-far-bank rule and the focus ramps onto the background, so a generated 4K far crowd and grandstand turn sharp, which is where generated crowds break down (fused figures, melted faces).
+- [S3] F7 — This payoff shot packs the film's hardest generation demands into one 4.5 s start-to-end interpolation: six people moving at once, three hands fixed on the rail while their torsos rise, three cups held level, an arm across shoulders with a lean into it, a far crowd rising, and a camera ease-back and tilt toward an end still with inpainted poses.
+- [S2] F7 — "All six ease upright together" pushes the generator toward a perfectly synchronised rise, which looks choreographed or robotic against a roaring crowd.
+- [S2] F8 — With the camera only slightly left of directly behind, a full quarter-turn puts the son's face roughly 18 degrees past profile, so the brow, nose tip, cheek and eyelashes of a generated face can break the silhouette in a 29° close-up on the hero beat.
+- [S2] F8 — Making the end still by inpainting the head only leaves the neck and collar in their forward-facing pose under a head turned 90 degrees, so the end frame and every interpolated frame carry an anatomically wrong neck join.
+- [S2] F4 fallback — The fallback is a full-frame generated close-up of an older hand with a ring on a specific finger, an inward-turned watch and grip on a round rail, all in the focal area of "Your dad.", which is classic high-risk hand work, and no further gate stands between that fallback and the cut.
+- [S2] All generated shots — The post-animation reject sweep checks only for lettering and has no reject criteria for the structural tells these shots risk: baluster count and straightness under camera motion (worst in the F2 truck), hands fusing with or sliding along the rail, clear-cup geometry, boiling crowds, ear and neck morphs during head moves, and caps or sunglasses rendered backwards when seen from behind.
+- [S2] Motion floor — No beat is marked as a hero beat, so the two-axis rule cannot be checked; F5 (the dad beat, no VO) names only a push-in, and F7 names an ease-back plus a tilt, and a tilt is not a listed axis.
+- [S1] F1 — The suite's columns stand at the open front, level with the rail, so a column "in the foreground" 2.5 m behind a guest at the rail is either at the guest's depth (no occlusion event) or an invented interior column that contradicts the real suite it is matched to.
+- [S1] F6 — No lens is given, so the per-lens green-size target cannot be applied to the one shot where the green is the sharp plane.
+- [S1] Method rules — The sweep list and the flat-colour rule name a big screen and roof flags, but neither appears in the real-footage inventory or the suite description, so prompts that mention them may add structures the real venue lacks, and in a sharp wide shot a flat-colour screen would look switched off.
+- [S1] F4 — The real hand is cast only as "an older person's", with nothing matching its skin tone or age cues to the generated early-70s dad it cuts against in F5–F8.
+Shot risk:
+- F1 — LOW
+- F2 — MEDIUM
+- F3 — HIGH — Simpler action: drop the point. He leans a few degrees toward guest 3 and turns his head left, away from camera, with his free hand on the rail and the cup level, and the VO carries "has not shut up." If the point must stay, remove the nod, lock the generation camera (do the push-in in the edit), and approve only a start still whose arm line clearly reads as pointing.
+- F4 (real clip) — LOW
+- F4 fallback — HIGH — Replace the generated close-up with a second real route (a reshoot, or licensed real footage of an older hand on a rail). If a generated still is unavoidable, frame it wider (cuff, wrist and a hand small in frame on the rail) instead of a full-frame hand, and reject on any anatomy fault at 200%.
+- F5 — MEDIUM
+- F6 — MEDIUM
+- F7 — HIGH — Hybrid: generate only the guests' rise, with a locked camera at the wide end-still framing and onsets staggered by 0.1–0.4 s. Keep the far crowd soft and do not generate its rise (let the roar carry it, or composite a real far-bank element). Do the ease-back and tilt as a scale-and-reposition move in the edit.
+- F8 — MEDIUM
+- F9 — LOW
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.
+```
+
+**Director's resolution (v4 of the storyboard):** all applied. F3: no pointing; a lean and a head turn away from camera toward guest 3, the VO carries the line. F6: close 29° over dad and son's shoulders, focus held on them, the green and crowd only soft colour, so no putt is readable; animated stillness on Kling. F7: one still at the wide framing with the suite's white open-front frame and a chair back already in it; Seedance animates only the guests with a locked camera and staggered onsets; the far crowd is not animated; the push-out and reveal are a 112 % → 100 % scale move in the edit. F8: camera directly behind, a 45-degree turn, mask over head, neck and collar. F4: second real route (licensed stock footage), wide generated still only as a last resort; the hand cast to match the dad. Structural sweep added as a reject rule after every animation. Hero beats marked: F7 and F5, each with two axes (F5 gains a chair-back occlusion). F1 occlusion is now a real suite chair, not a column. Big screen and roof flags confirmed in the real frame 4c463ea4; the screen shows soft indistinct colour.
+
 ## 16. Decision log
 | Date | Decision | By |
 |---|---|---|
