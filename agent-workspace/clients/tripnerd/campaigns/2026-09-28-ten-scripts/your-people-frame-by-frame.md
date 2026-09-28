@@ -3,7 +3,7 @@ title: "TripNerd — YOUR PEOPLE (30 s) — frame-by-frame production brief for 
 type: storyboard
 client: tripnerd
 campaign_id: 2026-09-28-ten-scripts
-status: STORYBOARD v8 — seven Skeptic Pass 1 rounds applied; eighth round pending; BLOCKED on venue rights (S4) until Taylor confirms in writing; then owner approval (approval = storyboard and spend sign-off)
+status: STORYBOARD v9 — eight Skeptic Pass 1 rounds applied; BLOCKED on rights (S4) until Taylor confirms in writing; a fresh Skeptic run on the final version happens before any spend; then owner approval (approval = storyboard and spend sign-off)
 created: 2026-09-28
 updated: 2026-09-28
 tags: [campaign, storyboard, shotlist, higgsfield, chatgpt]
@@ -19,19 +19,26 @@ owner locking each frame before the next.
 0. **Format.** The master is **16:9**, for YouTube, desktop and 16:9 in-feed placements, like the owner's last two
    approved spots. A vertical 9:16 version is a separate film with its own storyboard (F7's line-up does not fit
    a vertical crop). Do not crop this one.
-1. **Rights before spend.** No generation starts until Taylor confirms in writing that TripNerd may do both of
-   these in advertising (section 9):
-   - show the venue and the tournament;
-   - use its own on-site footage, including as generation references.
+1. **Rights before spend, with no override.** No generation starts, and no reference crop is attached to any
+   generator, until Taylor's written confirmation is filed in the campaign bible. It must cover three things:
+   - that TripNerd may show the venue and the tournament in advertising;
+   - that TripNerd may use its own on-site footage, including as generation references;
+   - that a host's group can stand together at the front rail of the suite, as the film shows.
 
-   If the owner decides to spend before that answer, the decision and its risk are recorded in the campaign
-   bible. The risk: a "no" leaves the film unusable, because there is no venue-free version.
+   There is no venue-free version of this film. Roles: the SPEND_APPROVER releases spend once the confirmation is
+   filed, and the APPROVER signs off the storyboard and any creative option.
 2. **Work order is not film order.** The **F7 still is made and approved before any other still.** It fixes the
    cast, the clothes, the suite and the light. Every other still is made *from* it.
-3. **Two steps per generated frame:** Step A makes the still, Step B animates it. The end stills (F5, F7 and F8)
-   are **made by editing the approved start still** with a crop, plus a masked inpaint for F7 and F8. They are never
-   generated fresh. Show the owner every still before animating it. A keyframed clip is used in full, so the
-   picture on screen ends exactly on its approved end still.
+3. **Two steps per generated frame:** Step A makes the still, Step B animates it. F5, F7 and F8 are generated
+   with a **locked frame between two stills at the same framing**, and the clip is used in full.
+   - **The end stills:** F7's and F8's are made by masked inpaint of the approved start still, and F5's is the
+     approved still itself. None is generated fresh, and none is cropped.
+   - **The generator's job:** breathing, the breeze, and at most one head move.
+   - **The push:** each of these three shots gets its push-in in the edit, as a scale on the 4K clip. The film
+     exports at 1920x1080, so a push of 5–8 % costs no visible resolution.
+   - **What this trades away:** an edit push is a zoom without parallax. That is the accepted cost of keeping the
+     generator's job this small.
+   - **Approval:** show the owner every still before animating it.
 4. **Settings** (checked in Higgsfield's live model listing on 2026-09-28).
    - **Stills:** **Nano Banana 2**, resolution `4k`, 16:9, with the listed references attached. The listing offers
      `4k`, 16:9, and `is_inpaint` with a `mask`.
@@ -75,8 +82,9 @@ owner locking each frame before the next.
     - ears, necks and collars hold their shape through head moves;
     - caps and collars face the right way when seen from behind, and caps stay put on heads;
     - no rhythmic bouncing of shoulders, no head bobbing, and no figure frozen like a mannequin for a whole take;
-    - the son's right hand on dad's far shoulder shows at most five fingers, stays resting in one place, and never
-      merges into the shirt or slides; it rides with dad's shoulder when he breathes or tips his head;
+    - the son's right hand on dad's far shoulder (in frame in F5, F6 and F7) shows at most five fingers, stays
+      resting in one place, and never merges into the shirt or slides; it rides with dad's shoulder when he
+      breathes or tips his head;
     - nothing past the rail sharpens into a readable person or shape;
     - the soft foreground extra in F7 never turns or shows a face;
     - no face turns toward the lens.
@@ -210,15 +218,15 @@ the camera.
 | F2 | 4.25–8.25 | 4.00 s | GEN still → Kling | "The two who hit the number." |
 | F3 | 8.25–12.75 | 4.50 s | GEN still → Kling | "Your brother-in-law… who has not shut up about this place." |
 | F4 | 12.75–15.00 | 2.25 s | **REAL phone clip** | "Your dad." |
-| F5 | 15.00–18.00 | 3.00 s | GEN still + cropped end still → Kling | the murmur falls to a hush |
+| F5 | 15.00–18.00 | 3.00 s | GEN still → Kling, locked (same still as end), push in the edit | the murmur falls to a hush |
 | F6 | 18.00–20.00 | 2.00 s | GEN still → Kling | hush, then the rising "ooh" |
-| F7 | 20.00–24.00 | 4.00 s | GEN start still + edited end still → Kling | THE ROAR · "Bring your people." |
-| F8 | 24.00–27.00 | 3.00 s | GEN start still + edited end still → Kling | roar tail |
+| F7 | 20.00–24.00 | 4.00 s | GEN still + inpainted end still → Kling, locked; push in the edit | THE ROAR · "Bring your people." |
+| F8 | 24.00–27.00 | 3.00 s | GEN still + inpainted end still → Kling, locked; push in the edit | roar tail |
 | F9 | 27.00–30.00 | 3.00 s | Composite end card, hard cut in | "Hospitality. … Handled." |
 
 No generated shot is longer than 4.5 s on screen in the main cut, or longer than 5.0 s in any fallback.
 
-**Build order:** F7 still → F7 end still (edit) → cast crops C1–C6 → F1 → F2 → F3 → F5 → F5 end (crop) → F6 → F8
+**Build order:** F7 still → F7 end still (edit) → cast crops C1–C6 → F1 → F2 → F3 → F5 → F6 → F8
 start → F8 end (edit) → animate each → F4 shoot → assemble.
 
 ---
@@ -228,22 +236,22 @@ start → F8 end (edit) → animate each → F4 shoot → assemble.
 | Field | |
 |---|---|
 | Story job | Payoff: the first wide shot, and all six were at the one rail together. The roar breaks and they hold. Emotion and understanding. |
-| Action | The six stand shoulder to shoulder at the rail, in stillness inside the roar. At about 1 s **dad tips his head about 15° toward his son**. That is the only action. Everyone breathes and a light breeze moves shirts and hair; nothing else moves. Hands stay on the rail and the two cups stay at chest height. |
-| Camera | Medium wide, **47°**, eye level, 5 m behind the six, shallow depth of field focused on them. A white steel window column stands just left of guest 1 and another beyond dad on the right, under the white top frame. A soft extra guest's shoulder fills only the outer lower-left corner, near the camera. **Keyframed**, and the 4 s take is used in full, so the picture ends exactly on the approved end still. The end still is the master with dad's head tipped, cropped 7 % tighter from the left and bottom. The result is a gentle push in and slightly right, and the extra's shoulder leaves the frame. |
+| Action | The six stand shoulder to shoulder at the rail, in stillness inside the roar. At about 1 s **dad tips his head about 15° toward his son**. That is the only action. Everyone breathes and a light breeze moves shirts and hair. Hands stay on the rail and the two cups stay at chest height. Past the rail the soft shapes of people on the green and the far bank shift gently; nothing there can be read. |
+| Camera | Medium wide, **47°**, eye level, 5 m behind the six, shallow depth of field focused on them. A white steel window column stands just left of guest 1 and another beyond dad on the right, under the white top frame. A soft extra guest's shoulder fills only the outer lower-left corner, near the camera. **Locked in the generation**, between the master and its inpainted end still at the same framing; the 4 s take is used in full. **In the edit:** scale 100 % → 108 % over the 4.0 s, anchored on the upper-right third, so the frame pushes in and the extra's shoulder leaves at the lower-left. |
 | Lighting | Continuity light: the guests in the suite's open shade, the view bright. |
 | Audio | The licensed outdoor golf-gallery roar (section 6) breaks at 20.00. VO "Bring your people." at 22.05. |
 | Text | Caption "Bring your people." 22.05–23.75 |
 | Source | GEN: one Nano Banana 2 still and its edited end still, animated between them on Kling 3.0 |
 | Real-ref | `7c9be9e1` (reading only: real footage shot over a guest's soft shoulder, the view beyond); R-VIEW, R-FRAME, R-RAIL (the suite and the view); V24 13.4–16.4 s (a real roar from the suite) |
 | Angle | You bring the people; TripNerd handles everything else |
-| Motion | **HERO, two axes:** **camera translation** (the gentle push between keyframes) and a **foreground occlusion event** (the soft extra's shoulder leaves the frame) |
+| Motion | **HERO, two axes, both built in the edit:** **camera translation** (the 108 % push) and a **foreground occlusion event** (the soft extra's shoulder leaves the frame). This is the rule 3 trade: a zoom without parallax, accepted to keep generation minimal. |
 
 **Step A1: master still.** Nano Banana 2, `4k`, 16:9. References: R-VIEW, R-FRAME, R-RAIL.
 ```
 Photorealistic 16:9 photograph from inside a raised hospitality suite at a professional golf tournament, eye level, five metres behind six guests standing shoulder to shoulder at the open front of the suite with their backs to the camera, 47-degree lens, shallow depth of field focused on the guests. Match the suite in the reference images: a white steel window column with a row of bolt holes stands just left of the guests and another beyond them on the right, the white top frame runs across the top of the opening, a white metal railing with vertical balusters and a black drink ledge along the front.
 The six guests fill the middle of the frame, left to right: (1) a man in his early 50s with short salt-and-pepper hair, charcoal-grey quarter-zip, khaki trousers, a plain black lanyard, both hands resting on the rail; (2) a woman in her early 30s with dark hair in a low ponytail, sage-green button-down with rolled sleeves, white trousers, a plain clear plastic cup in her left hand at chest height, her right hand on the rail; (3) a man in his early 30s in a white polo, plain light-grey cap worn forwards and light-grey chinos, a plain clear plastic cup in his right hand at chest height, his left hand on the rail; (4) a man in his mid-40s with short sandy-brown hair and no hat, in a loud solid tangerine polo and khaki shorts, his left hand on the rail and his right hand in his shorts pocket; (5) a man in his early 40s with dark hair, navy polo and stone chinos, left hand on the rail, his right arm resting across the shoulders of (6) an older man in his early 70s with fair skin and white hair, a plain tan cap worn forwards, a plain light-blue oxford shirt and tan trousers, both hands on the rail, a plain gold band on his left hand. The younger man's right hand rests relaxed on the older man's far shoulder, fingers together.
 In the extreme lower-left corner, close to the camera and completely out of focus, the soft shoulder of another guest in a dark-grey shirt, filling only the outer edge of the frame.
-The guests stand in the open shade of the suite roof: soft, even daylight on their backs, with a gentle brighter edge on hair and shoulders. They are all equally sharp. Past the railing, in bright hazy afternoon sun, focus falls off gradually with distance: the pale blue-grey water, the bright green of the green and the soft brown band of its wooden edge, a pale mottled band of spectators and the white shapes of grandstands. No individual person, flag, sign or screen picture past the railing can be made out. Pale blue-white sky, about 5600 K. Natural colour, a real live-event photograph. Every guest faces the green. Every surface stays free of lettering: clothes, caps, the lanyard and its card, the two cups, the white window frame and columns, and the soft background.
+The guests stand in the open shade of the suite roof: soft, even daylight on their backs, with a gentle brighter edge on hair and shoulders. They are all equally sharp. Past the railing, in bright hazy afternoon sun, focus falls off gradually with distance: the pale blue-grey water, the bright green of the green with a few soft, unreadable shapes of people on it, the soft brown band of its wooden edge, a pale mottled band of spectators and the white shapes of grandstands. No individual person, flag, sign or screen picture past the railing can be made out. Pale blue-white sky, about 5600 K. Natural colour, a real live-event photograph. Every guest faces the green. Every surface stays free of lettering: clothes, caps, the lanyard and its card, the two cups, the white window frame and columns, and the soft background.
 ```
 **Check before approving:**
 - six people, in this order and these colours;
@@ -262,14 +270,14 @@ the mask over dad's head and neck only; his collar stays outside the mask.
 ```
 Inside the mask only: the older man's head tipped about fifteen degrees toward the younger man beside him, cap still worn forwards, neck following naturally; still facing the green, no face showing. Everything outside the mask stays exactly as it is. Every surface stays free of lettering.
 ```
-Then crop 7 % off the left edge and 7 % off the bottom edge (so the picture stays 16:9), which removes the soft
-extra's shoulder, and scale it back to full 4K. That is the **F7 end still**. F8 also uses it as a reference.
-**Check:** the extra is gone from the frame · dad's cap faces forwards · his collar and the son's hand are unchanged.
+No crop: the end still keeps the master's framing. That is the **F7 end still**. F8 also uses it as a reference.
+**Check:** dad's cap faces forwards · his collar and the son's hand are unchanged · everything outside the mask is
+identical to the master.
 
 **Step B: motion.** Kling 3.0, 4k, **4 s**, sound off, `start_image` = the master still, `end_image` = the end still.
 **Use all 4 s**, so the shot ends on the end still.
 ```
-The camera pushes in gently and a little to the right, arriving at the end frame, and the soft shoulder in the lower-left corner slides out of the frame. At about one second the older man in the tan cap slowly tips his head toward the younger man beside him. Everyone breathes quietly and keeps facing the green; a light breeze moves shirts and hair. Steady, realistic camera, one continuous shot. Every surface stays free of lettering.
+Locked-off camera, one continuous shot, arriving at the end frame. At about one second the older man in the tan cap slowly tips his head toward the younger man beside him. Everyone breathes quietly and keeps facing the green; a light breeze moves shirts and hair. Past the railing the soft background shifts gently. Every surface stays free of lettering.
 ```
 **Reject if:**
 - anything on the structural list fails;
@@ -280,17 +288,17 @@ The camera pushes in gently and a little to the right, arriving at the end frame
 - anything past the rail becomes readable.
 
 **Fallbacks, in order:**
-1. **The same keyframes without dad's head tip.** The end still is the master cropped only, and dad stays upright
-   into F8.
-2. **A 3 s take on the same keyframes, used in full.** A shorter interpolation drifts less.
+1. **No head tip:** the master still as both start and end still. Dad stays upright into F8, so F8's start still
+   is rebuilt with dad upright and its "dad's head resets upright" reject is dropped.
+2. **A 3 s take on the same two stills, used in full.** A shorter interpolation drifts less.
    - F7 runs 20.00–23.00.
    - F8 is generated at 4 s and used in full (23.00–27.00).
-   - The caption moves to 22.05–22.85.
+   - "Bring your people." moves to 21.60, with its caption at 21.60–22.95.
 3. **If both fail:** stop and send the takes to the Campaign Director before spending more.
 
-> **Creative note for the owner:** five of the six stay still under the roar. That is the concept ("nobody
-> cheers"), but a golf-literate viewer may expect a small reaction. If the owner wants one, it is added at approval
-> as a second inpainted change in the end still (for example guest 4's head lifting slightly). It is not added by
+> **Creative option for the APPROVER:** five of the six stay still under the roar. That is the concept ("nobody
+> cheers"), but a golf-literate viewer may expect a small reaction. If the APPROVER wants one, it is added as a
+> second inpainted change in the end still (for example guest 4's head lifting slightly). It is not added by
 > prompt.
 
 ---
@@ -301,7 +309,7 @@ The camera pushes in gently and a little to the right, arriving at the end frame
 |---|---|
 | Story job | Hook and first name. Attention: every host has this client. |
 | Action | Hands on the rail, he takes in the view. One slow breath; his shoulders settle. |
-| Camera | Medium-close, **29°**, **2.5 m behind him and slightly to his left**: the back of his head, his left ear and only the edge of his cheek. No jaw or mouth in view. The woman beside him shows at the right edge as a sage-green shoulder and dark ponytail, as sharp as he is. Slow push-in. |
+| Camera | Medium-close, **29°**, **2.5 m behind him and slightly to his left**: the back of his head, his left ear and only the edge of his cheek. No jaw or mouth in view. At the right edge, the back of the woman's head and her sage-green shoulder, as sharp as he is. Slow push-in. |
 | Lighting | Continuity light: open shade, a gentle bright edge on his ear. |
 | Audio | Bed: wind, far murmur. VO at 0.40. |
 | Text | Caption "The client you've been chasing… for a year." 0.40–3.50 |
@@ -312,7 +320,7 @@ The camera pushes in gently and a little to the right, arriving at the end frame
 
 **Step A: still.** References: **approved F7 still**, crops **C1** and **C2**, R-FRAME.
 ```
-Same place, same light and same man as person 1 in the first reference image: early 50s, short salt-and-pepper hair, charcoal-grey quarter-zip, plain black lanyard. Photorealistic 16:9 medium-close shot, 29-degree lens, shallow depth of field, from 2.5 metres behind him and slightly to his left, at shoulder height: the back of his head, his left ear and only the outer edge of his cheek, both hands resting on the white railing, a white steel window column with bolt holes at the left edge. At the right edge, the sage-green shoulder and dark ponytail of the woman beside him, as sharp as he is. Past the railing, focus falls off into a soft blur of water, green and pale crowd with nothing readable. He stands in the soft open shade of the suite roof, with a gentle brighter edge on his ear; the view beyond is in bright hazy afternoon sun, about 5600 K. A real live-event photograph, natural colour. Every surface stays free of lettering: their clothes, the lanyard and its card, the white column, and the soft background.
+Same place, same light and same man as person 1 in the first reference image: early 50s, short salt-and-pepper hair, charcoal-grey quarter-zip, plain black lanyard. Photorealistic 16:9 medium-close shot, 29-degree lens, shallow depth of field, from 2.5 metres behind him and slightly to his left, at shoulder height: the back of his head, his left ear and only the outer edge of his cheek, both hands resting on the white railing, a white steel window column with bolt holes at the left edge. At the right edge, the back of the head and the sage-green shoulder of the woman beside him, as sharp as he is. Past the railing, focus falls off into a soft blur of water, green and pale crowd with nothing readable. He stands in the soft open shade of the suite roof, with a gentle brighter edge on his ear; the view beyond is in bright hazy afternoon sun, about 5600 K. A real live-event photograph, natural colour. Every surface stays free of lettering: their clothes, the lanyard and its card, the white column, and the soft background.
 ```
 **Step B: motion.** Kling 3.0, 4k, 5 s, sound off. Use 4.25 s.
 ```
@@ -406,8 +414,8 @@ foreground at an angle, background as bright bokeh. Three takes of 8 seconds. Se
   sharpening shows.
 - **Reject:** a focus pull that hunts, or any halo around the fingers or the ring.
 
-**Fallback 1 (still real):** licensed real stock footage. **Every one of these must match, or the clip is not
-used:**
+**Fallback 1 (still real):** licensed real stock footage. Stock that matches all of these at once is unlikely, so
+the real shoot is the dependable route. **Every one of these must match, or the clip is not used:**
 - the **left** hand of a **fair-skinned man in his early 70s** with age spots;
 - a plain gold band on the ring finger;
 - a **light-blue oxford cuff**;
@@ -429,29 +437,28 @@ no generator animation. Reject on any anatomy fault at 200 % zoom.
 |---|---|
 | Story job | Reveal who the "you" is: the host, standing with his father. Emotion. |
 | Action | The son's arm already rests across dad's shoulders, and it never lands. Both stand still, watching the green, breathing naturally. No directed movement. |
-| Camera | Medium, **29°**, from directly behind at 2.5 m. ESTIMATE: the frame is about 1.3 m wide at them, so the neighbours' heads fall outside it. **Keyframed**, and the 3 s take is used in full. The end still is the approved F5 still cropped 5 % tighter, centred on the two men, which makes a slow push-in with the arm and hand fixed at both ends. |
+| Camera | Medium, **29°**, from directly behind at 2.5 m. ESTIMATE: the frame is about 1.3 m wide at them, so the neighbours' heads fall outside it. **Locked in the generation**, with the approved still as both start and end still, so the arm and hand are pinned at both ends. The 3 s take is used in full. **In the edit:** scale 100 % → 105 %, centred on the two men. |
 | Lighting | Continuity light. |
 | Audio | No VO. The murmur falls away to a hush. |
 | Text | None |
-| Source | GEN: one still from the master and its cropped end still, animated between them on Kling 3.0 |
+| Source | GEN: one still from the master, animated on Kling 3.0 with the same still as start and end |
 | Real-ref | IMG_2031 (reading only: real guests with arms across shoulders) |
 | Angle | You bring the people; TripNerd handles everything else |
-| Motion | **Camera translation** (the push between keyframes) |
+| Motion | **Camera translation** (the 105 % edit push; see rule 3) |
 
 **Step A1: still.** References: **approved F7 still**, crops **C5** and **C6**.
 ```
 Same place, same light and the same two men as persons 5 and 6 in the first reference image: on the left a man in his early 40s with dark hair in a navy polo; on the right an older man in his early 70s with fair skin, white hair, a plain tan cap and a plain light-blue oxford shirt. Photorealistic 16:9 medium shot, 29-degree lens, shallow depth of field, from directly behind them at 2.5 metres. The younger man's right arm rests across the older man's shoulders, his right hand relaxed on the older man's far shoulder with the fingers together; his left hand is on the white railing; the older man has both hands on the railing, a plain gold band on his left hand. Both look out at the green, equally sharp, in the soft open shade of the suite roof. Past the railing, in bright hazy sun, focus falls off into a soft blur of water, green and pale crowd with nothing readable. A real live-event photograph, natural colour. Every surface stays free of lettering: their clothes, the tan cap, and the soft background.
 ```
-**Step A2: end still.** Crop the approved F5 still 5 % tighter, centred on the two men, and scale it back to full
-4K. There is no inpaint.
+**Step A2: end still.** The approved F5 still itself. There is no crop and no inpaint.
 
 **Step B: motion.** Kling 3.0, 4k, **3 s**, sound off, `start_image` + `end_image`. **Use all 3 s.**
 ```
-The camera pushes in slowly toward the two men, arriving at the end frame. The younger man's arm stays resting across the older man's shoulders the whole time, his hand still on the far shoulder. Both stand still, breathing naturally, looking at the green. A light breeze moves their shirts. Steady, realistic camera, one continuous shot. Every surface stays free of lettering.
+Locked-off camera, one continuous shot. The younger man's arm stays resting across the older man's shoulders the whole time, his hand still on the far shoulder. Both stand still, breathing naturally, looking at the green. A light breeze moves their shirts. Every surface stays free of lettering.
 ```
 **Reject if:** anything on the structural list fails · the arm slides, detaches or grows · either face turns.
-**Fallback:** a second take with the prompt shortened to *"The camera pushes in slowly to the end frame. The two men
-stand still, breathing. Every surface stays free of lettering."*
+**Fallback:** a second take with the prompt shortened to *"Locked-off camera. The two men stand still, breathing.
+Every surface stays free of lettering."*
 
 ---
 
@@ -489,23 +496,24 @@ shifts.
 | Field | |
 |---|---|
 | Story job | The last beat: in the roar, the son looks at his dad, not the green. Emotion. |
-| Action | The son's arm is still across dad's shoulders, his hand on dad's far shoulder, and dad's head is still tipped toward him, exactly as in the F7 end still. The son turns his head **about 30°** to the right, toward his father, away from the lens. The turn stops when the back of his head is square to the camera and both ears show evenly. His collar stays with his shoulders. Dad keeps watching the green. |
-| Camera | Close, 29°, **2 m behind the son and about 30° to his left**, so dad stays inside the right side of the frame. At the start we see his left ear and the edge of his cheek, as in F1. At the end we see the square-on back of his head. **Keyframed**, and the 3 s take is used in full, from the son still facing the green, as at the end of F7, to the completed turn. A slow push-in comes from the 5 % tighter end still. |
+| Action | The son's forearm is still across dad's back; his hand on dad's far shoulder is just outside the frame. Dad's head is still tipped toward him, exactly as in the F7 end still. The son turns his head **about 30°** to the right, toward his father, away from the lens. The turn stops when the back of his head is square to the camera and both ears show evenly. His collar stays with his shoulders. Dad keeps watching the green. |
+| Camera | Close, 29°, **2 m behind the son and about 30° to his left**. Dad's head and near shoulder sit at the right edge; his far shoulder and the son's hand fall just outside the frame, and the forearm across his back carries the embrace. At the start we see the son's left ear and the edge of his cheek, as in F1. At the end we see the square-on back of his head. **Locked in the generation**, between the start still and its inpainted end still at the same framing; the 3 s take is used in full, from the son still facing the green to the completed turn. **In the edit:** scale 100 % → 105 %, centred on the son's head. |
 | Lighting | Continuity light. |
 | Audio | The roar's tail, fading to near silence by 26.80, before the card's line at 27.40. |
 | Text | None |
-| Source | GEN: start still from the F5 still; end still made from it by masked inpaint plus a 5 % tighter crop; Kling 3.0 between them |
+| Source | GEN: start still from the F5 still; end still made from it by masked inpaint at the same framing; Kling 3.0 between them |
 | Real-ref | IMG_2031 (reading only) |
 | Angle | You bring the people; TripNerd handles everything else |
-| Motion | **Camera translation** (push-in from the wider start frame to the tighter end frame) |
+| Motion | **Camera translation** (the 105 % edit push; see rule 3) |
 
 **Step A1: start still.** References: **approved F5 still**, **approved F7 end still** (for dad's head tip),
 **approved F6 still** (for the heads' detail), crops **C5** and **C6**.
 ```
-The same two men, place and light as the reference images. Photorealistic 16:9 close shot, 29-degree lens, shallow depth of field, from 2 metres behind the younger man and about thirty degrees to his left, at shoulder height: the back of his head, his left ear and only the edge of his cheek, his navy polo in the foreground, his right arm resting across the older man's shoulders with the hand relaxed on the older man's far shoulder; the older man in the plain tan cap on the right, his head tipped about fifteen degrees toward the younger man exactly as in the reference, looking out at the green. Both in the soft open shade of the suite roof. Past the railing everything is a soft blur of water, green and pale crowd in bright hazy sun, with nothing readable. A real live-event photograph. Every surface stays free of lettering: their clothes, the tan cap, and the soft background.
+The same two men, place and light as the reference images. Photorealistic 16:9 close shot, 29-degree lens, shallow depth of field, from 2 metres behind the younger man and about thirty degrees to his left, at shoulder height: the back of his head, his left ear and only the edge of his cheek, his navy polo in the foreground, his right forearm resting across the older man's back; the older man's head in the plain tan cap and his near shoulder at the right edge of the frame, his far shoulder and the younger man's hand just outside the frame; the older man's head is tipped about fifteen degrees toward the younger man exactly as in the reference, looking out at the green. Both in the soft open shade of the suite roof. Past the railing everything is a soft blur of water, green and pale crowd in bright hazy sun, with nothing readable. A real live-event photograph. Every surface stays free of lettering: their clothes, the tan cap, and the soft background.
 ```
 **Check:**
 - dad's head tip and cap match the F7 end still;
+- the son's hand is outside the frame, and only the forearm crosses dad's back;
 - the heads match the approved F6 still at 100 %: ear shape, hairline, nape and collar.
 
 **Step A2: end still, made from the start still.** Nano Banana 2, `is_inpaint`, input = the approved start still.
@@ -513,24 +521,22 @@ Draw the mask over the younger man's head and neck only; his collar stays outsid
 ```
 Inside the mask only: the younger man's head turned about thirty degrees to the right, toward the older man, so the back of his head is square to the camera with both ears showing evenly and none of his face; his neck turns naturally above a collar that stays with his shoulders. Same hair, same light. Everything outside the mask stays exactly as it is. Every surface stays free of lettering.
 ```
-Then crop 5 % tighter, centred between the son's head and his hand on dad's shoulder so the hand stays inside the
-frame, and scale it back to full 4K. That is the end still.
-**Check:** both ears even · no cheek, brow, nose or lashes · the collar unchanged · the hand inside the frame · dad
-unchanged.
+No crop: the end still keeps the start still's framing.
+**Check:** both ears even · no cheek, brow, nose or lashes · the collar unchanged · the forearm and dad unchanged.
 
 **Step B: motion.** Kling 3.0, 4k, **3 s**, sound off, `start_image` + `end_image`. **Use all 3 s.**
 ```
-The camera pushes in slowly toward the two men, arriving at the end frame. The younger man holds for a moment, then slowly turns his head about thirty degrees to the right toward the older man, his collar staying with his shoulders, his face hidden from the camera. His right arm stays resting across the older man's shoulders, the hand still on the far shoulder. The older man keeps his head tipped toward him and keeps looking out at the green. Steady, realistic camera, one continuous shot. Every surface stays free of lettering.
+Locked-off camera, one continuous shot, arriving at the end frame. The younger man holds for a moment, then slowly turns his head about thirty degrees to the right toward the older man, his collar staying with his shoulders, his face hidden from the camera. His forearm stays resting across the older man's back. The older man keeps his head tipped toward him and keeps looking out at the green. Every surface stays free of lettering.
 ```
 **Reject if:**
 - anything on the structural list fails;
 - any cheek, brow, nose or lashes show;
 - the collar turns with the head;
-- the arm moves, lifts or disappears;
+- the forearm moves, lifts or disappears, or a hand comes into the frame;
 - dad's head resets upright;
 - the son's head starts the shot turned, rather than facing the green.
 
-**Fallback:** cut F8. Re-run F7 as a **5 s** take on the same keyframes, used in full (20.00–25.00). The card cuts in
+**Fallback:** cut F8. Re-run F7 as a **5 s** take on the same two stills, used in full (20.00–25.00). The card cuts in
 at 25.00 and holds 5.0 s, and its line moves to 26.40.
 
 ---
@@ -540,7 +546,7 @@ at 25.00 and holds 5.0 s, and its line moves to 26.40.
 Composited, no generation. Use `4824f6d7-6c23-49ec-a36d-6300cccf7981` as is: brand blue, the real logo,
 "Hospitality. Handled.", a white "Talk to a Nerd" pill, tripnerd.com.
 - **Transition:** a hard cut from F8 at 27.00, so the son's completed turn is not dissolved.
-- **Motion:** camera translation, a slow 2 % scale push across the three seconds.
+- **Motion:** a slow 2 % scale push in the edit across the three seconds. It is a flat card, so this is a scale move, not a camera move.
 - **VO:** "Hospitality. … Handled." at 27.40.
 
 ## 6. Voice-over and sound
@@ -596,14 +602,23 @@ bought for this film.
 - **Export:** 1920x1080, 24 fps, H.264, yuv420p, bt709, faststart.
 - **9:16 version:** a separate compose. Regenerate each still at 9:16 with the approved 16:9 still as reference.
   Keep captions above the bottom 15 % and below the top 8 %.
+- **Edit pushes:**
+  - F4: 3 %.
+  - F5: 100 % → 105 %, centred on the two men.
+  - F7: 100 % → 108 %, anchored on the upper-right third, so the extra's shoulder leaves at the lower-left.
+  - F8: 100 % → 105 %, centred on the son's head.
+  - F9: 2 %.
+
+  Each push runs across the shot's full length on an ease-in-out curve. The generated clips are 4K and the export
+  is 1080p, so these pushes cost no visible resolution.
 - **Who assembles:** ChatGPT's editor, CapCut, or Claude in the Higgsfield sandbox (as for the approved spot). No
-  compositing is needed: every camera move is generated, except F4's 3 % edit push.
+  compositing layers are needed.
 
 ## 8. Money and time (ESTIMATE, re-price in Higgsfield before starting)
 
 | Item | Count | Unit (from earlier jobs) | Subtotal |
 |---|---|---|---|
-| Nano Banana 2 4K stills and inpaints (F7, F7 end, F1, F2, F3, F5, F6, F8 start, F8 end; two takes each; F5's end still is a crop, free) | 18 | ≈ 3 credits | ≈ 55 |
+| Nano Banana 2 4K stills and inpaints (F7, F7 end, F1, F2, F3, F5, F6, F8 start, F8 end; two takes each) | 18 | ≈ 3 credits | ≈ 55 |
 | Kling 3.0 4k (F1, F2, F3, F6 at 5 s; F7 at 4 s; F5 and F8 at 3 s; two takes each) | 14 | ≈ 30 credits (shorter clips may cost less) | ≈ 420 |
 | **Total, before any fallback** | | | **≈ 475 credits** |
 
@@ -624,8 +639,12 @@ F4 is a phone shoot. The licensed crowd audio is a separate small purchase.
     from TripNerd's own footage filmed there.
   - TripNerd has suites there, but nothing on file says it may show the venue and the tournament in advertising,
     or use its on-site footage commercially.
-  - **Taylor confirms both in writing** before generation starts (rule 1), and before the film is delivered for any
-    external use, paid or organic.
+  - **Taylor confirms in writing** (rule 1) before any generation or reference use, and before the film is
+    delivered for any external use, paid or organic. The confirmation covers three points:
+    - showing the venue and the tournament;
+    - using the on-site footage;
+    - that a host's group can stand together at the front rail.
+  - There is no override.
   - There is no venue-free version of this film. If the answer is no, the concept changes.
 
 ## 10. Skeptic Pass 1

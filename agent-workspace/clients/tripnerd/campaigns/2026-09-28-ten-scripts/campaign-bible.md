@@ -25,7 +25,7 @@ tags: [campaign, bible]
 | **Objective** | Package enquiries ("Talk to a Nerd") — INFERRED |
 | **KPI + target** | UNKNOWN (owner) |
 | **Budget (credits / $)** | UNKNOWN; spend zero at this stage |
-| **Approval status** | Owner picked YOUR PEOPLE (strategy and concept accepted by choice). STORYBOARD v8 awaiting owner approval, which is also the spend gate. **BLOCKED (Skeptic S4): venue, tournament and on-site-footage rights need Taylor's written confirmation before spend and before delivery.** |
+| **Approval status** | Owner picked YOUR PEOPLE (strategy and concept accepted by choice). STORYBOARD v9 awaiting owner approval, which is also the spend gate. **BLOCKED (Skeptic S4): venue, tournament, on-site-footage and front-rail access need Taylor's written confirmation before any generation and before delivery. No override.** |
 
 ---
 
@@ -89,7 +89,7 @@ Written in `scripts.md` with beat tables, sources, VO with performance marks, an
 
 ## 6. Storyboard — YOUR PEOPLE (owner's pick, 2026-09-28)
 Full shot list with the ten fields per shot, still and motion prompts, reject lists and fallbacks:
-`your-people-frame-by-frame.md` (v8). 30.0 s, 16:9, 24 fps, 9 shots (average 3.3 s; no generated shot over 4.5 s
+`your-people-frame-by-frame.md` (v9). 30.0 s, 16:9, 24 fps, 9 shots (average 3.3 s; no generated shot over 4.5 s
 on screen). Build order: the F7 still first, then cast crops C1–C6; every other still is derived from them. Hero
 beat F7 names two motion axes.
 **Real-reference law (BC-34):** generated shots attach only the three mark-free, player-free crops R-VIEW (aaf2c1f4), R-FRAME
@@ -113,8 +113,8 @@ marks anywhere; clothing, cups and lanyards specified plain. No tournament marks
 
 ## 10. Production routing (operator: ChatGPT with Higgsfield)
 Stills: Nano Banana 2, 4K, 16:9, with the mark-free reference crops attached. Motion: Kling 3.0 4k for every
-generated shot (F5, F7 and F8 keyframed with an end_image made by crop, plus inpaint on F7 and F8, each used in
-full). No compositing layers. ESTIMATE about 475 credits with two takes per shot, before fallbacks; re-price live before the spend gate.
+generated shot. F5, F7 and F8 are locked between stills at the same framing (F7 and F8 end stills by inpaint),
+used in full, with their pushes done in the edit on the 4K clips. No compositing layers. ESTIMATE about 475 credits with two takes per shot, before fallbacks; re-price live before the spend gate.
 
 ---
 
@@ -521,6 +521,60 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
   - Five of six stay still under the roar. That is the concept ("nobody cheers"); an optional small reaction can be added by inpaint at approval.
   - F8 is non-hero with one axis (S1).
 
+### Pass 1, eighth run — YOUR PEOPLE storyboard v8 (2026-09-28), transcribed verbatim
+
+```
+SKEPTIC VERDICT — Pass 1
+Verdict: BLOCK
+Findings:
+- [S4] Rule 1 / whole film — CLIENT-FACTS show no rights basis for showing the venue and the tournament, or for using the client's on-site footage. Even so, rule 1's owner-spend override lets generation start before the written confirmation arrives. Every generated shot attaches R-VIEW, R-FRAME and R-RAIL, and condition (b) of the artifact's own rule 1 says that reference use needs the same confirmation. Until the confirmation is filed, no generation may use the client footage and nothing may be delivered.
+- [S2] F5, F7, F8 — Every end still is a crop of its own start still (in F7 and F8, plus a local inpaint). So the generated push has no parallax. It is a zoom the edit could do at the same quality. Yet it forces the generator to re-render every hand, cup, baluster and row of bolt holes at a changing scale, and then land on a resampled end frame in the untested 4k end_image mode. F5's two keyframes differ only by the crop, so F5 does not need end_image at all.
+- [S2] F5, F7, F9 — Motion floor: F5's only named axis and both of F7's hero axes come from that crop. One is a zoom, the other a corner reframe of the extra's shoulder; neither is camera translation or a foreground occlusion event. So F5 has no real axis, and the hero beat has neither of the two it needs. F9's only motion is a 2% scale on a flat card, also labelled camera translation.
+- [S2] F6–F7 — As boarded, the six watch an empty green: R-VIEW has the figures on the green cloned out, and nothing in F6 or F7 asks for soft, unreadable figures there. They also watch a far bank that F7's "nothing else moves" holds still, while the audio's distant roar layer is that same bank. An "ooh" tracking a putt and a roar over a motionless, empty view reads as a painted backdrop to the golf-going buyers the film is aimed at.
+- [S2] F7 — The six guests and the extra show no physical response to a roar breaking directly beneath them. Only dad moves, a head tip about a second later. A startle or a weight shift is not a celebration. With no response at all, the group drifts toward the frozen-mannequin look that rule 10 rejects, rather than reading as chosen stillness.
+- [S2] F7 / product truth — The film shows a host's group of six holding a stretch of the front rail with no other guest beside them. The client's own suite footage is often shot over another guest's head or shoulder. Nothing in CLIENT-FACTS confirms that a group gets front-rail space together, so this depicted access is unsupported until the client confirms it in writing.
+- [S1] F1 — At 29° and 2.5 m, F1 has the same ~1.3 m-wide frame the artifact works out for F2's two-shot. That puts guest 2's whole head in frame, not just her shoulder and ponytail at the edge. The lens and distance contradict "medium-close", so there is no single spec to check the still against.
+- [S1] F7 fallback (1) — Dropping the head tip also invalidates three things: F8's start still (built from the tipped F7 end still), F8's "dad's head resets upright" reject, and the cast rule that dad stays tipped from F7 on. The fallback does not say F8 is rebuilt, and it removes one of the film's two closing gestures.
+- [S1] F7 fallback (2) — The "Bring your people." caption runs only 0.8 s (22.05–22.85). That is too short for a reliable read by the muted viewers the captions exist to serve.
+- [S1] F4 fallback 1 — Licensed stock that matches every listed item at once is unlikely to exist. In practice the chain runs real shoot → generated hand still (fallback 2), so the real shoot is the only dependable route for F4.
+- [S1] Rule 1 and F7 — "Owner decision" and "owner approval" name no defined role (OPERATOR, APPROVER, SPEND_APPROVER, CLIENT_APPROVER). It is unclear who may accept the risk of spending before the rights answer, or approve the optional guest-4 reaction.
+(Pass 1 only) Shot risk:
+- F1 — MEDIUM
+- F2 — LOW
+- F3 — LOW
+- F4 (real, as boarded) — LOW
+- F4 fallback 2 (generated still) — MEDIUM
+- F5 — MEDIUM
+- F6 — MEDIUM
+- F7 — HIGH — Simpler action. Build the end still as the dad head-tip inpaint at the start still's own framing (no crop), so the generator's only changes are breathing, breeze and the tip against a locked frame. Do the push-in and the extra's exit as a scale and reposition in the edit. Keep fallbacks (1)–(3); (3) fires after the second failed take.
+- F8 — HIGH — Simpler action and different framing. Build the end still as the son's head-turn inpaint at the start still's own framing, and move the 5% push to the edit, so the turn is the only generated change. Either take the son's hand on dad's far shoulder out of frame (the forearm across dad's back carries the embrace), or hold it with a tracked patch from the start still. After a second failed take, the listed cut-F8 fallback fires.
+- F9 (composite from real files) — LOW
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.
+```
+
+**Director's resolution (v9 of the storyboard):** both HIGH method changes applied as prescribed, plus most S2 and S1 items.
+- **F7 and F8:** locked in generation between stills at the same framing, with no crop. The only generated change is dad's head tip (F7) and the son's turn (F8).
+  - The pushes move to the edit: F7 100 % → 108 %, anchored so the extra's shoulder leaves; F8 100 % → 105 %. The 4K clips export at 1080p, so the pushes cost no visible resolution.
+  - F8 frames the son's hand out of shot, and the forearm carries the embrace.
+- **F5:** the same still as start and end, and the push in the edit.
+- **F7's hero axes** are now honestly labelled as edit-built (a zoom without parallax). That is the accepted S2 trade for minimal generation, left open for APPROVER acceptance.
+- **F7:**
+  - Soft, unreadable figures on the green; the soft background shifts gently.
+  - Fallback 1 now states that F8 is rebuilt with dad upright.
+  - Fallback 2 moves the VO to 21.60, with the caption at 21.60–22.95.
+- **Rights, rule 1:** the override is removed. Taylor's written confirmation now covers three points: the venue and tournament, the on-site footage, and a group standing together at the front rail (the product-truth finding). The rule also names roles: SPEND_APPROVER releases spend; APPROVER signs off the storyboard and creative options.
+- **Smaller fixes:**
+  - F1's framing text now shows guest 2's head at the edge.
+  - F4's stock fallback is flagged as unlikely to match, so the real shoot is the dependable route.
+  - F9's 2 % is labelled a scale move on a flat card.
+
+**Left open for APPROVER acceptance (S2):**
+- the edit-built pushes and zooms in F5, F7 and F8;
+- stillness under the roar (the optional inpainted reaction is available).
+
+**Skeptic cadence decision:** further Pass 1 runs are held until Taylor's confirmation is filed. Every run blocks on the S4 until then. The binding re-run is a fresh Pass 1 on the final storyboard immediately before spend.
+
 ## 16. Decision log
 | Date | Decision | By |
 |---|---|---|
@@ -531,3 +585,4 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 | 2026-09-28 | Owner picked YOUR PEOPLE and asked for a frame-by-frame brief for ChatGPT to generate one frame at a time in Higgsfield. Storyboard written; location re-based on the real suite footage (view across the water to the green's wooden edge and a white grandstand, white posts and rail, high afternoon sun). Hand-landing risk designed out: the son's arm is already across dad's shoulders. The dad's-hand shot offered as real footage. New end card built with "Talk to a Nerd" because the existing card says "VIP" | Owner / Director |
 | 2026-09-28 | Owner: scripts need not be built around real footage where Higgsfield (with Claude or ChatGPT) can make a shot look real. v2 is generation-first with real footage as upgrades; ranking redone: Empty Suite, The Roar, Your People (Day One/Two/Three runner-up). Performed-emotion ban and FTC form rule still apply. Evidence recorded: the approved 8.4 spot shows a calm generated actor in a medium shot passes this owner's realism bar | Owner / Director |
 | 2026-09-28 | YOUR PEOPLE storyboard taken through seven isolated Skeptic Pass 1 rounds (v1→v8). Generation risk narrowed each round (S3/S4 count 4→1→S4 only; HIGH shots now given prescribed method changes). The remaining blocker is a fact, not a design: venue, tournament and on-site-footage rights (S4). The storyboard goes to the owner for approval now; spend waits for Taylor's written confirmation, and the Skeptic re-run before spend covers v8. | Director |
+| 2026-09-28 | Eighth Skeptic round applied (v9): F5, F7 and F8 locked in generation with pushes in the edit; rights override removed. Further Pass 1 runs held until Taylor's written confirmation is filed; the binding re-run is on the final storyboard immediately before spend. | Director |
