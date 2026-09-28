@@ -97,3 +97,4 @@ None yet — no pass has run (nothing to attack until a script is chosen and sto
 | 2026-09-28 | Depth SLIM; strategy and concept drafted together and parked with the owner; no spend | Director |
 | 2026-09-28 | The 29 house photos identified as Masters-week material; only mark-free frames may be used, and the house is never named | Director (policy) |
 | 2026-09-28 | "VIP", prices, dates, superlatives excluded from every script pending Evidence Records | Director (claims policy) |
+| 2026-09-28 | Owner: scripts need not be built around real footage where Higgsfield (with Claude or ChatGPT) can make a shot look real. v2 is generation-first with real footage as upgrades; ranking redone: Empty Suite, The Roar, Your People (Day One/Two/Three runner-up). Performed-emotion ban and FTC form rule still apply. Evidence recorded: the approved 8.4 spot shows a calm generated actor in a medium shot passes this owner's realism bar | Owner / Director |
