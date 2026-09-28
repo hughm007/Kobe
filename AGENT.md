@@ -83,7 +83,7 @@ Drafting is always fine. **Dispatching is not** — same rule as CLAUDE.md §10.
 
 ## 4. What it may never do without asking
 
-Karl's list, verbatim in intent, encoded in `orion/orion.toml` as `[gate].consequential`:
+Karl's list, verbatim in intent, encoded in `orion/orion.toml` as `[gate].always_confirm`:
 
 1. **Send, publish, post, or deploy anything** — email, social, site deploy, form submission,
    anything that leaves the machine toward a client or the public.

@@ -114,7 +114,7 @@ you get "while you were away". Restart the heartbeat: nothing refires early.
 
 ## 8. Claude Code delegation
 
-`uv pip install claude-agent-sdk`, make sure a test project exists under `~/Kobe`
+`uv sync` (installs the SDK via the default `coder` group), make sure a test project exists under `~/Kobe`
 (e.g. `mkdir -p ~/Kobe/scratch-site && git -C ~/Kobe/scratch-site init`), then
 by voice: "have Claude Code create a simple hello page in scratch-site" →
 Orion states the action → yes → "are you sure you want to confirm?" →

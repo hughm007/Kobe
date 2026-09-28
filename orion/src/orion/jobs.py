@@ -146,11 +146,16 @@ class SdkRunner:
         import asyncio
 
         try:
-            from claude_agent_sdk import ClaudeAgentOptions, query
+            from claude_agent_sdk import (
+                ClaudeAgentOptions,
+                PermissionResultAllow,
+                PermissionResultDeny,
+                query,
+            )
         except ImportError as exc:
             raise RuntimeError(
-                "The Claude Agent SDK isn't installed. Run `uv pip install claude-agent-sdk` "
-                "inside orion/."
+                "The Claude Agent SDK isn't installed. Run `uv sync` inside orion/ "
+                "(it is in the default `coder` dependency group)."
             ) from exc
 
         async def _permission(tool_name, tool_input, _context):
@@ -158,8 +163,10 @@ class SdkRunner:
             if reason is not None:
                 job.denials.append(f"{tool_name}: {reason}")
                 on_progress(f"blocked {tool_name} (guardrail)")
-                return {"allowed": False, "reason": reason}
-            return {"allowed": True}
+                # The SDK accepts only PermissionResult objects; a plain dict makes it
+                # raise TypeError, which fails EVERY tool call, allowed ones included.
+                return PermissionResultDeny(message=reason)
+            return PermissionResultAllow()
 
         options = ClaudeAgentOptions(
             cwd=str(policy.project_dir),
@@ -252,6 +259,14 @@ class CodingJobManager:
             raise ValueError(
                 f"'{project}' is outside {self.projects_root} — jobs only run under it."
             ) from None
+        home = Path(self.config.home).resolve()
+        if candidate == home or candidate.is_relative_to(home) or home.is_relative_to(candidate):
+            # AGENT.md §4: Orion never changes its own config or system prompt unasked.
+            # A job rooted at or around orion/ could edit orion.toml's gate and deny lists.
+            raise ValueError(
+                f"'{project}' contains Orion itself ({home}). Delegated jobs may not edit "
+                "Orion's own code, config, or safety gate — use a project directory beside it."
+            )
         if not candidate.is_dir():
             raise ValueError(
                 f"There is no project directory at {candidate}. "

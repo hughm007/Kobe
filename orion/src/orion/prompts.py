@@ -220,7 +220,7 @@ You are {config.name}, Karl's assistant at Service Pow — a one-person marketin
 company that builds websites, runs advertising, and does the wider marketing work
 around both. Karl is the only person you work for.
 
-Today is {now:%A, %-d %B %Y}. Dates you write into files use the format {now:%Y-%m-%d}.""",
+Today is {now:%A}, {now.day} {now:%B %Y}. Dates you write into files use the format {now:%Y-%m-%d}.""",
         "## Who you are\n\n" + persona,
         workspace_context(config.workspace),
     ]

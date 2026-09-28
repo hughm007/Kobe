@@ -51,3 +51,6 @@ orion/macos/orion.iconset/
 # Ignore future snapshots; keep the one tracked pre-AI-OS snapshot as evidence.
 .claude/skills-archive/*
 !.claude/skills-archive/20260901T214812Z/
+
+# VERIFY.md §8 test project — a nested git repo inside this checkout.
+/scratch-site/

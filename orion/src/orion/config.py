@@ -155,6 +155,14 @@ def load_config(home: Path | None = None) -> Config:
     gate = data.get("gate", {})
 
     known_gate = {f for f in GateConfig.__dataclass_fields__}
+    unknown_gate = sorted(set(gate) - known_gate)
+    if unknown_gate:
+        # Fail loud: a misspelled key here would silently drop tools from the
+        # two-step confirmation gate.
+        raise ConfigError(
+            f"orion.toml [gate] has unknown key(s) {unknown_gate}. "
+            f"Known keys: {sorted(known_gate)} (the confirm list is `always_confirm`)."
+        )
     known_voice = {f for f in VoiceConfig.__dataclass_fields__}
     known_model = {f for f in ModelConfig.__dataclass_fields__}
     known_conv = {f for f in ConversationConfig.__dataclass_fields__}

@@ -25,7 +25,7 @@ HUD's own power button does the same.
 ## Quickstart — from zero to talking
 
 ```bash
-git clone -b claude/voice-first-agent-core-dysy9h https://github.com/hughm007/Kobe.git
+git clone https://github.com/hughm007/Kobe.git   # default branch (main)
 cd Kobe/orion
 uv sync --extra voice
 uv run orion-setup           # paste your 3 keys when prompted (input is hidden)
@@ -115,7 +115,7 @@ Orion can hand software tasks to **Claude Code** — "have Claude Code add a
 contact form to the 911 Drain site" — via `delegate_coding_task`. Setup:
 
 ```bash
-uv pip install claude-agent-sdk   # installs into Orion's venv (bundles the Claude Code runtime)
+uv sync   # the SDK is in the default `coder` group (bundles the Claude Code runtime)
 ```
 
 How it behaves, by design:
