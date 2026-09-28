@@ -117,7 +117,50 @@ eruption clip). ESTIMATE about 590 credits with two takes per shot; re-price liv
 ---
 
 ## 14. Skeptic verdicts
-None yet — no pass has run (nothing to attack until a script is chosen and storyboarded).
+
+### Pass 1 — YOUR PEOPLE storyboard v1 (2026-09-28), transcribed verbatim
+
+```
+SKEPTIC VERDICT — Pass 1
+Verdict: BLOCK
+Findings:
+- [S4] F7 20.75–25.75 — The hero shot has generated people celebrating at readable distance, which the realism floor forbids: guest 4 throws both arms up, guest 1 raises a fist, and guests 2 and 3 lift cups to shoulder height, all about 3 m from camera. Payoffs must be back-of-head, stillness and small business.
+- [S3] F7 — One 5.0 s image-to-video generation, at the shot-length ceiling, has to deliver six people doing five different actions at once, a mass eruption in the far crowd, a pull-back and tilt that invents suite geometry outside the approved still (roof edge, chair back), and six faces that stay turned away throughout. The likely results are blended or mirrored actions, merged limbs and cups, a boiling crowd and a head turning to camera, all on the payoff.
+- [S3] F4 12.75–15.00 — A full-screen 12° detail of an aged hand (age spots, ring, watch, gingham cuff), with the focus pull and a moving shadow left to the generator, is classic hand-failure territory. Every warped finger, knuckle or ring sits in the focal area on the line "Your dad". Real footage is listed only as an alternative, and CLIENT-FACTS confirm no such clip exists.
+- [S3] F3 8.25–12.75 — Guest 4's generated arm points, traces a putt line and lowers. That puts finger anatomy and a floating arm path in the focal area, silhouetted against bright water, and there is no real reference on file of a guest pointing from behind.
+- [S3] F6 18.75–20.75 — This is a telephoto view of a specific, recognisable real hole (island green with wooden edge, grandstand, packed bank), with many tiny "frozen" spectators and a focus pull left to the generator. It is the view a golf-literate buyer knows best, so a boiling crowd, a morphing green edge, or a fake zoom in place of the focus pull would be caught.
+- [S2] F6/F7 — The putter click at 20.25 sounds while the only golfer on screen is still crouched reading the putt. The roar then comes 0.9 s after the click, which only a tap-in allows, but the build sells a long, tense putt. A golfer hears this sequence as wrong.
+- [S2] F6 — "Ring of spectators" invites the generator to put people on or around the island green. The client's footage puts the crowd on the grandstand and bank across the water, and people on the island look wrong to anyone who knows the hole.
+- [S2] F6/F7 — The product is the view from the suite. Any generated view that shows the green closer, larger or a different shape than the client's real footage from the rail misrepresents what the buyer gets.
+- [S2] F7 — "5 draws 6 in, 6 stays still" contradicts itself: an arm pulling in a body that does not move is force without reaction. The generator will either drop one instruction or render impossible physics.
+- [S2] F7 — At 63° from 3 m the frame is only about 3.7 m wide at the rail. Six adults side by side fill it edge to edge, which puts guests 1 and 6 at the distorted, crop-prone frame edges just as the reaction starts.
+- [S2] F3/F4/F7 — Guest 4's cup "standing on the rail" and F4's "rail edge" assume a flat ledge, but CLIENT-FACTS only say "white steel posts and rail". If the real rail is a round tube, a cup cannot stand on it: that would be impossible physics and would contradict the reference frames.
+- [S2] F4 — The gold wedding band is on the right hand, which most English-speaking audiences read as wrong. A detail shot exists to be looked at closely, so the mistake will be seen.
+- [S2] F4 — The steel watch puts a dial (numerals, hands, maker's mark) into a 12° detail, so the generator would be making in-scene text or a mark in the focal area.
+- [S2] F4 — Nothing on the board casts the flag shadow that crosses the hand; the only flag is on the green across the water. A moving shadow with no source reads as an artifact.
+- [S2] F3/F4/F7 — Fine or busy patterns tend to swim or shimmer (moiré) in image-to-video once bodies and camera move. The tropical print is on the figure who moves most, and the gingham cuff is at macro scale in F4.
+- [S2] F1/F2/F3/F7 — Camera moves reveal areas the approved still never covered: the edges uncovered by the trucks in F2 and F3, and the roof, chair and upper frame in F7. The brief makes the clothes unbranded but says nothing about keeping the flag, grandstand, suite fascia, caps, F1's lanyard or the cups blank, so the generator can invent fake text or event and sponsor marks on them.
+- [S2] F1/F8 — The close rear three-quarter framings (29°, about 1.5 m) show cheek and jaw. Any jaw movement during F1's exhale reads as out-of-sync speech under the VO, and F8's head turn invites the generator to swing the face toward camera.
+- [S2] F2 — Two clear, filled cups moving between two bodies are the focal action here, and refraction and liquid level both have to hold. "Cups never touch" is a negative instruction that video models often ignore.
+- [S2] F7 audio — The packet gives no source for the "real recorded crowd roar". CLIENT-FACTS list only the client's own phone footage, and a roar lifted from a broadcast is a rights exposure.
+- [S2] F5–F8 — A faded red cap on a white-haired man in his 70s invites an unintended political reading in US feeds. Any other colour removes that risk at no cost.
+- [S1] F9 — The end card names no motion axis, and the rubric says every shot must name one.
+- [S1] F9 VO — "We'll handle the rest" stretches the brand line into an open-ended service promise, and CLIENT-FACTS define no package scope to back it up.
+(Pass 1 only) Shot risk:
+- F1 — MEDIUM
+- F2 — MEDIUM
+- F3 — HIGH — Simpler action plus keyframe. Start with the arm already extended (index finger out, other fingers curled, anatomy approved in the still), then one slow lowering to halfway, locked to an approved end keyframe, with no tracing. Frame it so his head or shoulder partly hides the hand, not silhouetted against the water. Swap the fine tropical print for a bold, large-scale print or a loud solid. Using real footage instead means shooting it, because no recording exists.
+- F4 — HIGH — Real footage. Shoot a real phone clip of a real older hand on a white rail that matches the suite's; none exists, so capture it with a signed release. Put the band on the left hand, keep the watch face out of frame, pull focus in camera, and drop the flag shadow unless its source is shown. Fallback is a hybrid: an approved still with the focus change built in the composite, with no generator animation of the hand.
+- F5 — MEDIUM
+- F6 — HIGH — Hybrid. Build the background from the client's real suite footage of the green, grandstand and bank; if it does not hold up at the 18° crop, use a generated still matched to that footage. Make the foreground shoulders a separate soft layer and do the focus change in the composite, not the generator. Keep spectators on the far banks only, and keep the golfer tiny, static and featureless.
+- F7 — EXTREME — Simpler action, keyframe and hybrid. The guests keep only realism-floor payoffs: they straighten, 5's arm tightens as 6 leans in slightly, cups stay at chest height, with no arms up and no fist. Do not generate the far crowd's reaction at readable scale: use real client footage of a crowd reaction if one exists; otherwise keep the crowd small and defocused and let the recorded roar carry the eruption. Lock the pull-back and tilt reveal with an approved end keyframe matched to the real suite reference (roof edge, chair back), so the generator invents nothing. Restage or widen so no guest sits at the frame edge when the reaction starts.
+- F8 — MEDIUM
+- F9 — LOW (not generated; real brand files composited)
+Isolation: packet verified; production reasoning, cost, draft history, and other evaluators' output withheld.
+```
+
+**Director's resolution (v2 of the storyboard):** every S4/S3 and S2 applied. F7: stillness payoff (straighten, lean, arm tightens with dad leaning in), cups at chest height, no raised arms, far crowd small and soft, start and end keyframes, camera at 5 m so all six sit in the middle 70 %, 4.5 s. F4: real phone clip, left hand, watch hidden, focus in camera, no shadow, signed release; hybrid fallback with no generator animation. F3: start and end keyframes, arm already extended, hand partly hidden, crowd bank behind it, solid tangerine polo. F6: composite from the real suite footage, spectators only where real, no generator animation; click moved to 18.95 so the ball rolls 1.8 s before the roar. Rail confirmed from the real frames as a round tube with balusters (nothing stands on it; a black drink ledge exists inside). Lettering lock on every prompt. F1 at 47° from 2.5 m with no jaw in view; F8 with an end keyframe and the turn away from the lens. F2 cups held still, a head tip and a nod instead. Roar rights to confirm with Taylor or use a licensed library roar. Dad's cap tan, shirt plain oxford. F9 motion axis added. Final VO changed to the brand line "Hospitality. Handled."
+
 
 ## 16. Decision log
 | Date | Decision | By |
