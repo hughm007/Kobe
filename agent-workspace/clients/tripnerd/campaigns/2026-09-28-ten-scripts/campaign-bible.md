@@ -89,13 +89,14 @@ Written in `scripts.md` with beat tables, sources, VO with performance marks, an
 
 ## 6. Storyboard — YOUR PEOPLE (owner's pick, 2026-09-28)
 Full shot list with the ten fields per shot, still and motion prompts, reject lists and fallbacks:
-`your-people-frame-by-frame.md` (v5). 30.0 s, 16:9, 24 fps, 9 shots (average 3.3 s). Build order: F7 master still
-first, then its clean plate and chair layer, then cast crops C1–C6; every other still is derived from them. Hero
+`your-people-frame-by-frame.md` (v6). 30.0 s, 16:9, 24 fps, 9 shots (average 3.3 s; no generated shot over 4.5 s
+on screen). Build order: the F7 still first, then cast crops C1–C6; every other still is derived from them. Hero
 beats F5 and F7 each name two motion axes.
-**Real-reference law (BC-34):** every generated shot cites the clean, caption-free suite frames (7c9be9e1, 4c463ea4,
-4ec88dba, fe30cf32; the captioned c2a0c138 / 9111e76a / e5329451 / 4b183815 are never attached), V24 for the hush
-and the roar, and IMG_1928 / IMG_2031 for behaviour (reading only). F4 is real footage. No shot carries a NO
-REFERENCE FOUND entry in v5.
+**Real-reference law (BC-34):** generated shots attach only the three mark-free crops R-VIEW (1f4a5b57), R-FRAME
+(2f8b2d78) and R-RAIL (6a26be6c). The source frames 7c9be9e1 / 4c463ea4 / 4ec88dba / fe30cf32 and the captioned
+c2a0c138 / 9111e76a / e5329451 / 4b183815 are never attached. Behaviour references are reading only: 7c9be9e1 and
+fe30cf32 (shooting over a guest's shoulder), IMG_1928 and IMG_2031. V24 is cited for the hush and the roar. F4 is
+real footage. No shot carries a NO REFERENCE FOUND entry.
 
 ## 7. Performance direction
 Actor briefs per character in the storyboard section 4. Nobody faces the camera; the payoff is backs, stillness
@@ -111,9 +112,9 @@ COMPOSITE: F9 end card (real logo file 46ae277a; card 963af612 built from it) an
 marks anywhere; clothing, cups and lanyards specified plain. No tournament marks, scoreboards or player names.
 
 ## 10. Production routing (operator: ChatGPT with Higgsfield)
-Stills: Nano Banana 2, 4K, 16:9, with reference frames attached. Motion: Kling 3.0 4k, 5 s, start_image
-(proven on the locked frame 1); F3 and F8 add an end_image made by inpaint. F7: Seedance 2.5 omni_reference
-start_image, 1080p (proven on the balcony eruption clip). F7's far bank and guests on Seedance 2.5, 6 s, from an inpainted clean plate; the push-out is a two-layer edit move. ESTIMATE about 565 credits with two takes per shot, before fallbacks; re-price live before the spend gate.
+Stills: Nano Banana 2, 4K, 16:9, with the mark-free reference crops attached. Motion: Kling 3.0 4k for every
+generated shot (5 s, F8 at 3 s with an end_image made by inpaint plus a crop-push). No compositing layers.
+ESTIMATE about 470 credits with two takes per shot, before fallbacks; re-price live before the spend gate.
 
 ---
 
@@ -305,6 +306,83 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 - **Grade:** F7 (Seedance) is matched to F6 and F8 (Kling) side by side before the global grade and grain.
 - **F2:** the nod timing is set by trimming, not by the prompt, and more than one nod is a reject.
 - **Rights:** a pre-publish gate is added to the storyboard's §9. Taylor confirms in writing that TripNerd's hospitality agreement allows the venue and tournament in paid advertising; until then the film is for approval only. Surfaced to the owner.
+
+### Pass 1, fifth run — YOUR PEOPLE storyboard v5 (2026-09-28), transcribed verbatim
+
+```
+SKEPTIC VERDICT — Pass 1
+Verdict: BLOCK
+Findings:
+- [S3] F7 — Nothing says what is on the island green when the roar breaks. The generator will either show an empty green under a full roar, or invent a golfer and caddie reacting on it. The second is a generated celebration at a scale where a fist pump reads, and it exposes player identity and caddie bibs, which the compliance note forbids. No F7 reject criterion covers either outcome.
+- [S3] F7 — The far bank's standing ovation is the film's one generated celebration, and its reject criterion requires it to "read as people applauding" at normal speed. That is exactly the "claps at readable distance" the realism floor bars from generation. The primary route can pass its own reject only by breaching the floor, and it fails the reject if it respects the floor.
+- [S3] F7 final fallback — It routes to "the owner's real roar footage from the suite" without the CLIENT-FACTS precondition: client roar recordings are used only with the client contact's written confirmation that client staff or guests filmed them on site. It also plans no scrub of the real grandstand fascia, big-screen content, roof flags and signage that such footage carries; the lettering sweeps are defined only for generated stills and animations.
+- [S3] F8 fallback — "F7 runs 20.75–26.60" holds a generated six-person shot with a generated crowd for 5.85 s, which breaks the ≤5 s shot-length law. F9's crossfade from 26.60 then has no outgoing picture for 0.4 s, unless F7 runs to 27.00: that is 6.25 s, longer than its 6 s take.
+- [S2] F3 — At 47° from 2.5 m behind and about 20° to guest 4's right, guest 3 stands at normal side-by-side spacing (about 0.6 m to his left) and almost the same focus distance. That puts him about 10–12° from guest 4 inside the frame, with his head at the same height as guest 4's. So "only a soft white shoulder at the left edge, head out of frame" cannot come from this framing, and the "guest 3's head enters" reject fires on every faithful take.
+- [S2] F3 — The target end pose, "back of his head square to the lens", shows both ears, so the "left ear appears" reject rejects the specified end still itself.
+- [S2] F3 — The lean is inpainted with a mask limited to head, neck, collar and shoulders, while both arms (left hand on the rail, right hand in the pocket) stay pixel-locked outside it. The end still and Kling's interpolation therefore have to bend or detach the upper arms at the mask edge.
+- [S2] F8 — Seen from directly behind, a 45° head turn puts the near brow ridge and lashes, and often the nose tip, at or past the cheek outline (lost profile). The specified end still therefore sits on its own reject line, at a close 29° framing where every facial feature is large.
+- [S2] F8 — The named motion axis (focus change) does not exist in the method. The start and end stills are pixel-identical outside the head mask, so the keyframes carry no focus or framing difference, and "slight handheld sway" has to return to where it started. The film's payoff beat is likely to render as a head turn in a static frame.
+- [S2] F7→F8 — F7 ends with dad's head tipped 15° toward his son and leaning into the arm, but F8's start still specifies only the son's arm, so dad's head is free to reset upright across the cut.
+- [S2] F7 composite — The chair is out of focus, so its 10 px feathered cut carries floor, rail and baluster pixels from the approved still. Scaling that layer 120→100% over a Seedance plate that re-rendered those areas, and that moves only 105→100%, drags a ghost fringe and a colour mismatch along with the chair. The method rejects the halo but does nothing to prevent it.
+- [S2] F7 — The widest and most detailed shot is the only generated shot specified at 1080p, then scaled up 105%. The film's stills are 4K and F1, F3 and F8 are Kling 3.0 4k, and tiny far-bank figures are exactly where boiling and shimmer show most at 1080p.
+- [S2] All prompts — The fixed closing sentence names "the lanyard and its card", "cups", "the flag", "the grandstand fascia", "the roof flags" and "the big screen" in every prompt. That includes F3, F5, F6 and F8, whose guests carry neither a lanyard nor a cup and whose backgrounds must be pure blur. It invites lanyards and cups onto the wrong guests, against "two cups only", and pulls those structures into frames meant to hold only soft colour.
+- [S2] Method rules — The reference frames only have to be "clean … with no burned-in text", which does not require removing in-scene tournament marks (fascia, big-screen graphics, flags) from the real suite frames. Because the sweeps inpaint only glyphs, wordless emblems and logo shapes pulled from those references pass every sweep. The suite's own white header frame and the chair backs are also missing from the sweep list and the closing sentence.
+- [S2] F5 (HERO) — The focal contact (the son's hand on dad's far shoulder, riding a breath under a push-in) has no listed fallback, so after two failed takes the plan offers only open-ended prompt changes. F1 and F6 also have no fallback.
+- [S2] F2 — A lateral truck across a row of thin, repeated vertical balusters is the camera move most likely to make balusters change count or bend. The fallback removes only the head moves and keeps the truck.
+- [S2] Whole film — The island green at the 17th is the venue's signature and stays identifiable with every letter removed. The unconfirmed rights basis for showing the venue and tournament therefore covers every generated frame, not just marks. The storyboard gates only the paid run, and this becomes a delivery-blocking rights finding if it is still open at Pass 3.
+- [S1] F2, F9 — Neither shot names a motion axis (F2's truck and F9's 2% push only imply camera translation), and F2, F5 and F6 give neither the Kling variant nor the clip length.
+- [S1] F6 — "Both hold perfectly still" invites a frozen frame under a push-in, which reads as a photo with a zoom; F7's "hold with breath and breeze" is the safer instruction.
+- [S1] F6/F7 sound — Click to roar spans 1.8 s (click at 18.95, "ooh" from 19.95, roar at 20.75). That is short for a putt whose "ooh" rises as it tracks, and a crisp putter click heard from across the water may strike golf-literate viewers as implausible.
+- [S1] F7 edit — The plate's uniform 105→100% scale moves the guests and the far grandstand together, like a zoom, while the chair moves with dolly parallax, so one move mixes two camera languages.
+- [S1] F1/F5/F7 geography — The chairs seen close behind guest 1 (F1) and behind guests 5 and 6 (F5) should appear mid-frame between the camera and the guests in the F7 wide from 5 m back, which shows only a lower-left chair.
+- [S1] Order — The cast crops are cut from the F7 still and attached to "every later still", but the storyboard never states that the F7 still is made and approved first, so any still generated before it has no identity references.
+- [S1] F8/F9 — The crossfade from 26.60 dissolves the last 0.4 s of F8's completed turn, which is the film's final human beat.
+(Pass 1 only) Shot risk:
+- F1 — LOW
+- F2 — MEDIUM
+- F3 — HIGH — Make the listed fallback (push-in only, no lean, no head turn) the primary. Before the start still is generated, reframe (camera further to guest 4's right, or a tighter lens) so guest 3's head is geometrically outside the frame. If any head move is kept, stop it before the left ear shows and extend the inpaint mask to the whole upper body, including both arms down to the rail and the pocket.
+- F4 Fallback 2 (generated still) — MEDIUM
+- F5 — MEDIUM
+- F6 — LOW
+- F7 — HIGH — Split the shot into layers. The far bank's rise and applause comes from a separate far-bank-only layer: the client's real suite roar clip, but only once the client contact confirms in writing that client staff or guests filmed it on site and its marks and signage are scrubbed. Without that confirmation, the far bank only stands, hazed past the point where any clap reads. Animate the suite layer against a held far bank with one action only (dad's head tip and lean; drop guest 4's nod). State that the green's surface and anyone on it stay hidden below the rail line and behind the guests.
+- F8 — HIGH — Cut the turn to about 25–30°, or offset the camera slightly to the son's left so the turn toward dad ends with the back of his head square to the lens, and build the end still at that angle. Put a real framing or focus difference between the two keyframes (a crop-push as in F3) so the shot has a motion axis. Rewrite the fallback so F7 holds no more than 5 s and the F9 crossfade has picture under it.
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.
+```
+
+**Director's finding outside the verdict (2026-09-28):** the Skeptic's reference-marks finding sent the Director back to view all four "clean" reference frames at full size for the first time. **Two had been mislabelled from memory.**
+- `4ec88dba` was listed as "a real guest at the window, from behind". It is actually the big screen, showing three real players' headshots and broadcast graphics.
+- `4c463ea4` carries the big screen, the roof flags and a labelled water bottle.
+- No frame shows a light-grey suite chair. The shape read as one is an unclear grey arch down in the crowd.
+
+All four frames are now never-attach. Three mark-free crops were made at no credit cost and uploaded:
+- R-VIEW `1f4a5b57`, from `7c9be9e1`, with a blue sign blurred;
+- R-FRAME `2f8b2d78`, from `fe30cf32`, with the guest cropped out and a sign blurred;
+- R-RAIL `6a26be6c`, from `4c463ea4`, below the bottle and screen.
+
+**Director's resolution (v6 of the storyboard):** all applied, by simplifying rather than adding method.
+- **Everything past the rail is soft in every generated shot** (47° and 29° with very shallow depth of field). No person, player, flag, sign or screen past the rail is ever readable. This resolves the green's contents, the generated-celebration conflict and the in-scene marks in one rule. F7 moves from a 63° wide to 47°.
+- **F7:**
+  - It is now one Kling 3.0 4k push-in from one still, with a soft extra guest's shoulder in the foreground leaving frame. The two axes are real: camera translation and foreground occlusion.
+  - Dad's head tip is the only action. Guest 4's nod is dropped.
+  - Seedance, the clean plate, the chair layer and the two-layer edit are all removed.
+  - The V24 fallback is removed from the ChatGPT path. The client roar remains usable only with Taylor's written confirmation.
+- **F8:**
+  - The camera sits 2 m behind the son and about 30° to his left. The turn is about 30°, away from the lens, and ends with the back of his head square-on.
+  - The end still is a masked inpaint plus a 10 % tighter crop, so Kling renders a push-in (camera translation).
+  - Dad's tipped head is carried from F7.
+  - The fallback is F7 at its full 5.0 s and the card at 25.75.
+  - F8 → F9 is a hard cut, so the completed turn is not dissolved.
+- **F3:** the push-in only, at 29° from 1.5 m directly behind. By ESTIMATE the frame is 0.8 m wide against neighbours about 0.5 m away, so their heads are out of frame. His shoulders rise once. There is no turn, lean or inpaint.
+- **Chairs:** removed everywhere, since no real reference shows one. The foreground occlusion in F5 and F7 is a soft extra guest's shoulder, as in the real footage (`7c9be9e1`, `fe30cf32`, reading only).
+- **Engine:** one engine and resolution for all generated motion (Kling 3.0 4k).
+- **Lettering lines:** each prompt names only the surfaces in its own shot. The sweep list gains the window frame, the columns and the whole soft background.
+- **Fallbacks:** F5's fallback now cascades to F6–F8. F1 and F6 have fallbacks.
+- **F2:** framed from mid-chest up so the balusters are out of frame for the truck. The fallback is a push-in.
+- **F6:** "hold with breath and breeze".
+- **Sound:** no putter click. The hush, then from 19.20 a rising "ooh", then the roar at 20.75.
+- **Order:** the F7 still is made and approved first, stated in rule 1.
+- **Rights:** a **delivery blocker** until Taylor confirms in writing, not just a paid-run gate. Surfaced to the owner.
 
 ## 16. Decision log
 | Date | Decision | By |
