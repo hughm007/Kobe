@@ -89,11 +89,11 @@ Written in `scripts.md` with beat tables, sources, VO with performance marks, an
 
 ## 6. Storyboard — YOUR PEOPLE (owner's pick, 2026-09-28)
 Full shot list with the ten fields per shot, still and motion prompts, reject lists and fallbacks:
-`your-people-frame-by-frame.md` (v6). 30.0 s, 16:9, 24 fps, 9 shots (average 3.3 s; no generated shot over 4.5 s
+`your-people-frame-by-frame.md` (v7). 30.0 s, 16:9, 24 fps, 9 shots (average 3.3 s; no generated shot over 4.5 s
 on screen). Build order: the F7 still first, then cast crops C1–C6; every other still is derived from them. Hero
 beats F5 and F7 each name two motion axes.
-**Real-reference law (BC-34):** generated shots attach only the three mark-free crops R-VIEW (1f4a5b57), R-FRAME
-(2f8b2d78) and R-RAIL (6a26be6c). The source frames 7c9be9e1 / 4c463ea4 / 4ec88dba / fe30cf32 and the captioned
+**Real-reference law (BC-34):** generated shots attach only the three mark-free, player-free crops R-VIEW (aaf2c1f4), R-FRAME
+(f564a3a2) and R-RAIL (6a26be6c); the superseded crops 1f4a5b57 and 2f8b2d78 are never attached. The source frames 7c9be9e1 / 4c463ea4 / 4ec88dba / fe30cf32 and the captioned
 c2a0c138 / 9111e76a / e5329451 / 4b183815 are never attached. Behaviour references are reading only: 7c9be9e1 and
 fe30cf32 (shooting over a guest's shoulder), IMG_1928 and IMG_2031. V24 is cited for the hush and the roar. F4 is
 real footage. No shot carries a NO REFERENCE FOUND entry.
@@ -113,8 +113,8 @@ marks anywhere; clothing, cups and lanyards specified plain. No tournament marks
 
 ## 10. Production routing (operator: ChatGPT with Higgsfield)
 Stills: Nano Banana 2, 4K, 16:9, with the mark-free reference crops attached. Motion: Kling 3.0 4k for every
-generated shot (5 s, F8 at 3 s with an end_image made by inpaint plus a crop-push). No compositing layers.
-ESTIMATE about 470 credits with two takes per shot, before fallbacks; re-price live before the spend gate.
+generated shot (5 s; F7 and F8 keyframed with an end_image made by inpaint plus a crop; F8 at 3 s). No
+compositing layers. ESTIMATE about 475 credits with two takes per shot, before fallbacks; re-price live before the spend gate.
 
 ---
 
@@ -383,6 +383,80 @@ All four frames are now never-attach. Three mark-free crops were made at no cred
 - **Sound:** no putter click. The hush, then from 19.20 a rising "ooh", then the roar at 20.75.
 - **Order:** the F7 still is made and approved first, stated in rule 1.
 - **Rights:** a **delivery blocker** until Taylor confirms in writing, not just a paid-run gate. Surfaced to the owner.
+
+### Pass 1, sixth run — YOUR PEOPLE storyboard v6 (2026-09-28), transcribed verbatim
+
+```
+SKEPTIC VERDICT — Pass 1
+Verdict: BLOCK
+Findings:
+- [S3] F7 (20.75–24.75, hero reveal) — This shot has the most ways to fail in the film: six bodies, roughly forty thin balusters partly hidden behind legs, dad leaning into the son's arm, a foreground extra leaving frame and a dolly, all judged by a reject list that fails a take on any single fault; the only fallback removes the head tip, the smallest of these risks, and nothing follows it, so a failed F7 leaves the film without its reveal.
+- [S2] F2 (4.25–8.25) — "She tips her head toward him and he nods a single time" asks two performers for two repeating micro-gestures, each with an exact count and a set order, and a sideways tip "toward him" is the move a generator most often turns into a profile turn, so the shot is HIGH risk as written while its listed fallback (push-in, no head movement) is safe.
+- [S2] F2, F5 — At the stated 47° and 2.5 m the frame is about 2.2 m wide at the subjects, so the shoulder-to-shoulder neighbours on the same focal plane (guests 1 and 4 in F2, guest 4 in F5) sit wholly inside it and in focus: these are four-person frames, not two-shots, which adds bodies to the reject list and gives away F7's "first time wide" reveal.
+- [S2] F1, F3, F7 (depth of field) — Blur is set by how much a thing matters, not by how far away it is: F1 and F3 call the neighbours "soft" though they stand on the subject's own focal plane (F3's own frame estimate puts their heads at the frame edges), and F7 at 5 m on 47° asks for more background blur than that lens and distance can produce, so the likely result is a cut-out, portrait-mode depth look with halos on caps, ponytail, hair, cups and the gaps between balusters, in the film's widest and most studied frame.
+- [S2] F7 — The reject rule "anyone but dad moves their head", with hands and cups also held still, favours five motionless bodies at the moment a crowd roar breaks, which is the frozen-mannequin tell the realism floor exists to prevent.
+- [S2] F7 (roar at 20.75) — The soft crowds past the rail get no direction for the roar, so a take will show either a still background under a breaking roar (sound and picture disagree) or uncontrolled crowd movement that can sharpen into a readable celebrating figure.
+- [S2] F3 (8.25–12.75) — "Shoulders rise and fall once like a quiet chuckle" is a generated laugh in a close back-of-head frame, at the edge of the realism floor, and the reject list has no line for repeated rhythmic shoulder bounces or a head bob, the usual robotic-laugh failure.
+- [S2] F5 (15.00–18.75, hero) — Dad's directed breath sits right under the son's resting hand, the one contact point, so the hand must rise and fall with the shoulder or it sinks into or lifts off the shirt; the shot's most likely arm failure is being directed on purpose.
+- [S2] F5 fallback → F6–F8 — The no-arm fallback means F7 has to be remade without the arm, but F7 is the master still that every other still and crops C5/C6 (head to hips, arm included) come from; the method does not say how a no-arm master is made, so the fallback breaks the reference chain and the crop check would flag the missing arm as drift.
+- [S2] F3, F6, F8 (identity in the close shots) — The cast crops are cut from a 5 m wide, where a head is about 200 px before the 2x upscale, while the 29° close shots render heads at roughly 850–1,150 px, so ear shape, hairline, nape and collar detail are invented separately in F6 and F8 (the same two heads, four seconds apart) and nothing checks them at that resolution.
+- [S2] F8 (24.75–27.00, payoff) — From 30° behind-left, a ~30° turn only takes away the edge of his cheek and ends on a plain back of head, so "the son turns to look at his dad" can read as a small head adjustment, although this camera allows about 60° of turn (mirroring the start's cheek-edge view on the other side) before the storyboard's own brow/nose reject line is reached.
+- [S2] F8 (motion floor) — The film's last human beat and emotional payoff is not marked HERO and names only one motion axis, and that axis is really a 10% centre crop between keyframes: a digital zoom with no parallax, not a camera translation, and its end frame is an 11% upscale, so it is softer than the start.
+- [S2] F4 (12.75–15.00) — The real phone clip will be the only shot with hand-held micro-shake and wide phone-lens close-up perspective, cut between smooth long-lens generated moves; grade and grain can match colour and texture but not motion or perspective, and in-camera phone focus pulls tend to hunt or, in Cinematic mode, put halos around fingers and the ring.
+- [S2] Reference pack, R-VIEW — What the crops must leave out (big screen, flag, sign, bottle label, real guest) does not include players, caddies or officials, although the source footage shows players on the green, so a real athlete's figure and clothing can end up in what the generator is given.
+- [S2] Reference pack (the two crops with "one small sign blurred") — A blurred sign is still a sign-shaped patch that a generator tends to re-render as fake lettering or a logo, which puts text-like shapes into every shot that uses those crops.
+- [S2] Rights (whole film) — The film depends on an identifiable venue (the island-green 17th) and on reference footage filmed there, and the rights basis for using either in advertising is not on file; the storyboard blocks delivery until the client confirms in writing but does not block generation, so every generated shot is made before anyone knows it can be used.
+- [S2] Audio (F6–F9) — F7's close and distant crowd layers have no stated source, the condition on the client's roar recordings checks only who recorded them, not whether the tournament's terms allow commercial use, and every name and mark sweep in the storyboard is visual, so no step screens any crowd bed for intelligible player names, fan shouts or PA announcements.
+- [S2] Tool capability (method rule 1) — Only Kling 3.0's 3–15 s range is marked as confirmed from the live listing; "mode 4k", start+end-image support in that mode, Nano Banana 2 4K output and masked inpaint are assumed, yet the "one engine, one resolution" rule and the whole F8 method depend on them.
+- [S1] F8 (framing) — At 29° and 2 m from 30° left, dad's far shoulder, where the son's hand rests, falls near the right edge of frame, and the 10% crop can cut across the hand at the frame edge during the push.
+- [S1] F7 → F8 cut — F7 rejects any head movement by the son, yet F8 cuts in with his turn already under way, so the start of the turn is never shown and his head angle jumps across the cut.
+- [S1] F8 fallback — Cutting F8 runs F7's full 5.0 s take, past the storyboard's own 4.5 s limit, and puts the take's last second on screen, the part most likely to drift.
+- [S1] F1, F7 — The rows of bolt holes on the white columns are a repeating fine pattern under a push, like the balusters, but they are not in the structural sweep.
+- [S1] F6 (18.75–20.75) — "A breeze in dad's hair" asks for movement in white hair under a cap in a close, sharp frame, which the model will either ignore or answer by shifting the cap or lengthening the hair, and a shifting cap is not a reject line.
+- [S1] F7 master still — Guests 2 and 3's free hands and the lower garments of five of the six cast are not specified, although the eye-level 5 m wide shows everyone from about mid-shin up, so the master still decides them and every later still inherits that choice.
+- [S1] F6 — No camera distance or height is given, unlike every other generated shot.
+- [S1] Logline vs F7 — The logline has dad tip his head "against" his son's arm (contact), while F7 says "toward" and the fallback says "toward his son's shoulder"; if contact is meant, dad's head merging into the son's sleeve is not in the structural sweep.
+Shot risk:
+- F1 — LOW
+- F2 — HIGH — Simpler action: make the listed fallback (slow push-in, no head movement) the primary method, or keep one single, non-repeating gesture by one performer; do not spend takes on the counted two-gesture version.
+- F3 — MEDIUM
+- F4 (Fallback 2 generated still only; the primary is real footage) — MEDIUM
+- F5 — MEDIUM
+- F6 — MEDIUM
+- F7 — HIGH — Keyframe plus simpler action: generate with start_image and end_image, where the end image is a masked inpaint of the approved master (dad's tip and lean only), so all six bodies, the arm contact and the balusters are fixed at both ends; keep the camera move to the least the two hero axes need; and give the shot a fallback that reduces the dominant risks, not only the head tip.
+- F8 — MEDIUM
+Isolation: packet verified; production reasoning, cost, draft history, and other evaluators' output withheld.
+```
+
+**Director's resolution (v7 of the storyboard):** all HIGH and S3 items applied as prescribed; most S2 and S1 items applied.
+
+- **F7, keyframed at both ends.** The end still is the master with a masked inpaint of dad's head tip only. The lean is dropped so the arm contact is untouched. The picture is then cropped 7 % from the left and bottom, so the soft extra's shoulder leaves the frame. That gives the least camera move that still carries both hero axes.
+  - Fallbacks: (1) the same keyframes without the head tip; (2) a 3 s take on the same keyframes, which shortens the interpolation, with the timeline re-cut given; (3) stop and route to the Director.
+  - Natural breathing and weight shifts are directed. A mannequin-still figure is a reject. The soft crowd shimmers as it rises to the roar.
+- **F2:** the old fallback is now primary: the truck, with no head movement. The fallback is a push-in.
+- **Lenses:** singles and pairs move to 29°, and the ESTIMATE frame widths keep neighbours' heads out. Only F7 is wide.
+- **Depth of field follows distance:** neighbours are as sharp as the subject, and a cut-out, portrait-mode look is a reject.
+- **Per shot:**
+  - **F3:** the chuckle is dropped; one breath only.
+  - **F5:** no directed breath. The fallback is now keyframed, so the no-arm cascade is removed.
+  - **F6:** distance and height given; the hair breeze dropped; a cap shift is a reject.
+  - **F8:**
+    - A 45° turn, ending just past square-on and showing only the edge of the right cheek line, which mirrors the start.
+    - The crop drops to 5 %, centred to keep the hand in frame.
+    - The F6 still is attached, and the heads are checked against F6 at 100 %.
+    - The fallback keeps F7 at 4.5 s.
+    - F8 stays non-hero: that S2 is open for owner acceptance.
+  - **F4:** the phone's 2x or 3x lens, braced, focus in the standard app, and the push done in the edit.
+- **References:** R-VIEW and R-FRAME were rebuilt. Signs and the figures on the green were cloned out with surrounding grass and crowd, then the view was softened throughout. The new IDs are R-VIEW `aaf2c1f4` and R-FRAME `f564a3a2`. The earlier crops `1f4a5b57` and `2f8b2d78` are now never-attach.
+- **Rights:** now a **gate before spend** (the owner may waive it in writing) as well as a delivery blocker.
+- **Audio:** every crowd layer comes from the licensed library. Beds are screened by ear for names, shouts and PA. Client recordings need both on-site filming and commercial-use permission confirmed in writing.
+- **Tool listing (FACT, 2026-09-28):**
+  - Nano Banana 2 offers 4k, 16:9, and is_inpaint with a mask.
+  - Kling 3.0 offers modes std, pro and 4k and the roles start_image and end_image.
+  - end_image in 4k mode is untested, and mode pro is the named fallback.
+- **Structural sweep:** bolt holes, cap shifts, rhythmic bouncing and head bobs, and a frozen mannequin were added.
+- **F7 master:** free hands and lower garments specified.
+- **Wording:** "toward", not "against".
 
 ## 16. Decision log
 | Date | Decision | By |
