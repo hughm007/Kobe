@@ -102,7 +102,7 @@ the old master `5045d452`, not master v2.
 | Round 2 checks (FACT) | continuation 1 (`574d220d`) joined as B frames 0–65 + continuation: seam frame difference 2.85 vs 2.25–2.9 between B's own frames; camera push continuous across the join (drift -0.52 px vs -0.68 before, -0.65 after). Continuation 2 (`8934a4b9`) stalls the push for one frame after the join. In both, the son's hand lifts to about head height between pats (three pats in 1, at ~3.8–4.6 s of the joined clip). Retake r1 (`2e3e76f1`): smaller tap at ~3.6–4.3 s, then the hand rests. Retake r2 (`f33ce30e`): quick tap at ~3.0–3.7 s. Only the hand region of r1/r2 was checked. |
 | Previews | B + tap, join 1 (recommended): media `bb4455ec-11bd-4eba-8b80-848d3d7f948e` (1920x1080, 5.79 s); join 2: `02a9ecef-e1d7-4377-adb0-24456dd2a74f` |
 | Planned edit window | joined clip 2.0–5.0 s (chin lift 2.3–2.7, pats 3.8–4.6, settle) |
-| Status | shown to owner 2026-09-29; awaiting verdict |
+| Status | **APPROVED by owner 2026-09-29: join 2** (B frames 0–65 + continuation `8934a4b9` frames 1–72). Its first frame (a near-duplicate of B's frame 66) is dropped, which removes the one-frame stall in the push. Used 2.0–5.0 s = B[48:66] + continuation[1:55]. |
 
 ## Voiceover (seed_audio, REAL-Wyatt), whisper screen (FACT)
 | Line | Takes | Screen |
@@ -114,7 +114,19 @@ the old master `5045d452`, not master v2.
 | 5 bring your people | `3fadb631` (1.56 s lead-in), `6b7c879d` (peak -0.0 dBFS) | both correct |
 | 6 hospitality handled | `4c7bce28` (no pause, 2.52 s), `a2726b57` (1.26 s pause; transcribes as "Handle.") | 4c7bce28 safer on the last word |
 
-Spend so far this build (this session): 264 credits (24 stills, 48 F7 round 1, 60 F7 round 2, 36 F6 round 1, 96 F6 round 2); VO 3.3.
+## Cut v1 (assembled 2026-09-29, Higgsfield sandbox; script `your-people-cut-v1.py`)
+| Item | Value |
+|---|---|
+| Timeline | F1 0–4.25 (`4a88d0b9` 0–4.25 s) · F2 4.25–8.25 (`533aefc4` 0–4.0) · F3 8.25–12.75 (`35724e68` 0–4.5) · F4 12.75–15.00 (still `ac6e7f7a`, brief fallback 2: blur ramp over 0.15–1.15 s + 3 % push) · F5 15–18 (`abff2da3`, 105 % push) · F6 18–21 (approved join 2, 2.0–5.0 s) · F7 21–25 (Take C 1.0–5.0 s, 108 % push anchored upper-right third) · F9 25–30 (card `4824f6d7`, 2 % push). F8 cut per the brief's fallback; hard cuts throughout |
+| VO (REAL-Wyatt) | placed at 0.40 (`d97fcc8a`, ends 3.90), 4.60 (`47a503ac`, 5.74), 8.60 (`b6eaf7c7`, pause 0.76→0.40 s, 12.70), 13.10 (`bfb140cc`, pause 0.67→0.30 s, 14.60), 23.05 (`3fadb631`, 23.95), 26.40 (`4c7bce28`, own 0.99 s pause kept, 29.18) |
+| Captions | Montserrat ExtraBold 46 px (the only weight installed in the sandbox), white, lower left at the 10 % title-safe line, 60 % soft shadow; on with each line, off 0.3 s after it; none on the card (the card carries its line) |
+| Sound bed | client audio V24 only, no library audio. Murmur: V24 19.0–28.0 → 0–9.0; V24 0.0–3.8 → 8.8–12.6; V24 21.5–26.95 low-passed, -4 dB falling to -14 dB → 12.4–17.95. Hush, rise and roar: V24 10.15–22.35 → 17.80–30.0 (V24's roar break 13.35 s lands on the F7 cut at 21.00), -12 dB hush to 19.4, rising to full by 20.95, fading after 24.8 to -26 dB by 26.2. Ducks -3 dB under each VO, -6 dB under "Bring your people." |
+| Master (FACT, measured) | video 1920x1080, 24 fps, 720 frames, 30.00 s, H.264 yuv420p bt709, faststart; audio AAC 320k: **-14.21 LUFS, -1.30 dBTP**, LRA 17.4 (peak limiter + linear gain, so the hush-to-roar range survives) |
+| Speech check (FACT, whisper on the master) | only the six scripted lines are recognised, in order; no other intelligible words in the bed |
+| Deliverable | media `fe4d67c6-5383-4cb2-b717-71999781c0cc` (61 MB); review sheet `613fc6b1` |
+| Not done | no human listen yet (VO and bed judged by transcript and levels only); no grade pass beyond one fine grain (all shots share the master's lineage); the 9:16 version; Skeptic Pass 3 and the critic verdict |
+| Status | sent to owner for judgment |
+ (this session): 264 credits (24 stills, 48 F7 round 1, 60 F7 round 2, 36 F6 round 1, 96 F6 round 2); VO 3.3. Assembly: 0 credits.
 
 **Learning:** asking the image model to "tip the head" produces a turn toward profile. A geometric rotation plus a
 blend pass holds the exact angle. Use the same route for F8's end still (the son's 30° turn).
