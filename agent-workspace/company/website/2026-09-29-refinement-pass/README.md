@@ -5,7 +5,7 @@
 **Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
 `baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
 commit SHA is the restore point: `git checkout 122b99b -- .`).
-**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 16). Not deployed —
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 17). Not deployed —
 servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
 
 ## Owner brief (paraphrased)
@@ -101,6 +101,18 @@ screens >=1024x800 (`.stick-tall`), releasing where the list ends. Section 958 -
 1440; phone 1,514 -> 1,583px. One full e2e run failed the phone action-bar test once (scrolls
 to ~1,860px; this section starts at 3,108px on phones); it passed 5/5 isolated and 61/61 on the
 full rerun — cause not identified, logged here in case it recurs.
+
+**Then (`a10631e`) — two owner-reported bugs.** (1) "Pages don't go back to the top": in
+Chromium only a link to the *current* page (Home at the foot of home) kept the position;
+other routes reset. Fixed anyway for every path: `RouteFocus` sets the window to the top
+instantly after each pathname change (smooth scrolling can stretch or interrupt the router's
+jump; the owner's viewer may differ from Chromium), skipping Back/Forward and #section links;
+same-page link clicks scroll to the top. Verified on the Next build and the static preview
+(1440 and 390; header, footer, same-page; Back restores; /services#brand still lands on the
+section). (2) "The glow disappears when scrolling": not scroll-linked — the breathing glow
+dimmed to 0.35 every 4.8s. Now pulses 0.8–1 (measured min 0.80 over 10s incl. scrolling); the
+scroll highlight also no longer unwinds on scroll-up. Not reproduced in the owner's own
+browser (WebKit untested here).
 
 ## Verified
 
