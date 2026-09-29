@@ -5,7 +5,7 @@
 **Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
 `baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
 commit SHA is the restore point: `git checkout 122b99b -- .`).
-**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 15). Not deployed —
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 16). Not deployed —
 servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
 
 ## Owner brief (paraphrased)
@@ -91,6 +91,16 @@ heading rises past the bottom edge, 1 when it reaches the top third, reversing o
 Measured by wheel-scrolling at 1440×900 and 390×667, on both the Next build and the static
 preview bundle; full with no JS and with reduced motion. The old timed sweep fired on page
 load on desktop, before the visitor scrolled — why the owner never saw it.
+
+**Then (`017a9e9`) — home "What we do" filled** (owner: too much blank space). Measured at 1440:
+intro column content ended at 463 of 728px; three of five discipline names wrapped to 2–3
+lines in a 4/12 name track while each promise was one short line. Fix: name on one line; the
+promise beside the discipline's service list (services.json — no new claims), from 1024px only;
+trade chips moved under the pricing line; gold marker on the eyebrow; intro column sticky on
+screens >=1024x800 (`.stick-tall`), releasing where the list ends. Section 958 -> 1,067px at
+1440; phone 1,514 -> 1,583px. One full e2e run failed the phone action-bar test once (scrolls
+to ~1,860px; this section starts at 3,108px on phones); it passed 5/5 isolated and 61/61 on the
+full rerun — cause not identified, logged here in case it recurs.
 
 ## Verified
 
