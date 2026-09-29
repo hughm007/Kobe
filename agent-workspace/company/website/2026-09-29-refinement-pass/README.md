@@ -5,7 +5,7 @@
 **Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
 `baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
 commit SHA is the restore point: `git checkout 122b99b -- .`).
-**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 9). Not deployed —
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 10). Not deployed —
 servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
 
 ## Owner brief (paraphrased)
@@ -42,6 +42,14 @@ dependencies; small commits; screenshot every page and verify visually.
 - **Layout:** tokens for page-top, header height, 12-col gutter, section-head gap, text and heading
   measures, error colours; shared `CtaBand`, `SectionHeader`, `Breadcrumbs`, `IndexList` and
   `.pill` / `.callout` / `.panel` / `.card-link` / `.ruled-list`; three section grounds.
+
+## Follow-up — Working-with steps as a sequence (`a39439a`)
+
+Owner found the home "Working with ServicePOW" section bland and asked about per-step photos.
+Recommended against stock/AI imagery (no real process photos exist; generic pictures read as
+filler). Owner chose: the four steps as one numbered row joined by a thin line, gold marker on
+01. Built as a horizontal row from 1024px, a vertical rail below it; header now full width; the
+two notes each span two steps. Build clean, e2e 61/61, screenshots at 1440 and 390 reviewed.
 
 ## Verified
 
