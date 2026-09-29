@@ -5,7 +5,7 @@
 **Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
 `baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
 commit SHA is the restore point: `git checkout 122b99b -- .`).
-**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 13). Not deployed —
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 14). Not deployed —
 servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
 
 ## Owner brief (paraphrased)
@@ -77,6 +77,13 @@ eyebrow and on each "What we built" row, the chip as a night badge with gold typ
 brackets in gold-ink. `.gem` and `.hl` are reusable if the owner wants them on other cream
 sections. Note: `company/brand/visual-identity.md` still describes the superseded blue/Fraunces
 direction; the live site system is gold/night/cream in `globals.css`.
+
+**Then (`e46abc5`):** the highlight is a full-height gold block behind "job to do." (owner: the
+half band stopped below the j's dot). From 1280px the section header and the 911drain article
+share one 12-column grid via subgrid, so the story/scope column starts level with the eyebrow
+and fills the corner beside the heading (owner: that corner read empty); section ~150px
+shorter; columns still end level (measured 1280–1920). Learned: items that overlap a grid row
+need explicit column starts, or auto-placement pushes them into new implicit columns.
 
 ## Verified
 
