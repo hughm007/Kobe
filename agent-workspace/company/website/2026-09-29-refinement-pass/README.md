@@ -5,7 +5,7 @@
 **Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
 `baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
 commit SHA is the restore point: `git checkout 122b99b -- .`).
-**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 17). Not deployed —
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 18). Not deployed —
 servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
 
 ## Owner brief (paraphrased)
@@ -113,6 +113,19 @@ section). (2) "The glow disappears when scrolling": not scroll-linked — the br
 dimmed to 0.35 every 4.8s. Now pulses 0.8–1 (measured min 0.80 over 10s incl. scrolling); the
 scroll highlight also no longer unwinds on scroll-up. Not reproduced in the owner's own
 browser (WebKit untested here).
+
+**Then (`db0e634`) — missed-call calculator as a draggable chart** (owner asked for a graph
+with missed calls on the y-axis and money on the x-axis). Built with the conventional axes
+instead — calls along the bottom, dollars up the side — because "higher = more money lost"
+reads faster and dollar labels fit on phones; dragging up still raises the count (the marker
+follows the pointer's height). Swap is small if the owner insists. **Changed an approved
+rule:** the calculator had no defaults (brief P2-2); it now opens on the placeholder example
+(12 calls, 40%, $350) tagged "Example numbers" until the visitor changes anything — no
+announcement and no `calculator-used` event for the example; still never an industry
+average; the action stays a phone call, never the audit (EV-sp-001). Needs owner
+confirmation. Learned: `Intl.NumberFormat` compact notation renders "$0.0" in Node and "$0"
+in Chromium — a hydration mismatch (React #418) caught only by the console-error e2e test;
+chart labels are hand-formatted now.
 
 ## Verified
 
