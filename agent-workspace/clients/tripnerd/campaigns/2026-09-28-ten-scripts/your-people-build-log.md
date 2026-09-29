@@ -9,6 +9,8 @@ updated: 2026-09-29
 
 # YOUR PEOPLE — build log
 
+**CLOSED 2026-09-29: concept killed by the owner after cut v1. Kept as a record only.**
+
 Built one frame at a time with the owner, who approves each frame before the next. Brief:
 `your-people-frame-by-frame.md` (v9). Balance at start: 12,824 credits (live, 2026-09-28).
 
@@ -125,7 +127,7 @@ the old master `5045d452`, not master v2.
 | Speech check (FACT, whisper on the master) | only the six scripted lines are recognised, in order; no other intelligible words in the bed |
 | Deliverable | media `fe4d67c6-5383-4cb2-b717-71999781c0cc` (61 MB); review sheet `613fc6b1` |
 | Not done | no human listen yet (VO and bed judged by transcript and levels only); no grade pass beyond one fine grain (all shots share the master's lineage); the 9:16 version; Skeptic Pass 3 and the critic verdict |
-| Status | sent to owner for judgment |
+| Status | **REJECTED 2026-09-29: owner killed the whole concept** ("sucks, i hate it scratch the whole advert idea"). Build closed; no further spend. |
  (this session): 264 credits (24 stills, 48 F7 round 1, 60 F7 round 2, 36 F6 round 1, 96 F6 round 2); VO 3.3. Assembly: 0 credits.
 
 **Learning:** asking the image model to "tip the head" produces a turn toward profile. A geometric rotation plus a
