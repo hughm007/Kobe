@@ -1519,3 +1519,19 @@ quality gate, claims and brand law after the commit.
 - Spend none (uploads and sandbox crops only). Brief v9 sent to the owner. Further Skeptic runs held until Taylor's written confirmation is filed; a fresh Pass 1 on the final storyboard runs immediately before spend.
 - Open: Taylor's written rights confirmation (blocks everything); F4 hand shoot + release; licensed golf-gallery audio; live re-price; APPROVER calls on the edit-built pushes and stillness under the roar.
 - Rights cleared: the owner relayed Taylor's standing authorization to use any TripNerd photo, video or asset in its advertising (always assume for TripNerd). Recorded in the client brief; S4 closed; client roar recordings cleared subject to the audio screen. Binding Skeptic Pass 1 on v9 launched before spend.
+
+## 2026-09-29 — TripNerd: YOUR PEOPLE killed; real-footage pack; THEIR CAMERA ROLL built (v1, internal draft)
+- **YOUR PEOPLE.** F6 Take B was fixed and approved (join 2). Cut v1 was built and delivered. The owner killed the concept ("scratch the whole advert idea"). Lesson recorded in the ten-scripts build log: AI people seen from behind plus an unheard synthetic voice.
+- **Real footage first.** Logged the six real clips (`2026-09-29-real-footage/footage-log.md`) and wrote five scripts, ranked (SAME HOLE 8.5 first). Recorded the Claude Code vs ChatGPT recommendation with its conflict noted.
+- **Every event.** The owner widened the brief beyond golf. Found about 85 real guest photos on tripnerd.com/nerds and wrote THEIR CAMERA ROLL (`2026-09-29-all-events/script.md`). The owner said "Build".
+- **Build v1** (`2026-09-29-all-events/build-v1.md`): 25 s master (`ea121491`) and 15 s cutdown (`594c1292`).
+  - Inputs: real photos and real suite video only. Higgsfield upscales plus Adobe auto-tone as touch-up (20.18 credits). The camera-roll motion design, sound design and card were made in code in the Higgsfield sandbox (scripts in `build-v1/`).
+  - QA1: every row PASS except flash-cut. That FAIL was frame-checked as scroll and swipe motion (one real hard cut); the third confirmation of that harness limit is now noted in the learning.
+  - Loudness −13.98 / −13.92 LUFS, −1.4 dBTP. No speech.
+- Script corrected: #45 excluded (an apparent Hall of Famer), #46 is Phoenix. New learning: the Adobe block-upload bridge, and the sandbox is stateless without a lease.
+- **Open:**
+  - The owner's watch with sound.
+  - Guest consent, including a minor in the Daytona hero (or swap to gallery 01).
+  - Licensed music to replace the synthesised placeholder.
+  - "This year", the Daytona month and "We have everything".
+  - The Skeptic pass and Critic scorecard before any paid use.

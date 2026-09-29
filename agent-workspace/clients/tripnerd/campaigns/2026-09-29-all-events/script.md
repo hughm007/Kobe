@@ -4,7 +4,7 @@ type: scripts
 client: tripnerd
 campaign_id: 2026-09-29-all-events
 owner: Karl
-status: DRAFT (awaiting the owner)
+status: DRAFT (build v1 delivered 2026-09-29; awaiting the owner)
 created: 2026-09-29
 updated: 2026-09-29
 tags: [campaign, script, multi-event, real-photos, 9x16]
@@ -35,12 +35,18 @@ tags: [campaign, script, multi-event, real-photos, 9x16]
 
 | Event | Real photos (gallery file / page index) | Best frame |
 |---|---|---|
-| **Derby** | #98 `…_gallery_09.jpg` (men in blazers, Churchill Downs twin spires behind) · #45 `…_063` (guys in red sequin jackets and Derby hats) · #46 `…_062` (women in pink and green, drinks) · #30 `…_078` (Derby attire at the track) · #34 `…_074` (rose backdrop) | #98 |
+| **Derby** | #98 `…_gallery_09.jpg` (men in blazers, Churchill Downs twin spires behind) · #30 `…_078` (Derby attire at the track) · #34 `…_074` (rose backdrop; excluded, it carries the event mark) | #98 |
 | **Daytona** | #88 `…_020` (dad and son in the suite, thumbs up) · #90 `…_018` (suite over the grandstand) · #99 `…_08` (group on the track) · #100 `…_07` · #102 `…_05` · #106 `…_01` (pit-lane view) | #88 |
-| **Phoenix 16th** | #78 `…_030` (couple over the desert hole) · #82 `…_026` (suite celebrating) · #42 `…_066` · #50 `…_058` · #105 `…_02` · event page `wm-phoenix-open-tripnerd_04/06` | #82 |
+| **Phoenix 16th** | #78 `…_030` (couple over the desert hole) · #82 `…_026` (suite celebrating) · #46 `…_062` (women in pink and green, drinks) · #42 `…_066` · #50 `…_058` · #105 `…_02` · event page `wm-phoenix-open-tripnerd_04/06` | #82 |
 | **17 at Sawgrass** | our **video** V23 24.5–31.5 (the reveal) and V24 13–19 (the roar) · #23 `…_085` · #92 `…_016` · #94 `…_014` · #95 `…_013` (TripNerd suite) | V23 reveal |
 | **Football** | #68 `…_040` (fans in team jerseys with a TripNerd bag) | crop the jersey marks |
 | **Brand** | #29 `…_079` and #70 `…_038` (groups at the TripNerd logo wall) · #31 `…_077` (TripNerd staff) · #86 `…_022` (suite, arms up) · #103 `…_04` | #86 |
+
+**Corrections at build (2026-09-29):**
+- #45 `…_063` was mislabelled as Derby. It is a football photo with an apparent Pro Football Hall of Famer in a gold jacket, and it is **excluded** everywhere.
+- #46 `…_062` is Phoenix, not Derby.
+- The (they dressed up) beat now uses #30 `…_078`.
+- As built: see `build-v1.md`.
 
 **Gaps:** no real TripNerd photos were found for the Super Bowl, CMA Fest, US Open Tennis or F1. The event pages show stock-style images with unknown rights. Those events appear as **text in the list**, never as faked or AI pictures.
 
@@ -50,7 +56,7 @@ tags: [campaign, script, multi-event, real-photos, 9x16]
 |---|---|---|---|
 | 0.0–1.5 | A phone camera-roll grid packed with the real photos, flicking up fast (composited design, not Apple's UI) | **Their camera roll this year.** | a fast scroll |
 | 1.5–3.5 | Tap: **Derby**, men in blazers under the twin spires (#98), slow push | **May · Derby Day** | tap; a racetrack crowd (licensed SFX) |
-| 3.5–5.0 | Swipe: the red sequin jackets (#45) | **(they dressed up)** | crowd |
+| 3.5–5.0 | Swipe: Derby attire at the track (#30 `…_078`) | **(they dressed up)** | crowd |
 | 5.0–7.0 | Swipe: **Daytona**, dad and son in the suite, thumbs up (#88) | **Feb · Race day** | engines passing (licensed SFX) |
 | 7.0–9.0 | Swipe: **Phoenix 16th**, the suite on its feet (#82) | **Feb · The loudest hole in golf** ⚠ | stadium crowd |
 | 9.0–13.0 | The photo **comes alive**: our real video, out to the rail over 17 (V23 25.0–29.0) | **Mar · 17 at Sawgrass** | wind, then the gallery |

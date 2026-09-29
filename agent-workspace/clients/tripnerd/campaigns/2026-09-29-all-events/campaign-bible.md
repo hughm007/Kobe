@@ -3,7 +3,7 @@ title: "TripNerd — every-event brand spot (2026-09-29)"
 type: campaign-bible
 client: tripnerd
 campaign_id: 2026-09-29-all-events
-status: DRAFT
+status: DRAFT (build v1 delivered; owner review pending)
 created: 2026-09-29
 updated: 2026-09-29
 tags: [campaign, bible, multi-event]
@@ -27,10 +27,11 @@ CLAIMS BOUNDS:
 
 CONCEPT: THEIR CAMERA ROLL (`script.md`), with an alternate opening, THE 2027 CALENDAR. Single author.
 ROUTING RECORD: every beat is REAL (photo or video edit) or COMP (grid, captions, card). Generation spend is zero.
-GATES RUN: preflight ☐ · QA1 ☐ · QA2 ☐ · Skeptic (isolated) ☐ · Critic scorecard ☐
-APPROVALS: concept pending the owner.
+GATES RUN: preflight ☑ (harness self-test) · QA1 ☑ (all rows PASS except flash-cut; that FAIL was frame-checked as swipe/scroll motion, with one real hard cut; see `build-v1.md`) · QA2 ☐ (owner watch in motion) · Skeptic (isolated) ☐ · Critic scorecard ☐
+APPROVALS: script approved by the owner ("Build", 2026-09-29) · build v1 owner review: PENDING · paid use: BLOCKED on guest consent (a minor in the Daytona hero), licensed music, and the claim calls in `build-v1.md`.
 
 ## Decision log
 | Date | Decision | Who |
 |---|---|---|
 | 2026-09-29 | The owner widened the brief from golf to every event. Found about 85 real TripNerd guest photos on the site's NERDS page covering Derby, Daytona, Phoenix, Sawgrass, the golf house and one football game. No real material exists for the Super Bowl, CMA Fest, US Open Tennis or F1; those events appear as text only. No Derby media was found in the repo, Drive or Higgsfield under any Derby name; the website photos are the Derby source until the owner points to the files. | Owner / Director |
+| 2026-09-29 | The owner said "Build" (15 s cutdown, no AI generation, zero generation credits) and asked for Higgsfield and Adobe to be used for touch-up and "glow up", plus camera-roll motion design. Built v1 from real material only: 10 hero guest photos (Higgsfield 2k upscale plus Adobe auto-tone), 71 vetted gallery tiles, and the real V23/V24 suite video (Higgsfield 1080p upscale). The camera-roll interface, sound design and card were made in code. Touch-up spend 20.18 credits. Script labels corrected (#45 is excluded; #46 is Phoenix). Delivered the 25 s master and 15 s cutdown as an internal draft; record in `build-v1.md`. | Owner / Director |

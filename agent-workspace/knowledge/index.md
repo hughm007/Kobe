@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-09-27
+updated: 2026-09-29
 tags: [index, knowledge]
 ---
 
@@ -83,6 +83,8 @@ doesn't fit.
 *None yet.*
 - [2026-09-23 — A vendor's cloud sandbox gives a cloud session hands and eyes](learnings/2026-09-23-vendor-sandbox-gives-a-cloud-session-hands-and-eyes.md):
   the egress wall stands, but assembly can run in Higgsfield's own sandbox and QC frames come back through a connector that fetches public URLs; reused clips may carry no audio.
+- [2026-09-29 — Adobe touch-up on Higgsfield media needs a block-upload bridge](learnings/2026-09-29-adobe-touch-up-on-higgsfield-media-needs-a-bridge.md):
+  Adobe rejects the Higgsfield generation CDN. Block-upload from the sandbox by resolving the transfer redirect and PUTting to S3 over HTTP/1.1 (9 of 9 succeeded; the HTTP/2 PUT failed 9 of 9). Import the Adobe outputs back with `media_import_url`. The sandbox is stateless without a background lease.
 
 ## Research
 
