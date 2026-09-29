@@ -1,0 +1,68 @@
+# 2026-09-29 — Website refinement pass (design cleanup, not a redesign)
+
+**Repo:** `hughm007/servicepow-v2` @ `claude/v4-frame-landing` — `6acab60` … `7338a98`
+(10 commits, `Refine 1/n` → `9/n` plus a hero accessibility fix).
+**Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
+`baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
+commit SHA is the restore point: `git checkout 122b99b -- .`).
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 9). Not deployed —
+servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
+
+## Owner brief (paraphrased)
+
+Remove irrelevant and repeated content from source; one strict type scale as tokens; one primary
+CTA per page with clearly secondary actions; one accent; a consistent spacing scale, shared grid and
+shared components. Keep structure, branding, routing and behaviour; no new features or
+dependencies; small commits; screenshot every page and verify visually.
+
+## Owner decisions (2026-09-29 — "go" on the plan)
+
+| # | Decision | Applied |
+|---|---|---|
+| 1 | Remove four home sections: proof strip, Our Promise, home sample-audit preview, seven-stage diagram | Yes — the sample preview stays on /growth-audit, the stage explorer on /about. Launch gate 8 (promise sign-off) closed in `CONTENT-NEEDED.md` |
+| 2 | Header "Free growth audit" becomes an outline button | Yes |
+| 3 | Resting gold glow only on dark grounds; hover pop/lean stays on every button | Yes |
+| 4 | Keep the /work WORK wordmark as the one documented size exception | Yes (`.wordmark-fill`) |
+| 5 | Plumbing H1 reads as an aim: "Marketing built to book jobs, not just clicks." | Yes |
+| — | Does the free audit cover social media? (the site's lists disagree) | **Open** — left as is; see `../OPEN-QUESTIONS.md` |
+
+## What changed
+
+- **Content:** home −30% desktop / −31% phone (11,640 → 8,186 px; 18,379 → 12,592 CSS px);
+  /growth-audit −24% / −19%. Repeated sections and lines cut on every page; the three non-audit
+  FAQs moved to /pricing. Dead code removed (unused exports, JSON keys, CSS, 16 legacy colour
+  aliases, 4 images, BeforeAfter slot, ~140 stray Tailwind utilities from docs folders).
+- **Compliance fix found in audit:** the case-study ad note was missing "Shown as delivered" and
+  "No campaign results are claimed." — now the single approved note everywhere.
+- **Typography:** 8 `@theme` tokens with line-height/tracking/weight companions (poster, title,
+  heading, subheading, item, lede, body 17/1.6, caption 14); Tailwind's default scale cleared; ~70
+  one-off sizes removed; Work Sans 400/600/700; nothing below 14px; no italics.
+- **Hierarchy:** one solid gold primary per view, `.btn-lg` (56px) for the page's primary action;
+  outline secondaries; gold reserved for decisions; muted eyebrows/numerals on dark.
+- **Layout:** tokens for page-top, header height, 12-col gutter, section-head gap, text and heading
+  measures, error colours; shared `CtaBand`, `SectionHeader`, `Breadcrumbs`, `IndexList` and
+  `.pill` / `.callout` / `.panel` / `.card-link` / `.ruled-list`; three section grounds.
+
+## Verified
+
+| Check | Result |
+|---|---|
+| `tsc --noEmit`, `next build` | clean at every commit |
+| Playwright e2e (incl. axe WCAG 2A/2AA on every route) | 61/61 at every commit (one test retired with the home diagram; its coverage stays on /about) |
+| Full-page screenshots, 16 routes × 1440 and 390 | reviewed; no horizontal overflow |
+| Hero primary CTA inside 375×667 | 14/14 routes |
+| `next dev` starts and serves pages | yes (200 on /, /work, /pricing, /growth-audit, /services) |
+| Static preview bundle hydrates | yes (5 routes checked) |
+
+**Not verified:** Safari/iOS and real devices (all renders are Chromium); Lighthouse; video
+playback (the test Chromium has no H.264); the TripNerd review preview was not rebuilt (still the
+pre-pass site around the held ad).
+
+## Learned
+
+- A spacing token named `block` or `grid` makes Tailwind v4 emit `inline-block` / `inline-grid`
+  **sizing** utilities, silently breaking the display classes (a chip squeezed to 48px). Token
+  names now avoid display keywords (`sect-head`, `column`).
+- Running `next dev` writes `.next/dev/types`, which the tsconfig includes; the static export then
+  fails its type check because those types reference the stashed routes. Delete `.next/dev` before
+  `export-site.py build`.

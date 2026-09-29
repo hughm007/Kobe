@@ -1403,3 +1403,23 @@ as with Drive and Vercel; a baseline advance is the owner's ruling, not a sessio
 
 **Next:** the first real client use of the lane runs `canva-procedure.md` end to end, with the dual
 quality gate, claims and brand law after the commit.
+
+## 2026-09-29 — Website refinement pass (servicepow-v2)
+
+**Did:** Read-only audit (typography, CTA hierarchy, content ×3 with adversarial verifiers,
+spacing/layout, dead code) → owner-approved plan → 10 small commits on `claude/v4-frame-landing`
+(`6acab60`…`7338a98`): dead code out; repeated content cut (home −31% on phones); one 8-token type
+scale; layout tokens and shared components (`CtaBand`, `SectionHeader`, `Breadcrumbs`,
+`IndexList`, surface classes); one primary action per page. Record:
+[`../company/website/2026-09-29-refinement-pass/`](../company/website/2026-09-29-refinement-pass/README.md).
+
+**Decided (owner, applied):** remove the four home sections; outline header CTA; glow only on dark;
+keep the WORK wordmark as the one size exception; plumbing H1 as an aim. Launch gate 8 closed.
+
+**Verified:** tsc + build clean and e2e 61/61 (axe on every route) at each commit; 16 routes
+screenshotted at 1440/390; hero CTA above 375×667 on 14/14 routes. Preview republished (v9).
+Not deployed.
+
+**Open:** does the free audit cover social media (site lists disagree); Safari/real-device and
+Lighthouse checks; TripNerd review preview not rebuilt.
+
