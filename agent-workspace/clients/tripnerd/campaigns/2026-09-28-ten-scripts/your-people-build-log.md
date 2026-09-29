@@ -80,9 +80,17 @@ gallery). Reading only; faces are real guests and never go to a generator.
 | Take C | reactions start ~1.0 s; client nods and straightens; the woman turns to the man in white (profile with a smile visible for ~1 s at 1.5–2.0 s), then puts her arm round his waist; he drinks; brother-in-law leans on the rail; son pulls dad in until their heads touch (3.5–5.0 s), faces hidden |
 | Take D | similar, but dad turns into a smiling three-quarter profile at 2.5 s (a generated face performing emotion) and ends in a two-armed hug; rejected on the face |
 | Recommendation | Take C, used 1.0–5.0 s. Flags for the owner: the woman's smiling profile (~1 s, small in the wide frame); the pair now reads as a couple. C's head-to-head ending is the payoff the brief gave to F8, so F8 is up for review. |
-| Status | awaiting owner decision |
+| Status | **APPROVED by owner 2026-09-29: Take C, use 1.0–5.0 s** |
 
-Spend so far this build: 132 credits (24 stills, 48 F7 round 1, 60 F7 round 2).
+## Status check in Higgsfield (2026-09-29, live)
+Balance 12,494.39. A parallel session (ChatGPT, 2026-09-29 17:43–18:07 UTC) added, not yet reviewed here:
+F1 animation `4a88d0b9` (from still `b925a1b6`); F2 still fixes `6bc5d061` → `35fc8f2b` and animation `533aefc4`;
+F3 animation `35724e68` (from `bb3e823c`); F5 animation `abff2da3` (locked 3 s, from `44349026`); F4 generated
+fallback still fix `ac6e7f7a` (from `2a11b105`); its own locked F7 `8e04c238` (end `523943a7`, from the old master;
+superseded by Take C). Stills still unanimated: F6 `7578680b`, F8 start `8afce220`. All of these stills were made from
+the old master `5045d452`, not master v2.
+
+Spend so far this build (this session): 132 credits (24 stills, 48 F7 round 1, 60 F7 round 2).
 
 **Learning:** asking the image model to "tip the head" produces a turn toward profile. A geometric rotation plus a
 blend pass holds the exact angle. Use the same route for F8's end still (the son's 30° turn).
