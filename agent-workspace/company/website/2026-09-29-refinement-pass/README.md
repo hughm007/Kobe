@@ -5,7 +5,7 @@
 **Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
 `baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
 commit SHA is the restore point: `git checkout 122b99b -- .`).
-**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 10). Not deployed —
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 11). Not deployed —
 servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
 
 ## Owner brief (paraphrased)
@@ -50,6 +50,12 @@ Recommended against stock/AI imagery (no real process photos exist; generic pict
 filler). Owner chose: the four steps as one numbered row joined by a thin line, gold marker on
 01. Built as a horizontal row from 1024px, a vertical rail below it; header now full width; the
 two notes each span two steps. Build clean, e2e 61/61, screenshots at 1440 and 390 reviewed.
+
+**Then (`aa27089`):** the steps are clickable. Clicking anywhere on a step (or its marker by
+keyboard; 44px targets, `aria-pressed`) makes it the focal point: gold marker with a halo, a
+one-off pop (marker 2.2x burst + ring; text lifts 14px, scales 1.08 desktop / 1.05 phone from
+its left edge), then it settles. Step 01 is the resting focus; nothing animates on load. Peak
+frame measured clear of the next column; no horizontal overflow at 390. e2e 61/61.
 
 ## Verified
 
