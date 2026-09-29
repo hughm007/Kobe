@@ -5,7 +5,7 @@
 **Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
 `baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
 commit SHA is the restore point: `git checkout 122b99b -- .`).
-**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 12). Not deployed —
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 13). Not deployed —
 servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
 
 ## Owner brief (paraphrased)
@@ -68,6 +68,15 @@ story/scope row. e2e 61/61, no horizontal overflow at any width tested.
 Open: the "Static ad set" line names three ads ("hard water, a clogged drain, and the
 after-hours call") but the third is held (sewer-scope), so two show — the same line is on the
 case study page.
+
+**Then (`06edf7c`) — brand accents on Selected Work** (owner: the cream section read blank next
+to the rest of the page). Within the site's own palette rules (gold is fill, line and marker on
+cream, never text): a gold highlighter band behind "job to do." (sweeps in with the reveal;
+static with no JS / reduced motion — both checked), the steps' gold diamond as a marker on the
+eyebrow and on each "What we built" row, the chip as a night badge with gold type, ad-frame
+brackets in gold-ink. `.gem` and `.hl` are reusable if the owner wants them on other cream
+sections. Note: `company/brand/visual-identity.md` still describes the superseded blue/Fraunces
+direction; the live site system is gold/night/cream in `globals.css`.
 
 ## Verified
 
