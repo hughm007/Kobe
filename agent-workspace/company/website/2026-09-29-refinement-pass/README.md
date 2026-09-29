@@ -5,7 +5,7 @@
 **Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
 `baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
 commit SHA is the restore point: `git checkout 122b99b -- .`).
-**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 14). Not deployed —
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 15). Not deployed —
 servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
 
 ## Owner brief (paraphrased)
@@ -84,6 +84,13 @@ share one 12-column grid via subgrid, so the story/scope column starts level wit
 and fills the corner beside the heading (owner: that corner read empty); section ~150px
 shorter; columns still end level (measured 1280–1920). Learned: items that overlap a grid row
 need explicit column starts, or auto-placement pushes them into new implicit columns.
+
+**Then (`73c249b`):** the highlight is scroll-linked (owner: make it fill as you scroll from
+the hero down). `ScrollHighlight.tsx` sets `--hl` 0–1 from the heading's position: 0 until the
+heading rises past the bottom edge, 1 when it reaches the top third, reversing on scroll up.
+Measured by wheel-scrolling at 1440×900 and 390×667, on both the Next build and the static
+preview bundle; full with no JS and with reduced motion. The old timed sweep fired on page
+load on desktop, before the visitor scrolled — why the owner never saw it.
 
 ## Verified
 
