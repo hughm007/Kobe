@@ -4,7 +4,7 @@ type: production-log
 client: tripnerd
 campaign_id: 2026-09-28-ten-scripts
 created: 2026-09-28
-updated: 2026-09-28
+updated: 2026-09-29
 ---
 
 # YOUR PEOPLE — build log
@@ -90,7 +90,31 @@ fallback still fix `ac6e7f7a` (from `2a11b105`); its own locked F7 `8e04c238` (e
 superseded by Take C). Stills still unanimated: F6 `7578680b`, F8 start `8afce220`. All of these stills were made from
 the old master `5045d452`, not master v2.
 
-Spend so far this build (this session): 132 credits (24 stills, 48 F7 round 1, 60 F7 round 2).
+## F6 animation (son and dad, the held breath)
+| Item | Value |
+|---|---|
+| Start still | ChatGPT's `7578680b` had dad on the left of his son, the reverse of F5 and F7 (screen-direction break). Fixed by mirroring (soft background, no text): `3a442d8e-9aa3-4c26-968f-d14bee61d23b` |
+| Round 1 | Kling 3.0 4k, 3 s, sound off, start image only, 2 takes (36 credits): A `e35ec584-56db-4036-b51e-cc5b8aa6ea3c`, B `66850040-dd38-4d7d-b542-b32223dad60f` (3852x2152, 73 frames) |
+| Take B timing (FACT, frame sheet) | dad's chin lift 2.3–2.7 s; son's hand lifts for a shoulder tap only at ~2.9 s; the clip ends at 3.04 s, so the tap never lands |
+| Owner direction (2026-09-29) | prefers B if the shoulder tap completes before the clip ends |
+| Round 2 | (a) two 5 s retakes from the mirrored still with the tap placed mid-clip: `2e3e76f1-47b3-4c11-b8dd-91667cc6834d`, `f33ce30e-554c-40a9-be56-19ee2d5b0ee4` (60 credits); (b) two 3 s continuations of Take B from its frame 66 (2.75 s, before the hand lifts; media `0b87f34e-dc1b-4ae0-85f8-7b4ded4004d0`): `574d220d-ec68-4726-8c4f-b44463ee8c1e`, `8934a4b9-7426-4d8f-a1fc-9028b33e6aaa` (36 credits) |
+| Edit slot | F6 grows from 2 s to 3 s (18–21) because F7 uses only Take C 1.0–5.0 s (4 s, as approved) at 21–25 |
+| Round 2 checks (FACT) | continuation 1 (`574d220d`) joined as B frames 0–65 + continuation: seam frame difference 2.85 vs 2.25–2.9 between B's own frames; camera push continuous across the join (drift -0.52 px vs -0.68 before, -0.65 after). Continuation 2 (`8934a4b9`) stalls the push for one frame after the join. In both, the son's hand lifts to about head height between pats (three pats in 1, at ~3.8–4.6 s of the joined clip). Retake r1 (`2e3e76f1`): smaller tap at ~3.6–4.3 s, then the hand rests. Retake r2 (`f33ce30e`): quick tap at ~3.0–3.7 s. Only the hand region of r1/r2 was checked. |
+| Previews | B + tap, join 1 (recommended): media `bb4455ec-11bd-4eba-8b80-848d3d7f948e` (1920x1080, 5.79 s); join 2: `02a9ecef-e1d7-4377-adb0-24456dd2a74f` |
+| Planned edit window | joined clip 2.0–5.0 s (chin lift 2.3–2.7, pats 3.8–4.6, settle) |
+| Status | shown to owner 2026-09-29; awaiting verdict |
+
+## Voiceover (seed_audio, REAL-Wyatt), whisper screen (FACT)
+| Line | Takes | Screen |
+|---|---|---|
+| 1 client | `d97fcc8a`, `08e612e5` | both correct words; both hold a long pause before "for a year" (~1 s and ~2 s), to be tightened in the edit |
+| 2 the two | `47a503ac` (1.28 s), `25056a7b` (1.32 s) | both correct |
+| 3 brother-in-law | `69b4927f`, `b6eaf7c7` | 69b4927f transcribes as "showed up" (rejected); b6eaf7c7 correct, 4.6 s with a 0.86 s pause after "brother-in-law" |
+| 4 dad | `bfb140cc` (1.34 s, peak -0.2 dBFS) | correct; the 429 take never ran |
+| 5 bring your people | `3fadb631` (1.56 s lead-in), `6b7c879d` (peak -0.0 dBFS) | both correct |
+| 6 hospitality handled | `4c7bce28` (no pause, 2.52 s), `a2726b57` (1.26 s pause; transcribes as "Handle.") | 4c7bce28 safer on the last word |
+
+Spend so far this build (this session): 264 credits (24 stills, 48 F7 round 1, 60 F7 round 2, 36 F6 round 1, 96 F6 round 2); VO 3.3.
 
 **Learning:** asking the image model to "tip the head" produces a turn toward profile. A geometric rotation plus a
 blend pass holds the exact angle. Use the same route for F8's end still (the son's 30° turn).
