@@ -4,7 +4,7 @@ type: report
 client: tripnerd
 campaign_id: 2026-09-29-all-events
 owner: Karl
-status: draft
+status: active
 created: 2026-09-29
 updated: 2026-09-29
 tags: [build, video, camera-roll, motion-design, real-photos, 9x16, qa]
@@ -12,7 +12,7 @@ tags: [build, video, camera-roll, motion-design, real-photos, 9x16, qa]
 
 # THEIR CAMERA ROLL — build v1
 
-**Status: INTERNAL DRAFT.** Not for paid use until the items under *Must clear* are closed. Owner review: **PENDING** (no score given yet).
+**Status: OWNER APPROVED 2026-09-29 (25 s)**, ranked by the owner above the 8.4 hosting spot; no numeric score given. See `../../Client approved adverts/2026-09-29-their-camera-roll-25s.md`. The 15 s cutdown was not separately reviewed. **Paid use is still blocked** on the items under *Must clear*.
 
 ## Deliverables (FACT)
 

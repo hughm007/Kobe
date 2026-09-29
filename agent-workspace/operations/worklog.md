@@ -1535,3 +1535,20 @@ quality gate, claims and brand law after the commit.
   - Licensed music to replace the synthesised placeholder.
   - "This year", the Daytona month and "We have everything".
   - The Skeptic pass and Critic scorecard before any paid use.
+
+## 2026-09-29 (later) — THEIR CAMERA ROLL owner-approved; real client material becomes the default route
+- **Approved.** The owner approved the 25 s ("Like this ad a lot… better than the other advert you created that was client approved"). No numeric score; ranked above the 8.4.
+- **Filed** in `clients/tripnerd/Client approved adverts/`:
+  - a pointer with the MD5, a stream link, a **zip forced-download link** (verified byte-identical inside) and the Adobe Creative Cloud copy;
+  - a README row and a standing rule.
+- **Learned and promoted:**
+  - the owner's verdicts rank monotonically with the share of real client material (4/10 → killed → 8.4 → approved above 8.4);
+  - decision **0008**: real client material first, generation fills gaps, and a canonical skill change is proposed rather than hand-edited;
+  - recipe `playbooks/ads/recipes/camera-roll-real-photos.md`;
+  - router Lane C;
+  - an EVIDENCE-INDEX PROVEN row;
+  - the flash-cut false-positive pattern is now at three confirmations and due for a harness ruling.
+- **Open:**
+  - Before paid use: guest releases (a minor in the Daytona photo), licensed music, and the "this year" / Daytona month / "everything" calls.
+  - A market hook test.
+  - Next: the config-driven renderer and seasonal single-event cutdowns.

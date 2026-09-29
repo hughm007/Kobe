@@ -30,6 +30,7 @@ open the file.
 | 2026-08-26 | [v4.0 consolidation](decisions/0005-v40-consolidation.md) | Accepted |
 | 2026-09-03 | [servicepow.com production reality — `plumbing` vs `servicepow-v2`](decisions/0006-servicepow-com-production-reality.md) | ⛔ **OWNER DECISION REQUIRED — no session may resolve it** |
 | 2026-09-04 | [Service Pow typography system: Fraunces · Work Sans · JetBrains Mono](decisions/0007-typography-system.md) | Accepted |
+| 2026-09-29 | [Real client material is the default picture source for client video adverts](decisions/0008-real-client-material-first-for-video-ads.md) | Accepted (owner directive) |
 
 ## Learnings
 
@@ -37,6 +38,7 @@ Grouped by theme. Add themes as they emerge — don't force a learning into a he
 doesn't fit.
 
 ### Advertising
+- [2026-09-29 — Real client material plus motion design outranked everything generated](learnings/2026-09-29-real-client-material-plus-motion-design-outranked-generation.md): across four owner verdicts, the ranking follows the share of real client material in the picture (4/10 → killed → 8.4 → approved above 8.4). Owner preference, not market data yet.
 - [2026-09-27 — Strengths-only production scored 8.4/10; the whole deduction was master resolution](learnings/2026-09-27-strengths-only-realism-scored-8-4-master-resolution-capped-it.md): owner credited realism to generating only what the model does well and compositing real material; the only points lost were to a 720p body upscaled next to a native 1080p opening.
 - [2026-09-28 — View every reference at full size before citing it](learnings/2026-09-28-view-every-reference-at-full-size-before-citing-it.md): two of four "clean" reference frames had been described wrongly from memory; one would have fed real player headshots to the generator, and a chair used in three shots existed in no frame.
 - [2026-09-23 — Famous landmark: model memory beat references; satellite tile as the geometry check](learnings/2026-09-23-famous-landmark-model-memory-beats-references.md): for the TPC Sawgrass island green, text-only Nano Banana 2 stills had the right bunker and walkway while referenced stills imported crowd artefacts; a stitched satellite tile caught two layout errors that oblique-photo QC had missed.
@@ -107,7 +109,7 @@ the section below.
 | Claim qualifiers drop on every re-transcription | 2 (this file + the 08-28 control catch) | Watching — promote on a third |
 | The offer/price line gets the shortest hold | 2 (911 Drain price line · intro offer line) | Watching — a third promotes it into check 32's scope for burned text |
 | "Secondary-location" resolution misses (a fix applied at the named spot while other cells still assert the old answer) | 3 (911 Drain rounds 10, 14, 15) | **Due for promotion** — evidence in the 911 Drain campaign bible §14; needs its learning file written and a playbook line |
-| Flash-cut detector false-positives on multi-frame wipes | 2 (gate rounds 1 and 2) | Watching — harness fix proposed (P4) |
+| Flash-cut detector false-positives on multi-frame wipes | **3** (gate rounds 1 and 2 + the 2026-09-29 camera-roll build, where 11–12 were reported against 1 real hard cut) | **Due for a harness ruling**. Until then, frame-check every FAIL and record it (see harness-instrument-limits) |
 | Build location must be chosen by where the heaviest inputs live | 2 ([build-where-the-assets-are](learnings/2026-08-31-build-where-the-assets-are.md), [vendor-sandbox-gives-hands-and-eyes](learnings/2026-09-23-vendor-sandbox-gives-a-cloud-session-hands-and-eyes.md)) | Watching — second measurement from the other side: when the inputs live with the vendor, build in the vendor's sandbox |
 | The expensive gate belongs at publish, not on drafts | 1 ([first-artifact-in-ten-minutes](learnings/2026-08-31-first-artifact-in-ten-minutes.md)) | Forming — Owner-stated; changes the default order of work |
 
@@ -118,5 +120,6 @@ playbook rule stays visible.
 
 | Pattern | Playbook | Learnings behind it |
 |---|---|---|
+| Real client material first; generation fills gaps (owner ranking follows real-material share) | [decision 0008](decisions/0008-real-client-material-first-for-video-ads.md) · [recipe: camera roll](../playbooks/ads/recipes/camera-roll-real-photos.md) · router Lane C | [real-client-material-outranked-generation](learnings/2026-09-29-real-client-material-plus-motion-design-outranked-generation.md) (4 owner verdicts), [strengths-only 8.4](learnings/2026-09-27-strengths-only-realism-scored-8-4-master-resolution-capped-it.md), 911 Drain 4/10 realistic lane (run ledger); promoted at the owner's explicit directive, 2026-09-29 |
 | Blocking checks + ServicePow-6 scoring before any ad ships | [playbooks/ads/video-production.md](../playbooks/ads/video-production.md) | Imported from the Drive OS (19_PRODUCTION_LEARNINGS); local trail starts with checks-beat-prose |
 | Performance Challenger Rule — production QA paired with performance-marketing QA; clever-mechanism packs ship a problem/solution-first challenger and the market decides | [playbooks/ads/video-production.md](../playbooks/ads/video-production.md) (Doctrine, advisory tier) + the creative-critic Direct-Response lens | [correctness-floor-conversion-objective](learnings/2026-08-26-correctness-floor-conversion-objective.md) — promoted at occurrence #1 by explicit Owner directive, recorded as such |
