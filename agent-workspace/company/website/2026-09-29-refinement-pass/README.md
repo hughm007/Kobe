@@ -5,7 +5,7 @@
 **Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
 `baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
 commit SHA is the restore point: `git checkout 122b99b -- .`).
-**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 18). Not deployed —
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 19). Not deployed —
 servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
 
 ## Owner brief (paraphrased)
@@ -126,6 +126,21 @@ average; the action stays a phone call, never the audit (EV-sp-001). Needs owner
 confirmation. Learned: `Intl.NumberFormat` compact notation renders "$0.0" in Node and "$0"
 in Chromium — a hydration mismatch (React #418) caught only by the console-error e2e test;
 chart labels are hand-formatted now.
+
+**Then (`23ee77e`) — mobile pass** (owner: nothing cut off or left out on phones). Automated
+audit of 16 routes × 9 sizes (320–430 portrait, 667×375 and 844×390 landscape, 768): sideways
+scroll, elements past the screen edge, text clipped by its box, tap targets < 24px, text < 14px,
+inputs < 16px (iOS focus zoom), and every line of desktop text checked for on phones. Plus four
+parallel visual reviews of 36 contact sheets (every page at 320 and 390), each finding
+re-verified before acting. Fixed: the home service lists hidden on phones (restored); a race
+where the calculator chart widened its column 19px past a 320px screen (grid locked to
+`minmax(0,1fr)`, chart fills its box); chart tick labels under the readouts; 32px sliders
+(now 44px); video start button overlapping the native control bar on small players; the phone
+action bar leaving only 237px of page in landscape (hidden under 480px tall); the gallery index
+badge covering the client's wordmark; a cut-off placeholder; stranded words/separators.
+Rejected as capture artifacts after checking on a real scroll: "missing" footer logo and blank
+case-study images (lazy images a one-shot full-page capture never scrolls to). Final audit:
+144/144 clean; e2e 61/61. Not verified: Safari/iOS and real devices.
 
 ## Verified
 
