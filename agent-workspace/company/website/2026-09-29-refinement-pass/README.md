@@ -5,7 +5,7 @@
 **Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
 `baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
 commit SHA is the restore point: `git checkout 122b99b -- .`).
-**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 11). Not deployed —
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 12). Not deployed —
 servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
 
 ## Owner brief (paraphrased)
@@ -56,6 +56,18 @@ keyboard; 44px targets, `aria-pressed`) makes it the focal point: gold marker wi
 one-off pop (marker 2.2x burst + ring; text lifts 14px, scales 1.08 desktop / 1.05 phone from
 its left edge), then it settles. Step 01 is the resting focus; nothing animates on load. Peak
 frame measured clear of the next column; no horizontal overflow at 390. e2e 61/61.
+
+**Then (`18663e5`) — home 911drain case card, owner chose option 1 of 3.** Measured problem at
+1440: the copy column ended at 479 of 1,038px (54% empty), and the held third ad shrank the ad
+frame to 2/3 width, leaving ~320px of dead space between ads and copy. Fix: ads fill a 7-col
+media column; ad note at caption size; copy column (5) = one-line objective + "What we built"
+(the five deliverables, sourced from the case study's own system list — no new claims, no
+metrics) + disclosure + link. From 1280px the site shot grows (2:1 minimum) so both columns end
+level — measured equal at 1920/1440/1366/1280; 768–1279px stacks the work above a two-column
+story/scope row. e2e 61/61, no horizontal overflow at any width tested.
+Open: the "Static ad set" line names three ads ("hard water, a clogged drain, and the
+after-hours call") but the third is held (sewer-scope), so two show — the same line is on the
+case study page.
 
 ## Verified
 
