@@ -5,7 +5,7 @@
 **Baseline before the pass:** `122b99b` (on the remote branch; also tagged locally as
 `baseline/pre-refinement-2026-09-29` — the tag push was refused by the session's git proxy, so the
 commit SHA is the restore point: `git checkout 122b99b -- .`).
-**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 19). Not deployed —
+**Preview (private):** https://claude.ai/artifact/UUbKD8g9NTi7MzZgDagdLt (version 20). Not deployed —
 servicepow.com is untouched; production still needs decision 0006 + a BC-50 approval line.
 
 ## Owner brief (paraphrased)
@@ -141,6 +141,21 @@ badge covering the client's wordmark; a cut-off placeholder; stranded words/sepa
 Rejected as capture artifacts after checking on a real scroll: "missing" footer logo and blank
 case-study images (lazy images a one-shot full-page capture never scrolls to). Final audit:
 144/144 clean; e2e 61/61. Not verified: Safari/iOS and real devices.
+
+**Then (`40514c8`, `c71985a`, preview v20) — "clicking Work from the foot of home lands at the
+foot of Work" (owner, again).** Root cause, found by tracing: the preview exporter
+(`scratchpad/export-site.py`) injects a document click handler that turns every internal link
+into a full page load and calls `stopImmediatePropagation()`, so no site code ever saw the
+click; and the owner's viewer evidently puts the previous scroll position back after a load
+(a simulated scroll-restoring host reproduced the exact symptom). Fix: `src/lib/open-at-top.ts`
+(inline script) — a plain same-site link click (no #section) leaves a short-lived
+sessionStorage note; the next page holds the top through load and ~2.5s after, stopping on any
+scroll/tap/key; the exporter shim now leaves the same note; RouteFocus drops the note 3s after a
+client-side change (the router can start one and fall back to a full load). Verified: with the
+simulated restoring host and without, 1440 and 390, Work/Services/Trades/About from the page
+foot → 0; Back and #section links unchanged; e2e 61/61. Refresh lands ~200–300px short on the
+static preview both before and after (pre-existing, not from this change). Not verified in the
+owner's actual viewer — only its behaviour was simulated.
 
 ## Verified
 
