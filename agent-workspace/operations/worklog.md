@@ -1573,3 +1573,7 @@ quality gate, claims and brand law after the commit.
 - **Recommendation recorded:** make qualified inquiries the north star, with followers as a leading indicator; set targets only after the baseline is verified.
 - **Learned:** method and limits of a presence audit from a cloud session are now a playbook (`playbooks/content/social-presence-audit.md`). The access register has the public identifiers (no credentials).
 - **Open:** step 2 needs the owner to get access or exports (open-questions row added). Spend none; nothing published.
+
+## 2026-09-30 (evening) — Approved TripNerd 25 s re-encoded under 30 MB for upload and the website
+- Owner asked for the approved advert under 30 MB. Re-encoded the 84 MB master to 21.8 MiB (two-pass H.264 at about 7.2 Mbps, AAC 128k; same 1080x1920, 30 fps, 25 s). PSNR 42.0 dB, SSIM 0.976 against the master; loudness and peak unchanged. Download and stream links verified byte-for-byte. Filed in the approved-advert pointer. The master stays the source of truth.
+- Open: if the website needs it smaller or as a muted autoplay loop, make a separate web cut (about 8–10 MB, poster frame).

@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: active
 created: 2026-09-29
-updated: 2026-09-29
+updated: 2026-09-30
 tags: [assets, video, approved, pointer, real-footage, camera-roll, motion-design]
 ---
 
@@ -20,6 +20,10 @@ tags: [assets, video, approved, pointer, real-footage, camera-roll, motion-desig
 - **Stream** (mp4): `https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/ea121491-9b8a-4203-8430-a8e3b4676c1c.mp4`
 - **Adobe Creative Cloud copy** (byte-identical, checked): `tripnerd-camera-roll/TripNerd-Their-Camera-Roll-25s-v1.mp4`, asset `urn:aaid:sc:US:94020783-32e2-4ce4-b377-33c36f37912a`.
 - **Contact sheet:** `…/2d0f865d-21f1-4521-b6e8-6729d5600570.jpg`
+
+**Web copy, under 30 MB (2026-09-30, made for upload to Claude and the website):** `TripNerd-Their-Camera-Roll-25s-web-under30MB.mp4`, 22,835,987 bytes (21.8 MiB), MD5 `28376470e84b421ec1c0b62607d5f0ca`. Re-encoded from the master above: H.264 High, 1080x1920, 30 fps, about 7.2 Mbps two-pass; AAC 128 kbps 48 kHz stereo. Picture versus master: PSNR 42.0 dB, SSIM 0.976 (visually close, not bit-identical). Loudness −13.9 LUFS, peak −1.3 dBFS, the same as the master. Not a new cut: same picture, same sound.
+- Download (zip, forces a save; MD5 `922b5964c71ff6739cf7a67ce50b241a`; the MP4 inside matches): `https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/7aa977f1-deb0-4778-a416-3efd01544742.zip`
+- Stream (mp4): `https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/483e24a2-8014-4c17-83b0-3c4e4d9e8ea3.mp4`
 
 **Companion (not separately reviewed by the owner):** the 15 s cutdown from the same build, `…/594c1292-eaf5-46ba-a763-fdfd453aacf9.mp4`, MD5 `1dac2c3730e1dc89c39e60587527a5cb`.
 
