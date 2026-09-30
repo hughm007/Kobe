@@ -177,6 +177,22 @@ mobile audit (7 sizes × 16 routes) identical to the previous baseline; screensh
 390, 768, 1024, 1280 and 1440. Not verified: Safari/iOS; the art has not been seen on a real
 phone.
 
+**Then (`195b269`) — TripNerd "Their camera roll" vertical ad, built in and held** (owner:
+put the new TripNerd ad on the site where it fits). The 25-second 9:16 ad now fills the two
+existing video-ad spots: home case 02 (under 911drain; it replaces the held Players cut there)
+and `/work#video-ads`. Layout: story, a timecoded beat list (0:00 hook, 0:01 four albums, 0:18
+the list, 0:23 the ask) and the film at phone width in the 911drain ad set's corner-bracket
+frame; `VideoPlayer` gained `aspect="9:16"`. Web encode 720×1280 H.264, 8.9 MB (owner's file
+22.8 MB), indistinguishable at display size in a frame comparison. **Still held**
+(`published: false`, files in `pending-assets/tripnerd/`): no written TripNerd permission is on
+file. Verified in the held state: build and `tsc` clean, e2e 61/61, held-work test now also
+requires both new files to 404. **Not verified:** the ad switched on. A local build with it on
+was blocked by the session's permission system (it copies held TripNerd files into `public/`),
+so the on-state layout has not been rendered or screenshotted, and the TripNerd review preview
+(https://claude.ai/artifact/CkaL1QXjwKKkCvgrBP43Yi) was not rebuilt. Go-live checks are in
+`pending-assets/README.md`: written permission; photos confirmed as real TripNerd trips that
+TripNerd may show; captions if the ad has speech.
+
 ## Verified
 
 | Check | Result |
