@@ -40,6 +40,7 @@ whole point of the folder.
 
 ### Content
 - [`content/content-engine.md`](content/content-engine.md) — planning and producing content
+- [`content/social-presence-audit.md`](content/social-presence-audit.md) — audit a client's social and online presence from a cloud session: the method that worked and its limits
   that maps to objectives
 
 ### Client lifecycle
