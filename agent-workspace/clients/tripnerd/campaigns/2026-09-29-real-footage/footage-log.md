@@ -57,3 +57,6 @@ phone are the single biggest quality lever.**
   backs, wides and crowds.
 - AI only for minor touches: upscaling, cleanup, reframing, removing a burned caption. Nothing that changes
   what happened.
+
+## Addendum 2026-09-30 — the client's website adds real material this log did not list
+The NERDS gallery and the Higgsfield clips above are not the whole register. tripnerd.com also hosts **five Vimeo videos** (two are real suite tours: Daytona 500 and the 17th-hole suite, March 2026; the Derby film is unseen), **15 attributed Google reviews**, the **package lines** for each event, and more real photos on the event pages than the gallery holds. Full table, verbatim reviews, real-versus-stock calls and the site's own inconsistencies: `../2026-09-30-five-more-real-footage/real-material-inventory.md`. Nothing was downloaded from Vimeo; the masters are a NEEDS INPUT for TripNerd.

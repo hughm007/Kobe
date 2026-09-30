@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-09-29
-updated: 2026-09-29
+updated: 2026-09-30
 tags: [ads, video, recipe, routine, real-footage, motion-design, 9x16, camera-roll]
 source: TripNerd THEIR CAMERA ROLL build v1, owner approved 2026-09-29 and ranked above the 8.4 hosting spot
 ---
@@ -31,6 +31,8 @@ Record and QA: `…/2026-09-29-all-events/build-v1.md`. Owner verdict: `clients/
 - Not for a single-offer or price advert. Pair it with a direct-response challenger if the objective is leads at a target cost.
 
 ## Inputs
+Run [`real-material-intake.md`](../real-material-intake.md) first. It finds the photos, videos, reviews and published claims that feed this recipe.
+
 | Input | TripNerd example | Rule |
 |---|---|---|
 | Photo pool for the grid | 85 photos on tripnerd.com/nerds (scraped in the sandbox) | Vet every photo on one numbered contact sheet. Drop third-party marks, celebrities, broadcasts, sponsor boards, team jerseys, minors (unless consented) and anything that might be a restricted venue |

@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-09-29
+updated: 2026-09-30
 tags: [index, knowledge]
 ---
 
@@ -38,6 +38,7 @@ Grouped by theme. Add themes as they emerge — don't force a learning into a he
 doesn't fit.
 
 ### Advertising
+- [2026-09-30 — A client's own website is part of its asset register](learnings/2026-09-30-the-client-website-is-part-of-the-asset-register.md): a 15-minute crawl found five Vimeo videos, 15 attributed reviews, published package lines and a date contradiction that days of searching Drive and Higgsfield had missed. Now a playbook: `playbooks/ads/real-material-intake.md`.
 - [2026-09-29 — Real client material plus motion design outranked everything generated](learnings/2026-09-29-real-client-material-plus-motion-design-outranked-generation.md): across four owner verdicts, the ranking follows the share of real client material in the picture (4/10 → killed → 8.4 → approved above 8.4). Owner preference, not market data yet.
 - [2026-09-27 — Strengths-only production scored 8.4/10; the whole deduction was master resolution](learnings/2026-09-27-strengths-only-realism-scored-8-4-master-resolution-capped-it.md): owner credited realism to generating only what the model does well and compositing real material; the only points lost were to a 720p body upscaled next to a native 1080p opening.
 - [2026-09-28 — View every reference at full size before citing it](learnings/2026-09-28-view-every-reference-at-full-size-before-citing-it.md): two of four "clean" reference frames had been described wrongly from memory; one would have fed real player headshots to the generator, and a chair used in three shots existed in no frame.

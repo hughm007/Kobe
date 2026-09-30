@@ -1552,3 +1552,16 @@ quality gate, claims and brand law after the commit.
   - Before paid use: guest releases (a minor in the Daytona photo), licensed music, and the "this year" / Daytona month / "everything" calls.
   - A market hook test.
   - Next: the config-driven renderer and seasonal single-event cutdowns.
+
+## 2026-09-30 — TripNerd: five more real-material advert ideas (concept pack, no spend)
+- **Ask.** After approving THEIR CAMERA ROLL the owner asked for five more ideas from real client footage. Routed through the Campaign Director as SLIM (approved family). Folder: `clients/tripnerd/campaigns/2026-09-30-five-more-real-footage/` (`campaign-bible.md`, `scripts.md`, `real-material-inventory.md`).
+- **Found.** Before pitching, the client's website was crawled as an asset register: five Vimeo videos (two real suite tours, one Derby film not yet seen), 15 attributed Google reviews, published package lines per event, and more real photos than the register held. The site contradicts itself on THE PLAYERS 2027 dates. A re-check of the repo still finds no Derby media.
+- **Ideas**, on new angles and ranked as my judgment (ESTIMATE):
+  - YOUR 2027, the calendar (8.0);
+  - WHAT THEY WROTE, real reviews (7.5);
+  - HANDLED., the checklist over the 29 house photos (7.5);
+  - HOW MANY ARE YOU BRINGING?, the group-size poll (7.0);
+  - guests' own camera rolls (9.0 ceiling, blocked on assets).
+- **Recommendation:** build the calendar and the reviews first, send TripNerd one consolidated ask, and test against the approved advert before building the rest. `THE LISTING`, `MEET THE NERDS` and a Derby countdown were considered and cut (reasons in `scripts.md`).
+- **Learned:** the client's website is part of its asset register (learning filed and indexed). Turned into the playbook `playbooks/ads/real-material-intake.md` and linked from the camera-roll recipe.
+- **Open:** the owner's pick; the TripNerd ask (masters, permissions, written confirmation of the package lines, consent); a platform check on a non-tappable poll; the gates (Skeptic, Critic) once anything is built. Spend none. Higgsfield's upload call failed repeatedly today; the Adobe bridge carried the review sheets.

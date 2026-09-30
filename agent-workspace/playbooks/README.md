@@ -35,6 +35,8 @@ whole point of the folder.
 ### Advertising
 - [`ads/campaign-launch.md`](ads/campaign-launch.md) — planning, build, QA, launch
 - [`ads/creative-testing.md`](ads/creative-testing.md) — how we test creative so results mean something
+- [`ads/real-material-intake.md`](ads/real-material-intake.md) — find every real photo, video, review and published claim a client already has, before concept work
+- [`ads/recipes/camera-roll-real-photos.md`](ads/recipes/camera-roll-real-photos.md) — the camera-roll advert built from a client's real photos and video (owner-approved 2026-09-29)
 
 ### Content
 - [`content/content-engine.md`](content/content-engine.md) — planning and producing content
