@@ -1,0 +1,26 @@
+{
+ "_recipe": "hosting-spot-20s: 4·2·2·2·3·4·3 = 20 s, 16:9 or 9:16. Fill src fields with real clips first; captions carry the noun the voice says.",
+ "out": "hosting_spot_20s.mp4", "work": "work_hs", "logo": "logo.png", "duck": 0.4,
+ "shots": [
+  {"src": "LANDMARK.mp4", "in": 0.0, "out": 4.0, "vol": 0.8, "_": "golden-hour wide of the venue landmark"},
+  {"src": "FOOD.mp4", "in": 0.0, "out": 2.0, "vol": 0.6, "_": "macro plating"},
+  {"src": "DRINK.mp4", "in": 0.0, "out": 2.0, "vol": 0.6, "_": "macro pour"},
+  {"src": "GUESTS.mp4", "in": 0.0, "out": 2.0, "vol": 0.6, "_": "real guests, backs/profiles, venue behind"},
+  {"src": "MOMENT.mp4", "in": 0.0, "out": 3.0, "vol": 0.9, "_": "the green and the crowd; the roar lives here"},
+  {"src": "HOST.mp4", "in": 0.0, "out": 4.0, "vol": 1.0, "_": "real host to camera"}
+ ],
+ "cues": [
+  {"t0": 0.6, "t1": 3.6, "text": "VIP ON 17", "y": 0.86, "size": 54},
+  {"t0": 4.1, "t1": 5.9, "text": "THE FOOD.", "y": 0.86, "size": 54},
+  {"t0": 6.1, "t1": 7.9, "text": "THE DRINKS.", "y": 0.86, "size": 54},
+  {"t0": 8.1, "t1": 9.9, "text": "THE CONNECTIONS.", "y": 0.86, "size": 54},
+  {"t0": 13.2, "t1": 16.9, "text": "HOSPITALITY. HANDLED.", "y": 0.86, "size": 54}
+ ],
+ "endcard": {"line1": "Hospitality. Handled.", "line2": "REQUEST VIP PACKAGE DETAILS", "line3": "tripnerd.com", "dur": 3.0},
+ "tracks": [
+  {"src": "vo_1.wav", "at": 2.3, "gain": 1.5, "duck": true, "_line": "Imagine your clients right here, the food, the drinks, the connections, and that roar."},
+  {"src": "roar.mp3", "at": 10.0, "gain": 1.0, "fade_in": 0.4, "fade_out": 1.5, "duck": false},
+  {"src": "vo_2.wav", "at": 14.9, "gain": 1.5, "duck": true, "_line": "Now this is how you host."},
+  {"src": "vo_3.wav", "at": 17.6, "gain": 1.5, "duck": true, "_line": "Make it happen. tripnerd.com"}
+ ]
+}
