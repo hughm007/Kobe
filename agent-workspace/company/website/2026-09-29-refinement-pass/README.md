@@ -157,6 +157,26 @@ foot → 0; Back and #section links unchanged; e2e 61/61. Refresh lands ~200–3
 static preview both before and after (pre-existing, not from this change). Not verified in the
 owner's actual viewer — only its behaviour was simulated.
 
+**Then (`77d658e`, preview v21) — home hero: ServicePOW first, as three POW comic panels**
+(owner: put ServicePOW first, not a client ad or the "2 a.m. search" idea; chose the
+comic-panel direction over an annotated ad). The hero's right column is now `PowStrip`: three
+panels drawn in code in the logo's own style (gold burst, ink line, cream halftone): Brand (a
+plain van gets a "YOUR NAME" wrap, POW!), Websites (a phone whose Call button rings, RING!),
+Ads (four ads dealt out, one lifts with a check, BAM!). Captions are the existing approved
+one-liners from services.json (no new claims); each panel links to its discipline on
+/services. The entrance plays once on reveal; without JS or with reduced motion the finished
+frame shows. The explainer video moved to "Working with ServicePOW". Copy and strip sit side by
+side from 1280px; below that the strip sits full width under the copy, since three panels
+beside the copy at 1024px were unreadably small. Found and fixed during checks: (1) the
+bursts' landing animation gave phones a 21–24px horizontal scroll (Chromium counted the
+animated burst), so the hero now clips sideways overflow, as the process section already did;
+(2) the phone action-bar tap-size test failed 2 of 25 runs because it measured the button
+mid-slide (47.99994px against 48). It now waits for the slide to finish: 30/30. Verified: build
+and `tsc` clean; e2e 61/61; home CTA inside 375×667 (546px); no page overflow at 320–1440;
+mobile audit (7 sizes × 16 routes) identical to the previous baseline; screenshots reviewed at
+390, 768, 1024, 1280 and 1440. Not verified: Safari/iOS; the art has not been seen on a real
+phone.
+
 ## Verified
 
 | Check | Result |
