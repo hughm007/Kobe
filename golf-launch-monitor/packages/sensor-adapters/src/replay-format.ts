@@ -282,9 +282,11 @@ export function serializeReplay(replay: ReplayContent): string {
   const header = validateHeader(replay.header, 1);
   const lines = [JSON.stringify(header)];
   replay.observations.forEach((observation, i) => {
-    const record: ReplayObservationRecord = { type: "observation", observation };
-    validateObservationRecord(record, i + 2);
-    checkObservationProvenance(header, observation, i + 2);
+    // Serialise the schema-parsed value, not the caller's object: zod emits keys in schema
+    // order, so files are canonical and parse -> serialize round trips are byte-identical.
+    const canonical = validateObservationRecord({ type: "observation", observation }, i + 2);
+    checkObservationProvenance(header, canonical, i + 2);
+    const record: ReplayObservationRecord = { type: "observation", observation: canonical };
     lines.push(JSON.stringify(record));
   });
   return `${lines.join("\n")}\n`;

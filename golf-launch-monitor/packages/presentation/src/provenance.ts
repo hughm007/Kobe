@@ -30,20 +30,22 @@ export function badgeForSource(source: MeasurementSource): ProvenanceBadge {
 }
 
 /**
- * How far a badge is from "a sensor observed this value on this shot", best first. Used when a
- * displayed value combines several inputs: the combination shows the WORST input.
+ * Badge precedence when a displayed value combines several inputs, best first; the combination
+ * shows the WORST input. This is the same rule as combineSources in @glm/launch-state:
+ * - MANUAL / SYNTHETIC: where the data stream came from (typed in / generated for testing).
  * - ESTIMATED: a model of this shot/player with stated uncertainty.
- * - MANUAL: typed in by a person; no sensor or model basis tied to the shot.
  * - ASSUMED: a generic value that is not about this shot or player at all.
- * - SYNTHETIC: not real data.
+ * Model-derived labels outrank stream-origin labels so that an estimate is always shown as an
+ * estimate; the synthetic or manual origin is shown separately by dataOriginBanner and the
+ * secondary badges, so it is never lost.
  * CALCULATED is not a source and sits outside this ordering.
  */
 export const PROVENANCE_SEVERITY: readonly ProvenanceBadge[] = Object.freeze([
   "MEASURED",
-  "ESTIMATED",
   "MANUAL",
-  "ASSUMED",
   "SYNTHETIC",
+  "ESTIMATED",
+  "ASSUMED",
   "UNAVAILABLE",
 ]);
 

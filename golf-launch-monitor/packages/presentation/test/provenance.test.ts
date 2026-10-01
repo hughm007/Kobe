@@ -55,11 +55,12 @@ describe("badgeForSource", () => {
 });
 
 describe("worstBadge", () => {
-  it("orders MEASURED < ESTIMATED < MANUAL < ASSUMED < SYNTHETIC < UNAVAILABLE", () => {
-    expect(PROVENANCE_SEVERITY).toEqual(["MEASURED", "ESTIMATED", "MANUAL", "ASSUMED", "SYNTHETIC", "UNAVAILABLE"]);
+  it("orders MEASURED < MANUAL < SYNTHETIC < ESTIMATED < ASSUMED < UNAVAILABLE (same rule as combineSources)", () => {
+    expect(PROVENANCE_SEVERITY).toEqual(["MEASURED", "MANUAL", "SYNTHETIC", "ESTIMATED", "ASSUMED", "UNAVAILABLE"]);
     expect(worstBadge(["MEASURED", "MEASURED"])).toBe("MEASURED");
     expect(worstBadge(["MEASURED", "ESTIMATED"])).toBe("ESTIMATED");
-    expect(worstBadge(["ESTIMATED", "SYNTHETIC"])).toBe("SYNTHETIC");
+    expect(worstBadge(["ESTIMATED", "SYNTHETIC"])).toBe("ESTIMATED");
+    expect(worstBadge(["SYNTHETIC", "MANUAL"])).toBe("SYNTHETIC");
     expect(worstBadge(["ASSUMED", "MANUAL"])).toBe("ASSUMED");
     expect(worstBadge(["UNAVAILABLE", "MEASURED"])).toBe("UNAVAILABLE");
   });

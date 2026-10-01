@@ -173,6 +173,10 @@ export function buildShotMetrics(input: BuildMetricsInput): {
 
   const base = launch.overallConfidence * envFactor;
   const ceiling = ballProfile.confidenceCeiling;
+  // Every calculated flight/ground metric depends on spin (Magnus lift, curve, bounce spin), so
+  // none can be more trustworthy than the spin that drove it: a club-model estimate or a
+  // generic fallback caps carry, curve, descent and roll at that spin's own confidence.
+  const spinCap = launch.angularVelocityRadPerSec.confidence;
   const warnings: string[] = [];
 
   const make = (key: keyof RawMetrics): CalculatedValue<number> => {
@@ -194,7 +198,7 @@ export function buildShotMetrics(input: BuildMetricsInput): {
       flags.push("spin-axis-unavailable");
     }
     const interval = value === null ? undefined : intervals[key];
-    const confidence = value === null ? 0 : Math.min(ceiling, base * factor);
+    const confidence = value === null ? 0 : Math.min(ceiling, spinCap, base * factor);
     return {
       value,
       unit: spec.unit,
@@ -230,6 +234,6 @@ export function buildShotMetrics(input: BuildMetricsInput): {
     curveM: make("curveM"),
     spinAtLandingRadPerSec: make("spinAtLandingRadPerSec"),
   };
-  const simulationConfidence = Math.max(0, Math.min(1, Math.min(ceiling, base)));
+  const simulationConfidence = Math.max(0, Math.min(1, Math.min(ceiling, spinCap, base)));
   return { metrics, simulationConfidence, warnings };
 }

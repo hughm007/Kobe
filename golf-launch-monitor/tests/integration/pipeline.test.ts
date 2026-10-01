@@ -78,14 +78,30 @@ describe("synthetic shot pipeline", () => {
   });
 
   it("zero spin: no lift, spin axis reported unavailable, and a much lower apex than a spinning shot", async () => {
-    const [knuckle] = await runSynthetic([{ fixtureId: "no-spin-knuckleball", seed: 7 }]);
+    const [knuckle] = await runSynthetic([{ fixtureId: "no-spin-knuckleball", seed: 7 }], {}, 60);
     expect(knuckle!.launch.spinAxisTiltDeg.value).toBeNull();
     expect(knuckle!.launch.spinAxisTiltDeg.source).toBe("unavailable");
-    expect(Math.abs(knuckle!.launch.totalSpinRpm.value as number)).toBeLessThan(100);
+    // |omega| of a noisy zero-spin vector is biased upward (chi distribution, 3 dof): with the
+    // default 6 rad/s per-axis noise its mean is ~92 rpm, so allow a 3-sigma-ish bound.
+    expect(Math.abs(knuckle!.launch.totalSpinRpm.value as number)).toBeLessThan(250);
     expect(knuckle!.result).not.toBeNull();
-    // Measured zero spin produces no Magnus side force, so curve stays calculable and ~0.
-    expect(Math.abs(knuckle!.result!.metrics.curveM.value as number)).toBeLessThan(1);
-  });
+    // A measured (near-)zero spin keeps curve calculable. Spin measurement noise on a random axis
+    // still bends the simulated flight a little; that is measurement uncertainty, so across many
+    // seeds the Monte Carlo 90 % curve interval should contain the true curve (zero) most of the time.
+    const curve = knuckle!.result!.metrics.curveM;
+    expect(curve.value).not.toBeNull();
+    expect(Math.abs(curve.value as number)).toBeLessThan(6);
+    const many = await runSynthetic(
+      Array.from({ length: 20 }, (_, i) => ({ fixtureId: "no-spin-knuckleball", seed: 900 + i })),
+      {},
+      40,
+    );
+    const covered = many.filter((r) => {
+      const i = r.result!.metrics.curveM.interval!;
+      return i.p05 <= 0 && i.p95 >= 0;
+    }).length;
+    expect(covered / many.length).toBeGreaterThanOrEqual(0.7);
+  }, 120_000);
 
   it("is deterministic: identical inputs give deep-equal records", async () => {
     const a = await runSynthetic([{ fixtureId: "fade-driver", seed: 42 }], {}, 20);
@@ -129,7 +145,11 @@ describe("spin modes end-to-end", () => {
     });
     expect(r!.launch.spinMode).toBe("assumed-generic-fallback");
     expect(r!.launch.angularVelocityRadPerSec.source).toBe("assumed-generic-fallback");
-    expect(r!.launch.overallConfidence).toBeLessThan(0.5);
+    expect(r!.launch.validity).toBe("provisional");
+    // Spin-dependent outputs can be no more trustworthy than the generic spin behind them.
+    expect(r!.result!.metrics.carryM.confidence).toBeLessThanOrEqual(r!.launch.angularVelocityRadPerSec.confidence);
+    expect(r!.result!.metrics.carryM.confidence).toBeLessThanOrEqual(0.15);
+    expect(r!.result!.metrics.carryM.dependsOnEstimated).toBe(true);
   });
 });
 

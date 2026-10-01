@@ -9,7 +9,7 @@ import {
   gravityOnlyTrajectoryModel,
   type LaunchFitFailure,
   type LaunchFitSuccess,
-  makeMeasurement,
+  launchMeasurementsFromFit,
   type PlayerSpinHistoryEntry,
   resolveSpin,
   sensorHealthFactor,
@@ -118,15 +118,9 @@ export function scoringEligibility(
   return { eligible: true, reason: "Valid live shot.", overriddenByUser: false };
 }
 
+/** The velocity measurement exactly as buildLaunchState will record it for this fit. */
 function velocityMeasurement(fit: LaunchFitSuccess, source: MeasurementSource): Measurement<Vec3> {
-  return makeMeasurement({
-    value: fit.velocityMps,
-    unit: "m/s",
-    source,
-    confidence: 1,
-    uncertainty: { covariance: fit.diagnostics.velocityCovarianceM2PerS2, unit: "m/s" },
-    qualityFlags: fit.qualityFlags,
-  });
+  return launchMeasurementsFromFit(fit, source).velocityMps;
 }
 
 /**

@@ -267,7 +267,7 @@ describe("presentCalculated", () => {
       I,
     );
     expect(dv.badge).toBe("CALCULATED");
-    expect(dv.secondaryBadges).toEqual(["ESTIMATED", "SYNTHETIC"]);
+    expect(dv.secondaryBadges).toEqual(["SYNTHETIC", "ESTIMATED"]);
     expect(dv.sourceDetail.startsWith("calculated from: velocityMps (synthetic), angularVelocityRadPerSec (estimated-club-model)")).toBe(true);
     expect(dv.tooltip.status).toBe("Calculated; depends on synthetic launch velocity, estimated spin");
   });
@@ -301,7 +301,7 @@ describe("presentCalculated", () => {
       calc(150, "m", { inputs: [{ field: "velocityMps", source: "manual" }], dependsOnEstimated: true }),
       I,
     );
-    expect(manual.secondaryBadges).toEqual(["ESTIMATED", "MANUAL"]);
+    expect(manual.secondaryBadges).toEqual(["MANUAL", "ESTIMATED"]);
   });
 
   it("never loses provenance when the summary flags contradict the input list", () => {
@@ -317,7 +317,7 @@ describe("presentCalculated", () => {
       }),
       I,
     );
-    expect(dv.secondaryBadges).toEqual(["ESTIMATED", "SYNTHETIC"]);
+    expect(dv.secondaryBadges).toEqual(["SYNTHETIC", "ESTIMATED"]);
     expect(dv.qualityFlags.filter((f) => f.startsWith("presentation: depends"))).toHaveLength(2);
 
     const flagOnly = presentCalculated("carry", calc(150, "m", { inputs: [], dependsOnSynthetic: true }), I);
@@ -381,7 +381,7 @@ describe("presentCalculated", () => {
     expect(noInputs.tooltip.status).toBe("Calculated; depends on synthetic inputs");
 
     const manual = presentCalculated("carry", calc(152.705, "m"), I, "golfer", "manual");
-    expect(manual.secondaryBadges).toEqual(["ESTIMATED", "MANUAL"]);
+    expect(manual.secondaryBadges).toEqual(["MANUAL", "ESTIMATED"]);
     expect(manual.tooltip.status).toBe("Calculated; depends on manually entered launch velocity, manually entered spin");
 
     for (const origin of ["live", "replay", null] as const) {
@@ -538,8 +538,9 @@ describe("presentLaunchState", () => {
       }),
       I,
     );
-    expect(mixed.sidespin?.badge).toBe("SYNTHETIC");
-    expect(mixed.sidespin?.secondaryBadges).toEqual(["ESTIMATED"]);
+    // An estimate stays visibly an estimate; the synthetic origin is kept as a secondary badge.
+    expect(mixed.sidespin?.badge).toBe("ESTIMATED");
+    expect(mixed.sidespin?.secondaryBadges).toEqual(["SYNTHETIC"]);
   });
 
   it("spin components are unavailable when the tilt (or total) is unavailable", () => {
