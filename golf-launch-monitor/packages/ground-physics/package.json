@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@glm/shared-types": "0.1.0",
-    "@glm/core-math": "0.1.0"
+    "@glm/core-math": "0.1.0",
+    "@glm/terrain-engine": "0.1.0"
   }
 }
