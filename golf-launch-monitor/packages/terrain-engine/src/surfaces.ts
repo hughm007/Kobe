@@ -15,16 +15,19 @@ import { TERRAIN_MODEL_VERSION } from "./version";
  * EVERY value here is a provisional model parameter, chosen to be physically ORDERED (firm
  * surfaces bounce higher and roll farther than soft ones), not fit to measurements. Basis per
  * parameter family:
- * - restitution: the green row is a linear fit, over 2-15 m/s, to the shape of Penner's (2002)
- *   turf restitution e = 0.510 - 0.0375 v' + 0.000903 v'^2 (secondary source, not verified on
- *   page). Penner's v' is the normal speed in a frame tilted by his crater angle; this model has
- *   no crater, so the fit is applied to the plain normal speed — an uncalibrated simplification
- *   (doc §2). Other turf rows are judgement, ordered by firmness (firmness order => restitution
- *   order across playable rows; tested).
+ * - firmness: sets the crater (turf-deformation) tilt in @glm/ground-physics, craterScale =
+ *   (1 - firmness) / (1 - 0.5): the green (0.5) is Penner's reference "typical green", fairways
+ *   are firmer (a normal fairway's pitch mark taken as about half as steep), the cart path is
+ *   rigid (1). Judgement, not measured stiffness.
+ * - restitution: applied to Penner's tilted-frame normal speed v'. The green row is a line
+ *   through the shape of Penner's (2002) turf restitution e = 0.510 - 0.0375 v' + 0.000903 v'^2
+ *   (secondary source, not verified on page); its rms error over 2-20 m/s (0.0136) is about
+ *   0.001 above that of the least-squares line (0.0125; doc §2). Other turf rows are judgement, ordered by firmness (firmness order
+ *   => restitution order across playable rows; tested).
  * - slidingFriction: putting-surface lab values span 0.11-0.40 (Griffiths & McKenzie,
  *   secondary source, not verified on page); turf values are placed in/above that band.
- * - rollingResistance (deceleration / g): green from the Stimp relation at 10 ft; other
- *   surfaces as Stimp-equivalent guesses (see the doc table).
+ * - rollingResistance: the LOW-SPEED coefficient c0 of a(v) = c0 g (1 + beta v^2) (stimp.ts).
+ *   Green from the Stimp relation at 10 ft; other surfaces are Stimp-equivalent guesses (doc table).
  * - moistureSoftness: 0 for every playable surface, so catalog values are the dry reference.
  * Terminal surfaces (water, out-of-bounds, penalty-area) stop the ball on entry; their other
  * physical values are placeholders that the ground model never uses.
@@ -37,8 +40,8 @@ const GREEN_ROLLING_RESISTANCE = rollingResistanceFromStimp(DEFAULT_GREEN_STIMP_
 const CATALOG_ROWS: Record<SurfaceType, CatalogRow> = {
   // Teeing ground: fairway-height turf, slightly softer from traffic/divots.
   tee: {
-    firmness: 0.55,
-    restitutionBase: 0.42,
+    firmness: 0.7,
+    restitutionBase: 0.46,
     restitutionSpeedSlope: 0.022,
     restitutionMin: 0.11,
     slidingFriction: 0.4,
@@ -49,7 +52,7 @@ const CATALOG_ROWS: Record<SurfaceType, CatalogRow> = {
   },
   // Synthetic hitting mat over a pad: firmer and livelier than turf, thick pile slows rolling.
   "range-mat": {
-    firmness: 0.85,
+    firmness: 0.9,
     restitutionBase: 0.6,
     restitutionSpeedSlope: 0.012,
     restitutionMin: 0.3,
@@ -61,8 +64,8 @@ const CATALOG_ROWS: Record<SurfaceType, CatalogRow> = {
   },
   // Dry, closely mown, firm fairway: highest-bounce turf and longest turf roll after the green.
   "fairway-firm": {
-    firmness: 0.75,
-    restitutionBase: 0.5,
+    firmness: 0.85,
+    restitutionBase: 0.52,
     restitutionSpeedSlope: 0.02,
     restitutionMin: 0.15,
     slidingFriction: 0.4,
@@ -71,10 +74,10 @@ const CATALOG_ROWS: Record<SurfaceType, CatalogRow> = {
     stimpFt: null,
     terminal: false,
   },
-  // Typical fairway: restitution just below the green fit, Stimp-equivalent about 4.7 ft.
+  // Typical fairway: firmer than a green (pitch mark about half as steep), slightly livelier.
   "fairway-normal": {
-    firmness: 0.6,
-    restitutionBase: 0.42,
+    firmness: 0.75,
+    restitutionBase: 0.47,
     restitutionSpeedSlope: 0.022,
     restitutionMin: 0.12,
     slidingFriction: 0.4,
@@ -132,10 +135,10 @@ const CATALOG_ROWS: Record<SurfaceType, CatalogRow> = {
     terminal: false,
   },
   // Putting green: Penner-shaped restitution, lowest rolling resistance (Stimp 10 ft default).
-  // Firmness is descriptive and placed to match its restitution (between firm and normal
-  // fairway); whether real greens bounce livelier than fairways is not established here.
+  // Firmness 0.5 is the crater reference (craterScale 1: Penner's fit was for "a typical
+  // green"); receptive greens are taken to be softer than fairways — a judgement.
   green: {
-    firmness: 0.65,
+    firmness: 0.5,
     restitutionBase: 0.45,
     restitutionSpeedSlope: 0.022,
     restitutionMin: 0.12,

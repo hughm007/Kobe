@@ -61,10 +61,11 @@ export type GroundMotionInput = {
 /**
  * Bounce sequence followed by skid and roll (docs/terrain-model.md §6).
  *
- * At each contact the impact is resolved and recorded as a BounceEvent. If the outgoing
- * normal speed exceeds minBounceNormalSpeedMps, fewer than maxBounces have been resolved and
- * ground time remains, the injected hop flies the ball to its next contact; otherwise the
- * normal component is removed and simulateRoll takes over. Contacts on terminal surfaces end
+ * At each contact the impact is resolved (crater-tilted contact plane, §3) and recorded as a
+ * BounceEvent. The crater is local to the impact: what follows uses the TRUE surface normal.
+ * If the outgoing speed along it exceeds minBounceNormalSpeedMps, fewer than maxBounces have
+ * been resolved and ground time remains, the injected hop flies the ball to its next contact;
+ * otherwise the normal component is removed and simulateRoll takes over. Contacts on terminal surfaces end
  * the motion at once without a bounce. A hop that ends without contact ends the motion with
  * "max-time"; a hop reporting "numerical-failure" throws.
  */
@@ -145,6 +146,8 @@ export function simulateGroundMotion(input: GroundMotionInput): GroundMotionResu
       regime: impact.regime,
     });
 
+    // Along the TRUE normal; may be negative after a backward bounce out of a crater, in which
+    // case the ball rolls with that (into-ground) component removed.
     const outgoingNormalSpeed = dot(impact.velocityMps, n);
     const hops =
       outgoingNormalSpeed > settings.minBounceNormalSpeedMps &&

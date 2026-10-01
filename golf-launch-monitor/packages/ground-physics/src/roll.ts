@@ -7,6 +7,7 @@ import {
   type Vec3,
 } from "@glm/shared-types";
 import { add, addScaled, cross, dot, horizontalDistance, isFiniteVec, norm, normalize, scale } from "@glm/core-math";
+import { rollingDecelerationCoefficient } from "@glm/terrain-engine";
 import { ballConstants, type BallInertiaProfile } from "./ball";
 import { effectiveRollingResistance } from "./surface-response";
 
@@ -70,8 +71,9 @@ function tangential(v: Vec3, n: Vec3): Vec3 {
 }
 
 /**
- * Skid-and-roll on terrain with a fixed-step midpoint (RK2) integrator, which is exact for
- * the piecewise-constant accelerations of a ball on a plane (docs/terrain-model.md §4).
+ * Skid-and-roll on terrain with a fixed-step midpoint (RK2) integrator (docs/terrain-model.md §4):
+ * exact for the piecewise-constant sliding accelerations on a plane, second-order accurate for
+ * the speed-dependent rolling resistance (sub-mm stopping error at the 1 ms default).
  *
  * Contact: centre = ground point + r n. Gravity splits into g_n = g n_z (into the surface)
  * and the tangential pull g_t = (0, 0, -g) + g_n n.
@@ -79,11 +81,17 @@ function tangential(v: Vec3, n: Vec3): Vec3 {
  *   dv/dt = g_t - mu g_n u_hat,   d omega/dt = (mu g_n / (k r)) (n x u_hat)
  *   the slip then shrinks at mu g_n (1 + 1/k) on flat ground; the zero crossing is located
  *   within the step so that no-spin sliding ends exactly at v0 / (1 + k).
- * Rolling (omega = (n x v) / r):
- *   dv/dt = g_t / (1 + k) - c_rr g_n v_hat
- * Rest: speed < restSpeed AND |g_t| / (1 + k) <= c_rr g_n; the exact stopping point within a
- * step is located when the slope cannot overcome rolling resistance. Terminal surfaces stop
- * the ball on entry (checked at the contact point at every step).
+ * Rolling (omega = (n x v) / r), speed-dependent resistance with beta from @glm/terrain-engine:
+ *   dv/dt = g_t / (1 + k) - c(|v|) g_n v_hat,   c(v) = min(c0 (1 + beta v^2), max(c0, mu))
+ *   (rollingDecelerationCoefficient: a rolling ball never decelerates faster than a sliding one;
+ *   flat ground below the bound: stops after ln(1 + beta v0^2) / (2 c0 g beta), the Stimp
+ *   relation's closed form; flatRollingDistanceM gives the bounded form)
+ * Rolling resistance is not applied while sliding. In the contact-pressure picture it is a
+ * torque: it would not change the mu g_n deceleration of a sliding ball, but it would slow the
+ * spin-up and so delay roll onset (a shorter run; size estimated in docs/terrain-model.md §4).
+ * Rest: speed < restSpeed AND |g_t| / (1 + k) <= c0 g_n (the static, v -> 0 limit); the
+ * stopping point within a step is located when the slope cannot overcome rolling resistance.
+ * Terminal surfaces stop the ball on entry (checked at the contact point at every step).
  */
 export function simulateRoll(input: RollInput): RollResult {
   const { terrain, settings } = input;
@@ -233,7 +241,8 @@ export function simulateRoll(input: RollInput): RollResult {
       }
     }
 
-    // Rolling phase.
+    // Rolling phase. `resistance` is the static (v -> 0) limit c0 g_n; it grows as (1 + beta v^2)
+    // up to the sliding-friction bound max(c0, mu) g_n.
     const gTMag = norm(gT);
     const slopeDrive = gTMag / (1 + k);
     const resistance = cRR * gN;
@@ -248,7 +257,7 @@ export function simulateRoll(input: RollInput): RollResult {
     const rollAccel = (vel: Vec3): Vec3 => {
       const s = norm(vel);
       const drive = scale(gT, 1 / (1 + k));
-      if (s > DIRECTION_EPSILON_MPS) return addScaled(drive, vel, -resistance / s);
+      if (s > DIRECTION_EPSILON_MPS) return addScaled(drive, vel, (-rollingDecelerationCoefficient(cRR, s, mu) * gN) / s);
       // At (near) zero speed static resistance opposes the slope pull, up to its limit.
       if (!canOvercome || gTMag === 0) return { x: 0, y: 0, z: 0 };
       return scale(gT, (slopeDrive - resistance) / gTMag);
@@ -257,7 +266,8 @@ export function simulateRoll(input: RollInput): RollResult {
     if (!canOvercome && speed > DIRECTION_EPSILON_MPS) {
       const speedRate = dot(a0, v) / speed;
       if (speedRate < 0 && speed + speedRate * h <= 0) {
-        // Comes to rest inside this step: advance exactly to the stopping instant.
+        // Comes to rest inside this step: advance to the stopping instant (exact for constant
+        // deceleration; the speed term beta v^2 is < 1e-6 at the sub-mm/s speeds involved).
         const tau = speed / -speedRate;
         p = addScaled(addScaled(p, v, tau), a0, 0.5 * tau * tau);
         t += tau;

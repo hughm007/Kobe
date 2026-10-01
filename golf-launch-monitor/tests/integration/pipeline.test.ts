@@ -68,13 +68,18 @@ describe("synthetic shot pipeline", () => {
     expect(high!.result!.metrics.descentAngleRad.value as number).toBeGreaterThan(
       low!.result!.metrics.descentAngleRad.value as number,
     );
-    // Carry is a horizontal distance from launch to first contact; total adds bounce and roll.
-    for (const r of [straight, draw, fade, high, low]) {
+    // Bounce and roll are SIGNED along-track displacements (negative on spin-back), so the
+    // invariant is that together they equal the net ground travel. On these near-straight shots
+    // the landing heading is ~ the target line, so total - carry is that same displacement.
+    for (const r of [straight, high, low]) {
       const m = r!.result!.metrics;
-      expect(m.totalM.value as number).toBeGreaterThanOrEqual((m.carryM.value as number) - 1e-9);
-      expect(m.bounceDistanceM.value as number).toBeGreaterThanOrEqual(0);
-      expect(m.rollDistanceM.value as number).toBeGreaterThanOrEqual(0);
+      const ground = (m.bounceDistanceM.value as number) + (m.rollDistanceM.value as number);
+      expect(Math.abs(ground - ((m.totalM.value as number) - (m.carryM.value as number)))).toBeLessThan(0.05);
     }
+    // Drivers release forward on a normal fairway; high-spin irons stop near their pitch mark.
+    const groundTravel = (r: typeof straight) => r!.result!.metrics.totalM.value! - r!.result!.metrics.carryM.value!;
+    expect(groundTravel(straight)).toBeGreaterThan(groundTravel(high));
+    expect(groundTravel(low)).toBeGreaterThan(groundTravel(high));
   });
 
   it("zero spin: no lift, spin axis reported unavailable, and a much lower apex than a spinning shot", async () => {

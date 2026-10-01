@@ -1,7 +1,17 @@
 import { describe, expect, it } from "vitest";
 import { distance, vec3 } from "@glm/core-math";
 import type { TerrainQuery } from "@glm/shared-types";
-import { createFlatRangeTerrain, createPlaneTerrain, createRegionTerrain, getSurface } from "@glm/terrain-engine";
+import {
+  createFlatRangeTerrain,
+  createPlaneTerrain,
+  createRegionTerrain,
+  flatRollingDistanceM,
+  getSurface,
+  ROLLING_RESISTANCE_BETA_S2_PER_M2 as BETA,
+  rollingResistanceBoundSpeedMps,
+  STIMPMETER_RELEASE_SPEED_MPS,
+  withSurfaceOverrides,
+} from "@glm/terrain-engine";
 import { simulateRoll, type RollInput, type RollSettings } from "../src/index";
 import { G, K, R, TEST_BALL, UNIFORM_BALL } from "./helpers";
 
@@ -40,19 +50,69 @@ function incline(deg: number): TerrainQuery {
 }
 
 describe("simulateRoll on flat ground", () => {
-  it("stops a rolling ball at v^2 / (2 c g) within 1 %", () => {
+  it("stops a rolling ball at the closed-form distance within 0.1 % (speed-dependent resistance, bounded by mu)", () => {
+    let boundedCases = 0;
     for (const surface of ["green", "fairway-normal", "rough"] as const) {
-      const c = getSurface(surface).rollingResistance;
-      for (const v0 of [1, 2.5, 4]) {
+      const { rollingResistance: c, slidingFriction: mu } = getSurface(surface);
+      // Above vb the deceleration is mu g (a rolling ball never decelerates faster than a sliding one).
+      const vb = rollingResistanceBoundSpeedMps(c, mu);
+      for (const v0 of [1, 2.5, 4, 8, 12]) {
         const res = roll({ terrain: flat(surface), velocityMps: vec3(v0, 0, 0), angularVelocityRadPerSec: vec3(0, v0 / R, 0) });
-        const expected = (v0 * v0) / (2 * c * G);
+        // dv/dt = -c g (1 + beta v^2) below vb: distance ln(1 + beta v^2) / (2 c g beta), time
+        // atan(sqrt(beta) v) / (c g sqrt(beta)); above vb, dv/dt = -mu g.
+        const v = Math.min(v0, vb);
+        const expected = (v0 * v0 - v * v) / (2 * mu * G) + Math.log1p(BETA * v * v) / (2 * c * G * BETA);
+        const expectedTime = (v0 - v) / (mu * G) + Math.atan(Math.sqrt(BETA) * v) / (c * G * Math.sqrt(BETA));
+        if (v0 > vb) boundedCases++;
+        expect(flatRollingDistanceM(c, v0, G, mu)).toBeCloseTo(expected, 12);
         expect(res.termination).toBe("rest");
-        expect(Math.abs(res.restPositionM.x - expected) / expected).toBeLessThan(0.01);
-        expect(res.restTimeS).toBeCloseTo(v0 / (c * G), 1);
+        expect(Math.abs(res.restPositionM.x - expected) / expected).toBeLessThan(0.001);
+        expect(res.restTimeS).toBeCloseTo(expectedTime, 1);
+        // Shorter than a constant-resistance roll, increasingly so with speed.
+        expect(res.restPositionM.x).toBeLessThan((v0 * v0) / (2 * c * G));
+        // Never shorter than a ball decelerating at mu g throughout.
+        expect(res.restPositionM.x).toBeGreaterThan((v0 * v0) / (2 * mu * G));
         expect(res.skidDistanceM).toBe(0);
         expect(res.rollStartPositionM).toEqual(vec3(0, 0, 0));
         expect(res.finalSurface).toBe(surface);
       }
+    }
+    // green 12 m/s; normal fairway 8 and 12 m/s; rough 2.5-12 m/s.
+    expect(boundedCases).toBe(7);
+  });
+
+  it("never decelerates a rolling ball faster than mu g (fairway-normal at 12 m/s), and matches c0 (1 + beta v^2) g below the bound", () => {
+    const { rollingResistance: c, slidingFriction: mu } = getSurface("fairway-normal");
+    const res = roll({ terrain: flat("fairway-normal"), velocityMps: vec3(12, 0, 0), angularVelocityRadPerSec: vec3(0, 12 / R, 0) });
+    const decel = (i: number) => {
+      const a = res.samples[i]!;
+      const b = res.samples[i + 1]!;
+      return { v: (a.velocityMps.x + b.velocityMps.x) / 2, a: -(b.velocityMps.x - a.velocityMps.x) / (b.tS - a.tS) };
+    };
+    const fast = decel(0);
+    expect(fast.v).toBeGreaterThan(11);
+    expect(fast.a).toBeCloseTo(mu * G, 6);
+    // Unbounded, the deceleration at ~12 m/s would be c (1 + beta v^2) g ~ 11.3 m/s^2, 2.9x mu g.
+    expect(c * (1 + BETA * fast.v * fast.v) * G).toBeGreaterThan(2.5 * mu * G);
+    const slowIndex = res.samples.findIndex((s) => s.velocityMps.x < 3);
+    const slow = decel(slowIndex);
+    expect(slow.a).toBeCloseTo(c * (1 + BETA * slow.v * slow.v) * G, 2);
+    expect(slow.a).toBeLessThan(mu * G);
+  });
+
+  it("a simulated Stimpmeter roll reproduces the Stimp distance within 1 %", () => {
+    for (const stimpFt of [8, 10, 13]) {
+      const surface = stimpFt === 10 ? getSurface("green") : withSurfaceOverrides(getSurface("green"), { stimpFt });
+      expect(surface.stimpFt).toBe(stimpFt);
+      const v0 = STIMPMETER_RELEASE_SPEED_MPS;
+      const res = roll({
+        terrain: createFlatRangeTerrain({ ballRadiusM: R, surface }),
+        velocityMps: vec3(v0, 0, 0),
+        angularVelocityRadPerSec: vec3(0, v0 / R, 0),
+        gravityMps2: 9.80665,
+      });
+      expect(res.termination).toBe("rest");
+      expect(Math.abs(res.restPositionM.x / (stimpFt * 0.3048) - 1)).toBeLessThan(0.01);
     }
   });
 
@@ -180,8 +240,12 @@ describe("simulateRoll on inclines", () => {
     expect(res.termination).toBe("max-time");
     const last = res.samples[res.samples.length - 1]!;
     const speed = Math.hypot(last.velocityMps.x, last.velocityMps.y, last.velocityMps.z);
-    const a = G * Math.sin(th) / (1 + K) - c * G * Math.cos(th);
-    expect(Math.abs(speed - a * 2) / (a * 2)).toBeLessThan(0.005);
+    // dv/dt = A - B v^2 from rest: v(t) = sqrt(A/B) tanh(sqrt(A B) t).
+    const A = (G * Math.sin(th)) / (1 + K) - c * G * Math.cos(th);
+    const B = c * G * Math.cos(th) * BETA;
+    const expected = Math.sqrt(A / B) * Math.tanh(Math.sqrt(A * B) * 2);
+    expect(Math.abs(speed - expected) / expected).toBeLessThan(0.005);
+    expect(speed).toBeLessThan(A * 2); // below the constant-resistance speed
     expect(last.velocityMps.x).toBeGreaterThan(0); // downhill is +X
     expect(last.velocityMps.z).toBeLessThan(0);
     // Stays on the plane: centre at distance r along the normal.
@@ -203,12 +267,14 @@ describe("simulateRoll on inclines", () => {
     const still = roll({ terrain, velocityMps: vec3(0, 0, 0) });
     expect(still.termination).toBe("rest");
     expect(still.restTimeS).toBe(0);
-    // Rolling downhill at 1 m/s: decelerates at c g cos - g sin / (1 + k).
+    // Rolling downhill at 1 m/s: decelerates at D + C v^2 with D = c g cos - g sin / (1 + k) and
+    // C = c g cos beta, so it stops after ln(1 + C v0^2 / D) / (2 C).
     const v0 = 1;
     const vAlong = vec3(v0 * Math.cos(th), 0, -v0 * Math.sin(th));
     const res = roll({ terrain, velocityMps: vAlong, angularVelocityRadPerSec: vec3(0, v0 / R, 0) });
-    const decel = c * G * Math.cos(th) - (G * Math.sin(th)) / (1 + K);
-    const expected = (v0 * v0) / (2 * decel);
+    const D = c * G * Math.cos(th) - (G * Math.sin(th)) / (1 + K);
+    const C = c * G * Math.cos(th) * BETA;
+    const expected = Math.log1p((C * v0 * v0) / D) / (2 * C);
     expect(res.termination).toBe("rest");
     const travelled = distance(res.samples[0]!.positionM, res.restPositionM);
     expect(Math.abs(travelled - expected) / expected).toBeLessThan(0.01);

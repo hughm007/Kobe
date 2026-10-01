@@ -1,5 +1,5 @@
 /** Version of the bounce / skid / roll model (docs/terrain-model.md). Bump on any behaviour change. */
-export const GROUND_MODEL_VERSION = "glm-ground-0.1.0-provisional";
+export const GROUND_MODEL_VERSION = "glm-ground-0.2.0-provisional";
 
 export type GroundSettings = {
   /** Fixed integration step for the skid/roll phase, s. */

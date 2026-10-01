@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { dot, horizontalDistance, isFiniteVec, vec3 } from "@glm/core-math";
 import { GroundMotionResultSchema, type TerrainQuery } from "@glm/shared-types";
-import { createFlatRangeTerrain, createRegionTerrain } from "@glm/terrain-engine";
+import { createFlatRangeTerrain, createRegionTerrain, getSurface, withSurfaceOverrides } from "@glm/terrain-engine";
 import {
   DEFAULT_GROUND_SETTINGS,
   GROUND_MODEL_VERSION,
@@ -38,7 +38,7 @@ function run(overrides: Partial<GroundMotionInput> = {}, terrain: TerrainQuery =
 
 describe("ground model constants", () => {
   it("exposes the version and documented defaults", () => {
-    expect(GROUND_MODEL_VERSION).toBe("glm-ground-0.1.0-provisional");
+    expect(GROUND_MODEL_VERSION).toBe("glm-ground-0.2.0-provisional");
     expect(DEFAULT_GROUND_SETTINGS).toEqual({
       rollTimestepS: 0.001,
       restSpeedMps: 0.01,
@@ -249,10 +249,12 @@ describe("groundDistances", () => {
   });
 
   it("reports spin-back as negative distance, and bounce + roll equals the net ground displacement", () => {
-    // Steep wedge-like landing on the green with strong backspin: skids forward, then spins back.
+    // Steep wedge-like landing with strong backspin on a RIGID green (firmness 1, no crater):
+    // skids forward, then spins back.
+    const rigidGreen = createFlatRangeTerrain({ ballRadiusM: R, surface: withSurfaceOverrides(getSurface("green"), { firmness: 1 }) });
     const th = (60 * Math.PI) / 180;
-    const first = landing(green, vec3(12 * Math.cos(th), 0, -12 * Math.sin(th)), vec3(0, -900, 0));
-    const res = run({ firstContact: first });
+    const first = landing(rigidGreen, vec3(12 * Math.cos(th), 0, -12 * Math.sin(th)), vec3(0, -900, 0));
+    const res = run({ firstContact: first, terrain: rigidGreen, hop: gravityHop(rigidGreen, R) }, rigidGreen);
     expect(res.termination).toBe("rest");
     expect(res.rollStartPositionM!.x).toBeGreaterThan(0.5);
     expect(res.restPositionM.x).toBeLessThan(0);
@@ -262,5 +264,22 @@ describe("groundDistances", () => {
     expect(d.rollDistanceM).toBeCloseTo(res.restPositionM.x - res.rollStartPositionM!.x, 12);
     expect(d.bounceDistanceM + d.rollDistanceM).toBeCloseTo(res.restPositionM.x - first.positionM.x, 12);
     expect(d.bounceDistanceM + d.rollDistanceM).toBeLessThan(0);
+  });
+
+  it("with the crater: bounces forward then runs back on a firm green, checks at the pitch mark on the softer reference green", () => {
+    const th = (60 * Math.PI) / 180;
+    const velocity = vec3(12 * Math.cos(th), 0, -12 * Math.sin(th));
+    const firm = createFlatRangeTerrain({ ballRadiusM: R, surface: withSurfaceOverrides(getSurface("green"), { firmness: 0.85 }) });
+    const onFirm = run({ firstContact: landing(firm, velocity, vec3(0, -900, 0)), terrain: firm, hop: gravityHop(firm, R) }, firm);
+    expect(onFirm.bounces[0]!.outgoingVelocityMps.x).toBeGreaterThan(0.5);
+    expect(onFirm.restPositionM.x).toBeLessThan(-1);
+    const onGreen = run({ firstContact: landing(green, velocity, vec3(0, -900, 0)) });
+    expect(onGreen.bounces[0]!.outgoingVelocityMps.x).toBeLessThan(0);
+    for (const res of [onFirm, onGreen]) {
+      expect(res.termination).toBe("rest");
+      const d = groundDistances(vec3(0, 0, 0), res);
+      expect(d.rollDistanceM).toBeLessThan(0);
+      expect(d.bounceDistanceM + d.rollDistanceM).toBeCloseTo(res.restPositionM.x, 12);
+    }
   });
 });

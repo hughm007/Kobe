@@ -5,9 +5,16 @@ import {
   createPlaneTerrain,
   createRegionTerrain,
   DEFAULT_GREEN_STIMP_FT,
+  flatRollingDistanceM,
   getSurface,
+  PENNER_ROLLING_BETA_S2_PER_FT2,
   pointInPolygon,
+  ROLLING_RESISTANCE_BETA_S2_PER_M2,
+  rollingDecelerationCoefficient,
+  rollingResistanceBoundSpeedMps,
   rollingResistanceFromStimp,
+  rollingResistanceSpeedFactor,
+  STANDARD_GRAVITY_MPS2,
   stimpFromRollingResistance,
   STIMPMETER_RELEASE_SPEED_MPS,
   SURFACE_CATALOG,
@@ -20,7 +27,7 @@ const NON_TERMINAL = SURFACE_TYPES.filter((t) => !SURFACE_CATALOG[t].terminal);
 
 describe("surface catalog", () => {
   it("has every SurfaceType, schema-valid, provisional, versioned and deep-frozen", () => {
-    expect(TERRAIN_MODEL_VERSION).toBe("glm-terrain-0.1.0");
+    expect(TERRAIN_MODEL_VERSION).toBe("glm-terrain-0.2.0");
     expect(Object.keys(SURFACE_CATALOG).sort()).toEqual([...SURFACE_TYPES].sort());
     for (const type of SURFACE_TYPES) {
       const s = SURFACE_CATALOG[type];
@@ -72,10 +79,16 @@ describe("surface catalog", () => {
         }
       }
     }
-    // The green sits between firm and normal fairway on both scales.
-    expect(SURFACE_CATALOG.green.firmness).toBe(0.65);
-    expect(SURFACE_CATALOG.green.firmness).toBeGreaterThan(SURFACE_CATALOG["fairway-normal"].firmness);
-    expect(SURFACE_CATALOG.green.firmness).toBeLessThan(SURFACE_CATALOG["fairway-firm"].firmness);
+    // Firmness sets the crater size (ground-physics craterScale): the green is the reference
+    // (0.5), every fairway and the tee are firmer, the mat firmer still, the cart path rigid.
+    expect(SURFACE_CATALOG.green.firmness).toBe(0.5);
+    const f = (t: SurfaceType) => SURFACE_CATALOG[t].firmness;
+    expect(f("fairway-normal")).toBeGreaterThan(f("green"));
+    expect(f("tee")).toBeGreaterThan(f("green"));
+    expect(f("fairway-soft")).toBeLessThan(f("green"));
+    expect([f("fairway-soft"), f("fairway-normal"), f("fairway-firm"), f("range-mat"), f("cart-path")]).toEqual([0.4, 0.75, 0.85, 0.9, 1]);
+    // The green keeps the liveliest restitution among surfaces at or below its firmness.
+    for (const t of NON_TERMINAL) if (f(t) <= f("green")) expect(SURFACE_CATALOG[t].restitutionBase).toBeLessThanOrEqual(SURFACE_CATALOG.green.restitutionBase);
   });
 
   it("derives the green rolling resistance from the default Stimp", () => {
@@ -83,7 +96,7 @@ describe("surface catalog", () => {
     expect(DEFAULT_GREEN_STIMP_FT).toBe(10);
     expect(green.stimpFt).toBe(10);
     expect(green.rollingResistance).toBe(rollingResistanceFromStimp(10));
-    expect(green.rollingResistance).toBeCloseTo(0.05602, 5);
+    expect(green.rollingResistance).toBeCloseTo(0.05033, 5);
     for (const t of SURFACE_TYPES) if (t !== "green") expect(SURFACE_CATALOG[t].stimpFt).toBeNull();
   });
 
@@ -179,24 +192,131 @@ describe("withSurfaceOverrides", () => {
   });
 });
 
-describe("Stimpmeter conversion", () => {
-  it("gives c = v0^2 / (2 d g) with v0 = 1.83 m/s", () => {
-    expect(STIMPMETER_RELEASE_SPEED_MPS).toBe(1.83);
-    // 1.83^2 / (2 * 10 * 0.3048 * 9.80665) = 3.3489 / 59.7813...
-    expect(rollingResistanceFromStimp(10)).toBeCloseTo(3.3489 / (2 * 3.048 * 9.80665), 14);
-    expect(rollingResistanceFromStimp(10)).toBeCloseTo(0.056019, 6);
-    // Faster green (longer Stimp) => smaller coefficient, inversely proportional.
-    expect(rollingResistanceFromStimp(12) / rollingResistanceFromStimp(6)).toBeCloseTo(0.5, 14);
-    // Custom release speed scales with v0^2.
-    expect(rollingResistanceFromStimp(10, 2 * 1.83)).toBeCloseTo(4 * rollingResistanceFromStimp(10), 14);
+describe("speed-dependent rolling resistance (beta)", () => {
+  it("converts Penner's reported beta from s^2/ft^2 to SI", () => {
+    expect(PENNER_ROLLING_BETA_S2_PER_FT2).toBe(0.0065);
+    expect(ROLLING_RESISTANCE_BETA_S2_PER_M2).toBeCloseTo(0.0065 / (0.3048 * 0.3048), 15);
+    expect(ROLLING_RESISTANCE_BETA_S2_PER_M2).toBeCloseTo(0.069965, 6);
+    expect(rollingResistanceSpeedFactor(0)).toBe(1);
+    expect(rollingResistanceSpeedFactor(-2)).toBeCloseTo(1 + 4 * ROLLING_RESISTANCE_BETA_S2_PER_M2, 15);
+    expect(rollingResistanceSpeedFactor(10)).toBeCloseTo(7.9965, 3);
+    expect(() => rollingResistanceSpeedFactor(Number.NaN)).toThrow(RangeError);
   });
 
-  it("round-trips", () => {
+  it("pins the unit: the reported relation reproduces the Stimp definition only with v in ft/s", () => {
+    // rho = (0.7028 / s)(1 + 0.0065 v^2), deceleration (5/7) rho g; roll distance from the 6 ft/s
+    // release, integral of v dv / a(v) = s ln(1 + beta v0^2) / (2 beta (5/7) 0.7028 g).
+    const rollFt = (stimpFt: number, v0: number, g: number) =>
+      (stimpFt * Math.log1p(PENNER_ROLLING_BETA_S2_PER_FT2 * v0 * v0)) / (2 * PENNER_ROLLING_BETA_S2_PER_FT2 * (5 / 7) * 0.7028 * g);
+    const gFt = STANDARD_GRAVITY_MPS2 / 0.3048;
+    // ft/s units: distance = Stimp reading within 0.5 %.
+    expect(Math.abs(rollFt(10, 6, gFt) / 10 - 1)).toBeLessThan(0.005);
+    // Same numbers read as m/s (v0 = 1.83 m/s, g in m/s^2, distance in m) miss the reading by > 9 %.
+    const rollM = rollFt(10, STIMPMETER_RELEASE_SPEED_MPS, STANDARD_GRAVITY_MPS2);
+    expect(Math.abs(rollM / (10 * 0.3048) - 1)).toBeGreaterThan(0.09);
+    // Distance-averaged rho (mean v^2 over the roll distance = v0^2 / 2) at 12 ft and 4 ft gives
+    // Penner's quoted range 0.065-0.196.
+    expect((0.7028 / 12) * (1 + (PENNER_ROLLING_BETA_S2_PER_FT2 * 36) / 2)).toBeCloseTo(0.065, 3);
+    expect((0.7028 / 4) * (1 + (PENNER_ROLLING_BETA_S2_PER_FT2 * 36) / 2)).toBeCloseTo(0.196, 3);
+  });
+
+  it("gives the closed-form flat stopping distance ln(1 + beta v^2) / (2 c0 g beta)", () => {
+    const beta = ROLLING_RESISTANCE_BETA_S2_PER_M2;
+    expect(flatRollingDistanceM(0.1, 3, 9.81)).toBeCloseTo(Math.log(1 + beta * 9) / (2 * 0.1 * 9.81 * beta), 12);
+    // Speed dependence shortens fast rolls: at 8 m/s, 38 % of the constant-resistance distance.
+    expect(flatRollingDistanceM(0.12, 8) / (64 / (2 * 0.12 * STANDARD_GRAVITY_MPS2))).toBeCloseTo(0.3798, 3);
+    // ...and barely changes putting-speed rolls (-> v^2 / (2 c g) as beta v^2 -> 0).
+    expect(flatRollingDistanceM(0.05, 0.1) / (0.01 / (2 * 0.05 * STANDARD_GRAVITY_MPS2))).toBeCloseTo(1, 3);
+    expect(flatRollingDistanceM(0.05, 0)).toBe(0);
+    expect(flatRollingDistanceM(0, 2)).toBe(Number.POSITIVE_INFINITY);
+    expect(() => flatRollingDistanceM(-0.1, 2)).toThrow(RangeError);
+    expect(() => flatRollingDistanceM(0.1, 2, 0)).toThrow(RangeError);
+  });
+});
+
+describe("rolling deceleration bounded by sliding friction", () => {
+  const beta = ROLLING_RESISTANCE_BETA_S2_PER_M2;
+
+  it("is min(c0 (1 + beta v^2), max(c0, mu)): a rolling ball never decelerates faster than a sliding one", () => {
+    // Below the bound: the plain speed-dependent coefficient.
+    expect(rollingDecelerationCoefficient(0.12, 4, 0.4)).toBeCloseTo(0.12 * (1 + beta * 16), 15);
+    // Above it: exactly mu (normal fairway at the straight driver's ~9.8 m/s roll-phase start, where
+    // the unbounded factor would be ~7.7).
+    expect(rollingDecelerationCoefficient(0.12, 9.77, 0.4)).toBe(0.4);
+    expect(0.12 * rollingResistanceSpeedFactor(9.77)).toBeCloseTo(0.921, 3);
+    // c0 >= mu (bunker guess): stays c0 at every speed, never reduced below the low-speed value.
+    expect(rollingDecelerationCoefficient(0.8, 0, 0.6)).toBe(0.8);
+    expect(rollingDecelerationCoefficient(0.8, 20, 0.6)).toBe(0.8);
+    // +Infinity: the unbounded relation.
+    expect(rollingDecelerationCoefficient(0.12, 9.77, Number.POSITIVE_INFINITY)).toBeCloseTo(0.12 * (1 + beta * 9.77 ** 2), 14);
+    expect(() => rollingDecelerationCoefficient(-0.1, 1, 0.4)).toThrow(RangeError);
+    expect(() => rollingDecelerationCoefficient(0.1, Number.NaN, 0.4)).toThrow(RangeError);
+    expect(() => rollingDecelerationCoefficient(0.1, 1, Number.NaN)).toThrow(RangeError);
+    expect(() => rollingDecelerationCoefficient(0.1, 1, -0.4)).toThrow(RangeError);
+  });
+
+  it("binds above sqrt((mu / c0 - 1) / beta): 5.77 m/s on the normal fairway, 8.42 m/s on the green", () => {
+    const normal = getSurface("fairway-normal");
+    const vNormal = rollingResistanceBoundSpeedMps(normal.rollingResistance, normal.slidingFriction);
+    expect(vNormal).toBeCloseTo(Math.sqrt((0.4 / 0.12 - 1) / beta), 12);
+    expect(vNormal).toBeCloseTo(5.775, 3);
+    expect(rollingDecelerationCoefficient(0.12, vNormal, 0.4)).toBeCloseTo(0.4, 12);
+    const green = getSurface("green");
+    expect(rollingResistanceBoundSpeedMps(green.rollingResistance, green.slidingFriction)).toBeCloseTo(8.420, 3);
+    // Far above the Stimp release speed, so the Stimp relation is unaffected.
+    expect(rollingResistanceBoundSpeedMps(green.rollingResistance, green.slidingFriction)).toBeGreaterThan(4 * STIMPMETER_RELEASE_SPEED_MPS);
+    expect(rollingResistanceBoundSpeedMps(0.8, 0.6)).toBe(0);
+    expect(rollingResistanceBoundSpeedMps(0, 0.4)).toBe(Number.POSITIVE_INFINITY);
+    expect(rollingResistanceBoundSpeedMps(0.12, Number.POSITIVE_INFINITY)).toBe(Number.POSITIVE_INFINITY);
+  });
+
+  it("gives the bounded flat stopping distance in closed form, continuous at the bound speed", () => {
+    const g = STANDARD_GRAVITY_MPS2;
+    const [c0, mu] = [0.12, 0.4];
+    const vb = rollingResistanceBoundSpeedMps(c0, mu);
+    for (const v0 of [12, 16.5]) {
+      const expected = (v0 * v0 - vb * vb) / (2 * mu * g) + Math.log1p(beta * vb * vb) / (2 * c0 * g * beta);
+      expect(flatRollingDistanceM(c0, v0, g, mu)).toBeCloseTo(expected, 12);
+      // Longer than the unbounded roll (which would decelerate the fast ball harder than sliding).
+      expect(flatRollingDistanceM(c0, v0, g, mu)).toBeGreaterThan(flatRollingDistanceM(c0, v0, g));
+    }
+    // 9.77 m/s: 15.23 m bounded vs 12.38 m unbounded.
+    expect(flatRollingDistanceM(c0, 9.77, g, mu)).toBeCloseTo(15.227, 3);
+    expect(flatRollingDistanceM(c0, 9.77, g)).toBeCloseTo(12.379, 3);
+    // Below the bound speed the mu argument changes nothing; continuous across it.
+    expect(flatRollingDistanceM(c0, 4, g, mu)).toBe(flatRollingDistanceM(c0, 4, g));
+    expect(flatRollingDistanceM(c0, vb * (1 + 1e-9), g, mu)).toBeCloseTo(flatRollingDistanceM(c0, vb, g), 6);
+    // c0 >= mu: constant deceleration c0 g.
+    expect(flatRollingDistanceM(0.8, 3, g, 0.6)).toBeCloseTo(9 / (2 * 0.8 * g), 12);
+  });
+});
+
+describe("Stimpmeter conversion", () => {
+  it("gives c0 = ln(1 + beta v0^2) / (2 g beta d) with v0 = 1.83 m/s", () => {
+    expect(STIMPMETER_RELEASE_SPEED_MPS).toBe(1.83);
+    const beta = ROLLING_RESISTANCE_BETA_S2_PER_M2;
+    expect(rollingResistanceFromStimp(10)).toBeCloseTo(Math.log(1 + beta * 1.83 * 1.83) / (2 * 9.80665 * beta * 3.048), 14);
+    expect(rollingResistanceFromStimp(10)).toBeCloseTo(0.050330, 6);
+    // 10 % below the constant-deceleration value v0^2 / (2 d g) = 0.05602: the ball decelerates
+    // harder while fast, so the low-speed coefficient that rolls the same distance is smaller.
+    expect(rollingResistanceFromStimp(10) / (1.83 ** 2 / (2 * 3.048 * 9.80665))).toBeCloseTo(0.8984, 4);
+    // Faster green (longer Stimp) => smaller coefficient, still inversely proportional to d.
+    expect(rollingResistanceFromStimp(12) / rollingResistanceFromStimp(6)).toBeCloseTo(0.5, 14);
+    // A faster release no longer scales as v0^2: ln(1 + 4 beta v0^2) / ln(1 + beta v0^2) < 4.
+    const ratio = rollingResistanceFromStimp(10, 2 * 1.83) / rollingResistanceFromStimp(10);
+    expect(ratio).toBeCloseTo(Math.log1p(4 * beta * 1.83 ** 2) / Math.log1p(beta * 1.83 ** 2), 12);
+    expect(ratio).toBeLessThan(4);
+    expect(ratio).toBeCloseTo(3.141, 3);
+  });
+
+  it("round-trips, and the Stimp distance is the closed-form rolling distance", () => {
     for (const stimp of [4, 7.5, 10, 12.3, 14]) {
       expect(stimpFromRollingResistance(rollingResistanceFromStimp(stimp))).toBeCloseTo(stimp, 12);
       expect(stimpFromRollingResistance(rollingResistanceFromStimp(stimp, 1.94), 1.94)).toBeCloseTo(stimp, 12);
+      const c0 = rollingResistanceFromStimp(stimp);
+      expect(flatRollingDistanceM(c0, STIMPMETER_RELEASE_SPEED_MPS)).toBeCloseTo(stimp * 0.3048, 12);
     }
-    expect(stimpFromRollingResistance(0.056019153963940034)).toBeCloseTo(10, 9);
+    expect(stimpFromRollingResistance(0.05032958123910552)).toBeCloseTo(10, 9);
   });
 
   it("rejects non-positive input", () => {

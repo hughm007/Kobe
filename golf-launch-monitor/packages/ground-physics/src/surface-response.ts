@@ -19,9 +19,9 @@ function clamp(value: number, lo: number, hi: number): number {
  *   e_dry = clamp(restitutionBase - restitutionSpeedSlope * v_n, restitutionMin, restitutionBase)
  *   e     = e_dry * (1 - MOISTURE_RESTITUTION_REDUCTION * moistureSoftness)
  *
- * The decrease with impact speed follows the shape of Penner's (2002) turf fit, but v_n here is
- * the plain normal speed: Penner evaluates his fit at the normal speed in a frame tilted by his
- * crater angle, which this model does not have (docs/terrain-model.md §2) — uncalibrated.
+ * resolveImpact passes the normal speed into the crater-TILTED contact plane (Penner's v'),
+ * the argument of Penner's (2002) turf fit whose shape the green row follows
+ * (docs/terrain-model.md §2, §3).
  */
 export function effectiveRestitution(surface: SurfaceProperties, normalImpactSpeedMps: number): number {
   if (!Number.isFinite(normalImpactSpeedMps)) {
@@ -35,7 +35,11 @@ export function effectiveRestitution(surface: SurfaceProperties, normalImpactSpe
   return clamp(eDry * (1 - MOISTURE_RESTITUTION_REDUCTION * moisture), 0, 1);
 }
 
-/** Rolling-resistance coefficient (deceleration / g on flat ground) including moisture. */
+/**
+ * Low-speed rolling-resistance coefficient c0 (deceleration / g on flat ground as v -> 0)
+ * including moisture. The roll integrator multiplies it by (1 + beta v^2), beta from
+ * @glm/terrain-engine (ROLLING_RESISTANCE_BETA_S2_PER_M2).
+ */
 export function effectiveRollingResistance(surface: SurfaceProperties): number {
   const moisture = clamp(surface.moistureSoftness, 0, 1);
   return Math.max(0, surface.rollingResistance) * (1 + MOISTURE_ROLLING_RESISTANCE_GAIN * moisture);
