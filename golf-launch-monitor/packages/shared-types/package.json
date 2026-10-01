@@ -1,0 +1,13 @@
+{
+  "name": "@glm/shared-types",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Immutable data contracts and JSON schemas shared by every golf-launch-monitor package.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "zod": "^4.6.5"
+  }
+}

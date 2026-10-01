@@ -1,0 +1,14 @@
+{
+  "name": "@glm/ballistics",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic ball-flight (air) physics: environment, aerodynamic models, ball profiles, RK4 integration.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@glm/shared-types": "0.1.0",
+    "@glm/core-math": "0.1.0"
+  }
+}

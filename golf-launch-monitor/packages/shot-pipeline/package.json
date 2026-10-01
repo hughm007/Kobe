@@ -1,0 +1,19 @@
+{
+  "name": "@glm/shot-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "End-to-end shot pipeline: observation stream -> shot segmentation -> launch state -> simulation -> shot record.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@glm/shared-types": "0.1.0",
+    "@glm/core-math": "0.1.0",
+    "@glm/ballistics": "0.1.0",
+    "@glm/launch-state": "0.1.0",
+    "@glm/shot-simulator": "0.1.0",
+    "@glm/sensor-adapters": "0.1.0",
+    "@glm/terrain-engine": "0.1.0"
+  }
+}

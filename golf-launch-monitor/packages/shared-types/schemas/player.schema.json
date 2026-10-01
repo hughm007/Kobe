@@ -1,0 +1,35 @@
+{
+  "$id": "https://golf-launch-monitor.local/schemas/glm-schema-0.1.0/player.schema.json",
+  "title": "player",
+  "description": "Generated from @glm/shared-types (glm-schema-0.1.0). Cross-field invariants (e.g. a null measurement value requires source 'unavailable') are enforced by the runtime zod schemas and are not all expressible in JSON Schema.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "handedness": {
+      "type": "string",
+      "enum": [
+        "right",
+        "left"
+      ]
+    },
+    "createdUtc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+    }
+  },
+  "required": [
+    "id",
+    "displayName",
+    "handedness",
+    "createdUtc"
+  ],
+  "additionalProperties": false
+}

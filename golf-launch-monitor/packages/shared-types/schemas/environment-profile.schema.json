@@ -1,0 +1,139 @@
+{
+  "$id": "https://golf-launch-monitor.local/schemas/glm-schema-0.1.0/environment-profile.schema.json",
+  "title": "environment-profile",
+  "description": "Generated from @glm/shared-types (glm-schema-0.1.0). Cross-field invariants (e.g. a null measurement value requires source 'unavailable') are enforced by the runtime zod schemas and are not all expressible in JSON Schema.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "temperatureC": {
+      "type": "number",
+      "minimum": -60,
+      "maximum": 70
+    },
+    "pressurePa": {
+      "type": "number",
+      "minimum": 30000,
+      "maximum": 115000
+    },
+    "relativeHumidity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "altitudeM": {
+      "type": "number",
+      "minimum": -500,
+      "maximum": 9000
+    },
+    "airDensityKgM3": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "airDynamicViscosityPaS": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "windMps": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "additionalProperties": false
+    },
+    "gravityMps2": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "indoorMode": {
+      "type": "boolean"
+    },
+    "fieldSources": {
+      "type": "object",
+      "properties": {
+        "temperatureC": {
+          "type": "string",
+          "enum": [
+            "sensor",
+            "user",
+            "default",
+            "derived"
+          ]
+        },
+        "pressurePa": {
+          "type": "string",
+          "enum": [
+            "sensor",
+            "user",
+            "default",
+            "derived"
+          ]
+        },
+        "relativeHumidity": {
+          "type": "string",
+          "enum": [
+            "sensor",
+            "user",
+            "default",
+            "derived"
+          ]
+        },
+        "altitudeM": {
+          "type": "string",
+          "enum": [
+            "sensor",
+            "user",
+            "default",
+            "derived"
+          ]
+        },
+        "windMps": {
+          "type": "string",
+          "enum": [
+            "sensor",
+            "user",
+            "default",
+            "derived"
+          ]
+        }
+      },
+      "required": [
+        "temperatureC",
+        "pressurePa",
+        "relativeHumidity",
+        "altitudeM",
+        "windMps"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "version",
+    "temperatureC",
+    "pressurePa",
+    "relativeHumidity",
+    "altitudeM",
+    "airDensityKgM3",
+    "airDynamicViscosityPaS",
+    "windMps",
+    "gravityMps2",
+    "indoorMode",
+    "fieldSources"
+  ],
+  "additionalProperties": false
+}

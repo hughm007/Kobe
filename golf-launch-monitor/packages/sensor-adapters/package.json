@@ -1,0 +1,15 @@
+{
+  "name": "@glm/sensor-adapters",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Sensor adapter implementations: synthetic, replay, manual (dev), and hardware stubs; replay file format IO.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./node": "./src/node.ts"
+  },
+  "dependencies": {
+    "@glm/shared-types": "0.1.0",
+    "@glm/core-math": "0.1.0"
+  }
+}

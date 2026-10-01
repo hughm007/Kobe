@@ -1,0 +1,14 @@
+{
+  "name": "@glm/presentation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Turns measurements and calculated values into display values without ever losing provenance; metric definitions for tooltips.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@glm/shared-types": "0.1.0",
+    "@glm/units": "0.1.0"
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+playwright-report/
+test-results/
+.vite/
+
+# Raw captures and personal shot data never belong in git by default.
+# Keep only the README that documents the folder.
+datasets/raw-shots/*
+!datasets/raw-shots/README.md
+datasets/calibration/*
+!datasets/calibration/README.md

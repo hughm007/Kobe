@@ -1,0 +1,14 @@
+{
+  "name": "@glm/ground-physics",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Bounce, skid, and roll dynamics on terrain.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@glm/shared-types": "0.1.0",
+    "@glm/core-math": "0.1.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@glm/persistence",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first storage of sessions, players, and shot records; CSV/JSON export.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./node": "./src/node.ts"
+  },
+  "dependencies": {
+    "@glm/shared-types": "0.1.0",
+    "@glm/units": "0.1.0",
+    "@glm/core-math": "0.1.0"
+  }
+}

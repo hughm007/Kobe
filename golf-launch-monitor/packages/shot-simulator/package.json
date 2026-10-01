@@ -1,0 +1,17 @@
+{
+  "name": "@glm/shot-simulator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Combines air flight, ground motion, metrics with provenance, and Monte Carlo uncertainty into a ShotResult.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@glm/shared-types": "0.1.0",
+    "@glm/core-math": "0.1.0",
+    "@glm/ballistics": "0.1.0",
+    "@glm/ground-physics": "0.1.0",
+    "@glm/terrain-engine": "0.1.0"
+  }
+}
