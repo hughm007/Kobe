@@ -14,6 +14,8 @@
     "@glm/launch-state": "0.1.0",
     "@glm/shot-simulator": "0.1.0",
     "@glm/sensor-adapters": "0.1.0",
-    "@glm/terrain-engine": "0.1.0"
+    "@glm/terrain-engine": "0.1.0",
+    "@glm/ground-physics": "0.1.0",
+    "@glm/units": "0.1.0"
   }
 }

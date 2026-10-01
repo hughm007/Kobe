@@ -1,0 +1,39 @@
+# CI for the self-contained golf-launch-monitor workspace. Path-filtered so it never runs
+# for (or interferes with) the rest of this repository.
+name: golf-launch-monitor
+
+on:
+  push:
+    paths:
+      - "golf-launch-monitor/**"
+      - ".github/workflows/golf-launch-monitor.yml"
+  pull_request:
+    paths:
+      - "golf-launch-monitor/**"
+      - ".github/workflows/golf-launch-monitor.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: golf-launch-monitor
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: golf-launch-monitor/package-lock.json
+      - run: npm ci
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Unit, integration, replay and golden tests
+        run: npm test
+      - name: JSON schemas are up to date
+        run: npm run schemas:generate && git diff --exit-code -- packages/shared-types/schemas
+      - name: Build desktop UI
+        run: npm run build --workspace @glm/desktop-ui --if-present

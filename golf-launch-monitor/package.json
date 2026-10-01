@@ -16,7 +16,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "schemas:generate": "tsx scripts/generate-schemas.ts",
-    "check": "npm run typecheck && npm run test"
+    "check": "npm run typecheck && npm run test",
+    "datasets:generate": "tsx scripts/generate-datasets.ts",
+    "replay": "tsx scripts/replay.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.3",
