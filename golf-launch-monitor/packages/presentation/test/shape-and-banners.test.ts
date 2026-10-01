@@ -12,6 +12,16 @@ import {
 import { makeLaunch } from "./fixtures";
 
 describe("shotShapeLabel (coordinate-system.md §6)", () => {
+  it("regression: topspin-dominant tilts (|tilt| > 90°, topped shots) are 'topspin', never a noise-chosen hook/slice", () => {
+    for (const deg of [180, -180, 179, -179, 178.45, -178.19, 135, -135, 91, -91]) {
+      expect(shotShapeLabel(degToRad(deg), "right"), `${deg}`).toBe("topspin");
+      expect(shotShapeLabel(degToRad(deg), "left"), `${deg}`).toBe("topspin");
+    }
+    // Pure sidespin (90°) is still a severe curve.
+    expect(shotShapeLabel(degToRad(90), "right")).toBe("slice");
+    expect(shotShapeLabel(degToRad(-90), "right")).toBe("hook");
+  });
+
   it("exports the thresholds", () => {
     expect(SHOT_SHAPE_STRAIGHT_MAX_DEG).toBe(2);
     expect(SHOT_SHAPE_SEVERE_MIN_DEG).toBe(12);

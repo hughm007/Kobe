@@ -5,7 +5,7 @@ import { combineSources, ESTIMATOR_VERSION, isAvailable, makeMeasurement, unavai
 
 describe("ESTIMATOR_VERSION", () => {
   it("is the documented estimator id", () => {
-    expect(ESTIMATOR_VERSION).toBe("glm-launch-fit-0.1.0");
+    expect(ESTIMATOR_VERSION).toBe("glm-launch-fit-0.2.0");
   });
 });
 

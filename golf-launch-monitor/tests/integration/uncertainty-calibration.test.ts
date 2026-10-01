@@ -12,7 +12,7 @@ import { createFlatRangeTerrain } from "@glm/terrain-engine";
 import { DEFAULT_SIMULATION_SETTINGS } from "@glm/ballistics";
 import { radToDeg } from "@glm/units";
 import { describe, expect, it } from "vitest";
-import { BALL, ENV, runSynthetic } from "./helpers";
+import { BALL, ENV, noise, runSynthetic } from "./helpers";
 
 describe("reported uncertainty is calibrated (synthetic)", () => {
   it("1-sigma ball speed and launch angle intervals cover the truth ~68 % of the time", async () => {
@@ -35,6 +35,37 @@ describe("reported uncertainty is calibrated (synthetic)", () => {
     expect(vlaHits / records.length).toBeGreaterThan(0.52);
     expect(vlaHits / records.length).toBeLessThan(0.84);
   });
+
+  it("regression (spec §7): timestamp jitter is propagated, so coverage stays ~68 % at 50 us jitter", async () => {
+    const fixture = getFixture("straight-driver");
+    const truth = fixtureLaunchVectors(fixture);
+    const trueSpeed = ballSpeedMps(truth.velocityMps);
+    const trueVla = radToDeg(verticalLaunchAngleRad(truth.velocityMps));
+    const jitterS = 50e-6;
+    const shots = Array.from({ length: 80 }, (_, i) => ({ fixtureId: fixture.id, seed: 5000 + i, noise: noise({ timestampJitterS: jitterS }) }));
+    const coverage = (records: Awaited<ReturnType<typeof runSynthetic>>) => {
+      let speed = 0;
+      let vla = 0;
+      for (const r of records) {
+        const s = r.launch.ballSpeedMps;
+        const a = r.launch.verticalLaunchAngleDeg;
+        if (Math.abs((s.value as number) - trueSpeed) <= (s.uncertainty?.sigma as number)) speed++;
+        if (Math.abs((a.value as number) - trueVla) <= (a.uncertainty?.sigma as number)) vla++;
+      }
+      return { speed: speed / records.length, vla: vla / records.length };
+    };
+    // Timestamps treated as exact: the along-track (speed) sigma is understated (~40 % coverage).
+    const exact = coverage(await runSynthetic(shots));
+    expect(exact.speed).toBeLessThan(0.52);
+    // Propagated (errors-in-variables): both back inside the Binomial(80, 0.68) 3-sd band.
+    const records = await runSynthetic(shots, { timestampSigmaS: jitterS });
+    expect(records[0]!.launch.velocityMps.qualityFlags).toContain("timestamp-uncertainty-propagated");
+    const propagated = coverage(records);
+    expect(propagated.speed).toBeGreaterThan(0.52);
+    expect(propagated.speed).toBeLessThan(0.84);
+    expect(propagated.vla).toBeGreaterThan(0.52);
+    expect(propagated.vla).toBeLessThan(0.84);
+  }, 120_000);
 
   it("the Monte Carlo 90 % carry interval covers the true carry most of the time", async () => {
     const fixture = getFixture("standard-7-iron");

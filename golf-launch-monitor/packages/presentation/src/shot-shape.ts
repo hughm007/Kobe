@@ -7,7 +7,7 @@
 import type { Handedness } from "@glm/shared-types";
 import { degToRad } from "@glm/units";
 
-export type ShotShape = "straight" | "draw" | "fade" | "hook" | "slice" | "unknown";
+export type ShotShape = "straight" | "draw" | "fade" | "hook" | "slice" | "topspin" | "unknown";
 
 /** |tilt| <= this is "straight". */
 export const SHOT_SHAPE_STRAIGHT_MAX_DEG = 2;
@@ -15,10 +15,17 @@ export const SHOT_SHAPE_STRAIGHT_MAX_DEG = 2;
 export const SHOT_SHAPE_SEVERE_MIN_DEG = 12;
 export const SHOT_SHAPE_STRAIGHT_MAX_RAD = degToRad(SHOT_SHAPE_STRAIGHT_MAX_DEG);
 export const SHOT_SHAPE_SEVERE_MIN_RAD = degToRad(SHOT_SHAPE_SEVERE_MIN_DEG);
+/**
+ * |tilt| > 90° means the spin's perpendicular component is mostly TOPspin (cos(tilt) < 0; a
+ * topped ball). Its tilt says little about curve: pure topspin sits at ±180°, where the sign is
+ * decided by noise, and the sideways part is |sin(tilt)| of the spin, near zero there.
+ */
+export const SHOT_SHAPE_TOPSPIN_MIN_DEG = 90;
 
 /**
  * Classify by spin-axis tilt alone (radians, positive = curves right). Start direction is not
- * considered, so a push-fade and a pull-fade are both "fade". null -> "unknown"; non-finite throws.
+ * considered, so a push-fade and a pull-fade are both "fade". |tilt| > 90° (topspin-dominant)
+ * -> "topspin". null -> "unknown"; non-finite throws.
  */
 export function shotShapeLabel(spinAxisTiltRad: number | null, handedness: Handedness): ShotShape {
   if (handedness !== "right" && handedness !== "left") {
@@ -30,6 +37,8 @@ export function shotShapeLabel(spinAxisTiltRad: number | null, handedness: Hande
   }
   const magnitude = Math.abs(spinAxisTiltRad);
   if (magnitude <= SHOT_SHAPE_STRAIGHT_MAX_RAD) return "straight";
+  // Topspin-dominant (cos(tilt) < 0): never a hook/slice chosen by the sign of noise near ±180°.
+  if (Math.cos(spinAxisTiltRad) < 0) return "topspin";
   const severe = magnitude > SHOT_SHAPE_SEVERE_MIN_RAD;
   const curvesRight = spinAxisTiltRad > 0;
   // Right-handed: right curve = fade/slice. Left-handed: right curve = draw/hook.

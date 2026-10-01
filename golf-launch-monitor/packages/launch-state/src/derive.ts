@@ -26,6 +26,13 @@ export const MIN_PERPENDICULAR_SPIN_RAD_PER_SEC = 1e-6;
  * unavailable instead of as a random angle.
  */
 export const SPIN_AXIS_MIN_SIGNAL_TO_NOISE = 3;
+/**
+ * Measurement-level horizontal launch angle requires the horizontal speed to exceed this many
+ * standard deviations of the horizontal velocity noise (when a covariance is known). Below that
+ * (a ball that barely moved, or a near-vertical launch) atan2(vy, vx) is set by noise and is
+ * reported unavailable instead of as a random direction.
+ */
+export const HORIZONTAL_DIRECTION_MIN_SIGNAL_TO_NOISE = 3;
 
 export type LaunchDirectionFrame = {
   /** Unit flight direction. */
@@ -305,6 +312,14 @@ export function deriveHorizontalLaunchAngleDeg(velocity: Measurement<Vec3>): Mea
     const h = horizontalNorm(vv);
     if (!(h > MIN_HORIZONTAL_FRACTION * s)) {
       return { ok: false, flag: "horizontal-launch-angle-undefined-vertical-velocity" };
+    }
+    const cov = vectorCovariance(velocity);
+    if (cov !== null && cov !== "invalid") {
+      // Noise of the horizontal velocity, averaged over the two horizontal axes.
+      const hSigma = Math.sqrt(Math.max(0, (quadraticForm([1, 0, 0], cov) + quadraticForm([0, 1, 0], cov)) / 2));
+      if (h < HORIZONTAL_DIRECTION_MIN_SIGNAL_TO_NOISE * hSigma) {
+        return { ok: false, flag: "horizontal-launch-angle-undefined-below-noise" };
+      }
     }
     const h2 = h * h;
     // d/dv atan2(vy, vx) = (-vy / h^2, vx / h^2, 0).

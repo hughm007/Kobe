@@ -383,3 +383,45 @@ describe("fitLaunchState", () => {
     expect(() => fitLaunchState([], { trajectoryModel: model, referenceTimeS: Number.NaN })).toThrow(/referenceTimeS/);
   });
 });
+
+describe("timestampSigmaS option", () => {
+  it("rejects a negative or non-finite timestamp sigma", () => {
+    const obs = [] as never[];
+    expect(() => fitLaunchState(obs, { trajectoryModel: gravityOnlyTrajectoryModel(9.81), timestampSigmaS: -1e-6 })).toThrow(/timestampSigmaS/);
+    expect(() => fitLaunchState(obs, { trajectoryModel: gravityOnlyTrajectoryModel(9.81), timestampSigmaS: Number.NaN })).toThrow(/timestampSigmaS/);
+  });
+
+  it("adds sigma_t^2 v v^T: along-track velocity variance scales by (sp^2 + st^2 |v|^2) / sp^2, cross-track unchanged", () => {
+    // Noise-free straight track (g = 0) so chi^2 = 0 and no covariance inflation interferes.
+    const v: Vec3 = { x: 60, y: 0, z: 0 };
+    const sp = 0.001;
+    const st = 50e-6;
+    const obs: BallPosition3dObservation[] = Array.from({ length: 12 }, (_, k) => ({
+      kind: "ball-position-3d",
+      sensorId: "s",
+      sequence: k,
+      timestampS: k / 1000,
+      frameIndex: k,
+      positionM: { x: v.x * (k / 1000), y: 0, z: 0 },
+      covarianceM2: [
+        [sp * sp, 0, 0],
+        [0, sp * sp, 0],
+        [0, 0, sp * sp],
+      ],
+      reprojectionErrorPx: null,
+      detectionConfidence: 1,
+      cameraIds: [],
+    }));
+    const model = gravityOnlyTrajectoryModel(0);
+    const exact = fitLaunchState(obs, { trajectoryModel: model });
+    const jittered = fitLaunchState(obs, { trajectoryModel: model, timestampSigmaS: st });
+    if (!exact.ok || !jittered.ok) throw new Error("fit failed");
+    const vx = (f: typeof exact) => f.diagnostics.velocityCovarianceM2PerS2[0]![0]!;
+    const vy = (f: typeof exact) => f.diagnostics.velocityCovarianceM2PerS2[1]![1]!;
+    expect(vx(jittered) / vx(exact)).toBeCloseTo((sp * sp + st * st * v.x * v.x) / (sp * sp), 6);
+    expect(vy(jittered) / vy(exact)).toBeCloseTo(1, 9);
+    expect(jittered.velocityMps.x).toBeCloseTo(60, 9);
+    expect(jittered.qualityFlags).toContain("timestamp-uncertainty-propagated");
+    expect(exact.qualityFlags).not.toContain("timestamp-uncertainty-propagated");
+  });
+});

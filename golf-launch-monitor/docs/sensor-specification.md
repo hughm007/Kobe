@@ -27,11 +27,12 @@ against independent real-world data), as defined in [product-requirements.md](pr
 | `ReplaySensorAdapter` + `glm-replay-1` reader/writer | TESTED | `sensor-adapters/test/replay.test.ts`, `tests/replay`, `tests/golden` |
 | `ManualEntryAdapter` (developer testing only) | TESTED | `sensor-adapters/test/manual-and-hardware.test.ts` |
 | `CameraLaunchMonitorAdapter`, `RadarLaunchMonitorAdapter`, `HybridFusionAdapter` | CREATED as placeholders; their refusal behavior is TESTED | `manual-and-hardware.test.ts` ("connect, startCapture and calibrate reject with HardwareNotAvailableError", "reports disconnected and never emits") |
-| Shot segmentation with the frame-buffer window | TESTED end to end (one trigger per shot); multi-trigger clustering IMPLEMENTED only | `shot-pipeline/src/segmenter.ts`; `tests/integration/pipeline.test.ts` |
-| Trigger fusion | IMPLEMENTED (single-trigger path exercised end to end; disagreement path has no test) | `shot-pipeline/src/triggers.ts` |
+| Shot segmentation with the frame-buffer window, 10 ms trigger clustering and late-trigger handling | TESTED | `shot-pipeline/test/segmentation.test.ts`; `tests/integration/pipeline.test.ts` |
+| Trigger fusion | TESTED (latency correction, confidence combination, disagreement warning, median) | `shot-pipeline/test/segmentation.test.ts` |
 | Camera health metric ids (`CAMERA_HEALTH_METRIC_IDS`) | CREATED (ids only; nothing computes them) | `shared-types/src/sensor.ts` |
-| Camera driver, capture service, hardware frame buffer, trigger hardware, 2D detection, stereo triangulation, image-based spin | Planned (Phase 2) — not implemented | [architecture.md](architecture.md) §9 |
-| Radar and hybrid drivers | Planned (Phase 7) — not implemented | [product-requirements.md](product-requirements.md) C7 |
+| Camera driver, capture service, hardware frame buffer, trigger hardware, 2D detection, stereo triangulation | Planned (Phase 2) — not implemented | [architecture.md](architecture.md) §9 |
+| Image-based spin (marked ball) | Planned (Phase 3) — not implemented | [spin-measurement.md](spin-measurement.md) §4 |
+| Radar and hybrid drivers | Not implemented; no phase assigned in the [phase plan](product-requirements.md#9-phase-plan) | [product-requirements.md](product-requirements.md) C7 |
 
 ## 2. The `SensorAdapter` contract
 
@@ -105,7 +106,7 @@ Common fields: `sensorId`, `sequence` (integer ≥ 0, monotonic per sensor), `ti
 | `ball-detection-2d` | `cameraId`, `frameIndex`, `centerPx {u, v}`, `radiusPx`, `confidence` | Not read by `processShot` (kept in raw observations only) | nothing |
 | `ball-position-3d` | `frameIndex`, `positionM`, `covarianceM2` (3×3), `reprojectionErrorPx \| null`, `detectionConfidence`, `cameraIds` | Input to the launch fit | synthetic, manual |
 | `spin` | `method` (`marked-ball` \| `dimple-tracking` \| `radar-doppler` \| `synthetic`), `angularVelocityRadPerSec`, `covarianceRad2PerS2`, `validObservationCount`, `fitResidualRad`, `qualityFlags` | Spin MODE 1 if it passes the quality gate (§10) | synthetic, manual (as `method: "synthetic"`) |
-| `health` | `health: SensorHealth` | Latest one before the shot closes feeds `sensorHealthFactor` | synthetic (metrics empty) |
+| `health` | `health: SensorHealth` | The latest one timestamped at or before the end of the shot's window (`trigger + postTriggerS`) feeds `sensorHealthFactor`. That is the report preceding the shot, or one inside its window. A report after the window belongs to the next shot, even when its arrival is what closes this shot; streaming and flush/step playback agree (§2.3) | synthetic (metrics empty) |
 
 ### 2.3 Health
 
@@ -122,6 +123,16 @@ PROVISIONAL policy values):
 | `failed` or `disconnected` | 0 | **blocking** ⇒ launch `invalid` |
 | `degraded` | ≤ 0.6 | warning |
 | Worst metric status `ok` / `unknown` / `warn` / `fail` | 1 / 0.9 / 0.7 / 0.4 (minimum over metrics) | warn/fail details become warnings |
+
+Which report a shot gets (`ShotSegmenter`, `@glm/shot-pipeline`): the latest health observation
+timestamped at or before the end of the shot's window. The segmenter closes the open shot
+*before* it records an arriving report, so the pre-shot report of shot k+1 (which arrives after
+shot k's window) is never attributed to shot k. TESTED (`packages/shot-pipeline/test/segmentation.test.ts`:
+"each shot gets the health report that precedes it…", streaming and flush mode, and "a health
+report inside the shot window applies to that shot"). Limitations: the rule has no maximum age,
+so if a device stops emitting health, every later shot keeps using its last report; and a
+report inside the window but after the trigger (post-impact) also counts for that shot. Drivers
+should therefore emit health before every shot (§4 item 5).
 | `sync-drift` at `warn` / `fail` | capped at 0.6 / 0.4 | adds "Camera synchronization drift detected; launch direction may be unreliable." |
 
 A `fail` metric alone is **not** blocking. Conditions that must stop measurement (e.g. a moved
@@ -148,7 +159,7 @@ placeholder configurations use 0.25 s / 0.5 s (§6); a replay uses the one in it
 |---|---|---|---|
 | `SyntheticSensorAdapter` | synthetic / synthetic / false | Emits deterministic shots from `SyntheticShotSpec`s: health at launch − 0.5 s, ball-address at − 0.1 s, one trigger per configured source, one `ball-position-3d` per frame (truth from an **injected** propagator + configured noise, dropouts, outliers, timestamp jitter), and one `spin` observation if spin is observed. All randomness from `createRng(seed)`. Truth is available only through `getSyntheticTruth()` for validation tooling. | `calibrate()` → `{ record: null, status: "none" }` |
 | `ReplaySensorAdapter` | replay / `live` relabeled `replay`; `synthetic`/`manual` keep their origin / false | Plays back a validated `glm-replay-1` file. Splits shots when a health/address/trigger observation is > 1 s after the current shot's last trigger. `emitNextShot()` steps one shot. | `calibrate()` returns the header's `CalibrationRecord` (cannot recalibrate) |
-| `ManualEntryAdapter` | manual / manual / false | **Developer testing only.** `submitManualLaunch()` emits an address observation, a `manual` trigger, 10 noise-free positions at 1000 fps (covariance 1e-8 m²), and spin (if given) as `method: "synthetic"` with flag `manual-entry`; its count/residual fields are placeholders. See [limitations.md](limitations.md#sensors-and-data-sources) for the resulting SYNTHETIC spin badge. | `{ record: null, status: "none" }` |
+| `ManualEntryAdapter` | manual / manual / false | **Developer testing only.** `submitManualLaunch()` emits an address observation, a `manual` trigger, 10 noise-free positions at 1000 fps (covariance 1e-8 m²), and spin (if given) as `method: "synthetic"` with flag `manual-entry`; its count/residual fields are placeholders. On the manual stream the spin keeps the label `manual` (badge MANUAL); see [limitations.md](limitations.md#sensors-and-data-sources). | `{ record: null, status: "none" }` |
 | `CameraLaunchMonitorAdapter`, `RadarLaunchMonitorAdapter`, `HybridFusionAdapter` | camera / radar / hybrid, `live`, true | **Placeholders.** `connect()`, `startCapture()`, `calibrate()` reject with `HardwareNotAvailableError`; `disconnect()`/`stopCapture()` are no-ops; subscriptions are accepted but nothing is ever emitted; `getHealth()` is always `disconnected`; configuration version `placeholder-<kind>-0` with no cameras and no trigger sources. Capabilities describe the sensor *class* (e.g. `measuresSpin: true`), not a device; `nominalFrameRateHz` is null. | Throws |
 
 The synthetic noise model (`DEFAULT_SYNTHETIC_NOISE`: 1000 fps, 20 frames, 1 mm per-axis
@@ -173,7 +184,7 @@ driver is called TESTED.
    as the `sync-drift` metric.
 5. Emits `health` observations with the camera metrics of §8, at least before every shot.
 6. Emits triggers (§7) with honest confidence; suppresses or flags non-impact events
-   (§7, "screen-impact hazard").
+   (§7, "Screen and net impacts").
 7. Spin, if claimed, comes from observing this ball (`marked-ball`, `dimple-tracking` or
    `radar-doppler`), with `validObservationCount`, `fitResidualRad` and the blocking quality flags
    of §10 set truthfully.
@@ -238,7 +249,7 @@ with k-fold rotational symmetry is ambiguous at 180°/k. At 1000 fps, 180°/fram
 | S5 | Tracked path | **≥ 0.5 m** of the initial flight in both views; longer is better | Precision is set mainly by path length and frame count (§5.3). |
 | S6 | Synchronization | Hardware-triggered exposures (`syncMode: "hardware"`); inter-camera exposure offset **≤ 10 µs** (target ≤ 1 µs) | Offset δt makes the two views see different ball positions: 85 m/s × 10 µs = 0.85 mm; × 1 µs = 0.085 mm. Software sync with ~1 ms jitter would give 85 mm. |
 | S7 | Optics | Fixed focal length, **locked focus, aperture and zoom**; auto-exposure, auto-gain and auto-focus off | Intrinsics are valid only for the settings hashed into `deviceConfigurationHash`; any change invalidates calibration. The whole capture volume must be inside the depth of field (check with `focus-sharpness` at its near and far ends). |
-| S8 | Resolution / scale | Ball ≥ ~40 px across over the capture volume (≈ 1 mm/px); per-frame 3D position noise **≤ 1 mm** (1σ per axis) | Example geometry (assumed): f = 1500 px, 1280 px wide (≈ 46° horizontal field of view, 1.28 m wide at 1.5 m) gives 1 mm/px and a 43 px ball at 1.5 m. Spin from markings or dimples needs more pixels on the ball; size it with the spin method (Phase 2). |
+| S8 | Resolution / scale | Ball ≥ ~40 px across over the capture volume (≈ 1 mm/px); per-frame 3D position noise **≤ 1 mm** (1σ per axis) | Example geometry (assumed): f = 1500 px, 1280 px wide (≈ 46° horizontal field of view, 1.28 m wide at 1.5 m) gives 1 mm/px and a 43 px ball at 1.5 m. Spin from markings needs more pixels on the ball; size it with the spin method (Phase 3). |
 | S9 | Illumination | **IR strobe synchronized to the exposure**, or flicker-free continuous light; no visible strobes | Short exposures need intense light. Mains-powered lights can flicker at 100/120 Hz ([safety.md](safety.md) §9); at 1000 fps one flicker period spans 10 / 8.3 frames, i.e. the same order as the ball window, so brightness changes from frame to frame within one shot. Eye safety: [safety.md](safety.md) §8. |
 | S10 | Mounting | Rigid mounts with a secondary tether for overhead devices; movement monitored (`camera-movement`) | 1 px of image shift at 1.5 m with f = 1500 px is 1 mm and 0.038°. A bumped camera silently biases direction. |
 | S11 | Placement | Outside the swing arc and the shank zone, protected from rebounds; no tripods in the stance area | [safety.md](safety.md) §4–§6. The golfer and club must not occlude the ball at address or in the first frames of flight. |
@@ -291,10 +302,11 @@ camera.
 
 ## 6. Frame buffer: 0.25 s pre-trigger, 0.5 s post-trigger
 
-**Implemented (TESTED end to end):** `ShotSegmenter` opens a shot on a trigger and collects every
-observation in `[trigger − preTriggerS, trigger + postTriggerS]`. Before a trigger it keeps a
-ring of observations no older than `preTriggerS`. The shot closes when an observation arrives
-after the window, or on `flush()`. It requires `preTriggerS ≥ 0` and `postTriggerS > 0`.
+**Implemented (TESTED: `shot-pipeline/test/segmentation.test.ts` and end to end):**
+`ShotSegmenter` opens a shot on a trigger and collects every observation in
+`[trigger − preTriggerS, trigger + postTriggerS]`. Before a trigger it keeps a ring of
+observations no older than `preTriggerS`. The shot closes when an observation arrives after the
+window, or on `flush()`. It requires `preTriggerS ≥ 0` and `postTriggerS > 0`.
 
 **Planned (Phase 2) — not implemented:** a hardware ring buffer of raw frames with the same
 window, from which detection runs after the trigger.
@@ -325,11 +337,14 @@ path must sustain this or crop to a region of interest; frames written to disk a
 | `club-proximity` | Club approaching the ball | fires **before** impact | Waggles, practice swings | Planned (Phase 2) |
 | `synthetic`, `manual` | Software only | 0 | — | TESTED; forbidden in `live`/`replay` files |
 
-**Fusion (`fuseTriggers`, IMPLEMENTED):** triggers within `TRIGGER_CLUSTER_WINDOW_S` = 50 ms of a
+**Fusion (`fuseTriggers`, TESTED):** triggers within `TRIGGER_CLUSTER_WINDOW_S` = 10 ms of a
 shot's first trigger are one impact. Each source's known latency
 (`PipelineConfig.triggerLatencyS`) is subtracted, the corrected times are combined by their
 median, confidence = 1 − Π(1 − cᵢ), and a spread above `TRIGGER_AGREEMENT_TOLERANCE_S` = 3 ms
-halves the confidence and adds a warning. (3 ms is 22.5 cm of ball travel at 75 m/s.)
+halves the confidence and adds a warning. (3 ms is 22.5 cm of ball travel at 75 m/s.) Both
+values are provisional. The segmenter clusters on the **raw** trigger timestamps (latency is
+corrected only inside `fuseTriggers`), so every genuine impact source must fire within 10 ms of
+the earliest one: a microphone 3 m from the ball (8.7 ms acoustic delay) is close to that edge.
 
 **Role in the pipeline.** The trigger opens the shot window, seeds the gravity-only fit's
 reference time (`min(trigger, first position)`), and contributes `triggerFactor` (weight 0.5,
@@ -337,20 +352,29 @@ score 0.3 + 0.7·c; 0.5 with no trigger). The final launch reference time is whe
 trajectory passes closest to the verified address position, so trigger timing does not set the
 launch values directly.
 
-**Screen-impact hazard (observed in the current segmenter; no code change made).** A second
-trigger from the ball striking the screen behaves as follows (checked by feeding
-`ShotSegmenter` and `fuseTriggers` directly on 2026-10-01):
+**Screen and net impacts (TESTED).** The ball striking the screen or net produces a second,
+later trigger: 40 ms after impact for a screen 3 m away at 75 m/s. `ShotSegmenter` keeps any
+trigger that arrives more than 10 ms after the shot's first trigger but inside its post-trigger
+window as a **late trigger** (`ShotObservationGroup.lateTriggers`): retained as evidence (and in
+the raw observations when retention is on), excluded from the fused impact time, and reported by
+`processShot` as the warning "Ignored N later trigger event(s) … ms after impact (e.g. screen or
+net impact); impact time uses the first trigger cluster only." It never opens a new shot. The
+regression test "a screen-impact trigger 40 ms later neither shifts the impact time nor opens a
+phantom shot" pins this.
 
-- within 50 ms of impact (e.g. 40 ms: 3 m at 75 m/s) it joins the shot: the median of two
-  times is their mean (fused time 20 ms late), confidence is halved and a "disagree by 40.0 ms"
-  warning appears;
-- later than 50 ms (e.g. 100 ms) it closes the shot and opens a phantom shot containing no ball
-  positions; `processShot` turns that into an extra `invalid` record ("No post-impact ball
-  positions; launch state cannot be fitted.").
+Remaining edges, by arithmetic (not tested):
 
-A driver must therefore not report screen or net impacts as `trigger` observations (or must
-suppress triggers for a hold-off period after a shot). A segmentation hold-off is Planned —
-not implemented.
+- A screen closer than 10 ms of ball travel (0.85 m at 85 m/s) would be fused into the impact
+  time. Garage screens are normally several metres away ([safety.md](safety.md)).
+- A ball slower than 6 m/s over 3 m reaches the screen after the 0.5 s window has closed; that
+  trigger opens a new shot with no ball positions, which `processShot` records as `invalid`
+  ("No post-impact ball positions …"). Such a ball is far outside the supported speed range.
+- A source that fires **before** impact (`club-proximity`) and is emitted as a trigger opens
+  the shot itself; impact triggers more than 10 ms later would then become late triggers and the
+  fused time would be the club's approach, not the impact. Such a source must not be emitted as
+  an impact trigger (or must be gated by a confirmed impact).
+- A driver should still not report screen or net impacts as impact triggers when it can tell
+  them apart, and must state each source's latency.
 
 ## 8. Camera health metrics
 
@@ -401,11 +425,14 @@ finite vector; positive-definite covariance; `validObservationCount` ≥ 4; `fit
 blocking flags `occluded`, `aliasing-risk`, `ambiguous-rotation`, `insufficient-features`,
 `motion-blur`. A driver must raise `aliasing-risk` when the rotation per frame approaches the
 pattern's ambiguity limit (§5.1) and `motion-blur` when S3 is not met. Spin with
-`method: "synthetic"` on a non-synthetic stream is relabeled synthetic, never measured.
+`method: "synthetic"` on a sensor (live or replayed) stream is relabeled `synthetic`, never
+measured; on a developer manual stream it keeps the label `manual`. Producing spin from images
+is Phase 3 ([spin-measurement.md](spin-measurement.md) §4).
 
-## 11. Radar and hybrid adapters (Planned, Phase 7 — not implemented)
+## 11. Radar and hybrid adapters (not implemented; no phase assigned)
 
-Expectations for any future driver (no device has been chosen):
+The product owner's [phase plan](product-requirements.md#9-phase-plan) does not schedule radar
+or hybrid drivers. Expectations for any future driver (no device has been chosen):
 
 - **Radar** emits `trigger`, `ball-position-3d` (world frame, with covariance) and, if it
   measures spin, `spin` with `method: "radar-doppler"`. Values are labeled `measured-radar`.
@@ -427,4 +454,5 @@ Expectations for any future driver (no device has been chosen):
 - Contract gaps (no change made): timestamp convention (mid-exposure) is not stated in the
   contract; no per-frame exposure/gain metadata; no raw radar observation type; no radar pose
   in `CalibrationRecord`; `ball-detection-2d` is defined but unused by the pipeline.
-- Screen-impact triggers (§7) need a driver-side rule or a segmentation hold-off.
+- Screen-impact triggers (§7) are handled by the segmenter's late-trigger rule; screens closer
+  than about 0.85 m, or balls slower than about 6 m/s, fall outside it.

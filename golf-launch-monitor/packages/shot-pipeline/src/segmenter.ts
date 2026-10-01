@@ -20,7 +20,11 @@ export type ShotObservationGroup = {
   readonly observations: readonly RawSensorObservation[];
   /** Latest ball-address observation inside the pre-trigger window, if any. */
   readonly address: BallAddressObservation | null;
-  /** Latest sensor health report received before the shot closed, if any. */
+  /**
+   * Latest sensor health report timestamped at or before the end of this shot's window (the
+   * report preceding the shot, or one inside its window), if any. A report that arrives after
+   * the window belongs to the next shot and never to this one, in streaming and flush mode alike.
+   */
   readonly health: SensorHealth | null;
   readonly windowStartS: number;
   readonly windowEndS: number;
@@ -57,12 +61,13 @@ export class ShotSegmenter {
   /** Adds one observation; returns any shots that this observation closed. */
   push(observation: RawSensorObservation): ShotObservationGroup[] {
     const closed: ShotObservationGroup[] = [];
-    if (observation.kind === "health") this.latestHealth = observation.health;
-
+    // Close first: an observation after the open shot's window (including a health report that
+    // precedes the NEXT shot) must not be attributed to the shot it closes.
     if (this.open && observation.timestampS > this.open.windowEndS) {
       closed.push(this.close(this.open));
       this.open = null;
     }
+    if (observation.kind === "health") this.latestHealth = observation.health;
 
     if (observation.kind === "trigger") {
       if (this.open && observation.timestampS - this.open.firstTriggerS <= TRIGGER_CLUSTER_WINDOW_S) {
@@ -118,7 +123,6 @@ export class ShotSegmenter {
       if (o.kind === "ball-address" && o.timestampS <= shot.firstTriggerS) {
         if (!address || o.timestampS >= address.timestampS) address = o;
       }
-      if (o.kind === "health") this.latestHealth = o.health;
     }
     return {
       triggers: shot.triggers,

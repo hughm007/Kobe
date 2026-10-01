@@ -23,7 +23,7 @@ Spin is resolved separately ([spin-measurement.md](spin-measurement.md)). Known 
 | Stage | Job | Emits (contract type in `@glm/shared-types`) | Status |
 |---|---|---|---|
 | A | Ball at address: one stationary ball inside the calibrated hitting zone | `BallAddressObservation` | Planned (Phase 2) — not implemented. Its consumer `ballZoneFactor` is TESTED. |
-| B | Trigger confirmation: when impact happened | `TriggerObservation` | Hardware triggers: Planned (Phase 2) — not implemented. Fusion (`fuseTriggers`) is IMPLEMENTED and runs end to end with one synthetic trigger; the path for disagreeing sources has no automated test. |
+| B | Trigger confirmation: when impact happened | `TriggerObservation` | Hardware triggers: Planned (Phase 2) — not implemented. Segmentation and fusion (`ShotSegmenter`, `fuseTriggers`) are TESTED (`packages/shot-pipeline/test/segmentation.test.ts`), including disagreeing sources and late screen-impact triggers. |
 | C | Early-flight 2D tracking in each camera | `BallDetection2dObservation` | Planned (Phase 2) — not implemented |
 | D | Multi-camera matching, triangulation, reprojection error | `BallPosition3dObservation` (world-frame center and 3×3 covariance) | Planned (Phase 2) — not implemented |
 | E | Multi-frame launch fit: launch position and velocity with covariance | `LaunchFitSuccess` / `LaunchFitFailure`, `LaunchFitDiagnostics` | **IMPLEMENTED, TESTED (synthetic)** |
@@ -86,11 +86,14 @@ What already consumes it (code exists):
 Contract trigger sources: `microphone`, `beam-break`, `ball-motion`, `club-proximity` (plus
 `synthetic`, `manual`).
 
-What exists (`@glm/shot-pipeline`, IMPLEMENTED):
+What exists (`@glm/shot-pipeline`, TESTED):
 
 - `ShotSegmenter` opens a shot on a trigger. It collects observations in
   `[trigger − preTriggerS, trigger + postTriggerS]` (`FrameBufferConfiguration`). Triggers within
-  50 ms of the first one (`TRIGGER_CLUSTER_WINDOW_S`) count as the same impact.
+  10 ms of the first one (`TRIGGER_CLUSTER_WINDOW_S`, raw timestamps) count as the same impact.
+  Later triggers inside the window (e.g. the ball hitting the screen) are kept as evidence
+  (`lateTriggers`), excluded from the impact time, reported in a warning, and never open a new
+  shot ([sensor-specification.md §7](sensor-specification.md#7-triggers-and-fusion)).
 - `fuseTriggers` subtracts a per-source latency, which the caller supplies; no device latencies
   are known. It takes the median of the corrected times and sets confidence = `1 − Π(1 − cᵢ)`.
   The confidence is halved, with a warning, when sources disagree by more than 3 ms
@@ -155,7 +158,8 @@ drag- and lift-aware model `createAeroTrajectoryModel` in `packages/shot-pipelin
 ### 3.1 Sequence in the shot pipeline (`processShot`)
 
 1. **Trigger fusion.** Seed reference time = `min(fused trigger time, first ball observation)`.
-   With no trigger it is the earliest observation.
+   With no trigger it is the earliest observation. Late triggers (§2.2) do not enter the fused
+   time; they only add a warning.
 2. **Gravity-only seed fit.** `p(t) = p0 + v0·t − ½·g·t²·Ẑ`, g from the environment profile.
 3. **Spin resolution** with the seed velocity ([spin-measurement.md](spin-measurement.md)). If
    spin is unavailable, the refit uses ω = 0 and warns *"Launch fit assumed no Magnus lift
@@ -359,10 +363,14 @@ random rotation), with noise drawn from exactly that covariance.
 | End to end through the synthetic adapter and `processShot`: speed within 0.25 m/s, launch angles within 0.2°, outliers rejected, too few frames gives no numbers, an outside-zone ball is invalid | `tests/integration/pipeline.test.ts` |
 | 1-σ ball-speed and launch-angle intervals cover the truth ≈ 68 % (80 seeds, 3-sd binomial band) | `tests/integration/uncertainty-calibration.test.ts` |
 
-**Not directly tested:** the closest-approach reference time and the seed → refit sequence in
-`processShot` are exercised only end to end. No test asserts `launchTimeS` from the pipeline or
-the refit-failure fallback. The synthetic generator uses the same physics as the aero model, so
-the end-to-end recovery numbers are **not** accuracy evidence.
+`packages/shot-pipeline/test/process.test.ts` ("launch reference time … is the moment the
+fitted track passes the address position, not the trigger time") checks that a trigger 2 ms
+late does not move the launch point: `launchTimeS` is within 30 µs of the truth and the launch
+position within 2 mm of the address point (noise-free synthetic positions, same physics).
+
+**Not directly tested:** the refit-failure fallback ("Drag-aware refit failed …"). The synthetic
+generator uses the same physics as the aero model, so the end-to-end recovery numbers are
+**not** accuracy evidence.
 
 ### 3.11 Limitations
 

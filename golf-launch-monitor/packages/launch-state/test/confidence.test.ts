@@ -7,6 +7,8 @@ import {
   CONFIDENCE_INVALID_BELOW,
   CONFIDENCE_VALID_AT_OR_ABOVE,
   fitQualityFactor,
+  LAUNCH_KINEMATICS_LIMITS,
+  launchKinematicsFactor,
   observationCountFactor,
   sensorHealthFactor,
   SYNC_DRIFT_WARNING,
@@ -187,5 +189,35 @@ describe("factor builders", () => {
     expect(poor.score).toBeCloseTo((0.3 * 9) / 9.6, 12);
     expect(poor.detail).toMatch(/low/);
     expect(poor.detail).toMatch(/chi\^2\/dof 9\.6/);
+  });
+});
+
+describe("launchKinematicsFactor", () => {
+  const deg = Math.PI / 180;
+  const v = (speed: number, vlaDeg: number, hlaDeg: number) => ({
+    x: speed * Math.cos(vlaDeg * deg) * Math.cos(hlaDeg * deg),
+    y: speed * Math.cos(vlaDeg * deg) * Math.sin(hlaDeg * deg),
+    z: speed * Math.sin(vlaDeg * deg),
+  });
+
+  it("passes a full-swing launch with weight 0 (a passed gate never raises confidence)", () => {
+    expect(launchKinematicsFactor(v(70, 11, -3))).toMatchObject({ score: 1, weight: 0, blocking: false });
+    expect(launchKinematicsFactor(v(LAUNCH_KINEMATICS_LIMITS.minBallSpeedMps, 30, 45))).toMatchObject({ blocking: false });
+    expect(launchKinematicsFactor(v(30, LAUNCH_KINEMATICS_LIMITS.maxVerticalLaunchDeg - 0.1, 0)).blocking).toBe(false);
+  });
+
+  it("blocks a ball below the minimum speed, a backward ball and a near-vertical launch", () => {
+    const slow = launchKinematicsFactor(v(LAUNCH_KINEMATICS_LIMITS.minBallSpeedMps - 0.01, 10, 0));
+    expect(slow).toMatchObject({ score: 0, blocking: true });
+    expect(slow.weight).toBeGreaterThan(0);
+    expect(slow.detail).toMatch(/did not leave the hitting zone/);
+    expect(launchKinematicsFactor(v(40, 10, 90)).detail).toMatch(/toward or behind/);
+    expect(launchKinematicsFactor(v(40, 10, -135)).blocking).toBe(true);
+    expect(launchKinematicsFactor(v(40, 86, 0)).detail).toMatch(/near vertical/);
+    expect(launchKinematicsFactor({ x: Number.NaN, y: 0, z: 0 }).blocking).toBe(true);
+    // Blocking forces overall 0 and "invalid" through the aggregate.
+    const agg = aggregateConfidence([f("a", 1), launchKinematicsFactor({ x: 0.1, y: 0, z: 0 })], LIVE_MEASURED);
+    expect(agg.validity).toBe("invalid");
+    expect(agg.overallConfidence).toBe(0);
   });
 });

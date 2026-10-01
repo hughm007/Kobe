@@ -27,9 +27,8 @@ lasers and IR), [../datasets/calibration/README.md](../datasets/calibration/READ
 | Wizard, board detection, solvers, movement detection | Planned (Phase 2) — not implemented | [architecture.md](architecture.md) §9 (`services/calibration`) |
 | Use of `worldFrame` by the physics | Not implemented. No code reads `worldFrame`; range sessions use `createFlatRangeTerrain` with its own `teeHeightM` option (default 0). | `@glm/shot-pipeline` `createRangePipelineConfig` |
 
-Known gap: `npm run replay` ignores the calibration stored in a replay header
-([architecture.md](architecture.md) §12), so a live recording replayed with the CLI would be
-rejected as uncalibrated.
+The replay CLI (`npm run replay`) and the desktop UI process a replay with the calibration
+stored in its header, so a live recording keeps the calibration it was captured with.
 
 ## 2. What a calibration produces and how it affects shots
 
@@ -158,10 +157,11 @@ gravity). The ground is not assumed flat or level.
    | `manual` | The user enters the direction. No physical measurement: yellow at best (§10). |
 
    Then +X = target direction projected onto the horizontal plane (perpendicular to +Z),
-   +Y = Ẑ × X̂ (left), and check X̂ × Ŷ = Ẑ. On a level floor this projection lies in the ground
-   plane, as [coordinate-system.md](coordinate-system.md) states; on a sloped floor the two
-   differ, and this procedure proposes the horizontal projection so that +Z stays vertical
-   (open item, §14).
+   +Y = Ẑ × X̂ (left), and check X̂ × Ŷ = Ẑ. This is the rule of
+   [coordinate-system.md §1](coordinate-system.md#1-world-frame): +Z is defined by gravity, the
+   target line is the horizontal projection of the surveyed direction, and a tilted floor is
+   described separately by `groundPlane`. On a level floor the projection lies in the ground
+   plane; on a sloped floor it does not, and that is intended.
 6. **Target-line verification.** Measure the line a second, independent way (another method,
    or tape-measured points on the line) and record the angle between the two as
    `targetLineErrorRad` (null if not verified). Example uncertainty: marks 1.2 m apart, each
@@ -263,15 +263,19 @@ knownLengthM | null })` returns `{ record | null, status, messages }`.
 Proposed wizard steps: (1) safety and rig check; (2) lock and hash settings; (3) intrinsic capture
 with a live coverage map; (4) stereo capture; (5) vertical, ground, address, tee height and
 target line; (6) known-length check; (7) review the quality report, status and reasons; (8) save
-an immutable record and choose artifact retention. Until then the desktop UI (in progress) shows
-the calibration status (`none` in synthetic/replay mode) with the wizard disabled.
+an immutable record and choose artifact retention. Until then the desktop UI's Calibration
+screen shows the status ("No calibration: synthetic/replay mode", or the calibration recorded in
+a replay file), the meaning of green / yellow / red / none, what Phase 2 calibration will
+require, and the wizard buttons disabled with the reason (TESTED: "calibration shows the Phase 1
+status and disabled wizard with an explanation").
 
 ## 14. Open items
 
 - No solver, detector, wizard or calibration data exist.
 - Every threshold in §5, §6, §10 and §11 is a proposal.
-- `targetLineUnit` is defined "in the ground plane" ([coordinate-system.md](coordinate-system.md)
-  §1) while +Z is "opposite to gravity"; these agree only on a level floor (§7 step 5).
+- The contract comment on `WorldFrameCalibration.targetLineUnit` still says "in the ground
+  plane"; [coordinate-system.md §1](coordinate-system.md#1-world-frame) (binding) defines it as
+  the horizontal projection. The two agree only on a level floor (§7 step 5).
 - How "up" is measured on the rig is undecided (§7 step 1).
 - `deviceConfigurationHash` has no specified algorithm (§3).
 - Per-shot tee height is not modeled; `worldFrame` is not read by any code yet.

@@ -3,8 +3,8 @@
   "schemaVersion": "glm-schema-0.1.0",
   "coordinateSystemVersion": "glm-world-1.0",
   "physicsModelVersion": "glm-physics-0.1.0-provisional",
-  "groundModelVersion": "glm-ground-0.2.0-provisional",
-  "estimatorVersion": "glm-launch-fit-0.1.0",
+  "groundModelVersion": "glm-ground-0.3.0-provisional",
+  "estimatorVersion": "glm-launch-fit-0.2.0",
   "monteCarloSamples": 50,
   "shots": [
     {
@@ -147,8 +147,8 @@
       "carryP05M": 81.60804172235898,
       "carryP95M": 96.3779036337015,
       "carryLateralM": -0.9006981105814835,
-      "totalM": 161.64545871164208,
-      "totalLateralM": -2.2595882214253526,
+      "totalM": 164.6125371408255,
+      "totalLateralM": -2.318406448485449,
       "apexHeightM": 5.9118389743913,
       "descentAngleRad": 0.2989298798247032,
       "flightTimeS": 2.1153535766601563,

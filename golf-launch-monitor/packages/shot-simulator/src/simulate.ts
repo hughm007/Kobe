@@ -22,7 +22,7 @@ import {
   type Vec3,
 } from "@glm/shared-types";
 import { surfaceToLie } from "@glm/terrain-engine";
-import { buildShotMetrics, computeRawMetrics, RAW_METRIC_KEYS, type RawMetrics } from "./metrics";
+import { behindLaunchPoint, buildShotMetrics, computeRawMetrics, RAW_METRIC_KEYS, type RawMetrics } from "./metrics";
 
 export const SHOT_SIMULATOR_VERSION = "glm-shot-sim-0.1.0";
 
@@ -271,6 +271,7 @@ export function simulateShot(launch: LaunchState, ctx: SimulationContext): Simul
     environment: ctx.environment,
     ballProfile: ctx.ballProfile,
     modelVersion: `${PHYSICS_MODEL_VERSION}+${GROUND_MODEL_VERSION}+${SHOT_SIMULATOR_VERSION}`,
+    behindLaunch: behindLaunchPoint(p0, trajectory.landing.positionM, trajectory.groundMotion.restPositionM),
   });
 
   const allWarnings = [

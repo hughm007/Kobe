@@ -8,6 +8,7 @@ import type {
   SensorHealth,
   SpinMode,
   Validity,
+  Vec3,
 } from "@glm/shared-types";
 import { uniqueStrings } from "./constants";
 
@@ -50,6 +51,8 @@ export const FACTOR_WEIGHTS = Object.freeze({
   ballZone: 1,
   sensorHealth: 1,
   spinQuality: 1.5,
+  /** Applies only when the kinematic plausibility gate fails (see launchKinematicsFactor). */
+  launchKinematics: 1,
 });
 
 export const SYNC_DRIFT_WARNING = "Camera synchronization drift detected; launch direction may be unreliable.";
@@ -304,4 +307,95 @@ export function sensorHealthFactor(health: SensorHealth | null): ConfidenceFacto
   if (health.status === "degraded" && messages.length === 0) messages.push(`Sensor ${health.sensorId} is degraded.`);
   const detail = messages.length > 0 ? messages.join(" ") : "All sensor health checks passed.";
   return factor(id, label, score, w, detail);
+}
+
+/**
+ * Kinematic plausibility gate for a full-swing range launch (provisional engineering limits, not
+ * fitted to data; Phase 1 has no putting or chipping mode). A ball slower than
+ * minBallSpeedMps did not leave the hitting zone (false trigger, ball rocking on the tee); a
+ * ball moving toward or behind the golfer (|horizontal launch| >= 90 deg, vx <= 0) is a
+ * ricochet or a tracking error; a launch steeper than maxVerticalLaunchDeg has no meaningful
+ * horizontal direction. None of these may become a valid, measured shot.
+ */
+export const LAUNCH_KINEMATICS_LIMITS = Object.freeze({
+  /** ~11 mph: below any full-swing or chip launch speed. */
+  minBallSpeedMps: 5,
+  /** Exclusive: the ball must travel forward of the golfer (vx > 0). */
+  maxAbsHorizontalLaunchDeg: 90,
+  maxVerticalLaunchDeg: 85,
+});
+
+export const BALL_DID_NOT_LEAVE_ZONE_MESSAGE = "Ball did not leave the hitting zone";
+export const BALL_MOVED_BACKWARD_MESSAGE = "Ball moved toward or behind the golfer";
+export const BALL_NEAR_VERTICAL_MESSAGE = "Launch is near vertical";
+
+/**
+ * Pass/fail kinematic plausibility of the fitted launch velocity (LAUNCH_KINEMATICS_LIMITS).
+ * Passing: score 1 with weight 0, so a passed gate never raises the graded confidence.
+ * Failing: score 0, blocking, weight FACTOR_WEIGHTS.launchKinematics (overall confidence 0).
+ */
+export function launchKinematicsFactor(velocityMps: Vec3): ConfidenceFactor {
+  const id = "launch-kinematics";
+  const label = "Launch plausibility";
+  const lim = LAUNCH_KINEMATICS_LIMITS;
+  const speed = Math.hypot(velocityMps.x, velocityMps.y, velocityMps.z);
+  const horizontal = Math.hypot(velocityMps.x, velocityMps.y);
+  const vlaDeg = (Math.atan2(velocityMps.z, horizontal) * 180) / Math.PI;
+  const hlaDeg = (Math.atan2(velocityMps.y, velocityMps.x) * 180) / Math.PI;
+  const problems: string[] = [];
+  if (!(Number.isFinite(speed) && speed >= lim.minBallSpeedMps)) {
+    problems.push(
+      `${BALL_DID_NOT_LEAVE_ZONE_MESSAGE}: fitted ball speed ${Number.isFinite(speed) ? speed.toFixed(2) : "unknown"} m/s is below the ${lim.minBallSpeedMps} m/s minimum (false trigger or ball moved at address).`,
+    );
+  } else {
+    if (!(Math.abs(hlaDeg) < lim.maxAbsHorizontalLaunchDeg)) {
+      problems.push(
+        `${BALL_MOVED_BACKWARD_MESSAGE} (horizontal launch ${hlaDeg.toFixed(1)} deg); not a forward launch (ricochet or tracking error).`,
+      );
+    }
+    if (!(vlaDeg <= lim.maxVerticalLaunchDeg)) {
+      problems.push(
+        `${BALL_NEAR_VERTICAL_MESSAGE} (${vlaDeg.toFixed(1)} deg > ${lim.maxVerticalLaunchDeg} deg); launch direction is undefined.`,
+      );
+    }
+  }
+  if (problems.length === 0) {
+    return factor(id, label, 1, 0, "Launch speed and direction are plausible for a struck ball (pass/fail check; does not raise confidence).");
+  }
+  return factor(id, label, 0, FACTOR_WEIGHTS.launchKinematics, problems.join(" "), true);
+}
+
+/** Per-value sensor evidence for the fitted launch values (see launchValueSensorEvidence). */
+export type LaunchValueSensorEvidence = {
+  /** Upper bound on each launch value's confidence, in [0, 1]. */
+  readonly confidenceCap: number;
+  /** Why the cap applies (empty when nothing limits it). */
+  readonly qualityFlags: readonly string[];
+};
+
+/**
+ * Shot-level sensor evidence that limits every fitted launch value (position, velocity and the
+ * scalars derived from them), not only overallConfidence: the launch fit sees only scatter about
+ * its own trajectory, never a miscalibrated triangulation or drifting camera clocks, which bias
+ * all tracked positions together. The cap is the lower of the calibration and sensor-health
+ * factor scores (the same scores aggregateConfidence uses), so a yellow calibration or a sync
+ * drift can never sit next to a "High (1.00)" ball speed or launch angle. Flags name the cause.
+ */
+export function launchValueSensorEvidence(
+  calibrationStatus: CalibrationStatus,
+  dataOrigin: DataOrigin,
+  health: SensorHealth | null,
+): LaunchValueSensorEvidence {
+  const calibration = calibrationFactor(calibrationStatus, dataOrigin);
+  const sensor = sensorHealthFactor(health);
+  const flags: string[] = [];
+  if (calibration.score < 1) flags.push(`calibration-${calibrationStatus}`);
+  if (health === null) flags.push("sensor-health-unknown");
+  else {
+    if (health.status !== "ok") flags.push(`sensor-health-${health.status}`);
+    const drift = health.metrics.find((m) => m.id === "sync-drift" && (m.status === "warn" || m.status === "fail"));
+    if (drift) flags.push(`sync-drift-${drift.status}`);
+    else if (sensor.score < 1) flags.push("sensor-health-metric-warning");
+  }
+  return { confidenceCap: Math.min(calibration.score, sensor.score), qualityFlags: uniqueStrings(flags) };
 }

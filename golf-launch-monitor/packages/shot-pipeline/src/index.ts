@@ -5,3 +5,4 @@ export * from "./process";
 export * from "./pipeline";
 export * from "./fixtures";
 export * from "./session";
+export * from "./spin-sensitivity";

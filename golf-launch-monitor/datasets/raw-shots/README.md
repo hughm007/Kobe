@@ -35,15 +35,18 @@ A recording keeps the origin of its data. The replay parser enforces this:
 npm run replay -- datasets/raw-shots/<file>.jsonl [--mc 100] [--json out.json]
 ```
 
-The CLI (`scripts/replay.ts`) has fixed settings and one known gap:
+The CLI (`scripts/replay.ts`) has fixed settings:
 
-- It always uses the default indoor environment and the `premium-urethane-baseline` ball
-  profile, with no player and no club.
+- It uses the calibration recorded in the replay header (or none, for synthetic and manual
+  files), the default indoor environment and the `premium-urethane-baseline` ball profile.
+- Replay files record no player or club, so the CLI attributes every shot to no player and no
+  club, with right-handed shot-shape labels. The desktop UI instead attributes replayed shots to
+  its current Setup and says so on the shot card. Neither is a record of who hit the shot.
 - With no club category, a shot without observed spin cannot get a club-model estimate. Its
   simulation is skipped with a stated reason.
-- **Known gap:** the CLI ignores the calibration stored in the replay header (it configures
-  `calibration: null`). Replaying a **live** recording would therefore mark every shot invalid
-  ("No calibration"). Synthetic and manual files are unaffected.
+- Shot ids (`replay-shot-0001`, …) are assigned at processing time, in file order. They are not
+  stable identities for validation datasets; see
+  [validation-protocol.md §3.3](../../docs/validation-protocol.md#33-pairing).
 
 ## Privacy
 

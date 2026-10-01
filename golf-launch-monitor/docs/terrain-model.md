@@ -69,8 +69,6 @@ local tangent plane, which is exact only for planar terrain.
 
 ---
 
----
-
 ## 2. Surface catalog (`SURFACE_CATALOG`)
 
 `moistureSoftness` is 0 for every playable row, so the catalog holds **dry reference** values.
@@ -548,8 +546,6 @@ spins back gets a **negative** value: for example, a bounce of +1.12 m and a rol
 give a net of −0.38 m. For a shot that lands and runs straight, carry + bounce + roll equals
 total. These values are displacements, not path lengths. Sideways ground movement, such as a
 kick off a side slope, is excluded; the lateral offset at rest is reported separately.
-
----
 
 ---
 

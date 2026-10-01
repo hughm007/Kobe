@@ -47,7 +47,22 @@ export type LaunchFitOptions = {
   readonly outlierThresholdSigma?: number;
   /** Levenberg-Marquardt iterations per fit. Default 50. */
   readonly maxIterations?: number;
+  /**
+   * 1-sigma uncertainty of every observation's timestamp on the session clock, s (frame-time
+   * jitter, exposure-midpoint error, inter-camera sync). Default 0: timestamps treated as exact.
+   * When > 0 the fit propagates it (errors-in-variables): a time error dt moves the observed
+   * position by v(t) dt along the track, so each position covariance gets sigma_t^2 v v^T, with
+   * v(t) from the current fit (TIMESTAMP_UNCERTAINTY_ITERATIONS refits). Without this, timestamp
+   * jitter shows up only as chi^2 inflation, which is isotropic and understates the along-track
+   * (ball speed) error while overstating the angle error.
+   */
+  readonly timestampSigmaS?: number;
 };
+
+/** Refits with v(t)-dependent timestamp covariance (see LaunchFitOptions.timestampSigmaS). */
+export const TIMESTAMP_UNCERTAINTY_ITERATIONS = 2;
+/** Half-step for the trajectory velocity used by the timestamp covariance, s. */
+const VELOCITY_DIFFERENCE_STEP_S = 1e-4;
 
 export type LaunchFitSuccess = {
   readonly ok: true;
@@ -553,6 +568,39 @@ const seqList = (obs: readonly BallPosition3dObservation[]): string => obs.map((
  * reason); throws only for invalid options.
  */
 export function fitLaunchState(
+  observations: readonly BallPosition3dObservation[],
+  options: LaunchFitOptions,
+): LaunchFitSuccess | LaunchFitFailure {
+  const sigmaT = options.timestampSigmaS ?? 0;
+  if (!(Number.isFinite(sigmaT) && sigmaT >= 0)) {
+    throw new Error(`fitLaunchState: timestampSigmaS must be finite and >= 0, got ${sigmaT}`);
+  }
+  if (sigmaT === 0) return fitWithFixedCovariance(observations, options);
+  let fit = fitWithFixedCovariance(observations, options);
+  for (let k = 0; k < TIMESTAMP_UNCERTAINTY_ITERATIONS && fit.ok; k++) {
+    const current = fit;
+    const h = VELOCITY_DIFFERENCE_STEP_S;
+    const inflated = observations.map((o) => {
+      if (typeof o !== "object" || o === null || o.kind !== "ball-position-3d" || !Number.isFinite(o.timestampS)) return o;
+      const dt = o.timestampS - current.referenceTimeS;
+      const [a, b] = options.trajectoryModel.predict(current.positionM, current.velocityMps, [dt - h, dt + h]);
+      if (!a || !b || !isFiniteVec3(a) || !isFiniteVec3(b)) return o;
+      const v = [(b.x - a.x) / (2 * h), (b.y - a.y) / (2 * h), (b.z - a.z) / (2 * h)];
+      const c = o.covarianceM2;
+      return {
+        ...o,
+        covarianceM2: [0, 1, 2].map((i) =>
+          [0, 1, 2].map((j) => ((c[i] as ReadonlyArray<number> | undefined)?.[j] ?? Number.NaN) + sigmaT * sigmaT * (v[i] as number) * (v[j] as number)),
+        ),
+      };
+    });
+    fit = fitWithFixedCovariance(inflated, options);
+  }
+  if (!fit.ok) return fit;
+  return { ...fit, qualityFlags: uniqueStrings([...fit.qualityFlags, "timestamp-uncertainty-propagated"]) };
+}
+
+function fitWithFixedCovariance(
   observations: readonly BallPosition3dObservation[],
   options: LaunchFitOptions,
 ): LaunchFitSuccess | LaunchFitFailure {

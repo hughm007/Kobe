@@ -81,6 +81,28 @@ describe("ball speed and launch angles (docs/coordinate-system.md §3)", () => {
       "horizontal-launch-angle-undefined-vertical-velocity",
     );
   });
+
+  it("regression: a horizontal direction set by noise (|v_xy| < 3 sigma) is unavailable, not a random angle", () => {
+    const cov = [
+      [0.01, 0, 0],
+      [0, 0.01, 0],
+      [0, 0, 0.01],
+    ]; // sigma 0.1 m/s per axis
+    // Near-vertical: |v_xy| = 0.25 m/s < 3 * 0.1.
+    expectUnavailable(
+      deriveHorizontalLaunchAngleDeg(vectorMeasurement({ x: 0.15, y: 0.2, z: 40 }, cov)),
+      "horizontal-launch-angle-undefined-below-noise",
+    );
+    // A ball that barely moved.
+    expectUnavailable(
+      deriveHorizontalLaunchAngleDeg(vectorMeasurement({ x: -0.1, y: 0.12, z: 0.05 }, cov)),
+      "horizontal-launch-angle-undefined-below-noise",
+    );
+    // 0.35 m/s > 3 sigma: still reported, with its (large) sigma.
+    const resolved = deriveHorizontalLaunchAngleDeg(vectorMeasurement({ x: 0.35, y: 0, z: 40 }, cov));
+    expect(resolved.value).toBeCloseTo(0, 12);
+    expect(resolved.uncertainty?.sigma as number).toBeGreaterThan(10);
+  });
 });
 
 describe("spin rate and spin-axis tilt (docs/coordinate-system.md §4)", () => {

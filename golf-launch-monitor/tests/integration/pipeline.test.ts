@@ -6,7 +6,8 @@ import { MEASURED_SOURCES, ShotRecordSchema } from "@glm/shared-types";
 import { fixtureLaunchVectors, getFixture } from "@glm/shot-pipeline";
 import { degToRad, mphToMps, radToDeg } from "@glm/units";
 import { describe, expect, it } from "vitest";
-import { noise, runSynthetic } from "./helpers";
+import { ENV, noise, runSynthetic } from "./helpers";
+import { fitLaunchState, gravityOnlyTrajectoryModel } from "@glm/launch-state";
 
 const ALL = ["straight-driver", "draw-driver", "fade-driver", "high-7-iron", "low-7-iron", "no-spin-knuckleball"] as const;
 
@@ -166,7 +167,10 @@ describe("failure modes fail safely", () => {
     expect(r!.launch.validity).toBe("invalid");
     expect(r!.launch.rejectionReasons.join(" ")).toMatch(/outside calibrated hitting zone/i);
     expect(r!.result).toBeNull();
-    expect(r!.rawObservations).toBeNull(); // consent off by default
+    // Requirement §0.9: the numeric observations (no images) are kept by default, so the rejected
+    // shot can be re-processed; camera frames are never written by the pipeline.
+    expect(r!.rawObservations!.some((o) => o.kind === "ball-position-3d")).toBe(true);
+    expect(r!.rawCapturePaths).toEqual([]);
   });
 
   it("too few frames -> no fabricated launch numbers", async () => {
@@ -186,9 +190,22 @@ describe("failure modes fail safely", () => {
     expect(r!.launch.fitDiagnostics!.inlierCount).toBeLessThan(r!.launch.fitDiagnostics!.observationCount);
   });
 
-  it("raw observations are retained only with consent", async () => {
-    const [r] = await runSynthetic([{ fixtureId: "straight-driver", seed: 24 }], { storeRawObservations: true });
-    expect(r!.rawObservations!.length).toBeGreaterThan(10);
+  it("raw observations are retained by default and dropped only on the user's opt-out", async () => {
+    const [kept] = await runSynthetic([{ fixtureId: "straight-driver", seed: 24 }]);
+    expect(kept!.rawObservations!.length).toBeGreaterThan(10);
+    const [dropped] = await runSynthetic([{ fixtureId: "straight-driver", seed: 24 }], { storeRawObservations: false });
+    expect(dropped!.rawObservations).toBeNull();
+  });
+
+  it("regression (§0.9): a stored shot can be re-fitted from its own record", async () => {
+    const [r] = await runSynthetic([{ fixtureId: "draw-driver", seed: 25 }]);
+    const balls = r!.rawObservations!.filter((o) => o.kind === "ball-position-3d");
+    const refit = fitLaunchState(balls, {
+      trajectoryModel: gravityOnlyTrajectoryModel(ENV.gravityMps2),
+      referenceTimeS: r!.launch.launchTimeS,
+    });
+    expect(refit.ok).toBe(true);
+    if (refit.ok) expect(Math.hypot(refit.velocityMps.x, refit.velocityMps.y, refit.velocityMps.z)).toBeCloseTo(r!.launch.ballSpeedMps.value as number, 0);
   });
 
   it("degrees in the contract are consistent with the SI velocity vector", async () => {

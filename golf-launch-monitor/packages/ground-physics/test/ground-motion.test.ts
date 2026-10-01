@@ -38,11 +38,12 @@ function run(overrides: Partial<GroundMotionInput> = {}, terrain: TerrainQuery =
 
 describe("ground model constants", () => {
   it("exposes the version and documented defaults", () => {
-    expect(GROUND_MODEL_VERSION).toBe("glm-ground-0.2.0-provisional");
+    expect(GROUND_MODEL_VERSION).toBe("glm-ground-0.3.0-provisional");
     expect(DEFAULT_GROUND_SETTINGS).toEqual({
       rollTimestepS: 0.001,
       restSpeedMps: 0.01,
       minBounceNormalSpeedMps: 0.25,
+      maxRollEntrySpeedMps: 15,
       maxBounces: 20,
       slipToRollToleranceMps: 1e-3,
     });

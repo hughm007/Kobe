@@ -65,7 +65,9 @@ export type GroundMotionInput = {
  * BounceEvent. The crater is local to the impact: what follows uses the TRUE surface normal.
  * If the outgoing speed along it exceeds minBounceNormalSpeedMps, fewer than maxBounces have
  * been resolved and ground time remains, the injected hop flies the ball to its next contact;
- * otherwise the normal component is removed and simulateRoll takes over. Contacts on terminal surfaces end
+ * otherwise the normal component is removed and simulateRoll takes over — unless the ball is still
+ * faster than maxRollEntrySpeedMps along the surface, in which case it keeps skipping at exactly
+ * minBounceNormalSpeedMps (continuity across the threshold; see GroundSettings). Contacts on terminal surfaces end
  * the motion at once without a bounce. A hop that ends without contact ends the motion with
  * "max-time"; a hop reporting "numerical-failure" throws.
  */
@@ -79,6 +81,9 @@ export function simulateGroundMotion(input: GroundMotionInput): GroundMotionResu
   }
   if (!Number.isFinite(settings.minBounceNormalSpeedMps) || settings.minBounceNormalSpeedMps < 0) {
     throw new RangeError("simulateGroundMotion: minBounceNormalSpeedMps must be >= 0");
+  }
+  if (Number.isNaN(settings.maxRollEntrySpeedMps) || settings.maxRollEntrySpeedMps < 0) {
+    throw new RangeError("simulateGroundMotion: maxRollEntrySpeedMps must be >= 0 (Infinity disables forced skips)");
   }
   const first = input.firstContact;
   assertContact(first, "firstContact");
@@ -149,10 +154,23 @@ export function simulateGroundMotion(input: GroundMotionInput): GroundMotionResu
     // Along the TRUE normal; may be negative after a backward bounce out of a crater, in which
     // case the ball rolls with that (into-ground) component removed.
     const outgoingNormalSpeed = dot(impact.velocityMps, n);
-    const hops =
-      outgoingNormalSpeed > settings.minBounceNormalSpeedMps &&
-      bounces.length < settings.maxBounces &&
-      contact.timeS < deadlineS;
+    const canHop = bounces.length < settings.maxBounces && contact.timeS < deadlineS;
+    let hopVelocity = impact.velocityMps;
+    let hops = canHop && outgoingNormalSpeed > settings.minBounceNormalSpeedMps;
+    if (canHop && !hops) {
+      // Too fast to start rolling: keep skipping at the threshold normal speed (see
+      // GroundSettings.maxRollEntrySpeedMps), so the result is continuous across the threshold.
+      const skip = skipAtThreshold(impact.velocityMps, n, outgoingNormalSpeed, settings);
+      if (skip !== null) {
+        hopVelocity = skip;
+        hops = true;
+      }
+    }
+    if (hopVelocity !== impact.velocityMps) {
+      // Record what the ball actually leaves the contact with.
+      const last = bounces[bounces.length - 1] as BounceEvent;
+      bounces[bounces.length - 1] = { ...last, outgoingVelocityMps: copyVec(hopVelocity) };
+    }
     if (!hops) {
       const roll = simulateRoll({
         positionM: contact.positionM,
@@ -177,7 +195,7 @@ export function simulateGroundMotion(input: GroundMotionInput): GroundMotionResu
     const hop = input.hop(
       {
         positionM: contact.positionM,
-        velocityMps: impact.velocityMps,
+        velocityMps: hopVelocity,
         angularVelocityRadPerSec: impact.angularVelocityRadPerSec,
       },
       contact.timeS,
@@ -202,6 +220,21 @@ export function simulateGroundMotion(input: GroundMotionInput): GroundMotionResu
     }
     contact = next;
   }
+}
+
+/**
+ * Outgoing velocity for a forced skip: normal component raised to minBounceNormalSpeedMps and
+ * the tangential component scaled down so |v| is unchanged (no energy is created). Null when the
+ * tangential speed is at or below maxRollEntrySpeedMps (the ball may roll) or the threshold is 0.
+ */
+function skipAtThreshold(v: Vec3, n: Vec3, normalSpeed: number, settings: GroundSettings): Vec3 | null {
+  const vt = addScaled(v, n, -normalSpeed);
+  const tangential = Math.hypot(vt.x, vt.y, vt.z);
+  const target = settings.minBounceNormalSpeedMps;
+  if (!(target > 0) || !(tangential > settings.maxRollEntrySpeedMps)) return null;
+  const speedSq = tangential * tangential + normalSpeed * normalSpeed;
+  const scaleT = Math.sqrt(Math.max(0, speedSq - target * target)) / tangential;
+  return addScaled({ x: vt.x * scaleT, y: vt.y * scaleT, z: vt.z * scaleT }, n, target);
 }
 
 export type GroundDistances = {

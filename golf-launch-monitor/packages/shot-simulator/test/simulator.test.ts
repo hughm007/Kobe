@@ -1,4 +1,4 @@
-import { DEFAULT_INDOOR_ENVIRONMENT, DEFAULT_SIMULATION_SETTINGS, getBallProfile } from "@glm/ballistics";
+import { createEnvironmentProfile, DEFAULT_INDOOR_ENVIRONMENT, DEFAULT_SIMULATION_SETTINGS, getBallProfile } from "@glm/ballistics";
 import { buildLaunchState, fitLaunchState, gravityOnlyTrajectoryModel, resolveSpin, launchMeasurementsFromFit } from "@glm/launch-state";
 import type { BallPosition3dObservation, LaunchState, SpinObservation, Vec3 } from "@glm/shared-types";
 import { createFlatRangeTerrain, createRegionTerrain } from "@glm/terrain-engine";
@@ -176,4 +176,73 @@ describe("simulateShot", () => {
     expect(a.result.metrics.carryM.value as number).toBeGreaterThan(i.p05 - 1);
     expect(a.result.metrics.carryM.value as number).toBeLessThan(i.p95 + 1);
   });
+});
+
+describe("ball travelling backward along the target line (regression: unsigned carry/total read as forward)", () => {
+  const popUp = (speed: number, vlaDeg: number, rpm: number) => {
+    const a = (vlaDeg * Math.PI) / 180;
+    const w = (rpm * 2 * Math.PI) / 60;
+    return launchFrom({ x: speed * Math.cos(a), y: 0, z: speed * Math.sin(a) }, { omega: { x: 0, y: -w, z: 0 }, observed: true }); // backspin: omega x v points up
+  };
+
+  it("a steep pop-up that comes back behind the tee is flagged and warned, not silently a forward total", () => {
+    const sim = simulateShot(popUp(20, 80, 8000), ctx());
+    if (!sim.ok) throw new Error(sim.reason);
+    const r = sim.result;
+    expect(r.finalPositionM.x).toBeLessThan(0);
+    // The documented definition (unsigned horizontal distance) is kept ...
+    expect(r.metrics.totalM.value as number).toBeCloseTo(Math.hypot(r.finalPositionM.x, r.finalPositionM.y), 9);
+    // ... but the backward travel is visible on the value and in the shot warnings.
+    expect(r.metrics.totalM.qualityFlags).toContain("rested-behind-launch-point");
+    expect(r.warnings.join(" ")).toMatch(/came to rest behind the launch point/);
+  });
+
+  it("a strong headwind that blows the ball back behind the tee flags carry and total", () => {
+    const windy = createEnvironmentProfile({ indoorMode: false, windMps: { x: -25, y: 0, z: 0 } });
+    const sim = simulateShot(popUp(40, 28, 8000), ctx({ environment: windy }));
+    if (!sim.ok) throw new Error(sim.reason);
+    expect(sim.result.landing.positionM.x).toBeLessThan(0);
+    expect(sim.result.metrics.carryM.qualityFlags).toContain("landed-behind-launch-point");
+    expect(sim.result.metrics.totalM.qualityFlags).toContain("rested-behind-launch-point");
+    expect(sim.result.warnings.join(" ")).toMatch(/landed behind the launch point/);
+  });
+
+  it("a normal forward shot carries no backward flag", () => {
+    const sim = simulateShot(popUp(70, 11, 2700), ctx());
+    if (!sim.ok) throw new Error(sim.reason);
+    expect(sim.result.metrics.carryM.qualityFlags).not.toContain("landed-behind-launch-point");
+    expect(sim.result.metrics.totalM.qualityFlags).not.toContain("rested-behind-launch-point");
+  });
+});
+
+describe("ground-phase continuity near zero launch angle (regression: total jumped 2.6x for a 0.02 deg change)", () => {
+  const total = (mph: number, vlaDeg: number): number => {
+    const s = mph * 0.44704;
+    const a = (vlaDeg * Math.PI) / 180;
+    const w = (2000 * 2 * Math.PI) / 60;
+    const sim = simulateShot(
+      launchFrom({ x: s * Math.cos(a), y: 0, z: s * Math.sin(a) }, { omega: { x: 0, y: -w, z: 0 }, observed: true }),
+      ctx(),
+    );
+    if (!sim.ok) throw new Error(sim.reason);
+    return sim.result.metrics.totalM.value as number;
+  };
+
+  it("the hop/roll threshold no longer switches regimes: 120 mph at 0.21 vs 0.22 deg differ by < 2 %", () => {
+    // Before: 349.7 m (rolled from the first contact at ~54 m/s) vs 224.4 m (hopped).
+    const a = total(120, 0.21);
+    const b = total(120, 0.22);
+    expect(Math.abs(a - b) / b).toBeLessThan(0.02);
+  });
+
+  for (const mph of [120, 160]) {
+    it(`${mph} mph: total varies smoothly over launch angle -1..1 deg (adjacent 0.05 deg steps < 6 %)`, () => {
+      let previous: number | null = null;
+      for (let k = -20; k <= 20; k++) {
+        const t = total(mph, k * 0.05);
+        if (previous !== null) expect(Math.abs(t - previous) / previous, `${mph} mph at ${(k * 0.05).toFixed(2)} deg`).toBeLessThan(0.06);
+        previous = t;
+      }
+    }, 60_000);
+  }
 });

@@ -9,6 +9,7 @@ import {
   calibrationFactor,
   ESTIMATOR_VERSION,
   fitLaunchState,
+  LAUNCH_KINEMATICS_LIMITS,
   fitQualityFactor,
   gravityOnlyTrajectoryModel,
   launchMeasurementsFromFit,
@@ -136,7 +137,14 @@ describe("buildLaunchState", () => {
       expect(state[key].source, key).toBe("unavailable");
       expect(state[key].qualityFlags, key).toContain("no-club-sensor");
     }
-    expect(state.confidenceFactors.map((c) => c.id)).toEqual(["fit-quality", "observation-count", "spin-quality", "calibration", "trigger"]);
+    expect(state.confidenceFactors.map((c) => c.id)).toEqual([
+      "fit-quality",
+      "observation-count",
+      "launch-kinematics",
+      "spin-quality",
+      "calibration",
+      "trigger",
+    ]);
     expect(state.validity).toBe("valid");
     expect(state.overallConfidence).toBeGreaterThan(0.7);
     expect(state.rejectionReasons).toEqual([]);
@@ -294,6 +302,75 @@ describe("buildLaunchState", () => {
     });
     expect(measuredSpin.angularVelocity.source).toBe("measured-camera");
     expect(() => buildLaunchState(baseInput({ fit, spin: measuredSpin }))).toThrow(/labelled "measured-camera" in a synthetic/);
+  });
+
+  describe("kinematic plausibility gate (regression: false triggers and ricochets were valid measured shots)", () => {
+    /** Live camera stream, green calibration, measured spin: everything else says "valid". */
+    function liveMeasured(v0: Vec3, seed = 7): LaunchState {
+      const track = syntheticTrack({ seed, count: 20, v0, sigmasM: [0.001, 0.001, 0.001] });
+      const fit = fitLaunchState(track.observations, { trajectoryModel: model });
+      if (!fit.ok) throw new Error(fit.reason);
+      const { velocityMps } = launchMeasurementsFromFit(fit, "measured-camera");
+      const spin = resolveSpin({
+        spinObservations: [
+          { ...spinObs({ x: 70, y: 0, z: 14 }, "marked-ball"), angularVelocityRadPerSec: { x: 0, y: 280, z: 0 } },
+        ],
+        velocity: velocityMps,
+        clubCategory: null,
+        playerSpinHistory: [],
+        allowGenericFallback: false,
+        measuredSource: "measured-camera",
+      });
+      return buildLaunchState(
+        baseInput({
+          fit,
+          spin,
+          dataOrigin: "live",
+          measuredSource: "measured-camera",
+          extraFactors: [calibrationFactor("green", "live"), triggerFactor(0.95)],
+        }),
+      );
+    }
+    const gate = (s: LaunchState) => s.confidenceFactors.find((f) => f.id === "launch-kinematics");
+
+    it("a normal launch passes without raising the graded confidence (weight 0)", () => {
+      const state = liveMeasured({ x: 68, y: 2.4, z: 13.5 });
+      expect(state.validity).toBe("valid");
+      expect(gate(state)).toMatchObject({ score: 1, weight: 0, blocking: false });
+    });
+
+    it("a ball that never moved (false trigger) is invalid with confidence 0 and keeps its diagnostics", () => {
+      const state = liveMeasured({ x: 0, y: 0, z: 0 });
+      expect(state.validity).toBe("invalid");
+      expect(state.overallConfidence).toBe(0);
+      expect(gate(state)).toMatchObject({ score: 0, blocking: true });
+      expect(state.rejectionReasons.join(" ")).toMatch(/Ball did not leave the hitting zone/);
+      // Diagnostics are preserved, and the noise-driven direction is not reported as a number.
+      expect(state.fitDiagnostics).not.toBeNull();
+      expect(state.ballSpeedMps.value as number).toBeLessThan(LAUNCH_KINEMATICS_LIMITS.minBallSpeedMps);
+      expect(state.horizontalLaunchAngleDeg.value).toBeNull();
+      expect(state.horizontalLaunchAngleDeg.qualityFlags).toContain("horizontal-launch-angle-undefined-below-noise");
+    });
+
+    it("a ball moving back toward the golfer (ricochet) is invalid", () => {
+      const state = liveMeasured({ x: -40, y: 0.5, z: 8 });
+      expect(state.validity).toBe("invalid");
+      expect(state.overallConfidence).toBe(0);
+      expect(state.rejectionReasons.join(" ")).toMatch(/toward or behind the golfer/);
+    });
+
+    it("a near-vertical launch is invalid and its noise-driven direction is unavailable", () => {
+      const state = liveMeasured({ x: 0.01, y: 0.01, z: 40 });
+      expect(state.validity).toBe("invalid");
+      expect(state.rejectionReasons.join(" ")).toMatch(/near vertical/);
+      expect(state.horizontalLaunchAngleDeg.value).toBeNull();
+    });
+
+    it("a 6 m/s forward launch (just above the floor) is not rejected by the gate", () => {
+      const state = liveMeasured({ x: 5.8, y: 0, z: 1.5 });
+      expect(gate(state)?.blocking).toBe(false);
+      expect(state.horizontalLaunchAngleDeg.value).not.toBeNull();
+    });
   });
 
   it("validates the result against LaunchStateSchema (throws on contract violations)", () => {

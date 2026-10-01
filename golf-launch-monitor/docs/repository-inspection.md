@@ -67,18 +67,23 @@ What was looked for and not found:
   `datasets/`, `scripts/` and `tests/`.
 - **No existing files touched.** `git show --name-only` on every golf commit lists only
   `golf-launch-monitor/**` and the workflow file. The workflow was added in `88e7e33` and
-  edited in `212a27a`.
+  edited in `212a27a` and `e5e16e6`.
 - **CI workflow.** It runs only for changes to `golf-launch-monitor/**` or to itself, with
-  `permissions: contents: read`. Steps: `npm ci`, typecheck, tests, JSON-Schema freshness, and
-  the desktop UI build.
+  `permissions: contents: read`, on Node 22. Steps: `npm ci`, typecheck, tests (all Vitest
+  projects, including the desktop UI), JSON-Schema freshness, and
+  `npm run build --workspaces --if-present` (today only the desktop UI defines a build).
 
 ## 6. CI status at the time of writing
 
-Every run of the workflow on this branch has failed so far:
+Checked with `gh run list --workflow golf-launch-monitor.yml` on 2026-10-01. The three most recent
+runs passed; every earlier run failed.
 
 | Run | Commit | Result |
 |---|---|---|
-| `36918142050` (latest) | `212a27a` | `npm ci`, typecheck, tests and schema check **passed**. **Build desktop UI failed.** Reproduced locally on the committed tree: npm reports `No workspaces found: --workspace=@glm/desktop-ui`, because `apps/desktop-ui` was not yet committed. `--if-present` does not cover a missing workspace. |
+| `36926370765` (latest) | `432192b` (desktop range UI) | **Passed** |
+| `36925692922` | `82ce6d2` (ground model v0.2) | **Passed** |
+| `36923294949` | `e5e16e6` (integration fixes, package tests, documentation set; build step changed to `--workspaces --if-present`) | **Passed** |
+| `36918142050` | `212a27a` | `npm ci`, typecheck, tests and schema check passed. **Build desktop UI failed**: npm reported `No workspaces found: --workspace=@glm/desktop-ui`, because `apps/desktop-ui` was not yet committed; `--if-present` does not cover a missing named workspace. Fixed in `e5e16e6`. |
 | `36917710201` | `e856cd6` | Tests failed: the golden test exceeded Vitest's 5 s default timeout on the runner. Fixed in `212a27a` (`testTimeout: 120_000`). |
 | Four earlier runs | `88e7e33`, `a745ea1`, `fe2a3f7`, `7106d1f` | Typecheck failed. These commits did not yet contain every package (`88e7e33` says so in its message); the cause was not investigated further. |
 
@@ -90,7 +95,7 @@ Re-check with `gh run list --workflow golf-launch-monitor.yml` before relying on
 |---|---|---|
 | **Unrelated host repository** | Every agent session started in Kobe loads `CLAUDE.md`, which imports the Service Pow LAW: ad-agency routing rules, spend gates and skill listings that have nothing to do with golf. Golf history is interleaved with agency commits. Repository access, secrets and CI permissions are shared between an agency's client material and an engineering product. The parent `.gitignore` also applies repo-wide; for example it ignores `*.wav`, `*.mp3` and `*.flac`, so recorded microphone-trigger audio would be silently ignored anywhere in the subtree. | **Extract the subtree** (below). |
 | No hardware | Nothing measured exists. Camera, radar and hybrid adapters are stubs that throw `HardwareNotAvailableError`; capture, calibration and vision are Planned (Phase 2) — not implemented. | Phase 1 runs only on synthetic, replay and developer manual data, each labelled as such. |
-| Physics coefficients are provisional | Aerodynamic coefficients are not fit to data; the plausibility envelope is circular. Ground parameters are judgements, and total distance is model-dependent; the ground model is being upgraded at the time of writing. | Versioned models, applicability warnings, confidence caps; see [physics-model.md](physics-model.md) and [terrain-model.md](terrain-model.md). |
+| Physics coefficients are provisional | Aerodynamic coefficients are not fit to data; the plausibility envelope is circular. Ground parameters (ground model v0.2) are judgements, and total distance is model-dependent; drives reach the ground envelope only through an extrapolated rolling-resistance term. | Versioned models, applicability warnings, confidence caps; see [physics-model.md](physics-model.md) and [terrain-model.md](terrain-model.md). Fitting to measured trajectories is Phase 7. |
 | No reference-monitor data | Nothing can be VERIFIED. No accuracy statement is possible. | `@glm/validation` is ready for paired data ([../datasets/reference-measurements/README.md](../datasets/reference-measurements/README.md)). |
 | Literature unverified | Every cited figure is a secondary source, not verified on page. | Labelled in the model docs; re-check against primary sources when access allows. |
 | Sandbox network policy varies | Downloads that work today may be blocked tomorrow, and vice versa. | Stay on npm-only dependencies; commit the lockfile. |

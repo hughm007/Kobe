@@ -134,7 +134,31 @@ export type BuildMetricsInput = {
   readonly environment: EnvironmentProfile;
   readonly ballProfile: BallAerodynamicsProfile;
   readonly modelVersion: string;
+  /**
+   * Whether the ball landed / came to rest behind the launch point along the target line
+   * (x < launch x; see behindLaunchPoint). Carry and total are unsigned horizontal distances
+   * (docs/coordinate-system.md §5), so this is the only signal that the distance runs backward.
+   */
+  readonly behindLaunch?: { readonly landing: boolean; readonly rest: boolean };
 };
+
+/** Tolerance before a landing / rest point counts as behind the launch point, m. */
+export const BEHIND_LAUNCH_TOLERANCE_M = 0.01;
+export const BALL_LANDED_BEHIND_WARNING =
+  "Ball landed behind the launch point (it travelled backward along the target line); carry is a distance, not forward progress.";
+export const BALL_RESTED_BEHIND_WARNING =
+  "Ball came to rest behind the launch point (it travelled backward along the target line); total is a distance, not forward progress.";
+
+/** Landing / rest behind the launch point along +X (target line), beyond BEHIND_LAUNCH_TOLERANCE_M. */
+export function behindLaunchPoint(launchPositionM: Vec3, landingPositionM: Vec3, restPositionM: Vec3): {
+  readonly landing: boolean;
+  readonly rest: boolean;
+} {
+  return {
+    landing: landingPositionM.x - launchPositionM.x < -BEHIND_LAUNCH_TOLERANCE_M,
+    rest: restPositionM.x - launchPositionM.x < -BEHIND_LAUNCH_TOLERANCE_M,
+  };
+}
 
 function isEstimatedLike(source: CalculationInput["source"]): boolean {
   return ESTIMATED_SOURCES.has(source) || source === "manual";
@@ -192,6 +216,8 @@ export function buildShotMetrics(input: BuildMetricsInput): {
       factor *= METRIC_CONFIDENCE_FACTORS.lateralWithAssumedAxis;
       flags.push("spin-axis-assumed-zero");
     }
+    if (key === "carryM" && input.behindLaunch?.landing) flags.push("landed-behind-launch-point");
+    if (key === "totalM" && input.behindLaunch?.rest) flags.push("rested-behind-launch-point");
     if (spec.cls === "curve" && axisAssumed) {
       // Curve is driven by spin-axis tilt; with an unmeasured axis it would be a fabricated zero.
       value = null;
@@ -216,6 +242,8 @@ export function buildShotMetrics(input: BuildMetricsInput): {
   if (axisAssumed && launch.spinMode !== "unavailable") {
     warnings.push("Spin axis not measured; curve is unavailable and offline values assume a zero spin axis.");
   }
+  if (input.behindLaunch?.landing) warnings.push(BALL_LANDED_BEHIND_WARNING);
+  if (input.behindLaunch?.rest) warnings.push(BALL_RESTED_BEHIND_WARNING);
   warnings.push("Total, bounce and roll use a provisional ground model; total is more model-dependent than carry.");
 
   const metrics: ShotMetrics = {

@@ -1,3 +1,4 @@
+import { addMatrices } from "@glm/core-math";
 import { COORDINATE_SYSTEM_VERSION, deepFreeze, LaunchStateSchema, MEASURED_SOURCES, SCHEMA_VERSION } from "@glm/shared-types";
 import type {
   ConfidenceFactor,
@@ -6,12 +7,13 @@ import type {
   ImpactLocation,
   IsoUtcTimestamp,
   LaunchState,
+  Matrix,
   Measurement,
   MeasurementSource,
   SpinMode,
   Vec3,
 } from "@glm/shared-types";
-import { aggregateConfidence, fitQualityFactor, observationCountFactor } from "./confidence";
+import { aggregateConfidence, fitQualityFactor, launchKinematicsFactor, observationCountFactor } from "./confidence";
 import { uniqueStrings } from "./constants";
 import { deriveBallSpeedMps, deriveHorizontalLaunchAngleDeg, deriveVerticalLaunchAngleDeg } from "./derive";
 import type { LaunchFitFailure, LaunchFitSuccess } from "./fit";
@@ -34,33 +36,77 @@ function requireMeasuredLabel(source: MeasurementSource, fn: string): Exclude<Me
 }
 
 /**
+ * What the launch fit itself cannot see about its own position and velocity, applied to each
+ * launch value (not only to overallConfidence), so no value looks more certain than the
+ * evidence behind it:
+ * - confidenceCap: shot-level sensor evidence that affects every tracked position
+ *   (calibration, sensor health including sync drift; see launchValueSensorEvidence);
+ * - extra covariance: model error outside the fit covariance, e.g. the refit's dependence on
+ *   an unmeasured spin, added to the fit covariance blocks;
+ * - qualityFlags: why, on position and velocity (the derived scalars inherit them).
+ */
+export type LaunchValueAdjustment = {
+  readonly confidenceCap?: number;
+  readonly extraPositionCovarianceM2?: Matrix;
+  readonly extraVelocityCovarianceM2PerS2?: Matrix;
+  readonly qualityFlags?: readonly string[];
+};
+
+function adjustedCovariance(base: Matrix, extra: Matrix | undefined, name: string): Matrix {
+  if (extra === undefined) return base;
+  if (extra.length !== 3 || extra.some((row) => row.length !== 3 || row.some((v) => !Number.isFinite(v)))) {
+    throw new Error(`launchMeasurementsFromFit: ${name} must be a finite 3x3 matrix`);
+  }
+  return addMatrices(base, extra);
+}
+
+/**
  * Position and velocity measurements from a successful fit, labelled with the stream's
- * measured source and carrying the fit covariance blocks. Confidence is the lower of the
- * fit-quality and observation-count factor scores. Use this to feed resolveSpin with the same
- * velocity measurement buildLaunchState will record.
+ * measured source. Uncertainty: the fit covariance blocks plus any extra covariance from the
+ * adjustment. Confidence: the lower of the fit-quality score (judged on that total velocity
+ * covariance), the observation-count score and the adjustment's confidenceCap. Use this to feed
+ * resolveSpin with the same velocity measurement buildLaunchState will record (pass the same
+ * adjustment to both).
  */
 export function launchMeasurementsFromFit(
   fit: LaunchFitSuccess,
   measuredSource: MeasurementSource,
+  adjustment: LaunchValueAdjustment = {},
 ): { readonly positionM: Measurement<Vec3>; readonly velocityMps: Measurement<Vec3> } {
   const source = requireMeasuredLabel(measuredSource, "launchMeasurementsFromFit");
-  const confidence = Math.min(fitQualityFactor(fit.diagnostics, fit).score, observationCountFactor(fit.diagnostics.inlierCount).score);
+  const cap = adjustment.confidenceCap ?? 1;
+  if (!(Number.isFinite(cap) && cap >= 0 && cap <= 1)) {
+    throw new Error(`launchMeasurementsFromFit: confidenceCap must be in [0, 1], got ${cap}`);
+  }
+  const positionCovariance = adjustedCovariance(
+    fit.diagnostics.positionCovarianceM2,
+    adjustment.extraPositionCovarianceM2,
+    "extraPositionCovarianceM2",
+  );
+  const velocityCovariance = adjustedCovariance(
+    fit.diagnostics.velocityCovarianceM2PerS2,
+    adjustment.extraVelocityCovarianceM2PerS2,
+    "extraVelocityCovarianceM2PerS2",
+  );
+  const quality = fitQualityFactor({ ...fit.diagnostics, velocityCovarianceM2PerS2: velocityCovariance }, fit).score;
+  const confidence = Math.min(quality, observationCountFactor(fit.diagnostics.inlierCount).score, cap);
+  const qualityFlags = [...fit.qualityFlags, ...(adjustment.qualityFlags ?? [])];
   return {
     positionM: makeMeasurement<Vec3>({
       value: fit.positionM,
       unit: "m",
       source,
       confidence,
-      uncertainty: { covariance: fit.diagnostics.positionCovarianceM2, unit: "m" },
-      qualityFlags: fit.qualityFlags,
+      uncertainty: { covariance: positionCovariance, unit: "m" },
+      qualityFlags,
     }),
     velocityMps: makeMeasurement<Vec3>({
       value: fit.velocityMps,
       unit: "m/s",
       source,
       confidence,
-      uncertainty: { covariance: fit.diagnostics.velocityCovarianceM2PerS2, unit: "m/s" },
-      qualityFlags: fit.qualityFlags,
+      uncertainty: { covariance: velocityCovariance, unit: "m/s" },
+      qualityFlags,
     }),
   };
 }
@@ -85,13 +131,19 @@ export type BuildLaunchStateInput = {
   readonly spin: SpinResolution | null;
   /**
    * Calibration / trigger / ball-zone / sensor-health / other factors. The builder adds
-   * "fit-quality", "observation-count" and "spin-quality" itself; passing those ids throws.
+   * "fit-quality", "observation-count", "launch-kinematics" and "spin-quality" itself; passing
+   * those ids throws.
    */
   readonly extraFactors: readonly ConfidenceFactor[];
   readonly extraWarnings?: readonly string[];
+  /**
+   * Per-value evidence for the fitted position/velocity (see LaunchValueAdjustment). Pass the
+   * same object given to launchMeasurementsFromFit for the spin resolution. Default: none.
+   */
+  readonly launchValueAdjustment?: LaunchValueAdjustment;
 };
 
-const BUILT_IN_FACTOR_IDS = new Set(["fit-quality", "observation-count", "spin-quality"]);
+const BUILT_IN_FACTOR_IDS = new Set(["fit-quality", "observation-count", "launch-kinematics", "spin-quality"]);
 const NO_CLUB_SENSOR = ["no-club-sensor"] as const;
 
 /** Phase 1 has no club sensor: every club-delivery field is unavailable. */
@@ -142,8 +194,12 @@ export function buildLaunchState(input: BuildLaunchStateInput): LaunchState {
   let spinMode: SpinMode;
 
   if (fit.ok) {
-    ({ positionM, velocityMps } = launchMeasurementsFromFit(fit, input.measuredSource));
-    factors.push(fitQualityFactor(fit.diagnostics, fit), observationCountFactor(fit.diagnostics.inlierCount));
+    ({ positionM, velocityMps } = launchMeasurementsFromFit(fit, input.measuredSource, input.launchValueAdjustment));
+    factors.push(
+      fitQualityFactor(fit.diagnostics, fit),
+      observationCountFactor(fit.diagnostics.inlierCount),
+      launchKinematicsFactor(fit.velocityMps),
+    );
     warnings.push(...fit.warnings);
     if (input.spin) {
       spinMode = input.spin.spinMode;

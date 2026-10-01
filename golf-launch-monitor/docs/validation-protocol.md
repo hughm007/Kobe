@@ -6,13 +6,17 @@ coordinate system `glm-world-1.0`.
 > **Status: nothing in this repository is VERIFIED.** No hardware measurement and no reference
 > measurement exists (`datasets/raw-shots/` and `datasets/reference-measurements/` are empty).
 > The tooling below is TESTED on hand-built inputs, and the end-to-end checks are TESTED on
-> **synthetic** data only. Validation against real shots is Planned (Phase 3) — not implemented.
+> **synthetic** data only. Validation against real shots (reference-monitor import, accuracy
+> dashboard, held-out report, release readiness) is Planned (Phase 7, validation and hardening)
+> — not implemented. It also needs measured launch data: stereo capture (Phase 2) and spin
+> measurement (Phase 3) do not exist yet.
 
 Related: [coordinate-system.md](coordinate-system.md) (definitions and signs; binding),
 [sensor-specification.md](sensor-specification.md), [calibration-procedure.md](calibration-procedure.md),
 [physics-model.md](physics-model.md), [terrain-model.md](terrain-model.md),
 [limitations.md](limitations.md), [product-requirements.md](product-requirements.md) §8 (phase
-acceptance), [../datasets/reference-measurements/README.md](../datasets/reference-measurements/README.md).
+acceptance) and §9 (phase plan),
+[../datasets/reference-measurements/README.md](../datasets/reference-measurements/README.md).
 
 ## 1. What validation means here
 
@@ -43,18 +47,19 @@ the plausibility envelope ([physics-model.md](physics-model.md) §9, circular), 
 |---|---|---|---|
 | Error statistics | `errorStats`, `pairedErrors`, `groupedErrorStats`, `binLabel`, `intervalCoverage`, `formatStat`, `accuracyTableMarkdown` | TESTED | `stats.test.ts`: hand-computed values for odd and even n; missing pairs skipped and counted, never zero-filled; zero treated as data; NaN throws; a group with only missing values throws by default; `__proto__` group kept; half-open bins; closed-interval coverage |
 | Partitions with held-out guard | `assignPartition`, `partitionUnit`, `fnv1a32`, `fmix32`, `PARTITION_ALGORITHM`, `DEFAULT_PARTITION_FRACTIONS`, `PartitionedDataset` | TESTED | `partition.test.ts`: published FNV-1a and MurmurHash3 test vectors; literal partition vectors other tools must reproduce; ≈ 60/20/20 over 10k sequential ids; salt reshuffles; bad fractions rejected; every item in exactly one partition, order-independent; held-out refused without the exact purpose and acknowledgement; every access logged; held-out items unreachable except through the guard; duplicate ids rejected |
-| Reference normalization | `ReferenceMeasurementSchema`, `normalizeReference`, `compareToReference`, `REFERENCE_METRIC_DEFINITIONS`, `COMPARABLE_METRICS` | TESTED | `reference.test.ts`: exact unit factors and sign flips, each logged; no-op when conventions match; unknown units (incl. `Object.prototype` names), wrong dimensions and foreign definitions refused; landing-at-launch-height carry and other landing metrics refused; unknown carry definition and unknown ball-speed point refused; malformed records throw; errors computed in our sign convention |
+| Reference normalization | `ReferenceMeasurementSchema`, `normalizeReference`, `compareToReference`, `REFERENCE_METRIC_DEFINITIONS`, `COMPARABLE_METRICS`, `ReferenceComparisonContext`, `LANDING_HEIGHT_EQUIVALENCE_TOLERANCE_M` | TESTED | `reference.test.ts`: exact unit factors and sign flips, each logged; no-op when conventions match; unknown units (incl. `Object.prototype` names), wrong dimensions and foreign definitions refused; landing-at-launch-height carry and other landing metrics refused without a context; with a per-shot context, compared only within the ±0.05 m landing-height tolerance (inclusive boundary; elevated green, unknown height and just-outside cases refused) and the assertion logged; unknown carry definition and unknown ball-speed point refused; malformed records and contexts throw; errors computed in our sign convention |
 | Synthetic self-consistency | `tests/integration/pipeline.test.ts` | TESTED (synthetic only) | "recovers launch conditions from noisy observations within tight tolerances" (ball speed < 0.25 m/s, launch angles < 0.2°, spin < max(60 rpm, 5 %), default synthetic noise) |
 | Uncertainty calibration | `tests/integration/uncertainty-calibration.test.ts` | TESTED (synthetic only) | "1-sigma ball speed and launch angle intervals cover the truth ~68 % of the time" (80 seeded shots; accepted band 0.52–0.84, about ±3 binomial SD); "the Monte Carlo 90 % carry interval covers the true carry most of the time" (24 shots, 40 samples, ≥ 70 %) |
 | Replay truth check | `tests/replay/replay.test.ts` | TESTED (synthetic only) | "estimated launch conditions match the header truth (validation use of truth only)" |
 | Golden regression | `tests/golden/golden.test.ts` | TESTED | Detects any change (1e-9 relative); says nothing about correctness |
 
-Run on 2026-10-01: `npx vitest run packages/validation` → 3 files, 41 tests passed;
+Run on 2026-10-01: `npx vitest run packages/validation` → 3 files, 50 tests passed;
 `npx vitest run tests/integration` → 2 files, 15 tests passed.
 
-**Not implemented (Planned, Phase 3):** a loader for reference files, a pairing tool, a report
-generator, experiment tracking (§7), paired version-comparison statistics (§8), a documented
-carry-at-launch-height conversion (§5.3), and any real data.
+**Not implemented (Planned, Phase 7):** a loader for reference files (reference-monitor
+import), a pairing tool, an accuracy dashboard and report generator, experiment tracking (§7),
+paired version-comparison statistics (§8), stable capture-time shot ids (§3.3), our own
+carry-at-launch-height metric (§5.3), release-readiness criteria, and any real data.
 
 ## 3. Dataset format
 
@@ -63,7 +68,7 @@ carry-at-launch-height conversion (§5.3), and any real data.
 | Artifact | Format | Location |
 |---|---|---|
 | Raw recording | `glm-replay-1` JSON Lines with `dataOrigin: "live"`, the device's `sensorConfiguration` (camera/radar/hybrid) and its `CalibrationRecord` in the header ([../datasets/README.md](../datasets/README.md)) | `datasets/raw-shots/` (git-ignored) |
-| Processed shots | `ShotRecord`s in the `glm-shot-export` JSON envelope; each records coordinate-system, schema, calibration, sensor-configuration, ball-profile, physics (`air+ground` tag), estimator and software versions | `datasets/raw-shots/` |
+| Processed shots | `ShotRecord`s in the `glm-shot-export` JSON envelope; each records coordinate-system, schema, calibration, sensor-configuration, ball-profile, physics (`<air>+<ground>+<shot simulator>` tag), estimator and software versions | `datasets/raw-shots/` |
 
 `compareToReference` needs our values in SI and our sign conventions:
 
@@ -101,10 +106,19 @@ ball speed is refused until the device's measurement point is documented (§5.2)
 ### 3.3 Pairing
 
 - The key is `ReferenceMeasurement.shotId` = our `ShotRecord.shotId`.
-- **Rule (Planned — not implemented):** shot ids are assigned once, at capture, and preserved
-  when a recording is re-processed. Today ids come from the injected `nextShotId` at processing
-  time (e.g. `deterministicIds()` yields `shot-0001`, `shot-0002`, …), so re-processing with a
-  different id provider would change ids, and with them the partitions (§4).
+- **Shot ids are assigned at processing time.** They come from the injected `nextShotId` when a
+  shot is processed (e.g. `deterministicIds()` yields `shot-0001`, `shot-0002`, …; the replay CLI
+  uses `replay-shot-0001`, …). Re-processing a recording with a different id provider, or a
+  different shot order, changes the ids, and with them the pairs and the partitions (§4).
+- **Until stable ids exist, key the dataset by capture, not by processing.** Derive a key from
+  the recording itself, for example `<SHA-256 of the replay file>:<capture index of the shot>`
+  (the order of its first trigger in the file), record it in the campaign manifest next to our
+  `shotId` and the reference's row id, and use it as the identity for pairing and partitioning:
+  pass it as the `shotId` field of the items given to `PartitionedDataset` (and to
+  `assignPartition`), and write it into `ReferenceMeasurement.shotId`. Re-processing then cannot
+  move a shot between partitions.
+- **Rule (Planned, Phase 7 — not implemented):** shot ids assigned once, at capture, and
+  preserved when a recording is re-processed.
 - A campaign manifest (proposal) lists per shot: capture index, our `shotId`, the reference's
   own row id and time, player, club, ball, session, and notes (mishit, suspected mispair).
 - Unpaired shots and shots with ambiguous pairing are counted and reported, never dropped
@@ -160,10 +174,12 @@ A reference metric is compared only if it declares our definition id
 | `apexHeight` | `glm:apex-height` | max ball-center height − launch ball-center height | m | — | no |
 | `descentAngle` | `glm:descent-angle` | angle below horizontal at first contact | rad | — | yes |
 
-`normalizeReference` throws on a malformed record. Otherwise it marks a metric **incompatible**
-(excluded, with a reason) when: the name is not comparable; the definition differs; it is a
-landing metric and `carryDefinition` is `landing-at-launch-height` or `unknown`; it is ball speed
-and `ballSpeedReference` is `unknown`; the unit is unknown; or the unit's dimension is wrong.
+`normalizeReference(record, context?)` throws on a malformed record or context. Otherwise it
+marks a metric **incompatible** (excluded, with a reason) when: the name is not comparable; the
+definition differs; it is a landing metric and `carryDefinition` is `unknown`; it is a landing
+metric, `carryDefinition` is `landing-at-launch-height`, and no per-shot context establishes that
+the two landing definitions coincide (§5.3); it is ball speed and `ballSpeedReference` is
+`unknown`; the unit is unknown; or the unit's dimension is wrong.
 Compatible values are converted to SI and sign-flipped into our convention, and every
 conversion and flip is logged in `conversionsApplied`. `compareToReference` then gives one row
 per metric with `error = ours − reference`, or a "not compared: …" note.
@@ -184,7 +200,7 @@ empirically in the pilot (§10, step 5).
 | Launch direction | + = left | + = right | `horizontalAngleSign: "right-positive"` | flipped |
 | Spin axis | + = curves right | + = curves right | `spinAxisSign: "right-positive"` | not flipped |
 | Side / offline | + = left | + = right | `lateralSign: "right-positive"` | flipped |
-| Carry | to first ground contact | to where the ball descends through launch height | `carryDefinition: "landing-at-launch-height"` | carry, carry lateral and descent angle **refused** (§5.3) |
+| Carry | to first ground contact | to where the ball descends through launch height | `carryDefinition: "landing-at-launch-height"` | carry, carry lateral and descent angle **refused** unless a per-shot context asserts that our first contact was within ±0.05 m of launch height (§5.3) |
 | Ball-speed point | ball center | not documented here | `ballSpeedReference: "unknown"` until documented | ball speed **refused** until confirmed |
 
 Definition risks to settle **before** asserting a definition id:
@@ -202,17 +218,22 @@ Definition risks to settle **before** asserting a definition id:
 | `carryDefinition` | What happens |
 |---|---|
 | `first-ground-contact` | Compared (same as ours). |
-| `landing-at-launch-height` | Carry, carry lateral and descent angle refused. |
-| `unknown` | Same three refused. |
+| `landing-at-launch-height` | Carry, carry lateral and descent angle refused, unless the caller passes a `ReferenceComparisonContext` for this shot whose `ourFirstContactHeightAboveLaunchM` is within ±`LANDING_HEIGHT_EQUIVALENCE_TOLERANCE_M` (0.05 m, inclusive). Then they are compared, and the assertion is logged in `conversionsApplied` and `definitionEquivalences` and carried into the comparison row's note. A height outside the tolerance, or `null` (unknown), keeps them refused with the height in the reason. |
+| `unknown` | Same three refused; a context cannot rescue them. |
 
-In the current range configuration (`createRangePipelineConfig`: flat terrain, tee height 0),
-our first contact happens when the ball center comes back down to z = 0, the address ball-center
-height, so for shots off the mat the two definitions coincide. Off a tee of height h our carry
-ends h lower: at a 40° descent that adds h / tan 40° of horizontal travel (25 mm tee → 3.0 cm).
-**No option exists to assert this equivalence**, and declaring `first-ground-contact` for a
-device that uses launch height would be a false declaration. A documented conversion (an
-explicit "landed at launch height" assertion, or our own carry-at-launch-height metric computed
-from the trajectory) is Planned (Phase 3) — not implemented.
+`ourFirstContactHeightAboveLaunchM` is our ball-centre height at first contact minus our
+ball-centre height at launch, `result.landing.positionM.z − launch.ballPositionM.z`. In the
+current range configuration (`createRangePipelineConfig`: flat terrain, tee height 0) that is 0:
+our first contact happens when the ball center comes back down to the address ball-center
+height, so for shots off the mat the two definitions coincide. Off a tee of height h on flat
+ground it is −h; our carry then ends h lower, which at a 40° descent adds h / tan 40° of
+horizontal travel (25 mm tee → 3.0 cm). The 0.05 m tolerance (6 cm of landing point at 40°,
+11 cm at 25°) is a provisional engineering choice, not a published value. The context is an
+**assertion by the caller** about our own shot; it is not checked against the trajectory.
+
+Declaring `first-ground-contact` for a device that uses launch height would be a false
+declaration. Our own carry-at-launch-height metric, computed from the trajectory so that
+elevated or sloped landings can be compared too, is Planned (Phase 7) — not implemented.
 
 ## 6. Metrics and statistics to report
 
@@ -276,26 +297,28 @@ Every run, including failed and negative ones, writes a manifest (proposal) with
 |---|---|
 | Identity | run id, campaign id, created time, purpose (`development` \| `model-selection` \| `final-accuracy-report`) |
 | Code | git commit, `SOFTWARE_VERSION` |
-| Versions | schema, coordinate system, physics tag (`PHYSICS_MODEL_VERSION+GROUND_MODEL_VERSION`), environment model, estimator, ball profile(s), sensor configuration(s), calibration version(s), replay format |
-| Data | input files with SHA-256 hashes, shot counts |
+| Versions | schema, coordinate system, physics tag (`PHYSICS_MODEL_VERSION+GROUND_MODEL_VERSION+SHOT_SIMULATOR_VERSION`), environment model, estimator, ball profile(s), sensor configuration(s), calibration version(s), replay format |
+| Data | input files with SHA-256 hashes, shot counts, the capture-derived shot keys (§3.3) |
 | Partition | `PARTITION_ALGORITHM`, salt, fractions, `sizes()`, `heldOutAccessLog()` |
-| Reference | make, model, firmware, declared conventions, definition-mapping source (document and version) |
+| Reference | make, model, firmware, declared conventions, definition-mapping source (document and version), every landing-height context asserted (§5.3) |
 | Settings | Monte Carlo samples and seeds, timesteps, `triggerLatencyS`, generic spin fallback on/off |
 | Outputs | accuracy tables, `conversionsApplied`, `incompatible`, exclusion counts |
 
 ## 8. Physics-version comparison
 
 1. The recorded observation streams are the fixed input. Re-process them with each candidate
-   version, keeping the same shot ids (§3.3) so pairs and partitions do not move; every
-   `LaunchState` records `physicsModelVersion` (air + ground tag) and `estimatorVersion`.
+   version, keeping the same capture-derived keys (§3.3) so pairs and partitions do not move;
+   every `LaunchState` records `physicsModelVersion` (air + ground + shot-simulator tag) and
+   `estimatorVersion`.
 2. Compare candidates on the **validation** partition with paired per-shot differences,
    Δᵢ = |e_new,ᵢ| − |e_old,ᵢ| on the same shots, alongside both versions' error tables. A
    significance test or bootstrap is Planned — not implemented.
 3. Compare launch metrics too: the drag-aware refit uses the air model, so a physics change can
    move ball speed and angles slightly.
 4. Evaluate only the finally selected version on held-out data (§4, rule 5).
-5. **Total and rollout are provisional and model-dependent.** The ground model is being upgraded
-   (v0.2: crater impact and speed-dependent rolling resistance); see
+5. **Total and rollout are provisional and model-dependent.** Ground model v0.2 (crater impact
+   and speed-dependent rolling resistance) has unfitted parameters, and drives reach its sanity
+   envelope only through an extrapolated rolling-resistance term; see
    [terrain-model.md](terrain-model.md). Treat total comparisons as model-vs-model unless the
    reference observed the roll.
 6. A version bump that moves numbers also changes the golden files; regenerate and explain them
@@ -319,9 +342,11 @@ plausibility envelope (±6 % carry) check software and sanity, not accuracy.
 
 ## 10. First real validation campaign: step by step
 
-Preconditions (Planned, Phase 2): a working camera driver ([sensor-specification.md](sensor-specification.md)
-§4), a green calibration ([calibration-procedure.md](calibration-procedure.md)), access to a
-reference device, and the safety checklist ([safety.md](safety.md)).
+Preconditions: a working camera driver ([sensor-specification.md](sensor-specification.md)
+§4) and a green calibration ([calibration-procedure.md](calibration-procedure.md)), both Planned
+(Phase 2); measured spin ([spin-measurement.md](spin-measurement.md) §4, Planned, Phase 3) if
+spin is in scope; access to a reference device; and the safety checklist ([safety.md](safety.md)).
+The campaign itself, with the reference import, dashboard and held-out report, is Phase 7.
 
 1. **Write the plan, before any data.** Metrics in scope; conditions (clubs, ball model,
    players, lighting); target sample sizes per group; partition salt and fractions; exclusion
@@ -333,7 +358,8 @@ reference device, and the safety checklist ([safety.md](safety.md)).
    pass the known-length check; record environment (temperature, pressure, humidity), ball
    model and lighting.
 4. **Capture and pair.** One shot at a time; wait until both devices have registered it; log
-   capture index, reference row id, player, club and notes (mishit, double trigger).
+   capture index, reference row id, player, club and notes (mishit, double trigger). Replay
+   files record no player or club, so the manifest is their only record.
 5. **Pilot campaign** (its own campaign id, never part of a final report; ~30–50 shots,
    provisional). Hit deliberate pushes, pulls, draws and fades to confirm signs; check pairing,
    conversion logs and incompatible lists; measure repeatability; fix the procedure; then freeze
@@ -342,7 +368,8 @@ reference device, and the safety checklist ([safety.md](safety.md)).
    within a session so drift (light, temperature, fatigue) is not confounded with club; collect
    over several sessions and days; re-verify calibration every session; keep invalid shots.
 7. **Process.** Replay the recordings with fixed versions; export `ShotRecord`s; write reference
-   records; run `normalizeReference` and `compareToReference`; save conversion and
+   records keyed by the capture-derived key (§3.3); run `normalizeReference` (with a landing
+   context only where it is established) and `compareToReference`; save conversion and
    incompatibility logs; apply the pre-registered exclusions.
 8. **Partition and develop.** Build a `PartitionedDataset` with the pre-registered salt; tune on
    training; choose on validation; write a manifest for every run (§7).
@@ -363,6 +390,7 @@ reference device, and the safety checklist ([safety.md](safety.md)).
 - Indoors the flight ends at the screen, so no device observes carry, apex or total there; a
   reference's values for them are its own model outputs.
 - Per-shot partitions leak session and player effects (§4, rule 6).
-- Missing tooling: reference loader, pairing tool, report generator, run manifests, paired
-  version statistics, carry-at-launch-height conversion, grouped partitions.
-- Stable capture-time shot ids are not implemented (§3.3).
+- Missing tooling (Phase 7): reference loader, pairing tool, accuracy dashboard and report
+  generator, run manifests, paired version statistics, our own carry-at-launch-height metric,
+  grouped partitions.
+- Stable capture-time shot ids are not implemented; use a capture-derived key (§3.3).

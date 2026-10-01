@@ -185,6 +185,7 @@ export class PipelineHost {
     const pipeline = new ShotPipeline(
       adapter,
       this.configFor(settings, {
+        timestampSigmaS: noise.timestampJitterS,
         sensorConfiguration: adapter.getConfiguration(),
         dataOrigin: adapter.capabilities.dataOrigin,
         calibration: null,

@@ -1,8 +1,10 @@
 import { describe, expect, it } from "vitest";
 import {
   compareToReference,
+  LANDING_HEIGHT_EQUIVALENCE_TOLERANCE_M,
   normalizeReference,
   REFERENCE_METRIC_DEFINITIONS,
+  type ReferenceComparisonContext,
   type ReferenceMeasurement,
 } from "../src/index";
 
@@ -212,5 +214,153 @@ describe("compareToReference", () => {
       error: 0.5,
       note: "ours - reference, m",
     });
+  });
+});
+
+describe("landing-at-launch-height references with a caller-asserted comparison context", () => {
+  // A device whose carry ends where the ball descends through launch height; signs already ours.
+  const launchHeightRef = (): ReferenceMeasurement =>
+    makeRef({
+      metrics: {
+        carry: { value: 250, unit: "yd", definition: D("carry") },
+        carryLateral: { value: -3, unit: "m", definition: D("carryLateral") },
+        descentAngle: { value: 40, unit: "deg", definition: D("descentAngle") },
+        total: { value: 270, unit: "yd", definition: D("total") },
+      },
+      conventions: {
+        horizontalAngleSign: "left-positive",
+        spinAxisSign: "right-positive",
+        lateralSign: "left-positive",
+        carryDefinition: "landing-at-launch-height",
+        ballSpeedReference: "ball-center",
+      },
+    });
+  const ctx = (h: number | null): ReferenceComparisonContext => ({ ourFirstContactHeightAboveLaunchM: h });
+
+  it("uses a 5 cm documented tolerance", () => {
+    expect(LANDING_HEIGHT_EQUIVALENCE_TOLERANCE_M).toBe(0.05);
+  });
+
+  it("flat range (first contact at launch height): carry, carry lateral and descent angle become comparable and the assertion is logged", () => {
+    const n = normalizeReference(launchHeightRef(), ctx(0));
+    expect(n.incompatible).toEqual([]);
+    expect(n.values.carry).toBeCloseTo(228.6, 10);
+    expect(n.values.carryLateral).toBe(-3);
+    expect(n.values.descentAngle).toBeCloseTo(40 * DEG, 14);
+    expect(n.values.total).toBeCloseTo(246.888, 10);
+    const assertion =
+      'reference "landing-at-launch-height" taken as our first ground contact: caller asserted our ball centre at ' +
+      "first contact was 0.000 m relative to launch (within ±0.05 m)";
+    expect(n.conversionsApplied).toEqual([
+      `carry: ${assertion}`,
+      "carry: 250 yd -> 228.6 m",
+      `carryLateral: ${assertion}`,
+      "total: 270 yd -> 246.888 m",
+      `descentAngle: ${assertion}`,
+      `descentAngle: 40 deg -> ${40 * DEG} rad`,
+    ]);
+    expect(n.definitionEquivalences).toEqual({ carry: assertion, carryLateral: assertion, descentAngle: assertion });
+
+    // The comparison row carries the assertion, so the error is never presented as an unqualified match.
+    const rows = compareToReference({ carry: 230, carryLateral: -2.5, descentAngle: 0.7, total: 245 }, n);
+    const by = Object.fromEntries(rows.map((r) => [r.metric, r]));
+    expect(by.carry?.error).toBeCloseTo(230 - 228.6, 10);
+    expect(by.carry?.note).toBe(`ours - reference, m (${assertion})`);
+    expect(by.carryLateral).toEqual({
+      metric: "carryLateral",
+      ours: -2.5,
+      reference: -3,
+      error: 0.5,
+      note: `ours - reference, m (${assertion})`,
+    });
+    expect(by.descentAngle?.error).toBeCloseTo(0.7 - 40 * DEG, 14);
+    expect(by.total?.note).toBe("ours - reference, m"); // total never depended on the landing definition
+  });
+
+  it("accepts a small tee within tolerance (inclusive boundary) and reports the signed height", () => {
+    const tee = normalizeReference(launchHeightRef(), ctx(-0.025)); // 25 mm tee on flat ground
+    expect(tee.incompatible).toEqual([]);
+    expect(tee.definitionEquivalences?.carry).toMatch(/first contact was -0\.025 m relative to launch \(within ±0\.05 m\)/);
+    const edge = normalizeReference(launchHeightRef(), ctx(LANDING_HEIGHT_EQUIVALENCE_TOLERANCE_M));
+    expect(edge.incompatible).toEqual([]);
+    expect(edge.values.carry).toBeCloseTo(228.6, 10);
+  });
+
+  it("elevated green (first contact 3 m above launch): landing metrics stay incompatible with the height in the reason", () => {
+    const n = normalizeReference(launchHeightRef(), ctx(2.975));
+    expect(n.incompatible.map((i) => i.metric)).toEqual(["carry", "carryLateral", "descentAngle"]);
+    for (const i of n.incompatible) {
+      expect(i.reason).toMatch(/our ball centre at first contact was \+2\.975 m relative to launch, outside the ±0\.05 m/);
+    }
+    expect(n.values.carry).toBeUndefined();
+    expect(n.values.carryLateral).toBeUndefined();
+    expect(n.values.descentAngle).toBeUndefined();
+    expect(n.values.total).toBeCloseTo(246.888, 10);
+    expect(n.definitionEquivalences).toEqual({});
+    expect(n.conversionsApplied).toEqual(["total: 270 yd -> 246.888 m"]);
+
+    const [carryRow] = compareToReference({ carry: 230 }, n);
+    expect(carryRow).toMatchObject({ metric: "carry", ours: 230, reference: null, error: null });
+    expect(carryRow?.note).toMatch(/^not compared: reference incompatible — .*\+2\.975 m relative to launch/);
+  });
+
+  it("just outside tolerance, below launch height, is still refused", () => {
+    const n = normalizeReference(launchHeightRef(), ctx(-0.051));
+    expect(n.incompatible.map((i) => i.metric)).toEqual(["carry", "carryLateral", "descentAngle"]);
+    expect(n.incompatible[0]?.reason).toMatch(/-0\.051 m relative to launch, outside the ±0\.05 m/);
+  });
+
+  it("unknown height (null) keeps landing metrics incompatible and says so", () => {
+    const n = normalizeReference(launchHeightRef(), ctx(null));
+    expect(n.incompatible.map((i) => i.metric)).toEqual(["carry", "carryLateral", "descentAngle"]);
+    expect(n.incompatible[0]?.reason).toMatch(/first-contact height relative to launch as unknown \(null\)/);
+  });
+
+  it("no context: unchanged incompatible behaviour and reason text", () => {
+    const n = normalizeReference(launchHeightRef());
+    expect(n.incompatible).toEqual(
+      ["carry", "carryLateral", "descentAngle"].map((metric) => ({
+        metric,
+        reason:
+          "reference evaluates landing where the ball descends through launch height; ours uses first ground contact. " +
+          "These agree only when our shot landed at launch height (flat ground at tee height) — the caller must " +
+          "establish that before comparing",
+      })),
+    );
+    expect(n.definitionEquivalences).toEqual({});
+    expect(n.conversionsApplied).toEqual(["total: 270 yd -> 246.888 m"]);
+  });
+
+  it("context cannot rescue an unknown carry definition and is irrelevant for first-ground-contact references", () => {
+    const unknown = normalizeReference(
+      { ...launchHeightRef(), conventions: { ...launchHeightRef().conventions, carryDefinition: "unknown" } },
+      ctx(0),
+    );
+    expect(unknown.incompatible.map((i) => i.metric)).toEqual(["carry", "carryLateral", "descentAngle"]);
+    expect(unknown.incompatible[0]?.reason).toBe("reference landing (carry) definition is unknown");
+
+    // Same definition as ours: compared regardless of landing height, with no equivalence note.
+    const same = normalizeReference(
+      { ...launchHeightRef(), conventions: { ...launchHeightRef().conventions, carryDefinition: "first-ground-contact" } },
+      ctx(2.975),
+    );
+    expect(same.incompatible).toEqual([]);
+    expect(same.definitionEquivalences).toEqual({});
+    expect(same.conversionsApplied.some((c) => c.includes("landing-at-launch-height"))).toBe(false);
+  });
+
+  it("rejects a malformed context", () => {
+    expect(() => normalizeReference(launchHeightRef(), ctx(Number.NaN))).toThrow(
+      /invalid comparison context at ourFirstContactHeightAboveLaunchM/,
+    );
+    expect(() => normalizeReference(launchHeightRef(), ctx(Number.POSITIVE_INFINITY))).toThrow(
+      /invalid comparison context at ourFirstContactHeightAboveLaunchM/,
+    );
+    expect(() => normalizeReference(launchHeightRef(), {} as unknown as ReferenceComparisonContext)).toThrow(
+      /invalid comparison context at ourFirstContactHeightAboveLaunchM/,
+    );
+    expect(() =>
+      normalizeReference(launchHeightRef(), { ...ctx(0), landed: true } as unknown as ReferenceComparisonContext),
+    ).toThrow(/invalid comparison context/);
   });
 });

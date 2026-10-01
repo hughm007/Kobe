@@ -10,6 +10,8 @@ import {
   type LaunchFitFailure,
   type LaunchFitSuccess,
   launchMeasurementsFromFit,
+  type LaunchValueAdjustment,
+  launchValueSensorEvidence,
   type PlayerSpinHistoryEntry,
   resolveSpin,
   sensorHealthFactor,
@@ -44,6 +46,7 @@ import {
 import { SHOT_SIMULATOR_VERSION, simulateShot } from "@glm/shot-simulator";
 import { createAeroTrajectoryModel } from "./models";
 import type { ShotObservationGroup } from "./segmenter";
+import { LAUNCH_FIT_SPIN_WARNING, launchFitSpinSensitivity, mergeLaunchValueAdjustments } from "./spin-sensitivity";
 import { fuseTriggers } from "./triggers";
 
 export const SOFTWARE_VERSION = "golf-launch-monitor-0.1.0";
@@ -64,9 +67,20 @@ export type PipelineConfig = {
   readonly calibration: CalibrationRecord | null;
   /** Spin MODE 3: only when the user explicitly allows a generic fallback. */
   readonly allowGenericSpinFallback: boolean;
-  /** Retain raw observations in the shot record (privacy/storage consent). */
+  /**
+   * Retain the numeric raw observations (no images) in the shot record so it can be re-processed
+   * (requirement §0.9). createRangePipelineConfig defaults this to true; false is the user's
+   * opt-out. Camera frames are separate (rawCapturePaths, diagnostic-capture consent).
+   */
   readonly storeRawObservations: boolean;
   readonly playerSpinHistory: readonly PlayerSpinHistoryEntry[];
+  /**
+   * 1-sigma timestamp uncertainty of the ball positions on the session clock, s (frame jitter,
+   * camera sync). Propagated into the launch fit (LaunchFitOptions.timestampSigmaS). Default 0:
+   * timestamps treated as exact. For the synthetic adapter this is its noise model's
+   * timestampJitterS; for a device, its documented timing accuracy.
+   */
+  readonly timestampSigmaS?: number;
   /** Known per-source trigger latency to subtract (e.g. microphone sound travel), s. */
   readonly triggerLatencyS?: Partial<Record<TriggerSource, number>>;
   /** Injected for determinism: the library never reads clocks or random sources itself. */
@@ -119,8 +133,12 @@ export function scoringEligibility(
 }
 
 /** The velocity measurement exactly as buildLaunchState will record it for this fit. */
-function velocityMeasurement(fit: LaunchFitSuccess, source: MeasurementSource): Measurement<Vec3> {
-  return launchMeasurementsFromFit(fit, source).velocityMps;
+function velocityMeasurement(
+  fit: LaunchFitSuccess,
+  source: MeasurementSource,
+  adjustment: LaunchValueAdjustment,
+): Measurement<Vec3> {
+  return launchMeasurementsFromFit(fit, source, adjustment).velocityMps;
 }
 
 /**
@@ -167,6 +185,7 @@ export function processShot(group: ShotObservationGroup, config: PipelineConfig)
   const seed = fitLaunchState(ballObservations, {
     trajectoryModel: gravityOnlyTrajectoryModel(g),
     referenceTimeS: seedRef,
+    timestampSigmaS: config.timestampSigmaS ?? 0,
   });
   const fitAttempts: (LaunchFitSuccess | LaunchFitFailure)[] = [seed];
 
@@ -181,30 +200,54 @@ export function processShot(group: ShotObservationGroup, config: PipelineConfig)
     measuredSource,
   });
 
+  // Sensor evidence the fit cannot see (calibration, sensor health, sync drift) limits every
+  // fitted launch value, not only the overall confidence.
+  const calibrationStatus = config.calibration?.status ?? "none";
+  const sensorEvidence = launchValueSensorEvidence(calibrationStatus, config.dataOrigin, group.health);
+  let launchValueAdjustment: LaunchValueAdjustment = sensorEvidence;
+  const aeroModel = (omega: Vec3) => createAeroTrajectoryModel(config.environment, config.ballProfile, omega);
+
   if (seed.ok) {
-    const seedSpin = resolveSpin(spinInput(velocityMeasurement(seed, measuredSource)));
+    const seedSpin = resolveSpin(spinInput(velocityMeasurement(seed, measuredSource, sensorEvidence)));
     const omega = seedSpin.angularVelocity.value ?? { x: 0, y: 0, z: 0 };
     if (seedSpin.angularVelocity.value === null) {
       extraWarnings.push("Launch fit assumed no Magnus lift because spin is unavailable.");
     }
     const referenceTimeS = launchReferenceTime(seed, group.address?.positionM ?? null, firstObservationS);
     const refined = fitLaunchState(ballObservations, {
-      trajectoryModel: createAeroTrajectoryModel(config.environment, config.ballProfile, omega),
+      trajectoryModel: aeroModel(omega),
       referenceTimeS,
+      timestampSigmaS: config.timestampSigmaS ?? 0,
     });
     fitAttempts.push(refined);
     if (refined.ok) {
       finalFit = refined;
+      // An unmeasured spin fed the refit's Magnus term: carry its uncertainty (and the zero-spin
+      // alternative) into the fitted position/velocity and flag the dependence on every value.
+      if (seedSpin.spinMode !== "measured") {
+        const sensitivity = launchFitSpinSensitivity({
+          observations: ballObservations,
+          central: refined,
+          spin: seedSpin,
+          ballRadiusM: config.ballProfile.diameterM / 2,
+          trajectoryModelFor: aeroModel,
+          timestampSigmaS: config.timestampSigmaS ?? 0,
+        });
+        launchValueAdjustment = mergeLaunchValueAdjustments(sensorEvidence, sensitivity);
+        extraWarnings.push(LAUNCH_FIT_SPIN_WARNING);
+      }
       // Re-resolve so the spin-axis frame uses the final launch velocity.
-      spin = resolveSpin(spinInput(velocityMeasurement(refined, measuredSource)));
+      spin = resolveSpin(spinInput(velocityMeasurement(refined, measuredSource, launchValueAdjustment)));
     } else {
       finalFit = seed;
       spin = seedSpin;
+      launchValueAdjustment = mergeLaunchValueAdjustments(sensorEvidence, {
+        qualityFlags: ["launch-fit-gravity-only"],
+      });
       extraWarnings.push(`Drag-aware refit failed (${refined.reason}); using the gravity-only fit.`);
     }
   }
 
-  const calibrationStatus = config.calibration?.status ?? "none";
   const factors: ConfidenceFactor[] = [
     calibrationFactor(calibrationStatus, config.dataOrigin),
     triggerFactor(trigger ? trigger.confidence : null),
@@ -232,6 +275,7 @@ export function processShot(group: ShotObservationGroup, config: PipelineConfig)
     spin,
     extraFactors: factors,
     extraWarnings,
+    launchValueAdjustment,
   });
 
   const simulation = simulateShot(launch, {

@@ -7,15 +7,17 @@ Today nothing in this repository is VERIFIED.
 ## Status
 
 **Empty: no reference data exists.** There is also no hardware to produce our side of a pair
-yet; capture is Planned (Phase 2) — not implemented.
+yet; capture is Planned (Phase 2) — not implemented, and spin measurement Planned (Phase 3).
+The reference-monitor import, accuracy dashboard and held-out report are Planned (Phase 7) —
+not implemented.
 
 | Implemented and tested (`@glm/validation`) | Not implemented |
 |---|---|
 | `ReferenceMeasurementSchema` (zod) for one reference record | A file loader for this folder |
-| `normalizeReference`: unit conversion and sign flips, logged step by step; incompatible metrics excluded with a reason | A pairing tool that joins reference records to our `ShotRecord`s |
+| `normalizeReference`: unit conversion and sign flips, logged step by step; incompatible metrics excluded with a reason; an optional per-shot `ReferenceComparisonContext` for landing metrics (below) | A pairing tool that joins reference records to our `ShotRecord`s |
 | `compareToReference`: one row per metric, error = ours − reference (SI, our signs) | Any accuracy report or published error figure |
 | `errorStats`, `pairedErrors`, `groupedErrorStats`, `intervalCoverage`, `accuracyTableMarkdown` | |
-| `PartitionedDataset`: deterministic training / validation / held-out-test split | |
+| `PartitionedDataset`: deterministic training / validation / held-out-test split | Stable capture-time shot ids (see "Pairing key" below) |
 
 ## Record format (`ReferenceMeasurementSchema`)
 
@@ -45,7 +47,16 @@ objects).
 
 - one JSON Lines file per capture campaign, `<campaign>.reference.jsonl`, with one record per line;
 - the matching recording of our observations kept in `../raw-shots/`;
-- records paired by `shotId`.
+- records paired by `shotId`, filled with a capture-derived key (below), not with the
+  processing-time id.
+
+**Pairing key.** Our `ShotRecord.shotId` is assigned when a shot is processed, so re-processing
+a recording with another id provider or in another order changes it. Until capture-time ids
+exist, use a key derived from the recording, for example
+`<SHA-256 of the replay file>:<capture index>`, as the `shotId` of reference records and of the
+items given to `PartitionedDataset`, and list it in the campaign manifest next to our processing
+`shotId` ([validation-protocol.md §3.3](../../docs/validation-protocol.md#33-pairing)). Replay
+files record no player or club; keep them in the manifest.
 
 ## Comparison rules (implemented)
 
@@ -62,10 +73,15 @@ objects).
   - A reference that declares the opposite convention is sign-flipped, and the flip is logged.
 - **Landing definition.**
   - Our carry ends at first ground contact.
-  - If the reference declares `carryDefinition: "landing-at-launch-height"` or `"unknown"`,
-    carry, carry lateral and descent angle are excluded. **No option exists yet** to assert that
-    a shot landed at launch height (flat ground at tee height), which is the case in which the
-    two definitions agree.
+  - If the reference declares `carryDefinition: "unknown"`, carry, carry lateral and descent
+    angle are excluded.
+  - If it declares `"landing-at-launch-height"`, they are excluded unless the caller passes a
+    `ReferenceComparisonContext` for that shot whose `ourFirstContactHeightAboveLaunchM` (our
+    ball-centre height at first contact minus at launch) is within ±0.05 m
+    (`LANDING_HEIGHT_EQUIVALENCE_TOLERANCE_M`, a provisional tolerance). That holds on flat
+    ground at tee height, e.g. a mat shot on the current range terrain. The assertion is logged
+    and shown in the comparison row's note; outside the tolerance, or with an unknown height,
+    the metrics stay excluded.
 - **Ball-speed measurement point** `unknown` excludes ball speed.
 - **Our side must already be SI in our sign conventions.** `LaunchState` stores the launch
   angles in degrees and spin in rpm, so the caller converts them to rad and rad/s before
@@ -88,7 +104,8 @@ objects).
   documented conventions, accuracy targets written down **before** collection, results reported
   on the held-out set, and a status scoped to the conditions tested. See
   [product-requirements.md §8](../../docs/product-requirements.md#8-acceptance-criteria-for-phase-completion).
-  The phase plan proposes this work as Phase 3.
+  In the [phase plan](../../docs/product-requirements.md#9-phase-plan) this is Phase 7
+  (validation and hardening).
 
 ## Privacy
 

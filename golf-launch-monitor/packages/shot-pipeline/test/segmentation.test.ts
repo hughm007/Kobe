@@ -1,4 +1,4 @@
-import type { BallAddressObservation, RawSensorObservation, TriggerObservation } from "@glm/shared-types";
+import type { BallAddressObservation, HealthObservation, RawSensorObservation, TriggerObservation } from "@glm/shared-types";
 import { describe, expect, it } from "vitest";
 import { fuseTriggers, ShotSegmenter, TRIGGER_AGREEMENT_TOLERANCE_S, TRIGGER_CLUSTER_WINDOW_S } from "../src/index";
 
@@ -37,6 +37,20 @@ const address = (t: number): BallAddressObservation => ({
   inHittingZone: true,
   ballCount: 1,
   confidence: 1,
+});
+const health = (t: number, status: HealthObservation["health"]["status"]): HealthObservation => ({
+  kind: "health",
+  sensorId: "s",
+  sequence: seq++,
+  timestampS: t,
+  health: {
+    sensorId: "s",
+    status,
+    checkedUtc: `2026-01-01T00:00:${String(Math.round(t)).padStart(2, "0")}.000Z`,
+    metrics: [],
+    messages: [],
+    calibrationStatus: "green",
+  },
 });
 const frameBuffer = { preTriggerS: 0.25, postTriggerS: 0.5 };
 
@@ -107,6 +121,42 @@ describe("ShotSegmenter", () => {
     const groups = feed([trigger(1.0), ball(1.001), trigger(6.0), ball(6.001)]);
     expect(groups).toHaveLength(2);
     expect(groups[1]!.triggers[0]!.timestampS).toBe(6.0);
+  });
+
+  it("regression: each shot gets the health report that precedes it, never the next shot's (streaming and flush agree)", () => {
+    // A device emits health before every shot (docs/sensor-specification.md section 4); here
+    // only the report before shot 2 is failed. It arrives after shot 1's window has ended.
+    const stream = [
+      health(0.5, "ok"),
+      trigger(1.0),
+      ball(1.001),
+      ball(1.002),
+      health(5.5, "failed"),
+      trigger(6.0),
+      ball(6.001),
+      ball(6.002),
+    ];
+    // Streaming: one segmenter, shot 1 closed by the arrival of the 5.5 s report.
+    const streamed = feed(stream);
+    // Step/flush mode (UI replay-next-shot): flush after each shot's observations.
+    const seg = new ShotSegmenter(frameBuffer);
+    const stepped = [
+      ...stream.slice(0, 4).flatMap((o) => seg.push(o)),
+      ...seg.flush(),
+      ...stream.slice(4).flatMap((o) => seg.push(o)),
+      ...seg.flush(),
+    ];
+    for (const groups of [streamed, stepped]) {
+      expect(groups).toHaveLength(2);
+      expect(groups[0]!.health?.status).toBe("ok");
+      expect(groups[0]!.health?.checkedUtc).toBe("2026-01-01T00:00:01.000Z");
+      expect(groups[1]!.health?.status).toBe("failed");
+    }
+  });
+
+  it("a health report inside the shot window applies to that shot", () => {
+    const [g] = feed([health(0.5, "ok"), trigger(1.0), ball(1.001), health(1.2, "degraded"), ball(1.3)]);
+    expect(g!.health?.status).toBe("degraded");
   });
 
   it("rejects invalid frame-buffer windows", () => {

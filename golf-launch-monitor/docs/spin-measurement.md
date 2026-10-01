@@ -6,13 +6,11 @@ Status words are defined in [product-requirements.md §1](product-requirements.m
 
 > **Status in one paragraph.** Spin **resolution**, the choice of where a shot's spin comes from
 > (`resolveSpin` in `packages/launch-state/src/spin.ts`), is **IMPLEMENTED and TESTED**. Spin
-> **measurement** from camera images is **Planned (Phase 3) — not implemented**
-> (§4). [product-requirements.md §9](product-requirements.md#9-phase-plan) and
-> [sensor-specification.md](sensor-specification.md) currently list image-based spin under
-> Phase 2 instead; the phase numbering has to be reconciled. In this build, every spin value is
-> one of:
+> **measurement** from camera images (marked ball), together with spin-quality diagnostics, is
+> **Planned (Phase 3) — not implemented** (§4; [phase plan](product-requirements.md#9-phase-plan)).
+> Phase 1 is a range MVP with no true spin. In this build, every spin value is one of:
 > - synthetic;
-> - developer-typed (labeled synthetic);
+> - developer-typed (labeled manual);
 > - estimated from a player or club model;
 > - a user-allowed generic assumption;
 > - unavailable.
@@ -29,7 +27,7 @@ Status words are defined in [product-requirements.md §1](product-requirements.m
 | Total spin | `totalSpinRpm = ‖ω‖·60/(2π)`. Derived, stored with provenance. | `deriveTotalSpinRpm` |
 | Spin-axis tilt α | `atan2(−ω·û, ω·r̂)` in the launch-direction frame {d̂, r̂, û}. **Positive = curves right.** Derived and stored. | [§4.3](coordinate-system.md#43-launch-direction-frame-and-spin-axis-tilt), `deriveSpinAxisTiltDeg` |
 | Rifle spin | `ω·d̂`, spin about the flight direction. It produces no Magnus force ([physics-model.md §2](physics-model.md#2-forces)). | `spinComponentsRpm` (not stored) |
-| Backspin / sidespin | **Display only**, never stored: `total·cos α` and `total·sin α` (sidespin positive = curves right, shown with an L/R label). | `@glm/presentation` |
+| Backspin / sidespin | **Display only**, never stored: the components of the spin perpendicular to the flight direction, `|ω⊥|·cos α` and `|ω⊥|·sin α` (sidespin positive = curves right, shown with an L/R label). | [§4.3](coordinate-system.md#43-launch-direction-frame-and-spin-axis-tilt), `@glm/presentation` |
 
 Pure backspin for a ball moving along +X is ω ∥ −Y. Physics and estimation read only the SI
 vectors; the degree/rpm scalars are a documented contract exception
@@ -51,11 +49,13 @@ vectors; the degree/rpm scalars are a documented contract exception
 - **Near zero, |ω| is biased upward.** The norm of a noisy zero vector follows a χ distribution
   with 3 degrees of freedom. With the default synthetic noise (6 rad/s per axis) its mean is
   ≈ 91 rpm (*calculated*: σ·2√(2/π)).
-- **Display components with rifle spin.** `total·cos α` and `total·sin α` follow
-  coordinate-system.md §4.3 and are exact when rifle spin is zero. When ω has a rifle
-  component, they overstate the true components by `|ω|/|ω⊥|`. `spinComponentsRpm` computes
-  the exact projections but is not used by the display. Club-prior and generic-fallback spin
-  has no rifle component.
+- **Display components with rifle spin.** The display scales total spin by `|ω⊥|/|ω|`,
+  computed from the stored ω and v, before splitting it by the tilt, so backspin and sidespin
+  exclude rifle spin as coordinate-system.md §4.3 requires (`total·cos α` would overstate them by
+  `|ω|/|ω⊥|`). `spinComponentsRpm` in `@glm/launch-state` gives the same projections. The
+  metric-definition text in `@glm/presentation` still reads "totalSpin · cos(spinAxis)"; it
+  agrees with the displayed value only when rifle spin is zero. Club-prior and
+  generic-fallback spin has no rifle component.
 
 ---
 
@@ -104,9 +104,10 @@ Behavior:
   then smallest residual, then most observations, then sequence.
 - **Confidence.** Let `q = 1 − max(relσ/0.15, residual/0.06)`, with q = 0 at the gate limits.
   Confidence is `0.95·(1 − 0.4·(1 − q))`, from 0.57 to 0.95. The spin factor scores `0.8 + 0.2·q`.
-- **Label.** The stream's measured label (`measured-camera`, …). A `method: "synthetic"`
-  observation is **always** relabeled `synthetic`, with a warning when the stream claimed
-  otherwise.
+- **Label.** The stream's label: `measured-camera`, … on a sensor stream, `synthetic` on a
+  synthetic stream, `manual` on a developer manual stream. A `method: "synthetic"` observation on
+  a sensor (live or replayed) stream is relabeled `synthetic`, with a warning; it can never be
+  labeled measured.
 - Total spin and tilt are derived from the selected ω (and the launch velocity, for tilt).
 
 Where MODE-1 observations come from today:
@@ -114,7 +115,7 @@ Where MODE-1 observations come from today:
 | Source | Method | Notes |
 |---|---|---|
 | Synthetic generator | `synthetic` | Default noise 6 rad/s per axis, 20 orientations, 0.01 rad residual. These are test settings. |
-| Developer manual entry | `synthetic` | Flag `manual-entry`. The quality fields are placeholders: count 10, residual 0. |
+| Developer manual entry | `synthetic` | Flag `manual-entry`; labeled `manual` (badge MANUAL). The quality fields are placeholders: count 10, residual 0, so typed spin up to 15,000 rpm always passes the gate. |
 | Replay files | as recorded | A replay can *claim* camera data. Its provenance is only as good as its author ([limitations.md](limitations.md)). |
 | Camera | `marked-ball` | Planned (Phase 3) — not implemented (§4) |
 
@@ -196,7 +197,7 @@ credibly."*
 |---|---|---|---|---|---|---|---|
 | measured, sensor stream | `measured-*` | same as ω | derived from ω and v | 0.57–0.95 | 0.8–1.0, 1.5 | valid | yes |
 | measured, synthetic stream | `synthetic` | `synthetic` | derived | 0.57–0.95 | 0.8–1.0, 1.5 | valid (never score-eligible) | yes |
-| measured, manual stream | `synthetic` | `synthetic` | derived | 0.57–0.95 | 0.8–1.0, 1.5 | provisional | yes |
+| measured, manual stream | `manual` | `manual` | derived | 0.57–0.95 | 0.8–1.0, 1.5 | provisional | yes |
 | estimated (player) | `estimated-player-model` | same | estimated, σ ≥ 2° | ≤ 0.5 | 0.55, 1.5 | provisional | yes |
 | estimated (club) | `estimated-club-model` | same | unavailable (0 assumed) | ≤ 0.25 | 0.3, 1.5 | provisional | yes; curve withheld |
 | assumed-generic-fallback | `assumed-generic-fallback` | same | unavailable (0 assumed) | ≤ 0.1 | 0.1, 1.5 | provisional | yes; curve withheld |
@@ -247,8 +248,10 @@ confidence(metric) = min( ballProfile.confidenceCeiling,      // 0.6 baseline �
 | `dependsOnEstimated` on every calculated metric | `true` when any input is estimated, assumed or manual |
 
 So carry from club-prior spin can never show more than 0.25 confidence, and from the generic
-fallback no more than 0.1, whatever the launch fit quality. Total, bounce and roll are also
-**provisional and model-dependent**: the ground model is being revised
+fallback no more than 0.1, whatever the launch fit quality. The shot's flight-model confidence
+(`ShotResult.simulationConfidence`, shown as "Flight model" on the shot card next to the
+launch-data confidence) applies the same three caps without the class factors. Total, bounce and
+roll are also **provisional and model-dependent**: ground model v0.2 has unfitted parameters
 ([terrain-model.md](terrain-model.md)).
 
 ---
@@ -371,8 +374,8 @@ whole-ball translational blur in
 | 15,000 rpm | 33.5 m/s | 0.67 mm | 3.35 mm |
 
 **Before any spin value can be VERIFIED**, it must be compared with an independent reference
-instrument, using accuracy targets set in advance (see the
-[phase plan](product-requirements.md#9-phase-plan)). The contract also names
+instrument, using accuracy targets set in advance: Phase 7 in the
+[phase plan](product-requirements.md#9-phase-plan) ([validation-protocol.md](validation-protocol.md)). The contract also names
 `dimple-tracking` and `radar-doppler` methods. Neither is planned in detail here, and neither
 is implemented.
 
@@ -380,8 +383,9 @@ is implemented.
 
 ## 5. What is tested
 
-`npx vitest run packages/launch-state` passed (6 files, 90 tests) and
-`npx vitest run tests/integration` passed (2 files, 15 tests) on 2026-10-01.
+`npx vitest run packages/launch-state` passed (6 files, 90 tests),
+`npx vitest run tests/integration` passed (2 files, 15 tests), and the `shot-pipeline` and
+`shot-simulator` package tests passed on 2026-10-01.
 
 | Behavior | Test |
 |---|---|
@@ -396,6 +400,8 @@ is implemented.
 | First-order σ of total spin and tilt within 10 % of Monte Carlo | `first-order uncertainty propagation agrees with Monte Carlo …` |
 | Unavailable spin → no simulation; club estimate → provisional, curve null; fallback → carry confidence ≤ spin confidence | `spin modes end-to-end` (tests/integration/pipeline.test.ts) |
 | Draw curves left, fade curves right (measured synthetic spin) | `draw curves left, fade curves right …` |
+| Developer-typed spin is labeled MANUAL, never synthetic or measured; the shot stays provisional | `labels typed-in launch and spin values MANUAL …` (packages/shot-pipeline/test/process.test.ts) |
+| Club-prior spin: curve unavailable, metric confidence capped by the spin's own | `estimated spin: curve unavailable …` (packages/shot-simulator/test/simulator.test.ts) |
 
 ---
 

@@ -13,9 +13,9 @@
 > the research proxy blocked page fetches. Nothing is **VERIFIED** against real measurements.
 
 Frames and signs follow [coordinate-system.md](coordinate-system.md). Ground behavior in
-detail, including the version in use, is in [terrain-model.md](terrain-model.md). The ground
-model is being upgraded at the time of writing (crater impact and speed-dependent rolling
-resistance, ground model v0.2). **Roll, total and every ground number below are provisional and
+detail is in [terrain-model.md](terrain-model.md), which describes the version in use: ground
+model v0.2 (`glm-ground-0.2.0-provisional`: crater impact and speed-dependent rolling
+resistance). **Roll, total and every ground number below are provisional and
 model-dependent**; terrain-model.md is the authority.
 
 ---
@@ -35,8 +35,8 @@ model-dependent**; terrain-model.md is the authority.
 | Terrain | Planes and polygon regions with per-region surfaces. Height maps are a documented extension, not built ([terrain-model.md §1.1](terrain-model.md#11-extending-to-real-courses-height-maps)). | Planes/regions TESTED; height maps not implemented |
 
 The ground-physics and terrain-engine suites passed on 2026-10-01
-(`npx vitest run packages/ground-physics packages/terrain-engine`). The model they test is
-still being revised.
+(`npx vitest run packages/ground-physics packages/terrain-engine`) against ground model v0.2.
+They test mechanics and invariants, not measured putts.
 
 **Speed dependence: the sources conflict.**
 
@@ -71,8 +71,8 @@ Do not use the range pipeline for putting. Its results for a putt are not meanin
 - **Ball profiles.** Their applicability range is 25–85 m/s. Putts (≈ 1–4 m/s for 1–10 m rolls,
   §1.1) are outside it and get applicability warnings.
 - **Terrain.** Range sessions use a flat `fairway-normal` plane: no green, no cup.
-- The Phase 1 desktop UI specification lists Putting as a disabled entry ("Phase 6 — not built
-  yet").
+- The desktop UI shows Putting as a disabled entry ("Phase 6 — not built yet"; TESTED:
+  "course play and putting are visible but disabled").
 
 ---
 
@@ -228,7 +228,7 @@ because the full-swing assumptions do not hold:
 |---|---|
 | Closed-form checks: Stimp round trip, skid-to-roll speed and distance, incline rest condition | Existing ground model: TESTED |
 | Cup dynamics vs. the two literature capture values | Planned (Phase 6) |
-| Comparison with measured putts (speed, skid, roll-out, holed/missed) on greens with a known Stimp, against accuracy targets set in advance | Planned. Only then could a putting metric become VERIFIED, and only for the tested conditions. |
+| Comparison with measured putts (speed, skid, roll-out, holed/missed) on greens with a known Stimp, against accuracy targets set in advance | Planned (Phase 7, validation and hardening, after the Phase 6 model exists). Only then could a putting metric become VERIFIED, and only for the tested conditions. |
 
 ## Related documents
 

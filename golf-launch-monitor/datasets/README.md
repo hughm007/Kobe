@@ -96,7 +96,9 @@ The output of `summarize()` in `scripts/datasets.ts` after replaying the synthet
 deterministic ids and 50 Monte Carlo samples.
 
 - **Header fields:** `dataset`, `schemaVersion`, `coordinateSystemVersion`,
-  `physicsModelVersion`, `groundModelVersion`, `estimatorVersion`, `monteCarloSamples`.
+  `physicsModelVersion`, `groundModelVersion`, `estimatorVersion`, `monteCarloSamples`. The
+  shot-simulator version is not in the header; the full shot records carry it in the physics tag
+  `<air>+<ground>+<shot simulator>` (`LaunchState.physicsModelVersion`).
 - **Per shot:** label, validity, spin mode, overall confidence, launch values, then carry
   (with p05/p95), lateral offsets, total, apex, descent angle, flight time and curve. All values
   are SI (m, m/s, rad), except the launch angles in degrees and spin in rpm, which follow the
@@ -109,7 +111,8 @@ deterministic ids and 50 Monte Carlo samples.
 - two replays to be byte-identical.
 
 The values are **model outputs, not data.** Total in particular comes from the provisional
-ground model ([../docs/terrain-model.md](../docs/terrain-model.md)).
+ground model v0.2 ([../docs/terrain-model.md](../docs/terrain-model.md) §7.1 lists the fixtures'
+carry and total); the no-spin knuckleball's long run-out is a known limitation of that model.
 
 ### Shot exports (`@glm/persistence`)
 

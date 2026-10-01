@@ -25,7 +25,10 @@ export type RangeSessionOptions = {
 
 /**
  * PipelineConfig for a flat driving range (fairway-normal surface), no player/club selected,
- * spin fallback disabled and raw observations not retained unless overridden.
+ * spin fallback disabled. The numeric raw observations (3D positions, triggers, spin and health
+ * reports; no images) ARE retained in every shot record by default so a stored shot can be
+ * re-fitted after an estimator or physics change (requirement §0.9); override
+ * storeRawObservations: false to opt out. Camera frames (rawCapturePaths) are never written here.
  */
 export function createRangePipelineConfig(options: RangeSessionOptions): PipelineConfig {
   const ballProfile = options.ballProfile ?? getBallProfile("premium-urethane-baseline");
@@ -47,7 +50,7 @@ export function createRangePipelineConfig(options: RangeSessionOptions): Pipelin
     sensorConfiguration: options.sensorConfiguration,
     calibration: null,
     allowGenericSpinFallback: false,
-    storeRawObservations: false,
+    storeRawObservations: true,
     playerSpinHistory: [],
     nextShotId: options.nextShotId,
     nowUtc: options.nowUtc,

@@ -6,8 +6,9 @@
 **not fit to data** (§8, §9). Read §12 (limitations) before using any number from this model.
 
 This document covers **air flight only**: from a ball state to the next ground contact.
-Bounce and roll belong to `@glm/ground-physics`; uncertainty propagation (Monte Carlo) belongs
-to `@glm/shot-simulator`. Frames, axes and spin conventions are those of
+Bounce and roll belong to `@glm/ground-physics` ([terrain-model.md](terrain-model.md));
+uncertainty propagation (Monte Carlo) belongs to `@glm/shot-simulator` (summary in §14, details
+in [architecture.md §5](architecture.md#5-uncertainty-propagation)). Frames, axes and spin conventions are those of
 [coordinate-system.md](coordinate-system.md) (`glm-world-1.0`): +X target line, +Y golfer's
 left, +Z up, spin as a 3D angular-velocity vector ω (rad/s), SI units throughout.
 
@@ -309,8 +310,10 @@ landing), as unvalidated.
 
 Tests (`packages/ballistics/test/plausibility-envelope.test.ts`) fly two widely published
 TrackMan PGA Tour averages (secondary sources) in the default indoor environment, no wind, on
-flat ground at launch height (ball center at z = 0, ground plane z = −r — TrackMan's carry and
-max height assume landing at launch height):
+flat ground at launch height (ball center at z = 0, ground plane z = −r). Flat ground at launch
+height is used because TrackMan's carry and max height are understood to assume landing at
+launch height (*secondary source, not verified on page*: TrackMan's definition pages could not
+be fetched, and the definition was not read first-hand):
 
 | Shot | Launch | Target (tolerance) | This model |
 |---|---|---|---|
@@ -373,6 +376,8 @@ primary publication.
   verified on page.*
 - TrackMan PGA Tour averages (driver and 7-iron, §9). *Secondary source, not verified on page;
   used only as a plausibility envelope.*
+- TrackMan's carry and max-height definitions (landing at launch height, §9). *Secondary source,
+  not verified on page*: the definition pages were not fetched.
 - Buck (1981; "Arden Buck" equation) saturation vapour pressure; Sutherland's law constants; ISA troposphere
   constants. *Secondary source, not verified on page* (standard reference values).
 
@@ -388,8 +393,9 @@ primary publication.
    magnitude decays.
 6. **Validity checked at segment start only**; mid-flight excursions of Re/S (e.g. low Re near
    landing) are not flagged.
-7. **Single deterministic trajectory.** Launch-state and parameter uncertainty propagation
-   lives in `@glm/shot-simulator`, not here.
+7. **Single deterministic trajectory.** This package computes one trajectory per launch state.
+   The Monte Carlo in `@glm/shot-simulator` samples launch velocity and spin only; aerodynamic
+   **parameter** uncertainty is not propagated anywhere (§14).
 8. **Environment simplifications**: ideal-gas moist air, humidity ignored in viscosity, ISA
    temperature profile assumed when deriving pressure from altitude; wind is uniform and steady
    (no gradient with height, no gusts).
@@ -404,3 +410,23 @@ shipped profile, or the integrator — requires bumping `PHYSICS_MODEL_VERSION` 
 `ENVIRONMENT_MODEL_VERSION` for §7) in the same commit, and a new model id if a functional form
 changes. Results record the model version, model ids and timestep so stored shots stay
 interpretable.
+
+## 14. Uncertainty propagation (summary)
+
+The air model itself is deterministic. `runMonteCarlo` in `@glm/shot-simulator` turns launch
+uncertainty into intervals ([architecture.md §5](architecture.md#5-uncertainty-propagation) has
+the full description):
+
+- **Sampled:** the launch velocity (from the fit covariance) and the launch spin vector (from its
+  covariance, whether measured, estimated or assumed). Each sample is flown through this air
+  model and the ground model.
+- **Integration:** the RK4 step is at least `MONTE_CARLO_MIN_TIMESTEP_S` = 4 ms (the reported
+  trajectory uses the 1 ms default; carry is insensitive to the step because contact time is
+  located by bisection, §4–5). p05 / p50 / p95 are reported per metric.
+- **Samples:** 100 by default in a range session (`DEFAULT_MONTE_CARLO_SAMPLES`); 0 (disabled)
+  in `DEFAULT_SIMULATION_SETTINGS`. Seeded, so deterministic.
+- **Not included:** model and coefficient error (the drag, lift and spin-decay parameters of §8.1
+  and the functional forms of §3), environment uncertainty, ground-model parameters, ball-to-ball
+  variation and launch-position uncertainty. The intervals therefore understate real-world
+  uncertainty; the plausibility envelope (§9) shows that parameter sets differing by about
+  5–10 % in C_D and C_L are equally consistent with the only reference numbers available.

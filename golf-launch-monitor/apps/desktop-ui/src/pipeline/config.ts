@@ -56,6 +56,11 @@ export type SourceContext = {
   readonly dataOrigin: DataOrigin;
   /** A replay's recorded calibration; null for synthetic/manual streams. */
   readonly calibration: CalibrationRecord | null;
+  /**
+   * Known 1-sigma timestamp error of the stream, s (propagated into the launch fit). Synthetic
+   * presets know their own jitter; hardware will report it once Phase 2 sync exists.
+   */
+  readonly timestampSigmaS?: number;
 };
 
 export type IdSource = {
@@ -84,6 +89,7 @@ export function buildPipelineConfig(settings: PipelineSettings, source: SourceCo
       allowGenericSpinFallback: settings.allowGenericSpinFallback,
       storeRawObservations: settings.storeRawObservations,
       calibration: source.calibration,
+      timestampSigmaS: source.timestampSigmaS ?? 0,
     },
   });
 }
