@@ -8,7 +8,6 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@glm/shared-types": "0.1.0",
     "@glm/core-math": "0.1.0",
     "@glm/units": "0.1.0",
     "zod": "^4.6.5"

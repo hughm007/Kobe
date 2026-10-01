@@ -1,0 +1,37 @@
+{
+  "name": "@glm/desktop-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Desktop-first range-mode UI (Phase 1: synthetic, replay, and developer manual data only).",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit -p tsconfig.json && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@glm/ballistics": "0.1.0",
+    "@glm/launch-state": "0.1.0",
+    "@glm/persistence": "0.1.0",
+    "@glm/presentation": "0.1.0",
+    "@glm/sensor-adapters": "0.1.0",
+    "@glm/shared-types": "0.1.0",
+    "@glm/shot-pipeline": "0.1.0",
+    "@glm/terrain-engine": "0.1.0",
+    "@glm/units": "0.1.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^30.1.1",
+    "vite": "^8.3.2"
+  }
+}
