@@ -23,8 +23,10 @@ import { combineSources, isAvailable, makeMeasurement, unavailableMeasurement } 
  * Spin is never reported as measured when the gate fails, and estimated spin always carries
  * an estimated source label, a wide uncertainty and a warning. Values that also depend on the
  * launch velocity (the spin-vector direction; the generic-fallback magnitude) follow the
- * derived-value rules: combineSources([mode label, velocity source]) and min confidence, so a
- * synthetic or manual velocity yields a "synthetic" / "manual" spin vector.
+ * derived-value rules: combineSources([mode label, velocity source]) and min confidence. Because
+ * model-derived labels outrank stream-origin labels in combineSources, the spin vector keeps its
+ * estimated / assumed label even on a synthetic or manual stream; the stream origin is carried by
+ * the shot's dataOrigin and the calculated values' dependsOnSynthetic flag.
  */
 
 export type PlayerSpinHistoryEntry = {
@@ -80,9 +82,11 @@ export type ClubSpinPrior = {
 };
 
 /**
- * Per-category spin-rate priors, seeded from widely published TrackMan PGA Tour averages
- * (driver 2686, 3-wood 3655, hybrid 4437, 3-iron 4630, 4-iron 4836, 5-iron 5361, 6-iron 6231,
- * 7-iron 7097, 8-iron 7998, 9-iron 8647, PW 9304 rpm). Mapping onto ClubCategory:
+ * Per-category spin-rate priors, seeded from the widely reproduced (older) TrackMan PGA Tour
+ * averages table (driver 2686, 3-wood 3655, hybrid 4437, 3-iron 4630, 4-iron 4836, 5-iron 5361,
+ * 6-iron 6231, 7-iron 7097, 8-iron 7998, 9-iron 8647, PW 9304 rpm). Secondary source, not
+ * verified on page: the research pass could not fetch TrackMan's own table, and TrackMan has
+ * since published updated averages (e.g. driver ~2545 rpm). Mapping onto ClubCategory:
  *   driver -> driver; fairway-wood -> 3-wood; hybrid -> hybrid;
  *   long-iron -> mean(3-, 4-iron); mid-iron -> mean(5-, 6-, 7-iron);
  *   short-iron -> mean(8-, 9-iron); wedge -> PW (the only wedge in the table);
@@ -235,8 +239,8 @@ type EstimatedLabel = "estimated-player-model" | "estimated-club-model" | "assum
  * Provenance and confidence of an estimated value that also depends on the launch velocity
  * (the spin-vector direction always does; the generic-fallback magnitude does too): derived-value
  * rules, i.e. combineSources([mode label, velocity source]) and min(mode, velocity) confidence.
- * With a measured velocity the label is the mode label; a synthetic or manual velocity makes it
- * "synthetic" / "manual", never an estimate that looks sensor-backed.
+ * The mode label always survives (model-derived labels outrank stream-origin labels), so an
+ * estimate never looks sensor-backed; the confidence still drops to the velocity's if lower.
  */
 function velocityDependent(
   label: EstimatedLabel,
@@ -295,9 +299,13 @@ export function resolveSpin(input: SpinResolutionInput): SpinResolution {
   const best = passing[0];
   if (best) {
     // A synthetic rotation estimate is never labelled measured, whatever the stream claims.
+    // On a manual (developer-entry) stream it keeps the "manual" label: the value was typed in.
+    const streamIsNotMeasured = input.measuredSource === "synthetic" || input.measuredSource === "manual";
     const source: Exclude<MeasurementSource, "unavailable"> =
-      best.method === "synthetic" ? "synthetic" : (input.measuredSource as Exclude<MeasurementSource, "unavailable">);
-    if (best.method === "synthetic" && input.measuredSource !== "synthetic") {
+      best.method === "synthetic" && !streamIsNotMeasured
+        ? "synthetic"
+        : (input.measuredSource as Exclude<MeasurementSource, "unavailable">);
+    if (best.method === "synthetic" && !streamIsNotMeasured) {
       warnings.push("Synthetic spin observation relabelled as synthetic (it was not measured).");
     }
     const quality = measuredQuality(best);

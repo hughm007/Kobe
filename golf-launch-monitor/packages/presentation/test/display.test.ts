@@ -352,10 +352,12 @@ describe("presentCalculated", () => {
 
   it("a magnitude's range never goes below 0: the lower end is clamped and flagged", () => {
     // Monte Carlo p05 below 0 for a non-negative distance (malformed upstream): clamp, flag.
+    const apex = presentCalculated("apexHeight", calc(2.4, "m", { interval: interval(-1, 2.4, 6, "m") }), I);
+    expect(apex.qualityFlags.some((f) => f.startsWith("presentation: interval lower end below 0 clamped to 0"))).toBe(true);
+    // Bounce and roll are SIGNED along-track displacements (spin-back < 0): never clamped.
     const roll = presentCalculated("rollDistance", calc(2.4, "m", { interval: interval(-1, 2.4, 6, "m") }), I);
-    expect(roll.rangeText).toBe("0–7 yd");
-    expect(roll.qualityFlags.some((f) => f.startsWith("presentation: interval lower end below 0 clamped to 0"))).toBe(true);
-    expect(roll.tooltip.confidence).toContain("lower end clamped at 0) 0–7 yd");
+    expect(roll.rangeText).toBe("-1–7 yd");
+    expect(roll.qualityFlags.some((f) => f.includes("clamped"))).toBe(false);
     // Signed quantities are not clamped.
     const lateral = presentCalculated("carryLateral", calc(-1, "m", { interval: interval(-5, -1, 3, "m") }), I);
     expect(lateral.rangeText).toBe("3 yd L–5 yd R");
@@ -683,5 +685,25 @@ describe("presentShotMetrics", () => {
     for (const dv of Object.values(out)) expect(dv?.secondaryBadges).toContain("SYNTHETIC");
     expect(out.carry?.badge).toBe("CALCULATED");
     expectUnavailable(out.rollDistance, ["SYNTHETIC"]);
+  });
+});
+
+describe("spin components exclude rifle spin (coordinate-system.md §4.3)", () => {
+  it("splits only the spin perpendicular to the launch velocity", async () => {
+    const { presentLaunchState } = await import("../src/index");
+    const { IMPERIAL_GOLF_UNITS } = await import("@glm/units");
+    const base = makeLaunch({});
+    // omega: 3000 rpm of backspin about -Y plus 4000 rpm of rifle spin about +X (v along +X): total 5000 rpm.
+    const rpm = (2 * Math.PI) / 60;
+    const launch = {
+      ...base,
+      velocityMps: { ...base.velocityMps, value: { x: 70, y: 0, z: 0 }, source: "measured-camera" as const },
+      angularVelocityRadPerSec: { ...base.angularVelocityRadPerSec, value: { x: 4000 * rpm, y: -3000 * rpm, z: 0 }, source: "measured-camera" as const, confidence: 0.9 },
+      totalSpinRpm: { ...base.totalSpinRpm, value: 5000, source: "measured-camera" as const, confidence: 0.9 },
+      spinAxisTiltDeg: { ...base.spinAxisTiltDeg, value: 0, source: "measured-camera" as const, confidence: 0.9 },
+    };
+    const shown = presentLaunchState(launch, IMPERIAL_GOLF_UNITS);
+    expect(shown.backspin?.text).toBe("3,000 rpm");
+    expect(shown.sidespin?.text).toBe("0 rpm");
   });
 });

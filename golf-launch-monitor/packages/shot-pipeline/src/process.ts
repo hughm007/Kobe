@@ -41,7 +41,7 @@ import {
   type TriggerSource,
   type Vec3,
 } from "@glm/shared-types";
-import { simulateShot } from "@glm/shot-simulator";
+import { SHOT_SIMULATOR_VERSION, simulateShot } from "@glm/shot-simulator";
 import { createAeroTrajectoryModel } from "./models";
 import type { ShotObservationGroup } from "./segmenter";
 import { fuseTriggers } from "./triggers";
@@ -155,6 +155,12 @@ export function processShot(group: ShotObservationGroup, config: PipelineConfig)
   const spinObservations = group.observations.filter((o): o is SpinObservation => o.kind === "spin");
   const trigger = fuseTriggers(group.triggers, config.triggerLatencyS);
   const extraWarnings: string[] = [...(trigger?.warnings ?? [])];
+  if (group.lateTriggers.length > 0 && trigger) {
+    const delaysMs = group.lateTriggers.map((t) => ((t.timestampS - trigger.timeS) * 1000).toFixed(0));
+    extraWarnings.push(
+      `Ignored ${group.lateTriggers.length} later trigger event(s) ${delaysMs.join(", ")} ms after impact (e.g. screen or net impact); impact time uses the first trigger cluster only.`,
+    );
+  }
   const firstObservationS = ballObservations.reduce((m, o) => Math.min(m, o.timestampS), Number.POSITIVE_INFINITY);
 
   const seedRef = trigger && Number.isFinite(firstObservationS) ? Math.min(trigger.timeS, firstObservationS) : null;
@@ -255,7 +261,7 @@ export function processShot(group: ShotObservationGroup, config: PipelineConfig)
   return { record: deepFreeze(record) as ShotRecord, fitAttempts };
 }
 
-/** Physics version recorded on the launch state: air model + ground model. */
+/** Physics version recorded on the launch state: air model + ground model + shot simulator. */
 export function physicsVersionTag(): string {
-  return `${PHYSICS_MODEL_VERSION}+${GROUND_MODEL_VERSION}`;
+  return `${PHYSICS_MODEL_VERSION}+${GROUND_MODEL_VERSION}+${SHOT_SIMULATOR_VERSION}`;
 }

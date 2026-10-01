@@ -115,7 +115,7 @@ const METRIC_SPECS: Record<keyof RawMetrics, { unit: string; cls: MetricClass }>
 
 /**
  * Confidence multipliers on top of the launch state's overall confidence (which already
- * includes spin quality). Provisional; documented in docs/physics-model.md.
+ * includes spin quality). Provisional policy values; documented in docs/architecture.md.
  */
 export const METRIC_CONFIDENCE_FACTORS = {
   /** Lateral metrics when the spin axis was not measured and zero tilt was assumed. */

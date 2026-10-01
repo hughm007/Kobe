@@ -26,7 +26,7 @@ import { buildShotMetrics, computeRawMetrics, RAW_METRIC_KEYS, type RawMetrics }
 
 export const SHOT_SIMULATOR_VERSION = "glm-shot-sim-0.1.0";
 
-/** Monte Carlo trajectories use at least this RK4 step (s) to bound cost; see docs/physics-model.md. */
+/** Monte Carlo trajectories use at least this RK4 step (s) to bound cost; see docs/architecture.md (uncertainty propagation). */
 export const MONTE_CARLO_MIN_TIMESTEP_S = 0.004;
 
 export type SimulationContext = {
@@ -270,7 +270,7 @@ export function simulateShot(launch: LaunchState, ctx: SimulationContext): Simul
     monteCarloFlags: monteCarlo.flags,
     environment: ctx.environment,
     ballProfile: ctx.ballProfile,
-    modelVersion: `${PHYSICS_MODEL_VERSION}+${GROUND_MODEL_VERSION}`,
+    modelVersion: `${PHYSICS_MODEL_VERSION}+${GROUND_MODEL_VERSION}+${SHOT_SIMULATOR_VERSION}`,
   });
 
   const allWarnings = [

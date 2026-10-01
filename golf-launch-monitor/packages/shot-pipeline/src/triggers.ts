@@ -1,8 +1,13 @@
 import { median } from "@glm/core-math";
 import type { TriggerObservation, TriggerSource } from "@glm/shared-types";
 
-/** Trigger observations closer together than this belong to the same impact event, s. */
-export const TRIGGER_CLUSTER_WINDOW_S = 0.05;
+/**
+ * Trigger observations within this window of the first trigger are fused as the same impact
+ * event, s. Kept tight on purpose: the ball striking the screen or net produces a second,
+ * later acoustic/optical event (tens of ms after impact for a garage bay) that must not be
+ * averaged into the impact time. Provisional; see docs/sensor-specification.md.
+ */
+export const TRIGGER_CLUSTER_WINDOW_S = 0.01;
 
 /** Fused trigger sources that disagree by more than this raise a warning, s. */
 export const TRIGGER_AGREEMENT_TOLERANCE_S = 0.003;

@@ -35,5 +35,5 @@ jobs:
         run: npm test
       - name: JSON schemas are up to date
         run: npm run schemas:generate && git diff --exit-code -- packages/shared-types/schemas
-      - name: Build desktop UI
-        run: npm run build --workspace @glm/desktop-ui --if-present
+      - name: Build workspaces that define a build script (desktop UI)
+        run: npm run build --workspaces --if-present

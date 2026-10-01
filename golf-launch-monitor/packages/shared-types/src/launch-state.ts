@@ -12,7 +12,9 @@ export type DataOrigin = "live" | "replay" | "synthetic" | "manual";
 
 /**
  * How the spin vector used for simulation was obtained (docs/spin-measurement.md).
- * - measured: from ball-surface observation of this shot.
+ * - measured: from this shot's own spin observation in the data stream. That is a sensor
+ *   measurement only on live/replayed hardware data; on synthetic or manual streams the value's
+ *   source label is "synthetic" / "manual", never measured-*.
  * - estimated: from a player/club model with stated uncertainty.
  * - assumed-generic-fallback: generic value, only when the user explicitly allowed it.
  * - unavailable: no credible spin; spin-dependent outputs are unavailable or low confidence.

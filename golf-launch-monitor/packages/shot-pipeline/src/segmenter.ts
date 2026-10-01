@@ -9,7 +9,13 @@ import { TRIGGER_CLUSTER_WINDOW_S } from "./triggers";
 
 /** All observations belonging to one shot, plus the latest context seen before it. */
 export type ShotObservationGroup = {
+  /** Triggers fused as the impact event (within TRIGGER_CLUSTER_WINDOW_S of the first). */
   readonly triggers: readonly TriggerObservation[];
+  /**
+   * Later triggers inside the same shot window (e.g. the ball hitting the screen or net).
+   * Retained as evidence, excluded from impact-time fusion, never opening a new shot.
+   */
+  readonly lateTriggers: readonly TriggerObservation[];
   /** Every observation inside the shot's frame-buffer window, in arrival order. */
   readonly observations: readonly RawSensorObservation[];
   /** Latest ball-address observation inside the pre-trigger window, if any. */
@@ -22,6 +28,7 @@ export type ShotObservationGroup = {
 
 type OpenShot = {
   triggers: TriggerObservation[];
+  lateTriggers: TriggerObservation[];
   observations: RawSensorObservation[];
   firstTriggerS: number;
   windowStartS: number;
@@ -32,8 +39,9 @@ type OpenShot = {
  * Groups a time-ordered observation stream into shots. A shot opens on a trigger and collects
  * observations inside [trigger - preTriggerS, trigger + postTriggerS] (the rolling frame
  * buffer, docs/sensor-specification.md). Triggers within TRIGGER_CLUSTER_WINDOW_S of the first
- * one are treated as the same impact. A shot closes when an observation arrives after its
- * window, or on flush().
+ * one are fused as the same impact; later triggers inside the window are kept as lateTriggers
+ * and never open a new shot. A shot closes when an observation arrives after its window, or on
+ * flush().
  */
 export class ShotSegmenter {
   private readonly buffer: RawSensorObservation[] = [];
@@ -63,12 +71,17 @@ export class ShotSegmenter {
         return closed;
       }
       if (this.open) {
-        closed.push(this.close(this.open));
+        // Still inside this shot's post-trigger window: a secondary event of the same shot
+        // (screen/net impact), not a new swing. Keep it as evidence only.
+        this.open.lateTriggers.push(observation);
+        this.open.observations.push(observation);
+        return closed;
       }
       const windowStartS = observation.timestampS - this.frameBuffer.preTriggerS;
       const pre = this.buffer.filter((o) => o.timestampS >= windowStartS);
       this.open = {
         triggers: [observation],
+        lateTriggers: [],
         observations: [...pre, observation],
         firstTriggerS: observation.timestampS,
         windowStartS,
@@ -109,6 +122,7 @@ export class ShotSegmenter {
     }
     return {
       triggers: shot.triggers,
+      lateTriggers: shot.lateTriggers,
       observations: shot.observations,
       address,
       health: this.latestHealth,

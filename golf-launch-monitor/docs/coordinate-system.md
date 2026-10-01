@@ -16,8 +16,10 @@ Right-handed Cartesian frame, SI units (meters, seconds).
 
 - **Origin:** the calibrated ball center at address (`WorldFrameCalibration.addressPointM`,
   normally `(0, 0, 0)`).
-- **Target line:** `WorldFrameCalibration.targetLineUnit`, a unit vector in the ground plane.
-  The world frame is constructed so that the target line is +X.
+- **Target line:** `WorldFrameCalibration.targetLineUnit`. +Z is defined by gravity, not by the
+  floor, so on a sloped floor the target line is the **horizontal projection** of the surveyed
+  target direction; the world frame is constructed so that this horizontal line is +X. The
+  (possibly tilted) floor is described separately by `WorldFrameCalibration.groundPlane`.
 - **Ground:** the ground is **not** assumed to be flat or level. Terrain is queried through
   `TerrainQuery.sample(x, y)`, which returns a height and a unit surface normal. On a flat
   range the ground plane is `z = -(ballRadius + teeHeight)`, because the origin is the ball
@@ -99,20 +101,29 @@ ball curves RIGHT.** Check with v ∥ +X, α > 0: ω = |ω|(0, −cos α, −sin
 This matches the "positive spin axis = curves right" convention used by commercial
 launch-monitor displays, so tilt is shown as a magnitude with an `L`/`R` label anyway.
 
+In this decomposition |ω| inside the parentheses is the spin **perpendicular** to the flight
+direction, |ω⊥| = |ω × d̂|; rifle spin is the separate component ω·d̂, and the tilt is computed
+from ω⊥ only. Measured golf shots carry little rifle spin, but the definitions stay exact.
+
 Derived display components (golfer familiarity only):
 
 ```
-backspinRpm  = totalSpinRpm · cos α     // component about r̂
-sidespinRpm  = totalSpinRpm · sin α     // positive = curves right
+backspinRpm  = |ω⊥| · cos α · 60/(2π)   // component about r̂
+sidespinRpm  = |ω⊥| · sin α · 60/(2π)   // positive = curves right
+riflingRpm   = (ω·d̂) · 60/(2π)
 ```
+
+Using `totalSpinRpm · cos α` instead overstates both components when rifle spin is present.
 
 The definition is undefined when |v| ≈ 0 or v is vertical (d̂ ∥ Ẑ); derivation functions
 return `unavailable` in that case rather than a number.
 
 ## 5. Derived flight metrics
 
-All distances are **horizontal** (ground-plane, XY) distances measured from the launch
-point. Lateral values are signed, **positive = left** of the target line (+Y).
+All distances are **horizontal** (XY-plane) distances measured from the launch point. Lateral
+values are signed, **positive = left** of the target line (+Y). Bounce and roll are signed
+along-track displacements, so that bounce + roll equals the net ground travel even when a
+high-spin shot checks or spins back (docs/terrain-model.md §6).
 
 | Metric | Definition |
 |---|---|
@@ -124,8 +135,8 @@ point. Lateral values are signed, **positive = left** of the target line (+Y).
 | Descent angle | Angle of the velocity below horizontal at first contact: atan2(−vz, √(vx²+vy²)). |
 | Landing direction | atan2(vy, vx) of the velocity at first contact (+left). |
 | Curve | Signed perpendicular offset of the landing point from the **start line** (the line through the launch point along the horizontal launch direction), +left. |
-| Bounce distance | Horizontal distance from first contact to the start of continuous rolling. |
-| Roll distance | Horizontal distance covered while rolling. |
+| Bounce distance | Signed horizontal displacement along the landing heading from first contact to the start of continuous rolling (negative if the ball spins back). |
+| Roll distance | Signed horizontal displacement along the landing heading while rolling (negative if the ball spins back). |
 
 Ground contact is detected when the ball center comes within one ball radius of the terrain
 along the surface normal.

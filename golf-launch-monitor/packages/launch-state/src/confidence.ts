@@ -165,8 +165,9 @@ export function calibrationFactor(status: CalibrationStatus, dataOrigin: DataOri
 }
 
 /**
- * Provisional fit-quality ramps. Residual: ~3 mm RMS is typical of good stereo triangulation
- * at 1-2 m; 20 mm means the trajectory model or the detections are wrong. Velocity sigma
+ * Provisional fit-quality ramps (engineering judgement, not sourced or fit to data; revisit with
+ * Phase 2 stereo measurements). Residual: ~3 mm RMS is the assumed target for good stereo
+ * triangulation at 1-2 m; 20 mm means the trajectory model or the detections are wrong. Velocity sigma
  * sqrt(trace(Cov_v)): 0.2 m/s (~0.45 mph) is good, 1.5 m/s (~3.4 mph) is poor.
  * chi2/dof: up to 4 (residual scatter <= 2x the reported noise; the fit's
  * "position-noise-understated" flag starts above it) is not penalised; 9 (3x, the fit's cap on

@@ -67,6 +67,9 @@ export async function runReplay(replay: ParsedReplay, monteCarloSamples = GOLDEN
     dataOrigin: adapter.capabilities.dataOrigin,
     ...deterministicIds("replay-shot"),
     simulationSettings: { monteCarloSamples },
+    // A recording carries the calibration it was captured with; ignoring it would mark every
+    // live replay invalid (or, worse, judge it against the wrong calibration).
+    overrides: { calibration: replay.header.calibration },
   });
   const pipeline = new ShotPipeline(adapter, config);
   const records: ShotRecord[] = [];

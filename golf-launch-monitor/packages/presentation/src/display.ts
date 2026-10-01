@@ -309,6 +309,8 @@ function isOrderedFinite(lo: number, mid: number, hi: number): boolean {
  * height (maximum minus launch height), speeds, spin rates, durations.
  */
 const NON_NEGATIVE_KINDS: ReadonlySet<FormatKind> = new Set(["distance", "height", "speed", "spin", "duration"]);
+/** Distance-formatted metrics that are signed along-track displacements (spin-back < 0). */
+const SIGNED_DISTANCE_METRICS: ReadonlySet<string> = new Set(["bounceDistance", "rollDistance"]);
 
 /**
  * A magnitude's interval must not reach below 0. The ±1.645σ normal approximation does when
@@ -321,7 +323,12 @@ function clampNonNegative(
   interval: PercentileInterval | null,
   flags: string[],
 ): { interval: PercentileInterval | null; clamped: boolean } {
-  if (interval === null || !NON_NEGATIVE_KINDS.has(def.formatKind) || interval.p05 >= 0) {
+  if (
+    interval === null ||
+    !NON_NEGATIVE_KINDS.has(def.formatKind) ||
+    SIGNED_DISTANCE_METRICS.has(def.id) ||
+    interval.p05 >= 0
+  ) {
     return { interval, clamped: false };
   }
   if (interval.p50 < 0) {
@@ -796,7 +803,24 @@ const BADGE_ADJECTIVE: Readonly<Partial<Record<ProvenanceBadge, string>>> = {
 };
 
 /**
- * Backspin / sidespin for golfer familiarity (§4.3): total·cos(tilt), total·sin(tilt).
+ * |omega x v-hat| / |omega|: the share of the spin that is perpendicular to the launch velocity
+ * (1 when there is no rifle spin). Null when either vector is unavailable or degenerate.
+ */
+function perpendicularSpinFraction(launch: LaunchState): number | null {
+  const w = launch.angularVelocityRadPerSec.value;
+  const v = launch.velocityMps.value;
+  if (w === null || v === null) return null;
+  const wn = Math.hypot(w.x, w.y, w.z);
+  const vn = Math.hypot(v.x, v.y, v.z);
+  if (!(wn > 0) || !(vn > 0)) return null;
+  const cx = (w.y * v.z - w.z * v.y) / vn;
+  const cy = (w.z * v.x - w.x * v.z) / vn;
+  const cz = (w.x * v.y - w.y * v.x) / vn;
+  return Math.min(1, Math.hypot(cx, cy, cz) / wn);
+}
+
+/**
+ * Backspin / sidespin for golfer familiarity (§4.3): |omega_perp|·cos(tilt), |omega_perp|·sin(tilt).
  * Badge = the worse of the two inputs; the other non-measured input badge is kept as a
  * secondary badge; confidence = the lower of the two. No range: the joint uncertainty of
  * total and tilt is not propagated here (see limitations).
@@ -854,7 +878,13 @@ function spinComponentDisplay(
   const totalRpm = requireConverter(total.unit, "rpm", `presentLaunchState(${metricId}: totalSpinRpm)`)(total.value);
   const tiltDeg = requireConverter(tilt.unit, "deg", `presentLaunchState(${metricId}: spinAxisTiltDeg)`)(tilt.value);
   const tiltRad = degToRad(tiltDeg);
-  const componentRpm = metricId === "backspin" ? totalRpm * Math.cos(tiltRad) : totalRpm * Math.sin(tiltRad);
+  // §4.3: the components split the spin PERPENDICULAR to the flight direction; rifle spin
+  // (about the flight direction) belongs to neither. Use the stored vectors when available.
+  const perpendicularFraction = perpendicularSpinFraction(launch);
+  if (perpendicularFraction === null) flags.push("presentation: rifle spin not evaluated (spin or velocity vector unavailable)");
+  const perpendicularRpm = totalRpm * (perpendicularFraction ?? 1);
+  const componentRpm =
+    metricId === "backspin" ? perpendicularRpm * Math.cos(tiltRad) : perpendicularRpm * Math.sin(tiltRad);
   const badge = worstBadge([totalAdj.badge, tiltAdj.badge]);
   const secondaryBadges = orderedBadges([totalAdj.badge, tiltAdj.badge].filter((b) => b !== badge && b !== "MEASURED"));
   const confidence = Math.min(total.confidence, tilt.confidence);

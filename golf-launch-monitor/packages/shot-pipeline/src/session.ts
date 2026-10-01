@@ -8,7 +8,7 @@ import type {
 import { createFlatRangeTerrain } from "@glm/terrain-engine";
 import type { PipelineConfig } from "./process";
 
-/** Default Monte Carlo sample count for range sessions (see docs/physics-model.md). */
+/** Default Monte Carlo sample count for range sessions (see docs/architecture.md). */
 export const DEFAULT_MONTE_CARLO_SAMPLES = 100;
 
 export type RangeSessionOptions = {

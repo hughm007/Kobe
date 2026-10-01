@@ -116,8 +116,9 @@ export type ScoringEvent = {
 };
 
 /**
- * Calculated, golfer-facing results. Distances are horizontal (ground-plane) distances
- * from the launch point; lateral values are signed, positive = left of the target line.
+ * Calculated, golfer-facing results. Distances are horizontal (XY-plane) distances from the
+ * launch point; lateral values are signed, positive = left of the target line; bounce and roll
+ * are signed along-track displacements (docs/coordinate-system.md §5).
  * Angles are radians internally and converted for display only.
  */
 export type ShotMetrics = {
@@ -129,9 +130,9 @@ export type ShotMetrics = {
   readonly totalM: CalculatedValue<number>;
   /** Signed lateral offset from the target line at rest (+left). */
   readonly totalLateralM: CalculatedValue<number>;
-  /** Horizontal distance covered from first contact until continuous roll begins. */
+  /** Signed horizontal displacement along the landing heading from first contact to the start of continuous rolling (negative if the ball spins back). */
   readonly bounceDistanceM: CalculatedValue<number>;
-  /** Horizontal distance covered while rolling. */
+  /** Signed horizontal displacement along the landing heading while rolling (negative if the ball spins back). */
   readonly rollDistanceM: CalculatedValue<number>;
   /** Apex height above launch height. */
   readonly apexHeightM: CalculatedValue<number>;
