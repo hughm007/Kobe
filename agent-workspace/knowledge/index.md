@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-10-01
 tags: [index, knowledge]
 ---
 
@@ -82,6 +82,7 @@ doesn't fit.
 | Date | Subject | File |
 |---|---|---|
 | 2026-08-25 | Design intelligence — the ServicePow Style Bank archetypes, hard laws, and how they translate to static + motion work | [research/design-intelligence.md](research/design-intelligence.md) |
+| 2026-10-01 | Instagram follower growth — ranking signals, format benchmarks, creators, giveaways, paid, fake-influence law (2025–26) | [research/2026-10-01-instagram-growth-evidence.md](research/2026-10-01-instagram-growth-evidence.md) |
 
 ---
 

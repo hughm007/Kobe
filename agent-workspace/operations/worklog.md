@@ -1380,3 +1380,29 @@ as with Drive and Vercel; a baseline advance is the owner's ruling, not a sessio
 
 **Next:** the first real client use of the lane runs `canva-procedure.md` end to end, with the dual
 quality gate, claims and brand law after the commit.
+
+---
+
+## 2026-10-01 — TripNerd Instagram follower growth plan (draft deck)
+
+**Did:** Karl asked for a researched plan to grow TripNerd's Instagram following (video and
+static adverts plus everything else our resources allow), presented professionally. Three
+research passes (TripNerd itself, 20+ category/creator accounts, platform evidence) plus the
+existing Sept 11 "Social Direction" deck and Sept invoice found in Drive. Built a 32-slide deck
+(Slides artifact, private): https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ. Source notes
+filed at `clients/tripnerd/deliverables/2026-10-01-instagram-growth-plan.md` (status: draft);
+reusable platform evidence at `knowledge/research/2026-10-01-instagram-growth-evidence.md`.
+
+**Decided (recommendation, not yet owner-approved):** creators yes (biggest lever); carousels
+yes, 1–2/wk; giveaways once per season only; video for reach, statics for retargeting; no
+follow-back growth services. Base case ~10,000 followers in 12 months (ESTIMATE, from 4,730).
+
+**Found:** On Location follower count conflicts (169K in Sept deck vs 57K indexed); the June
+Kicksta/Ascend Viral doc describes the wrong "tripnerd"; clients/README still lists TripNerd as
+Prospect though it is billing. All three flagged in the deliverable, none silently changed.
+
+**Not verified:** live IG baseline and Meta Ad Library (egress-blocked); deck not rendered or
+eyeballed after publish. Nothing sent to the client; no spend; no generation.
+
+**Open:** Karl reviews the deck and shares it; resolve the On Location number; price the plan as
+a retainer; Insights access is the day-1 dependency.
