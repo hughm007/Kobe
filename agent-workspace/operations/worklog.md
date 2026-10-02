@@ -1482,3 +1482,7 @@ which file is which advert, and clear the Camera Roll's music/consent/AI-label i
 Investment slide listing ServicePOW's tool stack (~$419/mo, included); removed every assumed client
 budget. Flagged to Karl: $1,500 sits at the retainer floor against a much larger scope, and showing tool
 costs cuts against the pricing rule "never price on what it cost to make".
+
+**Follow-up (12-slide CEO deck):** New artifact https://claude.ai/artifact/UAaB3bcsmJu379cEzpoFkg with only what
+Karl says the CEO wants (algorithms, content mix, weekly schedule, first ten, 30/60/90 roadmap, measurement,
+cost, roles). 27-slide deck kept. Follower target restated as ~6,300 organic / ~10,000 with approved paid.

@@ -11,14 +11,28 @@ tags: [client, instagram, social-strategy, creators, organic, paid-social]
 
 # TripNerd — Instagram follower growth plan
 
-**Deck (27 slides, private until Karl shares it):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
+**CEO deck (12 slides, the version to present; private until Karl shares it):** https://claude.ai/artifact/UAaB3bcsmJu379cEzpoFkg
+**Full deck (27 slides, kept as the reference version):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
 **Status:** DRAFT. Not sent to TripNerd. Karl reviews before anything goes to the client.
 **Builds on:** the Sept 2026 "TripNerd Social Direction" deck (Drive, 22 slides, data
 observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic and adds
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
 
-## v7 — 2026-10-02 (current deck version, artifact version 22)
+## v8 — 2026-10-02: 12-slide CEO deck (separate artifact)
+Karl knows TripNerd's CEO and asked for a short, no-filler version covering only: which algorithms we
+attack, how, and what they mean; the Reels / carousels / Stories / Explore breakdown; the weekly
+schedule; the first ten posts; a 90-day roadmap framed as **Days 1–30 test → 31–60 double down →
+61–90 roll**; measurement; cost (our expenses and his fee); roles. Built as a new artifact; the 27-slide
+deck is untouched. Slides: cover · plan on one page · four algorithms (Feed, Stories, Explore, Reels: who
+sees it, what it rewards, how we attack it) · lifts/kills reach · content mix table · weekly schedule ·
+first ten posts · roadmap · measurement · investment · roles + what we need · after Day 90.
+Changes vs the long deck: cadence ramp moved from Day 45 to Day 31 to match Karl's phases; follower
+target stated honestly as ~5,100 at Day 90 and ~6,300 at month 12 organic, ~10,000 only with approved
+paid boosts and creators (the "CONSERVATIVE ESTIMATE" 10,000 label is not used); the entertainment theme
+appears once, in the summary's goal line.
+
+## v7 — 2026-10-02 (artifact version 22)
 - **Pricing (Karl's instruction, 2026-10-02): $1,500/month ServicePOW fee "for now"**; Karl will refine
   the price and breakdown. $1,500 is exactly the retainer floor in `company/pricing-and-packaging.md`
   (recommended quote $2,000 for 4 ads/mo). The plan's scope (8→16 Reels + 8 statics a month, creator
