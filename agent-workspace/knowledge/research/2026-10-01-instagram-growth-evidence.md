@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-10-01
-updated: 2026-10-01
+updated: 2026-10-02
 tags: [instagram, social, organic, creators, giveaways, paid-social, research]
 ---
 
@@ -41,6 +41,25 @@ First application: TripNerd Instagram growth plan
   accounts with 1,000+ followers. [Social Media Today](https://www.socialmediatoday.com/news/instagram-expands-access-trial-reels/752895/)
 - **FACT** — Public professional posts indexable by Google/Bing from 10 Jul 2025;
   hashtags capped at 5 per post (announced Dec 2025) and not a reach lever.
+
+- **FACT** — Why ranking exists and how each surface differs (Mosseri, 2021): by 2016 people
+  were missing about 70% of Feed posts. Feed and Stories lean on relationship signals (history
+  of DMs, comments, replies); Explore leans on how many people like, comment, share and save a
+  post *and how quickly*; Reels lean on what a person finds entertaining.
+  [Shedding more light on how Instagram works](https://about.instagram.com/blog/announcements/shedding-more-light-on-how-instagram-works)
+- **FACT** — Reels Instagram recommends less: muted, blurry or low-resolution; borders, logos
+  or watermarks (TikTok watermark named); mostly covered by text; not original; focused on
+  political issues. Source: @creators best-practice guidance, Feb 2021, as reported by
+  [Tubefilter](https://tubefilter.com/2021/02/10/instagram-reels-with-tiktok-watermark-less-discoverable/).
+- **FACT (correlational)** — Replying to comments is associated with ~21% higher engagement on
+  Instagram (Buffer, 700K+ posts). [Buffer](https://buffer.com/resources/replying-to-comments-boosts-engagement/)
+- **FACT** — "Your Algorithm" (10 Dec 2025): viewers can see and edit the topics Instagram
+  infers for their Reels. [TechCrunch](https://techcrunch.com/2025/12/10/instagrams-new-your-algorithm-tool-gives-you-more-control-over-the-reels-you-see)
+- **UNVERIFIED** — "Instagram's own Edits watermark helps reach" (creator claim, Oct 2026 video
+  notes); "a strong first hour pushes a post wider" as a general mechanic (Instagram only states
+  speed matters for Explore); "more than one feed post a day suppresses reach" (we space posts a
+  day apart as house practice, not as a platform rule). None of these are stated as fact in
+  client work.
 
 ## Format benchmarks
 

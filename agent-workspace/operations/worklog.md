@@ -1436,3 +1436,20 @@ headlines. Rendered every slide locally with Playwright and fixed overflow befor
 
 **Open:** Karl to confirm the photos are TripNerd-supplied (provenance UNKNOWN by doctrine) before
 the deck is shared; photos not committed to git. Pricing/publishing-scope caveat from v2 still open.
+
+---
+
+## 2026-10-02 (evening) — TripNerd plan v4: slide 2 reframe + algorithm slides
+
+**Did:** Edited slide 2 with Karl (entertainment as the reason to follow; Reels over static adverts,
+Buffer-sourced). Then turned Karl's notes on a creator video about Instagram's algorithms into two new
+slides (05 how ranking works per surface, with what we'll do for TripNerd; 07 what lifts and kills reach),
+after verifying each claim against Instagram's own posts, @creators guidance, Buffer and TechCrunch.
+Deck is now 23 slides, artifact version 14; rendered locally before publish (deck runtime not opened).
+
+**Decided:** unverified claims from the notes left out (Edits watermark boost; first-hour push as a
+stated mechanic); "one feed post a day" kept only as our house practice.
+
+**Open:** Karl's "(CONSERVATIVE ESTIMATE)" label on 10,000 contradicts our scenarios (10,000 = base
+case) — awaiting his call. Photo provenance, pricing/publishing scope and sharing still with Karl.
+Nothing sent to the client.

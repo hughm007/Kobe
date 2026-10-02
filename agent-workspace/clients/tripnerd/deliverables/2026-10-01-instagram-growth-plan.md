@@ -11,14 +11,36 @@ tags: [client, instagram, social-strategy, creators, organic, paid-social]
 
 # TripNerd — Instagram follower growth plan
 
-**Deck (32 slides, private until Karl shares it):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
+**Deck (23 slides, private until Karl shares it):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
 **Status:** DRAFT. Not sent to TripNerd. Karl reviews before anything goes to the client.
 **Builds on:** the Sept 2026 "TripNerd Social Direction" deck (Drive, 22 slides, data
 observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic and adds
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
 
-## v3 — 2026-10-02 (current deck version, artifact version 5)
+## v4 — 2026-10-02 (current deck version, artifact version 14)
+**Slide 2 reframed with Karl (versions 6–13):** the summary now leads with "Entertain first" (why
+people follow) and "Reels, not static adverts" (Buffer 2024: Reels 125% more reach than single
+images, 36% more than carousels). Karl's own edits kept verbatim: "joint/collabs on posts" and
+"(CONSERVATIVE ESTIMATE)" on the 4,730 → 10,000 band. **Open:** 10,000 is the *base* case in our
+scenarios (conservative ≈ 6,300) — recommended "(BASE-CASE ESTIMATE)"; awaiting Karl.
+
+**Algorithm slides added (version 14)** from Karl's notes on a creator video about Instagram's
+algorithms, so the client sees which ranking systems we are working with and why the plan grows
+followers. Every claim checked against Instagram or a named study first
+(`knowledge/research/2026-10-01-instagram-growth-evidence.md`, ranking-signals section):
+- **05 "How Instagram decides who sees a post"** — four steps (sort → signals → predict → rank),
+  then Feed & Stories / Explore / Reels, each with what it rewards and what we'll do for TripNerd.
+- **07 "What lifts reach, and what kills it"** — five weekly habits (hyper-specific topics, five
+  steady series, reply to every comment, relationship signals, original sound-on video) and five
+  pre-post checks (watermarks/low-res, muted/bordered/text-heavy Reels, reposts and politics,
+  crowded posting, guideline strikes via Account Status).
+- Pillars footer now ties the five series to topic matching; sources slide extended; pages renumbered.
+- Left out as unverified: the "Edits watermark helps" claim and "strong first hour pushes a post
+  wider" as a stated mechanic. "One feed post a day max" is presented as our practice, not a platform rule.
+- Reverses v2's removal of the algorithm slide — the client asked to understand the mechanism.
+
+## v3 — 2026-10-02 (artifact version 5)
 Karl asked for a more beautiful, to-the-point deck that makes TripNerd feel safe and secure.
 Rebuilt as 21 slides: Playfair Display + Public Sans, navy/paper/gold palette, and **TripNerd's own
 photos** in place of plain type. New slides: "Your camera roll is the content plan" (7 real photos
