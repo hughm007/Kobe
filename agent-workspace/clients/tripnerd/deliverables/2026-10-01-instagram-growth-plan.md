@@ -13,12 +13,21 @@ tags: [client, instagram, social-strategy, creators, organic, paid-social]
 
 **CEO deck (10 slides, the version to present; private until Karl shares it):** https://claude.ai/artifact/URga8vJyxUGnUecoaGGZoC
 **12-slide version (kept):** https://claude.ai/artifact/UAaB3bcsmJu379cEzpoFkg
+**10-slide, per-post pricing version ($325 per Reel / $75 per static):** https://claude.ai/artifact/Eoij3MkNGKXB2gHmGJEXsL
 **Full deck (27 slides, kept as the reference version):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
 **Status:** DRAFT. Not sent to TripNerd. Karl reviews before anything goes to the client.
 **Builds on:** the Sept 2026 "TripNerd Social Direction" deck (Drive, 22 slides, data
 observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic and adds
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
+
+## Two priced versions of the 10-slide deck — 2026-10-03
+Karl kept the $1,500/mo deck as is and asked for an identical 10-slide deck priced at **$325 per video advert
+(Reel) and $75 per static** (below the $400 floor; Karl's instruction, logged). Only slide 10 differs:
+Days 1–30 = 8 Reels + 8 statics = $3,200; Days 31–90 = 16 Reels + 8 statics = up to $5,800/mo, only if TripNerd
+approves the ramp; 90 days at full volume = $14,800. Stories, Monday report, creator and ad management shown as
+included (no separate management line — Karl has not approved one). The $250/$50 working below is superseded
+for the deck but kept for reference.
 
 ## Pricing working — 2026-10-03 (not yet in any deck; all three decks still show $1,500/mo)
 **Karl's instruction (logged as below-floor approval):** $250 per video advert (Reel) and $50 per static

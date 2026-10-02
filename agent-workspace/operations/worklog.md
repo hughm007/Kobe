@@ -1494,3 +1494,6 @@ Open: Karl to confirm the approved Reel version and that music/consent/AI-label 
 **Pricing (2026-10-03):** Karl set TripNerd unit rates at $250/video, $50/static (below-floor, Karl-approved, logged in
 the deliverable notes). Itemized 90-day plan = $12,700 incl. a proposed $500/mo management line; options sent. Decks unchanged
 until Karl picks the monthly number.
+
+**Follow-up (two priced decks):** $1,500/mo 10-slide deck unchanged; new identical deck at $325/Reel + $75/static
+(https://claude.ai/artifact/Eoij3MkNGKXB2gHmGJEXsL): $3,200 for Days 1–30, up to $5,800/mo after, $14,800 for 90 days.
