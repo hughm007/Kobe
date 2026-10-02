@@ -20,6 +20,20 @@ observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic an
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
 
+## Pricing working — 2026-10-03 (not yet in any deck; all three decks still show $1,500/mo)
+**Karl's instruction (logged as below-floor approval):** $250 per video advert (Reel) and $50 per static
+(carousel or proof post) for TripNerd. Below the $400 single-ad floor and below September's $333/$75.
+Itemized at the plan's volume, plus a $500/mo management line (ServicePOW proposal: Stories 5 days a week,
+Monday report, planning and approvals, creator and ad management):
+| | Reels | Statics | Management | Month |
+|---|---|---|---|---|
+| Month 1 | 8 = $2,000 | 8 = $400 | $500 | $2,900 |
+| Months 2–3 (each) | 16 = $4,000 | 8 = $400 | $500 | $4,900 |
+| 90 days | | | | $12,700 |
+Options given to Karl: flat $3,600/mo for a 90-day commitment ($10,800 = 15% bundle discount, the policy
+maximum); no-ramp version $2,900/mo; $1,500 package = 4 Reels + 4 statics + $300 light management.
+Awaiting Karl's choice before the cost slides change.
+
 ## v9 — 2026-10-03: 10-slide CEO deck (separate artifact)
 Karl wanted fewer slides, hyper-specific, with proof ServicePOW can deliver. Recommended and built 10:
 cover · plan on one page · four algorithms (what each rewards + our move) · **proof** (six frames of the

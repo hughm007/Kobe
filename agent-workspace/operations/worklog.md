@@ -1490,3 +1490,7 @@ cost, roles). 27-slide deck kept. Follower target restated as ~6,300 organic / ~
 **Follow-up (10-slide CEO deck):** https://claude.ai/artifact/URga8vJyxUGnUecoaGGZoC — adds a proof slide (real frames of the
 approved suite Reel + category data + "no results yet") and a step-by-step production slide with tools and owners.
 Open: Karl to confirm the approved Reel version and that music/consent/AI-label items were cleared; price breakdown.
+
+**Pricing (2026-10-03):** Karl set TripNerd unit rates at $250/video, $50/static (below-floor, Karl-approved, logged in
+the deliverable notes). Itemized 90-day plan = $12,700 incl. a proposed $500/mo management line; options sent. Decks unchanged
+until Karl picks the monthly number.
