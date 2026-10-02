@@ -1497,3 +1497,7 @@ until Karl picks the monthly number.
 
 **Follow-up (two priced decks):** $1,500/mo 10-slide deck unchanged; new identical deck at $325/Reel + $75/static
 (https://claude.ai/artifact/Eoij3MkNGKXB2gHmGJEXsL): $3,200 for Days 1–30, up to $5,800/mo after, $14,800 for 90 days.
+
+**Follow-up (phase pricing):** Slide 08 (roadmap) in both 10-slide decks now prices each phase. $1,500 deck: Test /
+Double down / Roll $1,500 each ($4,500). $325/$75 deck: Test $3,200 (8 Reels $2,600 + 8 statics $600), Double down
+and Roll $5,800 each (16 Reels $5,200 + 8 statics $600), $14,800 total; each phase stays $3,200 without the ramp.
