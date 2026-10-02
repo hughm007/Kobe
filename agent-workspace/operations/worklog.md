@@ -1505,3 +1505,6 @@ and Roll $5,800 each (16 Reels $5,200 + 8 statics $600), $14,800 total; each pha
 **Follow-up (deck A scaled pricing):** Deck A (https://claude.ai/artifact/URga8vJyxUGnUecoaGGZoC) now prices phases by
 volume: Test $1,500 (8 Reels, 8 statics); Double down and Roll $2,700 each ($1,500 base + 8 more Reels at $150);
 90 days $6,900; stays $1,500 if the ramp isn't approved. Cost slide updated to match. 12- and 27-slide decks still show $1,500 flat.
+
+**Follow-up (deck A intro framing):** Deck A now shows Test $1,500 as an introductory rate and Double down / Roll at
+$2,750 a month as TripNerd's standard rate; 90 days $7,000. No-ramp fallback removed; open question for Karl.

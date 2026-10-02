@@ -21,6 +21,13 @@ observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic an
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
 
+## Deck A pricing (current) — 2026-10-03
+Karl's instruction: Days 1–30 at **$1,500, framed to the client as an introductory rate** ("discounted so you can
+see what we can do"); Days 31–60 and 61–90 at **$2,750/mo, presented as TripNerd's standard rate** (16 Reels +
+8 statics). 90 days = $7,000. Internally $2,750 is ~53% below deck B's per-post price for the same volume
+($5,800) — a below-floor rate approved by Karl and logged here per the pricing policy. The previous "stays at
+$1,500 without the ramp" fallback was removed (it contradicted the intro framing); no no-ramp price is quoted.
+
 ## Two priced versions of the 10-slide deck — 2026-10-03
 Karl kept the $1,500/mo deck as is and asked for an identical 10-slide deck priced at **$325 per video advert
 (Reel) and $75 per static** (below the $400 floor; Karl's instruction, logged). Only slide 10 differs:
