@@ -1501,3 +1501,7 @@ until Karl picks the monthly number.
 **Follow-up (phase pricing):** Slide 08 (roadmap) in both 10-slide decks now prices each phase. $1,500 deck: Test /
 Double down / Roll $1,500 each ($4,500). $325/$75 deck: Test $3,200 (8 Reels $2,600 + 8 statics $600), Double down
 and Roll $5,800 each (16 Reels $5,200 + 8 statics $600), $14,800 total; each phase stays $3,200 without the ramp.
+
+**Follow-up (deck A scaled pricing):** Deck A (https://claude.ai/artifact/URga8vJyxUGnUecoaGGZoC) now prices phases by
+volume: Test $1,500 (8 Reels, 8 statics); Double down and Roll $2,700 each ($1,500 base + 8 more Reels at $150);
+90 days $6,900; stays $1,500 if the ramp isn't approved. Cost slide updated to match. 12- and 27-slide decks still show $1,500 flat.
