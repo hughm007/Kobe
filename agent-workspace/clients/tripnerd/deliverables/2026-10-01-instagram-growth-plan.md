@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: draft
 created: 2026-10-01
-updated: 2026-10-01
+updated: 2026-10-02
 tags: [client, instagram, social-strategy, creators, organic, paid-social]
 ---
 
@@ -18,7 +18,33 @@ observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic an
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
 
-## The recommendation
+## v2 — 2026-10-02 (current deck version)
+Karl supplied two outside research reports in session (a 7-page Perplexity research brief and a
+64-page ChatGPT "Research and 90-Day Strategy" report, both dated 1 Oct 2026; not committed —
+binaries, session uploads only). Deck rebuilt to 20 slides as a client operating plan (TripNerd
+is an active client — no pitch framing). Reconciliation decisions:
+- **Cadence:** start at 4 feed posts/week (2 Reels, 1 carousel, 1 proof; ChatGPT report's engine),
+  ramp to 6/week (4 Reels) from Day 45 if footage and approvals keep pace. Perplexity's 7–8/week
+  judged unsustainable at the start; Buffer data supports the ramp.
+- **Budget:** adopted the ChatGPT report's illustrative 90-day tiers — Lean $1,800, **Core $5,600**
+  ($1,200/mo paid + $2,000 creator cash, recommended), Expanded $11,500. Excludes ServicePOW fees.
+  Replaces v1's $500/mo test.
+- **Creators:** "TripNerd Insider" — two pilots first (golf-trip creator Nov; business host or
+  customer ambassador Dec), then one per tentpole (Super Bowl/Phoenix, Augusta, CMA Fest).
+- **Giveaways:** none before Day 45, then at most one a quarter. Kept "follow + name a dream event"
+  entry (with free alternative entry); the ChatGPT report's no-follow-requirement design was not
+  adopted because it cannot grow followers.
+- **Pillars:** unified five — Inside the experience 35%, Ask a Nerd 20%, Host Notes 20%,
+  Real guests 15%, The Nerds 10% (Perplexity percentages, ChatGPT/September naming).
+- **Audiences:** corporate hosts 35%, golf/event travelers 35%, friend groups/families 20%, other 10%.
+- **New from the reports:** first-ten-post queue (R01, C01, R02, C02, R03, U01, R04, C03, R05, U02),
+  profile rebuild draft, DM keyword routing with 2-business-hour human reply, Day 14/45/90 gates,
+  and site fixes before paid spend (THE PLAYERS FAQ says 2027 dates not set; "#1"/guarantee wording
+  needs proof; long enquiry form; review count to verify).
+- **Removed from v1:** the tactic scorecard, algorithm and format-benchmark slides, the competitor
+  table, the Quint comparison and the follower-scenario slide (one target kept: ~10,000 at month 12).
+
+## v1 recommendation (superseded where v2 differs)
 1. Put people and access on the feed: 4 Reels/week of real trips, hosts and guests.
    Headline cards over stock photos come off the calendar.
 2. Borrow audiences: one hosted creator trip a quarter (Collab post + partnership-ad

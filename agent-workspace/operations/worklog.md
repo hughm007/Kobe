@@ -1406,3 +1406,20 @@ eyeballed after publish. Nothing sent to the client; no spend; no generation.
 
 **Open:** Karl reviews the deck and shares it; resolve the On Location number; price the plan as
 a retainer; Insights access is the day-1 dependency.
+
+---
+
+## 2026-10-02 — TripNerd Instagram plan v2 (client-ready deck)
+
+**Did:** Karl supplied a Perplexity research brief and a 64-page ChatGPT strategy report and asked
+for a tighter, more professional deck for an existing client (no pitch). Read both in full, reconciled
+them with our v1 plan, and rebuilt the same artifact as 20 slides
+(https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ, version 4). Reconciliation decisions are
+recorded in `clients/tripnerd/deliverables/2026-10-01-instagram-growth-plan.md` (v2 section).
+
+**Decided (plan, pending Karl):** 4→6 posts/week ramp; Core 90-day budget $5,600; two creator pilots
+then one per tentpole; no giveaway before Day 45; ~10,000 followers at month 12 (estimate).
+
+**Not verified:** deck not rendered or eyeballed after publish; live IG baseline still unavailable
+(egress-blocked); the reports' site findings (THE PLAYERS FAQ, form length) taken from the ChatGPT
+report, not re-checked here. Nothing sent to the client.
