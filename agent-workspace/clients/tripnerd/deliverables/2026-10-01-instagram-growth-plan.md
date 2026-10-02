@@ -11,14 +11,34 @@ tags: [client, instagram, social-strategy, creators, organic, paid-social]
 
 # TripNerd — Instagram follower growth plan
 
-**Deck (25 slides, private until Karl shares it):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
+**Deck (26 slides, private until Karl shares it):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
 **Status:** DRAFT. Not sent to TripNerd. Karl reviews before anything goes to the client.
 **Builds on:** the Sept 2026 "TripNerd Social Direction" deck (Drive, 22 slides, data
 observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic and adds
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
 
-## v5 — 2026-10-02 (current deck version, artifact version 20)
+## v6 — 2026-10-02 (current deck version, artifact version 21)
+**Existing adverts built into the launch.** The two September video adverts (invoice TN-2026-09:
+VIP Hosting Spot 16:9, client-approved 2026-09-27; Their Camera Roll 9:16, approved 2026-09-29) are
+now posts 01 and 03 of the first ten (slide 15), highlighted as already built; whichever earns more
+organically gets the first paid boost. VIP Hosting Spot needs a vertical recut.
+- INFERENCE (not confirmed by name): Their Camera Roll = the THE PLAYERS 17th-hole suite Reel
+  ("TripNerd 17" storyboard/rough-cut artifacts) — TripNerd's own V23/V24 footage with AI bridges,
+  a synthesized strike, cloned voice-over. Its record listed open items as of 2026-09-24: licensed
+  music, guest consent for paid use, platform AI label. Re-confirm before it posts.
+- INFERENCE: VIP Hosting Spot may be the 20 s landscape "VIP ON 17 / Hospitality. Handled." spot noted
+  in the storyboard record, whose people "read as generated". If so it posts only with the AI label
+  and never as guest proof.
+**Authenticity (Karl's second video notes, personal-brand framework).** Kept only what applies to a
+company account: new slide 11 "Real people, real opinions, real conversations" (one Nerd on camera
+weekly, insider opinions, 15 min/day of genuine outbound comments, no AI comments or cold DM pitches),
+listen-first research in Days 1–14 (slide 22), and an outcome-led bio on slide 19 (129 characters).
+Dropped: the course pitch and its unverifiable "zero to six figures" claims.
+**Scope flag:** daily outbound commenting and DM conversations are community management — outside
+standard packages; assigned to a TripNerd Nerd on the slide, or Karl prices it.
+
+## v5 — 2026-10-02 (artifact version 20)
 Karl supplied a Perplexity "Creative Marketing Director" brief (session paste, not committed) and
 asked for only what matters to growth. About 70% of it was already in the deck (Stories 5 days a
 week, Trial Reels, paid = boost winners + retarget, Attention/Audience/Pipeline reporting, 90-day

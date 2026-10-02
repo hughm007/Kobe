@@ -1472,3 +1472,8 @@ title was preserved (publish conflict caught and merged).
 **Open:** "Be there." is PROPOSED and needs TripNerd's approval; first-ten Reels depend on archive
 video that TripNerd hasn't supplied; the brief has no trend data (Karl's original ask to Perplexity).
 Earlier opens unchanged (estimate label, ManyChat cost, photo provenance, sharing).
+
+**Follow-up (version 21):** Built the two approved September adverts into the first ten posts (01 Their
+Camera Roll, 03 VIP Hosting Spot recut vertical) and added an authenticity slide from Karl's
+personal-brand video notes, plus listen-first research and an outcome bio. Deck 26 slides. Open: confirm
+which file is which advert, and clear the Camera Roll's music/consent/AI-label items before posting.
