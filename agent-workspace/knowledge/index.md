@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-10-01
+updated: 2026-10-02
 tags: [index, knowledge]
 ---
 
@@ -67,6 +67,9 @@ doesn't fit.
   three delivery routes tested and closed; the model is not a byte-faithful conduit and fails by
   confabulation (6107 of 12000 bytes, fabricated JPEG terminator). Check asset reachability
   *before* generating.
+- [2026-10-02 — Drive binaries reach the container via saved tool results](learnings/2026-10-02-drive-binaries-reach-the-container-via-saved-tool-results.md):
+  oversized Drive downloads are saved to disk by the harness; decoding locally gave 29/29 byte-exact JPEGs.
+  Drive is a working intake route even though the CDN egress wall still holds.
 
 ### Web
 *None yet.*

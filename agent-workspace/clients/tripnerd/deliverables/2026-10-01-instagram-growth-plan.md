@@ -18,7 +18,26 @@ observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic an
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
 
-## v2 — 2026-10-02 (current deck version)
+## v3 — 2026-10-02 (current deck version, artifact version 5)
+Karl asked for a more beautiful, to-the-point deck that makes TripNerd feel safe and secure.
+Rebuilt as 21 slides: Playfair Display + Public Sans, navy/paper/gold palette, and **TripNerd's own
+photos** in place of plain type. New slides: "Your camera roll is the content plan" (7 real photos
+mapped to post formats), "How followers get built" (reach → profile → follow → engage → enquire,
+each with its metric) and "Your brand, account and budget, protected" (approvals, account
+ownership, spend caps, consent, provable claims, no risky shortcuts). The giveaway/"won't do"
+slide folded into the safeguards slide. Every slide was rendered locally (Playwright + the real
+Google fonts) and checked for overflow before publishing; the deck runtime itself was not opened.
+
+### Photos used — provenance UNKNOWN until Karl confirms
+Source: 29 JPGs uploaded to Drive (folder 0AJj-fhf07xDjUk9PVA) on 2026-09-22, presumed to be
+TripNerd's camera roll (same period as the approved "Their Camera Roll" ad; two frames show the
+TripNerd check-in table and "Private Party" banner). Downloaded byte-exact, resized, uploaded to
+the deck's asset store only; **not committed to git**. Used: IMG_1901, 1907, 1915, 1916, 1926,
+1928, 1933, 1987, 1988, 1989, 1998, 2003, 2004, 2016, 2030, 2034, 2036. Deliberately excluded:
+IMG_1899 (shows Masters-branded tournament folders). Guests are identifiable — fine for a deck
+shown to TripNerd; any public post still needs guest consent.
+
+## v2 — 2026-10-02 (superseded by v3)
 Karl supplied two outside research reports in session (a 7-page Perplexity research brief and a
 64-page ChatGPT "Research and 90-Day Strategy" report, both dated 1 Oct 2026; not committed —
 binaries, session uploads only). Deck rebuilt to 20 slides as a client operating plan (TripNerd

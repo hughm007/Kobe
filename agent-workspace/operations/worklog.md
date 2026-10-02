@@ -1423,3 +1423,16 @@ then one per tentpole; no giveaway before Day 45; ~10,000 followers at month 12 
 **Not verified:** deck not rendered or eyeballed after publish; live IG baseline still unavailable
 (egress-blocked); the reports' site findings (THE PLAYERS FAQ, form length) taken from the ChatGPT
 report, not re-checked here. Nothing sent to the client.
+
+---
+
+## 2026-10-02 (later) — TripNerd Instagram plan v3: redesign with TripNerd's own photos
+
+**Did:** Karl asked for a more beautiful, to-the-point deck that makes TripNerd feel safe. Found
+29 TripNerd camera-roll photos in Drive, pulled them byte-exact (new transport — see learning
+2026-10-02), picked 17, uploaded them to the deck's asset store, and rebuilt the deck as 21 slides
+(artifact version 5): new camera-roll, growth-engine and safeguards slides; Playfair Display
+headlines. Rendered every slide locally with Playwright and fixed overflow before publishing.
+
+**Open:** Karl to confirm the photos are TripNerd-supplied (provenance UNKNOWN by doctrine) before
+the deck is shared; photos not committed to git. Pricing/publishing-scope caveat from v2 still open.
