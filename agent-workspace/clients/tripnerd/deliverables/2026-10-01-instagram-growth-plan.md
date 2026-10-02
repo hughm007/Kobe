@@ -11,13 +11,29 @@ tags: [client, instagram, social-strategy, creators, organic, paid-social]
 
 # TripNerd — Instagram follower growth plan
 
-**CEO deck (12 slides, the version to present; private until Karl shares it):** https://claude.ai/artifact/UAaB3bcsmJu379cEzpoFkg
+**CEO deck (10 slides, the version to present; private until Karl shares it):** https://claude.ai/artifact/URga8vJyxUGnUecoaGGZoC
+**12-slide version (kept):** https://claude.ai/artifact/UAaB3bcsmJu379cEzpoFkg
 **Full deck (27 slides, kept as the reference version):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
 **Status:** DRAFT. Not sent to TripNerd. Karl reviews before anything goes to the client.
 **Builds on:** the Sept 2026 "TripNerd Social Direction" deck (Drive, 22 slides, data
 observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic and adds
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
+
+## v9 — 2026-10-03: 10-slide CEO deck (separate artifact)
+Karl wanted fewer slides, hyper-specific, with proof ServicePOW can deliver. Recommended and built 10:
+cover · plan on one page · four algorithms (what each rewards + our move) · **proof** (six frames of the
+THE PLAYERS suite Reel, the September approvals, Golfbreaks 7.4× and On Location 10× category data, and
+an explicit "no growth results on TripNerd's account yet") · **how every post gets made** (8 steps,
+each with its tool and owner; Meta partner access, ManyChat and SuperGrok marked not set up yet) · what we
+post and when (week grid + Reels/carousels/Stories/Explore) · first ten · 30/60/90 roadmap with an after-Day-90
+strip · measurement · cost + what we need from TripNerd. 12- and 27-slide decks kept.
+- Proof frames: cropped from the v15 contact sheet in the "TripNerd 17 Storyboard Lock" artifact, real-footage
+  segments only (no AI bridge frames). Thumbnails, ~170×300 upscaled 2×: fine at filmstrip size; pull full-res
+  frames from the master for anything larger.
+- ASSUMPTION carried, not confirmed by Karl: the suite Reel is "Their Camera Roll"; the slide labels the filmstrip
+  "the THE PLAYERS suite Reel" and lists the approved adverts by name separately, so it stays true either way.
+- Price kept at $1,500/month pending Karl's breakdown.
 
 ## v8 — 2026-10-02: 12-slide CEO deck (separate artifact)
 Karl knows TripNerd's CEO and asked for a short, no-filler version covering only: which algorithms we
