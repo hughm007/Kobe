@@ -18,7 +18,7 @@ observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic an
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
 
-## v4 — 2026-10-02 (current deck version, artifact version 14)
+## v4 — 2026-10-02 (current deck version, artifact version 15)
 **Slide 2 reframed with Karl (versions 6–13):** the summary now leads with "Entertain first" (why
 people follow) and "Reels, not static adverts" (Buffer 2024: Reels 125% more reach than single
 images, 36% more than carousels). Karl's own edits kept verbatim: "joint/collabs on posts" and
@@ -39,6 +39,12 @@ followers. Every claim checked against Instagram or a named study first
 - Left out as unverified: the "Edits watermark helps" claim and "strong first hour pushes a post
   wider" as a stated mechanic. "One feed post a day max" is presented as our practice, not a platform rule.
 - Reverses v2's removal of the algorithm slide — the client asked to understand the mechanism.
+- **Version 15 (Karl: "only credible information from the Wispr Flow notes"):** slides 05 and 07
+  now carry only items that came from Karl's notes *and* were confirmed. Removed: the originality /
+  10+ reposts rule and "never repost" (not in the notes), "shared" as a Reels signal (not in the
+  notes), "crowded posting" (in the notes, not confirmed by Instagram). Added from the notes:
+  reply in TripNerd's voice, ManyChat keyword auto-DMs (also on slide 16, Conversion), political
+  topics as a separate check. ManyChat is a paid tool — plan cost not yet priced.
 
 ## v3 — 2026-10-02 (artifact version 5)
 Karl asked for a more beautiful, to-the-point deck that makes TripNerd feel safe and secure.

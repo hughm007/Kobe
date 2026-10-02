@@ -1453,3 +1453,7 @@ stated mechanic); "one feed post a day" kept only as our house practice.
 **Open:** Karl's "(CONSERVATIVE ESTIMATE)" label on 10,000 contradicts our scenarios (10,000 = base
 case) — awaiting his call. Photo provenance, pricing/publishing scope and sharing still with Karl.
 Nothing sent to the client.
+
+**Follow-up (version 15):** Karl asked for only credible content from his Wispr Flow notes. Stripped
+non-note and unconfirmed items from slides 05/07 and added ManyChat auto-DMs (07, 16). ManyChat
+subscription cost is unpriced and needs Karl's approval before the plan commits to it.
