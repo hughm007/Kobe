@@ -1457,3 +1457,18 @@ Nothing sent to the client.
 **Follow-up (version 15):** Karl asked for only credible content from his Wispr Flow notes. Stripped
 non-note and unconfirmed items from slides 05/07 and added ManyChat auto-DMs (07, 16). ManyChat
 subscription cost is unpriced and needs Karl's approval before the plan commits to it.
+
+---
+
+## 2026-10-02 (night) — TripNerd plan v5: Perplexity creative brief integrated
+
+**Did:** Triaged a Perplexity creative-direction brief against the deck; ~70% duplicated existing
+slides. Added two slides ("Be there." creative platform with the send-to-who-you'd-take ending;
+two Reel formulas + one-variable Trial Reel testing), rebuilt the first ten posts around
+share-driven Reels, added an on-trip shot checklist and a retention-focused Stories line. Deck is 25
+slides, artifact version 20; rendered locally before publish. Karl's viewer edit to the Conversion
+title was preserved (publish conflict caught and merged).
+
+**Open:** "Be there." is PROPOSED and needs TripNerd's approval; first-ten Reels depend on archive
+video that TripNerd hasn't supplied; the brief has no trend data (Karl's original ask to Perplexity).
+Earlier opens unchanged (estimate label, ManyChat cost, photo provenance, sharing).

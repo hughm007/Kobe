@@ -11,14 +11,35 @@ tags: [client, instagram, social-strategy, creators, organic, paid-social]
 
 # TripNerd — Instagram follower growth plan
 
-**Deck (23 slides, private until Karl shares it):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
+**Deck (25 slides, private until Karl shares it):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
 **Status:** DRAFT. Not sent to TripNerd. Karl reviews before anything goes to the client.
 **Builds on:** the Sept 2026 "TripNerd Social Direction" deck (Drive, 22 slides, data
 observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic and adds
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
 
-## v4 — 2026-10-02 (current deck version, artifact version 15)
+## v5 — 2026-10-02 (current deck version, artifact version 20)
+Karl supplied a Perplexity "Creative Marketing Director" brief (session paste, not committed) and
+asked for only what matters to growth. About 70% of it was already in the deck (Stories 5 days a
+week, Trial Reels, paid = boost winners + retarget, Attention/Audience/Pipeline reporting, 90-day
+roadmap, profile + DM keywords, avoid-list). Added only what was new:
+- **10 "Be there." (new)** — proposed creative platform; the four thoughts the right viewer should
+  have; the one-job rule (feel / teach / prove / next step); the share ending "Send this to the
+  person you'd take", tied to Mosseri (Jan 2025): sends per reach is a top-three signal and counts
+  most for non-followers.
+- **12 Two Reel formulas (new)** — Feel 8–18s and Teach 20–35s structures; Trial Reels testing one
+  variable at a time, judged on watch time, sends, saves and follows.
+- **14 First ten posts (rebuilt)** — blended Perplexity's share-driven Reels into our queue, kept the
+  5 Reel / 3 carousel / 2 proof mix that matches the weekly rhythm; numbered in posting order.
+- **13 Rhythm** — Stories line now polls, questions, behind the scenes, DM prompts (follower retention).
+- **23 Roles** — on-trip shot checklist added; TripNerd films every trip to it.
+- Not adopted: Perplexity's bio (~176 characters; Instagram caps bios at 150); EVENTS/HOST/GOLF keyword
+  set (ours stays event-specific); a replacement for the five pillars (its four franchises map onto them).
+- The brief contains no market-trend data or sources — the trend analysis Karl asked Perplexity
+  for is not in it. Voice rules in the brief are PROPOSED only; `brand-guide.md` voice is still empty.
+- Karl's own edit kept: slide 18 title "Your Online Business Card, Convert to Conversation".
+
+## v4 — 2026-10-02 (artifact version 15)
 **Slide 2 reframed with Karl (versions 6–13):** the summary now leads with "Entertain first" (why
 people follow) and "Reels, not static adverts" (Buffer 2024: Reels 125% more reach than single
 images, 36% more than carousels). Karl's own edits kept verbatim: "joint/collabs on posts" and
