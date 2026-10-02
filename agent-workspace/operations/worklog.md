@@ -1477,3 +1477,8 @@ Earlier opens unchanged (estimate label, ManyChat cost, photo provenance, sharin
 Camera Roll, 03 VIP Hosting Spot recut vertical) and added an authenticity slide from Karl's
 personal-brand video notes, plus listen-first research and an outcome bio. Deck 26 slides. Open: confirm
 which file is which advert, and clear the Camera Roll's music/consent/AI-label items before posting.
+
+**Follow-up (version 22):** TripNerd logo as the profile picture on slide 19; $1,500/mo fee and an
+Investment slide listing ServicePOW's tool stack (~$419/mo, included); removed every assumed client
+budget. Flagged to Karl: $1,500 sits at the retainer floor against a much larger scope, and showing tool
+costs cuts against the pricing rule "never price on what it cost to make".

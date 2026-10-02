@@ -11,14 +11,33 @@ tags: [client, instagram, social-strategy, creators, organic, paid-social]
 
 # TripNerd — Instagram follower growth plan
 
-**Deck (26 slides, private until Karl shares it):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
+**Deck (27 slides, private until Karl shares it):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
 **Status:** DRAFT. Not sent to TripNerd. Karl reviews before anything goes to the client.
 **Builds on:** the Sept 2026 "TripNerd Social Direction" deck (Drive, 22 slides, data
 observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic and adds
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
 
-## v6 — 2026-10-02 (current deck version, artifact version 21)
+## v7 — 2026-10-02 (current deck version, artifact version 22)
+- **Pricing (Karl's instruction, 2026-10-02): $1,500/month ServicePOW fee "for now"**; Karl will refine
+  the price and breakdown. $1,500 is exactly the retainer floor in `company/pricing-and-packaging.md`
+  (recommended quote $2,000 for 4 ads/mo). The plan's scope (8→16 Reels + 8 statics a month, creator
+  and ad management, reporting) is far above 4 ads/mo — at September per-unit rates it would be ~$3,300/mo.
+  Scope or price must move before this is signed.
+- **No client budget assumed.** TripNerd has not given a budget: removed the Lean/Core/Expanded tiers
+  (slide 18), the $2,000 creator cash (17), "Core budget sign-off" (26); paid and creator spend are now
+  proposed per test with written approval. Measure footer (23) now says 10,000 assumes approved paid
+  boosts and creators; organic alone points nearer 6,300.
+- **New slide 25 "Investment"**: the fee, what it covers, and ServicePOW's tool stack shown as included
+  costs (Karl asked to show them): Claude Max $200 (tier ASSUMED Max 20x — confirm), Adobe Creative Cloud
+  Pro $70 (list $69.99), Higgsfield Ultra $99 (live plan check: current plan Ultra, $99/mo billed
+  annually, $129 list), ChatGPT Plus $20, SuperGrok $30 (starting soon) = ~$419/mo. Prices from web
+  search 2026-10-02 except Higgsfield (live tool).
+- **Slide 19 profile picture** is now TripNerd's real nerd-head mark, cropped from the brand board in the
+  "TripNerd 17 Storyboard Lock" artifact (bd_brand.jpg, low resolution; fine at 72 px). A full-resolution
+  logo file from TripNerd should replace it before any real use.
+
+## v6 — 2026-10-02 (artifact version 21)
 **Existing adverts built into the launch.** The two September video adverts (invoice TN-2026-09:
 VIP Hosting Spot 16:9, client-approved 2026-09-27; Their Camera Roll 9:16, approved 2026-09-29) are
 now posts 01 and 03 of the first ten (slide 15), highlighted as already built; whichever earns more
