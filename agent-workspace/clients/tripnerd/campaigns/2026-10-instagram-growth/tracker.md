@@ -45,7 +45,7 @@ in each log.
 
 | Post | Open item | Owner |
 |---|---|---|
-| 01 Their Camera Roll | **Confirm this is the THE PLAYERS suite Reel** (INFERENCE, not confirmed by name). Contains AI bridges, a synthesized strike and a cloned voice-over, so the **AI label is required**. Music must be licensed for Instagram use. Guest consent needed for identifiable guests. | Karl |
+| 01 Their Camera Roll | Walkthrough and edit plan: [`posts/01-their-camera-roll.md`](posts/01-their-camera-roll.md). Recommended: a **real-footage-only organic cut** (no AI, no cloned VO, no AI label needed). Open items: confirm the approved cut = v15; full-res originals V23/V24/V08/P082 (only a 720p review encode exists); guest consent; OK to post with THE PLAYERS signage. | Karl / TripNerd |
 | 03 VIP Hosting Spot | Vertical (9:16) recut needed. If its people read as generated, it posts **only with the AI label and never as guest proof**. | Karl / Claude |
 | 04 Communication proof | Needs a real review (with permission to quote) and the actual guest briefing | TripNerd |
 | 07 How a TripNerd trip works | Needs the on-camera Nerd filmed | TripNerd |

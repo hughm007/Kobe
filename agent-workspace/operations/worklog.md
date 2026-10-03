@@ -1553,3 +1553,10 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **Open:**
   - This branch is not on `main`. Routines and fresh sessions clone `main` and won't see the plan until it is merged (Karl's go-ahead needed).
   - No Instagram data connector is set up. Supermetrics is installed at org level, but its connection is incomplete.
+
+**Follow-up (post 01 walkthrough):** Researched "Their Camera Roll".
+- The approved cut is still INFERRED to be TripNerd 17 v15.
+- Only a 720p review encode exists; no master was found.
+- v15 has ~10 s of AI: two bridges with generated people, a generated golfer and crowd, and AI motion on the cup photo. It also uses a cloned voice-over and placeholder music.
+- **Correction:** the proof slide's "real faces only" was false. Both decks now say "your own footage, with short AI bridges" (deck A v24, deck B v8; deck snapshot updated).
+- Edit plan for a real-footage-only organic cut: `campaigns/2026-10-instagram-growth/posts/01-their-camera-roll.md`.
