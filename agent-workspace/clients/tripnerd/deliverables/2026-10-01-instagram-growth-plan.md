@@ -37,7 +37,22 @@ On slide 05 the footer now reads "ManyChat and SuperGrok (before launch)", repla
 Tool names remain on slide 05 as step owners, with no prices. The 12- and 27-slide decks still show the
 expenses and $1,500.
 
-## Deck A price and no-guarantee pass — 2026-10-03 (current)
+## Deck A pricing (current) — 2026-10-03, $1,750 intro with discounts shown
+Karl's instruction: Days 1–30 at **$1,750**, then **$4,000/mo**. Each price shows its discount against deck B's per-post
+pricing ($325 per Reel, $75 per static), which Karl calls the standard rate:
+
+| Phase | Deck A | Standard (deck B) | Discount |
+|---|---|---|---|
+| Days 1–30 | $1,750 | $3,200 | 45% ($1,450) |
+| Days 31–60, 61–90 (each) | $4,000 | $5,800 | 31% ($1,800) |
+| 90 days | $9,750 | $14,800 | 34% ($5,050) |
+
+- The basis is stated on the slide-10 footer and the roadmap footer.
+- Karl's "intro 40% discount" label is replaced by the exact 45%.
+- Both discounts exceed the 15% policy cap; that is Karl's call and logged here.
+- The section below ($1,950) is superseded.
+
+## Deck A price and no-guarantee pass — 2026-10-03 (price superseded)
 **Deck A price (Karl's instruction):** $1,950 for Days 1–30 (intro), then **$4,000/mo** from Day 31.
 - 90 days = $9,950. This supersedes $3,575/mo and $9,100.
 - Karl added "intro 40% discount" himself in the viewer. Against $4,000 the actual gap is 51%; Karl has been told.

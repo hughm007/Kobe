@@ -1530,3 +1530,10 @@ Published as deck A v8 and deck B v6. "Take it or leave it" was deliberately kep
 - Deck A is $1,950 for month one, then $4,000/mo: $9,950 over 90 days.
 - Karl's in-viewer edit to slide 10 ("intro 40% discount") was kept. The actual gap is 51%; this is flagged to Karl.
 - Published: deck A v18, deck B v7.
+
+**Follow-up (deck A $1,750):** Deck A's prices and discounts against standard pricing (deck B: $325 per Reel, $75 per static):
+- Days 1–30: $1,750, 45% off $3,200.
+- From Day 31: $4,000/mo, 31% off $5,800.
+- 90 days: $9,750 against $14,800.
+
+The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits to the roadmap were kept. Published as deck A v23.
