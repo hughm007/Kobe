@@ -1508,3 +1508,9 @@ volume: Test $1,500 (8 Reels, 8 statics); Double down and Roll $2,700 each ($1,5
 
 **Follow-up (deck A intro framing):** Deck A now shows Test $1,500 as an introductory rate and Double down / Roll at
 $2,750 a month as TripNerd's standard rate; 90 days $7,000. No-ramp fallback removed; open question for Karl.
+
+**Follow-up (expenses removed, deck A repriced):** At Karl's request, removed every ServicePOW expense from both
+10-slide decks. That means the tools table, the tool-cost footer and the "tools built in" lines. The cost slide's
+middle column is now "Included every month". Deck A: Test is now $1,950 (intro rate), and Double down and Roll
+are $3,575/mo each (same ×1.833 step as before), for $9,100 over 90 days. Deck B's prices are unchanged.
+Published as deck A v7 and deck B v5. The 12- and 27-slide decks still show the expenses and $1,500.

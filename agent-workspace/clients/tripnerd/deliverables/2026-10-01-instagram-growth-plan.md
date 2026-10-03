@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: draft
 created: 2026-10-01
-updated: 2026-10-02
+updated: 2026-10-03
 tags: [client, instagram, social-strategy, creators, organic, paid-social]
 ---
 
@@ -21,12 +21,21 @@ observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic an
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
 conversion, calendar and targets.
 
-## Deck A pricing (current) — 2026-10-03
-Karl's instruction: Days 1–30 at **$1,500, framed to the client as an introductory rate** ("discounted so you can
-see what we can do"); Days 31–60 and 61–90 at **$2,750/mo, presented as TripNerd's standard rate** (16 Reels +
-8 statics). 90 days = $7,000. Internally $2,750 is ~53% below deck B's per-post price for the same volume
-($5,800) — a below-floor rate approved by Karl and logged here per the pricing policy. The previous "stays at
-$1,500 without the ramp" fallback was removed (it contradicted the intro framing); no no-ramp price is quoted.
+## Deck A pricing (current) — 2026-10-03, revised
+Karl's instruction: Test (Days 1–30) at **$1,950, still framed to the client as an introductory rate**; Double down
+and Roll scaled to match. We kept the same step Karl approved earlier ($1,500 → $2,750, ×1.833), so the standard
+rate is **$1,950 × 1.833 = $3,575/mo** (16 Reels + 8 statics). The 90-day total is **$9,100**. The intro is still
+45% below the standard rate, which is over the policy's 15% discount cap. That is Karl's call and is logged here.
+$3,575 is 38% below deck B's per-post price for the same volume ($5,800).
+Superseded: $1,500 / $2,750 / $7,000.
+
+**All ServicePOW expenses removed from both 10-slide decks (Karl, 2026-10-03).** The cost slide no longer has
+the tools table ($419/mo), the "rest of the fee is people" and "tools built into each price" lines, or the
+tool-price footer. The middle column is now "Included every month": strategy, calendar and the Monday report;
+Stories; profile, Highlights and DM keywords; creator and ad management. Deck B lists the same scope.
+On slide 05 the footer now reads "ManyChat and SuperGrok (before launch)", replacing "bought before launch".
+Tool names remain on slide 05 as step owners, with no prices. The 12- and 27-slide decks still show the
+expenses and $1,500.
 
 ## Two priced versions of the 10-slide deck — 2026-10-03
 Karl kept the $1,500/mo deck as is and asked for an identical 10-slide deck priced at **$325 per video advert
