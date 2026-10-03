@@ -1537,3 +1537,19 @@ Published as deck A v8 and deck B v6. "Take it or leave it" was deliberately kep
 - 90 days: $9,750 against $14,800.
 
 The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits to the roadmap were kept. Published as deck A v23.
+
+## 2026-10-03 — TripNerd: Deck A embedded as the operating plan
+- **New:** `clients/tripnerd/campaigns/2026-10-instagram-growth/`.
+  - `README.md`: goal, scope and price, weekly rhythm, first ten posts, 90-day gates, and what Claude does,
+    reminds about, or never does. It maps each piece of work to existing skills and policies.
+  - `calendar.md`: 13 weeks keyed to Day numbers.
+  - `tracker.md`: setup, blockers, content log, invoices, decisions.
+  - `monday-report-template.md`.
+  - `deck-a-snapshot/`: artifact v23 source.
+- **Status:** PROPOSED. Day 1 is ASSUMED to be 5 Oct 2026 until Karl records the signed start date.
+- **Pointers added:** workspace `CLAUDE.md` §13, the client brief, the deliverable notes, and the clients index.
+- **TripNerd set to Active** in `clients/README.md` and `access-and-accounts.md`, per the Sep invoice and CLAUDE.md.
+- **CLAUDE.md change** (§12 asks that it be logged): one pointer paragraph in §13 "Current state".
+- **Open:**
+  - This branch is not on `main`. Routines and fresh sessions clone `main` and won't see the plan until it is merged (Karl's go-ahead needed).
+  - No Instagram data connector is set up. Supermetrics is installed at org level, but its connection is incomplete.

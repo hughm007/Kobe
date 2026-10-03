@@ -16,6 +16,7 @@ tags: [client, instagram, social-strategy, creators, organic, paid-social]
 **10-slide, per-post pricing version ($325 per Reel / $75 per static):** https://claude.ai/artifact/Eoij3MkNGKXB2gHmGJEXsL
 **Full deck (27 slides, kept as the reference version):** https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ
 **Status:** DRAFT. Not sent to TripNerd. Karl reviews before anything goes to the client.
+**Operating plan (what we run if TripNerd accepts Deck A):** [`../campaigns/2026-10-instagram-growth/`](../campaigns/2026-10-instagram-growth/README.md)
 **Builds on:** the Sept 2026 "TripNerd Social Direction" deck (Drive, 22 slides, data
 observed 11 Sep 2026). This plan keeps its five Reel formats and 90-day logic and adds
 the follower-growth layer the client asked for: creators, carousels, giveaways, paid,
@@ -318,7 +319,7 @@ No Laying Up 253K. Platform evidence: `../../../knowledge/research/2026-10-01-in
 - **June 2026 "Kicksta vs Ascend Viral" doc (Drive) misdescribes TripNerd** as flight
   deals / budget travel — that is a different "tripnerd". Its Ascend Viral recommendation
   should not be acted on; this plan recommends against follow-back services.
-- **Client status mismatch:** `clients/README.md` lists TripNerd as Prospect; the brief,
+- **Client status mismatch (RESOLVED 2026-10-03: index and access file set to Active):** `clients/README.md` listed TripNerd as Prospect; the brief,
   workspace CLAUDE.md and the Sept invoice (TN-2026-09) show an active, paying client.
 
 ## Not verified this session

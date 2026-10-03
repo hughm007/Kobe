@@ -48,7 +48,7 @@ Then, in order:
 | Client | Folder | Status | Services | Owner |
 |---|---|---|---|---|
 | 911 Drain | [`911drain/`](911drain/) | **Active** — main account | **NEEDS INPUT** | Karl |
-| TripNerd | [`tripnerd/`](tripnerd/) | Prospect | — | Karl |
+| TripNerd | [`tripnerd/`](tripnerd/) | **Active** (Sep 2026 invoice TN-2026-09) | Video adverts, carousels; 90-day Instagram growth plan proposed ([operating plan](tripnerd/campaigns/2026-10-instagram-growth/README.md)) | Karl |
 | WaveReaction | [`wavereaction/`](wavereaction/) | Prospect | — | Karl |
 
 ### Active vs. prospect

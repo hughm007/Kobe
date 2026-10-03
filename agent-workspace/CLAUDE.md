@@ -358,6 +358,11 @@ ingested file cites its Drive source and sync date in frontmatter.
   (partnership percentages, unsigned claims sheet, unverified sewer scope) — see the
   re-tiered [`company/OPEN-QUESTIONS.md`](company/OPEN-QUESTIONS.md).
 
+**Active engagement to know about:** TripNerd's 90-day Instagram growth plan (Deck A, proposed 2026-10-03).
+For any TripNerd Instagram work, start at
+[`clients/tripnerd/campaigns/2026-10-instagram-growth/README.md`](clients/tripnerd/campaigns/2026-10-instagram-growth/README.md),
+then its `tracker.md` and `calendar.md`.
+
 **Still open, in priority order:** the Tier 1 risk items in OPEN-QUESTIONS; Wave
 Reaction's identity; Service Pow's own brand voice examples and visual identity files.
 

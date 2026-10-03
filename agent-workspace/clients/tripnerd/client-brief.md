@@ -5,12 +5,17 @@ client: tripnerd
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-10-03
 tags: [client, brief]
 source: Drive "ServicePow OS 2" — 04, 05, 37_EMAIL_MARKETING_OFFERING.md (synced 2026-08-25)
 ---
 
 # TripNerd — Client Brief
+
+> **Current engagement (2026-10-03):** 90-day Instagram growth plan, Deck A, **proposed, not yet accepted**.
+> Operating plan, calendar and tracker: [`campaigns/2026-10-instagram-growth/`](campaigns/2026-10-instagram-growth/README.md).
+> September 2026: two video adverts and two carousels approved (invoice TN-2026-09). The "zero live
+> deliverables" note below predates that.
 
 **Active, standard client.** tripnerd.com — premium fan experiences: marquee sports
 hospitality (Super Bowl, Augusta, field-level access). Buyers decide roughly **a year
