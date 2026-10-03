@@ -166,7 +166,7 @@ The week-one Insights baseline replaces the "today" column.
 | Input | Why | Status |
 |---|---|---|
 | Signed start date | Day numbers, calendar, invoices | **Missing** |
-| Instagram Insights, weekly | Monday report; Day 30/60/90 reviews | **No connector.** Fallback: a weekly Insights export or screenshots in a shared Drive folder (Drive is connected) |
+| Instagram Insights, weekly | Monday report; Day 30/60/90 reviews | **Supermetrics connected 2026-10-03** (free trial, ends 18 Oct 2026). Its Instagram Insights source (IGI) is **not logged in**; that needs a login with access to TripNerd's professional Instagram account, so it waits on week-one partner access. Fallback: a weekly Insights export in Drive. |
 | Trip footage and photos | Every Reel and proof post | Shared Drive folder: **NEEDS INPUT** (location) |
 | TripNerd's approver | Batch sign-off | **NEEDS INPUT** |
 | Real reviews and guest briefing | Posts 04 and 08 | **NEEDS INPUT** |

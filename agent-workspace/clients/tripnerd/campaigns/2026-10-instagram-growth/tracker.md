@@ -25,12 +25,14 @@ in each log.
 | On-camera Nerd | **NEEDS INPUT** |
 | Footage folder (Drive) | **NEEDS INPUT** |
 | Insights export folder (Drive) | **NEEDS INPUT** |
+| Supermetrics | Connected 2026-10-03; **free trial ends 18 Oct 2026** (paid plan needed after). Instagram Insights (IGI) and Instagram Public Data (IGPD2) **not logged in** |
 
 ## Week-one setup
 
 - [ ] Partner access: Instagram + Meta Business Suite (pointer recorded in `../../access-and-accounts.md`, never credentials)
 - [ ] Trip archive shared
 - [ ] Approver, inbox owner and on-camera Nerd named
+- [ ] Supermetrics Instagram Insights logged in with access to TripNerd's account (Instagram Login preferred; Facebook Login expires after ~60 days)
 - [ ] Insights baseline captured (followers, median Reel views, non-follower share, saves and sends per 1,000 reached)
 - [ ] Posting times set from Insights
 - [ ] Profile rebuilt: bio (≤150 characters), Highlights, link
