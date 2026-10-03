@@ -37,6 +37,29 @@ On slide 05 the footer now reads "ManyChat and SuperGrok (before launch)", repla
 Tool names remain on slide 05 as step owners, with no prices. The 12- and 27-slide decks still show the
 expenses and $1,500.
 
+## Partner direction applied — 2026-10-03
+Karl relayed his partner's direction:
+- Don't show our expenses, and don't justify the price.
+- Lead with the value the client gets: more viewers.
+- Lead with enthusiasm, honesty and youthful ambition. A higher price is taken more seriously.
+
+Applied to both 10-slide decks:
+- **Cover subtitle:** "Our plan to make TripNerd the account fans follow for the biggest events. Exactly how we'll do it, and the proof we can."
+- **Slide 10:** label "The investment", headline "What you get, and what it takes".
+  - The middle column is now "What you get":
+    - 1,500+ median Reel views by Day 90, up from 253;
+    - 5,000+ by month 12;
+    - over half of views from non-followers.
+  - These are the same ESTIMATE targets as slide 09, with a footer saying they reset at Day 30.
+  - Deliverables are folded into the fee card.
+  - The band now ends "We're ready the day you say go."
+- **Deck A roadmap footer:** "90 days: $9,100, billed monthly. Month one is our introductory rate." Removed "discounted so you see results before paying".
+- **Deck B roadmap footer:** removed the "stays at $3,200 without the ramp" fallback.
+- **Not on any slide:** "take it or leave it" and "plenty of other companies want us". They are a negotiating stance, not client copy. TripNerd is a paying client and Karl knows the CEO personally.
+- **Open:**
+  - The 45% intro discount works against "higher price = taken seriously".
+  - Roadmap dates assume a Mon 5 Oct start.
+
 ## Two priced versions of the 10-slide deck — 2026-10-03
 Karl kept the $1,500/mo deck as is and asked for an identical 10-slide deck priced at **$325 per video advert
 (Reel) and $75 per static** (below the $400 floor; Karl's instruction, logged). Only slide 10 differs:

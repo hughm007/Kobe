@@ -1514,3 +1514,11 @@ $2,750 a month as TripNerd's standard rate; 90 days $7,000. No-ramp fallback rem
 middle column is now "Included every month". Deck A: Test is now $1,950 (intro rate), and Double down and Roll
 are $3,575/mo each (same ×1.833 step as before), for $9,100 over 90 days. Deck B's prices are unchanged.
 Published as deck A v7 and deck B v5. The 12- and 27-slide decks still show the expenses and $1,500.
+
+**Follow-up (partner direction):** Rewrote both 10-slide decks so they close on value, with no price justification.
+- Slide 10 is now "What you get, and what it takes". It leads with the view targets: 1,500+ median Reel views by
+  Day 90, up from 253; 5,000+ by month 12; over half of views from non-followers.
+- The cover subtitle is more ambitious.
+- Removed the "discounted so you see results" and "stays $3,200 without the ramp" footers.
+
+Published as deck A v8 and deck B v6. "Take it or leave it" was deliberately kept off the slides.
