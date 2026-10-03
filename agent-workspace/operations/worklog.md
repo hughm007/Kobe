@@ -1522,3 +1522,11 @@ Published as deck A v7 and deck B v5. The 12- and 27-slide decks still show the 
 - Removed the "discounted so you see results" and "stays $3,200 without the ramp" footers.
 
 Published as deck A v8 and deck B v6. "Take it or leave it" was deliberately kept off the slides.
+
+**Follow-up (no unsure guarantees; deck A $4,000):**
+- Karl asked that no outcome be presented as a guarantee unless it's certain. Both 10-slide decks now promise only deliverables we control.
+- View and follower numbers appear only as labelled targets on slide 09.
+- Day 60/90 outcomes are now labelled as goals; collabs and boosts are marked "if you approve it".
+- Deck A is $1,950 for month one, then $4,000/mo: $9,950 over 90 days.
+- Karl's in-viewer edit to slide 10 ("intro 40% discount") was kept. The actual gap is 51%; this is flagged to Karl.
+- Published: deck A v18, deck B v7.

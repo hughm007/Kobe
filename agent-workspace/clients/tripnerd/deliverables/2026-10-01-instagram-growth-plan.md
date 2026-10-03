@@ -37,6 +37,19 @@ On slide 05 the footer now reads "ManyChat and SuperGrok (before launch)", repla
 Tool names remain on slide 05 as step owners, with no prices. The 12- and 27-slide decks still show the
 expenses and $1,500.
 
+## Deck A price and no-guarantee pass — 2026-10-03 (current)
+**Deck A price (Karl's instruction):** $1,950 for Days 1–30 (intro), then **$4,000/mo** from Day 31.
+- 90 days = $9,950. This supersedes $3,575/mo and $9,100.
+- Karl added "intro 40% discount" himself in the viewer. Against $4,000 the actual gap is 51%; Karl has been told.
+
+**No guarantees that aren't certain (Karl):** removed or relabelled every outcome stated as a promise, in both decks.
+- Slide 10 "What you get" now lists only deliverables we control: 8 → 16 Reels a month, Stories 5 days a week, a Monday report, plus profile, Highlights, DM keywords, creator and ad management. The view targets are gone from slide 10.
+- Slide 09 columns are now "Day 90 target" and "Month 12 target"; the footer says "targets, not guarantees".
+- Roadmap: "Day 60 goal" and "Day 90 goal". Creator collab and paid boost are marked "if you approve it".
+- Proof slide: retitled "Proof we can make the content"; "What's working in your category".
+- Posting slide: Explore "can land here"; "we aim to answer DMs within two business hours".
+- Cover no longer says "the proof we can".
+
 ## Partner direction applied — 2026-10-03
 Karl relayed his partner's direction:
 - Don't show our expenses, and don't justify the price.
