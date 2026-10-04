@@ -11,7 +11,13 @@ tags: [client, instagram, reel, edit-plan]
 
 # Edit plan: Reel 03, "Augusta, by the clock" (now posting as 01, Mon 5 Oct)
 
-> **v4 rendered 2026-10-04 (current):** `TN-R03-augusta-by-the-clock-H3-v4.mp4`, 11.73 s, 1080×1920 30 fps, with an original music bed baked in.
+> **v5 rendered 2026-10-04 (current):** `TN-R03-augusta-by-the-clock-H3-v5.mp4`, 7.83 s, 4 shots.
+> - **Opening:** 9:03 at TripNerd's check-in table, "Thursday in Augusta, hosted by TripNerd.".
+> - **Clock:** runs over the pines.
+> - **Shots:** 5:44 porch; 5:48 group close.
+> - **Rebuilt after the v4 dual gate.** Shot list: [`shotlist.md`](shotlist.md). Build: [`build/`](build/README.md).
+>
+> **v4 rendered 2026-10-04 (superseded):** `TN-R03-augusta-by-the-clock-H3-v4.mp4`, 11.73 s, 1080×1920 30 fps, with an original music bed baked in.
 > - Non-TripNerd marks are removed (Bible §9).
 > - The dark card is replaced by a clock racing 9:16 AM → 5:43 PM.
 > - The v4 shot list in [`shotlist.md`](shotlist.md) supersedes every table below. Build scripts: [`build/`](build/README.md).

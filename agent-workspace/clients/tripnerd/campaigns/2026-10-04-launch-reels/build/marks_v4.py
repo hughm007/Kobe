@@ -1,28 +1,40 @@
 """Remove non-TripNerd marks from the Augusta photos (conventional retouch, no AI).
 heal = diffusion fill from the surrounding pixels (small logos on clothes/shoes/devices).
-clone = stripe-matched copy from adjacent fabric. soft = sub-2px blur to calm moire (no mark).
-v5: every visible blur replaced by heal/clone, or reverted where the item is unreadable and unbranded."""
+blur = feathered Gaussian blur (labels, cards, name tag, watch dial)."""
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 
 MARKS = {
  "IMG_2004.JPG": [  # group on the lawn
   ("clone", (1192,1102,1228,1130)), # Ole Miss logo, polo (right)
-  ("clone", (808,1102,836,1134)),   # Polo pony (centre man, green stripes)
+  ("clone", (808,1134,828,1156)),   # Polo pony (centre-right man)
+  ("blur", (630,1299,660,1319), 4), # bag patch imprint
   ("heal", (362,1682,382,1712)), ("heal", (380,1655,402,1670)),  # New Balance, man 2 left shoe
   ("heal", (484,1648,514,1694)),    # New Balance, man 2 right shoe
   ("heal", (881,1703,899,1723)), ("heal", (869,1676,884,1690)),  # On logo, man 4 shoe
   ("heal", (1198,1750,1242,1782)), ("heal", (1311,1773,1331,1791)), ("heal", (1326,1810,1348,1838)),  # New Balance, right man
-  ("soft", (1105,1075,1352,1372), 1.3),  # calm the pinstripe moire on the right man's shirt (no mark)
  ],
  "IMG_1901.JPG": [  # check-in table
-  ("heal", (758,1308,797,1372)),    # Purell label -> plain clear bottle
-  ("heal", (405,1373,450,1404)),    # event program card -> blank card
+  ("blur", (750,1295,825,1390), 7), # Purell label
+  ("blur", (503,1058,534,1138), 6), # drink can on the sill
   ("clone", (442,1170,460,1188)),   # jacket logo
+  ("blur", (395,1366,492,1412), 6), # event program card
   ("heal", (918,1231,944,1262)),    # Apple logo
-  ("heal", (706,1294,746,1310)),    # venue name printed on the cup
+  ("blur", (662,1108,722,1142), 5), # packaging on the sill
+  ("blur", (704,1290,748,1312), 3), # venue name printed on the cup
   ("heal", (621,1108,638,1125)),    # belt-bag logo on the sill
  ],
+ "IMG_1933.JPG": [  # bar, 9:15
+  ("blur", (738,1150,1040,1262), 8), ("blur", (738,1258,776,1316), 8),  # wine labels (body labels only; neck foils unreadable)
+  ("blur", (570,1200,745,1330), 5), # small bottles behind the bar
+  ("blur", (155,1245,205,1352), 6), ("blur", (52,1225,138,1402), 7), ("blur", (238,1316,288,1372), 6),  # spirits, sports drink, red-label bottle
+  ("blur", (320,1267,384,1291), 5), # bartender's name tag
+  ("heal", (198,1294,214,1312)),    # bartender shirt logo
+  ("clone", (1244,1080,1278,1130)), # polo logo
+  ("blur", (1258,1360,1318,1416), 4), # watch dial
+ ],
+ "IMG_1995.JPG": [("blur", (504,1296,552,1324), 4)],  # bag patch imprint
+ "IMG_1998.JPG": [("blur", (695,642,768,725), 5)],    # venue card on the stand
 }
 
 def _mask(w, h, inset, feather):
@@ -71,8 +83,5 @@ def scrub(name, im):
     for i, m in enumerate(MARKS.get(name, [])):
         if m[0] == "heal": _heal(im, m[1], seed=i)
         elif m[0] == "clone": _clone(im, m[1])
-        elif m[0] == "soft":
-            x0,y0,x1,y1 = m[1]; p = 12
-            im.paste(im.crop((x0-p,y0-p,x1+p,y1+p)).filter(ImageFilter.GaussianBlur(m[2])), (x0-p,y0-p), _mask(x1-x0+2*p, y1-y0+2*p, p//2, 4))
         else: _blur(im, m[1], m[2])
     return im

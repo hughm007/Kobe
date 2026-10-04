@@ -40,7 +40,27 @@ tags: [client, instagram, reels, storyboard, shotlist]
 - **H5 "This is the walk to 17."** S1 becomes V13 ~4.0–6.5 (after the sun flare) with that text. The rest is unchanged.
 - **H10 "The path or the rail?"** S1 text "The path or the rail?" then "The path."; S3 "The rail."; S5 "Which one are you?"
 
-## Reel 03 — "Augusta, by the clock" · **v4** (2026-10-04) · 11.73 s · 7 shots · average 1.68 s · posting as queue 01
+## Reel 03 — "Augusta, by the clock" · **v5** (2026-10-04) · 7.83 s · 4 shots · average 1.96 s · posting as queue 01
+
+- **Rebuilt after the v4 dual gate** (Bible §13–14).
+- **Beat grid:** 12 beats at 92.3 BPM.
+- **Brand and clock:** both on screen from frame 0.
+- **Shots removed:** the bar (9:15) and the dessert table.
+- **Clock:** races over blurred pines.
+- **Open and close:** different photos.
+- **Music:** original ([`build/music_v5.py`](build/music_v5.py)).
+- **Marks:** removed by heal and clone ([`build/marks.py`](build/marks.py)).
+
+| # | Frames | Story job | Source (window) | Text | Motion axis | Music | Real-ref |
+|---|---|---|---|---|---|---|---|
+| S1 HERO | 0–58 | Hook + proof | IMG_1901 09:03:55. Window 926×1646 at x 84–1010, so the full logo stays in frame; it tilts up from bottom-aligned | "9:03 AM" / "Thursday in Augusta," / "hosted by TripNerd." | Camera translation (tilt up, 134 px) + text over a strong scrim | Groove from frame 0, Dmaj9 | IMG_1901 itself |
+| S2 | 59–117 | Turn | IMG_2030's pine canopy (x 330–892, y 0–1000), blurred, at 34% brightness (**designed**) | Clock "9:04 AM" → "5:43 PM" (smoothstep) | Changing digits + camera translation (pan) + grain | Drop: Bm pad, ticks speeding up (1.9/2.6 kHz), reverse swell | IMG_2030 (the trees above the group) |
+| S3 | 118–156 | Feel | IMG_1995 17:44:55 (centre, pan right) | "5:44 PM" | Camera translation (pan) | Crash; groove returns (D) | IMG_1995 itself |
+| S4 HERO | 157–234 | CTA | IMG_2004 17:48:39. Window 1067×1896 centred on x 750, so all six guests are in frame; it tilts up toward the pines | "5:48 PM" / "Who would you bring?" | Camera translation (tilt up, 152 px) + light change (warm lift) | A, then the open Gmaj9 rings out and loops into D | IMG_2004 itself |
+
+**Per-shot gate (`--gate-clips`):** all four shots PASS at the standard floor. Ledger: [`qc/2026-10-04-v5-per-shot-gate-ledger.jsonl`](qc/2026-10-04-v5-per-shot-gate-ledger.jsonl).
+
+## Reel 03 — v4 (2026-10-04) · 11.73 s · 7 shots · **superseded by v5 above**
 
 - **Beat grid at 92.3 BPM:** 2 beats = 39 frames. The opening and the clock are 3 beats; the end is 4 beats.
 - **Cuts:** hard cuts throughout.

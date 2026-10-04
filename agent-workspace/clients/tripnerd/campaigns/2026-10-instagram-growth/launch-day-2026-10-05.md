@@ -21,7 +21,7 @@ tags: [client, instagram, launch, runbook]
 **Posting today:** one Reel (01, "Augusta, by the clock") and two Stories. All times are **US Eastern (ET)**.
 
 ## Tonight (Sunday): must be done before anything posts
-- [ ] **Watch the Reel end to end, with sound on, on a phone:** `TN-R03-augusta-by-the-clock-H3-v4.mp4` (1080×1920, 11.7 s, original music in the file). This is the BC-25 human watch. Check that:
+- [ ] **Watch the Reel end to end, with sound on, on a phone:** `TN-R03-augusta-by-the-clock-H3-v5.mp4` (1080×1920, 7.8 s, original music in the file). This is the BC-25 human watch. Check that:
   - the music sounds right to you (it has only been checked by measurement);
   - no logo is left that you can spot;
   - the retouched spots don't draw the eye.
@@ -53,20 +53,22 @@ puts Monday's peak at **2–4 PM local**.
 - **ASSUMPTION:** TripNerd's audience is mostly in Eastern and Central time. Check Insights → Audience → **Most active times** once we have access, and move the slot to match.
 
 ## Building the Reel in the Instagram app
-1. **+ → Reel →** choose the v4 MP4. Don't trim (11.73 s).
-2. **Music: already in the file.** v4 carries an original track ServicePOW composed and owns. **Post it as original audio. Don't add in-app music and don't lower the original volume.**
+1. **+ → Reel →** choose the v5 MP4. Don't trim (7.83 s).
+2. **Music: already in the file.** v5 carries an original track ServicePOW composed and owns. **Post it as original audio. Don't add in-app music and don't lower the original volume.**
    - Adding a second track would bury the beat-matched cuts and the drop under the clock.
    - **Before sharing:** play it once through with sound.
 3. **Cover:** the 5:48 PM frame (the group on the lawn, the last shot), or upload a still of it. Check the profile-grid crop preview so faces aren't cut.
 4. **Caption** (paste exactly; edits are TripNerd's call):
-   > One Thursday in Augusta with TripNerd, by the clock.
-   > Who would you bring? Send this to them, and follow for the next one.
+   > One Thursday in Augusta, hosted by TripNerd, by the clock.
+   > Who would you bring? Follow along for more days like this.
+
+   "Send this to them" was dropped: Meta can treat an explicit share instruction as engagement bait, which would cost reach with non-followers. The question invites sends on its own.
 
    This is the exact caption that went through our quality gate. Any change goes back through the gate before posting.
 5. **Hashtags:** at most three: `#Augusta #GolfTrip #TripNerd`. Keep event trademarks out of hashtags unless TripNerd wants them.
 6. **Location:** Augusta, Georgia.
 7. **Advanced settings → Accessibility → Alt text:**
-   > Timestamped photos from one TripNerd hosted day in Augusta. A group of guests on the lawn, a 9:03 AM check-in at the TripNerd table, the veranda bar at 9:15, a clock racing to 5:43 PM, then guests on the porch at 5:44, the dessert table at 5:46 and the group on the lawn at 5:48 PM.
+   > Timestamped photos from one TripNerd-hosted Thursday in Augusta: the TripNerd check-in table at 9:03 AM, a clock racing past the pines to 5:43 PM, three guests on the porch at 5:44, and the whole group on the lawn at 5:48 PM.
 8. **Trial Reel: OFF** for this one. It goes to followers too. The Friday variant is the trial.
 9. **Before you tap Share, check:**
    - the link in TripNerd's bio works;

@@ -3,7 +3,7 @@ title: "TripNerd — Launch Reels from the camera roll"
 type: campaign-bible
 client: tripnerd
 campaign_id: 2026-10-04-launch-reels
-status: CONCEPT APPROVED
+status: IN QC (Augusta v5)
 created: 2026-10-04
 updated: 2026-10-04
 tags: [campaign, bible, instagram, reels, organic]
@@ -25,7 +25,7 @@ tags: [campaign, bible, instagram, reels, organic]
 | **KPI + target** | Per Reel: follows and sends per 1,000 reached, watch-through. Program targets live in the operating plan (ESTIMATE, reset at Day 30) |
 | **Budget (credits / $)** | **$0 generation.** Real footage only, edited by Karl. No SPEND_APPROVER gate is triggered |
 | **Depth** | FULL (new concept family, real people on camera). Generation phases are N/A: nothing is generated (Decision log) |
-| **Approval status** | **CONCEPT APPROVED** (2026-10-04, see Decision log). Storyboard and edit plans written. **Awaiting the STORYBOARD gate** (APPROVER) |
+| **Approval status** | **STORYBOARD APPROVED for Augusta** (Karl, 2026-10-04: "get ready to post… tomorrow"; Decision log). Augusta is in **QC** at v5; Two ways is at CONCEPT APPROVED, waiting on the originals |
 
 ---
 
@@ -198,28 +198,30 @@ true, so it goes to week 2–3.
 - **Shuffle test:** pass. 1 must precede 2, and the hush must precede the roar.
 - **Variants:** H2 opens on beat 4 and loops to it from beat 3. H5 and H10 change only beat 1's text and source. All reach the shared body without a rewrite.
 
-### Reel 03, "Augusta, by the clock"
-- **Core message:** a TripNerd day in Augusta is handled from 9:03 AM to 6:03 PM.
+### Reel 03, "Augusta, by the clock" (spine as of v5, 2026-10-04)
+- **Core message:** a TripNerd-hosted Thursday in Augusta runs from a 9:03 AM check-in to a 5:48 PM group on the lawn.
 - **Core promise:** the whole day is taken care of.
 - **Primary emotion:** warmth: belonging and ease.
-- **Viewer starting state:** sees a real check-in table at a real time.
-- **Viewer ending state:** has lived the day in 12 seconds; thinks of who they'd bring.
+- **Viewer starting state:** sees a real TripNerd check-in table at a real time, in Augusta, on frame 0.
+- **Viewer ending state:** has lived the day in 8 seconds; thinks of who they'd bring.
 - **Narrative question:** "What does the whole day look like?"
 - **Why the viewer keeps watching:** the clock moves, so what's at the next time?
-- **Final payoff:** the clock races through the middle of the day (v4: no claim about what filled it), and the evening proves the day never stopped.
-- **CTA logic (v4):** a complete day ends with "Who would you bring?". The caption adds the send and follow asks. No next-year or availability implication.
+- **Final payoff:** the clock races through the middle of the day (no claim about what filled it), and the evening proves the day ended together.
+- **CTA logic:** a complete day ends with "Who would you bring?". The caption adds the send and follow asks. No next-year or availability implication.
 
 | # | Knows before | What happens | Knows after | Emotional change | Why it exists | Leads into |
 |---|---|---|---|---|---|---|
-| 1 | Nothing | 9:03 AM: the TripNerd check-in table | TripNerd's day starts early and organised | Curiosity | Hook (a specific time = real) | The morning |
-| 2 | It's morning at a TripNerd event | 9:05–9:15: bar, check-in, the group ready | The morning is handled | Ease | Proof of hosting | Where they went |
-| 3 | The morning is handled | **v4:** a clock races 9:16 AM → 5:43 PM over a dark blur, landing on the 5:44 PM shot. (v1–v3: "9:16 AM – 4:55 PM. Some things you just watch.", withdrawn as an unsupported attendance claim) | The day moved on | Anticipation | The turn, with no claim about the gap | The return |
-| 4 | They were out all day | 4:56–6:01: private party, dinner, the lawn | The evening is handled too | Warmth | Proof the day never drops | The close |
-| 5 | The whole day | 6:03 PM: "Same time next year?" | — | Longing | CTA | Follow / DM |
+| 1 | Nothing | 9:03 AM: "Thursday in Augusta, hosted by TripNerd." at TripNerd's check-in table | Where, when, who hosts | Curiosity | Hook: brand, place and clock on frame 0 | The day |
+| 2 | The day has started | The clock races from 9:04 AM to 5:43 PM over the pines | The day moved on | Anticipation | The turn, with no claim about the gap | The return |
+| 3 | Time has passed | 5:44 PM: three guests on the porch | The evening is easy | Warmth | Proof the day held up | The group |
+| 4 | It's evening | 5:48 PM: the whole group on the lawn, "Who would you bring?" | — | Belonging, then longing | CTA (send) | Send / follow |
 
 - **Chain check:** unbroken.
 - **Shuffle test:** pass. The order is the clock.
-- **Variant:** H9 changes only beat 1's text.
+- **Withdrawn in earlier cuts:**
+  - "Some things you just watch": an unsupported attendance claim.
+  - "Same time next year?": implied availability.
+  - The bar and the dessert table: they read as staff and catering, not the experience.
 
 ## 5. Script
 *Owner: `servicepow-script-director`.*
@@ -370,7 +372,42 @@ v2 addresses all of these; see the Decision log.
   - non-TripNerd marks are removed (§9);
   - the card is replaced by a clock racing from 9:16 AM to 5:43 PM (§4).
 - **Machine QC:** `--master` all PASS, audio included. `--gate-clips` all seven shots PASS at the standard floor. Receipts are in [`qc/`](qc/README.md).
-- **Critic verdict:** pending, from a fresh subagent with its own folder.
+- **Critic verdict (fresh subagent, own folder): HARD FAIL, procedural; creative REVISE. ServicePOW-6 = 7.7 ± 1.5** (floor 8.0). AI-artifact risk 2/10.
+  - **Axes:**
+    - Doesn't look AI: 9;
+    - Hook inside 2 s: 6 (opens on the payoff photo; the clock appears only at 1.97 s; the hook chord falls 11 dB);
+    - Human presence: 8;
+    - Format fit: 8;
+    - Audio design: 8;
+    - Message and CTA: 7.
+  - **No semantic hard failure.** Risk: the clock over the blurred bar photo can read as "spent the day at the bar".
+  - **Procedural:**
+    - receipts missing from its packet for BC-15, 16, 20, 21, 24, 30, 31 and 34;
+    - BC-26/27 could not run (no ASR);
+    - BC-19: the profile was not opened.
+  - **Fixes asked for:**
+    - open on the clock device and keep the group photo for the close; start the groove on frame 1;
+    - give the counter a neutral or lawn background, and make the ticks audible;
+    - show the full TripNerd wordmark;
+    - reframe the close so the striped-dress guest is in;
+    - crop the bottles out of the bar shot;
+    - rule on the Polo pony;
+    - file the receipts;
+    - update §4.
+  - **Restoring "Some things you just watch" was declined:** it is the unsupported attendance claim the v2 Skeptic blocked. The critic had not seen that verdict, by design.
+
+### v5 (2026-10-04, `…-H3-v5.mp4`, 7.83 s, sha256 73158560…): dual gate running
+- **Changes (answering both v4 reports):**
+  - **Opening:** opens on 9:03 at TripNerd's check-in table with "Thursday in Augusta, hosted by TripNerd.". Brand, place, clock and groove are all there from frame 0, and the full logo is in frame.
+  - **Cut:** the bar and the dessert table.
+  - **Clock:** runs over blurred pines.
+  - **Close:** the 5:48 group, framed with all six guests.
+  - **Retouching:** every visible blur replaced by heal or clone, or reverted where the item was unreadable and unbranded. The Polo pony is fixed (the first box was 25 px low), and the moiré is softened.
+  - **Mix:** groove from frame 0, ticks in 1.9–2.6 kHz, the drop floor lifted to about −28 dB, sub-250 Hz energy 47% (from 64%).
+  - **Caption:** drops "Send this to them" (Skeptic S1: engagement-bait risk).
+- **Machine QC:** `--master` all PASS; `--gate-clips` all four PASS.
+- **Receipts:** [`qc/2026-10-04-v5-evidence-and-rights.md`](qc/2026-10-04-v5-evidence-and-rights.md) covers BC-15/16/19/20/21/24.
+- **BC-26/27 UNVERIFIED:** ASR model hosts are blocked here. PocketSphinx was tried and is invalid on music.
 
 
 ## 14. Skeptic verdicts
@@ -421,6 +458,25 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 ```
 *(The subagent noted that a shared scratch folder held leftover frames from another run. It did not open them and worked in a fresh folder. **Future Skeptic runs get a unique folder.**)*
 
+### Pass 3, "Augusta, by the clock" v4 (2026-10-04)
+```
+SKEPTIC VERDICT — Pass 3
+Verdict: CONDITIONAL
+Findings:
+- [S2] 4.57–6.53 s · weakest-2s / competitor / client — The whole day from 9:16 AM to 5:43 PM appears only as a darkened, blurred copy of the 9:15 wine-bar photo under a spinning clock, while the music drops about 20 dB to roughly −35 dBFS. Coming right after a guest's sheepish look at the wine bar at 9:15 AM, it invites a "lost the day at the bar" reading, any counter frame (e.g. "1:16 PM" over the blurry bar) makes a ready-made mocking screenshot, and the thing the customer pays for is never shown or named.
+- [S2] 3.27–4.57 s, 1.97–3.27 s, 0–1.97 s and 9.13–11.73 s · trust / industry professional — The retouching shows in focal areas: five wine bottles with smeared labels dead-centre of the 9:15 frame; an orange blur blob on the pink bag at the centre of the hero lawn frame (the same bag shows its tan patch at 5:44, so the edit is also inconsistent); four separate smears in the 9:03 frame (water bottle on the table, printed card, two windowsill items); plus the bartender's tag and a guest's watch dial. On a premium brand this looks like amateur censor-blur editing.
+- [S2] 0–1.97 s and 9.13–11.73 s · client / brand-fidelity — A third-party mark is still visible: the Polo Ralph Lauren pony on the chest of the centre man's green-striped polo in the hero lawn photo, the most-watched image (about 4.6 s on screen). This contradicts the CLIENT-FACTS statement that third-party logos were removed. It does not imply affiliation, but it was left in while every other mark was retouched.
+- [S2] 1.97–3.27 s · client — TripNerd's only real mark (the tablecloth logo and "FAN EXPERIENCES") sits at about y 1430–1800 px, inside Instagram's bottom ~400 px caption and username overlay and partly under the right-edge buttons, and the slow pan clips the wordmark's final "d" at the frame edge. In the feed, the client's identity asset will be largely hidden and cut off.
+- [S2] 1.97–4.57 s and 7.83–9.13 s · persuasion / industry professional / competitor — The middle beats meant to prove a premium hosted day are its least premium moments: staff alone at a draped check-in table with hand sanitiser, a plastic cup and a personal tumbler and belt bag on the sill; a porch bar under an exposed sprinkler pipe; and a tilted snapshot of a catering tray of tartlets and sugared doughnuts. Nothing between the opening and closing shots shows what makes TripNerd premium, so the whole argument rests on the one lawn photo.
+- [S1] 0–1.97 s · first-3s / target customer — The open is a posed group photo of strangers. Whether people stop rests on the words "Thursday in Augusta.", which golf fans will decode and general non-followers will not, and the clock mechanic that sets the piece apart does not appear until 2.0 s.
+- [S1] 0–1.97 s and 9.13–11.73 s · AI-detection — The right-hand guest's fine pinstripe shirt shows strong moiré that crawls during the zoom, and a viewer could read it as the image warping. It is a camera and resampling artefact at the frame edge, mostly under the button column.
+- [S1] 3.27–4.57 s · target customer — The 9:15 guest is not one of the six people in the lawn photo that opens and closes the piece, a small break in what otherwise plays as one group's day.
+- [S1] 3.27–4.57 s · industry professional — A yellow pin flag is visible through the bar opening (about 20 px, not legible at phone size). Because the piece is set on a Masters-week Thursday, brand review should confirm the flag carries no event mark.
+- [S1] Caption · cheese / reach — "Send this to them, and follow for the next one" asks for shares and follows in a way Meta's recommendation guidelines may treat as engagement bait. Check the current guidelines, since the goal is reaching non-followers. "The next one" could also be read as a next trip, although no 2027 dates are published.
+- [S1] Audio · target customer — About 64% of the track's energy is below 250 Hz (36% in 40–100 Hz). On phone speakers, where most Reels are heard, much of the music will drop out and it may sound thin, even though it measures −13.9 LUFS integrated with a −2.0 dBTP peak.
+Isolation: packet verified; production reasoning, cost, draft history, and other evaluators' output withheld.
+```
+
 ## 15. CONFLICTS
 | # | Raised by | Conflict | Status |
 |---|---|---|---|
@@ -468,3 +524,5 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 - **Marks:** all non-TripNerd marks removed by conventional retouching.
 - **Card:** replaced by a racing clock. The IMG_1934–1984 numbering gap shows that 51 photos from that window are missing from our folder, so "No photos from this part" is unprovable too. The clock claims only that time passed, which retires the attendance question.
 - **QC:** all PASS. v4 sent to Karl. The dual gate is dispatched to fresh subagents in unique folders | campaign-director |
+| 2026-10-04 | v4 dual gate: critic HARD FAIL (procedural; creative 7.7, under the 8.0 floor), Skeptic **CONDITIONAL** (5 × S2, 6 × S1, no S3/S4). Repair, not an APPROVER acceptance: both reports agree on the clock-over-bar reading, visible retouching, the Polo pony and the brand read | campaign-director |
+| 2026-10-04 | **v5 repair** (see §13 v5): 4 shots, 7.83 s. Opens on 9:03 with brand, place and clock; closes on the 5:48 group. Bar and dessert removed; the clock runs over the pines; heals and clones replace blurs; the mix is rebalanced. Caption: "One Thursday in Augusta, hosted by TripNerd, by the clock. Who would you bring? Follow along for more days like this." Fresh dual gate dispatched | campaign-director |

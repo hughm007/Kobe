@@ -1,6 +1,6 @@
 import subprocess, sys
 sys.path.insert(0,"reel03")
-from marks import scrub
+from marks_v4 import scrub
 from PIL import Image, ImageOps, ImageDraw, ImageFont, ImageFilter, ImageEnhance
 W,H,FPS=1080,1920,30
 F800="fonts/inter_2.ttf"; F600="fonts/inter_1.ttf"; P="tn_assets/"; MAXW=W-160

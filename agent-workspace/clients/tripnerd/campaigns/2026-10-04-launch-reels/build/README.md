@@ -9,9 +9,13 @@ updated: 2026-10-04
 tags: [client, instagram, reel, build, music]
 ---
 
-# Build scripts: "Augusta, by the clock" v4
+# Build scripts: "Augusta, by the clock" (v5 current, v4 kept)
 
-These three scripts rebuild the v4 master exactly. The media itself is not committed (photos have guest faces; video is large).
+These scripts rebuild the masters exactly.
+- **v5 (current):** `render_v5.py` + `music_v5.py` + `marks.py`, using photos IMG_1901, 1995, 2004 and 2030 (pines only). Master: −14.1 LUFS, −2.1 dBTP, 7.833 s. Audio master: `volume=1.95dB` then the same limiter.
+- **v4:** `render_v4.py` + `music.py` + `marks_v4.py`.
+
+The media itself is not committed (photos have guest faces; video is large).
 
 | Script | What it does |
 |---|---|
