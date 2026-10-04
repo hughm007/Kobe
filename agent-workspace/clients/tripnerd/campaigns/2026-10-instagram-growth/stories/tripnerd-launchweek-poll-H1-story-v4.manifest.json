@@ -1,0 +1,53 @@
+{
+ "placement": "story",
+ "size": [
+  1080,
+  1920
+ ],
+ "safe": [
+  64,
+  288,
+  1016,
+  1536
+ ],
+ "elements": [
+  {
+   "role": "headline",
+   "box": [
+    190,
+    316,
+    889,
+    412
+   ],
+   "font_px": 84,
+   "text": "Augusta in April.",
+   "contrast": 21.0
+  },
+  {
+   "role": "support",
+   "box": [
+    183,
+    437,
+    896,
+    491
+   ],
+   "font_px": 42,
+   "text": "Our guests, Thursday 9 April 2026.",
+   "contrast": 21.0
+  },
+  {
+   "role": "cta",
+   "box": [
+    282,
+    533,
+    797,
+    589
+   ],
+   "font_px": 44,
+   "text": "Tap your answer below.",
+   "contrast": 21.0
+  }
+ ],
+ "file": "tripnerd-launchweek-poll-H1-story-v4.png",
+ "sha256": "0fb1a29df51f1039"
+}

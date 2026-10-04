@@ -15,7 +15,7 @@ tags: [client, instagram, launch, runbook]
 > - **The Augusta Reel is not cleared and won't be.** Five cuts; best critic score 7.7 against our 8.0 floor. The hook is stuck at 6 because there is no golf in frame (Bible §13–14).
 > - **Algorithmically it's also the wrong first Reel:** see [`algorithm-niche-strategy.md`](algorithm-niche-strategy.md).
 > - **First Reel instead:** "The 17th" (golf-fan moment), cut from Taylor's video originals as soon as they arrive. Tue 1 PM or Wed 12 PM ET.
-> - **Monday:** Story 1 (the poll) at 10:00 AM ET on the new clean background, `TN-story-01-morning-poll-bg-v2.png`, once its gate passes and TripNerd OKs it.
+> - **Monday:** Story 1 (the poll) at 10:00 AM ET on the new Story, `tripnerd-launchweek-poll-H1-story-v4.png`, once its gate passes and TripNerd OKs it.
 > - **Karl decides.** The steps below stay valid for whichever Reel posts first.
 
 **Posting today:** one Reel (01, "Augusta, by the clock") and two Stories. All times are **US Eastern (ET)**.
@@ -76,10 +76,14 @@ puts Monday's peak at **2–4 PM local**.
 
 ## Stories
 **Story 1, 10:00 AM (morning poll):**
-- **Background:** `TN-story-01-morning-poll-bg-v2.png` (1080×1920). It reads "Augusta week." / "Been, or bucket list?" over the pine canopy, with open sky in the middle for the sticker.
-  - It has no people, no marks and no location claim on the photo.
-  - It replaces v1, which showed a bar being set up with readable liquor labels and an unconfirmed "in Augusta" claim.
-- **Add a Poll sticker** in that space. Question: **"Augusta: been, or bucket list?"** Options: **Been there / Bucket list**.
+- **Background:** `tripnerd-launchweek-poll-H1-story-v4.png` (1080×1920, sRGB). TripNerd's guests on the lawn, at native resolution with marks removed. The text sits on dark chips: "Augusta in April." / "Our guests, Thursday 9 April 2026." / "Tap your answer below."
+  - Composed with the static-ads pipeline; static QC 17/17 PASS. Receipts in [`stories/`](stories/).
+  - **History:**
+    - v1 showed a bar being set up with liquor labels.
+    - v2 ("Augusta week.") was **blocked**: in October it reads as "it's tournament week now". It also failed contrast.
+    - v3 was a hand layout with no manifest.
+  - **Posting condition:** TripNerd confirms the venue city and guest consent (see [`2026-10-04-message-to-tripnerd.md`](2026-10-04-message-to-tripnerd.md)).
+- **Add a Poll sticker** just under "Tap your answer below.", in the sky above the guests' heads. Question: **"Been, or bucket list?"** Options: **Been there / Bucket list**. (The headline already says "Augusta"; don't repeat it.)
 - Keep stickers out of the top ~250 px and bottom ~340 px.
 
 **Story 2, 2:10 PM (push the Reel):**
