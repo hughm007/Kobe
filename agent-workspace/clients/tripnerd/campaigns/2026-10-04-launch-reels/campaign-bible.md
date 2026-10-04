@@ -408,6 +408,34 @@ v2 addresses all of these; see the Decision log.
 - **Machine QC:** `--master` all PASS; `--gate-clips` all four PASS.
 - **Receipts:** [`qc/2026-10-04-v5-evidence-and-rights.md`](qc/2026-10-04-v5-evidence-and-rights.md) covers BC-15/16/19/20/21/24.
 - **BC-26/27 UNVERIFIED:** ASR model hosts are blocked here. PocketSphinx was tried and is invalid on music.
+- **Critic verdict (fresh subagent, own folder): HARD FAIL. ServicePOW-6 = 7.3 ± 1.5** (floor 8.0; the hook is at 6). AI-artifact risk 2/10.
+  - **Axes:**
+    - Doesn't look AI: 9;
+    - Hook: 6 (opens on staff heads-down at a check-in table; three lines in 1.97 s over blinds);
+    - Human presence: 8;
+    - Format: 7 (the logo sits at 71–97% of frame height, under the caption bar);
+    - Audio: 7 (the drop is 15–18 dB deep under a near-black picture; dull above 5 kHz; a 250 ms fade hole at the loop);
+    - Message and CTA: 7 (the product, the day itself, is never shown).
+  - **Registry:**
+    - PASS: BC-01–15 except as below, and BC-30 (md5 re-hashed), 21, 31, 34 and 42.
+    - **BLOCKED:**
+      - BC-26 and BC-27 (no ASR; BC-27 also needs an explicit zero-line declaration);
+      - BC-28 (no OCR);
+      - BC-19 (no dated in-app receipt);
+      - BC-20 (likeness needs the **client's** consent confirmation, not the agency's library clearance);
+      - BC-16 (EV-TN-AUG-03 "Augusta" is INFERRED, and approval-as-confirmation is circular);
+      - BC-22.
+    - **Disputed:** BC-24 (a logo swap makes it work for any golf-trip operator).
+  - **Fixes asked for:**
+    - run ASR and OCR where possible;
+    - get one CLIENT_APPROVER email confirming Augusta, the hosting, and guest and staff consent;
+    - a dated bio-link receipt and the BC-25 watch;
+    - lift the logo to 50–70% of frame height (**not possible with IMG_1901**: the logo's bottom is at source y 1850 of 2048);
+    - a stronger frame 0 with faces;
+    - a shallower drop and earlier ticks, 2–5 kHz presence, and a ring-out through the loop;
+    - a brighter pines background.
+  - **Advisory:** the thing TripNerd sells is never on screen.
+  - **Ceiling note (campaign-director):** four critic passes on this photo set scored 6.2 → 7.0 → 7.7 → 7.3. The hook sat at 6 in both of the last two cuts: once opening on guests' faces, once opening on the brand. The limit is the asset (stills of the hospitality day; the event itself is unphotographed), not the edit.
 
 
 ## 14. Skeptic verdicts

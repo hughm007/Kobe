@@ -42,6 +42,8 @@ doesn't fit.
   the 31-check gate exists because scores alone passed a dead ad.
 - [2026-08-26 — Correctness is the floor, conversion is the objective](learnings/2026-08-26-correctness-floor-conversion-objective.md):
   Owner-directed promotion; produced the DR lens and the Performance Challenger Rule.
+- [2026-10-04 — Stills-only Reels hit a hook ceiling](learnings/2026-10-04-stills-reels-hit-a-hook-ceiling.md): five cuts of event-hospitality stills topped out at 7.7 against the 8.0 floor; the hook is capped when the paid-for moment isn't on camera.
+- [2026-10-04 — Verify retouching on rendered frames](learnings/2026-10-04-verify-retouch-on-rendered-frames.md): a logo survived because QC cropped around the box, not the subject. Clone and heal beat blur.
 - [2026-08-31 — Frames catch what code review cannot](learnings/2026-08-31-frames-catch-what-code-review-cannot.md):
   15 defects across 3 build rounds, all invisible to clean code — **third occurrence, promoted** (probe-pass advisory in the video playbook).
 - [2026-08-31 — Claim qualifiers drop in re-transcription](learnings/2026-08-31-claim-qualifiers-drop-in-transcription.md):
