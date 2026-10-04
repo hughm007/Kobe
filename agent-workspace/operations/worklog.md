@@ -1714,3 +1714,4 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - the VIP Hosting Spot vertical cut and AI-label check;
   - the Augusta carousel re-read against the Story gate;
   - plus everything open from the earlier entries (access, approver, footage, Taylor's originals, logo, Augusta answers).
+- **Pricing one-pager for Jason (same night):** `clients/tripnerd/deliverables/2026-10-october-pricing/TripNerd-October-Pricing.pdf`. It shows 4 Reels at a $300 October rate plus 4 statics at $75, which is $1,500 (against $1,600 at standard). It adds the 3 owed September adverts at no charge, so 11 posts in total, with a week-by-week schedule and the strategy for each format. The November tiers and the 2 delivered videos are left off.

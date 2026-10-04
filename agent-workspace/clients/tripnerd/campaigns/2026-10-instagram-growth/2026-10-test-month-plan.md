@@ -56,6 +56,12 @@ tags: [client, instagram, test-month, pricing, operating-plan]
 - 6 new Reels would have meant 9 videos, more than the plan TripNerd just said was too much, at a price below the plan's. That gives away the $4,000 tier's value.
 - Footage is the bottleneck, and 4 Reels is what we can promise before TripNerd's archive arrives.
 
+**Pricing as given to Jason** (Karl, 2026-10-04; one-page PDF: [`../../deliverables/2026-10-october-pricing/`](../../deliverables/2026-10-october-pricing/README.md)):
+- 4 Reels at an **October rate of $300** (standard $325; $300–325 is the range quoted in the meeting) = $1,200.
+- 4 statics at $75 = $300.
+- **Total $1,500**, against $1,600 at standard.
+- The PDF lists only the **3 owed adverts** (1 video and 2 statics), as Karl specified. It doesn't list the 2 delivered September videos.
+
 **Already paid, no charge** (from the $1,200):
 
 | Item | What it is | Before it posts |
