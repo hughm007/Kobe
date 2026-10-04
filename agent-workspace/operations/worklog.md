@@ -1414,3 +1414,16 @@ on s2-2 house photo and s4-2 football photo, LA on-sale confirmation, "6–12 mo
 **Learned:** this workspace's egress blocks client sites and Higgsfield CDNs; the Higgsfield sandbox
 can fetch both. MCP calls time out at ~60s regardless of `timeout_seconds` — run renders/uploads with
 `background: true` and poll.
+
+## 2026-10-04 (later) — TripNerd Story week aligned to the Instagram Growth Plan
+
+**Did:** checked the week against the owner's "TripNerd Instagram Growth Plan" PDF (90 days from
+5 Oct). Gaps fixed: Stories now 10 AM ET Mon–Fri; push frames within the hour of each feed post
+(Mon 2 PM Reel 01, Tue 1 PM carousel 02, Thu 12:30 PM proof 04; Fri Trial Reel deliberately not
+pushed); daily DM keywords (AUGUSTA, HOST, BIGGAME) for ServicePOW first-line DMs; days re-ordered
+to sit beside the launch queue; Friday built for sends; reviews now word for word (no ellipses);
+UTM-tagged link stickers; guest-consent rule made blocking. 22 frames re-rendered (v2 ZIP + sheet
+in `build/README.md`); page republished with a plan-vs-stories table.
+
+**Open:** approver sign-off of the batch; partner access; guest consent confirmation; LA on-sale;
+quiz answer; push frames depend on Reel 01 / carousel 02 / proof 04 going live as scheduled.

@@ -6,5 +6,5 @@ home, /nerds and /events/augusta-experience pages) and writes one HTML file per 
 `render.js` (Playwright) screenshots them at 1080×1920; `sheet.py` builds the contact sheet.
 
 Outputs (Higgsfield storage, Karl's account):
-- ZIP (post/ clean frames + preview/ with sticker guides): https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/8ed05abd-c1e7-4eeb-a2ff-c3ea480b948b.zip
-- Contact sheet: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/4104921c-7a54-4c46-9108-71df10cca0d6.jpg
+- ZIP (post/ clean frames + preview/ with sticker guides): https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/4055ce54-bc9d-446f-a352-88f009753ce0.zip (v2, growth-plan aligned, 22 frames; v1 superseded)
+- Contact sheet: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/5aa1ff1e-c340-4ce2-b360-26ec89b484f8.jpg (v2)
