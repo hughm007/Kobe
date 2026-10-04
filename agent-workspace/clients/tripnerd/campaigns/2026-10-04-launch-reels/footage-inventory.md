@@ -13,7 +13,7 @@ tags: [client, footage, inventory, instagram, reels]
 
 Everything TripNerd footage we can see as of 2026-10-04.
 - **Videos:** seen only through 1-frame-per-second contact sheets in the "TripNerd 17 Storyboard Lock" artifact. **The originals' location is UNKNOWN** (Karl to locate).
-- **Photos:** 29 full-resolution JPGs from Drive folder `0AJj-fhf07xDjUk9PVA`, uploaded 2026-09-22. Provenance is presumed TripNerd's own and is **UNKNOWN until Karl confirms**.
+- **Photos:** 29 full-resolution JPGs from Drive folder `0AJj-fhf07xDjUk9PVA`, uploaded 2026-09-22. **CONFIRMED 2026-10-04:** Karl says everything in the TripNerd library is cleared to post and use.
 
 ## THE PLAYERS, TPC Sawgrass, the 17th (video)
 

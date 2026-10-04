@@ -76,7 +76,7 @@ H.264 MP4, 1080×1920, source frame rate, about 16–20 Mbps, AAC 48 kHz. Name t
 - [ ] Hook works with **sound off**: the text alone carries it.
 - [ ] No watermarks; full resolution; no AI anywhere, so no AI label.
 - [ ] No identifiable pro, and no big-screen name, in any frame.
-- [ ] Faces: public crowd is incidental. Suite guests are seen from behind; confirm on the original.
+- [x] Faces and in-frame marks: library cleared (Karl, 2026-10-04). Still keep the pro and big-screen names out: player likeness is a third party's right.
 - [ ] Text inside the safe zone; spelled exactly as above.
 - [ ] Loudness about −14 LUFS; peaks ≤ −1 dBTP.
 - [ ] Then the dual gate: creative-critic score and Skeptic Pass 3, run separately, before it goes in TripNerd's approval batch.

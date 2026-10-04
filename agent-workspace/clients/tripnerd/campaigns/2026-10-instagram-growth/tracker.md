@@ -45,8 +45,8 @@ in each log.
 
 | Post | Open item | Owner |
 |---|---|---|
-| 01 Two ways to see the 17th | Full-res originals of V13, V16, V24 and V08 (location UNKNOWN). Crop the board and named pro. TripNerd OK on THE PLAYERS marks. Guest consent if faces are identifiable. Edit plan written; check V08 audio for chanted names. | Karl / TripNerd |
-| 03 Augusta, by the clock | Confirm the 29 photos are TripNerd's own, and that "Their Camera Roll" wasn't already built from them (angle rotation). Guest consent. No event marks in text. IMG_1985 banner shows the Masters flag logo (TripNerd OK or swap). Check IMG_1916 laptop screens. Music: in-app or licensed (Karl). | Karl / TripNerd |
+| 01 Two ways to see the 17th | Full-res originals of V16, V23, V24 and V08 (location UNKNOWN). Keep the big screen and named pro cropped. Check V08 audio for chanted names. Library cleared (2026-10-04). | Karl |
+| 03 Augusta, by the clock | Confirm "Their Camera Roll" wasn't built from these photos (angle rotation). Check IMG_1916 laptop screens. Music: in-app or licensed (Karl). Library cleared (2026-10-04). | Karl |
 | 04 Communication proof | Needs a real review (with permission to quote) and the actual guest briefing | TripNerd |
 | 07 How a TripNerd trip works | Needs the on-camera Nerd filmed | TripNerd |
 | 08 First-time guest | Needs a real guest's own words and written consent; no synthetic stand-in (FTC Fake Reviews Rule) | TripNerd |
@@ -86,5 +86,6 @@ Status values: `idea → planned → drafted → in edit → sent for approval �
 | Date | Decision | By |
 |---|---|---|
 | 2026-10-03 | Deck A pricing: $1,750, then $4,000/mo; discounts shown against standard per-post pricing | Karl |
+| 2026-10-04 | Everything in the TripNerd library is cleared to post and use (photo ownership, guest consent, in-frame event marks) | Karl |
 | 2026-10-04 | September adverts (Their Camera Roll, VIP Hosting Spot) removed from the launch queue; recognised only | Karl |
 | 2026-10-03 | No outcome promised to TripNerd; numbers appear only as labelled targets | Karl |

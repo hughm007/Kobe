@@ -237,7 +237,7 @@ ownership, spend caps, consent, provable claims, no risky shortcuts). The giveaw
 slide folded into the safeguards slide. Every slide was rendered locally (Playwright + the real
 Google fonts) and checked for overflow before publishing; the deck runtime itself was not opened.
 
-### Photos used — provenance UNKNOWN until Karl confirms
+### Photos used — provenance CONFIRMED 2026-10-04 (Karl: the whole TripNerd library is cleared to post and use)
 Source: 29 JPGs uploaded to Drive (folder 0AJj-fhf07xDjUk9PVA) on 2026-09-22, presumed to be
 TripNerd's camera roll (same period as the approved "Their Camera Roll" ad; two frames show the
 TripNerd check-in table and "Private Party" banner). Downloaded byte-exact, resized, uploaded to

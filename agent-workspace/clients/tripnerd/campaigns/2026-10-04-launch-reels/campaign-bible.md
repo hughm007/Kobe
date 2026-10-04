@@ -57,9 +57,9 @@ concept quotes or paraphrases a customer.
 |---|---|---|
 | What exactly were "Their Camera Roll" and "VIP Hosting Spot"? | Angle rotation (BC-24); the "By the clock" concept if it repeats one | APPROVER (Karl) |
 | Where are the full-resolution originals (V07–V24, P082)? | Any 1080×1920 edit | APPROVER (Karl) |
-| Are the 29 Augusta photos TripNerd's own, and may they be posted? | Concept 2 | CLIENT_APPROVER |
-| Consent from identifiable guests in V23, the suite photos and the Augusta photos | Posting | CLIENT_APPROVER |
-| May TripNerd post THE PLAYERS / Masters marks and footage with a pro in frame? | Concepts 1, 2, 3 | CLIENT_APPROVER |
+| ~~Are the 29 Augusta photos TripNerd's own, and may they be posted?~~ **RESOLVED 2026-10-04:** Karl confirms the whole TripNerd library is cleared to post and use | — | — |
+| ~~Consent from identifiable guests~~ **RESOLVED 2026-10-04:** library cleared (Karl). A written TripNerd confirmation on file is recommended | — | — |
+| Event marks in the library footage: **RESOLVED** (cleared, Karl 2026-10-04). Still open: an identifiable pro's likeness is a third party's right TripNerd can't clear, so the board and pro stay cropped | — | campaign-director |
 | Customer reviews export | Proof posts; any VOC-based hook | CLIENT_APPROVER |
 
 ---
@@ -251,7 +251,7 @@ true, so it goes to week 2–3.
   - the TripNerd tablecloth (IMG_1901);
   - the TripNerd "Private Party" banner (IMG_1985).
 - **No end card**, so no logo file is needed. If one is added, it must use TripNerd's real full-resolution logo, which is still **NEEDS INPUT**.
-- **Event marks in frame** (THE PLAYERS signage; the Masters flag logo on TripNerd's own banner in IMG_1985; credential lanyards): CLIENT_APPROVER to confirm. Swaps are named in the edit plans.
+- **Event marks in frame** (THE PLAYERS signage; the Masters flag logo on TripNerd's own banner in IMG_1985; credential lanyards): **cleared**. Karl, 2026-10-04: "everything in the TripNerd library is cleared to post and use". Our own on-screen text still avoids naming the Masters (no need to).
 
 ## 10. Production plan
 **N/A.** Nothing is generated: $0 credits, no SPEND_APPROVER gate. Karl edits in Premiere.
@@ -298,4 +298,5 @@ None yet. Pass 3 runs on each finished cut, under the isolation protocol.
 | 2026-10-04 | Hook Tournament: written exemption from the paper Skeptic attack; Trial Reels decide. The dual gate still runs on finished cuts | campaign-director |
 | 2026-10-04 | **CONCEPT APPROVED.** Karl instructed "write the edit plans" for the recommended pair (01 Two ways to see the 17th; 03 Augusta, by the clock). Reel 03 stays conditional on the "Their Camera Roll" check in §1.2 | Karl (APPROVER) |
 | 2026-10-04 | Spine, storyboard (shot list), audio, edit logic and brand-fidelity marking written. §5 (no spoken words) and §7/§8/§10 (no generation) are N/A | campaign-director |
+| 2026-10-04 | **Library clearance:** "everything in the TripNerd library is cleared to post and use". Resolves photo ownership, guest consent and in-frame event marks. Not covered: third-party player likeness (keep cropped) | Karl (APPROVER) |
 | — | **STORYBOARD gate**: awaiting APPROVER review of the shot list and edit plans | Karl |

@@ -19,9 +19,9 @@ on TripNerd's own photos.
 Shot detail: [`shotlist.md`](shotlist.md).
 
 ## Before you open Premiere
-- [ ] Photos are in Drive folder `0AJj-fhf07xDjUk9PVA` (1536×2048 portrait). Confirm they're TripNerd's own (Bible §1.2).
+- [x] Photos are in Drive folder `0AJj-fhf07xDjUk9PVA` (1536×2048 portrait). **Cleared to post and use** (Karl, 2026-10-04).
 - [ ] **IMG_1916:** check the laptop screens for any guest data. Blur or swap if anything is readable.
-- [ ] **IMG_1985:** TripNerd's "Private Party" banner shows the **Masters flag logo**. TripNerd must OK posting it; if not, swap for IMG_1998.
+- [x] **IMG_1985:** TripNerd's banner shows the Masters flag logo. **Cleared** (library clearance, 2026-10-04).
 - [ ] Choose the music **first** (see Sound), so you can cut on its beat.
 
 ## Sequence
@@ -73,8 +73,8 @@ H.264 MP4, 1080×1920, 30 fps, about 16–20 Mbps. Name the file `TN-R03-augusta
 
 ## QC before it goes to TripNerd
 - [ ] Every timestamp matches its photo's EXIF time (listed in [`footage-inventory.md`](footage-inventory.md)).
-- [ ] Guest consent confirmed by TripNerd. Otherwise use the no-faces fallback photos (shot list).
+- [x] Guest consent: library cleared (Karl, 2026-10-04).
 - [ ] No readable screens, badges or personal data.
-- [ ] No event marks in our text; the banner logo is OK'd or swapped.
+- [ ] No event marks in **our** text. In-frame marks are cleared.
 - [ ] Average shot length ≥1.3 s (it's 1.4); text inside the safe zone.
 - [ ] Then the dual gate: creative-critic score and Skeptic Pass 3, separately, before TripNerd's approval batch.

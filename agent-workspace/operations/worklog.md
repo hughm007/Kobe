@@ -1589,3 +1589,10 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - IMG_1916 has guest-facing laptop screens to check.
 - **Storyboard strips:** sent to Karl in session, not committed (they show guest faces).
 - **Next gate:** STORYBOARD (Karl). Then he cuts; then the dual gate runs on the cuts.
+
+**Follow-up (library clearance):** Karl, 2026-10-04: "everything in the TripNerd library is cleared to post and use."
+- **Recorded in:** Bible §1.2 and §9 plus the Decision log, the footage inventory, both edit plans, the tracker, and the deliverable notes.
+- **Resolves:** photo ownership, guest consent, and event marks in frame.
+- **Not covered:** an identifiable pro's likeness (third-party right), so the board and pro stay cropped.
+- **Recommended:** a written TripNerd confirmation on file.
+- **Remaining blockers:** the originals' location (V16/V23/V24/V08); the "Their Camera Roll" content check (Reel 03 rotation); the music choice for Reel 03; the IMG_1916 screen check.
