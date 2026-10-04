@@ -1575,3 +1575,17 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - **CONCEPT gate awaits Karl.**
 - **Decks:** launch queue and roadmap updated in both (deck A v26, deck B v9). Snapshot, operating plan, calendar and tracker updated.
 - **Superseded:** `posts/01-their-camera-roll.md` (kept for the v15 facts).
+
+**Follow-up (launch Reels edit plans):**
+- **Concept gate:** Karl said "write the edit plans", recorded as CONCEPT APPROVED.
+- **Written:**
+  - `shotlist.md`: all ten fields per shot.
+  - `edit-plan-01-two-ways-17th.md`: 10.6 s, real sound, no music.
+  - `edit-plan-03-augusta-by-the-clock.md`: 14 s, 9 photos + a black card, real EXIF timestamps.
+  - Bible §4, §6, §9, §11, §12; §5, §7, §8, §10 marked N/A.
+- **Rule change applied:** the 1.3 s average shot-length floor dropped the earlier 0.9 s-per-photo idea.
+- **Found on the photos:**
+  - IMG_1985 (TripNerd's Private Party banner) shows the Masters flag logo.
+  - IMG_1916 has guest-facing laptop screens to check.
+- **Storyboard strips:** sent to Karl in session, not committed (they show guest faces).
+- **Next gate:** STORYBOARD (Karl). Then he cuts; then the dual gate runs on the cuts.

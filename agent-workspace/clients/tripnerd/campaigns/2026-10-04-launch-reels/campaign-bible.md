@@ -3,7 +3,7 @@ title: "TripNerd — Launch Reels from the camera roll"
 type: campaign-bible
 client: tripnerd
 campaign_id: 2026-10-04-launch-reels
-status: STRATEGY APPROVED
+status: CONCEPT APPROVED
 created: 2026-10-04
 updated: 2026-10-04
 tags: [campaign, bible, instagram, reels, organic]
@@ -25,7 +25,7 @@ tags: [campaign, bible, instagram, reels, organic]
 | **KPI + target** | Per Reel: follows and sends per 1,000 reached, watch-through. Program targets live in the operating plan (ESTIMATE, reset at Day 30) |
 | **Budget (credits / $)** | **$0 generation.** Real footage only, edited by Karl. No SPEND_APPROVER gate is triggered |
 | **Depth** | FULL (new concept family, real people on camera). Generation phases are N/A: nothing is generated (Decision log) |
-| **Approval status** | **STRATEGY APPROVED**: inherited from Deck A, approved client-ready by the APPROVER 2026-10-03. **Awaiting the CONCEPT gate** |
+| **Approval status** | **CONCEPT APPROVED** (2026-10-04, see Decision log). Storyboard and edit plans written. **Awaiting the STORYBOARD gate** (APPROVER) |
 
 ---
 
@@ -169,9 +169,117 @@ true, so it goes to week 2–3.
 
 ---
 
-## 4–13. Not started
-Spine, script, storyboard, edit, audio and QC follow the CONCEPT gate.
-- **N/A for this campaign:** §7 (generated cast), §8 continuity for generated shots, and §10 (generation routing). Nothing is generated (Decision log).
+## 4. Creative spine
+*Owner: `servicepow-creative-spine`. Two Reels, one angle. Each has one primary emotion.*
+
+### Reel 01, "Two ways to see the 17th"
+- **Core message:** there's the path, and there's the rail. TripNerd puts you at the rail.
+- **Core promise:** a seat at the rail for the moment the place erupts.
+- **Primary emotion:** anticipation, paid off.
+- **Viewer starting state:** scrolling; recognises (or is curious about) a famous, packed hole.
+- **Viewer ending state:** has felt the roar from the rail; pictures who they'd bring.
+- **Narrative question:** "What's the second way?"
+- **Why the viewer keeps watching:** "1." promises a "2.", and the hush promises a release.
+- **Final payoff:** the roar, from TripNerd's rail.
+- **CTA logic:** having just felt it, "Who are you bringing?" asks them to put a person in the seat next to them, which is a send.
+
+| # | Knows before | What happens | Knows after | Emotional change | Why it exists | Leads into |
+|---|---|---|---|---|---|---|
+| 1 | Nothing | The path to 17, packed; the island green appears ("1. The path.") | This is the famous 17th, and this is way one | Curiosity | Hook + the comparison's first half | "So what's way two?" |
+| 2 | Way one | Walk under the THE PLAYERS · TRIPNERD banner | Way two is TripNerd's | Intrigue | Names TripNerd without an ad voice | Arrival |
+| 3 | Way two is TripNerd's | Seated at the rail; the crowd hushes ("2. The rail.") | This is the view | Anticipation | Sets up the release | The putt |
+| 4 | Something is about to happen | The putt drops; the place erupts | That's what the rail feels like | Release, exhilaration | Payoff | The question |
+| 5 | They've felt it | "Who are you bringing?" over the settling roar | — | Warmth, intent | CTA | Send |
+
+- **Chain check:** unbroken.
+- **Shuffle test:** pass. 1 must precede 2, and the hush must precede the roar.
+- **Variants:** H2 opens on beat 4 and loops to it from beat 3. H5 and H10 change only beat 1's text and source. All reach the shared body without a rewrite.
+
+### Reel 03, "Augusta, by the clock"
+- **Core message:** a TripNerd day in Augusta is handled from 9:03 AM to 6:03 PM.
+- **Core promise:** the whole day is taken care of.
+- **Primary emotion:** warmth: belonging and ease.
+- **Viewer starting state:** sees a real check-in table at a real time.
+- **Viewer ending state:** has lived the day in 14 seconds; wants in next year.
+- **Narrative question:** "What does the whole day look like?"
+- **Why the viewer keeps watching:** the clock moves, so what's at the next time?
+- **Final payoff:** after the gap ("some things you just watch"), the evening proves the day never stopped.
+- **CTA logic:** a complete day ends with "Same time next year?", the natural next thought.
+
+| # | Knows before | What happens | Knows after | Emotional change | Why it exists | Leads into |
+|---|---|---|---|---|---|---|
+| 1 | Nothing | 9:03 AM: the TripNerd check-in table | TripNerd's day starts early and organised | Curiosity | Hook (a specific time = real) | The morning |
+| 2 | It's morning at a TripNerd event | 9:05–9:15: bar, check-in, the group ready | The morning is handled | Ease | Proof of hosting | Where they went |
+| 3 | The group left at 9:15 | Black: "9:16 AM – 4:55 PM. Some things you just watch." | The tournament itself isn't on the camera roll | Intrigue, respect | The turn; makes the day feel real | The return |
+| 4 | They were out all day | 4:56–6:01: private party, dinner, the lawn | The evening is handled too | Warmth | Proof the day never drops | The close |
+| 5 | The whole day | 6:03 PM: "Same time next year?" | — | Longing | CTA | Follow / DM |
+
+- **Chain check:** unbroken.
+- **Shuffle test:** pass. The order is the clock.
+- **Variant:** H9 changes only beat 1's text.
+
+## 5. Script
+*Owner: `servicepow-script-director`.*
+**N/A.** There are no spoken words: no voice-over, no dialogue. On-screen text lives in the storyboard's text field.
+
+## 6. Storyboard
+*Owner: `servicepow-storyboard-director`.*
+- Shot list with all ten fields: [`shotlist.md`](shotlist.md).
+  - Reel 01: 5 shots, 10.6 s, average 2.1 s.
+  - Reel 03: 10 shots, 14.0 s, average 1.4 s.
+- Every shot is real footage or a real photo. Real-refs are the source files themselves, cited.
+- Motion is named on every shot; hero shots name two axes. Reel 01 S4's second axis must be verified on the original.
+- **Feeling Spec:**
+  - 01: a held breath, then release.
+  - 03: an easy, warm day where the clock does the storytelling.
+- **Sound Spine:** see §11.
+- **Shots needing real assets:** the originals of V16, V23, V24 and V08 (Reel 01). The photos are on hand (Reel 03).
+- **No `NO REFERENCE FOUND` entries.**
+- Storyboard frame strips were rendered in session for Karl. They are not committed: they contain guest faces, and the photo policy keeps client photos out of git.
+
+## 7. Cast and performance
+**N/A.** There are no generated people. Real guests appear, and their consent is tracked in §1.2.
+
+## 8. Continuity annex
+**N/A for generated material.** Real continuity:
+- Reel 01 joins V23 (12 Mar) and V24 (14 Mar), the same suite on different days. The banner→rail cut hides the change.
+
+## 9. Brand and product fidelity
+*Owner: `servicepow-brand-fidelity`.*
+- **Identity assets on screen, all real and in camera, never regenerated** (PASS, pre-production):
+  - the THE PLAYERS · TRIPNERD banner (V23);
+  - the TripNerd tablecloth (IMG_1901);
+  - the TripNerd "Private Party" banner (IMG_1985).
+- **No end card**, so no logo file is needed. If one is added, it must use TripNerd's real full-resolution logo, which is still **NEEDS INPUT**.
+- **Event marks in frame** (THE PLAYERS signage; the Masters flag logo on TripNerd's own banner in IMG_1985; credential lanyards): CLIENT_APPROVER to confirm. Swaps are named in the edit plans.
+
+## 10. Production plan
+**N/A.** Nothing is generated: $0 credits, no SPEND_APPROVER gate. Karl edits in Premiere.
+- **Spend:** the only decision is a licensed music track for Reel 03 (edit plan, option 2).
+
+## 11. Audio design
+*Owner: `servicepow-audio-director`.*
+- **Reel 01, real sound only:**
+  - V16 walla.
+  - J-cut into the suite murmur.
+  - A held hush, kept quiet on purpose.
+  - The roar: V24 plus V08 25.0–27.0. Check V08 for chanted player names.
+  - An L-cut tail.
+  - No music. About −14 LUFS integrated, peaks ≤ −1 dBTP.
+- **Reel 03:** photos have no sound.
+  - The music is chosen first and cut on its beat.
+  - The S5 drop to near-silence is the designed moment, achievable only with a licensed track baked in (Karl's decision).
+
+## 12. Edit logic
+*Owner: `servicepow-cinematography-editor`.*
+- **Cut lists, with a reason per transition:** [`edit-plan-01-two-ways-17th.md`](edit-plan-01-two-ways-17th.md) and [`edit-plan-03-augusta-by-the-clock.md`](edit-plan-03-augusta-by-the-clock.md).
+- **Screen grammar, Reel 01:**
+  - S1→S2 cuts on a matching forward direction of travel.
+  - S3→S4 is the same camera position (a match on the crowd's action), not a jump cut.
+- **Screen grammar, Reel 03:** a chronological still sequence, with a dip to black as the only transition.
+
+## 13. QC verdict
+Pending finished cuts. The critic (BC-22) runs separately from Skeptic Pass 3 (BC-23).
 
 ## 14. Skeptic verdicts
 None yet. Pass 3 runs on each finished cut, under the isolation protocol.
@@ -188,4 +296,6 @@ None yet. Pass 3 runs on each finished cut, under the isolation protocol.
 | 2026-10-04 | Strategy phase skipped: §2 inherits the APPROVER-approved Deck A operating plan (approved 2026-10-03) | campaign-director |
 | 2026-10-04 | Depth FULL, but phases 7/8/10 for generated material are N/A: real footage only, no generation, $0 spend | campaign-director |
 | 2026-10-04 | Hook Tournament: written exemption from the paper Skeptic attack; Trial Reels decide. The dual gate still runs on finished cuts | campaign-director |
-| — | **CONCEPT gate**: awaiting APPROVER | Karl |
+| 2026-10-04 | **CONCEPT APPROVED.** Karl instructed "write the edit plans" for the recommended pair (01 Two ways to see the 17th; 03 Augusta, by the clock). Reel 03 stays conditional on the "Their Camera Roll" check in §1.2 | Karl (APPROVER) |
+| 2026-10-04 | Spine, storyboard (shot list), audio, edit logic and brand-fidelity marking written. §5 (no spoken words) and §7/§8/§10 (no generation) are N/A | campaign-director |
+| — | **STORYBOARD gate**: awaiting APPROVER review of the shot list and edit plans | Karl |

@@ -45,8 +45,8 @@ in each log.
 
 | Post | Open item | Owner |
 |---|---|---|
-| 01 Two ways to see the 17th | Full-res originals of V13, V16, V24 and V08 (location UNKNOWN). Crop the board and named pro. TripNerd OK on THE PLAYERS marks. Guest consent if faces are identifiable. Concept awaiting Karl's approval ([Bible](../2026-10-04-launch-reels/campaign-bible.md)). | Karl / TripNerd |
-| 03 Augusta, by the clock | Confirm the 29 photos are TripNerd's own, and that "Their Camera Roll" wasn't already built from them (angle rotation). Guest consent. No event marks in text. Concept awaiting Karl's approval. | Karl / TripNerd |
+| 01 Two ways to see the 17th | Full-res originals of V13, V16, V24 and V08 (location UNKNOWN). Crop the board and named pro. TripNerd OK on THE PLAYERS marks. Guest consent if faces are identifiable. Edit plan written; check V08 audio for chanted names. | Karl / TripNerd |
+| 03 Augusta, by the clock | Confirm the 29 photos are TripNerd's own, and that "Their Camera Roll" wasn't already built from them (angle rotation). Guest consent. No event marks in text. IMG_1985 banner shows the Masters flag logo (TripNerd OK or swap). Check IMG_1916 laptop screens. Music: in-app or licensed (Karl). | Karl / TripNerd |
 | 04 Communication proof | Needs a real review (with permission to quote) and the actual guest briefing | TripNerd |
 | 07 How a TripNerd trip works | Needs the on-camera Nerd filmed | TripNerd |
 | 08 First-time guest | Needs a real guest's own words and written consent; no synthetic stand-in (FTC Fake Reviews Rule) | TripNerd |
@@ -55,9 +55,9 @@ in each log.
 
 | # | Day | Date | Format | Post | Status | Link | 7-day views | Non-follower % | Saves + sends | Follows |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 01 | | | Reel | Two ways to see the 17th | idea | | | | | |
+| 01 | | | Reel | Two ways to see the 17th ([edit plan](../2026-10-04-launch-reels/edit-plan-01-two-ways-17th.md)) | planned | | | | | |
 | 02 | | | Carousel | What corporate hosts get wrong | idea | | | | | |
-| 03 | | | Reel | Augusta, by the clock | idea | | | | | |
+| 03 | | | Reel | Augusta, by the clock ([edit plan](../2026-10-04-launch-reels/edit-plan-03-augusta-by-the-clock.md)) | planned | | | | | |
 | 04 | | | Proof | Communication proof | idea | | | | | |
 | 05 | | | Reel | What guests see vs. what we handle | idea | | | | | |
 | 06 | | | Carousel | Don't plan a golf major like a vacation | idea | | | | | |
@@ -66,7 +66,7 @@ in each log.
 | 09 | | | Reel | Who are you taking? | idea | | | | | |
 | 10 | | | Carousel | What "fully handled" really means | idea | | | | | |
 
-Status values: `idea → drafted → in edit → sent for approval → approved → scheduled → posted` (or `blocked`).
+Status values: `idea → planned → drafted → in edit → sent for approval → approved → scheduled → posted` (or `blocked`).
 
 ## Monday reports
 
