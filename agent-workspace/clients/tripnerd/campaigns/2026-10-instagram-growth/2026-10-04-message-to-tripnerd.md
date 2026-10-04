@@ -16,10 +16,11 @@ tags: [client, instagram, launch, approvals]
 > We kick off tomorrow. To launch strong I need a few quick things from you:
 >
 > 1. **Video originals from Taylor's phone:** the THE PLAYERS clips from the 17th (the walk in, the seats by the green, the crowd going off after the putt). AirDrop or a Drive link works. Full quality, not texted copies. These are the strongest Reels you have, and our first Reel is cut from them.
-> 2. **Augusta day, three quick yeses** (one line each is fine):
->    - Which town was the venue in: Augusta, GA, or North Augusta, Evans or Aiken? We'll tag it exactly.
+> 2. **Augusta day, a few quick answers** (one line each is fine):
+>    - What was the venue (property name), and which town: Augusta, GA, or North Augusta, Evans or Aiken? Was it off the tournament grounds, and does the property allow its photos in your marketing? We'll tag it exactly.
 >    - Are the guests and staff in your Augusta photos OK being shown on Instagram?
 >    - Confirm that day was hosted by TripNerd (check-in, private party, the lawn).
+>    - Do you sell a trip for that week, so we can mention it?
 > 3. **Any video from that Augusta day** (even 5–10 seconds from a phone) of the lawn, the porch or the party.
 > 4. **Tomorrow's Story (10 AM ET):** OK to post the attached? It's your guests on the lawn with "Augusta in April." and a poll: "Been, or bucket list?"
 > 5. **Your bio link:** does it still go to tripnerd.com?
