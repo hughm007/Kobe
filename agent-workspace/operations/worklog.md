@@ -1400,3 +1400,17 @@ files; written confirmation of Augusta inclusions, LA on-sale, Birdeye "43 five-
 "6–12 months" quiz answer (no EV-tripnerd records exist yet); "20+ years" (site) vs founded 2017
 mismatch; ownership change (acquired by All Access Golf Travel & Events, 2023) — confirm approver and
 handle. Client approval of copy not yet given.
+
+## 2026-10-04 (later) — TripNerd Story week: finished frames rendered
+
+**Did:** owner chose "the Big Game" wording. Built 19 finished 1080×1920 frames from real
+tripnerd.com assets (guest gallery, Augusta page, logo, Poppins/Inter, #2ea3f2/#07283d/#e6a310),
+rendered in the Higgsfield sandbox, uploaded ZIP + contact sheet to Higgsfield storage (links in
+`clients/tripnerd/deliverables/2026-10-05-ig-stories/build/README.md`). Thursday swapped from the
+staff takeover (needs new video) to a Big Game LA countdown. Page republished as a posting kit.
+
+**Open:** TripNerd approval, IG posting access, OK to reuse site photos/reviews on IG, licence check
+on s2-2 house photo and s4-2 football photo, LA on-sale confirmation, "6–12 months" quiz answer.
+**Learned:** this workspace's egress blocks client sites and Higgsfield CDNs; the Higgsfield sandbox
+can fetch both. MCP calls time out at ~60s regardless of `timeout_seconds` — run renders/uploads with
+`background: true` and poll.
