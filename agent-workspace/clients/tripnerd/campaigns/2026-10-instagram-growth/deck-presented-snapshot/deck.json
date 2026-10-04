@@ -10,38 +10,23 @@
   "order": [
     "cover",
     "summary",
-    "algorithms",
-    "proof",
+    "give",
     "process",
-    "rules",
-    "week",
-    "launch",
     "roadmap",
-    "measurement",
-    "risks",
-    "investment",
-    "kickoff"
+    "investment"
   ],
   "sections": {
     "s1": {
-      "description": "Where the account is and the 90-day plan",
+      "description": "What TripNerd needs",
       "start": "cover"
     },
     "s2": {
-      "description": "How Instagram distributes content and proof we can make it",
-      "start": "algorithms"
+      "description": "What we deliver and how every post gets made",
+      "start": "give"
     },
     "s3": {
-      "description": "How posts get made, what we will and won't post, and the weekly rhythm",
-      "start": "process"
-    },
-    "s4": {
-      "description": "The roadmap, how we measure it, and the risks",
+      "description": "The 90 days, the price, and what we need from TripNerd",
       "start": "roadmap"
-    },
-    "s5": {
-      "description": "The investment, the decisions we need, and the launch checklist",
-      "start": "investment"
     }
   },
   "faces": {

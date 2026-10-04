@@ -1683,3 +1683,4 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - swapped the launch queue so 01 = The 17th.
   - The snapshot is in `campaigns/2026-10-instagram-growth/deck-presented-snapshot/`, and the message draft is superseded.
   - **Open:** re-date the cover and roadmap once the start is known; fill the margin blanks on the call.
+- **The presented deck was cut to 6 slides** (v7; Karl: fewer slides, no repeats, organised as what he needs / what we need / what they need from us / what we give them). The three decisions and the checklist are merged on the last slide. Karl's edit to the AI rule ("mainly") was carried into the merged rules. The snapshot is updated.
