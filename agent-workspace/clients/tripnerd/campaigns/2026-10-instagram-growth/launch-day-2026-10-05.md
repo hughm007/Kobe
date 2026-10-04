@@ -21,10 +21,13 @@ tags: [client, instagram, launch, runbook]
 **Posting today:** one Reel (01, "Augusta, by the clock") and two Stories. All times are **US Eastern (ET)**.
 
 ## Tonight (Sunday): must be done before anything posts
-- [ ] **Watch the Reel end to end:** `TN-R03-augusta-by-the-clock-H3-v2.mp4` (1080×1920, 11 s, no music in the file). This is the BC-25 human watch; tell Claude when it's done so it's logged.
-- [ ] **Confirm two facts:**
-  - The guests were at the tournament that day. The "Some things you just watch" card implies it.
-  - The link in TripNerd's bio opens tripnerd.com.
+- [ ] **Watch the Reel end to end, with sound on, on a phone:** `TN-R03-augusta-by-the-clock-H3-v4.mp4` (1080×1920, 11.7 s, original music in the file). This is the BC-25 human watch. Check that:
+  - the music sounds right to you (it has only been checked by measurement);
+  - no logo is left that you can spot;
+  - the retouched spots don't draw the eye.
+
+  Tell Claude when it's done so it's logged.
+- [ ] **Confirm:** the link in TripNerd's bio opens tripnerd.com. (The attendance question is gone: v4 replaced that card with a racing clock, which makes no claim about the gap.)
 - [ ] **Send the Reel, caption and Story plan to TripNerd's approver.** Ask for a yes by **Mon 12:00 PM ET**. Nothing posts without their sign-off (process step 6). **If there's no yes by 12:00, hold the post; don't post it anyway.**
 - [ ] **Decide who presses Post.**
   - Karl, logged into TripNerd's Instagram in the app (keep the login out of Kobe); or TripNerd, from our files.
@@ -50,11 +53,9 @@ puts Monday's peak at **2–4 PM local**.
 - **ASSUMPTION:** TripNerd's audience is mostly in Eastern and Central time. Check Insights → Audience → **Most active times** once we have access, and move the slot to match.
 
 ## Building the Reel in the Instagram app
-1. **+ → Reel →** choose the v2 MP4. Don't trim (11.07 s).
-2. **Music:** v3 will carry its own licensed track baked in. **Post it as original audio and don't add in-app music.** (Fallback, only if the registry is amended: tap the music note and pick a track from the library the account offers.) Business accounts get a commercial-use library, so not every song appears.
-   - **Choose:** warm, ideally instrumental, **about 92 BPM** (or about 184). The cuts are timed to a 92 BPM grid, two beats per photo.
-   - **Start point:** set it so a downbeat lands on the first frame.
-   - **Volume:** music at 100% (the file has no audio).
+1. **+ → Reel →** choose the v4 MP4. Don't trim (11.73 s).
+2. **Music: already in the file.** v4 carries an original track ServicePOW composed and owns. **Post it as original audio. Don't add in-app music and don't lower the original volume.**
+   - Adding a second track would bury the beat-matched cuts and the drop under the clock.
    - **Before sharing:** play it once through with sound.
 3. **Cover:** the 5:48 PM frame (the group on the lawn, the last shot), or upload a still of it. Check the profile-grid crop preview so faces aren't cut.
 4. **Caption** (paste exactly; edits are TripNerd's call):
@@ -65,7 +66,7 @@ puts Monday's peak at **2–4 PM local**.
 5. **Hashtags:** at most three: `#Augusta #GolfTrip #TripNerd`. Keep event trademarks out of hashtags unless TripNerd wants them.
 6. **Location:** Augusta, Georgia.
 7. **Advanced settings → Accessibility → Alt text:**
-   > Timestamped photos from one TripNerd hosted day in Augusta. A 9:03 AM check-in at the TripNerd table, guests ready at 9:15, a dark card for 9:16 AM to 4:55 PM, then dinner, the porch and a group on the lawn at 5:48 PM.
+   > Timestamped photos from one TripNerd hosted day in Augusta. A group of guests on the lawn, a 9:03 AM check-in at the TripNerd table, the veranda bar at 9:15, a clock racing to 5:43 PM, then guests on the porch at 5:44, the dessert table at 5:46 and the group on the lawn at 5:48 PM.
 8. **Trial Reel: OFF** for this one. It goes to followers too. The Friday variant is the trial.
 9. **Before you tap Share, check:**
    - the link in TripNerd's bio works;
@@ -90,6 +91,6 @@ puts Monday's peak at **2–4 PM local**.
 - **Tuesday 2:00 PM, log:** views, reach, % non-followers, average watch time, likes, comments, **shares (sends)**, saves, follows. Take them from Reel insights.
 
 ## If something goes wrong
-- **Music unavailable or the wrong mood:** post with a different library track. Never post silent; the file has no audio of its own.
+- **No sound after upload:** check that the phone isn't on silent and the original audio volume is up. Don't fix it with in-app music. Re-export from the file Claude sent.
 - **No approval by 12:00:** hold. Post Tuesday at the same 2 PM slot. Tuesday's peak runs 1–7 PM.
 - **A typo spotted after posting:** you can edit the caption. On-screen text can't be edited: delete and re-post only within the first few minutes, and only for a real error.

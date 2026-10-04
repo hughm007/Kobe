@@ -11,6 +11,11 @@ tags: [client, instagram, reel, edit-plan]
 
 # Edit plan: Reel 03, "Augusta, by the clock" (now posting as 01, Mon 5 Oct)
 
+> **v4 rendered 2026-10-04 (current):** `TN-R03-augusta-by-the-clock-H3-v4.mp4`, 11.73 s, 1080×1920 30 fps, with an original music bed baked in.
+> - Non-TripNerd marks are removed (Bible §9).
+> - The dark card is replaced by a clock racing 9:16 AM → 5:43 PM.
+> - The v4 shot list in [`shotlist.md`](shotlist.md) supersedes every table below. Build scripts: [`build/`](build/README.md).
+>
 > **v2 rendered 2026-10-04** after the v1 gate failed: `TN-R03-augusta-by-the-clock-H3-v2.mp4`, 11.07 s, 18 Mbps. The v2 shot list in [`shotlist.md`](shotlist.md) supersedes the table below.
 > **v1 rendered 2026-10-04:** `TN-R03-augusta-by-the-clock-H3-v1.mp4`.
 > - 1080×1920, 30 fps, 14.0 s, H.264, no audio.
@@ -51,7 +56,9 @@ Shot detail: [`shotlist.md`](shotlist.md).
 a slideshow.
 
 ## Sound (photos have none)
-**Decided (Karl, 2026-10-04): option 1, Instagram's in-app music.** v1 is rendered with no audio track; the music is added in the app at posting (steps in the launch-day runbook).
+**Current (v4, 2026-10-04): an original bed, baked into the export.** Karl delegated the choice. The bed is composed in code by ServicePOW, which owns it outright. That satisfies BC-04/05 and BC-20 at $0 (Bible §11). Post it as original audio and **don't add in-app music**.
+
+*Superseded:* Karl first chose option 1, Instagram's in-app music. A silent master fails BC-04/05, so v4 bakes the music in instead.
 
 The two options, kept for the record:
 1. **Instagram's in-app music** (recommended to start).

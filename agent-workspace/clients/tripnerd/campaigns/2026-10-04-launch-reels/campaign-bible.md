@@ -203,17 +203,17 @@ true, so it goes to week 2–3.
 - **Core promise:** the whole day is taken care of.
 - **Primary emotion:** warmth: belonging and ease.
 - **Viewer starting state:** sees a real check-in table at a real time.
-- **Viewer ending state:** has lived the day in 14 seconds; wants in next year.
+- **Viewer ending state:** has lived the day in 12 seconds; thinks of who they'd bring.
 - **Narrative question:** "What does the whole day look like?"
 - **Why the viewer keeps watching:** the clock moves, so what's at the next time?
-- **Final payoff:** after the gap ("some things you just watch"), the evening proves the day never stopped.
-- **CTA logic:** a complete day ends with "Same time next year?", the natural next thought.
+- **Final payoff:** the clock races through the middle of the day (v4: no claim about what filled it), and the evening proves the day never stopped.
+- **CTA logic (v4):** a complete day ends with "Who would you bring?". The caption adds the send and follow asks. No next-year or availability implication.
 
 | # | Knows before | What happens | Knows after | Emotional change | Why it exists | Leads into |
 |---|---|---|---|---|---|---|
 | 1 | Nothing | 9:03 AM: the TripNerd check-in table | TripNerd's day starts early and organised | Curiosity | Hook (a specific time = real) | The morning |
 | 2 | It's morning at a TripNerd event | 9:05–9:15: bar, check-in, the group ready | The morning is handled | Ease | Proof of hosting | Where they went |
-| 3 | The group left at 9:15 | Black: "9:16 AM – 4:55 PM. Some things you just watch." | The tournament itself isn't on the camera roll | Intrigue, respect | The turn; makes the day feel real | The return |
+| 3 | The morning is handled | **v4:** a clock races 9:16 AM → 5:43 PM over a dark blur, landing on the 5:44 PM shot. (v1–v3: "9:16 AM – 4:55 PM. Some things you just watch.", withdrawn as an unsupported attendance claim) | The day moved on | Anticipation | The turn, with no claim about the gap | The return |
 | 4 | They were out all day | 4:56–6:01: private party, dinner, the lawn | The evening is handled too | Warmth | Proof the day never drops | The close |
 | 5 | The whole day | 6:03 PM: "Same time next year?" | — | Longing | CTA | Follow / DM |
 
@@ -255,10 +255,20 @@ true, so it goes to week 2–3.
   - the TripNerd "Private Party" banner (IMG_1985).
 - **No end card**, so no logo file is needed. If one is added, it must use TripNerd's real full-resolution logo, which is still **NEEDS INPUT**.
 - **Event marks in frame** (THE PLAYERS signage; the Masters flag logo on TripNerd's own banner in IMG_1985; credential lanyards): **cleared**. Karl, 2026-10-04: "everything in the TripNerd library is cleared to post and use". Our own on-screen text still avoids naming the Masters (no need to).
+- **v4 (2026-10-04), non-TripNerd marks removed.** Karl: "remove any marks that are not TripNerd marks". This is conventional retouching, with no AI and nothing generated. Coordinates are in [`build/marks.py`](build/marks.py).
+  - **Cloned out (stripe-matched from the adjacent fabric):** the Ole Miss and Polo logos on shirts (IMG_2004), a jacket logo (IMG_1901) and a polo logo (IMG_1933).
+  - **Healed:** the New Balance and On shoe logos (IMG_2004), the Apple logo on the laptop and a belt-bag logo (IMG_1901), and a shirt logo (IMG_1933).
+  - **Soft-blurred:**
+    - the wine labels, spirits, sports drink and other bottles, and a watch dial (IMG_1933);
+    - the bartender's name tag (IMG_1933; personal data);
+    - the Purell label, a drink can, packaging, the event program card and the venue name on a cup (IMG_1901);
+    - the bag-patch imprints (IMG_2004, IMG_1995);
+    - the venue's card on the stand (IMG_1998).
+  - **Kept:** TripNerd's own tablecloth logo (IMG_1901).
 
 ## 10. Production plan
 **N/A.** Nothing is generated: $0 credits, no SPEND_APPROVER gate. Karl edits in Premiere.
-- **Spend:** the only decision is a licensed music track for Reel 03 (edit plan, option 2).
+- **Spend:** none. Reel 03's music is an original bed composed in code by ServicePOW (§11), so no licence was bought.
 
 ## 11. Audio design
 *Owner: `servicepow-audio-director`.*
@@ -272,6 +282,20 @@ true, so it goes to week 2–3.
 - **Reel 03:** photos have no sound.
   - The music is chosen first and cut on its beat.
   - The S5 drop to near-silence is the designed moment, achievable only with a licensed track baked in (Karl's decision).
+  - **v4 (2026-10-04): an original bed, baked into the master.** Karl delegated the choice ("a free music file… or a popular sound").
+    - **Why not a popular sound:** the popular tracks in generic adverts are copyrighted. Baking one in needs a sync licence (a spend, and BC-20). Trending sounds can only be added inside the app, which leaves the master silent (BC-04/05).
+    - **Why not a downloaded "free" track:** an original is cleaner on BC-20 than any third-party licence. It costs $0 and we own it outright.
+    - **Source:** [`build/music.py`](build/music.py) synthesises it deterministically (seed 7). No samples, no third-party recordings, no voices.
+    - **The track:** 92.3 BPM, D major. FM electric piano, plucked arpeggio, soft kick, clap, shaker and bass.
+    - **Arrangement:**
+      - beats 0–3: cold open, chord and pluck from frame 0;
+      - beat 3: the kick lands on the 9:03 cut;
+      - beats 7–10: drop to a low pad with accelerating clock ticks under the racing clock, then a reverse swell;
+      - beat 10: a crash lands the groove back on the 5:44 cut;
+      - the end rings out on an open IV chord that loops back into the opening D.
+    - **Master:** −13.9 LUFS integrated (target −14), true peak −2.0 dBTP, AAC 48 kHz stereo.
+    - **BC-26** (speech-free beds): speech-free by construction. **Not ASR-verified**; no ASR tool is available in this environment.
+    - **Not yet listened to by a human.** This is checked by measurement only (spectrogram, loudness, the level per half-beat). Karl's BC-25 watch must be done with sound on.
 
 ## 12. Edit logic
 *Owner: `servicepow-cinematography-editor`.*
@@ -339,6 +363,14 @@ v2 addresses all of these; see the Decision log.
 - **Structure:** opens cold on the 5:48 PM lawn ("Thursday / in Augusta. / with TripNerd", 3 beats), then rewinds and loops back to the same shot.
 - **Per-shot gate (`--gate-clips`):** every photo shot PASSES. The card (`--calm`) is INDETERMINATE (0.69 against a 0.6 floor, "needs human eyes"), for the BC-25 watch.
 - **Not yet gated:** it waits on a cleared audio track and Karl's answer on attendance.
+
+### v4 (2026-10-04, `…-H3-v4.mp4`, 11.73 s, sha256 93744a1b…): dual gate running
+- **Changes:**
+  - an original music bed is baked in (§11);
+  - non-TripNerd marks are removed (§9);
+  - the card is replaced by a clock racing from 9:16 AM to 5:43 PM (§4).
+- **Machine QC:** `--master` all PASS, audio included. `--gate-clips` all seven shots PASS at the standard floor. Receipts are in [`qc/`](qc/README.md).
+- **Critic verdict:** pending, from a fresh subagent with its own folder.
 
 
 ## 14. Skeptic verdicts
@@ -430,4 +462,9 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 **Blocked on Karl:**
 1. A cleared music track to bake in (BC-04/05). Meta Sound Collection or another licence; or the owner amends the registry, which is not recommended.
 2. Confirmation that the guests attended play 9:16 AM–4:55 PM (card). If not, the card reads "9:16 AM – 4:55 PM / No photos from this part." | campaign-director |
-| — | v3 dual gate: after audio is baked | — |
+| 2026-10-04 | Karl: "use a free music file that would fit in your opinion, or use a popular sound… remove any marks that are not TripNerd marks, then let me see the advert again." Treated as delegating the music choice to the campaign director, within the rights rules | Karl (APPROVER) |
+| 2026-10-04 | **v4 repair.**
+- **Music:** an original bed composed in code, baked in. A popular sound was declined: it is copyrighted (needs a sync licence: spend, and BC-20), and in-app sounds leave the master silent (BC-04/05).
+- **Marks:** all non-TripNerd marks removed by conventional retouching.
+- **Card:** replaced by a racing clock. The IMG_1934–1984 numbering gap shows that 51 photos from that window are missing from our folder, so "No photos from this part" is unprovable too. The clock claims only that time passed, which retires the attendance question.
+- **QC:** all PASS. v4 sent to Karl. The dual gate is dispatched to fresh subagents in unique folders | campaign-director |

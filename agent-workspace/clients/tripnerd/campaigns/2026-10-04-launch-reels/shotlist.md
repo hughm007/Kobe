@@ -40,7 +40,27 @@ tags: [client, instagram, reels, storyboard, shotlist]
 - **H5 "This is the walk to 17."** S1 becomes V13 ~4.0–6.5 (after the sun flare) with that text. The rest is unchanged.
 - **H10 "The path or the rail?"** S1 text "The path or the rail?" then "The path."; S3 "The rail."; S5 "Which one are you?"
 
-## Reel 03 — "Augusta, by the clock" · **v2** (2026-10-04) · 11.07 s · 7 shots · average 1.58 s · posting as queue 01
+## Reel 03 — "Augusta, by the clock" · **v4** (2026-10-04) · 11.73 s · 7 shots · average 1.68 s · posting as queue 01
+
+- **Beat grid at 92.3 BPM:** 2 beats = 39 frames. The opening and the clock are 3 beats; the end is 4 beats.
+- **Cuts:** hard cuts throughout.
+- **Audio:** an original music bed, baked in (Bible §11).
+- **Photos:** non-TripNerd marks are removed by conventional retouching (Bible §9; `build/marks.py`). Nothing is generated.
+- **Angle:** the same on every shot.
+
+| # | Frames | Story job | Source (crop) | Text | Motion | Music |
+|---|---|---|---|---|---|---|
+| S1 HERO | 0–58 | Hook (cold open) | IMG_2004 17:48:39 (centre) | "Thursday" / "in Augusta." / "with TripNerd" | Camera translation (pan left, 112%) | EP chord and pluck from frame 0; shaker; lift into beat 3 |
+| S2 | 59–97 | Proof | IMG_1901 09:03:55 (region x40 y341 w960) | "9:03 AM" / "Check-in." | Camera translation (pan left) | Kick lands on the cut; A/C# |
+| S3 | 98–136 | Feel | IMG_1933 09:15:58 (centre) | "9:15 AM" | Camera translation (pan right) | Bm7 groove |
+| S4 | 137–195 | Turn | IMG_1933, blurred and at 24% brightness (**designed**) | A clock racing "9:16 AM" → "5:43 PM" (smoothstep) | Changing digits + pan + animated grain | Drop: low pad, accelerating ticks, reverse swell |
+| S5 | 196–234 | Proof | IMG_1995 17:44:55 (centre) | "5:44 PM" | Camera translation (pan right) | Crash; the groove returns (D) |
+| S6 | 235–273 | Feel | IMG_1998 17:46:54 (centre) | "5:46 PM" | Camera translation (tilt up) | A |
+| S7 HERO | 274–351 | CTA | IMG_2004 17:48:39 (centre) | "5:48 PM" / "Who would you bring?" | Camera translation (pan right, 115%) + light change (warm lift) | Bm7, then the open Gmaj9 rings out (loops into S1's D) |
+
+**Per-shot gate (`--gate-clips`, 2026-10-04):** all seven shots PASS the standard motion floor, the clock included. Ledger: [`qc/2026-10-04-v4-per-shot-gate-ledger.jsonl`](qc/2026-10-04-v4-per-shot-gate-ledger.jsonl).
+
+## Reel 03 — v2 (2026-10-04) · 11.07 s · **superseded by v4 above**
 
 - Rebuilt after the v1 dual gate (Bible §13–14).
 - **Beat grid at 92 BPM:** 2 beats = 39 frames, the card is 3 beats, the end is 4 beats.

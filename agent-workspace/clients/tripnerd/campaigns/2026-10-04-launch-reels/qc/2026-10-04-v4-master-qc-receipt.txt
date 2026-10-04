@@ -1,0 +1,17 @@
+
+== TN-R03-augusta-by-the-clock-H3-v4.mp4 ==
+  resolution             PASS          1080x1920 (min dim >= 1080)
+  fps                    PASS          30.000
+  pix_fmt                PASS          yuv420p
+  audio-48k-stereo       PASS          48000 Hz / 2 ch
+  audio-peak/not-silent  PASS          peak -1.9 dB (<= -0.5), mean -15.9 dB (> -45.0)
+  no-frozen-sections     PASS          none > 0.7s
+  no-black-sections      PASS          none >= 0.3s
+  motion-gate            PASS          edge travel 7.14 px/frame >= 1.6
+  hook-motion            PASS          first 1.2s edge travel 6.75 (floor 1.0, WARN only)
+  no-flash-cuts          PASS          6 detected cuts; shots < 0.4s: 0 (scene-detect — frame-check before trusting a FAIL on a whip-heavy edit)
+  aspect                 PASS          declared 9:16, got 1080x1920
+  duration               PASS          declared 11.73s, got 11.73s (+/-2%)
+  OVERALL: PASS
+93744a1bf01a0eb46ab4c73dbe8044eeaaf961ad93b88e082473d22cbc02e47b  reel03/TN-R03-augusta-by-the-clock-H3-v4.mp4
+loudness (ffmpeg ebur128): I -13.9 LUFS integrated (declared target -14), true peak -2.0 dBTP
