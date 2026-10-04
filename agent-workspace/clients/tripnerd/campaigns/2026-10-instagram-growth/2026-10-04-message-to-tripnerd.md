@@ -3,13 +3,15 @@ title: "Draft message to TripNerd — launch-week asks (NOT SENT)"
 type: brief
 client: tripnerd
 owner: Karl
-status: draft
+status: superseded
 created: 2026-10-04
 updated: 2026-10-04
 tags: [client, instagram, launch, approvals]
 ---
 
-# Draft: launch-week message to TripNerd (Karl sends; Claude never sends)
+# Draft: launch-week message to TripNerd (SUPERSEDED, never sent)
+
+> **Superseded 2026-10-04.** Karl: put everything from this text into the growth plan, so no message is needed after the call. Every ask below is now **slide 13, "What we need from you to start"**, in the presented deck ([snapshot](deck-presented-snapshot/README.md); live https://claude.ai/artifact/PniaqVR1qdWmxnjGgur3Bx). Kept for the record.
 
 > Hey [name],
 >

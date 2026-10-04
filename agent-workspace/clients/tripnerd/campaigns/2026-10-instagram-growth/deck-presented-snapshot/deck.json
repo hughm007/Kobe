@@ -1,0 +1,58 @@
+{
+  "v": 4,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-04T19:20:00Z"
+  },
+  "lists": "css",
+  "title": "TripNerd Instagram Growth Plan",
+  "cover": "cover",
+  "order": [
+    "cover",
+    "summary",
+    "algorithms",
+    "proof",
+    "process",
+    "rules",
+    "week",
+    "launch",
+    "roadmap",
+    "measurement",
+    "risks",
+    "investment",
+    "kickoff"
+  ],
+  "sections": {
+    "s1": {
+      "description": "Where the account is and the 90-day plan",
+      "start": "cover"
+    },
+    "s2": {
+      "description": "How Instagram distributes content and proof we can make it",
+      "start": "algorithms"
+    },
+    "s3": {
+      "description": "How posts get made, what we will and won't post, and the weekly rhythm",
+      "start": "process"
+    },
+    "s4": {
+      "description": "The roadmap, how we measure it, and the risks",
+      "start": "roadmap"
+    },
+    "s5": {
+      "description": "The investment, the decisions we need, and the launch checklist",
+      "start": "investment"
+    }
+  },
+  "faces": {
+    "playfair-display": {
+      "family": "Playfair Display",
+      "href": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap"
+    },
+    "inter": {
+      "family": "Inter",
+      "href": "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    }
+  },
+  "designSystems": []
+}

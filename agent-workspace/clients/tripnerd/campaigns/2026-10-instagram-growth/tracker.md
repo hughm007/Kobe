@@ -20,7 +20,8 @@ in each log.
 |---|---|
 | Deal status | **PROPOSED.** Deck A client-ready; not yet presented or accepted |
 | Signed start date (Day 1) | **Mon 5 Oct 2026**: Karl says posting starts then. Signature status NEEDS INPUT |
-| TripNerd approver | **NEEDS INPUT** |
+| TripNerd CEO | **Jason** (Karl, 2026-10-04). The growth plan is presented to him; the presented deck is https://claude.ai/artifact/PniaqVR1qdWmxnjGgur3Bx |
+| TripNerd approver | **NEEDS INPUT**: asked on the deck, slide 13 |
 | TripNerd inbox owner (DMs) | **NEEDS INPUT** |
 | On-camera Nerd | **NEEDS INPUT** |
 | Footage folder (Drive) | **NEEDS INPUT** |
@@ -49,7 +50,7 @@ in each log.
 | 01 Augusta, by the clock (Mon 5 Oct 2:00 PM) | **Stopped as a Reel (2026-10-04).** v1–v5 all failed the critic floor (best 7.7 against 8.0); the Skeptic was CONDITIONAL on v4/v5. No golf in frame, so a weak topic signal. **Recommended:** re-use the photos as the carousel "Augusta week, hour by hour", once TripNerd confirms the venue city. First Reel → "The 17th" (row above). See [`algorithm-niche-strategy.md`](algorithm-niche-strategy.md). **Awaiting Karl** | Karl |
 | Mon 5 Oct Story 1 (poll) | **Blocked on client inputs.** v2 (blocked), v3 (blocked) and v4 (critic HARD FAIL 7.4) all fail on the venue, consent, the Masters implication and the logo. Log: `stories/gate-log.md`. Re-gate once TripNerd replies | Karl / TripNerd |
 | Signed agreement + invoice 1 | Deal status is still PROPOSED here. **Don't start work on TripNerd's account before it's signed and invoice 1 ($1,750) is sent** | Karl |
-| Confirmations from TripNerd (one email) | The venue city ("Augusta, Georgia" or not); guests' and staff consent to social use; TripNerd hosting. Files the BC-16/BC-20 records | Karl / TripNerd |
+| Confirmations from TripNerd (on the call, deck slide 13) | The venue's name and town; whether it was off the grounds, with the venue's OK to use its photos; guest and staff consent; TripNerd hosting; whether TripNerd sells that week. Files the BC-16/BC-20 records | Karl / Jason |
 | ASR check on the music (BC-26/27) | Whisper's model hosts are blocked here. Allow them in the environment network settings, or run the two commands in `qc/2026-10-04-v5-evidence-and-rights.md` | Karl |
 | 04 Communication proof | Needs a real review (with permission to quote) and the actual guest briefing | TripNerd |
 | 07 How a TripNerd trip works | Needs the on-camera Nerd filmed | TripNerd |

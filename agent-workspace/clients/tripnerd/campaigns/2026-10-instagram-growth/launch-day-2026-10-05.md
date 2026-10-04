@@ -20,7 +20,7 @@ tags: [client, instagram, launch, runbook]
 >   3. Partner access.
 >   4. Insights baseline, including the follower count (Trial Reels need 1,000+).
 >   5. Profile and bio rebuild.
->   6. Send the [message to TripNerd](2026-10-04-message-to-tripnerd.md) tonight.
+>   6. Collect the launch checklist live on the call with Jason (deck slide 13). No separate message is sent.
 > - **Posting starts** when TripNerd's answers and Taylor's clips arrive (target Tue 1 PM / Wed 12 PM ET), each piece re-gated within about an hour of the inputs landing.
 > - **Karl decides.** The steps below stay valid for whatever posts first.
 

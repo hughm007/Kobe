@@ -1678,3 +1678,8 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - v4 was composed with the static-ads pipeline; static QC 17/17.
   - **Conclusion:** the blockers are client inputs.
 - **Recommendation to Karl:** Monday = onboarding (signature + invoice 1, approver, access, Insights baseline, profile); posting starts when TripNerd's answers and Taylor's clips land. Message draft: `clients/tripnerd/campaigns/2026-10-instagram-growth/2026-10-04-message-to-tripnerd.md` (not sent).
+- **Deck for the CEO (Jason):** Karl wants every ask in the growth plan itself, not a follow-up text. In the presented 13-slide deck (PniaqVR1qdWmxnjGgur3Bx, v4):
+  - added slide 13 "What we need from you to start" (footage first, the Augusta questions, access and brand, people, decisions);
+  - swapped the launch queue so 01 = The 17th.
+  - The snapshot is in `campaigns/2026-10-instagram-growth/deck-presented-snapshot/`, and the message draft is superseded.
+  - **Open:** re-date the cover and roadmap once the start is known; fill the margin blanks on the call.
