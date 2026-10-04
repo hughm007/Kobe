@@ -15,6 +15,12 @@ tags: [client, instagram, launch, approvals]
 >
 > We kick off tomorrow. Tomorrow is setup day, and the first posts go out Tuesday or Wednesday. To launch strong I need a few quick things from you:
 >
+> **First, the big one: we want as much footage as you can give us.**
+> - **What:** videos and photos from every trip and event (THE PLAYERS, Augusta, the Super Bowl, the Phoenix Open, the Derby, CMA Fest, anything), the more the better.
+> - **Rough is fine:** raw phone clips, shaky, behind the scenes, guests reacting, the crowd, the setups, your team at work.
+> - **Why it matters:** real moments are exactly what Instagram pushes to people who don't follow you yet. The more real footage we have, the better we can market TripNerd and the more Reels we can make.
+> - **How:** a shared Google Drive folder is easiest, and you can keep adding to it.
+>
 > 1. **Video originals from Taylor's phone:** the THE PLAYERS clips from the 17th (the walk in, the seats by the green, the crowd going off after the putt). AirDrop or a Drive link works. Full quality, not texted copies. These are the strongest Reels you have, and our first Reel is cut from them.
 > 2. **Augusta day, a few quick answers** (one line each is fine):
 >    - What was the venue (property name), and which town: Augusta, GA, or North Augusta, Evans or Aiken? Was it off the tournament grounds, and does the property allow its photos in your marketing? We'll tag it exactly.
@@ -36,6 +42,7 @@ tags: [client, instagram, launch, approvals]
 
 | Ask | What it unblocks |
 |---|---|
+| Footage (all of it) | The whole 90-day Reel pipeline. Real moments are the topic and hook signal (`algorithm-niche-strategy.md`). Closes the tracker items "Footage folder (Drive)" and "Trip archive shared" |
 | 1 | The first Reel ("The 17th", golf-fan moments; see `algorithm-niche-strategy.md`) |
 | 2 | BC-16 (the place claim) and BC-20 (likeness consent), for the Story, the Augusta carousel and any Augusta Reel |
 | 3 | A future Augusta Reel with real motion (the stills topped out under our floor) |
