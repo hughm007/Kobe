@@ -1631,3 +1631,12 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **v2 dual gate dispatched**, both checks independent.
 - **Updated:** shot list, runbook and edit plan.
 - **Still open for Karl:** the BC-25 human watch, confirming attendance during play, the bio link, the audio exemption.
+
+**Follow-up (Augusta Reel v2 gate → v3):**
+- **v2:** critic HARD FAIL 7.0 (BC-04/05 audio; per-shot motion). Skeptic BLOCK (S4: Masters badges and cap in IMG_1926; S3: Masters cap and logo in IMG_1989; S3: the card's attendance claim).
+- **v3 visual master:**
+  - Mark-free photos only (2004, 1901, 1933, 1995, 1998).
+  - Cold open on the lawn with "with TripNerd"; pans pass the per-shot motion gate; the card is INDETERMINATE (human eyes).
+  - Caption gains the follow ask; "link in bio" removed.
+- **Blocked on Karl:** a cleared audio track to bake in, and attendance confirmation. Fallback: Story only on Monday, Reel on Tuesday 1 PM.
+- **Process learning:** Skeptic runs need a unique scratch folder (it found leftovers from another run).

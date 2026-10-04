@@ -311,7 +311,34 @@ true, so it goes to week 2–3.
 - File the receipts.
 - Raise the bitrate.
 
-v2 addresses all of these; see the Decision log. The v2 verdict is pending.
+v2 addresses all of these; see the Decision log.
+
+### v2 (2026-10-04, `…-H3-v2.mp4`, 11.07 s, sha256 3eb3cbd1…)
+**HARD FAIL. ServicePOW-6 = 7.0 ± 1.5.**
+
+| Axis | Score |
+|---|---|
+| Doesn't look AI | 9 |
+| Hook inside 2 s | 6 |
+| Human presence | 8 |
+| Format fit | 8 |
+| Audio design | 4 |
+| Message + CTA clarity | 7 |
+
+- **Registry:** BC-04 and BC-05 FAIL. In-app music is "an APPROVER design decision, not a registry exemption; BC-04/05 have no acceptance clause". Keeping in-app music would need the owner to amend the canonical registry under the baseline law.
+- **BC-09 per shot:** the photo pushes measured 0.28–1.27, below 1.6.
+- **Fixes asked for:**
+  - Bake in a cleared track and design a drop under the card.
+  - Lead with people and give the place 2 s.
+  - Add a follow ask.
+  - Run the per-shot gates.
+- **No semantic hard failure.**
+
+### v3 visual master (2026-10-04, `…-H3-v3-silent.mp4`, 11.73 s): not yet gated
+- **Photos:** only those free of event marks: IMG_2004, 1901, 1933, 1995, 1998, plus the card.
+- **Structure:** opens cold on the 5:48 PM lawn ("Thursday / in Augusta. / with TripNerd", 3 beats), then rewinds and loops back to the same shot.
+- **Per-shot gate (`--gate-clips`):** every photo shot PASSES. The card (`--calm`) is INDETERMINATE (0.69 against a 0.6 floor, "needs human eyes"), for the BC-25 watch.
+- **Not yet gated:** it waits on a cleared audio track and Karl's answer on attendance.
 
 
 ## 14. Skeptic verdicts
@@ -340,7 +367,27 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 evaluators' output withheld.
 ```
 
-Pass 3 on v2: pending.
+### Pass 3, "Augusta, by the clock" v2 (2026-10-04)
+```
+SKEPTIC VERDICT — Pass 3
+Verdict: BLOCK
+Findings:
+- [S4] 9:15 AM shot (2.6–3.9 s), client / industry-professional / competitor lenses — the hero shot puts four Masters Tournament badges, with the Masters logo and wordmark legible, at the centre of the frame, and a Masters-logo cap sits on the third man. In a TripNerd promotional reel with a "Talk to a Nerd" booking CTA, this features Augusta National's marks and tournament credentials in a way that implies TripNerd provides, or is affiliated with, the Masters. Nothing in the packet shows a licence or affiliation, and showing badges in commercial marketing is the first thing a sports-hospitality professional or competitor would screenshot and report.
+- [S3] 5:24 PM shot (5.87–7.17 s), client / competitor lenses — a black cap reading "MASTERS" with the logo is legible on the dinner table, and a guest's quarter-zip carries the Masters logo. This is a second, independent appearance of the same third-party mark, and it reinforces the implied affiliation.
+- [S3] Dark card (3.9–5.87 s), trust / claims test — "9:16 AM – 4:55 PM" uses exactly the same format as the EXIF-verified timestamps, but CLIENT-FACTS support it only as a gap in the camera roll. Paired with "Some things you just watch." and the badges just shown, it tells viewers the guests were watching the tournament for that whole window. Nothing in CLIENT-FACTS establishes that they attended or when they went in and came out.
+- [S2] Dark card (3.9–5.87 s), weakest-2s test — almost 2 s of near-black blur at the midpoint of an 11 s reel. Its meaning depends on knowing that Augusta National bans phones, which the reel cannot say. For the non-follower audience this is the most likely point to swipe away.
+- [S2] 0–2.6 s, first-3s test / industry-professional lens — the reel opens on a registration desk with laptops, paper stacks, a clipboard and a Purell bottle at the centre. The key context line, "Thursday in Augusta", is the smallest text on screen and shares 1.3 s with two other lines. It reads as a conference check-in, not a premium experience.
+- [S2] 9:03 AM shot (0–1.3 s), client lens — the TripNerd tablecloth logo (the real mark, not distorted) sits at y≈1400–1760, mostly inside the bottom ~400 px UI zone, and "Nerd®" falls under the right-edge button column. It is the only on-screen identification of the client, it is visible for 1.3 s, and Instagram's username and caption overlay will cover it.
+- [S2] Whole piece, target-customer lens / persuasion test — nothing on screen or in the caption tells a non-follower what TripNerd sells or what the trip is. "Talk to a Nerd" is insider language to a cold viewer. The core experience is replaced by a blacked-out card, so no premium value is shown. With the Masters marks removed, the visible proof is a check-in desk, drinks, a dinner table and group photos at a country club.
+- [S2] Caption — "link in bio" is not substantiated by CLIENT-FACTS. Nothing establishes that TripNerd's bio link exists or leads to the Talk to a Nerd path.
+- [S1] Incidental third-party marks — USGA U.S. Open logo on a shirt (9:15), Ryder Cup logo on a jacket (5:24), Ole Miss logo on a shirt (5:48), a Tito's sign (9:06), WestLake cups (9:15, 5:24), a Purell bottle at frame centre (9:03), and a sports-team web store on a staff laptop screen (9:06).
+- [S1] 9:03 AM text, legibility — "Augusta" and the "in." of "Check-in." are white over bright window blinds and rely on a drop shadow. They are legible at phone size but are the lowest-contrast text in the piece. All overlay text otherwise sits inside the safe zone (y≈315–590, x≈85–915).
+- [S1] 5:48 PM / caption, claims — "Who would you bring?" invites interest in a future trip while the client has no published 2027 dates. The Nerd reply path must not promise dates or availability.
+- [S1] Story — a different group appears at almost every timestamp; only the 5:44 women return at 5:48. The clock makes it one connected story, and that holds, but there is no guest whose day it is.
+No finding: AI-detection (all real, unretouched photography with push-ins, no synthetic people, no disclosure trigger); cheese (copy is restrained); personal data (check-in lists, notebook, badge fine print and a bag monogram are unreadable at phone size); the six on-screen timestamps and "Thursday" (9 April 2026) all match CLIENT-FACTS.
+Isolation: packet verified; production reasoning, cost, draft history, and other evaluators' output withheld.
+```
+*(The subagent noted that a shared scratch folder held leftover frames from another run. It did not open them and worked in a fresh folder. **Future Skeptic runs get a unique folder.**)*
 
 ## 15. CONFLICTS
 | # | Raised by | Conflict | Status |
@@ -372,4 +419,15 @@ Pass 3 on v2: pending.
 
 **QC receipt:** all checks PASS except audio, which has no track by design. The S2 attendance implication of the card needs Karl's confirmation that the guests attended play that day | campaign-director |
 | 2026-10-04 | **Audio:** Karl (APPROVER) chose Instagram in-app music, so the master is silent by design. Recorded as the basis for BC-04/05 being satisfied at posting, by a human listen-through in the app. **Karl to confirm this exemption explicitly** | Karl / campaign-director |
-| — | v2 dual gate: awaiting both verdicts | — |
+| 2026-10-04 | v2 dual gate: critic HARD FAIL 7.0 (BC-04/05; per-shot motion), Skeptic BLOCK (S4: Masters badges and cap in the 9:15 shot; S3: Masters cap and logo at 5:24; S3: the card's attendance claim is unsupported). **Not shippable** | campaign-director |
+| 2026-10-04 | **v3 visual repair.**
+- **Removed:** every photo carrying Masters marks (IMG_1926, 1989), and IMG_1916 (lanyard credential).
+- **Added:** IMG_1933 (9:15 at the bar) and IMG_1998 (5:46).
+- **Structure:** a cold open on the 5:48 lawn with "Thursday in Augusta. with TripNerd" for 3 beats, then a seamless loop back to it.
+- **Motion:** pans in place of pushes. All photo shots PASS the per-shot gate; the card is INDETERMINATE (human eyes).
+- **Caption:** drops "link in bio" and adds the follow ask.
+
+**Blocked on Karl:**
+1. A cleared music track to bake in (BC-04/05). Meta Sound Collection or another licence; or the owner amends the registry, which is not recommended.
+2. Confirmation that the guests attended play 9:16 AM–4:55 PM (card). If not, the card reads "9:16 AM – 4:55 PM / No photos from this part." | campaign-director |
+| — | v3 dual gate: after audio is baked | — |

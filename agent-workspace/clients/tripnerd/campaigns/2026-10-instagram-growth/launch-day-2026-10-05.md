@@ -11,6 +11,13 @@ tags: [client, instagram, launch, runbook]
 
 # Launch day: Monday 5 October 2026
 
+> **STATUS (Sun night):** the Reel is **not cleared to post** yet. v1 and v2 failed our dual gate (Bible §13–14). v3 visuals are clean, but posting needs:
+> 1. a cleared music track baked into the file;
+> 2. Karl's answer on whether guests attended play;
+> 3. a passing re-gate.
+>
+> If these aren't done by Mon 12:00 PM ET, post **Story 1 only** on Monday and move the Reel to **Tue 1:00 PM ET** (Tuesday's peak runs 1–7 PM).
+
 **Posting today:** one Reel (01, "Augusta, by the clock") and two Stories. All times are **US Eastern (ET)**.
 
 ## Tonight (Sunday): must be done before anything posts
@@ -44,7 +51,7 @@ puts Monday's peak at **2–4 PM local**.
 
 ## Building the Reel in the Instagram app
 1. **+ → Reel →** choose the v2 MP4. Don't trim (11.07 s).
-2. **Music:** tap the music note and pick a track from the library the account offers. Business accounts get a commercial-use library, so not every song appears.
+2. **Music:** v3 will carry its own licensed track baked in. **Post it as original audio and don't add in-app music.** (Fallback, only if the registry is amended: tap the music note and pick a track from the library the account offers.) Business accounts get a commercial-use library, so not every song appears.
    - **Choose:** warm, ideally instrumental, **about 92 BPM** (or about 184). The cuts are timed to a 92 BPM grid, two beats per photo.
    - **Start point:** set it so a downbeat lands on the first frame.
    - **Volume:** music at 100% (the file has no audio).
@@ -52,8 +59,7 @@ puts Monday's peak at **2–4 PM local**.
 3. **Cover:** the 5:48 PM frame (the group on the lawn, the last shot), or upload a still of it. Check the profile-grid crop preview so faces aren't cut.
 4. **Caption** (paste exactly; edits are TripNerd's call):
    > One Thursday in Augusta with TripNerd, by the clock.
-   > Who would you bring? Send this to them.
-   > Talk to a Nerd: link in bio.
+   > Who would you bring? Send this to them, and follow for the next one.
 
    This is the exact caption that went through our quality gate. Any change goes back through the gate before posting.
 5. **Hashtags:** at most three: `#Augusta #GolfTrip #TripNerd`. Keep event trademarks out of hashtags unless TripNerd wants them.
