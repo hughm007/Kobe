@@ -505,6 +505,26 @@ Findings:
 Isolation: packet verified; production reasoning, cost, draft history, and other evaluators' output withheld.
 ```
 
+### Pass 3, "Augusta, by the clock" v5 (2026-10-04)
+```
+SKEPTIC VERDICT — Pass 3
+Verdict: CONDITIONAL
+Findings:
+- [S2] 1.97–3.93 s clock plate (trust / competitor lens) — the counter runs "9:04 AM … 5:43 PM" over a sky darkened to look like night (average luma about 49, against about 118 and 129 for the shots either side), then cuts to bright sun at 5:44 PM, so the piece's own "by the clock" device shows night at mid-morning, which is the frame a competitor would screenshot ("TripNerd's 9 AM is pitch dark").
+- [S2] 1.97–3.93 s (weakest-2s test) — the darkest, most blurred and least informative 2 s of the piece is also its quietest stretch (music drops about 9–13 dB, mostly ticks), and it lands in seconds 2–4, where people who don't follow the account decide whether to keep watching; it is survivable, but it is the likeliest point for viewers to scroll away.
+- [S2] 0.00–1.97 s (first-3s / cheese tests, client and premium-hospitality-marketer lenses) — the hook frame, which is also the likely default cover, shows an empty registration desk: two staff looking down mid-task, no guests, with hand sanitizer, a plastic cup, an energy-drink can, a tumbler, a belt bag and a snack bag in shot, and a brand-first "hosted by TripNerd." line in the first second; for a premium fan-experience brand reaching non-followers it opens on back-office logistics and invites a competitor's "nobody showed up / premium = hand sanitizer" mock.
+- [S2] 0.00–1.97 s (client lens) — the slow move carries the TripNerd tablecloth mark, the only client mark on screen, from about y 1370–1720 to about y 1520–1880, which is entirely inside the bottom ~400 px that Instagram's username, caption and audio overlay covers, so white interface text will sit over the logo on the white cloth.
+- [S2] whole piece (persuasion test, target-customer and industry-professional lenses) — the product TripNerd sells, the hosted day between check-in and evening, appears only as the 2 s blurred plate; the only proof of hosting on screen is the desk, and the payoff group photo carries no TripNerd presence, so a prospective buyer cannot see what TripNerd provided that a self-booked group would not have had.
+- [S2] caption and "Augusta, Georgia" location tag (trust test, claims) — the place claim rests only on client attestation: the photos carry no GPS and no frame shows a landmark, and a TV leaderboard or event merchandise could be anywhere; tournament-week hospitality venues are often in North Augusta SC, Evans, Martinez or Aiken, so delivery requires the CLIENT_APPROVER's recorded approval to confirm that the check-in room, porch and lawn are in Augusta, Georgia, and otherwise the tag must be removed or broadened.
+- [S1] 0.00–1.97 s (AI-detection test, forensic) — the retouching shows: the label removed from the sanitizer bottle leaves a blue smear, and the can on the window sill has a smudged label; both are visible on pause, not at playback speed.
+- [S1] 5.23–7.83 s, right edge (AI-detection test) — the right-hand guest's light-blue shirt shows heavy moiré (pink and blue swirl bands) from the source photo, which could prompt a stray "is this AI?" comment; it sits partly under the right-side button rail.
+- [S1] 3.93–5.23 s (policy: personal data) — monogram initials on the leather patch of the pink bag are faintly legible on pause or screenshot (letters about 10 px tall) and should be healed like the other marks to meet the no-readable-personal-data rule.
+- [S1] 3.93–5.23 s (legibility) — "5:44 PM" in white on cream brick is the lowest-contrast card in the piece (median about 3:1); it stays legible at phone size only because of its size and drop shadow.
+- [S1] hashtags (target-customer lens) — #GolfTrip suggests a trip to play golf, but what is shown is a spectator hospitality day, which is a mild mismatch for the audience the tag will attract.
+- [S1] 5.23–7.83 s, bottom-right edge — the hand and shoe of a seventh person are clipped at the frame edge of the "group of six"; this is negligible and mostly inside the interface zone.
+Isolation: packet verified; production reasoning, cost, draft history, and other evaluators' output withheld.
+```
+
 ## 15. CONFLICTS
 | # | Raised by | Conflict | Status |
 |---|---|---|---|
@@ -554,3 +574,4 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 - **QC:** all PASS. v4 sent to Karl. The dual gate is dispatched to fresh subagents in unique folders | campaign-director |
 | 2026-10-04 | v4 dual gate: critic HARD FAIL (procedural; creative 7.7, under the 8.0 floor), Skeptic **CONDITIONAL** (5 × S2, 6 × S1, no S3/S4). Repair, not an APPROVER acceptance: both reports agree on the clock-over-bar reading, visible retouching, the Polo pony and the brand read | campaign-director |
 | 2026-10-04 | **v5 repair** (see §13 v5): 4 shots, 7.83 s. Opens on 9:03 with brand, place and clock; closes on the 5:48 group. Bar and dessert removed; the clock runs over the pines; heals and clones replace blurs; the mix is rebalanced. Caption: "One Thursday in Augusta, hosted by TripNerd, by the clock. Who would you bring? Follow along for more days like this." Fresh dual gate dispatched | campaign-director |
+| 2026-10-04 | v5 dual gate: critic HARD FAIL (7.3; procedural BC-16/19/20/26/27/28), Skeptic **CONDITIONAL** (6 × S2, incl. the "Augusta, Georgia" location claim). **Augusta Reel stopped as a Reel:** five passes, best 7.7, hook capped at 6; no golf in frame, so a weak topic signal (see [`algorithm-niche-strategy.md`](../2026-10-instagram-growth/algorithm-niche-strategy.md)). **Recommendation to the APPROVER:** Monday Story only; first Reel "The 17th" (golf-fan moment) on Taylor's originals; the Augusta photos become a carousel once the venue city is confirmed. **Awaiting Karl** | campaign-director |

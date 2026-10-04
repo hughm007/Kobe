@@ -1640,3 +1640,34 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - Caption gains the follow ask; "link in bio" removed.
 - **Blocked on Karl:** a cleared audio track to bake in, and attendance confirmation. Fallback: Story only on Monday, Reel on Tuesday 1 PM.
 - **Process learning:** Skeptic runs need a unique scratch folder (it found leftovers from another run).
+
+
+## 2026-10-04 (evening): TripNerd Augusta Reel v4 → v5, gates, algorithm and niche strategy
+- **v4 (Karl: "use a free music file… remove any marks that are not TripNerd marks"):**
+  - original music bed composed in code and baked in (−13.9 LUFS);
+  - non-TripNerd marks retouched out;
+  - the attendance card replaced by a racing clock (the IMG_1934–1984 gap made "No photos from this part" unprovable).
+  - **Gate:** critic HARD FAIL 7.7 (procedural + below the floor); Skeptic CONDITIONAL. The Polo pony was missed: the box sat 25 px low (CLAUDE-CAUGHT).
+- **v5 (7.83 s, 4 shots):**
+  - opens on the 9:03 check-in, with brand, place and clock from frame 0;
+  - the clock runs over the pines; heals and clones replace blurs; the mix is rebalanced.
+  - **Gate:** critic HARD FAIL 7.3; Skeptic CONDITIONAL (new: the "Augusta, Georgia" location claim isn't proven; venues can be in North Augusta SC, Evans and nearby).
+- **Receipts filed:** `qc/2026-10-04-v5-evidence-and-rights.md`.
+- **BC-26/27 UNVERIFIED:** the Whisper model hosts are blocked by the environment network policy. PocketSphinx was tried and is invalid on music (it "heard" words in pure synth).
+- **Decision proposed to Karl:**
+  - stop the Augusta stills as a Reel (five passes, hook capped at 6, no golf in frame);
+  - Monday Story only, on a new clean background (gate running);
+  - first Reel "The 17th" from Taylor's originals;
+  - Augusta photos become a carousel.
+- **New:** `clients/tripnerd/campaigns/2026-10-instagram-growth/algorithm-niche-strategy.md`. Karl asked to aim the content at the niches the algorithm favours. Its content:
+  - how topic matching ("Your Algorithm") plus watch time and sends decide non-follower reach;
+  - a niche map with golf-fan moments and golf-trip culture first;
+  - a 9-rule Reel checklist.
+- **Learnings:** stills-only Reels hit a hook ceiling; verify retouching on rendered frames.
+- **Open:**
+  - Karl's call on the Monday plan;
+  - Taylor's originals;
+  - one TripNerd confirmation email (city, consent, hosting);
+  - the BC-25 watch and the bio-link check;
+  - an ASR run;
+  - the Story gate verdicts.

@@ -13,7 +13,7 @@ tags: [client, instagram, social, organic, operating-plan, 90-day]
 
 This is the working copy of **Deck A**, the version Karl approved as client-ready. Any session doing TripNerd
 Instagram work reads this file first, then [`tracker.md`](tracker.md), then the week it is in on
-[`calendar.md`](calendar.md).
+[`calendar.md`](calendar.md). Every Reel follows [`algorithm-niche-strategy.md`](algorithm-niche-strategy.md): one big topic visible in frame 1, TripNerd as the payoff.
 
 | | |
 |---|---|

@@ -11,12 +11,12 @@ tags: [client, instagram, launch, runbook]
 
 # Launch day: Monday 5 October 2026
 
-> **STATUS (Sun night):** the Reel is **not cleared to post** yet. v1 and v2 failed our dual gate (Bible §13–14). v3 visuals are clean, but posting needs:
-> 1. a cleared music track baked into the file;
-> 2. Karl's answer on whether guests attended play;
-> 3. a passing re-gate.
->
-> If these aren't done by Mon 12:00 PM ET, post **Story 1 only** on Monday and move the Reel to **Tue 1:00 PM ET** (Tuesday's peak runs 1–7 PM).
+> **STATUS (Sun 4 Oct, evening): recommendation is a Story only on Monday.**
+> - **The Augusta Reel is not cleared and won't be.** Five cuts; best critic score 7.7 against our 8.0 floor. The hook is stuck at 6 because there is no golf in frame (Bible §13–14).
+> - **Algorithmically it's also the wrong first Reel:** see [`algorithm-niche-strategy.md`](algorithm-niche-strategy.md).
+> - **First Reel instead:** "The 17th" (golf-fan moment), cut from Taylor's video originals as soon as they arrive. Tue 1 PM or Wed 12 PM ET.
+> - **Monday:** Story 1 (the poll) at 10:00 AM ET on the new clean background, `TN-story-01-morning-poll-bg-v2.png`, once its gate passes and TripNerd OKs it.
+> - **Karl decides.** The steps below stay valid for whichever Reel posts first.
 
 **Posting today:** one Reel (01, "Augusta, by the clock") and two Stories. All times are **US Eastern (ET)**.
 
@@ -76,7 +76,9 @@ puts Monday's peak at **2–4 PM local**.
 
 ## Stories
 **Story 1, 10:00 AM (morning poll):**
-- **Background:** `TN-story-01-morning-poll-bg.png` (1080×1920). It reads "Thursday in Augusta. / 9:05 AM, on the veranda." with open space in the middle.
+- **Background:** `TN-story-01-morning-poll-bg-v2.png` (1080×1920). It reads "Augusta week." / "Been, or bucket list?" over the pine canopy, with open sky in the middle for the sticker.
+  - It has no people, no marks and no location claim on the photo.
+  - It replaces v1, which showed a bar being set up with readable liquor labels and an unconfirmed "in Augusta" claim.
 - **Add a Poll sticker** in that space. Question: **"Augusta: been, or bucket list?"** Options: **Been there / Bucket list**.
 - Keep stickers out of the top ~250 px and bottom ~340 px.
 
