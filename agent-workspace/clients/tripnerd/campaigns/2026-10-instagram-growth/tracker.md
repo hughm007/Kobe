@@ -47,7 +47,8 @@ in each log.
 |---|---|---|
 | 03 Two ways to see the 17th (now Wed) | Originals are on Taylor's phone (TripNerd). We only have 720p copies of V23/V24 in Higgsfield and a ~404×720 copy that is probably V16; V08 is missing. **Ask Taylor to AirDrop or Drive-share V16, V23, V24 and V08 originals by Tue noon.** Keep the big screen and named pro cropped. | Karl / TripNerd (Taylor) |
 | 01 Augusta, by the clock (Mon 5 Oct 2:00 PM) | **Stopped as a Reel (2026-10-04).** v1–v5 all failed the critic floor (best 7.7 against 8.0); the Skeptic was CONDITIONAL on v4/v5. No golf in frame, so a weak topic signal. **Recommended:** re-use the photos as the carousel "Augusta week, hour by hour", once TripNerd confirms the venue city. First Reel → "The 17th" (row above). See [`algorithm-niche-strategy.md`](algorithm-niche-strategy.md). **Awaiting Karl** | Karl |
-| Mon 5 Oct Story 1 (poll) | New clean background `TN-story-01-morning-poll-bg-v2.png`; gate running. Needs TripNerd's OK | Claude / TripNerd |
+| Mon 5 Oct Story 1 (poll) | **Blocked on client inputs.** v2 (blocked), v3 (blocked) and v4 (critic HARD FAIL 7.4) all fail on the venue, consent, the Masters implication and the logo. Log: `stories/gate-log.md`. Re-gate once TripNerd replies | Karl / TripNerd |
+| Signed agreement + invoice 1 | Deal status is still PROPOSED here. **Don't start work on TripNerd's account before it's signed and invoice 1 ($1,750) is sent** | Karl |
 | Confirmations from TripNerd (one email) | The venue city ("Augusta, Georgia" or not); guests' and staff consent to social use; TripNerd hosting. Files the BC-16/BC-20 records | Karl / TripNerd |
 | ASR check on the music (BC-26/27) | Whisper's model hosts are blocked here. Allow them in the environment network settings, or run the two commands in `qc/2026-10-04-v5-evidence-and-rights.md` | Karl |
 | 04 Communication proof | Needs a real review (with permission to quote) and the actual guest briefing | TripNerd |

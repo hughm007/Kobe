@@ -1671,3 +1671,10 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - the BC-25 watch and the bio-link check;
   - an ASR run;
   - the Story gate verdicts.
+- **Later the same evening (Story gates):** the Monday Story went through v2–v4 and every version failed.
+  - v2 BLOCK: "Augusta week" in October reads as now.
+  - v3 BLOCK: the venue and consent aren't filed, and the tournament Thursday implies on-grounds.
+  - v4: critic HARD FAIL 7.4 (no logo file; BC-16/20/21 records; the Masters meaning).
+  - v4 was composed with the static-ads pipeline; static QC 17/17.
+  - **Conclusion:** the blockers are client inputs.
+- **Recommendation to Karl:** Monday = onboarding (signature + invoice 1, approver, access, Insights baseline, profile); posting starts when TripNerd's answers and Taylor's clips land. Message draft: `clients/tripnerd/campaigns/2026-10-instagram-growth/2026-10-04-message-to-tripnerd.md` (not sent).

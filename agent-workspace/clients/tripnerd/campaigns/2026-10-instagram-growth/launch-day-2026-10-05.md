@@ -11,12 +11,18 @@ tags: [client, instagram, launch, runbook]
 
 # Launch day: Monday 5 October 2026
 
-> **STATUS (Sun 4 Oct, evening): recommendation is a Story only on Monday.**
-> - **The Augusta Reel is not cleared and won't be.** Five cuts; best critic score 7.7 against our 8.0 floor. The hook is stuck at 6 because there is no golf in frame (Bible §13–14).
-> - **Algorithmically it's also the wrong first Reel:** see [`algorithm-niche-strategy.md`](algorithm-niche-strategy.md).
-> - **First Reel instead:** "The 17th" (golf-fan moment), cut from Taylor's video originals as soon as they arrive. Tue 1 PM or Wed 12 PM ET.
-> - **Monday:** Story 1 (the poll) at 10:00 AM ET on the new Story, `tripnerd-launchweek-poll-H1-story-v4.png`, once its gate passes and TripNerd OKs it.
-> - **Karl decides.** The steps below stay valid for whichever Reel posts first.
+> **STATUS (Sun 4 Oct, late): recommendation is that Monday is an onboarding day. Nothing posts until TripNerd replies.**
+> - **Reel:** the Augusta stills Reel is stopped (Bible §13–14). The first Reel is "The 17th", from Taylor's originals.
+> - **Story:** every Augusta Story version failed the gate (log: [`stories/gate-log.md`](stories/gate-log.md)). The blockers are client inputs: venue city and name, guest consent, whether a Masters-week trip is offered, and logo files.
+> - **Monday's real work:**
+>   1. Signed agreement and invoice 1 ($1,750). The tracker shows the deal as PROPOSED.
+>   2. Name the TripNerd approver.
+>   3. Partner access.
+>   4. Insights baseline, including the follower count (Trial Reels need 1,000+).
+>   5. Profile and bio rebuild.
+>   6. Send the [message to TripNerd](2026-10-04-message-to-tripnerd.md) tonight.
+> - **Posting starts** when TripNerd's answers and Taylor's clips arrive (target Tue 1 PM / Wed 12 PM ET), each piece re-gated within about an hour of the inputs landing.
+> - **Karl decides.** The steps below stay valid for whatever posts first.
 
 **Posting today:** one Reel (01, "Augusta, by the clock") and two Stories. All times are **US Eastern (ET)**.
 
