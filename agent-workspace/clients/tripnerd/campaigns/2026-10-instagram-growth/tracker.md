@@ -18,8 +18,8 @@ in each log.
 
 | Field | Value |
 |---|---|
-| Deal status | **PROPOSED.** Deck A client-ready; not yet presented or accepted |
-| Signed start date (Day 1) | **Mon 5 Oct 2026**: Karl says posting starts then. Signature status NEEDS INPUT |
+| Deal status | **OCTOBER TEST MONTH AGREED VERBALLY, $1,500** (meeting notes, 2026-10-04). The 90-day package ($4,000/mo) is on hold until the review. Plan: [`2026-10-test-month-plan.md`](2026-10-test-month-plan.md); deck https://claude.ai/artifact/9654ychr2HFWzMMSmkBHNJ. Nothing in writing yet |
+| Test month | **1–31 Oct 2026** (followers measured from Insights). Review in the first week of November. If partner access slips past Wed 7 Oct, propose four weeks from the first post instead |
 | TripNerd CEO | **Jason** (Karl, 2026-10-04). The growth plan is presented to him; the presented deck is https://claude.ai/artifact/PniaqVR1qdWmxnjGgur3Bx |
 | TripNerd approver | **NEEDS INPUT**: asked on the deck, slide 13 |
 | TripNerd inbox owner (DMs) | **NEEDS INPUT** |
@@ -40,7 +40,7 @@ in each log.
 - [ ] DM keywords drafted; ManyChat proposed to TripNerd with cost (its sign-off)
 - [ ] SuperGrok bought (our tool; Karl)
 - [ ] Full-resolution TripNerd logo files received
-- [ ] Invoice 1 ($1,750) sent
+- [ ] October invoice ($1,500) sent
 
 ## Blockers on the launch queue
 
@@ -49,7 +49,9 @@ in each log.
 | 03 Two ways to see the 17th (now Wed) | Originals are on Taylor's phone (TripNerd). We only have 720p copies of V23/V24 in Higgsfield and a ~404×720 copy that is probably V16; V08 is missing. **Ask Taylor to AirDrop or Drive-share V16, V23, V24 and V08 originals by Tue noon.** Keep the big screen and named pro cropped. | Karl / TripNerd (Taylor) |
 | 01 Augusta, by the clock (Mon 5 Oct 2:00 PM) | **Stopped as a Reel (2026-10-04).** v1–v5 all failed the critic floor (best 7.7 against 8.0); the Skeptic was CONDITIONAL on v4/v5. No golf in frame, so a weak topic signal. **Recommended:** re-use the photos as the carousel "Augusta week, hour by hour", once TripNerd confirms the venue city. First Reel → "The 17th" (row above). See [`algorithm-niche-strategy.md`](algorithm-niche-strategy.md). **Awaiting Karl** | Karl |
 | Mon 5 Oct Story 1 (poll) | **Blocked on client inputs.** v2 (blocked), v3 (blocked) and v4 (critic HARD FAIL 7.4) all fail on the venue, consent, the Masters implication and the logo. Log: `stories/gate-log.md`. Re-gate once TripNerd replies | Karl / TripNerd |
-| Signed agreement + invoice 1 | Deal status is still PROPOSED here. **Don't start work on TripNerd's account before it's signed and invoice 1 ($1,750) is sent** | Karl |
+| Written confirmation + October invoice | Test month agreed verbally. **Don't start work on TripNerd's account before the $1,500 October invoice is sent** and the approver is named | Karl |
+| Supermetrics after 18 Oct | The free trial ends 18 Oct; a paid plan is a ServicePOW cost (price not checked). Decide by 16 Oct, or fall back to a weekly Insights export | Karl |
+| September statics and VIP Hosting Spot | The Augusta carousel needs re-reading against the Story gate's S4/S3 findings before it posts; VIP Hosting Spot is 16:9 (needs a vertical recut; AI label if it shows generated people) | Karl |
 | Confirmations from TripNerd (on the call, deck slide 13) | The venue's name and town; whether it was off the grounds, with the venue's OK to use its photos; guest and staff consent; TripNerd hosting; whether TripNerd sells that week. Files the BC-16/BC-20 records | Karl / Jason |
 | ASR check on the music (BC-26/27) | Whisper's model hosts are blocked here. Allow them in the environment network settings, or run the two commands in `qc/2026-10-04-v5-evidence-and-rights.md` | Karl |
 | 04 Communication proof | Needs a real review (with permission to quote) and the actual guest briefing | TripNerd |
@@ -57,6 +59,8 @@ in each log.
 | 08 First-time guest | Needs a real guest's own words and written consent; no synthetic stand-in (FTC Fake Reviews Rule) | TripNerd |
 
 ## Content log
+
+> **October:** the post plan is now [`2026-10-test-month-plan.md`](2026-10-test-month-plan.md) §3 (7 videos and 6 statics). The rows below are the original launch queue, kept for the ideas; log October posts here as they go out.
 
 | # | Day | Date | Format | Post | Status | Link | 7-day views | Non-follower % | Saves + sends | Follows |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -82,14 +86,19 @@ Status values: `idea → planned → drafted → in edit → sent for approval �
 
 | # | Covers | Amount | Sent | Paid |
 |---|---|---|---|---|
-| 1 | Days 1–30 | $1,750 | | |
-| 2 | Days 31–60 | $4,000 | | |
-| 3 | Days 61–90 | $4,000 | | |
+| Sep | 3 videos + 2 statics (original offer $1,175) | $1,200 | yes | **yes** (meeting notes). 1 video owed; 2 statics not posted; all posted in October at no charge |
+| Oct | October test month | $1,500 | | |
+| Nov | Tier set at the October review ($1,500 / $2,500 / $4,000, PROPOSAL) | | | |
+
+~~Days 1–30 $1,750 · Days 31–60 $4,000 · Days 61–90 $4,000~~ (Deck A; superseded by the test month, 2026-10-04)
 
 ## Decisions
 
 | Date | Decision | By |
 |---|---|---|
+| 2026-10-04 | **October = $1,500 intro test month; the bigger package waits on results. Already-paid content gets posted without being charged again** | TripNerd + Wyatt Johnson (meeting) |
+| 2026-10-04 | September adverts and carousels go back on the plan (reverses the same-day "removed from the launch queue" decision below) | Meeting decision |
+| 2026-10-04 | **Proposed:** October scope 4 new Reels + 4 statics + Stories Mon/Wed/Fri + Monday report; third owed video = "Two ways to see the 17th"; November tiers by net new followers (<100 $1,500 · 100–199 $2,500 · 200+ $4,000) | Claude (**Karl to confirm**) |
 | 2026-10-03 | Deck A pricing: $1,750, then $4,000/mo; discounts shown against standard per-post pricing | Karl |
 | 2026-10-04 | Posting times set (ET): Reels Mon 2 PM and Wed 12 PM, carousel Tue 1 PM, proof Thu 12:30 PM, Trial Reel Fri 11 AM, Stories 10 AM; no weekend feed posts. Source: Sprout Social and Buffer 2026 studies | Claude (APPROVER to confirm) |
 | 2026-10-04 | Reel 03 music: Instagram in-app library | Karl |

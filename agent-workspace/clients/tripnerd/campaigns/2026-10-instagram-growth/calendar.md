@@ -11,6 +11,8 @@ tags: [client, instagram, calendar, 90-day]
 
 # 13-week calendar
 
+> **2026-10-04: October follows the test-month plan instead** ([`2026-10-test-month-plan.md`](2026-10-test-month-plan.md) §3). Weeks 1–4 below are superseded. Weeks 5+ apply only if TripNerd picks the $4,000 tier at the review.
+
 **Day 1 = Mon 5 Oct 2026** (Karl: posting starts 5 Oct). **Times are ET** (see README §3). If the start moves, keep the Day numbers and shift every date. Work from the Day column, not the date.
 
 The weekly rhythm and production week are in [`README.md`](README.md) §3. Each week also carries the standing items:

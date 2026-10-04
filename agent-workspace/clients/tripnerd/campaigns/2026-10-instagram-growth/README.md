@@ -17,7 +17,7 @@ Instagram work reads this file first, then [`tracker.md`](tracker.md), then the 
 
 | | |
 |---|---|
-| **Status** | **PROPOSED.** Deck A is client-ready but has **not been accepted by TripNerd**. Nothing here runs on TripNerd's account until Karl records the signed start date in `tracker.md`. |
+| **Status** | **ON HOLD for October.** TripNerd agreed a **$1,500 October test month** instead of this package (meeting notes, 2026-10-04). **For October, work from [`2026-10-test-month-plan.md`](2026-10-test-month-plan.md)** (deck: https://claude.ai/artifact/9654ychr2HFWzMMSmkBHNJ). This plan returns as the $4,000 tier if October's results earn it. Its posting rules, routines and quality bar still apply. |
 | **Day 1** | **ASSUMED Mon 5 Oct 2026**, the date printed on the deck. When the real start date is known, re-date `calendar.md` and the deck's roadmap and cover (Day 30 / 60 / 90 move with it). |
 | **The deck (live)** | https://claude.ai/artifact/URga8vJyxUGnUecoaGGZoC (private; Karl shares it). Committed copy of the client-ready version: [`deck-a-snapshot/`](deck-a-snapshot/) (artifact version 23, 2026-10-03; images live in the artifact, not in git). |
 | **Alternative (not chosen)** | Deck B, per-post pricing: https://claude.ai/artifact/Eoij3MkNGKXB2gHmGJEXsL |

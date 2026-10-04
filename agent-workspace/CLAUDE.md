@@ -358,8 +358,8 @@ ingested file cites its Drive source and sync date in frontmatter.
   (partnership percentages, unsigned claims sheet, unverified sewer scope) — see the
   re-tiered [`company/OPEN-QUESTIONS.md`](company/OPEN-QUESTIONS.md).
 
-**Active engagement to know about:** TripNerd's 90-day Instagram growth plan (Deck A, proposed 2026-10-03).
-For any TripNerd Instagram work, start at
+**Active engagement to know about:** TripNerd's **October 2026 test month** ($1,500, agreed 2026-10-04; the 90-day plan is on hold until the review).
+For any TripNerd Instagram work, start at [`2026-10-test-month-plan.md`](clients/tripnerd/campaigns/2026-10-instagram-growth/2026-10-test-month-plan.md), then
 [`clients/tripnerd/campaigns/2026-10-instagram-growth/README.md`](clients/tripnerd/campaigns/2026-10-instagram-growth/README.md),
 then its `tracker.md` and `calendar.md`.
 

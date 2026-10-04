@@ -1685,3 +1685,32 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - **Open:** re-date the cover and roadmap once the start is known; fill the margin blanks on the call.
 - **The presented deck was cut to 6 slides** (v7; Karl: fewer slides, no repeats, organised as what he needs / what we need / what they need from us / what we give them). The three decisions and the checklist are merged on the last slide. Karl's edit to the AI rule ("mainly") was carried into the merged rules. The snapshot is updated.
 - **Deck restored to the 12-slide version** Karl prefers (v8; byte-identical to 1791141386-0fe1 except his "Mainly" AI edit). New playbook: `playbooks/client-lifecycle/meta-partner-access.md`, covering partner access via the business portfolio, the daily use of Business Suite, and its limits (Trial Reels and Story stickers are app-only), linked from onboarding §4.
+
+## 2026-10-04 (late) — TripNerd: October test-month plan from the meeting notes
+
+- **The meeting** (Karl's notes; Wyatt Johnson pitched):
+  - TripNerd found $4,000 a month too high for about +400 followers.
+  - **They agreed October as a $1,500 intro test month.** The 90-day package waits on results.
+  - They want a sliding scale tied to follower growth.
+  - The $1,200 already paid (3 videos + 2 statics) gets finished and posted at no charge.
+  - That's $2,700 over about five weeks.
+- **Built:**
+  - Client deck "TripNerd October Test Month", 5 slides: https://claude.ai/artifact/9654ychr2HFWzMMSmkBHNJ. Snapshot in `test-month-deck-snapshot/`.
+  - Operating plan: `clients/tripnerd/campaigns/2026-10-instagram-growth/2026-10-test-month-plan.md`. It holds the scope, a dated October calendar, the needs, the scorecard, the November tiers and the admin.
+  - The tracker, README, calendar and workspace `CLAUDE.md` now point there. The 90-day plan is marked on hold.
+- **Scope set as a PROPOSAL:**
+  - 4 new Reels + 4 statics ($1,600 at the rate card, so 6% off, inside the cap), plus Stories Mon/Wed/Fri and the Monday report.
+  - With the paid items, that's 7 videos and 6 statics.
+  - I cut my own earlier 6-Reel draft: it would have put more volume on the account than the 8-Reel plan TripNerd balked at.
+- **November tiers, PROPOSAL:** under 100 net new followers stays at $1,500; 100–199 is $2,500; 200+ is $4,000.
+  - Buffer's cadence benchmark suggests about 50 in October (ESTIMATE), so $1,500 is the likely November.
+- **The flat-$1,500 rework of the 12-slide pitch deck was abandoned** (never published). The presented deck is unchanged.
+- **Learning:** `knowledge/learnings/2026-10-04-follower-targets-next-to-a-fee-get-priced-per-follower.md`.
+- **Open:**
+  - Karl to confirm the scope, the third video and the tiers;
+  - the October invoice of $1,500;
+  - written confirmation;
+  - the Supermetrics paid-plan decision by 16 Oct (trial ends 18 Oct);
+  - the VIP Hosting Spot vertical cut and AI-label check;
+  - the Augusta carousel re-read against the Story gate;
+  - plus everything open from the earlier entries (access, approver, footage, Taylor's originals, logo, Augusta answers).
