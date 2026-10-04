@@ -1716,3 +1716,9 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - plus everything open from the earlier entries (access, approver, footage, Taylor's originals, logo, Augusta answers).
 - **Pricing one-pager for Jason (same night):** `clients/tripnerd/deliverables/2026-10-october-pricing/TripNerd-October-Pricing.pdf`. It shows 4 Reels at a $300 October rate plus 4 statics at $75, which is $1,500 (against $1,600 at standard). It adds the 3 owed September adverts at no charge, so 11 posts in total, with a week-by-week schedule and the strategy for each format. The November tiers and the 2 delivered videos are left off.
 - **The PDF went to 2 pages** (Karl asked for a dated week-by-week calendar, follower-growth methods and the boost-budget question). At one page it overflowed by about 1.5 in even at 8.5 pt, so it was split to stay readable. The boost suggestion ($250–500 from week 3) is recorded in the test-month plan §5b with its gates.
+- **PDF page 2 now has "Beyond the posts"** (Karl: add the recommendation):
+  - the daily 20-minute engagement block (included in October, unpriced labour);
+  - the guest loop;
+  - follow links and QR codes on TripNerd's own channels;
+  - a "what we won't do" line (follow-for-follow, mass liking, bots, bought followers).
+  - "Why this mix" moved to page 1. Open: who runs the daily block, since outbound engagement is app-side and partner access may not cover it (plan §5c).

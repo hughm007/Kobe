@@ -8,7 +8,7 @@
 :root { --cream:#F4F1EA; --navy:#111C30; --blue:#2B55D0; --gold:#D9A93F; --goldbg:#FBF1DA; --card:#FBF9F4; --line:#E2DDD2; --body:#3D4656; --muted:#6B7280; --lightblue:#E3E9F8; }
 html, body { background: var(--cream); }
 body { width: 8.5in; font-family: 'Inter', Arial, sans-serif; color: var(--navy); font-size: 10pt; line-height: 1.35; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-.page { width: 8.5in; height: 11in; padding: 0.5in 0.55in 0.38in; display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden; break-after: page; }
+.page { width: 8.5in; height: 11in; padding: 0.48in 0.55in 0.36in; display: flex; flex-direction: column; gap: 12px; position: relative; overflow: hidden; break-after: page; }
 .page:last-child { break-after: auto; }
 .eyebrow { font-size: 8pt; font-weight: 700; letter-spacing: 2px; color: var(--blue); text-transform: uppercase; }
 h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 26pt; line-height: 1.08; font-weight: 700; margin-top: 2px; }
@@ -44,7 +44,7 @@ tr.owed td { background: var(--goldbg); }
 .legend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; vertical-align: -1px; margin-right: 4px; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .grid3 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 15px; }
 .card.dark { background: var(--navy); border: none; }
 .card .k { font-size: 8.5pt; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
 .card .k.blue { color: var(--blue); }
@@ -52,11 +52,14 @@ tr.owed td { background: var(--goldbg); }
 .card.dark p, .card.dark li { color: #D9DFEA; }
 .card b { color: var(--navy); }
 .card.dark b { color: #F4F1EA; }
-.card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.card ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
 .card li { padding-left: 13px; position: relative; }
 .card li::before { content: ""; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
 .src { font-size: 8pt; color: var(--muted); margin-top: 8px; }
 .card.dark .src { color: #8E9AB0; }
+.beyond { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 2px; }
+.beyond p { font-size: 9.5pt; line-height: 1.4; }
+.never { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); font-size: 9.5pt; color: var(--body); }
 .foot { margin-top: auto; display: flex; justify-content: space-between; font-size: 8pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 6px; }
 </style></head>
 <body><div class="page">
@@ -78,7 +81,7 @@ tr.owed td { background: var(--goldbg); }
     <tr><th>What you get in October</th><th class="num">Qty</th><th class="num">Standard price</th><th class="num">October</th></tr>
     <tr><td><b>Reels</b>, cut from your own trip footage</td><td class="num">4</td><td class="num">$325 each</td><td class="num">$300 each = <b>$1,200</b></td></tr>
     <tr><td><b>Static posts</b>: carousels and proof posts</td><td class="num">4</td><td class="num">$75 each</td><td class="num">$75 each = <b>$300</b></td></tr>
-    <tr><td><b>Stories</b> and a <b>Monday report</b> with the analytics on every video</td><td class="num">weekly</td><td class="num">included</td><td class="num">$0</td></tr>
+    <tr><td><b>Stories</b>, a <b>Monday report</b> with the analytics on every video, and <b>20 minutes of engagement</b> every weekday</td><td class="num">weekly</td><td class="num">included</td><td class="num">$0</td></tr>
     <tr class="owed"><td><b>Owed from September:</b> 1 video advert and 2 static adverts, due last month and not yet delivered</td><td class="num">3</td><td class="num">already paid</td><td class="num">$0</td></tr>
     <tr class="total"><td>October total</td><td class="num">11</td><td class="num">$1,600</td><td class="num">$1,500</td></tr>
   </table>
@@ -115,6 +118,7 @@ tr.owed td { background: var(--goldbg); }
       <td></td></tr>
   </table>
   <div class="legend"><span><span class="sw" style="background:#111C30"></span>New Reel</span><span><span class="sw" style="background:#E3E9F8"></span>New static</span><span><span class="sw" style="background:#FBF1DA;border:1px solid #E9D49C"></span>Owed from September</span><span>Stories: 10 AM every Mon, Wed and Fri, plus each new post shared to your Story within 15 minutes. No weekend posts. Times move to your own best hours after week one.</span></div>
+  <p class="note" style="font-size:9pt;color:#3D4656;margin-top:8px"><b style="color:#111C30">Why this mix:</b> the 5 videos are what Instagram shows to people who don't follow TripNerd yet, so they lead the month. The 6 statics are carousels people save while planning a trip, and proof posts showing how a trip is handled.</p>
 </div>
 
 <div class="foot"><span>ServicePow · Prices in USD · Growth is a target, not a guarantee.</span><span>Page 1 of 2</span></div>
@@ -124,23 +128,18 @@ tr.owed td { background: var(--goldbg); }
 <div>
   <p class="eyebrow">TripNerd × ServicePow · October 2026</p>
   <h1>Growing your followers</h1>
-  <p class="sub">What each post is for, what we do to reach new people, and one decision for you on boosting.</p>
-</div>
-
-<div class="grid2">
-  <div class="card"><p class="k">5 videos · reach new people</p><p>Reels are the posts Instagram shows to people who <b>don't follow TripNerd yet</b>. That's where new followers come from, so they lead the month.</p></div>
-  <div class="card"><p class="k blue">6 statics · keep and convince</p><p>Carousels that fans and corporate hosts <b>save while planning a trip</b>, and proof posts showing how a TripNerd trip is handled. They turn visitors into followers, and followers into enquiries.</p></div>
+  <p class="sub">What we do in every post and every day to reach new people, and one decision for you on boosting.</p>
 </div>
 
 <div class="grid2">
   <div class="card">
     <p class="k blue">How we'll grow your followers</p>
     <ul>
-      <li><b>Open on the moment.</b> Every Reel starts on a big event moment from your footage, so Instagram shows it to people into that event, not just your followers.</li>
-      <li><b>Test before we commit.</b> Reel 2 runs as a Trial Reel, shown only to non-followers first. The opening that wins gets used again.</li>
+      <li><b>Open on the moment.</b> Every Reel starts on a big event moment from your footage, so Instagram shows it to people into that event.</li>
+      <li><b>Test before we commit.</b> Reel 2 runs as a Trial Reel, shown to non-followers first. The winning opening gets used again.</li>
       <li><b>Made to be sent.</b> Each Reel gives people a reason to send it to the friend they'd take. Sends are one of the signals Instagram weighs most.</li>
       <li><b>A reason to follow.</b> Your bio and every caption say what following TripNerd gets you.</li>
-      <li><b>Collab posts.</b> When a post features a venue or partner you work with, we invite them as a collaborator, so it shows on their account too.</li>
+      <li><b>Collab posts.</b> When a post features a venue or partner, we invite them as a collaborator, so it shows on their account too.</li>
     </ul>
     <p class="src">Ranking signals: Adam Mosseri, head of Instagram, January 2025.</p>
   </div>
@@ -152,9 +151,18 @@ tr.owed td { background: var(--goldbg); }
       <li><b>You set the ceiling.</b> $250–$500 for October is enough to learn from.</li>
       <li><b>On top of the $1,500,</b> paid to Meta from your ad account. Nothing is spent without your sign-off.</li>
       <li><b>Reported separately,</b> so you always see organic and paid results apart.</li>
-      <li><b>Never bought followers.</b> We only put money behind real posts, shown to real people.</li>
     </ul>
   </div>
+</div>
+
+<div class="card">
+  <p class="k blue">Beyond the posts: what we do every day</p>
+  <div class="beyond">
+    <p><b>20 minutes every weekday, as TripNerd.</b> We reply to every comment and DM, and leave real comments on posts from event accounts, venues and fans heading to the events you sell. It's done from the Instagram app, so on day one we agree who handles it: us, or someone on your team working from our daily list.</p>
+    <p><b>The guest loop.</b> At every trip, your host asks guests to tag @tripnerd. We reshare their Stories the same day and, with their OK, turn the best into Collab posts on their account too. Tell us which trips run in October and November.</p>
+    <p><b>Your customers, pointed at Instagram.</b> We write a follow link and QR code for your booking emails, itineraries, email signatures and website. Past guests are your warmest followers.</p>
+  </div>
+  <p class="never"><b>What we won't do:</b> follow-for-follow, mass liking, bots or bought followers. They break Instagram's rules, put your account at risk, and those followers don't stay.</p>
 </div>
 
 <div class="grid3">

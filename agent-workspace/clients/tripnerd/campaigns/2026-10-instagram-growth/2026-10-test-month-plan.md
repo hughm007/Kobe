@@ -166,6 +166,14 @@ This is the deck's slide 4.
   - boost follows inflate the follower count, so the November review reads **organic** follows only;
   - running the boost is ServicePOW labour **not priced** in the $1,500 (Karl's call).
 
+## 5c. Beyond the posts (added to PDF page 2, Karl 2026-10-04)
+- **Daily engagement, 20 min every weekday, as TripNerd.** Reply to every comment and DM; leave real comments on event accounts, venues, and fans posting from upcoming event locations; keep a short permanent follow list. **Included in October** (about 7 h/month of unpriced labour; needs a price if it continues).
+  - **Open:** outbound likes, comments and follows are app-side. Partner access in Business Suite is built for TripNerd's own posts and inbox, and commenting on other accounts' posts from it is **UNVERIFIED** (test on day one).
+  - The PDF says that on day one we agree who handles it: us, or TripNerd's team from our daily list. App access for us breaks the "no passwords" line. That's Karl's call.
+- **Guest loop:** hosts ask guests to tag @tripnerd; we reshare guest Stories the same day; Collab posts with guest consent. We asked Jason which trips run in Oct/Nov.
+- **Owned channels:** a follow link and QR code for booking emails, itineraries, signatures and the website (we write them; TripNerd places them).
+- **Won't do (stated to the client):** follow-for-follow, mass liking, bots, bought followers. Instagram's Community Guidelines say not to "artificially collect likes, followers, or shares", and mass follow/unfollow triggers action blocks. Giveaways and engagement pods are also out for the test month.
+
 ## 6. Money and admin
 
 | Item | Amount | State |
