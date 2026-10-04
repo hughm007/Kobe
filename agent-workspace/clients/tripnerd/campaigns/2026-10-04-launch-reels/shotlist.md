@@ -40,28 +40,27 @@ tags: [client, instagram, reels, storyboard, shotlist]
 - **H5 "This is the walk to 17."** S1 becomes V13 ~4.0–6.5 (after the sun flare) with that text. The rest is unchanged.
 - **H10 "The path or the rail?"** S1 text "The path or the rail?" then "The path."; S3 "The rail."; S5 "Which one are you?"
 
-## Reel 03 — "Augusta, by the clock" (lead hook H3) · 14.0 s · 10 shots · average 1.4 s
+## Reel 03 — "Augusta, by the clock" · **v2** (2026-10-04) · 11.07 s · 7 shots · average 1.58 s · posting as queue 01
 
-All photos: Thu 9 Apr 2026. **The timestamps are the camera's own** (EXIF DateTimeOriginal). Each photo is cropped from 3:4 to 9:16:
-keep the full height, crop the sides, keep faces inside the safe zone.
-
-| # | Time | Story job | Source | Action in frame | Text | Motion | Audio |
-|---|---|---|---|---|---|---|---|
-| S1 HERO | 0.0–1.3 | Hook | IMG_1901 (9:03:55) | The TripNerd check-in table; three Nerds at laptops | "9:03 AM" / "Check-in." | Camera translation (push 100→106%) + light change (lift from 85% exposure over 6 frames) | Track starts on the downbeat |
-| S2 | 1.3–2.6 | Proof | IMG_1915 (9:05:33) | Veranda bar set up; the course through the columns | "9:05 AM" | Camera translation (pan left→right) | Track |
-| S3 | 2.6–3.9 | Proof | IMG_1916 (9:06:02) | A Nerd checks a guest in | "9:06 AM" | Camera translation (push) | Track |
-| S4 | 3.9–5.2 | Feel | IMG_1926 (9:15:11) | Four guests with drinks, ready to go | "9:15 AM" | Camera translation (push out 106→100%) | Track |
-| S5 | 5.2–6.7 | Turn | Black card | — | "9:16 AM – 4:55 PM" / "Some things you just watch." | Light change (dip to black, then fade up) | **Music drops to near-silence** (if baked in; see edit plan) |
-| S6 | 6.7–8.0 | Proof | IMG_1985 (4:56:39) | A guest walks into the ballroom past the TripNerd "Private Party" banner | "4:56 PM" | Camera translation (push toward the doorway) | Track returns |
-| S7 | 8.0–9.3 | Feel | IMG_1989 (5:24:15) | A full dinner table, smiling | "5:24 PM" | Camera translation (pan) | Track |
-| S8 | 9.3–10.6 | Feel | IMG_2004 (5:48:39) | A group on the lawn, tall pines, low sun | "5:48 PM" | Camera translation (push) | Track |
-| S9 | 10.6–11.9 | Feel | IMG_2023 (6:01:54) | Cocktail tables on the evening lawn, tents behind | "6:01 PM" | Camera translation (pan right) | Track |
-| S10 HERO | 11.9–14.0 | CTA | IMG_2034 (6:03:01) | The food table under the tent, flowers, last light | "6:03 PM" / "Same time next year?" | Camera translation (slow push) + light change (warm grade lift) | Track resolves |
-
-- **Real-ref for every shot:** the photo itself, Drive folder `0AJj-fhf07xDjUk9PVA` (local copy in the session's `tn_assets/`).
+- Rebuilt after the v1 dual gate (Bible §13–14).
+- **Beat grid at 92 BPM:** 2 beats = 39 frames, the card is 3 beats, the end is 4 beats.
+- **All photos:** Thu 9 Apr 2026, with their EXIF times.
+- **Cuts:** hard cuts throughout.
 - **Angle:** the same on every shot.
-- **H9 variant (Trial Reel):** S1 text becomes "Thursday in Augusta, start to finish."
 
-**No-faces fallback** (if guest consent can't be had for a photo):
-- Morning: IMG_1913 or 1915 (bar, staff only).
-- Evening: IMG_1998 (desserts), IMG_1985 (back of a guest), IMG_2034 (food table).
+| # | Frames | Story job | Source (crop) | Text | Motion |
+|---|---|---|---|---|---|
+| S1 HERO | 0–38 | Hook | IMG_1901 09:03:55 (region x40 y341 w960: logo above the UI zone) | "Thursday in Augusta" / "9:03 AM" / "Check-in." | Camera translation (push 100→106%) + light change (exposure lift, first 6 frames) |
+| S2 | 39–77 | Proof | IMG_1916 09:06:02 (centre) | "9:06 AM" | Camera translation (push) |
+| S3 | 78–116 | Feel | IMG_1926 09:15:11 (centre) | "9:15 AM" | Camera translation (push out) |
+| S4 | 117–175 | Turn | Card: IMG_1926 blurred, at 22% brightness (**designed, intentional**; BC-06/07) | "9:16 AM – 4:55 PM" / "Some things" / "you just watch." | Light change (hard cut to dark) + animated grain + slow push |
+| S5 | 176–214 | Proof | IMG_1989 17:24:15 (region x300 y348 w956: no TV, no half-cut guest) | "5:24 PM" | Camera translation (pan right) |
+| S6 | 215–253 | Feel | IMG_1995 17:44:55 (centre) | "5:44 PM" | Camera translation (push) |
+| S7 HERO | 254–331 | CTA | IMG_2004 17:48:39 (centre) | "5:48 PM" / "Who would you bring?" | Camera translation (slow push) + light change (warm lift) |
+
+**Removed from v1:**
+- IMG_1985: TripNerd's banner carries the Masters flag mark and a pro's photo (BC-20; Skeptic S3).
+- IMG_1915: the bar being set up.
+- IMG_2023 and IMG_2034: the condiment table ending (Skeptic S3).
+
+**Real-ref:** each photo itself, Drive folder `0AJj-fhf07xDjUk9PVA`.

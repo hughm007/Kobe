@@ -282,10 +282,65 @@ true, so it goes to week 2–3.
 - **Screen grammar, Reel 03:** a chronological still sequence, with a dip to black as the only transition.
 
 ## 13. QC verdict
-Pending finished cuts. The critic (BC-22) runs separately from Skeptic Pass 3 (BC-23).
+*Owner: `servicepow-creative-critic`.*
+
+### Reel "Augusta, by the clock", v1 (2026-10-04, `TN-R03-augusta-by-the-clock-H3-v1.mp4`, 14.0 s)
+**HARD FAIL. ServicePOW-6 = 6.2 ± 1.5** (floor 8.0). AI-artifact risk 1/10.
+
+| Axis | Score |
+|---|---|
+| Doesn't look AI | 9 |
+| Hook inside 2 s | 5 |
+| Human presence | 8 |
+| Format fit | 7 |
+| Audio design | 3 |
+| Message + CTA clarity | 5 |
+
+**Registry failures:**
+- **BC-04:** silent master, no exemption on file.
+- **BC-20:** an identifiable pro on TripNerd's banner panel in S6.
+
+**Couldn't run:** BC-05 (no audio), BC-19 (bio link not declared), BC-25 (no human watch recorded). No machine receipts were on file.
+
+**Fixes asked for:**
+- Crop S6 or remove it.
+- Log the audio decision or an exemption.
+- Put the place in S1.
+- End on the 5:48 PM group, not the condiment table, with a send ask.
+- Fix the black-card line that clips at x = 1079.
+- File the receipts.
+- Raise the bitrate.
+
+v2 addresses all of these; see the Decision log. The v2 verdict is pending.
+
 
 ## 14. Skeptic verdicts
-None yet. Pass 3 runs on each finished cut, under the isolation protocol.
+*Transcribed verbatim from the isolated subagent.*
+
+### Pass 3, "Augusta, by the clock" v1 (2026-10-04)
+```
+SKEPTIC VERDICT — Pass 3
+Verdict: BLOCK
+Findings:
+- [S3] 5.0–6.7 s, black card (industry professional / competitor) — "Some things you just watch." runs into the right edge of the frame: white pixels reach the last column, x=1079, the full stop is clipped, and the right margin is 0 px against 84 px on the left. This breaks the binding safe-zone rule on the reel's central card, which is also the frame people are most likely to screenshot and send.
+- [S3] 11.9–14.0 s, 6:03 PM end card (client / competitor / weakest 2 s) — The call to action "Same time next year?" sits over a foreground stand of squeeze-bottle ketchup and mustard and a basket of bagged chips. This is the longest-held shot in the reel (2.1 s) and the frame the loop rests on, so a "premium fan experiences" brand closes on the image a competitor would screenshot and mock.
+- [S3] 6.7–8.0 s, 4:56 PM banner (industry professional / competitor) — The frame centres TripNerd's roll-up banner, which pairs the TripNerd wordmark with Augusta National's Masters flag logo, a tournament photo of a player celebrating, and "PRIVATE PARTY". The reel therefore implies an affiliation that CLIENT-FACTS do not establish. The clearance in CLIENT-FACTS comes from TripNerd, which cannot clear a third party's trademark or a player's likeness, so the post is open to an IP takedown report.
+- [S2] 0.0–3.9 s, first 3 s (target customer) — The opening shows staff behind a registration table with a laptop and hand sanitiser, captioned "Check-in.", then a bar being set up, then the check-in table again. There are no stakes, no on-screen place cue, and nothing to stop a non-follower before the idea arrives at 5.0 s.
+- [S2] 5.0–6.7 s, persuasion (target customer) — The turn depends on outside knowledge of why there are no photos during play. Nothing on screen names Augusta or the tournament (only the caption does), so cold viewers who don't read captions cannot decode "Some things you just watch."
+- [S2] 5.0–6.7 s, legibility — The card's two lines, a time range plus a five-word sentence, are at full opacity for only about 1.3 s (frames 161–200, after a 0.2 s fade-in). That is too short to read at phone size and also get the point.
+- [S2] 5.0–6.7 s, claims (trust) — The card presents 9:16 AM–4:55 PM as time spent watching, but CLIENT-FACTS establish only that no photos exist in that window, not that the hosted guests attended play that day. This needs client confirmation.
+- [S2] 11.9–14.0 s and caption, claims — "Same time next year?" followed by "Talk to a Nerd: link in bio" implies TripNerd will offer an Augusta trip in 2027, which CLIENT-FACTS do not support (no 2027 dates published). It holds only as a prompt to enquire if the client confirms it plans to run the trip; if not, this escalates to S4.
+- [S2] 1.3–2.6 s, 9:05 AM (client / industry professional) — The bar is shown from behind the counter: yellow glass racks, Coca-Cola cases and bare work surfaces fill about the lower 40% of the frame, and reflected window-blind lines streak across the course view. It reads as staff setting up, not as the guest experience.
+- [S2] 0.0–1.3 s, opening brand registration — In the first 6.7 s TripNerd's only mark is the tablecloth logo at y≈1480–1770. Most of it falls inside Instagram's bottom caption zone, about 400 px, and the left side of the mascot is cut off by the frame, so non-followers get no clean brand read until the 4:56 PM banner.
+- [S1] 8.0–9.3 s, 5:24 PM — Drop-ceiling tiles and HVAC grilles fill about the top 40% of the frame, and the frame edge cuts the leftmost guest in half, giving a hotel-banquet look.
+- [S1] 3.9–5.0 s, 9:15 AM (client) — The timestamp draws attention to cocktails at 9:15 AM. That is normal golf-day culture, but a compliance-minded corporate buyer may balk.
+- [S1] 0.0–3.9 s, sequence — The opening goes check-in, bar, check-in, which bounces between locations and softens the one-day-forward clock structure.
+- [S1] 3.9–5.0 s / 8.0–9.3 s / 10.6–11.9 s — Incidental Masters badges, caps and apparel on guests are lower risk than the banner, but should be resolved together with the banner finding.
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.
+```
+
+Pass 3 on v2: pending.
 
 ## 15. CONFLICTS
 | # | Raised by | Conflict | Status |
@@ -304,4 +359,17 @@ None yet. Pass 3 runs on each finished cut, under the isolation protocol.
 | 2026-10-04 | **Library clearance:** "everything in the TripNerd library is cleared to post and use". Resolves photo ownership, guest consent and in-frame event marks. Not covered: third-party player likeness (keep cropped) | Karl (APPROVER) |
 | 2026-10-04 | Karl: get ready to post a Reel and a Story Mon 5 Oct, with in-app music for Augusta. The originals for "Two ways" can't be found, so **Augusta, by the clock posts first (slot 01, Mon 2:00 PM ET)** and "Two ways" moves to slot 03, pending Taylor's originals. Taken as the STORYBOARD go-ahead for Augusta | Karl (APPROVER) |
 | 2026-10-04 | Augusta v1 rendered by script from the original photos ($0, no generation). Dual gate dispatched on the frozen file: critic and Skeptic Pass 3, independent | campaign-director |
-| — | QC gate: awaiting both verdicts | — |
+| 2026-10-04 | v1 dual gate: critic HARD FAIL (6.2), Skeptic BLOCK (3 × S3). Repair routed through this skill | campaign-director |
+| 2026-10-04 | **v2 repair.** These changes answer the three S3s, BC-20 and the S2 hook/claim items:
+- **Removed:** IMG_1985 (Masters mark and pro likeness on the banner), IMG_1915 (bar set-up) and IMG_2034 (condiments).
+- **Opening:** S1 now leads with "Thursday in Augusta", and its crop keeps the TripNerd logo above the UI zone.
+- **Card:** text re-wrapped inside the margins and held 2 s (3 beats).
+- **Dinner shot (IMG_1989):** cropped to drop the TV and the half-cut guest.
+- **Ending:** now IMG_2004 with "Who would you bring?" (no next-year or availability implication).
+- **Timing:** 92 BPM beat grid.
+- **Caption:** gains the send ask.
+- **Encode:** 18 Mbps.
+
+**QC receipt:** all checks PASS except audio, which has no track by design. The S2 attendance implication of the card needs Karl's confirmation that the guests attended play that day | campaign-director |
+| 2026-10-04 | **Audio:** Karl (APPROVER) chose Instagram in-app music, so the master is silent by design. Recorded as the basis for BC-04/05 being satisfied at posting, by a human listen-through in the app. **Karl to confirm this exemption explicitly** | Karl / campaign-director |
+| — | v2 dual gate: awaiting both verdicts | — |

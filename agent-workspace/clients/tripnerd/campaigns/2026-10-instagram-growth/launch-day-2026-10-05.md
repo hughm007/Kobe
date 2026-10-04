@@ -14,7 +14,10 @@ tags: [client, instagram, launch, runbook]
 **Posting today:** one Reel (01, "Augusta, by the clock") and two Stories. All times are **US Eastern (ET)**.
 
 ## Tonight (Sunday): must be done before anything posts
-- [ ] **Watch the Reel:** `TN-R03-augusta-by-the-clock-H3-v1.mp4` (1080×1920, 14 s, no music in the file; sent in session).
+- [ ] **Watch the Reel end to end:** `TN-R03-augusta-by-the-clock-H3-v2.mp4` (1080×1920, 11 s, no music in the file). This is the BC-25 human watch; tell Claude when it's done so it's logged.
+- [ ] **Confirm two facts:**
+  - The guests were at the tournament that day. The "Some things you just watch" card implies it.
+  - The link in TripNerd's bio opens tripnerd.com.
 - [ ] **Send the Reel, caption and Story plan to TripNerd's approver.** Ask for a yes by **Mon 12:00 PM ET**. Nothing posts without their sign-off (process step 6). **If there's no yes by 12:00, hold the post; don't post it anyway.**
 - [ ] **Decide who presses Post.**
   - Karl, logged into TripNerd's Instagram in the app (keep the login out of Kobe); or TripNerd, from our files.
@@ -40,23 +43,23 @@ puts Monday's peak at **2–4 PM local**.
 - **ASSUMPTION:** TripNerd's audience is mostly in Eastern and Central time. Check Insights → Audience → **Most active times** once we have access, and move the slot to match.
 
 ## Building the Reel in the Instagram app
-1. **+ → Reel →** choose the MP4. Don't trim (it's exactly 14.0 s).
+1. **+ → Reel →** choose the v2 MP4. Don't trim (11.07 s).
 2. **Music:** tap the music note and pick a track from the library the account offers. Business accounts get a commercial-use library, so not every song appears.
-   - **Choose:** warm, mid-tempo, ideally instrumental, so it doesn't fight the on-screen times.
-   - **Start point:** set it so a beat lands on the first frame.
+   - **Choose:** warm, ideally instrumental, **about 92 BPM** (or about 184). The cuts are timed to a 92 BPM grid, two beats per photo.
+   - **Start point:** set it so a downbeat lands on the first frame.
    - **Volume:** music at 100% (the file has no audio).
    - **Before sharing:** play it once through with sound.
-3. **Cover:** the 5:48 PM frame (the group on the lawn), or upload a still of it. Check the profile-grid crop preview so faces aren't cut.
+3. **Cover:** the 5:48 PM frame (the group on the lawn, the last shot), or upload a still of it. Check the profile-grid crop preview so faces aren't cut.
 4. **Caption** (paste exactly; edits are TripNerd's call):
    > One Thursday in Augusta with TripNerd, by the clock.
-   > Same time next year?
+   > Who would you bring? Send this to them.
    > Talk to a Nerd: link in bio.
 
    This is the exact caption that went through our quality gate. Any change goes back through the gate before posting.
 5. **Hashtags:** at most three: `#Augusta #GolfTrip #TripNerd`. Keep event trademarks out of hashtags unless TripNerd wants them.
 6. **Location:** Augusta, Georgia.
 7. **Advanced settings → Accessibility → Alt text:**
-   > Timestamped photos from one TripNerd hosted day in Augusta. A 9:03 AM check-in at the TripNerd table, the veranda bar, guests ready at 9:15, a black card for 9:16 AM to 4:55 PM, then a private party, dinner and an evening lawn party at 6:03 PM.
+   > Timestamped photos from one TripNerd hosted day in Augusta. A 9:03 AM check-in at the TripNerd table, guests ready at 9:15, a dark card for 9:16 AM to 4:55 PM, then dinner, the porch and a group on the lawn at 5:48 PM.
 8. **Trial Reel: OFF** for this one. It goes to followers too. The Friday variant is the trial.
 9. **Before you tap Share, check:**
    - the link in TripNerd's bio works;

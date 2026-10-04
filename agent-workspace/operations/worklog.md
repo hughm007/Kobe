@@ -1616,3 +1616,18 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - Written into README §3, the calendar and the deck posting slide (deck A v27, deck B v10). Queue 01/03 swapped on both decks.
 - **Runbook:** `launch-day-2026-10-05.md`.
 - **Dual gate** (critic + Skeptic Pass 3) dispatched on the frozen Augusta file. Verdicts pending.
+
+**Follow-up (Augusta Reel gates):**
+- **v1:** critic HARD FAIL (6.2/10), Skeptic BLOCK (3 × S3). Problems: the Masters mark and a pro's photo on TripNerd's banner, a condiment-table ending, black-card text clipped at the edge, no place cue, a silent master.
+- **v2 rendered:** 11.07 s on a 92 BPM grid.
+  - Removed the banner, bar and condiment shots.
+  - "Thursday in Augusta" on S1, with the logo above the UI zone.
+  - Re-wrapped card held 2 s with grain.
+  - Dinner shot cropped.
+  - Ends on the 5:48 PM group with "Who would you bring?"
+  - 18 Mbps.
+- **QC harness:** all checks PASS except audio (in-app music by design; Karl to confirm the exemption).
+- **Filed:** v1 verdicts in Bible §13 and §14 (verbatim).
+- **v2 dual gate dispatched**, both checks independent.
+- **Updated:** shot list, runbook and edit plan.
+- **Still open for Karl:** the BC-25 human watch, confirming attendance during play, the bio link, the audio exemption.

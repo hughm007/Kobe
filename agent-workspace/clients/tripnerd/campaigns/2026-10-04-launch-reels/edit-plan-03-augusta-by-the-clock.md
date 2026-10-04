@@ -11,7 +11,8 @@ tags: [client, instagram, reel, edit-plan]
 
 # Edit plan: Reel 03, "Augusta, by the clock" (now posting as 01, Mon 5 Oct)
 
-> **Rendered 2026-10-04:** `TN-R03-augusta-by-the-clock-H3-v1.mp4`.
+> **v2 rendered 2026-10-04** after the v1 gate failed: `TN-R03-augusta-by-the-clock-H3-v2.mp4`, 11.07 s, 18 Mbps. The v2 shot list in [`shotlist.md`](shotlist.md) supersedes the table below.
+> **v1 rendered 2026-10-04:** `TN-R03-augusta-by-the-clock-H3-v1.mp4`.
 > - 1080×1920, 30 fps, 14.0 s, H.264, no audio.
 > - Text: Inter ExtraBold/SemiBold, with a top scrim for legibility.
 > - Built by script from the full-resolution photos. The file was sent to Karl in session; it is not committed (media).
