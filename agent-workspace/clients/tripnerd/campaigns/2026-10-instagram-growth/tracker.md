@@ -96,6 +96,7 @@ Status values: `idea → planned → drafted → in edit → sent for approval �
 
 | Date | Decision | By |
 |---|---|---|
+| 2026-10-04 | PDF for Jason is now 2 pages: page 1 has the price and a dated posting calendar; page 2 has the follower-growth levers and **the boost-budget question** (suggest $250–500 from week 3, best organic Reel only, TripNerd's sign-off, reported separately) | Karl (instruction); Claude (content) |
 | 2026-10-04 | Pricing to Jason: 4 Reels at a $300 October rate + 4 statics at $75 = $1,500, plus the 3 owed September adverts (1 video, 2 statics) posted in October at no charge. One-page PDF in `deliverables/2026-10-october-pricing/` | Karl (instruction); Claude (layout) |
 | 2026-10-04 | **October = $1,500 intro test month; the bigger package waits on results. Already-paid content gets posted without being charged again** | TripNerd + Wyatt Johnson (meeting) |
 | 2026-10-04 | September adverts and carousels go back on the plan (reverses the same-day "removed from the launch queue" decision below) | Meeting decision |

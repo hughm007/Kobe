@@ -5,36 +5,59 @@
 <style>
 @page { size: Letter; margin: 0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-:root { --cream:#F4F1EA; --navy:#111C30; --blue:#2B55D0; --gold:#D9A93F; --card:#FBF9F4; --line:#E2DDD2; --body:#3D4656; --muted:#6B7280; --lightblue:#E3E9F8; }
+:root { --cream:#F4F1EA; --navy:#111C30; --blue:#2B55D0; --gold:#D9A93F; --goldbg:#FBF1DA; --card:#FBF9F4; --line:#E2DDD2; --body:#3D4656; --muted:#6B7280; --lightblue:#E3E9F8; }
 html, body { background: var(--cream); }
-body { width: 8.5in; height: 11in; font-family: 'Inter', Arial, sans-serif; color: var(--navy); font-size: 10.5pt; line-height: 1.38; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-.page { width: 8.5in; height: 11in; padding: 0.45in 0.55in 0.38in; display: flex; flex-direction: column; gap: 11px; position: relative; overflow: hidden; }
-.eyebrow { font-size: 8.5pt; font-weight: 700; letter-spacing: 2.2px; color: var(--blue); text-transform: uppercase; }
-h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 24pt; line-height: 1.08; font-weight: 700; margin-top: 4px; }
-.sub { color: var(--body); font-size: 10.5pt; margin-top: 4px; }
-.headline { background: var(--navy); color: #E6EAF2; border-radius: 10px; padding: 10px 16px; display: flex; gap: 16px; align-items: center; }
-.headline .big { font-family: 'Playfair Display', Georgia, serif; font-size: 25pt; font-weight: 700; color: #F4F1EA; line-height: 1; white-space: nowrap; }
+body { width: 8.5in; font-family: 'Inter', Arial, sans-serif; color: var(--navy); font-size: 10pt; line-height: 1.35; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 8.5in; height: 11in; padding: 0.5in 0.55in 0.38in; display: flex; flex-direction: column; gap: 14px; position: relative; overflow: hidden; break-after: page; }
+.page:last-child { break-after: auto; }
+.eyebrow { font-size: 8pt; font-weight: 700; letter-spacing: 2px; color: var(--blue); text-transform: uppercase; }
+h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 26pt; line-height: 1.08; font-weight: 700; margin-top: 2px; }
+.sub { color: var(--body); font-size: 10.5pt; margin-top: 2px; }
+.headline { background: var(--navy); color: #E6EAF2; border-radius: 9px; padding: 11px 16px; display: flex; gap: 16px; align-items: center; }
+.headline .big { font-family: 'Playfair Display', Georgia, serif; font-size: 27pt; font-weight: 700; color: #F4F1EA; line-height: 1; white-space: nowrap; }
 .headline p { font-size: 10.5pt; line-height: 1.4; }
 .headline b { color: #F4F1EA; }
-h2 { font-size: 8.5pt; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 6px; }
-table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; font-size: 9.5pt; }
-th { text-align: left; font-weight: 600; color: var(--muted); font-size: 8.5pt; letter-spacing: .4px; text-transform: uppercase; padding: 5px 11px; border-bottom: 1px solid var(--line); }
-td { padding: 5px 11px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--body); }
+h2 { font-size: 8.5pt; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; color: var(--blue); margin-bottom: 6px; }
+table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 9px; overflow: hidden; font-size: 10pt; }
+th { text-align: left; font-weight: 600; color: var(--muted); font-size: 8pt; letter-spacing: .4px; text-transform: uppercase; padding: 6px 11px; border-bottom: 1px solid var(--line); }
+td { padding: 6px 11px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--body); }
 td b { color: var(--navy); }
 tr:last-child td { border-bottom: none; }
 td.num, th.num { text-align: right; white-space: nowrap; }
-tr.total td { background: var(--lightblue); color: var(--navy); font-weight: 700; font-size: 10.5pt; }
-tr.owed td { background: #FBF4E3; }
-.note { font-size: 8.5pt; color: var(--muted); margin-top: 4px; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 9px 13px; }
-.card .k { font-size: 8.5pt; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+tr.total td { background: var(--lightblue); color: var(--navy); font-weight: 700; }
+tr.owed td { background: var(--goldbg); }
+.note { font-size: 8.5pt; color: var(--muted); margin-top: 5px; }
+/* calendar */
+.cal { table-layout: fixed; font-size: 9.5pt; }
+.cal th { text-align: left; }
+.cal td { padding: 7px 7px; height: 0.78in; border-right: 1px solid var(--line); }
+.cal td:last-child { border-right: none; }
+.cal td.wk { width: 1.05in; font-weight: 700; color: var(--navy); background: #F1EDE3; }
+.cal td.wk span { display: block; font-weight: 400; color: var(--muted); font-size: 8.5pt; }
+.slot { display: block; border-radius: 6px; padding: 5px 7px; line-height: 1.28; }
+.slot i { font-style: normal; display: block; font-size: 8.5pt; font-weight: 600; opacity: .85; }
+.reel { background: var(--navy); color: #F4F1EA; }
+.stat { background: var(--lightblue); color: var(--navy); }
+.owed { background: var(--goldbg); color: var(--navy); border: 1px solid #E9D49C; }
+.setup { color: var(--muted); font-size: 8.5pt; line-height: 1.3; display: block; }
+.legend { display: flex; gap: 14px; align-items: center; font-size: 8.5pt; color: var(--muted); margin-top: 4px; flex-wrap: wrap; }
+.legend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; vertical-align: -1px; margin-right: 4px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.card.dark { background: var(--navy); border: none; }
+.card .k { font-size: 8.5pt; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
 .card .k.blue { color: var(--blue); }
-.card p { color: var(--body); font-size: 9.5pt; line-height: 1.36; }
-.card p b { color: var(--navy); }
-.weeks td:first-child { white-space: nowrap; font-weight: 600; color: var(--navy); width: 1.25in; }
-.weeks td:nth-child(2) { width: 0.6in; }
-.foot { margin-top: auto; display: flex; justify-content: space-between; font-size: 8.5pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; }
+.card p, .card li { color: var(--body); font-size: 10pt; line-height: 1.42; }
+.card.dark p, .card.dark li { color: #D9DFEA; }
+.card b { color: var(--navy); }
+.card.dark b { color: #F4F1EA; }
+.card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.card li { padding-left: 13px; position: relative; }
+.card li::before { content: ""; position: absolute; left: 0; top: 6px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+.src { font-size: 8pt; color: var(--muted); margin-top: 8px; }
+.card.dark .src { color: #8E9AB0; }
+.foot { margin-top: auto; display: flex; justify-content: space-between; font-size: 8pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 6px; }
 </style></head>
 <body><div class="page">
 
@@ -55,37 +78,89 @@ tr.owed td { background: #FBF4E3; }
     <tr><th>What you get in October</th><th class="num">Qty</th><th class="num">Standard price</th><th class="num">October</th></tr>
     <tr><td><b>Reels</b>, cut from your own trip footage</td><td class="num">4</td><td class="num">$325 each</td><td class="num">$300 each = <b>$1,200</b></td></tr>
     <tr><td><b>Static posts</b>: carousels and proof posts</td><td class="num">4</td><td class="num">$75 each</td><td class="num">$75 each = <b>$300</b></td></tr>
-    <tr><td><b>Monday report</b> with the analytics on every video, plus Stories Mon, Wed and Fri to push each new post</td><td class="num">weekly</td><td class="num">included</td><td class="num">$0</td></tr>
+    <tr><td><b>Stories</b> and a <b>Monday report</b> with the analytics on every video</td><td class="num">weekly</td><td class="num">included</td><td class="num">$0</td></tr>
     <tr class="owed"><td><b>Owed from September:</b> 1 video advert and 2 static adverts, due last month and not yet delivered</td><td class="num">3</td><td class="num">already paid</td><td class="num">$0</td></tr>
     <tr class="total"><td>October total</td><td class="num">11</td><td class="num">$1,600</td><td class="num">$1,500</td></tr>
   </table>
-  <p class="note">October's Reel rate is $300, the low end of our $300–325 range. Statics stay at $75. Organic posting only: no ad spend.</p>
+  <p class="note">October's Reel rate is $300, the low end of our $300–325 range. Statics stay at $75. Boosting is separate (page 2).</p>
 </div>
 
 <div>
-  <h2>The strategy: what each post is for</h2>
-  <div class="grid">
-    <div class="card"><p class="k">5 videos · find new people</p><p>Reels are what Instagram shows to people who <b>don't follow TripNerd yet</b>. Each opens on a real event moment from your footage, with TripNerd as the payoff. One or two run first as <b>Trial Reels</b>, shown only to non-followers, so the strongest opening wins.</p></div>
-    <div class="card"><p class="k blue">6 statics · keep and convince</p><p>Carousels that fans and corporate hosts <b>save and send</b> while planning a trip, and proof posts that show how a TripNerd trip is handled. They turn viewers into followers, and followers into enquiries.</p></div>
+  <h2>Your October posting calendar (Eastern time)</h2>
+  <table class="cal">
+    <tr><th style="width:1.05in">Week</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr>
+    <tr><td class="wk">Week 1<span>5–11 Oct</span></td>
+      <td><span class="setup">Setup: partner access, your starting numbers from Insights</span></td>
+      <td><span class="setup">Setup: first posts approved</span></td>
+      <td><span class="slot reel"><i>12:00 PM</i>Reel 1</span></td>
+      <td><span class="slot owed"><i>12:30 PM</i>Owed static advert 1</span></td>
+      <td></td></tr>
+    <tr><td class="wk">Week 2<span>12–18 Oct</span></td>
+      <td><span class="slot owed"><i>2:00 PM</i>Owed video advert</span></td>
+      <td><span class="slot stat"><i>1:00 PM</i>Static 1: carousel</span></td>
+      <td></td>
+      <td></td>
+      <td><span class="slot reel"><i>11:00 AM</i>Reel 2, as a Trial Reel</span></td></tr>
+    <tr><td class="wk">Week 3<span>19–25 Oct</span></td>
+      <td></td>
+      <td><span class="slot stat"><i>1:00 PM</i>Static 2: proof post</span></td>
+      <td><span class="slot reel"><i>12:00 PM</i>Reel 3</span></td>
+      <td><span class="slot owed"><i>12:30 PM</i>Owed static advert 2</span></td>
+      <td></td></tr>
+    <tr><td class="wk">Week 4<span>26 Oct–1 Nov</span></td>
+      <td><span class="slot reel"><i>2:00 PM</i>Reel 4</span></td>
+      <td><span class="slot stat"><i>1:00 PM</i>Static 3: carousel</span></td>
+      <td></td>
+      <td><span class="slot stat"><i>12:30 PM</i>Static 4: proof post</span></td>
+      <td></td></tr>
+  </table>
+  <div class="legend"><span><span class="sw" style="background:#111C30"></span>New Reel</span><span><span class="sw" style="background:#E3E9F8"></span>New static</span><span><span class="sw" style="background:#FBF1DA;border:1px solid #E9D49C"></span>Owed from September</span><span>Stories: 10 AM every Mon, Wed and Fri, plus each new post shared to your Story within 15 minutes. No weekend posts. Times move to your own best hours after week one.</span></div>
+</div>
+
+<div class="foot"><span>ServicePow · Prices in USD · Growth is a target, not a guarantee.</span><span>Page 1 of 2</span></div>
+</div>
+
+<div class="page">
+<div>
+  <p class="eyebrow">TripNerd × ServicePow · October 2026</p>
+  <h1>Growing your followers</h1>
+  <p class="sub">What each post is for, what we do to reach new people, and one decision for you on boosting.</p>
+</div>
+
+<div class="grid2">
+  <div class="card"><p class="k">5 videos · reach new people</p><p>Reels are the posts Instagram shows to people who <b>don't follow TripNerd yet</b>. That's where new followers come from, so they lead the month.</p></div>
+  <div class="card"><p class="k blue">6 statics · keep and convince</p><p>Carousels that fans and corporate hosts <b>save while planning a trip</b>, and proof posts showing how a TripNerd trip is handled. They turn visitors into followers, and followers into enquiries.</p></div>
+</div>
+
+<div class="grid2">
+  <div class="card">
+    <p class="k blue">How we'll grow your followers</p>
+    <ul>
+      <li><b>Open on the moment.</b> Every Reel starts on a big event moment from your footage, so Instagram shows it to people into that event, not just your followers.</li>
+      <li><b>Test before we commit.</b> Reel 2 runs as a Trial Reel, shown only to non-followers first. The opening that wins gets used again.</li>
+      <li><b>Made to be sent.</b> Each Reel gives people a reason to send it to the friend they'd take. Sends are one of the signals Instagram weighs most.</li>
+      <li><b>A reason to follow.</b> Your bio and every caption say what following TripNerd gets you.</li>
+      <li><b>Collab posts.</b> When a post features a venue or partner you work with, we invite them as a collaborator, so it shows on their account too.</li>
+    </ul>
+    <p class="src">Ranking signals: Adam Mosseri, head of Instagram, January 2025.</p>
+  </div>
+  <div class="card dark">
+    <p class="k">Is there a budget for boosting posts?</p>
+    <p style="margin-bottom:4px">Boosting pays Instagram to show a post to more people, including people who've never seen TripNerd.</p>
+    <ul>
+      <li><b>Our suggestion:</b> no boost until a Reel proves itself on its own. From week 3, put a set amount behind the best one.</li>
+      <li><b>You set the ceiling.</b> $250–$500 for October is enough to learn from.</li>
+      <li><b>On top of the $1,500,</b> paid to Meta from your ad account. Nothing is spent without your sign-off.</li>
+      <li><b>Reported separately,</b> so you always see organic and paid results apart.</li>
+      <li><b>Never bought followers.</b> We only put money behind real posts, shown to real people.</li>
+    </ul>
   </div>
 </div>
 
-<div>
-  <h2>The month, week by week</h2>
-  <table class="weeks">
-    <tr><th>Week</th><th class="num">Posts</th><th>What goes up</th></tr>
-    <tr><td>5–11 Oct</td><td class="num">2</td><td>Setup (partner access, your starting numbers from Insights), then Reel 1 and owed static advert 1</td></tr>
-    <tr><td>12–18 Oct</td><td class="num">3</td><td>The owed video advert, Reel 2, static 1</td></tr>
-    <tr><td>19–25 Oct</td><td class="num">3</td><td>Reel 3, static 2, owed static advert 2</td></tr>
-    <tr><td>26 Oct–1 Nov</td><td class="num">3</td><td>Reel 4, statics 3 and 4</td></tr>
-  </table>
-  <p class="note">Set times (Eastern): Reels Mon 2 PM or Wed 12 PM; statics Tue 1 PM or Thu 12:30 PM. Tuned to your own Insights after week one.</p>
-</div>
-
-<div class="grid">
-  <div class="card"><p class="k blue">To start, we need</p><p><b>Partner access</b> in Meta Business Suite (no passwords), <b>one approver</b> who replies within two business days, and <b>all your trip footage</b> in one shared Drive folder. The sooner the footage arrives, the sooner the Reels post.</p></div>
+<div class="grid3">
+  <div class="card"><p class="k blue">To start, we need</p><p><b>Partner access</b> in Meta Business Suite (no passwords), <b>one approver</b> who replies within two business days, and <b>all your trip footage</b> in one shared Drive folder. Taylor's 17th-hole clips first.</p></div>
   <div class="card"><p class="k">Then you decide</p><p>Every Monday you see followers, views, the share from non-followers, sends, saves and follows on each video. In the first week of November we review October together, and <b>you decide what comes next</b>.</p></div>
 </div>
 
-<div class="foot"><span>ServicePow · Prices in USD · Growth is a target, not a guarantee.</span><span>Prepared 4 October 2026</span></div>
+<div class="foot"><span>ServicePow · Prices in USD · Growth is a target, not a guarantee.</span><span>Prepared 4 October 2026 · Page 2 of 2</span></div>
 </div></body></html>

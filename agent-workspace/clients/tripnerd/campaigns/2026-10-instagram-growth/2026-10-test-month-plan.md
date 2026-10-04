@@ -85,6 +85,14 @@ All of these return with the higher tiers.
 
 ## 3. October calendar (ET)
 
+> **The client-facing schedule is the one in the PDF given to Jason** (`../../deliverables/2026-10-october-pricing/`, page 1). It shows 11 posts: the 4 new Reels, 4 new statics and 3 owed September adverts. The 2 delivered videos aren't in it.
+> - **Week 1:** Wed 7 12 PM Reel 1 · Thu 8 12:30 PM owed static 1
+> - **Week 2:** Mon 12 2 PM owed video · Tue 13 1 PM static 1 · Fri 16 11 AM Reel 2 as a Trial Reel
+> - **Week 3:** Tue 20 1 PM static 2 · Wed 21 12 PM Reel 3 · Thu 22 12:30 PM owed static 2
+> - **Week 4:** Mon 26 2 PM Reel 4 · Tue 27 1 PM static 3 · Thu 29 12:30 PM static 4
+>
+> Stories go up at 10 AM Mon/Wed/Fri, plus a Story share within 15 minutes of each post. **Where the table below differs, the PDF wins.**
+
 Times are the presented plan's: Reels Mon 2 PM and Wed 12 PM, statics Tue 1 PM and Thu 12:30 PM, Trial Reels Fri 11 AM, Stories 10 AM. They get re-tuned from Insights after week one. Every post needs the approver's yes first.
 
 | Week | Dates | Feed posts (PROPOSAL; order moves with what's ready) | Setup and actions |
@@ -137,6 +145,26 @@ This is the deck's slide 4.
 - **Don't present the tiers as likely to be reached.**
 
 **Watch out:** a fee tied only to followers rewards follower-chasing, and followers aren't bookings. Keep DM enquiries in every report. Ask again at the review for the average booking margin (the measurement slide's blank), so the conversation can move to enquiries and bookings.
+
+## 5b. Follower growth and boosting (as put to Jason, PDF page 2)
+- **Growth levers in every post:**
+  - open on the event moment (topic signal);
+  - Trial Reel test on Reel 2;
+  - made to be sent (sends per reach; Mosseri, Jan 2025);
+  - a follow reason in the bio and captions;
+  - Collab posts with venues and partners, with their OK.
+- **Boost budget asked as a question.** Our suggestion:
+  - no boost until a Reel proves itself organically; from week 3, boost the best one;
+  - TripNerd sets the ceiling ($250–500 suggested for October);
+  - the money is paid to Meta from TripNerd's ad account, on top of the $1,500;
+  - boosted results are reported separately from organic.
+- **Before any boost:**
+  - TripNerd's written yes to the amount;
+  - Karl as SPEND_APPROVER;
+  - the ad account added to partner access (it's excluded by default; see the playbook).
+- **Watch out:**
+  - boost follows inflate the follower count, so the November review reads **organic** follows only;
+  - running the boost is ServicePOW labour **not priced** in the $1,500 (Karl's call).
 
 ## 6. Money and admin
 
