@@ -142,165 +142,127 @@ td{min-width:120px}
 .btn:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
 .day-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;margin-top:8px}
 .post td:first-child{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
-.post td code,.fit td code{font-family:var(--mono);font-size:12px;background:var(--bg);padding:1px 5px;border-radius:4px;word-break:break-all}
+td code{font-family:var(--mono);font-size:12px;background:var(--bg);padding:1px 5px;border-radius:4px;word-break:break-all}
 .post .none{color:var(--muted)}
-.fit td:first-child{font-weight:600;min-width:170px}
-.fit td:nth-child(2){color:var(--muted)}
-.pill{display:inline-block;font:600 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:999px;border:1px solid var(--line)}
-.pill.ok{color:var(--ok);border-color:var(--ok)}
-.pill.fix{color:var(--flag);border-color:var(--flag)}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:10px 0 4px}
+.why div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13.5px;display:grid;gap:4px}
+.why b{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.dm{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:13.5px;display:grid;gap:6px}
+.dm b{font-family:var(--mono);font-size:12px}
+.dm p{margin:0;color:var(--ink)}
+@media (max-width:900px){.why{grid-template-columns:minmax(0,1fr)}}
 </style>
 <header class="top">
-  <span class="eyebrow">ServicePOW × TripNerd · Instagram Stories · Week 1 of the growth plan (Mon 5 – Fri 9 Oct 2026)</span>
+  <span class="eyebrow">ServicePOW × TripNerd · Instagram Stories · Week 1 (Mon 5 – Fri 9 Oct 2026) · v3</span>
   <h1>TripNerd Story Week</h1>
-  <p class="lede">22 finished Story frames, 1080×1920, matched to the TripNerd Instagram Growth Plan. There's a 10 AM ET set every weekday, plus a "new post" frame within the hour of each feed post. Each day has a keyword to DM and a link with tracking tags. Every photo, quote and logo is TripNerd's own, from tripnerd.com. No AI imagery.</p>
+  <p class="lede">24 finished frames, built after reading TripNerd's own Instagram. Their feed already tells people TripNerd is VIP, handles the details and knows the right people. These Stories prove it instead: insider knowledge, real stakes, real review data and real deadlines, each ending in a DM keyword. Every set still follows the growth plan: 10 AM ET, a frame promoting each new feed post, and links with tracking tags.</p>
   <div class="kit">
-    <a class="btn" href="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/5aa1ff1e-c340-4ce2-b360-26ec89b484f8.jpg">See all 22 frames</a>
-    <a class="btn alt" href="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/4055ce54-bc9d-446f-a352-88f009753ce0.zip">Download posting files (ZIP, 8.4 MB)</a>
+    <a class="btn" href="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/3baddf76-515d-413b-8b3f-3f18f969f853.jpg">See all 24 frames</a>
+    <a class="btn alt" href="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/923c510a-90d0-463c-8fc5-5d52daa28911.zip">Download posting files (ZIP, 4.7 MB)</a>
   </div>
-  <p class="foot" style="margin-top:10px"><b>post/</b> has the clean frames to upload. <b>preview/</b> shows each sticker's position as a dashed gold box. Stickers are added in the Instagram app; a sticker baked into an image can't be tapped.</p>
+  <p class="foot" style="margin-top:10px"><b>post/</b> holds the clean frames to upload. <b>preview/</b> shows where each sticker goes as a dashed gold box. Stickers are added in the Instagram app.</p>
 </header>
 
 <section class="block">
-  <span class="eyebrow">Growth plan check</span>
-  <h2>How the Stories match the plan</h2>
-  <p class="lede" style="margin-top:0">The first version matched the plan's audience and posting rules, but missed its timing, its "push every new post" rule and its DM system. The Stories also didn't line up with the week's feed posts. Every row is now covered.</p>
-  <div class="tablewrap"><table class="fit">
-    <thead><tr><th>What the plan says</th><th>First version</th><th>Now</th></tr></thead>
+  <span class="eyebrow">What we found on @tripnerd</span>
+  <h2>Their feed already says it. Nobody believes it yet.</h2>
+  <p class="lede" style="margin-top:0">We read the 21 most recent posts (13 Aug – 1 Oct 2026) and the 3 pinned ones. Instagram rate-limited anything older. 19 of the 21 are the same template: a gallery photo with a blue headline bar. The median post gets 2 likes. The two outliers (140 and 75 likes) look boosted, which we'll confirm in Insights.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Theme they've already posted</th><th>Times</th><th>Example line</th><th>How the Stories avoid repeating it</th></tr></thead>
     <tbody>
-      <tr><td>Stories Mon–Fri at 10 AM ET (p.7)</td><td><span class="pill fix">Missed</span> "Late morning, a guess"</td><td>Every set goes up at 10 AM ET.</td></tr>
-      <tr><td>A Story pushes each new post within the hour of posting (p.3, p.5 step 7)</td><td><span class="pill fix">Missed</span> No push frames</td><td>"New post" frames for Monday's 2 PM Reel, Tuesday's 1 PM carousel and Thursday's 12:30 PM proof post. Friday's Trial Reel is not pushed, because Trial Reels test hooks on non-followers first.</td></tr>
-      <tr><td>Stories carry polls, questions, behind the scenes and DM prompts (p.3)</td><td><span class="pill fix">Partial</span> One keyword, two days</td><td>A sticker and a DM prompt every day. Keywords: <code>AUGUSTA</code> (Mon, Wed), <code>HOST</code> (Tue), <code>BIGGAME</code> (Fri).</td></tr>
-      <tr><td>Stories support the week's launch-queue posts (p.7–8)</td><td><span class="pill fix">Missed</span> Separate topics</td><td>Monday sets up Reel 01 "Augusta, by the clock". Corporate moved to Tuesday beside carousel 02 "What corporate hosts get wrong". Real reviews moved to Thursday beside proof post 04 "Communication proof". Augusta gets Wednesday, the one day with no feed post.</td></tr>
-      <tr><td>Content made to be sent (p.3, Reels; p.8, "made to be sent"; p.10, sends per 1,000)</td><td><span class="pill fix">Missed</span></td><td>Friday asks "Who are you taking? Send this to them."</td></tr>
-      <tr><td>Reviews quoted word for word (p.6)</td><td><span class="pill fix">Missed</span> Two quotes trimmed with "…"</td><td>All three quotes are now whole sentences, unedited. Jon Reader's "Communication was high level!" now runs on proof-post day.</td></tr>
-      <tr><td>Guests identifiable only with consent (p.6)</td><td><span class="pill fix">Not flagged</span></td><td>A blocking check: TripNerd confirms consent for every identifiable guest, or we crop or swap the photo.</td></tr>
-      <tr><td>Event names only to say where guests went; never shown as an official partner; no event logos (p.6)</td><td><span class="pill ok">Met</span></td><td>"Big Game" wording throughout. THE PLAYERS appears only in Chris's review, which describes where his guests went. No event logos.</td></tr>
-      <tr><td>ServicePOW handles DMs first: a person replies within 1 business hour, Mon–Fri 9 AM–6 PM ET; leads go to TripNerd sales the same day (p.5)</td><td><span class="pill fix">Wrong</span> Said TripNerd watches DMs</td><td>ServicePOW answers the keywords. ManyChat isn't live yet, so a person replies until it is (the plan's own fallback, p.11).</td></tr>
-      <tr><td>Every lead traced to its source (p.10)</td><td><span class="pill fix">Missed</span> Plain links</td><td>Each day's link carries its own tracking tag (below).</td></tr>
-      <tr><td>For corporate hosts and premium fans (p.2)</td><td><span class="pill ok">Met</span></td><td>Tuesday is for corporate hosts. Monday, Wednesday and Friday are for fans. Thursday serves both.</td></tr>
-      <tr><td>AI only for gaps and always labelled; music only from Instagram's commercial-use library (p.6)</td><td><span class="pill ok">Met</span></td><td>No AI used. If music is added to a Story, use the commercial-use library only.</td></tr>
+      <tr><td>Knowing the right people</td><td>3</td><td>"How'd they get that? It's knowing the right people."</td><td>Not used. Thursday shows <em>who</em> those people are (Jason, named in 7 of 15 reviews) instead of claiming access.</td></tr>
+      <tr><td>Bucket list to booked</td><td>4</td><td>"Turn someday into booked."</td><td>Not used. Friday gives a hard deadline instead: 14 days.</td></tr>
+      <tr><td>Details handled, stress-free</td><td>4</td><td>"The details are already handled."</td><td>Not claimed. Monday shows the details (phones, payphones, arrival day). Thursday lets 6 reviewers say "detail" for us.</td></tr>
+      <tr><td>Skip the client dinner</td><td>2</td><td>"Hosting clients? Skip another dinner."</td><td>Dropped from the last version, where it was a near-copy. Tuesday sells the planning calendar instead.</td></tr>
+      <tr><td>Memories last; don't just attend</td><td>3</td><td>"The game ends. The memories don't."</td><td>Not used anywhere.</td></tr>
+      <tr><td>Nerd wordplay</td><td>1</td><td>"Access Nerd. Hospitality Nerd. Hotel Nerd…"</td><td>Kept as the brand device, but every "Nerd" line has to earn it with a fact (the "Trip like a Nerd" tagline is from their site).</td></tr>
     </tbody>
   </table></div>
+  <p class="foot">Visual change: their feed is photo plus blue bar. These Stories use a graph-paper "Nerd Notes" notebook with red-pen circles, highlighter and planner pages, plus one bold navy anti-ad set. They're recognisably TripNerd (Poppins, Inter, brand blue, navy and gold) but don't look like the feed.</p>
+</section>
+
+<section class="block">
+  <span class="eyebrow">The marketing angle</span>
+  <h2>Sell the Nerd, not the trip</h2>
+  <p class="lede" style="margin-top:0">Everyone in premium sports travel says "VIP" and "unforgettable." TripNerd's name is the one thing a competitor can't copy, so every Story has to prove that a Nerd knows something useful. Each set does at least one job: teach something the viewer didn't know, show what goes wrong without a Nerd, prove it with TripNerd's own reviews, or give a real reason to act now. "Here's our trip" photos appear only as supporting evidence.</p>
+  <p class="foot">Each concept was put through a separate red-team review: would a competitor run it unchanged, what would a viewer remember, and is it actually marketing. Concepts that failed were cut: "Nerd vs Google", the client-value slider, the Add Yours chain (which stays empty on an account getting 2 likes), the 3 a.m. call (we can't promise overnight support until TripNerd confirms it), and 17th-hole trivia.</p>
 </section>
 
 <section class="block">
   <span class="eyebrow">Day by day</span>
-  <h2>Upload, add the sticker, post</h2>
-  <p class="lede" style="margin-top:0">Post the frames for each day in order from <b>post/</b> at 10 AM ET. The "new post" frame goes up within the hour after that day's feed post: share the post to your Story, then put this frame behind it as the background. Save each set to its Highlight.</p>
+  <h2>The five Stories</h2>
 
-  <div class="day-h"><h3>Mon 5 Oct · 10 AM</h3><span class="stage">Feed: Reel 01 "Augusta, by the clock" at 2 PM</span><span class="stage">Highlight: Events</span></div>
-  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>What it shows</th><th>Add in the app</th></tr></thead><tbody>
-    <tr><td>mon-1</td><td>"Be honest." Where were you sitting at the last big event?</td><td>Poll: <code>Last big event, I was…</code> · <code>In the crowd</code> / <code>In a suite</code></td></tr>
-    <tr><td>mon-2</td><td>"This is where we put you." Real TripNerd guests at the rail</td><td class="none">Nothing</td></tr>
-    <tr><td>mon-3</td><td>2027 calendar, plus "New Reel at 2 PM: Augusta, by the clock."</td><td>Link: <code>https://www.tripnerd.com/?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-mon</code> · text <code>See 2027 experiences</code></td></tr>
-    <tr><td>mon-4 · 2 PM</td><td>"New Reel · Augusta, by the clock." DM AUGUSTA</td><td>Share Reel 01 onto this frame</td></tr>
+  <div class="day-h"><h3>Mon · Nerd Notes: Augusta</h3><span class="stage">Fans</span><span class="stage">Feed: Reel 01 "Augusta, by the clock", 2 PM</span></div>
+  <div class="why"><div><b>Hook</b>A pop quiz: what does a pimento cheese sandwich cost at Augusta? ($1.50, unchanged since 2002.)</div><div><b>Why it sells</b>A fun fact opens the set; the stakes close it. Get caught with a phone and you can lose your credentials for good. Knowing that before you go is exactly what a Nerd is for.</div><div><b>Action</b>DM AUGUSTA for the cheat sheet (script below).</div></div>
+  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>Add in the app</th></tr></thead><tbody>
+    <tr><td>mon-1</td><td>Quiz: <code>What does a pimento cheese sandwich cost at Augusta?</code> · <code>$1.50</code> (correct) / <code>$8</code> / <code>$15</code></td></tr>
+    <tr><td>mon-2–4</td><td class="none">Nothing. $1.50 reveal → phone rule and free payphones → Rookie vs Nerd arrival day</td></tr>
+    <tr><td>mon-5 · 2 PM</td><td>Share Reel 01 onto this frame</td></tr>
   </tbody></table></div>
 
-  <div class="day-h"><h3>Tue 6 Oct · 10 AM</h3><span class="stage">Feed: Carousel 02 "What corporate hosts get wrong" at 1 PM</span><span class="stage">Highlight: Corporate</span></div>
-  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>What it shows</th><th>Add in the app</th></tr></thead><tbody>
-    <tr><td>tue-1</td><td>"Taking 8 clients out this year?" TripNerd-branded hospitality space</td><td class="none">Nothing</td></tr>
-    <tr><td>tue-2</td><td>"They'll forget the steak dinner. They won't forget this." Real corporate group</td><td class="none">Nothing</td></tr>
-    <tr><td>tue-3</td><td>Chris: "exceptional partner… for over seven years" (his whole sentence, unedited)</td><td class="none">Nothing</td></tr>
-    <tr><td>tue-4</td><td>"DM us HOST." Tell us the hardest part of hosting clients</td><td>Question: <code>What's the hardest part of hosting clients?</code> · Link: <code>https://www.tripnerd.com/contact?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-tue-corporate</code></td></tr>
-    <tr><td>tue-5 · 1 PM</td><td>"New carousel · What corporate hosts get wrong." DM HOST</td><td>Share carousel 02 onto this frame</td></tr>
-  </tbody></table></div>
-  <p class="foot">The answers to Tuesday's question box are research for carousels 06 and 10 in the launch queue.</p>
-
-  <div class="day-h"><h3>Wed 7 Oct · 10 AM</h3><span class="stage">No feed post (Days 1–30)</span><span class="stage">Highlight: Augusta</span></div>
-  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>What it shows</th><th>Add in the app</th></tr></thead><tbody>
-    <tr><td>wed-1</td><td>"Inside the Augusta Experience." Five things, tap through</td><td class="none">Nothing</td></tr>
-    <tr><td>wed-2–4</td><td>Private executive home · Course passes included · Daily hospitality, food and drink included (TripNerd's own Package Highlights, word for word)</td><td class="none">Nothing</td></tr>
-    <tr><td>wed-5</td><td>"TripNerd hosted, all week." DM AUGUSTA</td><td>Question: <code>Ask us about Augusta</code> · Link: <code>https://www.tripnerd.com/events/augusta-experience?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-wed-augusta</code></td></tr>
+  <div class="day-h"><h3>Tue · The client-week calendar</h3><span class="stage">Corporate hosts</span><span class="stage">Feed: Carousel 02 "What corporate hosts get wrong", 1 PM</span></div>
+  <div class="why"><div><b>Hook</b>Poll: "The last thing you did for your top client?" Dinner / Box seats / Gift basket / Nothing yet.</div><div><b>Why it sells</b>Hosts book about a year out. Showing the October-to-April calendar makes "start now" feel like normal planning rather than a sales push, and "Every month you wait is one less choice" answers the "we'll do it in spring" objection.</div><div><b>Action</b>DM HOST for the client-week planner.</div></div>
+  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>Add in the app</th></tr></thead><tbody>
+    <tr><td>tue-1</td><td>Poll (4 options): <code>Dinner</code> / <code>Box seats</code> / <code>Gift basket</code> / <code>Nothing yet</code></td></tr>
+    <tr><td>tue-4</td><td>Link: <code>https://www.tripnerd.com/contact?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-tue-corporate</code></td></tr>
+    <tr><td>tue-5 · 1 PM</td><td>Share carousel 02 onto this frame</td></tr>
   </tbody></table></div>
 
-  <div class="day-h"><h3>Thu 8 Oct · 10 AM</h3><span class="stage">Feed: Proof post 04 "Communication proof" at 12:30 PM</span><span class="stage">Highlight: Reviews</span></div>
-  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>What it shows</th><th>Add in the app</th></tr></thead><tbody>
-    <tr><td>thu-1</td><td>"Don't take our word for it." TripNerd guests at Augusta</td><td class="none">Nothing</td></tr>
-    <tr><td>thu-2</td><td>Jon Reader's full review, including "Communication was high level!"</td><td class="none">Nothing</td></tr>
-    <tr><td>thu-3</td><td>Kristin's full Derby review, over TripNerd guests at Churchill Downs</td><td class="none">Nothing</td></tr>
-    <tr><td>thu-4</td><td>"Quick quiz." Earlier means better seats and stays</td><td>Quiz: <code>How early should you book a bucket-list event?</code> · <code>A month</code> / <code>3 months</code> / <code>6–12 months</code> (correct) · Link: <code>https://www.tripnerd.com/?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-thu-proof</code></td></tr>
-    <tr><td>thu-5 · 12:30 PM</td><td>"New post · How we keep every guest in the loop."</td><td>Share proof post 04 onto this frame</td></tr>
+  <div class="day-h"><h3>Wed · Don't book with TripNerd if…</h3><span class="stage">Both</span><span class="stage">No feed post</span></div>
+  <div class="why"><div><b>Hook</b>An anti-ad: "Don't book with TripNerd if…"</div><div><b>Why it sells</b>Each line names a real event-specific pain: parking at Churchill Downs, 2 a.m. resale refreshing, eight people and no beds in Augusta. It filters for people who'd rather pay than suffer, and the payoff uses their own tagline: "You trip like a Nerd."</div><div><b>Action</b>DM NERD with the event.</div></div>
+  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>Add in the app</th></tr></thead><tbody>
+    <tr><td>wed-4</td><td>Poll: <code>Been there?</code> · <code>Yes, painfully</code> / <code>Not yet</code></td></tr>
+    <tr><td>wed-5</td><td>Link: <code>https://www.tripnerd.com/?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-wed-nerd</code></td></tr>
   </tbody></table></div>
-  <p class="foot">If proof post 04 also quotes Jon Reader, swap thu-2 for another review so the same quote doesn't run twice in one day.</p>
 
-  <div class="day-h"><h3>Fri 9 Oct · 10 AM</h3><span class="stage">Feed: Trial Reel at 11 AM (not pushed)</span><span class="stage">Highlight: Big Game</span></div>
-  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>What it shows</th><th>Add in the app</th></tr></thead><tbody>
-    <tr><td>fri-1</td><td>"The Big Game is in LA." Sun Feb 14, 2027, SoFi Stadium</td><td class="none">Nothing</td></tr>
-    <tr><td>fri-2</td><td>"Big Game packages are booking now."</td><td>Countdown: <code>The Big Game · LA</code>, ending Sun 14 Feb 2027</td></tr>
-    <tr><td>fri-3</td><td>"Who are you taking?" Send this to them, then DM BIGGAME</td><td>Question: <code>How many in your group?</code> · Link: <code>https://www.tripnerd.com/contact?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-fri-biggame</code> · text <code>Get a quote</code></td></tr>
+  <div class="day-h"><h3>Thu · Review X-ray</h3><span class="stage">Corporate hosts + fans</span><span class="stage">Feed: Proof post 04, 12:30 PM</span></div>
+  <div class="why"><div><b>Hook</b>Quiz: "15 guests. How many mention Jason by name?" (7.)</div><div><b>Why it sells</b>Proof from data, not adjectives. Seven of fifteen reviews name the person who ran their trip, and six use the word "detail." Risk-averse corporate buyers want a person, not a call centre.</div><div><b>Action</b>DM NERD.</div></div>
+  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>Add in the app</th></tr></thead><tbody>
+    <tr><td>thu-1</td><td>Quiz: <code>How many of 15 reviews mention Jason?</code> · <code>2</code> / <code>4</code> / <code>7</code> (correct)</td></tr>
+    <tr><td>thu-4</td><td>Link: <code>https://www.tripnerd.com/reviews?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-thu-proof</code></td></tr>
+    <tr><td>thu-5 · 12:30 PM</td><td>Share proof post 04 onto this frame</td></tr>
+  </tbody></table></div>
+  <p class="foot">Counts come from all 15 reviews on tripnerd.com/reviews, read 4 Oct 2026: "Jason" or "JD" appears in 7, "detail" in 6. The two quotes are whole sentences, word for word.</p>
+
+  <div class="day-h"><h3>Fri · The Big Game is on Valentine's Day</h3><span class="stage">Fans</span><span class="stage">Feed: Trial Reel, 11 AM (not promoted)</span></div>
+  <div class="why"><div><b>Hook</b>Poll: Sun Feb 14 is the Big Game <em>and</em> Valentine's Day. "Dinner for two / Two seats in LA."</div><div><b>Why it sells</b>The real stakes: the conference championships are Jan 31, so a fan whose team makes it gets 14 days to sort flights, hotel and tickets in LA, the same 14 days as everyone else from their city. That's a reason to act now that no slogan gives.</div><div><b>Action</b>DM BIGGAME with your team.</div></div>
+  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>Add in the app</th></tr></thead><tbody>
+    <tr><td>fri-1</td><td>Poll: <code>Valentine's Day plans?</code> · <code>Dinner for two</code> / <code>Two seats in LA</code></td></tr>
+    <tr><td>fri-4</td><td>Countdown: <code>The Big Game · LA</code> ending 14 Feb 2027 · Link: <code>https://www.tripnerd.com/contact?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-fri-biggame</code>, text <code>Get a quote</code></td></tr>
   </tbody></table></div>
 </section>
 
 <section class="block">
+  <span class="eyebrow">DM replies</span>
+  <h2>What ServicePOW sends back</h2>
+  <p class="lede" style="margin-top:0">Every Story promises something in the DMs, so the promise has to exist. A person sends these within 1 business hour, Mon–Fri 9 AM–6 PM ET, until ManyChat is live. The plan's keyword example was "AUGUSTA", so these are built to load straight into ManyChat later.</p>
+  <div class="grid2">
+    <div class="dm"><b>AUGUSTA · Nerd Notes cheat sheet</b><p>Here are our Augusta notes: 1) Phones aren't allowed on the grounds. Leave yours in the car or check it at the gate. There are free payphones on the course. 2) The pimento cheese is still $1.50. 3) Grandstands are first come, first served. 4) TripNerd guests can arrive as early as Monday of tournament week. Our Augusta Experience includes a private executive home, course passes, daily hospitality, food and drink, and a TripNerd host. How many are in your group, and which days are you thinking?</p></div>
+    <div class="dm"><b>HOST · Client-week planner</b><p>Here's how a client week comes together: pick the event and headcount now, lock the private house next, send invitations in January, a guest briefing goes out before the trip, then you host. To start: which company, roughly how many guests, which event (Augusta, Derby, THE PLAYERS, Phoenix, Daytona), and do you have a budget range?</p></div>
+    <div class="dm"><b>NERD · Intro</b><p>Hey, you've found the Nerds. Which event are you thinking about, how many people, and is this for clients or for your crew? We'll come back with options.</p></div>
+    <div class="dm"><b>BIGGAME · Standby</b><p>Love it. Which team, how many in your group, and do you need flights and a hotel or just the game-day experience? We'll send LA options now, so you're ready to move the moment your team clinches.</p></div>
+  </div>
+  <p class="foot">Each reply only states facts we've sourced: the phone rule, the payphones and the $1.50 price from 2026 coverage; grandstands, Monday arrival and inclusions from TripNerd's Augusta page. Have TripNerd check the HOST timeline and the BIGGAME wording before Tuesday and Friday.</p>
+</section>
+
+<section class="block">
   <span class="eyebrow">Before Monday</span>
-  <h2>What still has to happen</h2>
+  <h2>What TripNerd needs to confirm</h2>
   <div class="grid2">
-    <div>
-      <h3>From TripNerd (the plan's "week one")</h3>
-      <ul class="check">
-        <li>The approver signs off on these 22 frames in this week's batch. Nothing posts without that.</li>
-        <li>Partner access to Instagram and Meta Business Suite</li>
-        <li>Consent for every identifiable guest in these photos, or we crop or swap them. The photos are on their site already, but the plan's rule is consent.</li>
-        <li>Confirmation that LA Big Game packages are on sale, and that "6–12 months" is the right quiz answer</li>
-        <li>A sales contact for same-day handoff of qualified leads</li>
-      </ul>
-    </div>
-    <div>
-      <h3>From ServicePOW</h3>
-      <ul class="check">
-        <li>Reply to every keyword DM within 1 business hour, Mon–Fri 9 AM–6 PM ET. ManyChat isn't live yet, so a person replies.</li>
-        <li>Push frames only post once their feed post is live. If Reel 01, carousel 02 or proof post 04 slips, drop its push frame. If Reel 01 slips, also remove "New Reel at 2 PM" from mon-3.</li>
-        <li>The feed-post titles on the push frames are launch-queue working titles. Update them if the approved hooks change.</li>
-        <li>Monday report: poll and quiz taps, replies, link taps by tracking tag, DMs by keyword, and exit rate per frame</li>
-        <li>Check the licensing on two site photos: the Augusta house (wed-2) and the football (fri-2)</li>
-      </ul>
-    </div>
+    <ul class="check">
+      <li>The approver signs off on all 24 frames (the plan says nothing posts unapproved)</li>
+      <li>Partner access to Instagram and Meta Business Suite</li>
+      <li><b>Jason:</b> is he still at TripNerd, and is he OK being the face of Thursday? Reviews name him, and the 2023 acquisition moved him to All Access Events.</li>
+      <li><b>Tuesday's calendar</b> (Oct pick, Nov lock the house, Jan invitations, Mar briefing, Apr host) matches how TripNerd actually runs a client week</li>
+      <li>LA Big Game packages are on sale, and someone can answer BIGGAME DMs with options</li>
+    </ul>
+    <ul class="check">
+      <li>Monday's taped photo shows four identifiable guests. The plan's rule is consent, so confirm it or swap the photo.</li>
+      <li>Push frames go up only once their feed post is live. If Reel 01 slips, drop mon-5 and the 2 PM line on mon-4.</li>
+      <li>Music, if added: Instagram's commercial-use library only</li>
+      <li>Monday report: quiz and poll taps, DMs by keyword (AUGUSTA, HOST, NERD, BIGGAME), link taps by tag, exits per frame</li>
+    </ul>
   </div>
+  <p class="foot">Sources: <span class="src"><a href="https://www.kunc.org/npr-news/2026-04-09/how-a-cheese-sandwich-at-the-masters-is-still-1-50-in-an-era-of-price-hikes">NPR via KUNC, $1.50 sandwich (Apr 2026)</a> · <a href="https://www.golfmonthly.com/tour/the-masters/what-is-the-masters-phone-policy">Golf Monthly, phone policy</a> · <a href="https://www.nbcsandiego.com/news/national-international/cell-phones-are-banned-at-the-masters-golf-tournament-heres-why/2914639/?amp=1&amp;os=w">NBC, phones and payphones</a> · <a href="https://www.tripnerd.com/events/augusta-experience">TripNerd Augusta Experience</a> · <a href="https://www.tripnerd.com/reviews">tripnerd.com/reviews</a> · <a href="https://www.excelsior.com.mx/deportes/super-bowl-2027-donde-es-calendario-nfl">Excelsior, Jan 31 championships, Feb 14 Valentine's Day</a> · <a href="https://www.cbsnews.com/amp/losangeles/news/super-bowl-lxi-to-be-played-at-sofi-stadium-in-2027">CBS, SoFi 2027</a></span></p>
 </section>
-
-<section class="block" id="research">
-  <span class="eyebrow">Research</span>
-  <h2>What the category leaders post on Stories</h2>
-  <p class="lede" style="margin-top:0">These are the most-followed brands in sports and live events that had documented Stories activity. Premium-hospitality competitors like On Location, QuintEvents, PrimeSport and Roadtrips had almost no documented Stories activity. That's an opening for TripNerd, but it's our reading of thin evidence, not a measured fact.</p>
-  <div class="tablewrap">
-  <table>
-    <thead><tr><th>Brand</th><th>What they do on Stories</th><th>What we took</th><th>Source</th></tr></thead>
-    <tbody>
-      <tr><td>The Masters</td><td>Around 40 Story frames a day during tournament week, saved to Highlights. Recurring named series. Behind-the-scenes with caddies and course staff. Golden-hour course footage.</td><td>Wednesday's Augusta set, next week's behind-the-scenes takeover, and a named Highlight per set</td><td class="src"><a href="https://serotonin.co.uk/news/how-the-masters-aced-their-social-media-strategy-in-2025">Serotonin</a> · <a href="https://www.wrdw.com/2025/04/11/how-social-media-is-driving-force-growing-game-golf">WRDW</a></td></tr>
-      <tr><td>NFL</td><td>Real-time game-day Stories with stickers and on-screen drawing. GIPHY reaction stickers with players.</td><td>Speed and stickers. We keep NFL marks out entirely.</td><td class="src"><a href="https://shortyawards.com/11th/nfl-media-social-experience">Shorty Awards</a></td></tr>
-      <tr><td>Marriott Rewards × NFL</td><td>Gamified tap-and-hold Stories. 20% more viewers watched to the end than Marriott's average Story; 13M impressions.</td><td>Monday's interactive poll</td><td class="src"><a href="https://shortyawards.com/10th/marriott-rewards-nfl-gamified-instagram-stories">Shorty Awards</a></td></tr>
-      <tr><td>SeatGeek</td><td>Behind-the-scenes content (3M+ views). Creator ambassadors. A share-to-your-Story giveaway that drove 2.5M shared Stories.</td><td>Next week's behind-the-scenes takeover, Thursday's guest photos</td><td class="src"><a href="https://shortyawards.com/12th/launching-team-seatgeek">Shorty Awards</a> · <a href="https://shortyawards.com/12th/seatgeek-x-david-dobrik-the-ultimate-giveaway">Shorty Awards</a></td></tr>
-      <tr><td>Vivid Seats</td><td>Social-first video, memes, user-generated content, creator partnerships, ticket giveaways.</td><td>Thursday's guest photos and reviews</td><td class="src"><a href="https://www.builtinchicago.org/job/social-media-lead/6541679">Vivid Seats job listing</a> (self-described)</td></tr>
-      <tr><td>StubHub · Ticketmaster</td><td>Stories used for announcements and on-sales. StubHub found Stories its best placement for reaching new audiences in paid campaigns.</td><td>Tuesday's review frame and Friday's countdown</td><td class="src"><a href="https://smartly.io/case/stubhub">Smartly case study</a> · <a href="https://business.ticketmaster.co.uk">Ticketmaster</a></td></tr>
-    </tbody>
-  </table>
-  </div>
-  <div class="grid2">
-    <div>
-      <h3>Formats ranked by how many of these brands use them</h3>
-      <ol class="list">
-        <li>Behind-the-scenes and event-day access: 5 brands → <b>next week's staff takeover</b> (needs fresh video)</li>
-        <li>Athlete, creator or talent takeovers: 4 → <b>next week's staff takeover</b></li>
-        <li>Giveaways and share-to-your-Story mechanics: 3 → saved for when we have a prize TripNerd can give</li>
-        <li>Interactive and gamified stickers: 2 → <b>Mon, Tue, Wed, Thu, Fri</b></li>
-        <li>Announcement and on-sale frames: 2 → <b>Mon, Fri</b></li>
-        <li>Guest and creator reposts: 2 → <b>Thu</b></li>
-      </ol>
-    </div>
-    <div>
-      <h3>Rules these drafts follow</h3>
-      <ul class="list">
-        <li><b>3–5 frames per set.</b> Viewer retention stays above 75% up to about 6–7 frames a day (<a class="src" href="https://www.rivaliq.com/blog/instagram-stories-benchmark-report/">Rival IQ</a>).</li>
-        <li><b>The hook is frame 1</b>, which has the highest exit rate at 23.8% (<a class="src" href="https://www.socialinsider.io/social-media-benchmarks/instagram-stories-benchmarks">Socialinsider</a>).</li>
-        <li><b>One set a day.</b> That matches what accounts of 10k–50k followers do. In Hootsuite's one-account test, 1–2 Stories a day got more reach and engagement than 5–10.</li>
-        <li><b>Captions on every video.</b> Around 40% of Story video is watched with sound off (Instagram).</li>
-        <li><b>A link sticker on every set.</b> Every account can use them now, and link taps are the main conversion number to track.</li>
-      </ul>
-    </div>
-  </div>
-  <p class="foot">How this research was done: the research could only use search-engine summaries of the linked pages, because direct page loads and Instagram itself were blocked from our environment. We didn't view any profile or Highlight directly. The Story formats we couldn't find any brand evidence for, such as what's-included walkthroughs, countdown stickers and FAQ Highlights, are presented here as our recommendations, not as what competitors do. TripNerd's Instagram handle and follower count are unconfirmed.</p>
-</section>
-
-<p class="foot">Sources: <span class="src"><a href="https://www.tripnerd.com/">tripnerd.com</a> (photos, logo, fonts, colors, package highlights, reviews) · <a href="https://www.cbsnews.com/amp/losangeles/news/super-bowl-lxi-to-be-played-at-sofi-stadium-in-2027">CBS, LA game at SoFi Feb 2027</a> · <a href="https://kjk.com/2020/01/31/are-you-allowed-to-say-super-bowl/">KJK, trademark use</a></span></p>
 </div>

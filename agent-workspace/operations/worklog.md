@@ -1427,3 +1427,20 @@ in `build/README.md`); page republished with a plan-vs-stories table.
 
 **Open:** approver sign-off of the batch; partner access; guest consent confirmation; LA on-sale;
 quiz answer; push frames depend on Reel 01 / carousel 02 / proof 04 going live as scheduled.
+
+## 2026-10-04 (later) — TripNerd Story week v3: rebuilt after an @tripnerd audit
+
+**Did:** owner said v2 was too generic and repeated the feed. Pulled @tripnerd via the Instagram
+feed API from the Higgsfield sandbox (24 posts; older pages rate-limited) — log + analysis in
+`clients/tripnerd/notes/2026-10-04-instagram-audit-raw.md`. v2 repeated feed themes (incl. a
+near-copy of "skip another client dinner"). Ran a 10-hook tournament with an isolated red-team
+agent; kept 5 concepts: Nerd Notes: Augusta (sourced facts: $1.50 sandwich, phone ban, payphones),
+client-week calendar (corporate), "Don't book with TripNerd if…" anti-ad, Review X-ray (7/15 name
+Jason, 6/15 say "detail"), Big Game on Valentine's Day + 14-day window (Jan 31 → Feb 14). New
+"Nerd Notes" visual device. 24 frames rendered, uploaded (v3 links in build/README.md); page
+republished with audit, rationale and DM reply scripts.
+
+**Open:** Jason's role/consent for Thursday; TripNerd to confirm the client-week calendar and BIGGAME
+handling; consent for the 4 guests in mon-1's photo; approver sign-off; partner access.
+**Learned:** the Instagram web_profile endpoint fails for this account; `api/v1/feed/user/<username>/username/`
+works from the sandbox but rate-limits after ~1 page.
