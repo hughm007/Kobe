@@ -41,7 +41,10 @@ tags: [campaign, bible, instagram, reels, organic]
 - **Prior adverts** (CONFIRMED, invoice TN-2026-09):
   - "Their Camera Roll" (9:16) and "VIP Hosting Spot" (16:9), approved 29 and 27 Sep.
   - Two carousels: VIP Fan Experiences and Augusta.
-  - Their **content is not confirmed**: we INFER "Their Camera Roll" = TripNerd 17 v15. **The Augusta photos arrived the same week and fit the name too. Karl to confirm.**
+  - **CORRECTED 2026-10-04** from the records on branch `claude/brave-mendel-0vxkwj` (`Client approved adverts/2026-09-29-their-camera-roll-25s.md`):
+    - "Their Camera Roll" is a 25 s, 1080×1920 piece. It is built from 10 photos and grid tiles from tripnerd.com/nerds, plus V23 (29.8–33.2 s) and V24 (13.6–15.8 s), with no generation.
+    - **It is not TripNerd 17 v15, and it didn't use the 29 Augusta photos.** Reel 03's rotation concern is cleared.
+    - Reel 01's roar shot (V24 ~13.4–14.9) overlaps the clip that advert used. That is acceptable in a different concept; noted.
 - **Constraints** (CONFIRMED unless marked):
   - No synthetic people as customers (FTC Fake Reviews Rule; brief: "The Parking Lot").
   - Event marks (THE PLAYERS, the Masters) and identifiable pros: permitted use is **UNKNOWN**, so TripNerd must confirm.
@@ -55,8 +58,8 @@ concept quotes or paraphrases a customer.
 ### 1.2 Open UNKNOWNs blocking work
 | Question | Blocks | Role that can answer |
 |---|---|---|
-| What exactly were "Their Camera Roll" and "VIP Hosting Spot"? | Angle rotation (BC-24); the "By the clock" concept if it repeats one | APPROVER (Karl) |
-| Where are the full-resolution originals (V07–V24, P082)? | Any 1080×1920 edit | APPROVER (Karl) |
+| ~~What was "Their Camera Roll"?~~ **RESOLVED 2026-10-04** (see §1). VIP Hosting Spot's content is still unconfirmed | — | — |
+| Full-resolution originals of V16, V23, V24, V08: **on Taylor's phone** (TripNerd). Only 720p or lower copies exist (Higgsfield) | Reel "Two ways" (now slot 03) | CLIENT_APPROVER (Taylor) |
 | ~~Are the 29 Augusta photos TripNerd's own, and may they be posted?~~ **RESOLVED 2026-10-04:** Karl confirms the whole TripNerd library is cleared to post and use | — | — |
 | ~~Consent from identifiable guests~~ **RESOLVED 2026-10-04:** library cleared (Karl). A written TripNerd confirmation on file is recommended | — | — |
 | Event marks in the library footage: **RESOLVED** (cleared, Karl 2026-10-04). Still open: an identifiable pro's likeness is a third party's right TripNerd can't clear, so the board and pro stay cropped | — | campaign-director |
@@ -299,4 +302,6 @@ None yet. Pass 3 runs on each finished cut, under the isolation protocol.
 | 2026-10-04 | **CONCEPT APPROVED.** Karl instructed "write the edit plans" for the recommended pair (01 Two ways to see the 17th; 03 Augusta, by the clock). Reel 03 stays conditional on the "Their Camera Roll" check in §1.2 | Karl (APPROVER) |
 | 2026-10-04 | Spine, storyboard (shot list), audio, edit logic and brand-fidelity marking written. §5 (no spoken words) and §7/§8/§10 (no generation) are N/A | campaign-director |
 | 2026-10-04 | **Library clearance:** "everything in the TripNerd library is cleared to post and use". Resolves photo ownership, guest consent and in-frame event marks. Not covered: third-party player likeness (keep cropped) | Karl (APPROVER) |
-| — | **STORYBOARD gate**: awaiting APPROVER review of the shot list and edit plans | Karl |
+| 2026-10-04 | Karl: get ready to post a Reel and a Story Mon 5 Oct, with in-app music for Augusta. The originals for "Two ways" can't be found, so **Augusta, by the clock posts first (slot 01, Mon 2:00 PM ET)** and "Two ways" moves to slot 03, pending Taylor's originals. Taken as the STORYBOARD go-ahead for Augusta | Karl (APPROVER) |
+| 2026-10-04 | Augusta v1 rendered by script from the original photos ($0, no generation). Dual gate dispatched on the frozen file: critic and Skeptic Pass 3, independent | campaign-director |
+| — | QC gate: awaiting both verdicts | — |

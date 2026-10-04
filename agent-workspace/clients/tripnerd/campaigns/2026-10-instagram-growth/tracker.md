@@ -19,7 +19,7 @@ in each log.
 | Field | Value |
 |---|---|
 | Deal status | **PROPOSED.** Deck A client-ready; not yet presented or accepted |
-| Signed start date (Day 1) | **NEEDS INPUT** (deck assumes Mon 5 Oct 2026) |
+| Signed start date (Day 1) | **Mon 5 Oct 2026**: Karl says posting starts then. Signature status NEEDS INPUT |
 | TripNerd approver | **NEEDS INPUT** |
 | TripNerd inbox owner (DMs) | **NEEDS INPUT** |
 | On-camera Nerd | **NEEDS INPUT** |
@@ -45,8 +45,8 @@ in each log.
 
 | Post | Open item | Owner |
 |---|---|---|
-| 01 Two ways to see the 17th | Full-res originals of V16, V23, V24 and V08 (location UNKNOWN). Keep the big screen and named pro cropped. Check V08 audio for chanted names. Library cleared (2026-10-04). | Karl |
-| 03 Augusta, by the clock | Confirm "Their Camera Roll" wasn't built from these photos (angle rotation). Check IMG_1916 laptop screens. Music: in-app or licensed (Karl). Library cleared (2026-10-04). | Karl |
+| 03 Two ways to see the 17th (now Wed) | Originals are on Taylor's phone (TripNerd). We only have 720p copies of V23/V24 in Higgsfield and a ~404×720 copy that is probably V16; V08 is missing. **Ask Taylor to AirDrop or Drive-share V16, V23, V24 and V08 originals by Tue noon.** Keep the big screen and named pro cropped. | Karl / TripNerd (Taylor) |
+| 01 Augusta, by the clock (Mon 5 Oct 2:00 PM) | **Rendered v1.** Needs TripNerd approval by Mon 12:00 PM ET, in-app music at posting, and a decision on who posts and on sharing to Facebook. Dual gate on the file: see Bible §13–14. | Karl / TripNerd |
 | 04 Communication proof | Needs a real review (with permission to quote) and the actual guest briefing | TripNerd |
 | 07 How a TripNerd trip works | Needs the on-camera Nerd filmed | TripNerd |
 | 08 First-time guest | Needs a real guest's own words and written consent; no synthetic stand-in (FTC Fake Reviews Rule) | TripNerd |
@@ -55,9 +55,9 @@ in each log.
 
 | # | Day | Date | Format | Post | Status | Link | 7-day views | Non-follower % | Saves + sends | Follows |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 01 | | | Reel | Two ways to see the 17th ([edit plan](../2026-10-04-launch-reels/edit-plan-01-two-ways-17th.md)) | planned | | | | | |
+| 01 | 1 | Mon 5 Oct 2:00 PM | Reel | Augusta, by the clock ([edit plan](../2026-10-04-launch-reels/edit-plan-03-augusta-by-the-clock.md)) | drafted (v1) | | | | | |
 | 02 | | | Carousel | What corporate hosts get wrong | idea | | | | | |
-| 03 | | | Reel | Augusta, by the clock ([edit plan](../2026-10-04-launch-reels/edit-plan-03-augusta-by-the-clock.md)) | planned | | | | | |
+| 03 | 3 | Wed 7 Oct 12:00 PM | Reel | Two ways to see the 17th ([edit plan](../2026-10-04-launch-reels/edit-plan-01-two-ways-17th.md)) | blocked (originals) | | | | | |
 | 04 | | | Proof | Communication proof | idea | | | | | |
 | 05 | | | Reel | What guests see vs. what we handle | idea | | | | | |
 | 06 | | | Carousel | Don't plan a golf major like a vacation | idea | | | | | |
@@ -86,6 +86,9 @@ Status values: `idea → planned → drafted → in edit → sent for approval �
 | Date | Decision | By |
 |---|---|---|
 | 2026-10-03 | Deck A pricing: $1,750, then $4,000/mo; discounts shown against standard per-post pricing | Karl |
+| 2026-10-04 | Posting times set (ET): Reels Mon 2 PM and Wed 12 PM, carousel Tue 1 PM, proof Thu 12:30 PM, Trial Reel Fri 11 AM, Stories 10 AM; no weekend feed posts. Source: Sprout Social and Buffer 2026 studies | Claude (APPROVER to confirm) |
+| 2026-10-04 | Reel 03 music: Instagram in-app library | Karl |
+| 2026-10-04 | Augusta Reel moves to slot 01 (Mon); Two ways moves to slot 03 (Wed); the originals aren't available | Karl / Claude |
 | 2026-10-04 | Everything in the TripNerd library is cleared to post and use (photo ownership, guest consent, in-frame event marks) | Karl |
 | 2026-10-04 | September adverts (Their Camera Roll, VIP Hosting Spot) removed from the launch queue; recognised only | Karl |
 | 2026-10-03 | No outcome promised to TripNerd; numbers appear only as labelled targets | Karl |

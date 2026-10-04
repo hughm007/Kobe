@@ -1596,3 +1596,23 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **Not covered:** an identifiable pro's likeness (third-party right), so the board and pro stay cropped.
 - **Recommended:** a written TripNerd confirmation on file.
 - **Remaining blockers:** the originals' location (V16/V23/V24/V08); the "Their Camera Roll" content check (Reel 03 rotation); the music choice for Reel 03; the IMG_1916 screen check.
+
+## 2026-10-04 — TripNerd launch prep for Mon 5 Oct (Day 1)
+- **Karl:** posting a Reel and a Story tomorrow. In-app music for the Augusta Reel. Find the originals of V16/V23/V24/V08.
+- **Footage search** (Kobe, all branches, Drive, Higgsfield, 15 cloud sessions, artifacts):
+  - V23 and V24: 720p copies in Higgsfield only, plus AI upscales.
+  - V16: probably a 404×720 Higgsfield copy.
+  - V08: not found.
+  - Originals are on Taylor's (TripNerd) phone.
+  - **Correction:** "Their Camera Roll" is a website-photo + V23/V24 piece, not TripNerd 17 v15. Fixed in the Bible, the posts/01 file and the deliverable notes.
+  - The fuller records sit on unmerged branch `claude/brave-mendel-0vxkwj`.
+- **Queue changes:**
+  - The Augusta Reel moves to slot 01 (Mon 2:00 PM ET); "Two ways" moves to slot 03 (Wed), pending originals.
+  - Augusta v1 rendered by script from the original photos: 1080×1920, 14 s, no audio (music in-app). Sent to Karl.
+  - Story 1 background rendered.
+- **Posting times** set from Sprout Social and Buffer 2026 studies:
+  - Mon 2 PM Reel · Tue 1 PM carousel · Wed 12 PM Reel · Thu 12:30 PM proof · Fri 11 AM Trial Reel · Stories 10 AM. Day 31+ adds Tue 6 PM and Thu 9 AM Reels.
+  - No weekend feed posts.
+  - Written into README §3, the calendar and the deck posting slide (deck A v27, deck B v10). Queue 01/03 swapped on both decks.
+- **Runbook:** `launch-day-2026-10-05.md`.
+- **Dual gate** (critic + Skeptic Pass 3) dispatched on the frozen Augusta file. Verdicts pending.

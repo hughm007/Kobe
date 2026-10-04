@@ -11,8 +11,7 @@ tags: [client, instagram, calendar, 90-day]
 
 # 13-week calendar
 
-**Dates assume Day 1 = Mon 5 Oct 2026** (the deck's date; not yet confirmed by TripNerd). If the real start is
-different, keep the Day numbers and shift every date. Work from the Day column, not the date.
+**Day 1 = Mon 5 Oct 2026** (Karl: posting starts 5 Oct). **Times are ET** (see README §3). If the start moves, keep the Day numbers and shift every date. Work from the Day column, not the date.
 
 The weekly rhythm and production week are in [`README.md`](README.md) §3. Each week also carries the standing items:
 - Monday report sent;
@@ -24,7 +23,7 @@ The weekly rhythm and production week are in [`README.md`](README.md) §3. Each 
 
 | Wk | Days | Dates | Feed posts | What's specific to this week | Karl's actions |
 |---|---|---|---|---|---|
-| 1 | 1–7 | 5–11 Oct | Mon 01 Two ways to see the 17th · Wed 02 What corporate hosts get wrong · Fri 03 Augusta, by the clock · Sun 04 Communication proof | **Onboarding.** Partner access, Insights baseline (re-baseline the "today" column), profile and Highlights rebuilt, DM keywords drafted, posting times set from Insights, first batch approved. **01 and 03 post only once their blockers clear** (tracker). Tue Trial Reel: a hook variant of 01. | **Invoice $1,750 (Days 1–30).** Chase access, archive, Nerd, approver. |
+| 1 | 1–7 | 5–11 Oct | **Mon 2:00 PM** 01 Augusta, by the clock ([runbook](launch-day-2026-10-05.md)) · **Tue 1:00 PM** 02 What corporate hosts get wrong · **Wed 12:00 PM** 03 Two ways to see the 17th (needs Taylor's originals by Tue noon; fallback: "Who's in?" from the Augusta photos) · **Thu 12:30 PM** 04 Communication proof (needs a real review) · **Fri 11:00 AM** Trial Reel: 01 with hook H9 | **Onboarding.** Partner access, Insights baseline (re-baseline the "today" column), profile and Highlights rebuilt, DM keywords drafted, posting times set from Insights, first batch approved. **01 and 03 post only once their blockers clear** (tracker). Stories 10:00 AM daily, plus a push for each post. | **Invoice $1,750 (Days 1–30).** Chase access, archive, Nerd, approver. |
 | 2 | 8–14 | 12–18 Oct | Mon 05 What guests see vs. what we handle · Wed 06 Don't plan a golf major like a vacation · Fri 07 How a TripNerd trip works (pinned) · Sun 08 First-time guest | First Monday report with real numbers. Trial Reels testing hooks on 05 and 07. Film 07 with the on-camera Nerd. | Send report. Get guest consent for 08. |
 | 3 | 15–21 | 19–25 Oct | Mon 09 Who are you taking? · Wed 10 What "fully handled" really means · Fri new Reel · Sun new proof | The first ten are done. Fri and Sun posts are picked from what weeks 1–2 show. | |
 | 4 | 22–28 | 26 Oct–1 Nov | 2 Reels, 1 carousel, 1 proof | Repeat the best hook or format. Start the Day 30 review draft. | |

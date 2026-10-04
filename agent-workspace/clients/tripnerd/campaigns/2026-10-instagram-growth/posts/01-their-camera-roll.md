@@ -11,6 +11,8 @@ tags: [client, instagram, reel, edit-plan, post-01]
 
 # Post 01 — Their Camera Roll (organic Reel)
 
+> **Correction 2026-10-04:** this file assumed "Their Camera Roll" = TripNerd 17 v15. **That was wrong.** The branch record shows it is a 25 s piece built from website photos plus short V23/V24 clips, with no AI. The v15 facts below describe TripNerd 17 v15 only.
+>
 > **Superseded 2026-10-04.** Karl took the September adverts out of the launch queue. Slot 01 is now "Two ways to see the 17th"
 > ([launch Reels Bible](../../2026-10-04-launch-reels/campaign-bible.md)). This file is kept for the facts about the v15 cut:
 > its AI content, missing master and open items. Those still matter if the advert is ever used in paid media.

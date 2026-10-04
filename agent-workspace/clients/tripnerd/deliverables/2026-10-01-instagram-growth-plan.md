@@ -163,6 +163,7 @@ appears once, in the summary's goal line.
 VIP Hosting Spot 16:9, client-approved 2026-09-27; Their Camera Roll 9:16, approved 2026-09-29) are
 now posts 01 and 03 of the first ten (slide 15), highlighted as already built; whichever earns more
 organically gets the first paid boost. VIP Hosting Spot needs a vertical recut.
+- **CORRECTED 2026-10-04:** Their Camera Roll is *not* the TripNerd 17 suite Reel. It is a 25 s piece built from website photos plus short V23/V24 clips, with no generation (record on branch `claude/brave-mendel-0vxkwj`). The original inference follows, kept for the trail:
 - INFERENCE (not confirmed by name): Their Camera Roll = the THE PLAYERS 17th-hole suite Reel
   ("TripNerd 17" storyboard/rough-cut artifacts) — TripNerd's own V23/V24 footage with AI bridges,
   a synthesized strike, cloned voice-over. Its record listed open items as of 2026-09-24: licensed

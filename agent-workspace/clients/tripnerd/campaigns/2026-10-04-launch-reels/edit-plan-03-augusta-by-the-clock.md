@@ -9,12 +9,18 @@ updated: 2026-10-04
 tags: [client, instagram, reel, edit-plan]
 ---
 
-# Edit plan: Reel 03, "Augusta, by the clock"
+# Edit plan: Reel 03, "Augusta, by the clock" (now posting as 01, Mon 5 Oct)
+
+> **Rendered 2026-10-04:** `TN-R03-augusta-by-the-clock-H3-v1.mp4`.
+> - 1080×1920, 30 fps, 14.0 s, H.264, no audio.
+> - Text: Inter ExtraBold/SemiBold, with a top scrim for legibility.
+> - Built by script from the full-resolution photos. The file was sent to Karl in session; it is not committed (media).
+> - **IMG_1916 screens checked:** no guest data (one shows a sports website, one is off).
 
 **What it is:** a 14 s organic Reel. One Thursday in Augusta with TripNerd (9 Apr 2026), told by the real camera timestamps
 on TripNerd's own photos.
 - 9 photos and one black card. Nothing generated, so **no AI label**.
-- **Conditional:** build it only once Karl confirms "Their Camera Roll" wasn't already made from these photos (Bible §1.2).
+- **Rotation check cleared:** "Their Camera Roll" used website photos and two short V23/V24 clips, not these photos (Bible §1).
 
 Shot detail: [`shotlist.md`](shotlist.md).
 
@@ -44,7 +50,9 @@ Shot detail: [`shotlist.md`](shotlist.md).
 a slideshow.
 
 ## Sound (photos have none)
-Two options; choose one before cutting.
+**Decided (Karl, 2026-10-04): option 1, Instagram's in-app music.** v1 is rendered with no audio track; the music is added in the app at posting (steps in the launch-day runbook).
+
+The two options, kept for the record:
 1. **Instagram's in-app music** (recommended to start).
    - Pick a track from the commercial-use library at posting, mid-tempo and warm.
    - Cut to its beat, export **without** music, then add the same track in the app from 0:00.

@@ -12,7 +12,12 @@ tags: [client, footage, inventory, instagram, reels]
 # TripNerd camera roll: inventory
 
 Everything TripNerd footage we can see as of 2026-10-04.
-- **Videos:** seen only through 1-frame-per-second contact sheets in the "TripNerd 17 Storyboard Lock" artifact. **The originals' location is UNKNOWN** (Karl to locate).
+- **Videos:** seen through 1-frame-per-second contact sheets in the "TripNerd 17 Storyboard Lock" artifact.
+- **Search of 2026-10-04** (Kobe, Drive, Higgsfield, cloud sessions, artifacts):
+  - **V23 and V24:** 720×1280 copies only, in Higgsfield uploads. Higgsfield also holds AI upscales of both; using those would need the AI label.
+  - **V16:** probably Higgsfield "Gallery walk 1", 404×720 (INFERRED).
+  - **V08:** not found.
+  - **The full-resolution originals are on Taylor's (TripNerd's) phone.** Records on branch `claude/brave-mendel-0vxkwj` say "full-res from Taylor pending".
 - **Photos:** 29 full-resolution JPGs from Drive folder `0AJj-fhf07xDjUk9PVA`, uploaded 2026-09-22. **CONFIRMED 2026-10-04:** Karl says everything in the TripNerd library is cleared to post and use.
 
 ## THE PLAYERS, TPC Sawgrass, the 17th (video)

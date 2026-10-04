@@ -64,18 +64,41 @@ The week-one Insights baseline replaces the "today" column.
 - one on-camera Nerd, and an inbox owner for DMs;
 - one approver who gives feedback within two business days.
 
-## 3. The weekly rhythm
+## 3. The weekly rhythm and posting times
+
+All times are **US Eastern (ET)**.
+- **ASSUMPTION:** most of TripNerd's audience is in Eastern and Central time.
+- In week one, open Insights → Audience → **Most active times** (available: the account has over 100 followers). From week two, move each slot to TripNerd's own peak.
 
 | | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|---|
-| Days 1–30 | Reel | Trial Reel | Carousel | | Reel | | Proof |
-| Day 31+ | Reel | Trial Reel | Carousel | **Reel** | Reel | **Reel** | Proof |
-| Stories | ✓ | ✓ | ✓ | ✓ | ✓ | | |
+| Days 1–30 | **Reel 2:00 PM** | **Carousel 1:00 PM** | **Reel 12:00 PM** | **Proof 12:30 PM** | Trial Reel 11:00 AM | — | — |
+| Day 31+ adds | — | Reel 6:00 PM | — | Reel 9:00 AM | — | — | — |
+| Stories | 10:00 AM + push the post | 10:00 AM + push | 10:00 AM + push | 10:00 AM + push | 10:00 AM | optional | optional |
 
+**Why these slots** (2026 cross-industry studies; ESTIMATE for TripNerd until our own data replaces it):
+- **Sprout Social 2026** (about 2 billion engagements, 307,000 profiles, Nov 2025–Feb 2026):
+  - Peaks: **Mon 2–4 PM, Tue 1–7 PM, Wed 12–9 PM, Thu 12–2 PM**.
+  - Friday: no significant peak. **Weekends lowest.**
+  - Travel and hospitality: weekdays best, weekends worst. Times are audience-local.
+- **Buffer 2026** (9.6 million Instagram posts, Jan 2024–Dec 2025):
+  - Top slots: **Thu 9 AM, Wed 12 PM, Wed 6 PM**. Wednesday is the best day.
+  - Evenings (6–11 PM) are strongest every weekday except Thursday, which favours 7–9 AM.
+- **Change from the deck's first version:**
+  - The Friday Reel, the Saturday Reel and the Sunday proof post moved into the Mon–Thu peaks. Weekends now carry no feed posts.
+  - Queue order is kept: 01 Mon Reel · 02 Tue Carousel · 03 Wed Reel · 04 Thu Proof.
+- **Trial Reels:** shown to non-followers first, so their slot matters less. Friday 11 AM keeps them out of the main posts' way.
+- **Two posts on one day:** keep them at least 5 hours apart (Tue 1 PM + 6 PM; Thu 9 AM + 12:30 PM).
 - **Volume:** four feed posts a week to Day 30, then six. Reels go from 2 a week to 4.
 - **Trial Reels:** ASSUMPTION — these are hook, opening or ending variants of that week's Reels, not extra Reels on the invoice. Confirm with Karl.
-- **Every day:** reply to every comment, and aim to answer DMs within two business hours (TripNerd's inbox owner answers them).
-- **Posting times** are set from Insights in week one.
+
+**Every post, the same routine:**
+- **Before:** TripNerd's approver has signed off. Caption, cover, location, alt text and hashtags (≤3) are ready.
+- **Music:** Reels with Instagram music are posted from the **Instagram app**. Use its own scheduling if it offers it; otherwise post live.
+- **At post time:** share. **Story push within 10–15 minutes.** Reply to every comment for the first hour.
+- **DMs:** answered within two business hours (TripNerd's inbox owner).
+- **+24 hours:** log views, reach, % non-followers, watch time, shares, saves and follows in `tracker.md`.
+- **Day-by-day example:** [`launch-day-2026-10-05.md`](launch-day-2026-10-05.md).
 
 **Our production week** (Approve and Publish are the deck's process steps 6 and 7):
 
@@ -90,9 +113,9 @@ The week-one Insights baseline replaces the "today" column.
 
 | # | Format | Post | Job | State |
 |---|---|---|---|---|
-| 01 | Reel | Two ways to see the 17th: the crowd path at THE PLAYERS, then TripNerd's rail | Feel | To cut from V16/V13 + V24 + V08 roar (concept awaiting Karl's approval) |
+| 01 | Reel | Augusta, by the clock: one Thursday told by the photos' real timestamps | Feel | **Rendered** (v1, 14 s); posts Mon 5 Oct 2:00 PM ET with in-app music |
 | 02 | Carousel | What corporate hosts get wrong | Teach | To make |
-| 03 | Reel | Augusta, by the clock: one Thursday told by the photos' real timestamps | Feel | To cut from the 29 Augusta photos (concept awaiting Karl's approval) |
+| 03 | Reel | Two ways to see the 17th: the crowd path at THE PLAYERS, then TripNerd's rail | Feel | Needs full-res V16/V23/V24/V08 from Taylor's phone; only 720p (or worse) copies exist |
 | 04 | Proof | Communication proof: a real review plus the actual guest briefing | Prove | To make (needs the real review and briefing) |
 | 05 | Reel | What guests see vs. what we handle | Prove | To make |
 | 06 | Carousel | Don't plan a golf major like a vacation | Teach | To make |
