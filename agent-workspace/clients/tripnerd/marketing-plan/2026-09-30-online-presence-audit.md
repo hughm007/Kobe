@@ -161,3 +161,7 @@ The phone number is a Wisconsin number. The client brief already notes that the 
 3. **The richest unused asset is content, not a channel:** real photos, suite tours, 15 named reviews and six published package pages (decision 0008). LinkedIn currently posts none of it.
 4. **The owned audience is the gap with the largest upside per dollar** (HYPOTHESIS): nine years of attendees, no signup form, no email program.
 5. **Fix the plumbing before spending to grow:** social preview images, canonical tags, event-page descriptions, Tag Manager and conversion events, one business address. These are cheap and they make every later post and ad work harder.
+
+## Addendum 2026-10-04 — Instagram figures stated in the owner's growth plan
+
+The owner's 12-page Instagram growth plan (digest: [`2026-10-04-instagram-growth-plan-digest.md`](2026-10-04-instagram-growth-plan-digest.md)) states for `instagram.com/tripnerd`, "observed 11 Sep 2026": **4,730 followers, 253 median Reel views, 0 Reels in the 20 days before that audit, 3.2 posts a week, mostly static graphics.** This audit could not read the profile on 2026-09-30 (login wall), so the §2 row stays UNKNOWN from our own observation; the plan's figures are carried as **stated, not verified by us**. The plan itself re-baselines from Instagram Insights in week one, which settles it. Who observed the 11 Sep figures, and from which account, is an open question.
