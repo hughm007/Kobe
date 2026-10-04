@@ -1560,3 +1560,18 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - v15 has ~10 s of AI: two bridges with generated people, a generated golfer and crowd, and AI motion on the cup photo. It also uses a cloned voice-over and placeholder music.
 - **Correction:** the proof slide's "real faces only" was false. Both decks now say "your own footage, with short AI bridges" (deck A v24, deck B v8; deck snapshot updated).
 - Edit plan for a real-footage-only organic cut: `campaigns/2026-10-instagram-growth/posts/01-their-camera-roll.md`.
+
+## 2026-10-04 — TripNerd: launch Reels from the camera roll
+- **Karl:** take the September adverts (Their Camera Roll, VIP Hosting Spot) out of the launch queue and recognise them only. Build new Reels from TripNerd's camera roll as the follower strategy.
+- **Routed through `servicepow-campaign-director`.** New Bible: `clients/tripnerd/campaigns/2026-10-04-launch-reels/campaign-bible.md`, plus `footage-inventory.md`.
+- **Inventory:**
+  - THE PLAYERS clips V07–V24 (seen as contact sheets; originals' location UNKNOWN).
+  - Suite photos.
+  - 29 Augusta photos from Thu 9 Apr 2026 with real timestamps (no Augusta video).
+- **Four concept families**, Anti-Generic Gate, stakes check, 10 hooks → 6 survivors. Skeptic paper attack exempted (zero-spend organic; Trial Reels decide); the dual gate still runs on finished cuts.
+- **Recommended:**
+  - Slot 01: "Two ways to see the 17th".
+  - Slot 03: "Augusta, by the clock" (conditional: Their Camera Roll may already be built on those photos).
+  - **CONCEPT gate awaits Karl.**
+- **Decks:** launch queue and roadmap updated in both (deck A v26, deck B v9). Snapshot, operating plan, calendar and tracker updated.
+- **Superseded:** `posts/01-their-camera-roll.md` (kept for the v15 facts).

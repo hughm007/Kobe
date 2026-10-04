@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: draft
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-10-04
 tags: [client, instagram, calendar, 90-day]
 ---
 
@@ -24,7 +24,7 @@ The weekly rhythm and production week are in [`README.md`](README.md) §3. Each 
 
 | Wk | Days | Dates | Feed posts | What's specific to this week | Karl's actions |
 |---|---|---|---|---|---|
-| 1 | 1–7 | 5–11 Oct | Mon 01 Their Camera Roll · Wed 02 What corporate hosts get wrong · Fri 03 VIP Hosting Spot (vertical) · Sun 04 Communication proof | **Onboarding.** Partner access, Insights baseline (re-baseline the "today" column), profile and Highlights rebuilt, DM keywords drafted, posting times set from Insights, first batch approved. **01 and 03 post only once their blockers clear** (tracker). | **Invoice $1,750 (Days 1–30).** Chase access, archive, Nerd, approver. |
+| 1 | 1–7 | 5–11 Oct | Mon 01 Two ways to see the 17th · Wed 02 What corporate hosts get wrong · Fri 03 Augusta, by the clock · Sun 04 Communication proof | **Onboarding.** Partner access, Insights baseline (re-baseline the "today" column), profile and Highlights rebuilt, DM keywords drafted, posting times set from Insights, first batch approved. **01 and 03 post only once their blockers clear** (tracker). Tue Trial Reel: a hook variant of 01. | **Invoice $1,750 (Days 1–30).** Chase access, archive, Nerd, approver. |
 | 2 | 8–14 | 12–18 Oct | Mon 05 What guests see vs. what we handle · Wed 06 Don't plan a golf major like a vacation · Fri 07 How a TripNerd trip works (pinned) · Sun 08 First-time guest | First Monday report with real numbers. Trial Reels testing hooks on 05 and 07. Film 07 with the on-camera Nerd. | Send report. Get guest consent for 08. |
 | 3 | 15–21 | 19–25 Oct | Mon 09 Who are you taking? · Wed 10 What "fully handled" really means · Fri new Reel · Sun new proof | The first ten are done. Fri and Sun posts are picked from what weeks 1–2 show. | |
 | 4 | 22–28 | 26 Oct–1 Nov | 2 Reels, 1 carousel, 1 proof | Repeat the best hook or format. Start the Day 30 review draft. | |

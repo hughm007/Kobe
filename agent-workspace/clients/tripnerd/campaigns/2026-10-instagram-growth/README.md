@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: draft
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-10-04
 tags: [client, instagram, social, organic, operating-plan, 90-day]
 ---
 
@@ -90,9 +90,9 @@ The week-one Insights baseline replaces the "today" column.
 
 | # | Format | Post | Job | State |
 |---|---|---|---|---|
-| 01 | Reel | Their Camera Roll | Feel | **Built.** Approved advert, TripNerd's own footage |
+| 01 | Reel | Two ways to see the 17th: the crowd path at THE PLAYERS, then TripNerd's rail | Feel | To cut from V16/V13 + V24 + V08 roar (concept awaiting Karl's approval) |
 | 02 | Carousel | What corporate hosts get wrong | Teach | To make |
-| 03 | Reel | VIP Hosting Spot | Feel | **Built**, needs a vertical recut |
+| 03 | Reel | Augusta, by the clock: one Thursday told by the photos' real timestamps | Feel | To cut from the 29 Augusta photos (concept awaiting Karl's approval) |
 | 04 | Proof | Communication proof: a real review plus the actual guest briefing | Prove | To make (needs the real review and briefing) |
 | 05 | Reel | What guests see vs. what we handle | Prove | To make |
 | 06 | Carousel | Don't plan a golf major like a vacation | Teach | To make |
@@ -101,15 +101,17 @@ The week-one Insights baseline replaces the "today" column.
 | 09 | Reel | Who are you taking? (built to be sent) | Feel | To make |
 | 10 | Carousel | What "fully handled" really means | Teach | To make |
 
-- **First paid boost:** whichever of 01 and 03 earns more organically is our pick, **only with TripNerd's approval and Karl's spend approval**.
+- **01 and 03 are new Reels** built from TripNerd's camera roll; concepts, hooks and footage are in the [launch Reels Bible](../2026-10-04-launch-reels/campaign-bible.md).
+- **Not in the queue:** the September adverts, Their Camera Roll and VIP Hosting Spot (Karl, 2026-10-04). They are recognised on the proof slide only.
+- **First paid boost:** the best organic Reel by follows and sends, **only with TripNerd's approval and Karl's spend approval**.
 - **Hooks are drafts.**
-- **Before 01 and 03 post**, clear the open items in `tracker.md` → Blockers: music licence, guest consent, AI label, recut.
+- **Before 01 and 03 post**, clear the open items in `tracker.md` → Blockers: originals located, guest consent, event marks.
 
 ## 5. The 90 days
 
 | Phase | Work | Gate |
 |---|---|---|
-| **Test** (1–30) | Week one: Insights baseline, profile rebuilt, first posts approved. Four posts a week, Stories five days. Both approved adverts first. Trial Reels test hooks, openings and endings. | **Day 30 review:** which formats, hooks and topics work best; reset targets; confirm the move to six a week. **Invoice $4,000** for Days 31–60. |
+| **Test** (1–30) | Week one: Insights baseline, profile rebuilt, first posts approved. Four posts a week, Stories five days. First Reels cut from TripNerd's own footage. Trial Reels test hooks, openings and endings. | **Day 30 review:** which formats, hooks and topics work best; reset targets; confirm the move to six a week. **Invoice $4,000** for Days 31–60. |
 | **Double down** (31–60) | Six posts a week of what won; stop or fix what didn't. First creator collab and first paid boost, **each only if approved**. | **Day 60 goal:** winning formats repeat and follows per post climb. **Invoice $4,000** for Days 61–90. |
 | **Roll** (61–90) | A steady six a week; playbook set. Retargeting viewers into DMs if approved. February's events planned and shot lists ready. | **Day 90 review** and next quarter's plan. |
 

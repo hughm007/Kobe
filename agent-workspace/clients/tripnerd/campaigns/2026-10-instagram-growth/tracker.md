@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: draft
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-10-04
 tags: [client, instagram, tracker]
 ---
 
@@ -45,8 +45,8 @@ in each log.
 
 | Post | Open item | Owner |
 |---|---|---|
-| 01 Their Camera Roll | Walkthrough and edit plan: [`posts/01-their-camera-roll.md`](posts/01-their-camera-roll.md). Recommended: a **real-footage-only organic cut** (no AI, no cloned VO, no AI label needed). Open items: confirm the approved cut = v15; full-res originals V23/V24/V08/P082 (only a 720p review encode exists); guest consent; OK to post with THE PLAYERS signage. | Karl / TripNerd |
-| 03 VIP Hosting Spot | Vertical (9:16) recut needed. If its people read as generated, it posts **only with the AI label and never as guest proof**. | Karl / Claude |
+| 01 Two ways to see the 17th | Full-res originals of V13, V16, V24 and V08 (location UNKNOWN). Crop the board and named pro. TripNerd OK on THE PLAYERS marks. Guest consent if faces are identifiable. Concept awaiting Karl's approval ([Bible](../2026-10-04-launch-reels/campaign-bible.md)). | Karl / TripNerd |
+| 03 Augusta, by the clock | Confirm the 29 photos are TripNerd's own, and that "Their Camera Roll" wasn't already built from them (angle rotation). Guest consent. No event marks in text. Concept awaiting Karl's approval. | Karl / TripNerd |
 | 04 Communication proof | Needs a real review (with permission to quote) and the actual guest briefing | TripNerd |
 | 07 How a TripNerd trip works | Needs the on-camera Nerd filmed | TripNerd |
 | 08 First-time guest | Needs a real guest's own words and written consent; no synthetic stand-in (FTC Fake Reviews Rule) | TripNerd |
@@ -55,9 +55,9 @@ in each log.
 
 | # | Day | Date | Format | Post | Status | Link | 7-day views | Non-follower % | Saves + sends | Follows |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 01 | | | Reel | Their Camera Roll | built; blocked | | | | | |
+| 01 | | | Reel | Two ways to see the 17th | idea | | | | | |
 | 02 | | | Carousel | What corporate hosts get wrong | idea | | | | | |
-| 03 | | | Reel | VIP Hosting Spot | built; needs recut | | | | | |
+| 03 | | | Reel | Augusta, by the clock | idea | | | | | |
 | 04 | | | Proof | Communication proof | idea | | | | | |
 | 05 | | | Reel | What guests see vs. what we handle | idea | | | | | |
 | 06 | | | Carousel | Don't plan a golf major like a vacation | idea | | | | | |
@@ -86,4 +86,5 @@ Status values: `idea → drafted → in edit → sent for approval → approved 
 | Date | Decision | By |
 |---|---|---|
 | 2026-10-03 | Deck A pricing: $1,750, then $4,000/mo; discounts shown against standard per-post pricing | Karl |
+| 2026-10-04 | September adverts (Their Camera Roll, VIP Hosting Spot) removed from the launch queue; recognised only | Karl |
 | 2026-10-03 | No outcome promised to TripNerd; numbers appear only as labelled targets | Karl |

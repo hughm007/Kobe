@@ -3,13 +3,17 @@ title: "Post 01 — Their Camera Roll: organic Reel walkthrough"
 type: brief
 client: tripnerd
 owner: Karl
-status: draft
+status: superseded
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-10-04
 tags: [client, instagram, reel, edit-plan, post-01]
 ---
 
 # Post 01 — Their Camera Roll (organic Reel)
+
+> **Superseded 2026-10-04.** Karl took the September adverts out of the launch queue. Slot 01 is now "Two ways to see the 17th"
+> ([launch Reels Bible](../../2026-10-04-launch-reels/campaign-bible.md)). This file is kept for the facts about the v15 cut:
+> its AI content, missing master and open items. Those still matter if the advert is ever used in paid media.
 
 ## What we have (checked 2026-10-03)
 
