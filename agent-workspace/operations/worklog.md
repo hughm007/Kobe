@@ -1380,3 +1380,23 @@ as with Drive and Vercel; a baseline advance is the owner's ruling, not a sessio
 
 **Next:** the first real client use of the lane runs `canva-procedure.md` end to end, with the dual
 quality gate, claims and brand law after the commit.
+
+## 2026-10-04 — TripNerd: first Instagram Story week drafted (posting from Mon 2026-10-05)
+
+**Did:** drafted five organic IG Story sets for TripNerd (Mon–Fri, 3–5 frames each) as a
+mockup page: [`clients/tripnerd/deliverables/2026-10-05-ig-stories/tripnerd-stories.html`](../clients/tripnerd/deliverables/2026-10-05-ig-stories/tripnerd-stories.html),
+published privately as a claude.ai artifact. Sets: seat poll (awareness) · Augusta Experience
+walkthrough · corporate "Hosting clients?" · staff behind-the-scenes takeover + LA countdown ·
+real reviews + booking-lead-time quiz. Research on category leaders' Stories (Masters, NFL,
+Marriott×NFL, SeatGeek, Vivid Seats, StubHub, Ticketmaster) came from search-index summaries only —
+WebFetch and Instagram were blocked by the egress proxy, so no profile or Highlight was observed.
+
+**Decided:** event names written as "the Big Game" / city names pending owner ruling (NFL enforces
+"Super Bowl"); no synthetic people, no stock standing in for guests; every review/testimonial verbatim
+with consent.
+
+**Open (blocking Monday's post):** IG access for ServicePOW; real past-trip photos; brand blue + logo
+files; written confirmation of Augusta inclusions, LA on-sale, Birdeye "43 five-star reviews" and
+"6–12 months" quiz answer (no EV-tripnerd records exist yet); "20+ years" (site) vs founded 2017
+mismatch; ownership change (acquired by All Access Golf Travel & Events, 2023) — confirm approver and
+handle. Client approval of copy not yet given.

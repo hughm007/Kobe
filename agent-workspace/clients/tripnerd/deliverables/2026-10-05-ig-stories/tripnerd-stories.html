@@ -58,8 +58,8 @@ header.top{display:grid;gap:10px;margin-bottom:28px}
 .kv dd{margin:0}
 .flag{background:var(--flag-bg);border-left:3px solid var(--flag);padding:10px 12px;border-radius:0 8px 8px 0;font-size:13px}
 .flag b{color:var(--flag)}
-.reel{display:flex;gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory;min-width:0}
-.cell{flex:0 0 auto;display:grid;gap:8px;scroll-snap-align:start;width:228px}
+.reel{display:flex;align-items:flex-start;gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory;min-width:0}
+.cell{flex:0 0 auto;display:grid;align-content:start;gap:8px;scroll-snap-align:start;width:228px}
 .cap{font-size:12.5px;color:var(--muted);line-height:1.4}
 .cap b{color:var(--ink);font-weight:600}
 
@@ -72,7 +72,7 @@ header.top{display:grid;gap:10px;margin-bottom:28px}
 .frame .acct span.av{width:20px;height:20px;border-radius:50%;background:var(--brand);display:grid;place-items:center;font:700 9px var(--display);color:#fff}
 .photo{position:absolute;inset:0;z-index:0;display:flex;align-items:flex-end;justify-content:flex-start}
 .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,.55) 0%,rgba(11,18,32,0) 30%,rgba(11,18,32,0) 55%,rgba(11,18,32,.8) 100%)}
-.photo .ph{position:absolute;left:10px;right:10px;top:42%;transform:translateY(-50%);border:1px dashed rgba(255,255,255,.45);border-radius:8px;padding:8px;font:500 9.5px/1.35 var(--mono);color:rgba(255,255,255,.85);background:rgba(0,0,0,.18);z-index:1}
+.photo .ph{position:absolute;left:10px;right:10px;top:60%;transform:translateY(-50%);border:1px dashed rgba(255,255,255,.45);border-radius:8px;padding:8px;font:500 9.5px/1.35 var(--mono);color:rgba(255,255,255,.85);background:rgba(0,0,0,.18);z-index:1}
 .p-upper{background:radial-gradient(120% 60% at 50% 92%,#2E6B3F 0 18%,#1A2B22 19% 30%,transparent 31%),linear-gradient(180deg,#1B2840,#0E1626 60%,#0B1220)}
 .p-field{background:linear-gradient(180deg,#0F1A2D 0%,#1F3B5C 35%,#2F7A44 36%,#3C8F52 70%,#2B6B3C 100%)}
 .p-food{background:radial-gradient(60% 40% at 30% 60%,#7A4A2A,transparent 70%),radial-gradient(50% 35% at 70% 55%,#C9A46B,transparent 70%),linear-gradient(180deg,#2A1D16,#120D0A)}
@@ -85,7 +85,8 @@ header.top{display:grid;gap:10px;margin-bottom:28px}
 .txt{position:absolute;left:14px;right:14px;z-index:3;display:grid;gap:6px}
 .txt.top{top:15%} .txt.mid{top:50%;transform:translateY(-50%)} .txt.low{bottom:21%}
 .big{font:800 30px/0.95 var(--display);text-transform:uppercase;letter-spacing:.005em}
-.big.xl{font-size:40px}
+.big.xl{font-size:34px}
+.big.md{font-size:22px}
 .small{font-size:11.5px;line-height:1.35;color:var(--chalk-dim)}
 .tag{font:500 9.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--chalk-dim)}
 .sticker{background:var(--sticker);color:var(--sticker-ink);border-radius:12px;padding:9px 10px;font-size:11px;box-shadow:0 4px 14px rgba(0,0,0,.25);display:grid;gap:6px}
@@ -121,7 +122,8 @@ th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacin
 .check{list-style:none;padding:0;margin:0;display:grid;gap:9px}
 .check li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px}
 .check li::before{content:"";width:14px;height:14px;border:1.5px solid var(--muted);border-radius:3px;margin-top:4px}
-.src a{color:var(--brand)}
+.src a,a.src,.list a{color:var(--brand)}
+td{min-width:120px}
 .foot{font-size:12.5px;color:var(--muted)}
 
 @media (max-width:900px){
@@ -136,20 +138,20 @@ th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacin
 <header class="top">
   <span class="eyebrow">ServicePOW × TripNerd · Instagram Stories · Week of Mon 5 Oct 2026 · Draft for approval</span>
   <h1>TripNerd Story Week</h1>
-  <p class="lede">Five Story sets, one per weekday. Each one has a single job, a sticker that gives people something to tap, and one next step. The frames below are layout mockups: every dashed box marks a real TripNerd photo or clip that has to be supplied before posting. No stock and no AI people stand in for TripNerd guests.</p>
+  <p class="lede">Five Story sets, one per weekday. Each set has one job, one sticker people can tap, and one next step. They're modeled on what the most-followed brands in sports and live events actually do on Stories (see the research section). The frames are layout mockups. Every dashed box marks a real TripNerd photo or clip that has to be supplied before posting. No stock images or AI-generated people stand in for TripNerd guests.</p>
 </header>
 
 <nav class="week" aria-label="Posting schedule">
   <a class="day" href="#s1"><span class="d">MON 5 OCT</span><span class="t">Where are you sitting?</span><span class="s">Poll · 3 frames</span><span class="stage">Awareness</span></a>
-  <a class="day" href="#s2"><span class="d">TUE 6 OCT</span><span class="t">What's in the package</span><span class="s">Walkthrough · 5 frames</span><span class="stage">Consideration</span></a>
+  <a class="day" href="#s2"><span class="d">TUE 6 OCT</span><span class="t">Inside the Augusta Experience</span><span class="s">Walkthrough · 5 frames</span><span class="stage">Consideration</span></a>
   <a class="day" href="#s3"><span class="d">WED 7 OCT</span><span class="t">Hosting clients?</span><span class="s">Corporate · 4 frames</span><span class="stage">Decision · B2B</span></a>
-  <a class="day" href="#s4"><span class="d">THU 8 OCT</span><span class="t">Augusta in April</span><span class="s">Countdown · 3 frames</span><span class="stage">Consideration</span></a>
-  <a class="day" href="#s5"><span class="d">FRI 9 OCT</span><span class="t">From real guests</span><span class="s">Proof + quiz · 4 frames</span><span class="stage">Decision</span></a>
+  <a class="day" href="#s4"><span class="d">THU 8 OCT</span><span class="t">Meet the Nerds</span><span class="s">Behind the scenes · 4 frames</span><span class="stage">Consideration</span></a>
+  <a class="day" href="#s5"><span class="d">FRI 9 OCT</span><span class="t">From real guests</span><span class="s">Reviews + quiz · 4 frames</span><span class="stage">Decision</span></a>
 </nav>
 
 <div class="toolbar">
   <button class="toggle" id="safeToggle" type="button" aria-pressed="false">Show safe zones</button>
-  <span class="hint">Red bands are the top 14% and bottom 20% that Instagram's UI covers. Keep text and stickers out of them. Frames scroll sideways.</span>
+  <span class="hint">The red bands are the top 14% and bottom 20% of the screen, where Instagram's own buttons sit (Meta's Stories guidance). Keep text and stickers out of them. Scroll each row sideways to see every frame.</span>
 </div>
 
 <!-- STORY 1 -->
@@ -157,48 +159,48 @@ th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacin
   <div class="notes">
     <span class="num">STORY 1 · MON 5 OCT</span>
     <h2>Where are you sitting?</h2>
-    <p>A two-option poll that contrasts a bad seat with a TripNerd seat. It's the still-image version of the approved "unhappy with his seat" hook from the brand-film rebuild, so the Stories and the film tell the same story.</p>
+    <p>A two-choice poll that puts a bad seat next to a TripNerd seat. It's the still-image version of the approved "unhappy with his seat" hook from the brand-film rebuild, so the Stories and the film tell the same story.</p>
     <dl class="kv">
-      <dt>Job</dt><dd>Low-effort first tap. Poll replies tell us who's engaged, and the reveal shows the product in one glance.</dd>
+      <dt>Job</dt><dd>An easy first tap. Poll votes tell us who's paying attention, and the reveal shows the product in one glance.</dd>
       <dt>Measure</dt><dd>Poll votes ÷ frame-1 views. Link taps on frame 3.</dd>
-      <dt>Modeled on</dt><dd data-model="s1">Research pending</dd>
-      <dt>Highlight</dt><dd>Packages</dd>
+      <dt>Modeled on</dt><dd>Marriott Rewards × NFL's interactive Stories, which got 20% more people to watch to the end than Marriott's average Story (Shorty Awards). Also Instagram's poll-sticker tests, where polls lifted 3-second views in 9 of 10 ad campaigns.</dd>
+      <dt>Highlight</dt><dd>Events</dd>
     </dl>
-    <div class="flag"><b>Needs:</b> one real upper-deck photo and one real field-level photo from a past TripNerd trip. The second photo has to be TripNerd's own, because the caption says it's where they put you.</div>
+    <div class="flag"><b>Needs:</b> one real upper-deck photo and one real premium-seat photo from a past TripNerd trip. The second has to be TripNerd's own, because the copy says "this is where we put you." Don't say "field level" unless they actually sell field-level access; we couldn't confirm that they do.</div>
   </div>
   <div class="reel">
     <div class="cell">
       <div class="frame">
         <div class="bars"><i class="on"></i><i></i><i></i></div>
         <div class="acct"><span class="av">TN</span>tripnerd</div>
-        <div class="photo p-upper"><div class="ph">PHOTO · real upper-deck POV, field tiny in the distance</div></div>
+        <div class="photo p-upper"><div class="ph">PHOTO · real upper-deck view, field tiny in the distance</div></div>
         <div class="txt top"><span class="big">Be honest.</span><span class="small">Where were you sitting at the last big game you went to?</span></div>
-        <div class="txt low"><div class="sticker"><span class="q">Last big game, I was…</span><div class="poll"><span>Up here</span><span>On the field</span></div></div></div>
+        <div class="txt low"><div class="sticker"><span class="q">Last big game, I was…</span><div class="poll"><span>Up here</span><span>Front and center</span></div></div></div>
         <div class="safe"></div>
       </div>
-      <p class="cap"><b>Frame 1 · hook.</b> Poll sticker. The question is about the viewer, not about TripNerd.</p>
+      <p class="cap"><b>Frame 1 · hook.</b> Frame 1 is where the most people leave (23.8% exit rate, Socialinsider), so it asks the viewer about themselves instead of selling.</p>
     </div>
     <div class="cell">
       <div class="frame">
         <div class="bars"><i class="on"></i><i class="on"></i><i></i></div>
         <div class="acct"><span class="av">TN</span>tripnerd</div>
-        <div class="photo p-field"><div class="ph">PHOTO · real TripNerd guests at field level, shot from behind or the side (no faces needed)</div></div>
+        <div class="photo p-field"><div class="ph">PHOTO · real TripNerd guests in premium seats, shot from behind or the side</div></div>
         <div class="txt top"><span class="big xl">This is where we put you.</span></div>
-        <div class="txt low"><span class="tag">Field-level access · past TripNerd trip</span></div>
+        <div class="txt low"><span class="tag">Past TripNerd trip · [event, year]</span></div>
         <div class="safe"></div>
       </div>
-      <p class="cap"><b>Frame 2 · reveal.</b> One photo, a few words. The caption only names the event and year if the photo really is from it.</p>
+      <p class="cap"><b>Frame 2 · reveal.</b> One photo, a few words. The label names the real event and year the photo is from.</p>
     </div>
     <div class="cell">
       <div class="frame">
         <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i></div>
         <div class="acct"><span class="av">TN</span>tripnerd</div>
         <div class="photo p-blue"></div>
-        <div class="txt mid"><span class="tag">Next up</span><span class="big">The Big Game · Los Angeles</span><span class="small">Sun 14 Feb 2027 · SoFi Stadium</span><span class="small">Packages include the seat, hospitality and the logistics. Details at the link.</span></div>
-        <div class="txt low"><span class="link">See packages</span></div>
+        <div class="txt mid"><span class="tag">On the 2027 calendar</span><span class="big md">Los Angeles · Feb 14</span><span class="big md">Augusta · April</span><span class="big md">Louisville · May</span><span class="small">Pick your event at the link.</span></div>
+        <div class="txt low"><span class="link">See 2027 experiences</span></div>
         <div class="safe"></div>
       </div>
-      <p class="cap"><b>Frame 3 · next step.</b> Link sticker to the live event page. Only post this frame if TripNerd is selling LA packages; if not, swap in an event they are selling.</p>
+      <p class="cap"><b>Frame 3 · next step.</b> Link sticker to TripNerd's events page. All three events appear on tripnerd.com; the city names stand in for the trademarked event names (see the event-names decision at the bottom).</p>
     </div>
   </div>
 </article>
@@ -207,53 +209,53 @@ th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacin
 <article class="story" id="s2">
   <div class="notes">
     <span class="num">STORY 2 · TUE 6 OCT</span>
-    <h2>What's in the package</h2>
-    <p>One inclusion per frame, so someone tapping through understands the offer in about 20 seconds. This is the Story that turns "looks fun" into "I get what I'm paying for."</p>
+    <h2>Inside the Augusta Experience</h2>
+    <p>Walks through TripNerd's Augusta package one inclusion per frame, so someone tapping through understands the offer in about 20 seconds. It's posted six months before golf's biggest week, while buyers are still deciding.</p>
     <dl class="kv">
-      <dt>Job</dt><dd>Answer the first buying question before anyone has to ask it.</dd>
-      <dt>Measure</dt><dd>Completion (frame-5 views ÷ frame-1 views), link taps, questions submitted.</dd>
-      <dt>Modeled on</dt><dd data-model="s2">Research pending</dd>
-      <dt>Highlight</dt><dd>Packages</dd>
+      <dt>Job</dt><dd>Answer "what am I actually paying for?" before anyone has to ask.</dd>
+      <dt>Measure</dt><dd>Completion (frame-5 views ÷ frame-1 views), link taps, questions sent.</dd>
+      <dt>Modeled on</dt><dd>The Masters' own account, which posts golden-hour course footage and behind-the-scenes clips and saves them into named Highlight series. We found no prominent competitor running "what's included" walkthroughs, so this is a gap TripNerd can own rather than a copy of anyone.</dd>
+      <dt>Highlight</dt><dd>Augusta</dd>
     </dl>
-    <div class="flag"><b>Needs:</b> TripNerd to confirm the exact inclusions for the package being shown. The four below are placeholders until they do. Anything they don't include gets cut, not softened.</div>
+    <div class="flag"><b>Needs:</b> TripNerd to confirm the inclusions. The four below come from a search summary of their Augusta Experience page (private lodging, course access, concierge, curated dining, live music), not a direct quote. Anything they don't confirm gets cut. Also needs real photos of the lodging and dining from a past year, with no tournament logos in shot.</div>
   </div>
   <div class="reel">
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i></i><i></i><i></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
-      <div class="photo p-night"></div>
-      <div class="txt mid"><span class="big xl">What's actually in a TripNerd package?</span><span class="small">Tap through. Four things.</span></div>
+      <div class="photo p-azalea"><div class="ph">CLIP · 3–5s golden-hour Augusta-week shot from a past trip</div></div>
+      <div class="txt top"><span class="tag">April 2027</span><span class="big xl">Inside the Augusta Experience</span><span class="small">Four things. Tap through.</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 1 · promise.</b> Text only. "Four things" tells people how short this is, which keeps them watching.</p></div>
+    </div><p class="cap"><b>Frame 1 · promise.</b> Putting the brand and the point in frame 1 follows Instagram's own creative guidance. "Four things" tells people how short this is.</p></div>
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
-      <div class="photo p-field"><div class="ph">PHOTO · the actual seat or view from a past trip</div></div>
-      <div class="txt top"><span class="tag">01 / The seat</span><span class="big">Seats you'd actually brag about</span></div>
+      <div class="photo p-hotel"><div class="ph">PHOTO · the private house used on a past trip: porch, living room or pool</div></div>
+      <div class="txt top"><span class="tag">01 / Where you stay</span><span class="big">A private house, not a hotel room</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 2.</b> Name the seat tier as TripNerd sells it.</p></div>
+    </div><p class="cap"><b>Frame 2.</b> "Private lodging" as TripNerd lists it. Change the wording if it's a house share.</p></div>
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
-      <div class="photo p-food"><div class="ph">CLIP · 3–5s close-up of the hospitality spread or bar at a past event</div></div>
-      <div class="txt top"><span class="tag">02 / Hospitality</span><span class="big">Food and drinks, handled</span></div>
+      <div class="photo p-azalea"><div class="ph">PHOTO · guests on the grounds (no tournament marks visible)</div></div>
+      <div class="txt top"><span class="tag">02 / The golf</span><span class="big">Days on the course</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 3.</b> Close-up food and drink footage works well with the sound off.</p></div>
+    </div><p class="cap"><b>Frame 3.</b> Name the exact access TripNerd confirms, such as which days.</p></div>
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
-      <div class="photo p-hotel"><div class="ph">PHOTO · hotel or transfer used on a past trip</div></div>
-      <div class="txt top"><span class="tag">03 + 04 / Stay + rides</span><span class="big">Hotel and transfers sorted</span></div>
+      <div class="photo p-food"><div class="ph">CLIP · dinner or live music at the house on a past trip</div></div>
+      <div class="txt top"><span class="tag">03 / The nights</span><span class="big">Curated dinners and live music</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 4.</b> Leave this frame out entirely if hotels and transfers aren't standard in the package.</p></div>
+    </div><p class="cap"><b>Frame 4.</b> Food and music clips read without sound. Captions keep it working for sound-off viewers.</p></div>
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
       <div class="photo p-blue"></div>
-      <div class="txt top"><span class="big">What else do you want to know?</span></div>
-      <div class="txt low"><div class="sticker"><span class="q">Ask TripNerd anything</span><div class="ask">Type something…</div></div><span class="link">See what's included</span></div>
+      <div class="txt top"><span class="tag">04 / The help</span><span class="big">A concierge on the ground all week</span><span class="small">What else do you want to know?</span></div>
+      <div class="txt low"><div class="sticker"><span class="q">Ask us about Augusta</span><div class="ask">Type something…</div></div><span class="link">The Augusta Experience</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 5 · next step.</b> Question box plus link. The questions people send become next week's FAQ Story.</p></div>
+    </div><p class="cap"><b>Frame 5 · next step.</b> A question box and a link to tripnerd.com/events/augusta-experience. The questions people send become next week's FAQ Story.</p></div>
   </div>
 </article>
 
@@ -262,45 +264,45 @@ th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacin
   <div class="notes">
     <span class="num">STORY 3 · WED 7 OCT</span>
     <h2>Hosting clients?</h2>
-    <p>Speaks only to the corporate buyer, the higher-ticket track in the brief. It's posted midweek during business hours, when the people who book client entertainment are working.</p>
+    <p>Speaks only to the corporate buyer, which is TripNerd's higher-ticket track and the market its own site leads with ("bucket list events to corporate America"). It runs midweek during business hours.</p>
     <dl class="kv">
       <dt>Job</dt><dd>Start conversations with companies that host clients.</dd>
-      <dt>Measure</dt><dd>DMs containing "HOST", question-box replies, corporate inquiry form fills.</dd>
-      <dt>Modeled on</dt><dd data-model="s3">Research pending</dd>
+      <dt>Measure</dt><dd>DMs containing "HOST", question replies, corporate inquiries.</dd>
+      <dt>Modeled on</dt><dd>Real proof shown as on-screen text, the approach StubHub and Ticketmaster take with announcement Stories. The proof here is TripNerd's own: a published client testimonial saying they've used TripNerd for annual customer events at THE PLAYERS for over seven years. We found no competitor running B2B Stories, so this is a gap.</dd>
       <dt>Highlight</dt><dd>Corporate</dd>
     </dl>
-    <div class="flag"><b>Needs:</b> one real photo of a group from a past corporate booking, with the client's OK to post it, and somebody at TripNerd watching DMs on Wednesday. A "DM us" call to action that nobody answers loses the lead.</div>
+    <div class="flag"><b>Needs:</b> the exact testimonial wording from tripnerd.com/reviews, plus written OK to quote it with the client's name or company. Also a real photo of a corporate group, with their permission, and someone at TripNerd answering DMs on Wednesday. A "DM us" that goes unanswered loses the lead.</div>
   </div>
   <div class="reel">
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i></i><i></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
-      <div class="photo p-suite"><div class="ph">PHOTO · hospitality space before guests arrive</div></div>
+      <div class="photo p-suite"><div class="ph">PHOTO · VIP suite or hospitality space before guests arrive</div></div>
       <div class="txt top"><span class="big xl">Taking 8 clients out this year?</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 1 · call out the buyer.</b> A specific number reads as real and screens out everyone else.</p></div>
+    </div><p class="cap"><b>Frame 1 · names the buyer.</b> A specific number reads as real and screens out everyone else.</p></div>
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i class="on"></i><i></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
-      <div class="photo p-group"><div class="ph">PHOTO · real corporate group at field level (with permission)</div></div>
+      <div class="photo p-group"><div class="ph">PHOTO · real corporate group at an event (with permission)</div></div>
       <div class="txt top"><span class="big">They'll forget the steak dinner.</span><span class="big">They won't forget this.</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 2 · the contrast.</b> An opinion, not a statistic, so it needs no evidence.</p></div>
+    </div><p class="cap"><b>Frame 2 · the contrast.</b> It's an opinion, not a statistic, so it needs no evidence.</p></div>
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
       <div class="photo p-night"></div>
-      <div class="txt mid"><span class="tag">You host. We handle</span><span class="big">Tickets<br>Hospitality<br>Hotels<br>Rides</span><span class="small">One contact for the whole group.</span></div>
+      <div class="txt mid"><div class="review"><span>"[Paste the exact testimonial from tripnerd.com/reviews, the one about seven-plus years of customer events at THE PLAYERS.]"</span><span class="who">[Name, Company]</span><span class="src">TripNerd client · tripnerd.com/reviews</span></div></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 3 · the offer.</b> Use the same confirmed list as Story 2. "One contact" also needs TripNerd to confirm it.</p></div>
+    </div><p class="cap"><b>Frame 3 · proof.</b> A long-term corporate partner beats any adjective we could write.</p></div>
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
       <div class="photo p-blue"></div>
       <div class="txt top"><span class="big">DM us "HOST"</span><span class="small">or tell us what your clients are into:</span></div>
-      <div class="txt low"><div class="sticker"><span class="q">Which event would your clients love?</span><div class="ask">Football, golf, something else…</div></div><span class="link">Corporate packages</span></div>
+      <div class="txt low"><div class="sticker"><span class="q">Which event would your clients love?</span><div class="ask">Golf, football, the Derby…</div></div><span class="link">Corporate experiences</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 4 · next step.</b> A keyword DM and a question box, so there are two easy ways to respond.</p></div>
+    </div><p class="cap"><b>Frame 4 · next step.</b> A keyword DM and a question box, so there are two low-effort ways to reply.</p></div>
   </div>
 </article>
 
@@ -308,40 +310,48 @@ th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacin
 <article class="story" id="s4">
   <div class="notes">
     <span class="num">STORY 4 · THU 8 OCT</span>
-    <h2>Augusta in April</h2>
-    <p>Golf week 2027 starts Mon 5 April, six months out. A countdown sticker lets followers set a reminder, which builds a list of people who care about this event. That matters because TripNerd's buyers plan about a year ahead.</p>
+    <h2>Meet the Nerds</h2>
+    <p>A TripNerd team member takes over the account and shows how a trip actually comes together, then a countdown to the Feb 14 game in LA. Behind-the-scenes was the format the most category leaders used, and a staff takeover is a low-cost version of the talent takeovers big brands run.</p>
     <dl class="kv">
-      <dt>Job</dt><dd>Get on the radar of golf buyers while they're still deciding.</dd>
-      <dt>Measure</dt><dd>Countdown reminder sign-ups, poll votes, link taps.</dd>
-      <dt>Modeled on</dt><dd data-model="s4">Research pending</dd>
-      <dt>Highlight</dt><dd>Augusta</dd>
+      <dt>Job</dt><dd>Put real people behind the brand. Buyers spending this much want to know who's handling their trip.</dd>
+      <dt>Measure</dt><dd>Completion, countdown reminder sign-ups, questions sent.</dd>
+      <dt>Modeled on</dt><dd>The Masters' behind-the-scenes Stories with caddies and course staff, and SeatGeek's behind-the-scenes content (3M+ views reported). Behind-the-scenes showed up at 5 of the 7 brands we researched, more than any other format.</dd>
+      <dt>Highlight</dt><dd>Meet the Nerds</dd>
     </dl>
-    <div class="flag"><b>Needs:</b> a real Augusta-week photo from a past TripNerd trip, without tournament logos. Also confirmation that TripNerd is selling 2027 golf-week packages now.</div>
+    <div class="flag"><b>Needs:</b> one TripNerd team member to shoot 3–4 short phone clips on Wednesday. Vertical, talking to camera, no script needed. Also confirmation that LA packages are on sale. This is the only Story that can be shot this week without archive photos, so it's the one to film first if the photo request runs late.</div>
   </div>
   <div class="reel">
     <div class="cell"><div class="frame">
-      <div class="bars"><i class="on"></i><i></i><i></i></div>
+      <div class="bars"><i class="on"></i><i></i><i></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
-      <div class="photo p-azalea"><div class="ph">PHOTO · real Augusta-week shot from a past trip (no tournament marks)</div></div>
-      <div class="txt top"><span class="tag">April 2027</span><span class="big xl">Augusta. Six months out.</span></div>
+      <div class="photo p-suite"><div class="ph">CLIP · team member selfie-video at their desk, 5s: "Hey, I'm [name], I plan your trips."</div></div>
+      <div class="txt top"><span class="tag">Takeover</span><span class="big">Who's actually planning your trip?</span></div>
+      <div class="txt low"><span class="small">Captioned for sound-off</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 1 · hook.</b> The place name and timing are enough; golf fans fill in the rest.</p></div>
+    </div><p class="cap"><b>Frame 1 · a face.</b> Burned-in captions. Meta found captions raised average view duration by 12%.</p></div>
     <div class="cell"><div class="frame">
-      <div class="bars"><i class="on"></i><i class="on"></i><i></i></div>
+      <div class="bars"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+      <div class="acct"><span class="av">TN</span>tripnerd</div>
+      <div class="photo p-hotel"><div class="ph">CLIP · on a call booking cars, checking a rooming list, or a whiteboard of the week's logistics</div></div>
+      <div class="txt top"><span class="big">What you don't see</span><span class="small">Cars, rooms, dinner tables and timing for every guest.</span></div>
+      <div class="safe"></div>
+    </div><p class="cap"><b>Frame 2 · the work.</b> Show real planning artifacts with guest names blurred.</p></div>
+    <div class="cell"><div class="frame">
+      <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
       <div class="photo p-night"></div>
-      <div class="txt top"><span class="big">The best weeks book up first.</span><span class="small">Set a reminder and we'll ping you as it gets close.</span></div>
-      <div class="txt low"><div class="sticker count"><span class="q">Augusta week 2027</span><span class="n">183 DAYS</span><span>Remind me</span></div></div>
+      <div class="txt top"><span class="big">This week we're building LA.</span><span class="small">Sun 14 Feb 2027 · SoFi Stadium</span></div>
+      <div class="txt low"><div class="sticker count"><span class="q">The Big Game · LA</span><span class="n">129 DAYS</span><span>Remind me</span></div></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 2 · countdown.</b> Countdown to Mon 5 Apr 2027, which is 183 days from Thursday 8 Oct.</p></div>
+    </div><p class="cap"><b>Frame 3 · countdown.</b> 129 days from Thu 8 Oct to Feb 14. People who tap "Remind me" get a notification when it hits zero.</p></div>
     <div class="cell"><div class="frame">
-      <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+      <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
-      <div class="photo p-azalea"><div class="ph">PHOTO · second real Augusta-week shot</div></div>
-      <div class="txt top"><div class="sticker"><span class="q">Augusta in April is…</span><div class="poll"><span>Been there</span><span>On my list</span></div></div></div>
-      <div class="txt low"><span class="link">2027 golf packages</span></div>
+      <div class="photo p-blue"></div>
+      <div class="txt top"><span class="big">Ask a Nerd anything</span></div>
+      <div class="txt low"><div class="sticker"><span class="q">Questions about planning a trip?</span><div class="ask">Type something…</div></div><span class="link">LA experiences</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 3 · next step.</b> Poll plus link. People who vote "On my list" are the audience to retarget later.</p></div>
+    </div><p class="cap"><b>Frame 4 · next step.</b> The team member answers questions on camera the following week, which gives you next week's Story.</p></div>
   </div>
 </article>
 
@@ -350,52 +360,89 @@ th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacin
   <div class="notes">
     <span class="num">STORY 5 · FRI 9 OCT</span>
     <h2>From real guests</h2>
-    <p>Real reviews and real guest photos, then a quiz about how early to book. It ends the week on proof, and its frames are what go into the Reviews Highlight.</p>
+    <p>Real reviews and real guest photos, then a quiz about how early to book. It closes the week on proof and fills the Reviews Highlight that a new visitor checks before inquiring.</p>
     <dl class="kv">
-      <dt>Job</dt><dd>Show that real people have done this with TripNerd, then nudge planning ahead.</dd>
+      <dt>Job</dt><dd>Show that real people have done this with TripNerd, then nudge them to plan ahead.</dd>
       <dt>Measure</dt><dd>Quiz answers, link taps, profile visits from Stories.</dd>
-      <dt>Modeled on</dt><dd data-model="s5">Research pending</dd>
+      <dt>Modeled on</dt><dd>SeatGeek's and Vivid Seats' customer and creator reposts. Reposting guest photos with a tag also gets guests to reshare, the same mechanic behind SeatGeek's share-to-your-Story giveaway.</dd>
       <dt>Highlight</dt><dd>Reviews</dd>
     </dl>
-    <div class="flag"><b>Needs:</b> a real Google review, quoted word for word with first name and last initial, plus a guest photo the guest agreed to share. The "6–12 months" quiz answer needs TripNerd to confirm in writing before it runs. No invented, paraphrased or AI-generated reviews.</div>
+    <div class="flag"><b>Needs:</b> one real review quoted word for word, and a guest photo the guest agreed to share. Birdeye shows 43 five-star reviews; we can put that number on frame 1 once TripNerd confirms it in writing. The "6–12 months" quiz answer needs TripNerd's OK too (our brief says their buyers plan about a year out). No invented, paraphrased or AI-written reviews.</div>
   </div>
   <div class="reel">
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i></i><i></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
       <div class="photo p-night"></div>
-      <div class="txt mid"><span class="big xl">Don't take our word for it.</span></div>
+      <div class="txt mid"><span class="big xl">Don't take our word for it.</span><span class="small">[Optional once confirmed: "43 five-star reviews."]</span></div>
       <div class="safe"></div>
     </div><p class="cap"><b>Frame 1 · setup.</b></p></div>
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i class="on"></i><i></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
       <div class="photo p-night"></div>
-      <div class="txt mid"><div class="review"><span class="stars">★★★★★</span><span>[Paste a real Google review here, word for word. Trim with "…" only.]</span><span class="who">[First name L.]</span><span class="src">Google review · [month year]</span></div></div>
+      <div class="txt mid"><div class="review"><span class="stars">★★★★★</span><span>[Paste a real review word for word. Trim only with "…".]</span><span class="who">[First name L.]</span><span class="src">Google review · [month year]</span></div></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 2 · the review.</b> A screenshot of the actual review is better still.</p></div>
+    </div><p class="cap"><b>Frame 2 · the review.</b> A screenshot of the real review is even better.</p></div>
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
-      <div class="photo p-group"><div class="ph">REPOST · real guest photo or Story (guest consented, tagged)</div></div>
+      <div class="photo p-group"><div class="ph">REPOST · real guest photo or Story (guest consented and tagged)</div></div>
       <div class="txt low"><span class="tag">@guesthandle · [event, year]</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 3 · guest photo.</b> Tag the guest; they often reshare it.</p></div>
+    </div><p class="cap"><b>Frame 3 · the guest.</b> The "NERDS in Action" page on tripnerd.com may already have usable photos. Check it before asking for new ones.</p></div>
     <div class="cell"><div class="frame">
       <div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
       <div class="acct"><span class="av">TN</span>tripnerd</div>
       <div class="photo p-blue"></div>
-      <div class="txt top"><div class="sticker"><span class="q">How early should you book a marquee event?</span><div class="quiz"><span>A month out</span><span>3 months out</span><span class="right">6–12 months out</span></div></div></div>
-      <div class="txt low"><span class="small">Earlier means better seats and better hotels.</span><span class="link">Plan your 2027 trip</span></div>
+      <div class="txt top"><div class="sticker"><span class="q">How early should you book a bucket-list event?</span><div class="quiz"><span>A month out</span><span>3 months out</span><span class="right">6–12 months out</span></div></div></div>
+      <div class="txt low"><span class="small">Earlier means better seats and better places to stay.</span><span class="link">Plan your 2027 trip</span></div>
       <div class="safe"></div>
-    </div><p class="cap"><b>Frame 4 · quiz + next step.</b> The right answer shows green after someone taps.</p></div>
+    </div><p class="cap"><b>Frame 4 · quiz and next step.</b> The right answer turns green when someone taps it.</p></div>
   </div>
 </article>
 
 <section class="block" id="research">
   <span class="eyebrow">Research</span>
-  <h2>What the category leaders post</h2>
-  <div id="researchBody"><p class="foot">Research in progress.</p></div>
+  <h2>What the category leaders post on Stories</h2>
+  <p class="lede" style="margin-top:0">These are the most-followed brands in sports and live events that had documented Stories activity. Premium-hospitality competitors like On Location, QuintEvents, PrimeSport and Roadtrips had almost no documented Stories activity. That's an opening for TripNerd, but it's our reading of thin evidence, not a measured fact.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Brand</th><th>What they do on Stories</th><th>What we took</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>The Masters</td><td>Around 40 Story frames a day during tournament week, saved to Highlights. Recurring named series. Behind-the-scenes with caddies and course staff. Golden-hour course footage.</td><td>Story 2's visual style, Story 4's behind-the-scenes, and a named Highlight per story</td><td class="src"><a href="https://serotonin.co.uk/news/how-the-masters-aced-their-social-media-strategy-in-2025">Serotonin</a> · <a href="https://www.wrdw.com/2025/04/11/how-social-media-is-driving-force-growing-game-golf">WRDW</a></td></tr>
+      <tr><td>NFL</td><td>Real-time game-day Stories with stickers and on-screen drawing. GIPHY reaction stickers with players.</td><td>Speed and stickers. We keep NFL marks out entirely.</td><td class="src"><a href="https://shortyawards.com/11th/nfl-media-social-experience">Shorty Awards</a></td></tr>
+      <tr><td>Marriott Rewards × NFL</td><td>Gamified tap-and-hold Stories. 20% more viewers watched to the end than Marriott's average Story; 13M impressions.</td><td>Story 1's interactive poll</td><td class="src"><a href="https://shortyawards.com/10th/marriott-rewards-nfl-gamified-instagram-stories">Shorty Awards</a></td></tr>
+      <tr><td>SeatGeek</td><td>Behind-the-scenes content (3M+ views). Creator ambassadors. A share-to-your-Story giveaway that drove 2.5M shared Stories.</td><td>Story 4's behind-the-scenes, Story 5's reposts</td><td class="src"><a href="https://shortyawards.com/12th/launching-team-seatgeek">Shorty Awards</a> · <a href="https://shortyawards.com/12th/seatgeek-x-david-dobrik-the-ultimate-giveaway">Shorty Awards</a></td></tr>
+      <tr><td>Vivid Seats</td><td>Social-first video, memes, user-generated content, creator partnerships, ticket giveaways.</td><td>Story 5's guest reposts</td><td class="src"><a href="https://www.builtinchicago.org/job/social-media-lead/6541679">Vivid Seats job listing</a> (self-described)</td></tr>
+      <tr><td>StubHub · Ticketmaster</td><td>Stories used for announcements and on-sales. StubHub found Stories its best placement for reaching new audiences in paid campaigns.</td><td>Story 3 and 4's text-led proof and announcement frames</td><td class="src"><a href="https://smartly.io/case/stubhub">Smartly case study</a> · <a href="https://business.ticketmaster.co.uk">Ticketmaster</a></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="grid2">
+    <div>
+      <h3>Formats ranked by how many of these brands use them</h3>
+      <ol class="list">
+        <li>Behind-the-scenes and event-day access: 5 brands → <b>Story 4</b></li>
+        <li>Athlete, creator or talent takeovers: 4 → <b>Story 4</b> (staff version)</li>
+        <li>Giveaways and share-to-your-Story mechanics: 3 → saved for when we have a prize TripNerd can give</li>
+        <li>Interactive and gamified stickers: 2 → <b>Stories 1, 4, 5</b></li>
+        <li>Announcement and on-sale frames: 2 → <b>Stories 1, 4</b></li>
+        <li>Guest and creator reposts: 2 → <b>Story 5</b></li>
+      </ol>
+    </div>
+    <div>
+      <h3>Rules these drafts follow</h3>
+      <ul class="list">
+        <li><b>3–5 frames per set.</b> Viewer retention stays above 75% up to about 6–7 frames a day (<a class="src" href="https://www.rivaliq.com/blog/instagram-stories-benchmark-report/">Rival IQ</a>).</li>
+        <li><b>The hook is frame 1</b>, which has the highest exit rate at 23.8% (<a class="src" href="https://www.socialinsider.io/social-media-benchmarks/instagram-stories-benchmarks">Socialinsider</a>).</li>
+        <li><b>One set a day.</b> That matches what accounts of 10k–50k followers do. In Hootsuite's one-account test, 1–2 Stories a day got more reach and engagement than 5–10.</li>
+        <li><b>Captions on every video.</b> Around 40% of Story video is watched with sound off (Instagram).</li>
+        <li><b>A link sticker on every set.</b> Every account can use them now, and link taps are the main conversion number to track.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="foot">How this research was done: the research could only use search-engine summaries of the linked pages, because direct page loads and Instagram itself were blocked from our environment. We didn't view any profile or Highlight directly. The Story formats we couldn't find any brand evidence for, such as what's-included walkthroughs, countdown stickers and FAQ Highlights, are presented here as our recommendations, not as what competitors do. TripNerd's Instagram handle and follower count are unconfirmed.</p>
 </section>
 
 <section class="block">
@@ -405,28 +452,29 @@ th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacin
     <div>
       <h3>From TripNerd today</h3>
       <ul class="check">
-        <li>Instagram access for ServicePOW (posting rights through Meta Business Suite, not a shared password)</li>
+        <li>Instagram access for ServicePOW, with posting rights through Meta Business Suite rather than a shared password</li>
         <li>Logo files and the exact brand blue (the blue in these mockups is a stand-in)</li>
-        <li>15–25 real photos and clips from past trips: seats, hospitality, hotels, groups, Augusta week</li>
-        <li>Written confirmation of what's included in the packages shown in Stories 2 and 3</li>
-        <li>Which 2027 events are on sale now, with their page URLs for the link stickers</li>
-        <li>One or two Google reviews plus guest photos they have permission to share</li>
+        <li>15–25 real photos and clips from past trips: seats, the Augusta house, dinners, corporate groups. Check the "NERDS in Action" page first.</li>
+        <li>Written confirmation of the Augusta Experience inclusions and that LA packages are on sale</li>
+        <li>The exact text of the THE PLAYERS testimonial plus permission to quote it, one Google review, and one guest photo with consent</li>
+        <li>A team member to shoot the Story 4 clips on Wednesday</li>
         <li>Who answers DMs Wednesday through Friday</li>
       </ul>
     </div>
     <div>
       <h3>Decisions for the owner</h3>
       <ul class="check">
-        <li><b>Event names.</b> The NFL actively enforces the "Super Bowl" trademark, so these drafts say "the Big Game" and "Augusta week" instead of the official names. TripNerd should decide whether to keep that or use the names it already uses on its own site.</li>
+        <li><b>Event names.</b> TripNerd's site says "Super Bowl" and "Augusta." The NFL actively enforces its "Super Bowl" trademark against non-sponsors, so these drafts say "the Big Game" and use city names. Ask TripNerd whether to keep that.</li>
+        <li><b>Experience claims.</b> TripNerd's site says "20+ years of industry experience," but records show the company was founded in 2017. Don't use either figure in Stories until they confirm which one is accurate (it's probably the founders' experience).</li>
+        <li><b>Ownership.</b> TripNerd was acquired by All Access Golf Travel &amp; Events in 2023. Confirm with them that the brand, handle and approver haven't changed.</li>
         <li>No league or tournament logos and no broadcast footage in any frame</li>
-        <li>Approve the copy for all five Stories (Story 1 is due Monday morning)</li>
         <li>Post time: use Instagram Insights' "most active times" once we have access. Until then, late morning in TripNerd's main market is a guess, not data.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<p class="foot">Event dates: <span class="src"><a href="https://www.cbsnews.com/amp/losangeles/news/super-bowl-lxi-to-be-played-at-sofi-stadium-in-2027">CBS: LA game at SoFi, Feb 2027</a> · <a href="https://thegolfnewsnet.com/ryan_ballengee/2025/04/11/future-dates-for-the-masters-through-2028-113001">Golf News Net: future tournament dates</a> · <a href="https://kjk.com/2020/01/31/are-you-allowed-to-say-super-bowl/">KJK: "Super Bowl" trademark use</a></span></p>
+<p class="foot">Event dates and TripNerd facts: <span class="src"><a href="https://www.cbsnews.com/amp/losangeles/news/super-bowl-lxi-to-be-played-at-sofi-stadium-in-2027">CBS, LA game at SoFi Feb 2027</a> · <a href="https://thegolfnewsnet.com/ryan_ballengee/2025/04/11/future-dates-for-the-masters-through-2028-113001">Golf News Net, tournament dates</a> · <a href="https://www.tripnerd.com/">tripnerd.com</a> · <a href="https://reviews.birdeye.com/tripnerd-171086011460783">Birdeye reviews</a> · <a href="https://www.privsource.com/acquisitions/deal/all-access-golf-travel-events-acquires-tripnerd-LXS5E6">PrivSource, acquisition</a> · <a href="https://kjk.com/2020/01/31/are-you-allowed-to-say-super-bowl/">KJK, "Super Bowl" trademark use</a></span></p>
 </div>
 
 <script>
