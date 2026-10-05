@@ -1802,3 +1802,10 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - 3 Grok prompts (storyboard; empty-scene concept frames, not for posting; a message draft).
 - **Honest flag:** the short cut possible from current footage mostly repeats "Two ways" and the Hosting spot. The new value (arrival, Nerds, leaving) needs filming, so it is not an October post.
 
+## 2026-10-05 (late): "The Group Chat" Reel: concept approved, storyboard built (R02, Fri 16 Oct)
+- **Karl chose** "The Group Chat" (a chat-thread opening, new for TripNerd) and limited Higgsfield to one labelled bridge shot with no people (F6.5).
+- **Built:** the FULL Bible with the 13-frame storyboard (all 10 fields), 4 hooks, COMPOSITE marking and routing. Storyboard frames were built in code (chat UI generic, no Apple look, no photo avatars); real stills IMG_1907/1998 used downscale only, below the face line (the guard tripped once and the crop was fixed).
+- **Higgsfield live state:** 11,779.65 credits, Ultra plan. F6.5 routes to Seedance 2.5 (480p preview, finalised at 1080p); the backup is Cinema Studio 3.0. No read-only price quote is available. **Nothing generated.**
+- **Skeptic Pass 1** spawned in isolation (packet scan clean); its verdict is pending transcription.
+- **Next:** STORYBOARD APPROVED (Karl) → SPEND_APPROVER for F6.5. Taylor's originals decide version A or B.
+

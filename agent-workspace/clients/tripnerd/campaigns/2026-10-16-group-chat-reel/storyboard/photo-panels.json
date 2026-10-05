@@ -1,0 +1,44 @@
+{
+ "F07": {
+  "source": "static_hosts/photos_v3/clean2_IMG_1907.png",
+  "source_sha256": "743e940253f8f80e80e127a9cdead94be759c38d309cfb60890d44fc2350aa9d",
+  "colour": "Apple Poppy Output Profile (from IMG_2004, sha256 2e9b3662e1ad2b0e) -> sRGB, perceptual",
+  "crop_src_px": [
+   0,
+   1160,
+   1262,
+   2048
+  ],
+  "exclusion_line_y": 1150,
+  "anchor": "top",
+  "scale": 0.8558,
+  "panel_px": [
+   1080,
+   760
+  ],
+  "file": "gc-F07-photo.png",
+  "sha256": "3bcb74fd4d2bf34009017bb0ea5d86fd6705743002b35fc6b95cf4e8fe52cfc2",
+  "grade": "conventional (static_hosts/grade/grade.py preset c2): white balance, exposure, S-curve, vibrance, unsharp mask; no AI"
+ },
+ "F08": {
+  "source": "tn_assets/IMG_1998.JPG",
+  "source_sha256": "d5a7954b47b114307fc6d6fc5fa7cd30d1dd31e79fbd9bb67b5172270072931d",
+  "colour": "Apple Poppy Output Profile (from IMG_2004, sha256 2e9b3662e1ad2b0e) -> sRGB, perceptual",
+  "crop_src_px": [
+   0,
+   1180,
+   1233,
+   2048
+  ],
+  "exclusion_line_y": 1105,
+  "anchor": "top",
+  "scale": 0.8759,
+  "panel_px": [
+   1080,
+   760
+  ],
+  "file": "gc-F08-photo.png",
+  "sha256": "a43a6d7c5e3cbc398266ddfa33d9978495e284c26390721c7811d03139e410b9",
+  "grade": "conventional (static_hosts/grade/grade.py preset c4): white balance, exposure, S-curve, vibrance, unsharp mask; no AI"
+ }
+}

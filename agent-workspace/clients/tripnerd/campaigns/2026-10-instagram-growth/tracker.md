@@ -70,6 +70,7 @@ in each log.
 | 01 | | — | Reel | Augusta, by the clock ([edit plan](../2026-10-04-launch-reels/edit-plan-03-augusta-by-the-clock.md)) | stopped (v5, 2026-10-04) | | | | | |
 | 02 | | Thu 8 Oct 12:30 PM | Carousel | What corporate hosts get wrong (C02) | in production | | | | | |
 | C03 | | Tue 13 Oct 1:00 PM | Carousel | Fan Experiences, owed Sept static (C03) | v1 built, QC passed; held for rail frames | | | | | |
+| R02 | | Fri 16 Oct 11:00 AM | Reel (Trial) | The Group Chat ([Bible](../2026-10-16-group-chat-reel/campaign-bible.md)) | concept approved; storyboard built; awaiting storyboard + spend gates | | | | | |
 | 03 | | Wed 7 Oct 12:00 PM | Reel | Two ways to see the 17th, owed Sept video ([edit plan](../2026-10-04-launch-reels/edit-plan-01-two-ways-17th.md)) | planned (awaiting clips) | | | | | |
 | 04 | | | Proof | Communication proof | idea | | | | | |
 | 05 | | | Reel | What guests see vs. what we handle | idea | | | | | |
