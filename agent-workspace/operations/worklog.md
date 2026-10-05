@@ -1461,3 +1461,13 @@ Legal versions listed instead (real Nerd, at-home recreation, archive photos + r
 
 **Open:** tell TripNerd's approver the primary KPI changed (plan p.10 says "Likes never the
 goal"); connect Supermetrics Instagram insights once TripNerd grants access.
+
+## 2026-10-05 (later) — TripNerd: $1.50 Augusta menu Reel script + Grok briefing file
+
+**Did:** wrote the first awareness Reel script (real Nerd recreates and ranks the 2026 Augusta
+concessions menu; prices sourced from Yahoo Sports/On3/NPR; 3 Trial Reel hooks; shoot list; rule
+check) and a standalone Grok study file (`clients/tripnerd/grok-briefing-instagram-algorithm.md`):
+goal, ranking systems, signals, tactics per signal, Stories mechanics, schedule, format borrowing,
+food-review rules, hard rules, assets, fact bank, prompts A–F.
+**Open:** approver sign-off; real ranking + grocery total on shoot day; slot it as Friday's Trial Reel
+or swap with Reel 01.

@@ -11,6 +11,9 @@ tags: [instagram, reels, stories, grok, awareness, tripnerd]
 
 # TripNerd — Instagram Content System
 
+> Standalone version to upload to Grok: [`grok-briefing-instagram-algorithm.md`](grok-briefing-instagram-algorithm.md).
+> First Reel script: [`deliverables/2026-10-reel-augusta-menu/script-augusta-menu-at-home.md`](deliverables/2026-10-reel-augusta-menu/script-augusta-menu-at-home.md).
+
 Read this before planning any TripNerd Instagram content. It sets the current goal, the
 formats to borrow, the rules nothing breaks, and the prompts for Grok (SuperGrok is in the
 growth plan's "Plan" step).
