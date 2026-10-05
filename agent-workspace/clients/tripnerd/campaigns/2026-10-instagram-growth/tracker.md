@@ -22,7 +22,7 @@ in each log.
 | Test month | **1–31 Oct 2026** (followers measured from Insights). Review in the first week of November. If partner access slips past Wed 7 Oct, propose four weeks from the first post instead |
 | TripNerd CEO | **Jason** (Karl, 2026-10-04). The growth plan is presented to him; the presented deck is https://claude.ai/artifact/PniaqVR1qdWmxnjGgur3Bx |
 | TripNerd approver | **NEEDS INPUT**: ask on the setup call ([`ops/week-one-setup-checklist.md`](ops/week-one-setup-checklist.md)). Nothing posts without their yes; yes on Wed 7 / Thu 8 posts needed by Tue 6 EOD |
-| TripNerd logo | **Decided (Karl, APPROVER, 2026-10-05):** the September transparent PNG, 1633×601, sha256 `1c4996e5dc60000c10ac31b3b1e31bc5d9d0aa95fbe0d05209163f9b1b0caa51`; TripNerd to confirm. File currently in the session scratchpad only, so it **needs a durable home** (Karl: commit to `clients/tripnerd/brand-assets/` or Drive) |
+| TripNerd logo | **Decided (Karl, APPROVER, 2026-10-05):** the September transparent PNG, 1633×601, sha256 `1c4996e5dc60000c10ac31b3b1e31bc5d9d0aa95fbe0d05209163f9b1b0caa51`; TripNerd to confirm. Committed at [`../../brand-assets/tripnerd-logo-colour-1633x601.png`](../../brand-assets/README.md) (Karl OK'd, 2026-10-05) |
 | TripNerd inbox owner (DMs) | **NEEDS INPUT** |
 | On-camera Nerd | **NEEDS INPUT** |
 | Footage folder (Drive) | **NEEDS INPUT** |
