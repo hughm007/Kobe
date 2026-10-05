@@ -1,0 +1,4 @@
+Direct verification of the three expect-strings the sampled-frame OCR missed (2026-10-05):
+- "AUGUSTA": frame f0117 (t=3.9 s), tesseract on crop (0,0,1080,700): "... TripNerd tripnerd AUGUSTA Seen" -> FOUND
+- "Way better than the couch.": frame f0474 (t=15.8 s), tesseract on crop (0,250,1080,700): "TRIPNERD Way better than the couch." -> FOUND (two-line wrap defeats the single-string sampler)
+- "Get the Augusta details": frame f0195 (t=6.5 s), tesseract does not read navy-on-site-blue text at this size; VERIFIED BY EYE on work/f195.png (contrast 4.89:1, asserted in code). OCR: NOT READ.

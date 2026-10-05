@@ -148,6 +148,21 @@ This is the client KB home for TripNerd Evidence Records, in the format set by
 | **Approver** | CLIENT_APPROVER (TripNerd) |
 | **Approval status** | Awaiting sign-off |
 
+## EV-tripnerd-009: what TripNerd's Augusta package includes (per tripnerd.com)
+
+| Field | Record |
+|---|---|
+| **Claim (exact wording approved for use)** | Inclusion list: "private executive home", "course passes", "daily hospitality", "food & drink", "hosted by TripNerd". Short forms on screen: "TripNerd hosted", "Daily hospitality", "Food & drink included". The site's own headings are "Private Executive Home", "Course Passes Included", "Daily Hospitality", "TripNerd Hosted", "Food & Drink Included" |
+| **Used in** | `campaigns/2026-10-book-it-now-augusta/` v1: the auto-reply text, the beat 5–7 captions and the end-card list |
+| **Evidence** | **Karl's screenshots of tripnerd.com's Augusta page, 2026-10-05** (two images in the session). They show the five headings above plus "Lifelong Memories" (puffery, **not** used as a claim). The page carries a disclaimer: TripNerd, LLC "is an independent travel company and is not affiliated with, sponsored by, endorsed by, or an official partner of Augusta National, Inc. or The Masters Tournament"; marks are used "solely for descriptive and informational purposes". |
+| **Source** | tripnerd.com, as Karl captured it on 2026-10-05. tripnerd.com is not reachable from this environment (403), so it was not fetched independently |
+| **Date captured** | 2026-10-05 |
+| **Captured by** | APPROVER (Karl): screenshots. Filed by OPERATOR (Claude) |
+| **Evidence status** | **CONFIRMED** as TripNerd's own published package description. **Not verified:** what "course passes" covers (which days or rounds), and whether every inclusion applies to every Augusta package |
+| **Scope / expiry** | Augusta week only. Never write the tournament's name or show its marks. Mirror the site's non-affiliation line in captions. Re-check if the Augusta page changes. **Also partly answers an Augusta open item:** TripNerd does sell and host Augusta-week trips. Still open: the 9 Apr venue's name and its OK to use photos, and guest/staff consent |
+| **Approver** | CLIENT_APPROVER (TripNerd; not yet named) |
+| **Approval status** | Awaiting sign-off |
+
 ---
 
 ## Cross-references: earlier Evidence Records (not renumbered)

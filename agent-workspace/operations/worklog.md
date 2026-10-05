@@ -1822,3 +1822,16 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **Update:** the isolated Skeptic BLOCKED Door to roar script v2 (photoreal generated venue, seat and drink frames read as documentary proof of unrecorded offers; the stills and the 17th video come from different venues and days; too much AI for the client's 'bridge short gaps' rule). Karl chose all real. Script v3 (`script-v3-all-real.md`) is a V23 + V24 cut list: one suite, one walk, EV-003/EV-006 on matching footage, no AI. It waits on Taylor's originals. Recommend posting it ≥2 weeks after Two ways (shared roar).
 - **Open flag for The Group Chat:** its F7/F8 stills (Augusta-week table and food) also come from a different venue than its 17th payoff. Swap them for V23 buffet frames when the originals arrive.
 
+## 2026-10-05 (late): "Book It Now" (Augusta) Reel: draft v1 built and sent to Karl
+- **Karl's script and stills:** couch → DM "AUGUSTA" → reply → tap → Augusta → end card, with his two Higgsfield stills. **His decisions:** AI couch skit + real Augusta; real keyword auto-reply CTA ("Get the Augusta details", not "Book now"); the line as text.
+- **Built in code:**
+  - DM UI;
+  - the phone's generated screen (unverified claims) replaced via perspective warp, with the thumb kept on top;
+  - real 9 Apr photos IMG_1985 (event flag logo, player photo and TV blurred as third-party marks), IMG_1932, IMG_2034, IMG_2036;
+  - end card from EV-tripnerd-009 (tripnerd.com Augusta inclusions, Karl's screenshots of 5 Oct).
+- **Specs:** 20 s, 1080×1920, 30 fps, −14.0 LUFS. Send copy 17.9 MB.
+- **QC:** structural checks all pass. The script exits 1 only on sampled-frame OCR; 2 strings were found by direct OCR and the button was verified by eye.
+- **Blocked:** Higgsfield's CDN returns 403 from the container, so generated video can't be pulled here.
+- **Posting gates:** Jason's written OK for the AI actor; venue, photo and consent OKs; the "AUGUSTA" auto-reply live with a DM owner; the course-passes scope; the AI label. The isolated Skeptic Pass 3 is running.
+- **Records:** `clients/tripnerd/campaigns/2026-10-book-it-now-augusta/` (Bible, auto-reply setup, asks for TripNerd (NOT SENT), QC receipts); EV-tripnerd-009 in the register.
+
