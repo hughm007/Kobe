@@ -1,0 +1,111 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    70,
+    79,
+    415,
+    205
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "label",
+   "box": [
+    471,
+    121,
+    652,
+    167
+   ],
+   "font_px": 34,
+   "text": "THE VIEW",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    708,
+    637,
+    950
+   ],
+   "font_px": 100,
+   "text": "See it from the rail.",
+   "contrast": 14.77
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    970,
+    727,
+    1026
+   ],
+   "font_px": 44,
+   "text": "Not from the back of the crowd.",
+   "contrast": 14.77
+  },
+  {
+   "role": "fact",
+   "box": [
+    86,
+    1066,
+    736,
+    1160
+   ],
+   "font_px": 36,
+   "text": "Ours: at the island-green 17th, guests watched from the rail.",
+   "contrast": 4.89
+  },
+  {
+   "role": "cta",
+   "box": [
+    74,
+    1210,
+    509,
+    1262
+   ],
+   "font_px": 40,
+   "text": "Next: where we go \u2192",
+   "contrast": 14.77
+  },
+  {
+   "role": "label",
+   "box": [
+    385,
+    403,
+    694,
+    449
+   ],
+   "font_px": 34,
+   "text": "PHOTO TO COME",
+   "contrast": 11.74
+  },
+  {
+   "role": "label",
+   "box": [
+    255,
+    469,
+    824,
+    513
+   ],
+   "font_px": 32,
+   "text": "17th-hole rail frame \u00b7 Taylor\u2019s original",
+   "contrast": 10.9
+  }
+ ],
+ "file": "tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png",
+ "sha256": "d01b838a68ff6b31"
+}

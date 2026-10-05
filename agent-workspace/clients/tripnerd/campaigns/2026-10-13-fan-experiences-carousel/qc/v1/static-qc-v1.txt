@@ -1,0 +1,364 @@
+PASS  BC-51:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: 68KB (<8MB)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:logo: box [70, 79, 415, 205] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label: box [471, 122, 807, 168] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:headline: box [54, 838, 823, 1166] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:headline: 88px (floor 64)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:headline: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:cta: box [74, 1208, 247, 1262] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:cta: 42px (floor 40)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:cta: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label: box [385, 468, 694, 514] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label: 11.74:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label: box [255, 534, 824, 578] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label: 32px (floor 24)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label: 10.9:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'2026':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'2027':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'best':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'#1':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'official':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'review':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'five-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'limited':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'always':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'every':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'THE PLAYERS':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'handled':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'tripnerd.com':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'transport':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'ultimate':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'Super Bowl':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'field-level':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'years':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'one call':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'Book Smart':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'suite':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'steps':tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-51:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: 73KB (<8MB)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:logo: box [70, 79, 415, 205] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:label: box [471, 122, 680, 168] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:headline: box [54, 487, 820, 784] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:headline: 124px (floor 64)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:headline: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:support: box [54, 824, 773, 955] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:support: 52px (floor 36)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:support: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:cta: box [74, 1210, 416, 1262] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:cta: 40px (floor 40)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'2026':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'2027':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'best':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'#1':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'official':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'review':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'five-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'limited':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'always':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'every':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'THE PLAYERS':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'handled':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'tripnerd.com':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'transport':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'ultimate':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'Super Bowl':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'field-level':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'years':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'one call':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'Book Smart':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'suite':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'steps':tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-51:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: 76KB (<8MB)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:logo: box [70, 79, 415, 205] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label: box [471, 121, 652, 167] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:headline: box [54, 708, 637, 950] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:headline: 100px (floor 64)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:headline: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:support: box [54, 970, 727, 1026] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:support: 44px (floor 36)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:support: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:fact: box [86, 1066, 736, 1160] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:fact: 36px (floor 28)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:fact: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:cta: box [74, 1210, 509, 1262] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:cta: 40px (floor 40)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:cta: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label: box [385, 403, 694, 449] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label: 11.74:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label: box [255, 469, 824, 513] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label: 32px (floor 24)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label: 10.9:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'2026':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'2027':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'best':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'#1':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'official':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'review':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'five-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'limited':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'always':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'every':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'THE PLAYERS':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'handled':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'tripnerd.com':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'transport':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'ultimate':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'Super Bowl':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'field-level':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'years':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'one call':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'Book Smart':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'suite':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'steps':tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-51:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: 70KB (<8MB)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:logo: box [70, 79, 415, 205] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:label: box [471, 122, 746, 168] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:label: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:support: box [54, 505, 523, 569] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:support: 52px (floor 36)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:support: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:headline: box [54, 589, 794, 705] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:headline: 104px (floor 64)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:headline: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:support: box [54, 745, 753, 937] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:support: 50px (floor 36)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:support: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:cta: box [74, 1210, 367, 1262] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:cta: 40px (floor 40)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'2026':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'2027':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'best':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'#1':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'official':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'review':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'five-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'limited':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'always':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'every':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'THE PLAYERS':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'handled':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'tripnerd.com':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'transport':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'ultimate':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'Super Bowl':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'field-level':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'years':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'one call':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'Book Smart':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'suite':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'steps':tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-51:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: 647KB (<8MB)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:photo: box [54, 241, 1026, 817] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:logo: box [70, 79, 415, 205] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:label: box [471, 121, 631, 167] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:headline: box [54, 849, 830, 1026] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:headline: 72px (floor 64)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:headline: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:fact: box [86, 1066, 813, 1160] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:fact: 36px (floor 28)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:fact: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:cta: box [74, 1210, 413, 1262] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:cta: 40px (floor 40)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'2026':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'2027':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'best':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'#1':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'official':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'review':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'five-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'limited':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'always':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'every':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'THE PLAYERS':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'handled':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'tripnerd.com':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'transport':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'ultimate':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'Super Bowl':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'field-level':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'years':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'one call':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'Book Smart':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'suite':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'steps':tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-51:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: 872KB (<8MB)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:photo: box [54, 241, 1026, 863] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:logo: box [70, 79, 415, 205] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:label: box [471, 122, 659, 168] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:headline: box [54, 895, 735, 1072] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:headline: 72px (floor 64)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:headline: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:fact: box [86, 1112, 805, 1160] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:fact: 36px (floor 28)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:fact: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:cta: box [74, 1210, 455, 1262] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:cta: 40px (floor 40)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'2026':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'2027':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'best':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'#1':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'official':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'review':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'five-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'limited':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'always':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'every':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'THE PLAYERS':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'handled':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'tripnerd.com':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'transport':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'ultimate':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'Super Bowl':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'field-level':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'years':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'one call':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'Book Smart':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'suite':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'steps':tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-51:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: 63KB (<8MB)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:logo: box [70, 79, 415, 205] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:headline: box [54, 432, 684, 818] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:headline: 104px (floor 64)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:headline: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:support: box [54, 854, 522, 922] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:support: 56px (floor 36)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:support: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:cta: box [74, 986, 640, 1046] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:cta: 48px (floor 40)
+PASS  BC-52:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'2026':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'2027':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'best':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'#1':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'official':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'review':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'five-star':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'limited':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'always':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'every':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'THE PLAYERS':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'handled':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'tripnerd.com':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'transport':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'ultimate':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'Super Bowl':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'field-level':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'years':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'one call':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'Book Smart':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'suite':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'steps':tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:present:'link in bio': in set
+PASS  BC-55:present:'Ours: at the island-green 17th, guests watched from the rail.': in set
+PASS  BC-55:present:'TripNerd hosts guests at golf tournaments and other big events.': in set
+PASS  BC-55:present:'Ours: a TripNerd-branded table, with staff on hand.': in set
+PASS  BC-55:present:'Ours: a hosted spread, set out for guests.': in set
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: diff=0.188 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: diff=0.174 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: diff=0.341 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: diff=0.238 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: diff=0.282 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: diff=0.347 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: diff=0.197 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: diff=0.365 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: diff=0.276 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: diff=0.290 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: diff=0.377 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: diff=0.325 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: diff=0.212 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: diff=0.269 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: diff=0.339 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: diff=0.284 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: diff=0.298 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: diff=0.093 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: diff=0.256 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: diff=0.297 (ok)
+PASS  BC-54:distinct:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png~tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: diff=0.307 (ok)
+
+STATIC-QC: PASS (362 passed, 0 failed, 7 exports)

@@ -1,0 +1,120 @@
+{
+ "name": "tripnerd-fanexp-C03-H1-feed-portrait-v1-c3",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_vip/bg_v1/c3-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.32,
+  "pos": "top-left",
+  "xy": [
+   70,
+   79
+  ]
+ },
+ "blocks": [
+  {
+   "role": "label",
+   "text": "THE VIEW",
+   "size": 34,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "x": 471,
+   "y_frac": 0.09
+  },
+  {
+   "role": "headline",
+   "text": "See it from the rail.",
+   "size": 100,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.5248148148148148
+  },
+  {
+   "role": "support",
+   "text": "Not from the back of the crowd.",
+   "size": 44,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.7188888888888889
+  },
+  {
+   "role": "fact",
+   "text": "Ours: at the island-green 17th, guests watched from the rail.",
+   "size": 36,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": false,
+   "align": "left",
+   "x": 86,
+   "y_frac": 0.79
+  },
+  {
+   "role": "cta",
+   "text": "Next: where we go \u2192",
+   "size": 40,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "x": 74,
+   "y_frac": 0.8966666666666666
+  },
+  {
+   "role": "label",
+   "text": "PHOTO TO COME",
+   "size": 34,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "center",
+   "y_frac": 0.29888888888888887
+  },
+  {
+   "role": "label",
+   "text": "17th-hole rail frame \u00b7 Taylor\u2019s original",
+   "size": 32,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": false,
+   "align": "center",
+   "y_frac": 0.3477777777777778
+  }
+ ]
+}

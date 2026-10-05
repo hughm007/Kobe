@@ -1,0 +1,35 @@
+{
+ "plates": [
+  {
+   "kind": "logo-plate",
+   "rect": [
+    54,
+    67,
+    431,
+    217
+   ],
+   "color": [
+    88,
+    150,
+    233
+   ]
+  },
+  {
+   "kind": "photo-panel",
+   "rect": [
+    54,
+    241,
+    1026,
+    806
+   ],
+   "source": "PLACEHOLDER: 17th-hole rail frame (Taylor's original, >=1080 px, faces cropped out)"
+  }
+ ],
+ "logo_box": [
+  70,
+  79,
+  415,
+  205
+ ],
+ "photo": null
+}

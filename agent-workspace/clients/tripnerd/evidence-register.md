@@ -76,7 +76,7 @@ This is the client KB home for TripNerd Evidence Records, in the format set by
 | Field | Record |
 |---|---|
 | **Claim** | "TripNerd hosts guests at golf tournaments and other big events." |
-| **Used in** | `campaigns/2026-10-05-hosts-carousel/`, card c7 (support), **v1 and v2** (same wording) |
+| **Used in** | `campaigns/2026-10-05-hosts-carousel/`, card c7 (support), **v1 and v2** (same wording). `campaigns/2026-10-13-fan-experiences-carousel/` (C03) v1, card c4 (support, same wording) |
 | **Evidence** | **1. 2026-09-30 online presence audit** (branch `claude/brave-mendel-0vxkwj`, `marketing-plan/2026-09-30-online-presence-audit.md`, read with `git show`):<br>- LinkedIn description, CONFIRMED and in TripNerd's own words: "…delivering bucket list events to corporate America. Super Bowl, Phoenix Open, THE PLAYERS, Final Four, Ryder Cup, Golf MAJORS, Country Music Awards, and much more…".<br>- tripnerd.com event pages exist for THE PLAYERS, US Open Golf, Augusta and the Derby (each about 665–690 words), and for the Phoenix Open, Daytona, CMA Fest and others (§4).<br><br>**2. Event-page package lines** (`real-material-inventory.md` §3, same branch): THE PLAYERS "17th Hole … Luxury Suite", "Full Open Bar & Food Within Suite"; Phoenix Open "16th Hole LOGE Suite Tickets".<br><br>**3. Our own records of hosting:** EV-tripnerd-002 (the suite at THE PLAYERS) and EV-TN-AUG-04 (the hosted Augusta-week day).<br><br>**4. Client brief** (VERIFIED): "premium fan experiences: marquee sports hospitality". |
 | **Source** | TripNerd's website and LinkedIn as read on 2026-09-30; TripNerd's own media |
 | **Date captured** | 2026-10-05 (from the audit of 2026-09-30) |
@@ -92,7 +92,7 @@ This is the client KB home for TripNerd Evidence Records, in the format set by
 | Field | Record |
 |---|---|
 | **Claim** | CTA "Plan yours at tripnerd.com" (implies the site lets a visitor start planning a hosted event day) |
-| **Used in** | `campaigns/2026-10-05-hosts-carousel/` **v1**, card c7 (CTA pill). v2's CTA is "Plan yours · link in bio" (no URL on image); the bio link's destination is still this record's subject and still needs the BC-19 phone receipt |
+| **Used in** | `campaigns/2026-10-05-hosts-carousel/` **v1**, card c7 (CTA pill). v2's CTA is "Plan yours · link in bio" (no URL on image); the bio link's destination is still this record's subject and still needs the BC-19 phone receipt. `campaigns/2026-10-13-fan-experiences-carousel/` (C03) v1, card c7 CTA "Plan yours · link in bio" (same dependency) |
 | **Evidence** | **2026-09-30 audit §4:**<br>- `http://tripnerd.com` redirects to `https://www.tripnerd.com`;<br>- the site has one form, the contact form;<br>- event pages exist for each event (as EV-tripnerd-004).<br><br>The real-material inventory §4 notes a "Get a Quote" path. |
 | **Source** | tripnerd.com as fetched 2026-09-30 |
 | **Date captured** | 2026-10-05 |
@@ -107,7 +107,7 @@ This is the client KB home for TripNerd Evidence Records, in the format set by
 | Field | Record |
 |---|---|
 | **Claim (exact wording)** | "Ours: at the island-green 17th, guests watched from the rail." |
-| **Used in** | `campaigns/2026-10-05-hosts-carousel/` v2, card c3 (proof band) |
+| **Used in** | `campaigns/2026-10-05-hosts-carousel/` v2, card c3 (proof band). `campaigns/2026-10-13-fan-experiences-carousel/` (C03) v1, card c3 (proof band, same wording) |
 | **Evidence** | **The same two footage records as EV-tripnerd-002** (no new viewing):<br>1. [`footage-inventory.md`](campaigns/2026-10-04-launch-reels/footage-inventory.md) (main): V23 (2026-03-12, 54 s, one take) "… out to the rail"; V24 (2026-03-14) "Seated view from the suite; the putt; 17 erupts".<br>2. Branch `claude/brave-mendel-0vxkwj`, `campaigns/2026-09-29-real-footage/footage-log.md`: V23 24.5–38.5 s "out to the rail: the island green, the water, the packed gallery below"; 39–41 s "guests seated at the rail"; V24 0–2 s "backs of two guests at the rail, 17 below".<br><br>**"Island-green 17th":** the footage records place TripNerd's suite on the 17th at THE PLAYERS (EV-tripnerd-002), which is played on TPC Sawgrass's Stadium Course. That course's par-3 17th is the well-known island green: publicly documented general knowledge, not re-fetched in this session (the web is not reachable from here). The logs independently describe "the island green, the water" below the rail. |
 | **Source** | TripNerd's camera roll (V23, V24). Originals on Taylor's (TripNerd's) phone; only 720p copies exist. **Not on disk here and not re-viewed for this record.** |
 | **Date captured** | 2026-10-05 (from records dated 2026-09-29 and 2026-10-04) |
@@ -122,7 +122,7 @@ This is the client KB home for TripNerd Evidence Records, in the format set by
 | Field | Record |
 |---|---|
 | **Claim (exact wording)** | "Ours: a hosted spread, set out for guests." |
-| **Used in** | `campaigns/2026-10-05-hosts-carousel/` v2, card c4 (proof band, with the IMG_1998 photo panel above it) |
+| **Used in** | `campaigns/2026-10-05-hosts-carousel/` v2, card c4 (proof band, with the IMG_1998 photo panel above it). `campaigns/2026-10-13-fan-experiences-carousel/` (C03) v1, card c6 (proof band, same wording; a tighter IMG_1998 crop of the tartlet plate) |
 | **Evidence** | **IMG_1998**, sha256 of the working copy as recorded in the carousel's `qc/v2/photo-panels-v2.json`. EXIF 2026-04-09 17:46:54; Apple iPhone 15 Plus, iOS 26.3.1: the same phone and the same day as IMG_1901 (09:03, EV-tripnerd-001) and the roll behind **EV-TN-AUG-04** ("hosted by TripNerd": the branded check-in table, the IMG_2030 staff badge, the IMG_1985 "Private Party" banner).<br>**Viewed 2026-10-05:** a dessert table with no people: a platter of fruit and berry tartlets, glazed doughnuts, dessert cups, lemon bars on a riser, chocolate-dipped pieces; white linen, serving tongs. A small table card on a stand (venue name) is present in the frame and is **cropped out** of the panel (crop starts below it). No liquor, bottle or brand labels are visible. |
 | **Source** | TripNerd's Drive library (folder `0AJj-fhf07xDjUk9PVA`, uploaded 2026-09-22); working copy `tn_assets/IMG_1998.JPG` in the session scratchpad. Library cleared by the APPROVER on 2026-10-04 (launch-reels Bible, Decision log). |
 | **Date captured** | 2026-10-05 |
@@ -137,7 +137,7 @@ This is the client KB home for TripNerd Evidence Records, in the format set by
 | Field | Record |
 |---|---|
 | **Claim (exact wording)** | "Ours: a TripNerd-branded table, with staff on hand." |
-| **Used in** | `campaigns/2026-10-05-hosts-carousel/` v2, card c2 (proof band, with the IMG_1907 photo panel above it; c1 shows the same table in IMG_1901) |
+| **Used in** | `campaigns/2026-10-05-hosts-carousel/` v2, card c2 (proof band, with the IMG_1907 photo panel above it; c1 shows the same table in IMG_1901). `campaigns/2026-10-13-fan-experiences-carousel/` (C03) v1, card c5 (proof band, same wording; IMG_1901 left crop below the faces) |
 | **Evidence** | **Narrowed from EV-tripnerd-001 to what the photos show.** IMG_1901 (09:03:55) and IMG_1907 (09:04:03), 2026-04-09, iPhone 15 Plus: a table draped in a "TripNerd® FAN EXPERIENCES" cloth; three people seated behind it wearing "STAFF" lanyards (lanyard text legible on 1907 and 1901), laptops, clipboards; the right-hand man's badge reads "STAFF" (EV-001's enlarged crop). |
 | **What it drops from EV-001** | The word **"check-in"** (EV-001's INFERRED element; the v1 Skeptic S2). The card's support line "One check-in point…" is advice, not a claim about this table. |
 | **Source** | As EV-tripnerd-001 |

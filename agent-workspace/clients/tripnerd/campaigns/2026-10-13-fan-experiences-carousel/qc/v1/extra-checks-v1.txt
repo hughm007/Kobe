@@ -1,0 +1,128 @@
+PASS  X3:mode:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: 1080x1350
+PASS  X5:bytes:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: 70473 bytes (0.067 MB)
+PASS  X2:rebuild-exact:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label:'FAN EXPERIENCES': min 5.15:1, p5 5.15, median 5.15 over 4651 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:headline:'You didn’t travel this far t': min 14.77:1, p5 14.77, median 14.77 over 53070 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:cta:'Swipe →': min 14.77:1, p5 14.77, median 14.77 over 2359 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label:'PHOTO TO COME': min 11.74:1, p5 11.74, median 11.74 over 3779 ink px (manifest says 11.74)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:label:'17th-hole rail frame · Taylo': min 11.74:1, p5 11.74, median 11.74 over 4625 ink px (manifest says 10.9)
+PASS  X1:gaps:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: 6 boxes, floor 16px; tightest pair 20px (label:'PHOTO TO COME' ~ label:'17th-hole rail frame')
+PASS  X6:chip-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png:cta: chip [54, 1198, 267, 1262] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-plate-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: logo-plate [54, 67, 431, 217] vs safe [54, 67, 1026, 1283]
+PASS  X6:photo-panel-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: photo-panel [54, 241, 1026, 806] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: logo [70, 79, 415, 205] (345 px wide) vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-width:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: logo 345 px wide (floor 300)
+INFO  OCR:tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png: 21/22 manifest words read back by tesseract; misses: headline: wanted ['you', "didn't", 'travel', 'this', 'far', 'to', 'sit', 'in', 'row', '40.'] got ['4o.', "didn't", 'far', 'in', 'row', 'sit', 'this', 'to', 'travel', 'you']
+PASS  X3:mode:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: 1080x1350
+PASS  X5:bytes:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: 75191 bytes (0.072 MB)
+PASS  X2:rebuild-exact:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:label:'THE TICKET': min 5.15:1, p5 5.15, median 5.15 over 2596 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:headline:'A ticket gets you in.': min 14.77:1, p5 14.77, median 14.77 over 52599 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:support:'Where you watch from is the ': min 14.77:1, p5 14.77, median 14.77 over 16695 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:cta:'Next: the view →': min 14.77:1, p5 14.77, median 14.77 over 4298 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: 5 boxes, floor 16px; tightest pair 40px (logo+plate ~ label:'THE TICKET')
+PASS  X6:chip-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png:cta: chip [54, 1200, 436, 1262] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-plate-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: logo-plate [54, 67, 431, 217] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: logo [70, 79, 415, 205] (345 px wide) vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-width:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: logo 345 px wide (floor 300)
+INFO  OCR:tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png: 19/19 manifest words read back by tesseract
+PASS  X3:mode:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: 1080x1350
+PASS  X5:bytes:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: 78485 bytes (0.075 MB)
+PASS  X2:rebuild-exact:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label:'THE VIEW': min 5.15:1, p5 5.15, median 5.15 over 2311 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:headline:'See it from the rail.': min 14.77:1, p5 14.77, median 14.77 over 32525 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:support:'Not from the back of the cro': min 14.77:1, p5 14.77, median 14.77 over 7641 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:fact:'Ours: at the island-green 17': min 4.89:1, p5 4.89, median 4.89 over 10045 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:cta:'Next: where we go →': min 14.77:1, p5 14.77, median 14.77 over 5455 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label:'PHOTO TO COME': min 11.74:1, p5 11.74, median 11.74 over 3779 ink px (manifest says 11.74)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:label:'17th-hole rail frame · Taylo': min 11.74:1, p5 11.74, median 11.74 over 4625 ink px (manifest says 10.9)
+PASS  X1:gaps:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: 8 boxes, floor 16px; tightest pair 20px (headline:'See it from the rail' ~ support:'Not from the back of')
+PASS  X6:chip-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png:cta: chip [54, 1200, 529, 1262] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-plate-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: logo-plate [54, 67, 431, 217] vs safe [54, 67, 1026, 1283]
+PASS  X6:photo-panel-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: photo-panel [54, 241, 1026, 676] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: logo [70, 79, 415, 205] (345 px wide) vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-width:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: logo 345 px wide (floor 300)
+INFO  OCR:tripnerd-fanexp-C03-H1-feed-portrait-v1-c3.png: 38/38 manifest words read back by tesseract
+PASS  X3:mode:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: 1080x1350
+PASS  X5:bytes:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: 72298 bytes (0.069 MB)
+PASS  X2:rebuild-exact:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:label:'WHERE WE GO': min 4.89:1, p5 4.89, median 4.89 over 3573 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:support:'Not just any event.': min 4.89:1, p5 4.89, median 4.89 over 6460 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:headline:'The big ones.': min 4.89:1, p5 4.89, median 4.89 over 25476 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:support:'TripNerd hosts guests at gol': min 4.89:1, p5 4.89, median 4.89 over 20352 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:cta:'Next: arrival →': min 14.77:1, p5 14.77, median 14.77 over 3762 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: 6 boxes, floor 16px; tightest pair 20px (support:'Not just any event.' ~ headline:'The big ones.')
+PASS  X6:chip-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png:cta: chip [54, 1200, 387, 1262] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-plate-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: logo-plate [54, 67, 431, 217] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: logo [70, 79, 415, 205] (345 px wide) vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-width:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: logo 345 px wide (floor 300)
+INFO  OCR:tripnerd-fanexp-C03-H1-feed-portrait-v1-c4.png: 22/22 manifest words read back by tesseract
+PASS  X3:mode:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: 1080x1350
+PASS  X5:bytes:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: 662697 bytes (0.632 MB)
+PASS  X2:rebuild-exact:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:label:'ARRIVAL': min 5.15:1, p5 5.15, median 5.15 over 2127 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:headline:'Know who to find when you ge': min 14.77:1, p5 14.77, median 14.77 over 34538 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:fact:'Ours: a TripNerd-branded tab': min 4.89:1, p5 4.89, median 4.89 over 8700 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:cta:'Next: the food →': min 14.77:1, p5 14.77, median 14.77 over 4377 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: 6 boxes, floor 16px; tightest pair 24px (logo+plate ~ photo:c5-photo.png)
+PASS  X6:chip-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png:cta: chip [54, 1200, 433, 1262] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-plate-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: logo-plate [54, 67, 431, 217] vs safe [54, 67, 1026, 1283]
+PASS  X6:photo-panel-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: photo-panel [54, 241, 1026, 817] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: logo [70, 79, 415, 205] (345 px wide) vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-width:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: logo 345 px wide (floor 300)
+PASS  X7:photo-1to1:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: panel interior == prepared panel file pixel-for-pixel
+PASS  X7:photo-downscale-only:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: source crop [0, 1160, 1100, 1812] -> [972, 576] (scale 0.8836)
+PASS  X7:photo-exclusion-line:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: crop top y=1160 >= exclusion line y=1160 (static_hosts/photos_v3/clean2_IMG_1901.png)
+INFO  OCR:tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png: 21/21 manifest words read back by tesseract
+PASS  X3:mode:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: 1080x1350
+PASS  X5:bytes:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: 893634 bytes (0.852 MB)
+PASS  X2:rebuild-exact:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:label:'THE FOOD': min 5.15:1, p5 5.15, median 5.15 over 2387 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:headline:'Eat well between the big mom': min 14.77:1, p5 14.77, median 14.77 over 33385 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:fact:'Ours: a hosted spread, set o': min 4.89:1, p5 4.89, median 4.89 over 6806 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:cta:'Next: plan yours →': min 14.77:1, p5 14.77, median 14.77 over 4908 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: 6 boxes, floor 16px; tightest pair 24px (logo+plate ~ photo:c6-photo.png)
+PASS  X6:chip-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png:cta: chip [54, 1200, 475, 1262] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-plate-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: logo-plate [54, 67, 431, 217] vs safe [54, 67, 1026, 1283]
+PASS  X6:photo-panel-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: photo-panel [54, 241, 1026, 863] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: logo [70, 79, 415, 205] (345 px wide) vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-width:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: logo 345 px wide (floor 300)
+PASS  X7:photo-1to1:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: panel interior == prepared panel file pixel-for-pixel
+PASS  X7:photo-downscale-only:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: source crop [0, 1223, 1290, 2048] -> [972, 622] (scale 0.7535)
+PASS  X7:photo-exclusion-line:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: crop top y=1223 >= exclusion line y=1105 (tn_assets/IMG_1998.JPG)
+INFO  OCR:tripnerd-fanexp-C03-H1-feed-portrait-v1-c6.png: 19/19 manifest words read back by tesseract
+PASS  X3:mode:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: 1080x1350
+PASS  X5:bytes:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: 65174 bytes (0.062 MB)
+PASS  X2:rebuild-exact:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:headline:'Bringing friends to a big ev': min 4.89:1, p5 4.89, median 4.89 over 63164 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:support:'Trip like a Nerd.': min 4.89:1, p5 4.89, median 4.89 over 8819 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:cta:'Plan yours · link in bio': min 14.77:1, p5 14.77, median 14.77 over 8814 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: 4 boxes, floor 16px; tightest pair 36px (headline:'Bringing friends to ' ~ support:'Trip like a Nerd.')
+PASS  X6:chip-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png:cta: chip [54, 976, 660, 1046] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-plate-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: logo-plate [54, 67, 431, 217] vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-safe:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: logo [70, 79, 415, 205] (345 px wide) vs safe [54, 67, 1026, 1283]
+PASS  X6:logo-width:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: logo 345 px wide (floor 300)
+INFO  OCR:tripnerd-fanexp-C03-H1-feed-portrait-v1-c7.png: 15/15 manifest words read back by tesseract
+
+EXTRA-CHECKS: PASS (112 passed, 0 failed, 7 exports)

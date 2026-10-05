@@ -1,0 +1,93 @@
+{
+ "name": "tripnerd-fanexp-C03-H1-feed-portrait-v1-c6",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_vip/bg_v1/c6-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.32,
+  "pos": "top-left",
+  "xy": [
+   70,
+   79
+  ]
+ },
+ "blocks": [
+  {
+   "role": "label",
+   "text": "THE FOOD",
+   "size": 34,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "x": 471,
+   "y_frac": 0.09074074074074075
+  },
+  {
+   "role": "headline",
+   "text": "Eat well between the big moments.",
+   "size": 72,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.6633333333333333
+  },
+  {
+   "role": "fact",
+   "text": "Ours: a hosted spread, set out for guests.",
+   "size": 36,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": false,
+   "align": "left",
+   "x": 86,
+   "y_frac": 0.8240740740740741
+  },
+  {
+   "role": "cta",
+   "text": "Next: plan yours \u2192",
+   "size": 40,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "x": 74,
+   "y_frac": 0.8966666666666666
+  }
+ ],
+ "photos": [
+  {
+   "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_vip/photos_v1/tripnerd-fanexp-C03-H1-feed-portrait-v1-c6-photo.png",
+   "box": [
+    54,
+    241,
+    1026,
+    863
+   ],
+   "radius": 20
+  }
+ ]
+}

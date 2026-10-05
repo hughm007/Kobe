@@ -1,0 +1,87 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    70,
+    79,
+    415,
+    205
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "label",
+   "box": [
+    471,
+    122,
+    807,
+    168
+   ],
+   "font_px": 34,
+   "text": "FAN EXPERIENCES",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    838,
+    823,
+    1166
+   ],
+   "font_px": 88,
+   "text": "You didn\u2019t travel this far to sit in row 40.",
+   "contrast": 14.77
+  },
+  {
+   "role": "cta",
+   "box": [
+    74,
+    1208,
+    247,
+    1262
+   ],
+   "font_px": 42,
+   "text": "Swipe \u2192",
+   "contrast": 14.77
+  },
+  {
+   "role": "label",
+   "box": [
+    385,
+    468,
+    694,
+    514
+   ],
+   "font_px": 34,
+   "text": "PHOTO TO COME",
+   "contrast": 11.74
+  },
+  {
+   "role": "label",
+   "box": [
+    255,
+    534,
+    824,
+    578
+   ],
+   "font_px": 32,
+   "text": "17th-hole rail frame \u00b7 Taylor\u2019s original",
+   "contrast": 10.9
+  }
+ ],
+ "file": "tripnerd-fanexp-C03-H1-feed-portrait-v1-c1.png",
+ "sha256": "bc944bb6d3e1dc7c"
+}

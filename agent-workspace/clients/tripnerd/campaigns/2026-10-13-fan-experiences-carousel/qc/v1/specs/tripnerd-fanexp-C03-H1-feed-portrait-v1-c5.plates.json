@@ -1,0 +1,75 @@
+{
+ "plates": [
+  {
+   "kind": "logo-plate",
+   "rect": [
+    54,
+    67,
+    431,
+    217
+   ],
+   "color": [
+    88,
+    150,
+    233
+   ]
+  },
+  {
+   "kind": "proof-band",
+   "rect": [
+    54,
+    1045,
+    1026,
+    1177
+   ],
+   "color": [
+    88,
+    150,
+    233
+   ]
+  },
+  {
+   "kind": "photo-panel",
+   "rect": [
+    54,
+    241,
+    1026,
+    817
+   ],
+   "source": "static_hosts/photos_v3/clean2_IMG_1901.png"
+  }
+ ],
+ "logo_box": [
+  70,
+  79,
+  415,
+  205
+ ],
+ "photo": {
+  "source": "static_hosts/photos_v3/clean2_IMG_1901.png",
+  "source_sha256": "968ba34c73fa931e9fd40a138bcfe74418a4bdfb205adb220e092792685c3323",
+  "colour": "Apple Poppy Output Profile (from IMG_2004, sha256 2e9b3662e1ad2b0e) -> sRGB, perceptual",
+  "crop_src_px": [
+   0,
+   1160,
+   1100,
+   1812
+  ],
+  "exclusion_line_y": 1160,
+  "anchor": "top",
+  "scale": 0.8836,
+  "panel_px": [
+   972,
+   576
+  ],
+  "file": "tripnerd-fanexp-C03-H1-feed-portrait-v1-c5-photo.png",
+  "sha256": "f68abfc94427b816e5b28f7c50d78a7ba3a396abbd1f01caad63f360c83d7ab5",
+  "grade": "conventional (static_hosts/grade/grade.py preset c2): white balance, exposure, S-curve, vibrance, unsharp mask; no AI",
+  "box": [
+   54,
+   241,
+   1026,
+   817
+  ]
+ }
+}

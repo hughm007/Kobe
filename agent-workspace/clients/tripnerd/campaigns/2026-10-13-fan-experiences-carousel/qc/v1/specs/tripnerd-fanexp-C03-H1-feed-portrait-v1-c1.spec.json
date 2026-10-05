@@ -1,0 +1,93 @@
+{
+ "name": "tripnerd-fanexp-C03-H1-feed-portrait-v1-c1",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_vip/bg_v1/c1-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.32,
+  "pos": "top-left",
+  "xy": [
+   70,
+   79
+  ]
+ },
+ "blocks": [
+  {
+   "role": "label",
+   "text": "FAN EXPERIENCES",
+   "size": 34,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "x": 471,
+   "y_frac": 0.09074074074074075
+  },
+  {
+   "role": "headline",
+   "text": "You didn\u2019t travel this far to sit in row 40.",
+   "size": 88,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.6211111111111111
+  },
+  {
+   "role": "cta",
+   "text": "Swipe \u2192",
+   "size": 42,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "x": 74,
+   "y_frac": 0.8951851851851852
+  },
+  {
+   "role": "label",
+   "text": "PHOTO TO COME",
+   "size": 34,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "center",
+   "y_frac": 0.34703703703703703
+  },
+  {
+   "role": "label",
+   "text": "17th-hole rail frame \u00b7 Taylor\u2019s original",
+   "size": 32,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": false,
+   "align": "center",
+   "y_frac": 0.3959259259259259
+  }
+ ]
+}

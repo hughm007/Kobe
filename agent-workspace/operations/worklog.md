@@ -1771,3 +1771,19 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
     - a Grok-safe pack (3 faces-free graded photos, the logo, the footage index).
   - **Docs:** knowledge file §11 (footage index) and setup guide §7 (upload to the Project; the Drive connector only from a separate Google account; test vision with one photo).
   - **Found:** the Drive connected here is Wyatt's "My Drive". It also holds an unreviewed 578 MB video (Dec 2025) and 3 older photos. Higgsfield `show_medias` errored, so the 17th-hole copies couldn't be listed.
+
+## 2026-10-05 (late): finished the owed VIP Fan Experiences carousel as C03 v1 (draft, not gated)
+- **Source:** Karl's 3 Sep design artifact "TripNerd VIP Carousel": 7 slides, all photo slots empty, several unproven lines. Left untouched; C03 is a new build in the static pipeline (TripNerd palette, Montserrat/Inter, committed logo).
+- **Copy fixed against the barred list and the evidence register:**
+  - cut "VIP", "Ultimate", Augusta, Super Bowl, "handled", "every", "one call", "field-level", the hotel/transfers placeholder, "2026 & 2027", "Book Smart" (no source) and the reviews card ("43 five-star / nine years" exists only in the Drive-OS brief sync; no primary source);
+  - kept Karl's row-40 hook (it matches the owner-approved hook direction);
+  - proof lines are EV-004/006/007/008 verbatim.
+- **Also fixed:** Karl's slide 2 mocked "a lanyard" and "a buffet in a tent", but TripNerd's own staff wear lanyards and its hosting proof is a buffet spread. Replaced with "A ticket gets you in."
+- **Photos:** c5 IMG_1901 left crop (exclusion line 1160, below every face) and c6 IMG_1998 tartlet close-up. Conventional grade, downscale only. c1 and c3 carry labelled empty frames for the 17th-hole rail stills.
+- **QC:** `servicepow_static_qc.py` exit 0 (362/0); extra checks exit 0 (112/0) after one fix (a c4 gap of 12 px against the 16 px floor). Both photo panels were checked by eye at full size: no faces.
+- **Not done:** dual gate (held for the rail frames), Karl's taste check, TripNerd approver.
+- **Open:**
+  - Taylor's originals are now the single input blocking R01, C02 and C03;
+  - Karl's Google Business Profile screenshot plus the founding year if he wants the reviews card back.
+- Records: `clients/tripnerd/campaigns/2026-10-13-fan-experiences-carousel/`; evidence register "Used in" rows; tracker blocker and content-log rows.
+
