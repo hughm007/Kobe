@@ -1722,3 +1722,35 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - follow links and QR codes on TripNerd's own channels;
   - a "what we won't do" line (follow-for-follow, mass liking, bots, bought followers).
   - "Why this mix" moved to page 1. Open: who runs the daily block, since outbound engagement is app-side and partner access may not cover it (plan §5c).
+
+## 2026-10-05 (night): TripNerd readiness for the October test month
+- **Plan approved by Karl.**
+  - Static = C02 "What corporate hosts get wrong" (Thu 8).
+  - Video = "Two ways to see the 17th" as the owed September video (Wed 7); Reel 1 moves to Mon 12.
+  - The September logo is accepted by APPROVER decision and is now committed at `clients/tripnerd/brand-assets/`.
+  - The brand guide is filled with the logo row, inferred colours and fonts, and measured contrast.
+- **Ops pack done** (`clients/tripnerd/campaigns/2026-10-instagram-growth/ops/` plus `launch-week-2026-10-07.md`):
+  - week-one call checklist;
+  - October Monday report template;
+  - Stories runbook;
+  - boost brief and approval order;
+  - engagement routine and log;
+  - guest-loop kit;
+  - follow-link/QR pack (QR decodes verified);
+  - schedule-change note for Jason (NOT SENT).
+  - The plan, calendar, README and client brief are synced; the tracker is updated.
+- **C02 carousel:**
+  - **v1:** critic HARD FAIL 6.4 (implied transport on the close card; human presence 3); Skeptic CONDITIONAL (6 × S2). Verbatim in `campaigns/2026-10-05-hosts-carousel/gate-log.md`.
+  - **v2:** built with copy fixes and faces-free real photos; machine QC passes.
+  - **Gate held:** human presence is still thin. Waiting on a rail still from Karl's 17th-hole clips, so the last repair round isn't spent on an expected fail.
+  - Evidence register created: `clients/tripnerd/evidence-register.md`.
+- **Video:** not started.
+  - Waiting on Karl's clip upload (or the 720p override) and the bio-link screenshot (BC-19).
+  - whisper, tesseract and Montserrat are installed. The whisper model download still returns 403 (allowlist pending).
+- **Open:**
+  - the clips;
+  - the BC-19 screenshot;
+  - the network allowlist;
+  - TripNerd naming an approver (needed by Tue 6 EOD for Wed/Thu);
+  - the DMs promise (the PDF says we reply; the 20 minutes a day is unpriced).
+- **Learning candidate (not yet filed):** a checklist carousel that ends on "handled" implies every listed step is a service. Map claims per step, not only per card.
