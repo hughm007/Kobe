@@ -1481,9 +1481,13 @@ creator taste test, Gorse & Thistle founders; IDs in Bible §3). Rendered the ed
 overlays, boards, renderer with a 15–70% text-band check) locally and in the Higgsfield sandbox;
 ZIP on Higgsfield storage. 0 generation credits. Built an approval page (storyboard, animatic,
 decisions).
-**Skeptic:** isolated Pass 1 = BLOCK (3 S4, 5 S3). Repaired copy-level findings (claims sourced or
-cut, CTA keyword NERDNOTES, "notes" not "cheat sheet", lines retimed, like-for-like receipt, text
-band, white deli paper). Regression pass run with a fresh packet (verdict in Bible §14).
+**Skeptic:** isolated Pass 1 = BLOCK (3 S4, 5 S3); regression 1-R (fresh packet) = BLOCK (1 S4,
+4 S3). Two repair rounds applied (claims sourced or cut, NERDNOTES keyword on both routes, single
+DM message, live verdicts, "ours: homemade / store-bought" on every card, 2026 on every price,
+like-for-like receipt, offer on screen, text band incl. worst-case render). Remaining blocks need
+role-holders; next regression deferred until they land (Bible §16).
+**Published:** approval page https://claude.ai/artifact/DoHBvb7sknuCgYH5KCVuHq; edit kit v2 on
+Higgsfield storage (link in the campaign production log); Story kit page v5.
 **Also:** Story kit AUGUSTA DM reply replaced with the evidence-checked version; old Reel script
 marked superseded.
 **Open (role-holders):** APPROVER — strategy/concept/storyboard, CTA, loop ending, CONFLICT C1

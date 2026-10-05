@@ -19,8 +19,8 @@ tags: [production-log, reel, augusta]
 | Keyword DM reply | [dm-reply.md](dm-reply.md) |
 | Evidence records | [../../evidence-records.md](../../evidence-records.md) |
 | Skeptic verdicts (verbatim) | [qc/](qc/) |
-| Approval page (storyboard, animatic, decisions) | Artifact: see the link recorded in the 2026-10-05 entry below |
-| Edit kit ZIP (overlays, boards, renderer, README) | Higgsfield storage: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/87a1bdbf-3c9f-4f03-8b38-1aeb8ab90c8e.zip (2,284,514 bytes, 43 files; HTTP 200 verified 2026-10-05) |
+| Approval page (storyboard, animatic, decisions) | https://claude.ai/artifact/DoHBvb7sknuCgYH5KCVuHq (private to Karl's account until shared) |
+| Edit kit ZIP v2 (overlays, boards, renderer, README) | Higgsfield storage: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/994882d6-25b5-4fac-b33a-9c3dfe0c4d06.zip (2,348,889 bytes, 41 files; HTTP 200 verified 2026-10-05). v1 (https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/87a1bdbf-3c9f-4f03-8b38-1aeb8ab90c8e.zip) is superseded. |
 | Build scripts | [build/](build/) — `render.js` (overlays + boards + text-band check), `page.py` + `page-template.html` (approval page), `scores.example.json` |
 
 Binaries (PNG/JPG/ZIP) are not committed; they rebuild from `build/` in a minute.
@@ -34,8 +34,9 @@ python3 build/page.py out build/page-template.html approval.html qc/<latest-skep
 The renderer prints a text-band check (every text block inside y 288–1344 px and x ≤ 940 px).
 
 ## Shoot-day checklist (after the gates clear)
-- [ ] Consent email from the on-camera Nerd on file (filmed, named, posted)
-- [ ] Tasting sheet written **before** filming (order + scores)
+- [ ] Consent email from the on-camera Nerd on file (scope in shotlist.md prerequisite 1) + CLIENT_APPROVER written confirmation
+- [ ] Location OK and frame checked (no window views, mail, house numbers, photos, screens)
+- [ ] Every first bite and verdict filmed live; score said and written on a card on camera
 - [ ] Two identical sandwiches in white deli paper; ice cream sandwich last
 - [ ] No packaging, labels, logo clothing or appliance badges in frame
 - [ ] Exposure and white balance locked; one daylight window
@@ -44,8 +45,10 @@ The renderer prints a text-band check (every text block inside y 288–1344 px a
 - [ ] List of homemade vs store-bought items (for the caption)
 
 Consent email template (plain language; use TripNerd's own release if it has one):
-> I agree that TripNerd may film me for an Instagram Reel about Augusta food, show my first
-> name on screen, and post the video on TripNerd's social channels. — [Name], [date]
+> I agree that TripNerd may use my likeness, voice and first name in its Augusta food Reel,
+> its alternative openings and test versions, the caption and the related direct-message
+> reply, on TripNerd's Instagram and Facebook, for as long as the posts stay up. I can withdraw
+> by emailing [address]; TripNerd will archive the posts within two business days. — [Name], [date]
 
 ## Entries
 ### 2026-10-05
@@ -60,3 +63,12 @@ Consent email template (plain language; use TripNerd's own release if it has one
 - After the regression packet was assembled, two DM lines changed (free public phones,
   grandstands note) — each now carries an Evidence ID; re-check at the next Skeptic pass.
 - Story kit AUGUSTA reply replaced with the evidence-checked version.
+- Skeptic Pass 1-R (fresh subagent, fresh packet): BLOCK. Second repair round: live verdicts,
+  NERDNOTES on both routes, single DM message, "ours: homemade / store-bought" on every card,
+  2026 on every price, offer line on screen in shot 9, cards anchored to the band's bottom
+  edge (a worst-case render — longest name, two-line item, $123.45 — passes 22/22).
+- Next Pass 1 regression deferred until consent, EV sign-off, CONFLICT C1 ruling and ManyChat
+  test are in (Bible §16).
+- Edit kit v2 uploaded to Higgsfield storage (HTTP 200 verified). Approval page published:
+  https://claude.ai/artifact/DoHBvb7sknuCgYH5KCVuHq. Story kit page republished (v5) with the
+  evidence-checked AUGUSTA reply.

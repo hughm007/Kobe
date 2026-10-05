@@ -47,7 +47,8 @@ button.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
 button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
 input[type=range]{flex:1;min-width:120px;accent-color:var(--sky)}
 .tc{font:600 14px var(--body);font-variant-numeric:tabular-nums;color:var(--muted);min-width:88px;text-align:right}
-label{font:600 12px var(--body);color:var(--muted);display:grid;gap:4px;flex:1;min-width:140px}
+label{font:600 12px var(--body);color:var(--muted);display:grid;gap:4px;flex:1 1 140px;min-width:0}
+select{width:100%;min-width:0;max-width:100%}
 .now{font-size:13px;color:var(--muted);min-height:3em}
 .now b{color:var(--fg)}
 section{margin-top:36px}
@@ -86,12 +87,12 @@ pre{white-space:pre-wrap;word-break:break-word;font:13px/1.5 ui-monospace,SFMono
 <header>
   <p class="eyebrow">TripNerd · Instagram Reel · approval packet · prepared by Service Pow · 2026-10-05</p>
   <h1>Augusta's cheap eats, made at home (and ranked)</h1>
-  <p style="max-width:70ch;color:var(--muted)">A real TripNerd Nerd recreates five Augusta classics in a home kitchen, ranks them, and lands on the line “Lunch is the easy part. House, passes, logistics? That's what a Nerd's for.” 35 seconds, 9:16, organic. Goal: awareness and engagement.</p>
+  <p style="max-width:70ch;color:var(--muted)">A real TripNerd Nerd lines up five Augusta classics in their own kitchen, ranks them live, and lands on the line “Lunch is the easy part. House, passes, logistics? That's what a Nerd's for.” 35 seconds, 9:16, organic. Goal: awareness and engagement.</p>
   <div class="chips">
     <span class="chip draft"><i></i>Status: DRAFT, awaiting approval</span>
     <span class="chip ok"><i></i>AI footage: none</span>
     <span class="chip ok"><i></i>Generation spend: 0 credits</span>
-    <span class="chip stop"><i></i>Independent check: BLOCK until consent and sign-offs land</span>
+    <span class="chip stop"><i></i>Independent check: BLOCK until consent, sign-offs and your “Augusta” ruling land</span>
     <span class="chip stop"><i></i>Blocker: cast a real Nerd for a 1-hour shoot</span>
   </div>
 </header>
@@ -109,19 +110,18 @@ pre{white-space:pre-wrap;word-break:break-word;font:13px/1.5 ui-monospace,SFMono
         <label for="hook">First frame
           <select id="hook">
             <option value="01-hook-A">A · Price legend (main)</option>
-            <option value="hook-B-egg">B · Egg salad wins (Trial)</option>
-            <option value="hook-B-pimento">B · Pimento wins (Trial)</option>
-            <option value="hook-C">C · Challenge (reserve)</option>
-            <option value="hook-D">D · Receipt open (Trial)</option>
+            <option value="hook-B">B · Pimento or egg salad? (Trial)</option>
+            <option value="hook-C">C · $10 challenge (reserve)</option>
+            <option value="hook-D">D · Price tease (Trial)</option>
           </select></label>
         <label for="cta">Call to action
           <select id="cta">
             <option value="09-payoff-comment">Comment NERDNOTES (recommended)</option>
-            <option value="09-payoff-dm">DM AUGUSTA (plan default)</option>
+            <option value="09-payoff-dm">DM NERDNOTES</option>
           </select></label>
       </div>
       <p class="now" id="now"></p>
-      <p class="note">Boards stand in for real phone footage. Overlays are final except [Name], the scores and the receipt total, which come from the shoot. The ranking order follows the Nerd's real verdict.</p>
+      <p class="note">Boards stand in for real phone footage. Overlays are final except [Name], the scores, homemade/store-bought and the receipt total, which come from the shoot. Every verdict is filmed live; the edit sorts them into #5 to #1.</p>
     </div>
   </aside>
 
@@ -131,11 +131,11 @@ pre{white-space:pre-wrap;word-break:break-word;font:13px/1.5 ui-monospace,SFMono
       <div class="card decisions">
         <div class="dec"><span class="box"></span><p><b>Approve the strategy, the “Nerd Kitchen” concept and this storyboard.</b> Nothing is shot or spent before this.</p><span class="who">APPROVER</span></div>
         <div class="dec"><span class="box"></span><p><b>How “Augusta” may be used.</b> The growth plan says event names only to say where guests went. TripNerd's own product is called “Augusta Experience”. Proposed reading: Augusta as a place and product name is fine; tournament names, marks, the green wrapper and footage are not; every Augusta post carries a non-affiliation line. If you read the rule strictly, this concept is out and the next episode uses stadium food instead.</p><span class="who">APPROVER · open conflict C1</span></div>
-        <div class="dec"><span class="box"></span><p><b>Call to action:</b> “Comment NERDNOTES for our Augusta notes” (ManyChat comment trigger on a word nobody types by accident) or “DM AUGUSTA for our Augusta notes” as the growth plan specifies. <span class="rec">Recommended: Comment.</span> Every active Golfbreaks US video ad we found uses a comment keyword, and comments are a primary KPI. Whether Instagram demotes keyword-comment prompts is unknown.</p><span class="who">APPROVER · needs ManyChat set up</span></div>
+        <div class="dec"><span class="box"></span><p><b>Call to action:</b> “Comment NERDNOTES for our Augusta notes” (ManyChat comment trigger on a word nobody types by accident) or “DM NERDNOTES”. We dropped the plan's AUGUSTA keyword here: it would catch real Augusta Experience questions in the canned reply. <span class="rec">Recommended: Comment.</span> Every active Golfbreaks US video ad we found uses a comment keyword, and comments are a primary KPI. Whether Instagram demotes keyword-comment prompts is unknown.</p><span class="who">APPROVER · needs ManyChat set up</span></div>
         <div class="dec"><span class="box"></span><p><b>Ending:</b> cut back to frame one so the Reel loops, with the logo on the payoff frame, instead of a separate end card. <span class="rec">Recommended: loop.</span> Untested assumption that it lifts replays.</p><span class="who">APPROVER</span></div>
-        <div class="dec"><span class="box"></span><p><b>Who is on camera, with written consent.</b> A real TripNerd staff member, about one hour at home, and an email saying they agree to be filmed, named and posted. Reviews name Jason and JD most often (7 of 15 read).</p><span class="who">CLIENT_APPROVER</span></div>
+        <div class="dec"><span class="box"></span><p><b>Who is on camera, with written consent.</b> A real TripNerd staff member, about one hour in their own kitchen. Their email covers likeness, voice, first name, the test versions, the caption and DM, how long it runs and how to withdraw (template in the production log), and TripNerd confirms it in writing. Reviews name Jason and JD most often (7 of 15 read).</p><span class="who">CLIENT_APPROVER</span></div>
         <div class="dec"><span class="box"></span><p><b>Confirm the offer line</b> (house, passes, logistics, as worded on tripnerd.com) by email so evidence EV-tripnerd-007 can be filed.</p><span class="who">CLIENT_APPROVER</span></div>
-        <div class="dec"><span class="box"></span><p><b>Sign off the sourced facts</b> (menu prices, phone and camera rules: EV-tripnerd-001 to 006, 008, 009).</p><span class="who">APPROVER</span></div>
+        <div class="dec"><span class="box"></span><p><b>Sign off the sourced facts</b> (menu prices and the phone rule: EV-tripnerd-001 to 006 and 008).</p><span class="who">APPROVER</span></div>
         <div class="dec"><span class="box"></span><p><b>Groceries and props,</b> about $30–40 (estimate). Who pays?</p><span class="who">APPROVER</span></div>
       </div>
     </section>
@@ -145,19 +145,19 @@ pre{white-space:pre-wrap;word-break:break-word;font:13px/1.5 ui-monospace,SFMono
       <div class="tbl"><table>
         <thead><tr><th>#</th><th>Time</th><th>Job</th><th>Picture (real phone footage)</th><th>On-screen text (composited)</th><th>Spoken</th><th>Motion</th><th>Reference</th></tr></thead>
         <tbody>
-        <tr><td>1<span class="hero">HERO</span></td><td class="t">0:00–0:02</td><td>Attention</td><td>Hands unwrap a homemade pimento cheese sandwich from plain white deli paper, big bite</td><td>$1.50 at Augusta since 2002. + “We made ours at home ↓”</td><td>None (crinkle and bite)</td><td>Unwrap, bite; slow push-in</td><td>NPR, 2026-04-09; <a href="https://www.facebook.com/ads/library/?id=28938598309099017" target="_blank" rel="noopener">Bounty × creator taste test</a></td></tr>
-        <tr><td>2</td><td class="t">0:02–0:05</td><td>Understanding</td><td>Slide along the counter: five items, hand-written price cards</td><td>So we recreated 5 Augusta classics at home. And ranked them.</td><td>VO: “We recreated five Augusta classics at home.”</td><td>Lateral slide</td><td><a href="https://www.facebook.com/ads/library/?id=1618392068867243" target="_blank" rel="noopener">Callie's, home kitchen</a></td></tr>
-        <tr><td>3</td><td class="t">0:05–0:08.5</td><td>Attention</td><td>#5 tasted (example: chips from a plain bowl), verdict to camera</td><td>#5 card + “[Name] · TripNerd Nerd”</td><td>“Number five: [item]. [score].”</td><td>Pour, crunch</td><td>Taste-test pacing</td></tr>
-        <tr><td>4</td><td class="t">0:08.5–0:12</td><td>Proof</td><td>#4 tasted</td><td>#4 card</td><td>“[Item]. [score].”</td><td>Snap / bite</td><td>Taste-test pacing</td></tr>
-        <tr><td>5</td><td class="t">0:12–0:16.5</td><td>Emotion</td><td>#3 tasted; the pause goes wherever the Nerd really hesitated</td><td>#3 card</td><td>“[Item]. [score].”</td><td>Bite; tilt up</td><td>Taste-test pacing</td></tr>
-        <tr><td>6</td><td class="t">0:16.5–0:20.5</td><td>Desire</td><td>#2 tasted (ice cream shot last, fresh per take)</td><td>#2 card</td><td>“[Item]. [score].”</td><td>Bite</td><td>Taste-test pacing</td></tr>
-        <tr><td>7<span class="hero">HERO</span></td><td class="t">0:20.5–0:24.5</td><td>Comments</td><td>#1 held up to camera</td><td>#1 card + Fight us in the comments.</td><td>“Number one: [item].”</td><td>Raise; push-in</td><td>Taste-test pacing</td></tr>
-        <tr><td>8</td><td class="t">0:24.5–0:28.5</td><td>Proof</td><td>Real receipt, framed on the total only (store details out of frame or blurred)</td><td>Those 5 at Augusta: $10 · Making them at home: $? (plenty left over)</td><td>VO: “Those five at Augusta: ten bucks. Our groceries: [total].”</td><td>Receipt slides in</td><td><a href="https://www.facebook.com/ads/library/?id=1752623519328723" target="_blank" rel="noopener">Golfbreaks, price-led</a></td></tr>
-        <tr><td>9</td><td class="t">0:28.5–0:34</td><td>Action</td><td>The Nerd to camera, sandwich in hand</td><td>Lunch is the easy part. + CTA + real TripNerd logo</td><td>“Lunch is the easy part. House, passes, logistics? That's what a Nerd's for.”</td><td>Speaks, gestures</td><td><a href="https://www.facebook.com/ads/library/?id=4674925342826469" target="_blank" rel="noopener">Gorse &amp; Thistle founders</a></td></tr>
-        <tr><td>10</td><td class="t">0:34–0:35</td><td>Replay</td><td>Picks up a second, still-wrapped sandwich; matches frame one</td><td>none</td><td>none</td><td>Lift</td><td>NPR (subject); framing matches shot 1</td></tr>
+        <tr><td>1<span class="hero">HERO</span></td><td class="t">0:00–0:02</td><td>Attention</td><td>Hands unwrap a homemade pimento cheese sandwich from plain white deli paper, big bite</td><td>$1.50 at Augusta since 2002. + “Ours is homemade ↓” at 1.0 s</td><td>None (crinkle and bite)</td><td>Unwrap, bite; slow push-in</td><td>NPR, 2026-04-09; <a href="https://www.facebook.com/ads/library/?id=28938598309099017" target="_blank" rel="noopener">Bounty × creator taste test</a></td></tr>
+        <tr><td>2</td><td class="t">0:02–0:05</td><td>Understanding</td><td>Slide along the counter: five items, small cards “Augusta 2026 · $X”</td><td>We lined up 5 Augusta classics at home.</td><td>VO: “We lined up five Augusta classics at home.”</td><td>Lateral slide</td><td><a href="https://www.facebook.com/ads/library/?id=1618392068867243" target="_blank" rel="noopener">Callie's, home kitchen</a></td></tr>
+        <tr><td>3</td><td class="t">0:05–0:08.5</td><td>Attention</td><td>#5: live first bite and verdict, score written on a card on camera</td><td>#5 card ($X at Augusta (2026) · ours: homemade/store-bought · score) + “[Name] · TripNerd Nerd”</td><td>“[Item]. [score].”</td><td>Pour, crunch</td><td>Taste-test pacing</td></tr>
+        <tr><td>4</td><td class="t">0:08.5–0:12</td><td>Proof</td><td>#4: live bite and verdict</td><td>#4 card</td><td>“[Item]. [score].”</td><td>Snap / bite</td><td>Taste-test pacing</td></tr>
+        <tr><td>5</td><td class="t">0:12–0:16.5</td><td>Emotion</td><td>#3: live bite and verdict</td><td>#3 card</td><td>“[Item]. [score].”</td><td>Bite; tilt up</td><td>Taste-test pacing</td></tr>
+        <tr><td>6</td><td class="t">0:16.5–0:20.5</td><td>Desire</td><td>#2: live bite and verdict (fresh ice cream per take)</td><td>#2 card</td><td>“[Item]. [score].”</td><td>Bite</td><td>Taste-test pacing</td></tr>
+        <tr><td>7<span class="hero">HERO</span></td><td class="t">0:20.5–0:24.5</td><td>Comments</td><td>#1: the live verdict clip, held up to camera</td><td>#1 card + Fight us in the comments.</td><td>“[Item]. [score].”</td><td>Raise; push-in</td><td>Taste-test pacing</td></tr>
+        <tr><td>8</td><td class="t">0:24.5–0:28.5</td><td>Proof</td><td>Real receipt, framed on the total only (store details out of frame or blurred)</td><td>Those 5 at Augusta (2026): $10 · Making them at home: $? (“plenty left over” only if true and over $10)</td><td>VO: “Those five at Augusta: ten bucks. Ours?”</td><td>Receipt slides in</td><td><a href="https://www.facebook.com/ads/library/?id=1752623519328723" target="_blank" rel="noopener">Golfbreaks, price-led</a></td></tr>
+        <tr><td>9</td><td class="t">0:28.5–0:34</td><td>Action</td><td>The Nerd to camera, sandwich in hand</td><td>Lunch is the easy part. + “The house, passes and logistics? That's what a Nerd's for.” + CTA + real logo</td><td>“Lunch is the easy part. House, passes, logistics? That's what a Nerd's for.”</td><td>Speaks, gestures</td><td><a href="https://www.facebook.com/ads/library/?id=4674925342826469" target="_blank" rel="noopener">Gorse &amp; Thistle founders</a></td></tr>
+        <tr><td>10</td><td class="t">0:34–0:35</td><td>Replay</td><td>Picks up still-wrapped sandwich B; matches frame one</td><td>none</td><td>none</td><td>Lift</td><td>Bounty taste test (food to lens); shot 1 framing</td></tr>
         </tbody>
       </table></div>
-      <p class="note" style="margin-top:8px">The Nerd tastes all five off camera and writes the order and scores before filming, so the ranking on screen is the real one. Board order is an example. Shots 2 and 8 are voiceover; the rest is on camera. Spoken lines run at 140–150 words a minute.</p>
+      <p class="note" style="margin-top:8px">Every first bite and verdict is filmed live and the edit sorts them, so the ranking on screen is the real one; board order is an example. Shots 2 and 8 are voiceover; the rest is live. Spoken lines run at about 105–160 words a minute. Every card says whether our version was homemade or store-bought.</p>
     </section>
 
     <section class="two">
@@ -168,7 +168,8 @@ pre{white-space:pre-wrap;word-break:break-word;font:13px/1.5 ui-monospace,SFMono
           <li>Chips $1.50, cheese straws $2.50, peach ice cream sandwich $3 · EV-tripnerd-003/004/005 · <a href="https://sports.yahoo.com/articles/full-2026-masters-menu-just-205008599.html" target="_blank" rel="noopener">Yahoo Sports full menu</a></li>
           <li>Those five total $10.00 · EV-tripnerd-006 (1.50 + 1.50 + 1.50 + 2.50 + 3.00)</li>
           <li>House, passes, logistics · EV-tripnerd-007 · tripnerd.com Augusta page, awaiting TripNerd's email confirmation</li>
-          <li>DM notes: no phones on the grounds, on-site phones, cameras on practice days · EV-tripnerd-008/009 · <a href="https://www.nbcdfw.com/news/national-international/cell-phones-are-banned-at-the-masters-golf-tournament-heres-why/2934489/" target="_blank" rel="noopener">NBC 5 DFW</a>, Golf Monthly (2024; re-check by 2027-03-01)</li>
+          <li>DM notes: no phones on the grounds, free public phones · EV-tripnerd-008 · <a href="https://www.nbcdfw.com/news/national-international/cell-phones-are-banned-at-the-masters-golf-tournament-heres-why/2934489/" target="_blank" rel="noopener">NBC 5 DFW</a>, Golf Monthly (2024), <a href="https://www.wrdw.com/2025/04/10/no-cellphone-no-problem-you-can-make-call-masters/" target="_blank" rel="noopener">WRDW</a> and AP (2025); re-check by 2027-03-01</li>
+          <li>Grandstands first come, first served; one folding chair · EV-tripnerd-007 · TripNerd's own Augusta page</li>
           <li>Grocery total and scores: real, from the shoot</li>
         </ul>
         <p class="note" style="margin-top:10px">Prices are the 2026 menu; re-check on posting day and when the 2027 menu comes out. Caption lists what was made from scratch and what was store-bought, and says TripNerd is not affiliated with the tournament or Augusta National.</p>
@@ -203,14 +204,14 @@ pre{white-space:pre-wrap;word-break:break-word;font:13px/1.5 ui-monospace,SFMono
 
     <section>
       <h2>Edit kit</h2>
-      <p class="note" style="margin-bottom:12px">Transparent 1080×1920 PNG overlays, ready to drop on the footage in CapCut or Edits. Download: <a href="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/87a1bdbf-3c9f-4f03-8b38-1aeb8ab90c8e.zip" target="_blank" rel="noopener">edit kit ZIP (2.3 MB, Higgsfield storage)</a> with overlays, boards, the renderer and a README. After the shoot, the scores, name and receipt total are re-rendered from one config file.</p>
+      <p class="note" style="margin-bottom:12px">Transparent 1080×1920 PNG overlays, ready to drop on the footage in CapCut or Edits. Download: <a href="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/994882d6-25b5-4fac-b33a-9c3dfe0c4d06.zip" target="_blank" rel="noopener">edit kit ZIP v2 (2.3 MB, Higgsfield storage)</a> with overlays, boards, the renderer and a README. After the shoot, the scores, name and receipt total are re-rendered from one config file.</p>
       <div class="kit"><!--OVERLAYS--></div>
     </section>
 
     <section class="two">
       <div class="card">
         <h2>Independent check (Skeptic)</h2>
-        <p class="note" style="margin-bottom:10px">Run by a separate reviewer that saw only the storyboard, the rules and the evidence, never our reasoning. First pass: BLOCK, with 3 rights/truth findings and 5 trust findings. Every finding we could fix in copy is fixed (full list in the campaign file). Re-check on the repaired storyboard, verbatim:</p>
+        <p class="note" style="margin-bottom:10px">Two passes by a separate reviewer that saw only the storyboard, the rules and the evidence, never our reasoning. Both returned BLOCK. After each pass we fixed every finding that copy could fix; the second round's fixes are in this page. What still blocks needs people: consent, sign-off of the facts, your ruling on “Augusta”, and ManyChat going live. The next check runs once those are in. Second pass, verbatim:</p>
         <pre><!--SKEPTIC--></pre>
       </div>
       <div class="card">
@@ -234,13 +235,13 @@ pre{white-space:pre-wrap;word-break:break-word;font:13px/1.5 ui-monospace,SFMono
 const B = /*BOARDS*/{};
 const T = [
   ['HOOK',0,2,'Shot 1 · Hook','Hands unwrap the sandwich. Big bite. No voice.'],
-  ['02-setup',2,3,'Shot 2 · Setup','VO: “We recreated five Augusta classics at home.”'],
-  ['03-rank-5-chips',5,3.5,'Shot 3 · #5','Example order. Verdict to camera; the Nerd is named.'],
-  ['04-rank-4-straws',8.5,3.5,'Shot 4 · #4','Cheese straw snapped in half.'],
-  ['05-rank-3-pimento',12,4.5,'Shot 5 · #3','Bite, tilt up to the verdict.'],
-  ['06-rank-2-peach',16.5,4,'Shot 6 · #2','Peach ice cream sandwich.'],
+  ['02-setup',2,3,'Shot 2 · Setup','VO: “We lined up five Augusta classics at home.”'],
+  ['03-rank-5-chips',5,3.5,'Shot 3 · #5','Example order. Live verdict; the Nerd is named.'],
+  ['04-rank-4-straws',8.5,3.5,'Shot 4 · #4','Live bite and verdict.'],
+  ['05-rank-3-pimento',12,4.5,'Shot 5 · #3','Live bite, tilt up to the verdict.'],
+  ['06-rank-2-peach',16.5,4,'Shot 6 · #2','Live bite and verdict.'],
   ['07-rank-1-egg',20.5,4,'Shot 7 · #1','Held up to camera. “Fight us in the comments.”'],
-  ['08-receipt',24.5,4,'Shot 8 · Receipt','VO: “Those five at Augusta: ten bucks. Our groceries: [total].”'],
+  ['08-receipt',24.5,4,'Shot 8 · Receipt','VO: “Those five at Augusta: ten bucks. Ours?”'],
   ['CTA',28.5,5.5,'Shot 9 · Payoff','“Lunch is the easy part. House, passes, logistics? That\'s what a Nerd\'s for.”'],
   ['10-loop',34,1,'Shot 10 · Loop','Picks the sandwich back up. The Reel replays.'],
 ];

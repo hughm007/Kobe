@@ -1,0 +1,48 @@
+SKEPTIC VERDICT — Pass 1
+Verdict: BLOCK
+Findings:
+- [S4] Rights / shots 2–9 (Nerd on camera, named lower-third, VO) — Consent is not on file. The listed prerequisite (email consent from the Nerd to be "filmed, named and posted") also leaves out the CLIENT_APPROVER confirmation that the rights policy requires. It does not cover the Nerd's voice, the Trial Reel hook variants, use in the caption or DM, or how long consent lasts and how it can be withdrawn. Filming or posting before both are filed breaks likeness rights (BC-20).
+- [S3] Claims / shots 1, 2, 8, 9, caption, DM 1–2 — Every claim rests on Evidence Records with status PROPOSED, which is not a valid status under the claims policy, and none is APPROVED. Only EV-tripnerd-007 names an approving role. No claim line on screen, in speech, in the caption or in the DMs carries its EV-id. BC-16 cannot pass, and the claims entered the script before they were substantiated.
+- [S3] Client rule / whole piece — The client allows event names "only to say where guests went." This Reel uses "Augusta" to stand for the tournament as its whole subject: hook, headline, $10 comparison, title and caption. DM 1 is a guide to patron rules on the grounds. None of it says where TripNerd guests went, so the concept depends on a reading of the client's own constraint that the client has not ruled on.
+- [S3] Truth / shots 1–3, 6, set rules — On-screen copy says all five were made at home ("We made ours at home ↓", "So we recreated 5 Augusta classics at home"). The plan expects some items to be store-bought (caption "Store-bought: [list]") and decants chips and ice cream so their origin is hidden. The only disclosure is in the caption, which most Reel viewers never expand.
+- [S3] Parity / CTA and DM flow — The keyword automation is not live, and no human owner or response time is set for "a Nerd will take it from there." The destination behind either CTA cannot be opened and confirmed (BC-19).
+- [S2] Rights / music — The track is placed in the edit (the bed starts in shot 2, "music back" in shot 9), so a file is baked into the export rather than added in the Instagram app. Recording only the track name does not show that this track's licence allows baked-in use on a business account.
+- [S2] Rights / location — The "home kitchen" is not identified. The prerequisites include no location release and no check for identifying details of the home in frame, such as window views, mail or photos.
+- [S2] Brand / shot 9 — The wordmark is pulled from the live tripnerd.com CDN, not the approved master, which is still outstanding. Its resolution and variant are unverified for a 1080-wide end card, and BC-21 needs either the approved master or CLIENT_APPROVER acceptance of this file.
+- [S2] Truth / shot 2 and cards in shots 3–7 — The hand-written price cards and the "[price]" field show Augusta prices next to homemade food with no "at Augusta" or year label, so viewers can read them as home costs. Five handwritten cards, an 11-word overlay and VO in a 3.0 s lateral slide cannot all be read. The cards are physical, so the overlay safe-area measurement does not cover them and nothing keeps the prices inside 15–70% of frame height.
+- [S2] Truth / shots 1, 2, 8 — On-screen prices carry no year; only the caption says "2026 menu." This organic Reel will stay up past the scope of EV-tripnerd-001 (until the 2027 menu), after which "$1.50 at Augusta since 2002" and "$10" may become false with no plan to re-check posted content.
+- [S2] Truth / shot 8, caption — "(plenty left over)" is fixed on screen, while only the caption handles a total of $10 or less. EV-tripnerd-010 has no defined scope: one receipt, only these ingredients, pantry staples already owned, tax. Without that, the home-versus-Augusta comparison can mislead in either direction.
+- [S2] Truth / ranking, Hook B — The tasting is of TripNerd's home versions, but Hook B ("Egg salad beats pimento cheese. Our verdict:") and its fallback ("We ranked 5 Augusta classics") read as a verdict on Augusta's own food.
+- [S2] Truth / Hook B branch logic — The branches do not cover every result. If pimento beats egg salad but does not finish #1, "The legend held" overstates the outcome. If egg salad finishes #1, the hook gives away the shot 7 reveal.
+- [S2] Hook D — Opening on the receipt replaces shot 1's picture, which contradicts "replace shot 1 text; body unchanged." It breaks the shot 10 loop match and shows the receipt twice, once with shot 8.
+- [S2] Safe area / all overlays — The "21 of 21" measurement can only have used placeholder text, because [item], [price], [score], [total] and [Name] are unknown until the shoot. It also confirms only the vertical band, not the right-hand 140 px, so the final overlays are unmeasured (BC-28).
+- [S2] Pacing / shot 8 — The "10 words / 4.0 s" count assumes [total] is spoken in two words. A total such as "twenty-three dollars forty" makes this price line 12 or more words in 4.0 s, so its pacing is unverified (BC-32).
+- [S2] Awareness / shot 9 — The only line that says what TripNerd sells ("House, passes, logistics? That's what a Nerd's for.") is audio only. Muted viewers see "Lunch is the easy part." and a wordmark and never learn the offer.
+- [S2] Realism / shots 1, 3–7 — The on-camera verdicts restage a tasting that happened off camera. The bites, the shot 5 hesitation and the shot 7 reaction are performed by a non-actor staff member and may read as staged at readable distance (performed-emotion ban).
+- [S2] Evidence age / DM 1 — The phone and camera rules (EV-tripnerd-008/009) rest on April 2024 sources, and 009 on a single source. The October 2026 DM states them as current rules that a patron could lose a badge by relying on. The DM also adds wording the record does not contain ("not in your bag").
+- [S2] Copy / DM 1 — "Our five favourites" uses UK spelling for a US audience. It also recasts the five as TripNerd favourites, which contradicts the Reel (one ranks last) and the wording of EV-tripnerd-006.
+- [S2] Automation / comment route — On Instagram, a business can send only one DM reply to a comment until the user responds. On the NERDNOTES route, DM message 2 (the offer and the lead ask) may never arrive.
+- [S2] Automation / DM route — "AUGUSTA" as a DM keyword collides with ordinary questions about the Augusta Experience. The prospects most likely to buy could get the canned flow instead of a person.
+- [S1] CTA / shots 7 and 9 — On the DM route, "Fight us in the comments." and "DM AUGUSTA" are two competing asks within ten seconds.
+- [S1] Shot 1 — Ten words of overlay in 2.0 s is a heavy read for the opening frame.
+- [S1] Shot 2 — The overlay ("So we recreated… And ranked them.") does not match the VO ("We recreated…"), so viewers read one wording and hear another.
+- [S1] Hook D — "My groceries" breaks the "we/our" voice used everywhere else ("Our groceries" in shot 8).
+- [S1] Shot 7 — The #1 card drops the score that every other rank card carries.
+- [S1] HERO rule — The storyboard says HERO treatment "follows the #1 position, not a particular food," yet shot 1's HERO is fixed to pimento cheese, and shot 10 loops back to it, whatever wins.
+- [S1] Continuity — The bitten sandwich from shot 1 must be tracked through shots 7, 9 and 10. The ice cream sandwich sitting on the counter in shot 2's slide will melt unless shot 2 also gets a fresh one per take.
+- [S1] Lighting — Window light with exposure and white balance locked will drift across a long shoot that starts with an off-camera tasting and films the ice cream last.
+- [S1] Brand — No overlay text colours are set from the palette, and the "navy plate" is not tied to #07283d.
+- [S1] Reference / shot 10 — The cited reference is a news article plus "framing matched to shot 1," which is not a visual reference (BC-34).
+Shot risk:
+- Shot 1 — LOW — REAL phone footage + composited text; no generation; no method change needed.
+- Shot 2 — LOW — REAL phone footage + composited text; no generation; no method change needed.
+- Shot 3 — LOW — REAL phone footage + composited text; no generation; no method change needed.
+- Shot 4 — LOW — REAL phone footage + composited text; no generation; no method change needed.
+- Shot 5 — LOW — REAL phone footage + composited text; no generation; no method change needed.
+- Shot 6 — LOW — REAL phone footage + composited text; no generation; no method change needed.
+- Shot 7 — LOW — REAL phone footage + composited text; no generation; no method change needed.
+- Shot 8 — LOW — REAL phone footage (real receipt) + composited text; no generation; no method change needed.
+- Shot 9 — LOW — REAL phone footage + composited text and wordmark; no generation; no method change needed.
+- Shot 10 — LOW — REAL phone footage only; no generation; no method change needed.
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.

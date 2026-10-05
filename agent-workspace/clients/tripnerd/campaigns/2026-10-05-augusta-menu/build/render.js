@@ -2,7 +2,7 @@
 // storyboard boards (overlay on a labelled REAL FOOTAGE placeholder).
 // Usage: FONTS_CSS=fonts-embed.css node render.js <outDir> <logo.png> [scores.json]
 //   scores.json (after the shoot): {"order":["chips","straws","pimento","peach","egg"],
-//   "scores":{"chips":6,...},"name":"FirstName","receipt":"0.00"}  (see scores.example.json)
+//   "scores":{...},"made":{...},"leftovers":true,"name":"FirstName","receipt":"0.00"}  (see scores.example.json)
 const { chromium } = require(process.env.PLAYWRIGHT || 'playwright');
 const fs = require('fs');
 const path = require('path');
@@ -14,6 +14,9 @@ const S = cfg.scores || {};
 const sc = k => (S[k] !== undefined ? S[k] : '?');
 const NAME = cfg.name || '[Name]';
 const RECEIPT = cfg.receipt ? '$' + cfg.receipt : '$?';
+const MADE = cfg.made || {}; // {item: true (homemade) | false (store-bought)}
+const made = k => (MADE[k] === true ? 'homemade' : MADE[k] === false ? 'store-bought' : 'homemade / store-bought');
+const LEFTOVERS = cfg.leftovers === true && parseFloat(cfg.receipt) > 10;
 
 const ITEMS = {
   chips: { name: 'Chips', price: '$1.50' },
@@ -42,13 +45,16 @@ body{font-family:Inter,sans-serif;position:relative}
 .lt{position:absolute;left:60px;top:300px;display:flex;align-items:center;gap:16px;background:#07283d;
  color:#fff;border-radius:14px;padding:20px 30px;font:700 42px Poppins}
 .lt span{font:600 36px Inter;color:#2ea3f2}
-.card{position:absolute;left:60px;top:1110px;width:880px;background:#07283d;border-radius:22px;
+.card{position:absolute;left:60px;bottom:590px;width:880px;background:#07283d;border-radius:22px;
  padding:28px 32px;display:flex;align-items:center;gap:26px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .rank{flex:none;width:118px;height:118px;border-radius:18px;background:#e6a310;color:#07283d;
  font:800 62px/118px Poppins;text-align:center}
 .it{flex:1;min-width:0}
 .it h2{font:800 48px/1.05 Poppins;color:#fff}
-.it p{font:600 34px Inter;color:#2ea3f2;margin-top:8px}
+.it p{font:600 30px/1.25 Inter;color:#2ea3f2;margin-top:8px}
+.it p span{color:#9fb6c6}
+.sub2{position:absolute;left:60px;right:140px;top:410px;font:700 50px/1.15 Poppins;color:#fff;
+ text-shadow:0 3px 0 rgba(0,0,0,.55),0 0 20px rgba(0,0,0,.5)}
 .score{flex:none;text-align:center;color:#fff}
 .score small{display:block;font:600 20px Inter;letter-spacing:2px;color:#9fb6c6;text-transform:uppercase}
 .score div{font:800 60px Poppins}
@@ -74,22 +80,22 @@ body{font-family:Inter,sans-serif;position:relative}
 const ph = (n, t, d) => `<div class="ph"><b>REAL FOOTAGE · ${n ? 'SHOT ' + n : 'HOOK'} · ${t}</b><br>${d}</div>`;
 const card = (rank, k) => {
   const it = ITEMS[k];
-  const s = rank === 1 ? '' : `<div class="score"><small>Nerd verdict</small><div>${sc(k)}<i>/10</i></div></div>`;
-  return `<div class="card"><div class="rank">#${rank}</div><div class="it"><h2>${it.name}</h2><p>${it.price} at Augusta</p></div>${s}</div>`;
+  const s = `<div class="score"><small>Nerd verdict</small><div>${sc(k)}<i>/10</i></div></div>`;
+  return `<div class="card"><div class="rank">#${rank}</div><div class="it"><h2>${it.name}</h2><p>${it.price} at Augusta (2026)<br><span>ours: ${made(k)}</span></p></div>${s}</div>`;
 };
 
 // Overlays: [file, html, board shot number, timing, placeholder description]
 const L = [];
-L.push(['01-hook-A', `<div class="hook"><em>$1.50</em> at Augusta since 2002.</div><div class="tag">We made ours at home ↓</div>`,
-  1, '0:00–0:02', 'Hands unwrap a homemade pimento cheese sandwich from plain white deli paper. Big bite. No voice.']);
-L.push(['02-setup', `<div class="sub">So we recreated 5 Augusta classics at home. And ranked them.</div>`,
-  2, '0:02–0:05', 'Slide along the counter: five items, hand-written price cards. VO: "We recreated five Augusta classics at home."']);
+L.push(['01-hook-A', `<div class="hook"><em>$1.50</em> at Augusta since 2002.</div><div class="tag">Ours is homemade ↓</div>`,
+  1, '0:00–0:02', 'Hands unwrap homemade pimento cheese sandwich A from plain white deli paper. Big bite. No voice. Tag appears at 1.0 s.']);
+L.push(['02-setup', `<div class="sub">We lined up 5 Augusta classics at home.</div>`,
+  2, '0:02–0:05', 'Slide along the counter: five items, small cards reading "Augusta 2026 · $X". VO: "We lined up five Augusta classics at home."']);
 const desc = {
-  chips: 'Example order. Chips poured from a plain bowl, crunch, verdict to camera.',
-  straws: 'Cheese straw snapped in half. Eaten.',
-  pimento: 'Bite, tilt up to the face for the verdict. The pause goes wherever the Nerd really hesitated.',
-  peach: 'Peach ice cream sandwich. Bite, quick reaction.',
-  egg: 'Held up like a trophy. Small push-in.',
+  chips: 'Example order. Live first bite and verdict; score written on a card on camera.',
+  straws: 'Live bite and verdict (cheese straw snapped).',
+  pimento: 'Live bite, tilt up to the face for the verdict.',
+  peach: 'Live bite and verdict. Fresh ice cream sandwich from the freezer per take.',
+  egg: 'The #1 verdict clip, held up to camera. Small push-in.',
 };
 const times = ['0:05–0:08.5', '0:08.5–0:12', '0:12–0:16.5', '0:16.5–0:20.5', '0:20.5–0:24.5'];
 ORDER.forEach((k, i) => {
@@ -97,18 +103,17 @@ ORDER.forEach((k, i) => {
   const extra = rank === 1 ? `<div class="fight">Fight us in the comments.</div>` : rank === 5 ? `<div class="lt">${NAME} <span>· TripNerd Nerd</span></div>` : '';
   L.push([`0${3 + i}-rank-${rank}-${k}`, card(rank, k) + extra, 3 + i, times[i], desc[k]]);
 });
-L.push(['08-receipt', `<div class="rec"><div class="row"><span>Those 5 at Augusta</span><b>$10</b></div><div class="row"><span>Making them at home</span><b>${RECEIPT}</b></div><small>Plenty left over. 2026 Augusta prices: 1.50 + 1.50 + 1.50 + 2.50 + 3.00</small></div>`,
-  8, '0:24.5–0:28.5', 'Real receipt slides in, framed on the total only (store details out of frame or blurred). VO: "Those five at Augusta: ten bucks. Our groceries: [total]."']);
-const payoff = cta => `<div class="hook">Lunch is the easy part.</div><div class="cta">${cta}</div><div class="logo"><img src="${logo}"></div>`;
+L.push(['08-receipt', `<div class="rec"><div class="row"><span>Those 5 at Augusta (2026)</span><b>$10</b></div><div class="row"><span>Making them at home</span><b>${RECEIPT}</b></div><small>${LEFTOVERS ? 'Plenty left over. ' : ''}2026 Augusta prices: 1.50 + 1.50 + 1.50 + 2.50 + 3.00</small></div>`,
+  8, '0:24.5–0:28.5', 'Real receipt slides in, framed on the total only (store details out of frame or blurred). VO: "Those five at Augusta: ten bucks. Ours?"']);
+const payoff = cta => `<div class="hook">Lunch is the easy part.</div><div class="sub2">The house, passes and logistics? That's what a Nerd's for.</div><div class="cta">${cta}</div><div class="logo"><img src="${logo}"></div>`;
 L.push(['09-payoff-comment', payoff('Comment <em>NERDNOTES</em><br>for our Augusta notes'),
-  9, '0:28.5–0:34', 'The Nerd to camera, sandwich in hand: "Lunch is the easy part. House, passes, logistics? That\'s what a Nerd\'s for."']);
-L.push(['09-payoff-dm', payoff('DM <em>AUGUSTA</em><br>for our Augusta notes'), 9, '0:28.5–0:34', 'Same shot as 09 (DM version of the CTA).']);
-L.push(['10-loop', '', 10, '0:34–0:35', 'Picks up a second, still-wrapped sandwich. Framing matches shot 1, so the Reel loops.']);
+  9, '0:28.5–0:34', 'The Nerd to camera, holding bitten sandwich A: "Lunch is the easy part. House, passes, logistics? That\'s what a Nerd\'s for."']);
+L.push(['09-payoff-dm', payoff('DM <em>NERDNOTES</em><br>for our Augusta notes'), 9, '0:28.5–0:34', 'Same shot as 09 (DM version of the CTA).']);
+L.push(['10-loop', '', 10, '0:34–0:35', 'Picks up still-wrapped sandwich B. Framing matches shot 1, so the Reel loops.']);
 // Hook variants (replace shot 1 text)
-L.push(['hook-B-egg', `<div class="hook">Egg salad beats pimento cheese. Our verdict:</div>`, 0, 'Trial B', 'Only if it is the real verdict. Egg salad held up to camera.']);
-L.push(['hook-B-pimento', `<div class="hook">We ranked 5 Augusta classics. The legend held.</div>`, 0, 'Trial B alt', 'If pimento cheese wins. Held up to camera.']);
-L.push(['hook-C', `<div class="hook">Can we make Augusta's <em>$10</em> lunch for $10?</div>`, 0, 'Reserve C', 'The Nerd at the counter, five items. Answered by the receipt.']);
-L.push(['hook-D', `<div class="hook">Augusta charges <em>$10</em> for these five. My groceries: ${RECEIPT}.</div>`, 0, 'Trial D', 'Only if the total is over $10. Receipt (total line only) fills the frame.']);
+L.push(['hook-B', `<div class="hook">Pimento cheese or egg salad? Our homemade ranking.</div>`, 0, 'Trial B', 'Shot 1 picture unchanged. Works for any result.']);
+L.push(['hook-C', `<div class="hook">Can we make Augusta's <em>$10</em> lunch for $10?</div>`, 0, 'Reserve C', 'Shot 1 picture unchanged. Answered by the receipt.']);
+L.push(['hook-D', `<div class="hook">Augusta: <em>$10</em> for these five. At home?</div>`, 0, 'Trial D', 'Shot 1 picture unchanged. Answered by the receipt.']);
 
 // Fonts are inlined (FONTS_CSS = @font-face rules with data: URLs) because headless Chromium
 // may not reach Google Fonts through the workspace proxy.
@@ -133,7 +138,7 @@ const guides = `<div class="guide" style="top:0;height:288px"></div><div class="
     if (body) {
       await shoot(page(body), path.join(out, 'overlays', f + '.png'), { omitBackground: true });
       // Text-band check (BC-28 pre-check): every text block inside y 288-1344 and x <= 940.
-      const boxes = await p.evaluate(() => [...document.querySelectorAll('.hook,.sub,.lt,.card,.fight,.rec,.cta,.logo,.tag')]
+      const boxes = await p.evaluate(() => [...document.querySelectorAll('.hook,.sub,.sub2,.lt,.card,.fight,.rec,.cta,.logo,.tag')]
         .map(e => { const r = e.getBoundingClientRect(); return [e.className, Math.round(r.top), Math.round(r.bottom), Math.round(r.right)]; }));
       for (const [c, top, bottom, right] of boxes)
         band.push({ f, c, top, bottom, right, ok: top >= 288 && bottom <= 1344 && right <= 940 });
