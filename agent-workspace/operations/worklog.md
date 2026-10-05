@@ -1471,3 +1471,22 @@ goal, ranking systems, signals, tactics per signal, Stories mechanics, schedule,
 food-review rules, hard rules, assets, fact bank, prompts A–F.
 **Open:** approver sign-off; real ranking + grocery total on shoot day; slot it as Friday's Trial Reel
 or swap with Reel 01.
+
+## 2026-10-05 (evening) — TripNerd: Augusta cheap eats Reel run through the campaign system
+
+**Did:** opened campaign `clients/tripnerd/campaigns/2026-10-05-augusta-menu/` (Bible at depth
+FULL, ten-field shot list, keyword DM reply, production log) and `clients/tripnerd/evidence-records.md`
+(EV-tripnerd-001…010). Pulled Meta Ad Library references (Golfbreaks comment-keyword CTAs, Bounty
+creator taste test, Gorse & Thistle founders; IDs in Bible §3). Rendered the edit kit (transparent
+overlays, boards, renderer with a 15–70% text-band check) locally and in the Higgsfield sandbox;
+ZIP on Higgsfield storage. 0 generation credits. Built an approval page (storyboard, animatic,
+decisions).
+**Skeptic:** isolated Pass 1 = BLOCK (3 S4, 5 S3). Repaired copy-level findings (claims sourced or
+cut, CTA keyword NERDNOTES, "notes" not "cheat sheet", lines retimed, like-for-like receipt, text
+band, white deli paper). Regression pass run with a fresh packet (verdict in Bible §14).
+**Also:** Story kit AUGUSTA DM reply replaced with the evidence-checked version; old Reel script
+marked superseded.
+**Open (role-holders):** APPROVER — strategy/concept/storyboard, CTA, loop ending, CONFLICT C1
+(how "Augusta" may be used), sign-off of EV-001…006/008/009. CLIENT_APPROVER — cast a real staff
+member + written consent; confirm EV-007 by email; supply the master logo. ManyChat setup.
+**Learned:** `knowledge/learnings/2026-10-05-the-keyword-dm-is-part-of-the-ad.md`.

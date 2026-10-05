@@ -1,0 +1,273 @@
+<title>Augusta Menu Reel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: approval packet. Sticky phone animatic on the left, decisions and storyboard on the right; stacks on phones. */
+:root{
+  --bg:#f2f6f9; --surface:#ffffff; --fg:#0b2233; --muted:#4f6676; --line:#d5e0e8;
+  --navy:#07283d; --blue:#1679b5; --sky:#2ea3f2; --gold:#e6a310; --gold-ink:#5a3d00;
+  --ok:#1f7a4d; --warn:#9a5b00; --stop:#b3261e; --chip:#e4eef5; --frame:#0b2233;
+  --display:"Poppins",ui-sans-serif,system-ui,sans-serif; --body:"Inter",ui-sans-serif,system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#051826; --surface:#0a2335; --fg:#e6f0f6; --muted:#9db4c3; --line:#1d3a4f;
+  --navy:#07283d; --blue:#5cb8f5; --sky:#2ea3f2; --gold:#f0b429; --gold-ink:#2b1d00;
+  --ok:#5fd09a; --warn:#f0b429; --stop:#ff8a80; --chip:#12324a; --frame:#000c14; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#051826; --surface:#0a2335; --fg:#e6f0f6; --muted:#9db4c3; --line:#1d3a4f;
+  --navy:#07283d; --blue:#5cb8f5; --sky:#2ea3f2; --gold:#f0b429; --gold-ink:#2b1d00;
+  --ok:#5fd09a; --warn:#f0b429; --stop:#ff8a80; --chip:#12324a; --frame:#000c14; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--body);margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding:28px 20px 64px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.5px}
+h2{font-size:22px;font-weight:700;margin-bottom:12px}
+h3{font-size:16px;font-weight:700}
+p{margin:0}
+a{color:var(--blue)}
+.eyebrow{font:600 12px var(--body);letter-spacing:1.6px;text-transform:uppercase;color:var(--muted)}
+header{display:grid;gap:12px;margin-bottom:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--chip);border-radius:999px;padding:5px 12px;font:600 13px var(--body)}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--muted);display:inline-block}
+.chip.draft i{background:var(--warn)} .chip.ok i{background:var(--ok)} .chip.stop i{background:var(--stop)}
+.grid{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:32px;align-items:start}
+@media (max-width:900px){.grid{grid-template-columns:minmax(0,1fr)}}
+.stick{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);display:grid;gap:12px}
+@media (max-width:900px){.stick{position:static}}
+.phone{position:relative;width:100%;max-width:360px;aspect-ratio:9/16;border:10px solid var(--frame);border-radius:34px;overflow:hidden;background:#000;margin:0 auto}
+.phone img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bar{position:absolute;left:10px;right:10px;top:8px;height:3px;background:rgba(255,255,255,.25);border-radius:2px}
+.bar b{display:block;height:100%;width:0;background:#fff;border-radius:2px}
+.controls{display:grid;gap:10px;max-width:360px;margin:0 auto;width:100%}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+button,select{font:600 14px var(--body);border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:8px 14px;cursor:pointer}
+button.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+input[type=range]{flex:1;min-width:120px;accent-color:var(--sky)}
+.tc{font:600 14px var(--body);font-variant-numeric:tabular-nums;color:var(--muted);min-width:88px;text-align:right}
+label{font:600 12px var(--body);color:var(--muted);display:grid;gap:4px;flex:1;min-width:140px}
+.now{font-size:13px;color:var(--muted);min-height:3em}
+.now b{color:var(--fg)}
+section{margin-top:36px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.decisions{display:grid;gap:10px}
+.dec{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;padding:12px 0;border-top:1px solid var(--line)}
+.dec:first-of-type{border-top:0}
+.dec .who{grid-column:2;font:600 12px var(--body);letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.box{width:18px;height:18px;border:2px solid var(--muted);border-radius:4px;margin-top:3px}
+.rec{color:var(--ok);font-weight:600}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:860px;font-size:14px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-top:1px solid var(--line)}
+th{font:600 12px var(--body);letter-spacing:1px;text-transform:uppercase;color:var(--muted);border-top:0;background:var(--chip)}
+td.t{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--muted)}
+.hero{display:inline-block;font:700 10px var(--body);letter-spacing:1px;background:var(--gold);color:var(--gold-ink);border-radius:4px;padding:1px 6px;margin-left:4px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.kit{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.ov{margin:0;display:grid;gap:6px}
+.ov img{width:100%;aspect-ratio:9/16;object-fit:contain;border-radius:8px;border:1px solid var(--line);
+  background:repeating-conic-gradient(#8a9aa6 0% 25%,#5e6e7a 0% 50%) 0 0/16px 16px}
+.ov figcaption{font-size:12px;color:var(--muted);word-break:break-all}
+pre{white-space:pre-wrap;word-break:break-word;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--chip);border-radius:10px;padding:14px;margin:0}
+.gates{display:grid;gap:0;counter-reset:g}
+.gate{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.gate:first-child{border-top:0}
+.gate span:first-child{font:700 12px var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.st{font:600 12px var(--body);border-radius:999px;padding:3px 10px;background:var(--chip);white-space:nowrap}
+.st.wait{color:var(--warn)} .st.done{color:var(--ok)} .st.no{color:var(--muted)}
+.note{font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">TripNerd · Instagram Reel · approval packet · prepared by Service Pow · 2026-10-05</p>
+  <h1>Augusta's cheap eats, made at home (and ranked)</h1>
+  <p style="max-width:70ch;color:var(--muted)">A real TripNerd Nerd recreates five Augusta classics in a home kitchen, ranks them, and lands on the line “Lunch is the easy part. House, passes, logistics? That's what a Nerd's for.” 35 seconds, 9:16, organic. Goal: awareness and engagement.</p>
+  <div class="chips">
+    <span class="chip draft"><i></i>Status: DRAFT, awaiting approval</span>
+    <span class="chip ok"><i></i>AI footage: none</span>
+    <span class="chip ok"><i></i>Generation spend: 0 credits</span>
+    <span class="chip stop"><i></i>Independent check: BLOCK until consent and sign-offs land</span>
+    <span class="chip stop"><i></i>Blocker: cast a real Nerd for a 1-hour shoot</span>
+  </div>
+</header>
+
+<div class="grid">
+  <aside class="stick" aria-label="Animatic">
+    <div class="phone"><img id="frame" alt="Storyboard frame"><div class="bar"><b id="prog"></b></div></div>
+    <div class="controls">
+      <div class="row">
+        <button class="primary" id="play" type="button">Play animatic</button>
+        <input id="scrub" type="range" min="0" max="35" step="0.05" value="0" aria-label="Scrub timeline">
+        <span class="tc" id="tc">0:00.0 / 0:35</span>
+      </div>
+      <div class="row">
+        <label for="hook">First frame
+          <select id="hook">
+            <option value="01-hook-A">A · Price legend (main)</option>
+            <option value="hook-B-egg">B · Egg salad wins (Trial)</option>
+            <option value="hook-B-pimento">B · Pimento wins (Trial)</option>
+            <option value="hook-C">C · Challenge (reserve)</option>
+            <option value="hook-D">D · Receipt open (Trial)</option>
+          </select></label>
+        <label for="cta">Call to action
+          <select id="cta">
+            <option value="09-payoff-comment">Comment NERDNOTES (recommended)</option>
+            <option value="09-payoff-dm">DM AUGUSTA (plan default)</option>
+          </select></label>
+      </div>
+      <p class="now" id="now"></p>
+      <p class="note">Boards stand in for real phone footage. Overlays are final except [Name], the scores and the receipt total, which come from the shoot. The ranking order follows the Nerd's real verdict.</p>
+    </div>
+  </aside>
+
+  <main>
+    <section style="margin-top:0">
+      <h2>Decisions needed</h2>
+      <div class="card decisions">
+        <div class="dec"><span class="box"></span><p><b>Approve the strategy, the “Nerd Kitchen” concept and this storyboard.</b> Nothing is shot or spent before this.</p><span class="who">APPROVER</span></div>
+        <div class="dec"><span class="box"></span><p><b>How “Augusta” may be used.</b> The growth plan says event names only to say where guests went. TripNerd's own product is called “Augusta Experience”. Proposed reading: Augusta as a place and product name is fine; tournament names, marks, the green wrapper and footage are not; every Augusta post carries a non-affiliation line. If you read the rule strictly, this concept is out and the next episode uses stadium food instead.</p><span class="who">APPROVER · open conflict C1</span></div>
+        <div class="dec"><span class="box"></span><p><b>Call to action:</b> “Comment NERDNOTES for our Augusta notes” (ManyChat comment trigger on a word nobody types by accident) or “DM AUGUSTA for our Augusta notes” as the growth plan specifies. <span class="rec">Recommended: Comment.</span> Every active Golfbreaks US video ad we found uses a comment keyword, and comments are a primary KPI. Whether Instagram demotes keyword-comment prompts is unknown.</p><span class="who">APPROVER · needs ManyChat set up</span></div>
+        <div class="dec"><span class="box"></span><p><b>Ending:</b> cut back to frame one so the Reel loops, with the logo on the payoff frame, instead of a separate end card. <span class="rec">Recommended: loop.</span> Untested assumption that it lifts replays.</p><span class="who">APPROVER</span></div>
+        <div class="dec"><span class="box"></span><p><b>Who is on camera, with written consent.</b> A real TripNerd staff member, about one hour at home, and an email saying they agree to be filmed, named and posted. Reviews name Jason and JD most often (7 of 15 read).</p><span class="who">CLIENT_APPROVER</span></div>
+        <div class="dec"><span class="box"></span><p><b>Confirm the offer line</b> (house, passes, logistics, as worded on tripnerd.com) by email so evidence EV-tripnerd-007 can be filed.</p><span class="who">CLIENT_APPROVER</span></div>
+        <div class="dec"><span class="box"></span><p><b>Sign off the sourced facts</b> (menu prices, phone and camera rules: EV-tripnerd-001 to 006, 008, 009).</p><span class="who">APPROVER</span></div>
+        <div class="dec"><span class="box"></span><p><b>Groceries and props,</b> about $30–40 (estimate). Who pays?</p><span class="who">APPROVER</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Storyboard</h2>
+      <div class="tbl"><table>
+        <thead><tr><th>#</th><th>Time</th><th>Job</th><th>Picture (real phone footage)</th><th>On-screen text (composited)</th><th>Spoken</th><th>Motion</th><th>Reference</th></tr></thead>
+        <tbody>
+        <tr><td>1<span class="hero">HERO</span></td><td class="t">0:00–0:02</td><td>Attention</td><td>Hands unwrap a homemade pimento cheese sandwich from plain white deli paper, big bite</td><td>$1.50 at Augusta since 2002. + “We made ours at home ↓”</td><td>None (crinkle and bite)</td><td>Unwrap, bite; slow push-in</td><td>NPR, 2026-04-09; <a href="https://www.facebook.com/ads/library/?id=28938598309099017" target="_blank" rel="noopener">Bounty × creator taste test</a></td></tr>
+        <tr><td>2</td><td class="t">0:02–0:05</td><td>Understanding</td><td>Slide along the counter: five items, hand-written price cards</td><td>So we recreated 5 Augusta classics at home. And ranked them.</td><td>VO: “We recreated five Augusta classics at home.”</td><td>Lateral slide</td><td><a href="https://www.facebook.com/ads/library/?id=1618392068867243" target="_blank" rel="noopener">Callie's, home kitchen</a></td></tr>
+        <tr><td>3</td><td class="t">0:05–0:08.5</td><td>Attention</td><td>#5 tasted (example: chips from a plain bowl), verdict to camera</td><td>#5 card + “[Name] · TripNerd Nerd”</td><td>“Number five: [item]. [score].”</td><td>Pour, crunch</td><td>Taste-test pacing</td></tr>
+        <tr><td>4</td><td class="t">0:08.5–0:12</td><td>Proof</td><td>#4 tasted</td><td>#4 card</td><td>“[Item]. [score].”</td><td>Snap / bite</td><td>Taste-test pacing</td></tr>
+        <tr><td>5</td><td class="t">0:12–0:16.5</td><td>Emotion</td><td>#3 tasted; the pause goes wherever the Nerd really hesitated</td><td>#3 card</td><td>“[Item]. [score].”</td><td>Bite; tilt up</td><td>Taste-test pacing</td></tr>
+        <tr><td>6</td><td class="t">0:16.5–0:20.5</td><td>Desire</td><td>#2 tasted (ice cream shot last, fresh per take)</td><td>#2 card</td><td>“[Item]. [score].”</td><td>Bite</td><td>Taste-test pacing</td></tr>
+        <tr><td>7<span class="hero">HERO</span></td><td class="t">0:20.5–0:24.5</td><td>Comments</td><td>#1 held up to camera</td><td>#1 card + Fight us in the comments.</td><td>“Number one: [item].”</td><td>Raise; push-in</td><td>Taste-test pacing</td></tr>
+        <tr><td>8</td><td class="t">0:24.5–0:28.5</td><td>Proof</td><td>Real receipt, framed on the total only (store details out of frame or blurred)</td><td>Those 5 at Augusta: $10 · Making them at home: $? (plenty left over)</td><td>VO: “Those five at Augusta: ten bucks. Our groceries: [total].”</td><td>Receipt slides in</td><td><a href="https://www.facebook.com/ads/library/?id=1752623519328723" target="_blank" rel="noopener">Golfbreaks, price-led</a></td></tr>
+        <tr><td>9</td><td class="t">0:28.5–0:34</td><td>Action</td><td>The Nerd to camera, sandwich in hand</td><td>Lunch is the easy part. + CTA + real TripNerd logo</td><td>“Lunch is the easy part. House, passes, logistics? That's what a Nerd's for.”</td><td>Speaks, gestures</td><td><a href="https://www.facebook.com/ads/library/?id=4674925342826469" target="_blank" rel="noopener">Gorse &amp; Thistle founders</a></td></tr>
+        <tr><td>10</td><td class="t">0:34–0:35</td><td>Replay</td><td>Picks up a second, still-wrapped sandwich; matches frame one</td><td>none</td><td>none</td><td>Lift</td><td>NPR (subject); framing matches shot 1</td></tr>
+        </tbody>
+      </table></div>
+      <p class="note" style="margin-top:8px">The Nerd tastes all five off camera and writes the order and scores before filming, so the ranking on screen is the real one. Board order is an example. Shots 2 and 8 are voiceover; the rest is on camera. Spoken lines run at 140–150 words a minute.</p>
+    </section>
+
+    <section class="two">
+      <div class="card">
+        <h2>Every claim, sourced</h2>
+        <ul>
+          <li>$1.50 pimento cheese and egg salad, unchanged since 2002 · EV-tripnerd-001/002 · <a href="https://www.npr.org/2026/04/09/nx-s1-5779202/masters-concessions-prices-augusta-national" target="_blank" rel="noopener">NPR</a>, <a href="https://thegolfnewsnet.com/golfnewsnetteam/2026/04/06/2026-masters-concessions-menu-food-choices-and-food-prices-at-augusta-national-141861/" target="_blank" rel="noopener">Golf News Net</a></li>
+          <li>Chips $1.50, cheese straws $2.50, peach ice cream sandwich $3 · EV-tripnerd-003/004/005 · <a href="https://sports.yahoo.com/articles/full-2026-masters-menu-just-205008599.html" target="_blank" rel="noopener">Yahoo Sports full menu</a></li>
+          <li>Those five total $10.00 · EV-tripnerd-006 (1.50 + 1.50 + 1.50 + 2.50 + 3.00)</li>
+          <li>House, passes, logistics · EV-tripnerd-007 · tripnerd.com Augusta page, awaiting TripNerd's email confirmation</li>
+          <li>DM notes: no phones on the grounds, on-site phones, cameras on practice days · EV-tripnerd-008/009 · <a href="https://www.nbcdfw.com/news/national-international/cell-phones-are-banned-at-the-masters-golf-tournament-heres-why/2934489/" target="_blank" rel="noopener">NBC 5 DFW</a>, Golf Monthly (2024; re-check by 2027-03-01)</li>
+          <li>Grocery total and scores: real, from the shoot</li>
+        </ul>
+        <p class="note" style="margin-top:10px">Prices are the 2026 menu; re-check on posting day and when the 2027 menu comes out. Caption lists what was made from scratch and what was store-bought, and says TripNerd is not affiliated with the tournament or Augusta National.</p>
+      </div>
+      <div class="card">
+        <h2>Rules this follows</h2>
+        <ul>
+          <li>Real person, real food, real opinions. No AI people, voices or reviews (growth plan p.6; the FTC Fake Reviews Rule).</li>
+          <li>No tournament logos, no green wrapper, no footage from the grounds. The word “Augusta” only, pending your ruling on the event-name rule.</li>
+          <li>No packaging, brand labels or store details in frame.</li>
+          <li>Logo composited from TripNerd's real file. Brand fonts and colours only.</li>
+          <li>Text inside Instagram's safe area: clear of the top 14%, bottom 20% and the right-hand buttons.</li>
+          <li>Music from Instagram's commercial-use library.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>What we borrowed, and from whom</h2>
+      <div class="card">
+        <p class="note" style="margin-bottom:10px">Active US video ads in the Meta Ad Library on 2026-10-05. We read the ad copy and thumbnails; the videos were not watched frame by frame.</p>
+        <ul>
+          <li><b>Comment-keyword CTA.</b> Golfbreaks: “Comment ‘Vegas’ for a free personalised quote” (<a href="https://www.facebook.com/ads/library/?id=2295717434583035" target="_blank" rel="noopener">2295717434583035</a>), also <a href="https://www.facebook.com/ads/library/?id=1054989426966869" target="_blank" rel="noopener">Utah</a> and <a href="https://www.facebook.com/ads/library/?id=1752623519328723" target="_blank" rel="noopener">Pebble</a>.</li>
+          <li><b>Start an argument.</b> Bounty × Kyle hamiltonn taste test: “you can argue with me in the comments” (<a href="https://www.facebook.com/ads/library/?id=28938598309099017" target="_blank" rel="noopener">28938598309099017</a>).</li>
+          <li><b>Lead with a price.</b> Golfbreaks example packages; the receipt beat uses the same move with a sourced number.</li>
+          <li><b>Real staff as the face.</b> Gorse &amp; Thistle founders on camera (<a href="https://www.facebook.com/ads/library/?id=4674925342826469" target="_blank" rel="noopener">4674925342826469</a>).</li>
+          <li><b>Later: creator collab.</b> @bucketlistgolftrips with Golfbreaks (<a href="https://www.facebook.com/ads/library/?id=2048500545793522" target="_blank" rel="noopener">2048500545793522</a>) for a Collab post once the format proves itself.</li>
+        </ul>
+        <p style="margin-top:12px"><b>From TripNerd's approved work:</b> own footage first and AI only as short labelled bridges; no guest faces without consent; the real logo composited; “Talk to a Nerd” as the brand payoff, here spoken as “That's what you want a Nerd for.”</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Edit kit</h2>
+      <p class="note" style="margin-bottom:12px">Transparent 1080×1920 PNG overlays, ready to drop on the footage in CapCut or Edits. Download: <a href="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/87a1bdbf-3c9f-4f03-8b38-1aeb8ab90c8e.zip" target="_blank" rel="noopener">edit kit ZIP (2.3 MB, Higgsfield storage)</a> with overlays, boards, the renderer and a README. After the shoot, the scores, name and receipt total are re-rendered from one config file.</p>
+      <div class="kit"><!--OVERLAYS--></div>
+    </section>
+
+    <section class="two">
+      <div class="card">
+        <h2>Independent check (Skeptic)</h2>
+        <p class="note" style="margin-bottom:10px">Run by a separate reviewer that saw only the storyboard, the rules and the evidence, never our reasoning. First pass: BLOCK, with 3 rights/truth findings and 5 trust findings. Every finding we could fix in copy is fixed (full list in the campaign file). Re-check on the repaired storyboard, verbatim:</p>
+        <pre><!--SKEPTIC--></pre>
+      </div>
+      <div class="card">
+        <h2>Where it stands</h2>
+        <div class="gates">
+          <div class="gate"><span>1</span><span>Strategy approved</span><span class="st wait">Awaiting</span></div>
+          <div class="gate"><span>2</span><span>Concept approved</span><span class="st wait">Awaiting</span></div>
+          <div class="gate"><span>3</span><span>Storyboard approved</span><span class="st wait">Awaiting</span></div>
+          <div class="gate"><span>4</span><span>Shoot (real Nerd, ~1 hour)</span><span class="st no">Not booked</span></div>
+          <div class="gate"><span>5</span><span>Edit, then quality gates</span><span class="st no">Not started</span></div>
+          <div class="gate"><span>6</span><span>TripNerd sign-off and post</span><span class="st no">Not started</span></div>
+        </div>
+        <p class="note" style="margin-top:10px">Nothing is posted, sent or spent without sign-off for that step.</p>
+      </div>
+    </section>
+  </main>
+</div>
+</div>
+
+<script>
+const B = /*BOARDS*/{};
+const T = [
+  ['HOOK',0,2,'Shot 1 · Hook','Hands unwrap the sandwich. Big bite. No voice.'],
+  ['02-setup',2,3,'Shot 2 · Setup','VO: “We recreated five Augusta classics at home.”'],
+  ['03-rank-5-chips',5,3.5,'Shot 3 · #5','Example order. Verdict to camera; the Nerd is named.'],
+  ['04-rank-4-straws',8.5,3.5,'Shot 4 · #4','Cheese straw snapped in half.'],
+  ['05-rank-3-pimento',12,4.5,'Shot 5 · #3','Bite, tilt up to the verdict.'],
+  ['06-rank-2-peach',16.5,4,'Shot 6 · #2','Peach ice cream sandwich.'],
+  ['07-rank-1-egg',20.5,4,'Shot 7 · #1','Held up to camera. “Fight us in the comments.”'],
+  ['08-receipt',24.5,4,'Shot 8 · Receipt','VO: “Those five at Augusta: ten bucks. Our groceries: [total].”'],
+  ['CTA',28.5,5.5,'Shot 9 · Payoff','“Lunch is the easy part. House, passes, logistics? That\'s what a Nerd\'s for.”'],
+  ['10-loop',34,1,'Shot 10 · Loop','Picks the sandwich back up. The Reel replays.'],
+];
+const D = 35, $ = id => document.getElementById(id);
+let t = 0, playing = false, last = 0;
+const key = k => k === 'HOOK' ? $('hook').value : k === 'CTA' ? $('cta').value : k;
+const fmt = s => Math.floor(s / 60) + ':' + (s % 60).toFixed(1).padStart(4, '0');
+function draw(){
+  const seg = T.find(s => t >= s[1] && t < s[1] + s[2]) || T[T.length - 1];
+  const src = B[key(seg[0])];
+  if ($('frame').getAttribute('src') !== src) $('frame').src = src;
+  $('prog').style.width = (t / D * 100) + '%';
+  $('scrub').value = t; $('tc').textContent = fmt(t) + ' / 0:35';
+  $('now').innerHTML = '<b>' + seg[3] + '</b> · ' + seg[4];
+}
+function tick(now){
+  if (!playing) return;
+  t += (now - last) / 1000; last = now;
+  if (t >= D) t = 0;
+  draw(); requestAnimationFrame(tick);
+}
+$('play').onclick = () => {
+  playing = !playing; $('play').textContent = playing ? 'Pause' : 'Play animatic';
+  if (playing){ last = performance.now(); requestAnimationFrame(tick); }
+};
+$('scrub').oninput = e => { t = +e.target.value; draw(); };
+$('hook').onchange = () => { t = 0; draw(); };
+$('cta').onchange = () => { if (!playing) t = 29; draw(); };
+draw();
+</script>

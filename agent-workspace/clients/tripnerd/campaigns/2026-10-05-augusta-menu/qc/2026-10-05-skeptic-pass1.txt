@@ -1,0 +1,43 @@
+SKEPTIC VERDICT — Pass 1
+Verdict: BLOCK
+Findings:
+- [S4] Rights, all shots — The on-camera staff member can be identified throughout and is named in the shot 2 lower-third, but has not yet been named or given consent, so the likeness is uncleared under the client's consent rule and BC-20 and nothing can be shot until written consent is on file.
+- [S4] DM keyword reply, items 1 and 3 — "Phones aren't allowed on the grounds… check it at the gate… free payphones on the course" and "Grandstands are first come, first served" are claims about how the event runs with no Evidence Record, and guidance like this hurts a guest at the gate if it is wrong (BC-16: absent, not hedged).
+- [S4] DM keyword reply, item 4 and closing — "TripNerd guests can arrive as early as Monday of tournament week" and "daily hospitality, food and drink, and a TripNerd host" are offer claims about TripNerd's own product with no Evidence Record, since EV-tripnerd-007 covers only the home, passes and concierge logistics (BC-16).
+- [S3] All price and offer claims (shot 1–8 text, spoken lines, caption, DM item 2, the 0:30 line "the house, the passes, the logistics") — Every claim rests on EV-tripnerd-001 to -007, which are all PROPOSED rather than APPROVED, and EV-007 was read from TripNerd's own website and still awaits client confirmation, so as storyboarded no claim cites a filed record (BC-16).
+- [S3] Shot 9, 0:30 spoken line — "Lunch is the cheapest part of Augusta week" is a superlative with no Evidence Record, and it contradicts the composited text on the same shot ("Lunch is the easy part").
+- [S3] Client rule / implied affiliation, whole piece — The Reel makes "Augusta" its subject, hook, comment keyword and free giveaway rather than using it "only to say where guests went", and its hero and loop prop is a homemade sandwich in plain green wrap that copies the tournament's signature wrapper, with no line saying TripNerd is not affiliated, which breaks the client's event-name rule and invites a complaint of implied affiliation.
+- [S3] Destination parity, shot 9 CTA → DM — The Reel promises "our Augusta cheat sheet", but what arrives is four short "notes" (three of them with no Evidence Record at all) that turn into a sales pitch and a group-size question, and the keyword automation is not confirmed live, so the destination is neither shown to exist nor shown to deliver what is promised (BC-19).
+- [S3] Pacing, shots 1, 2, 8, 9 — The spoken lines overrun their windows: 0:00 is about 12 words in 2 s, said over an unwrap and a big bite; 0:02 is about 11 words in 3 s; 0:27 is about 12–14 words, including the real-total price, in 3 s; and 0:30 is 21 words in 4 s beside a CTA card carrying three elements, which works out to roughly 220–360 wpm, so the price and CTA lines cannot be said naturally on this timeline (BC-32 price/CTA pacing).
+- [S2] Shot 1 / Hook A, 0:00–0:02 — "This sandwich has cost $1.50 at Augusta since 2002" points at the Nerd's homemade copy, so for the two seconds before the "we made" reveal, which many scrollers never reach, a copy is shown as the real item.
+- [S2] Title, Hook B fallback, Hook C — "The $1.50 Augusta menu", "Augusta's $1.50 classics" and "Augusta's $1.50 menu for $1.50" call all five items $1.50, but EV-tripnerd-004 and -005 price the cheese straws at $2.50 and the ice cream sandwich at $3.00, which contradicts the Reel's own price text in shots 4 and 6.
+- [S2] Shot 8, Hook D, caption — One full grocery receipt (whole jars, a dozen eggs, a carton of ice cream) compared with five single servings is not like for like, so "Augusta's lunch is cheaper than my kitchen" draws a conclusion the receipt cannot support, and the caption's pre-written "Our grocery bill… did not" is false if the total comes in at or under $10.
+- [S2] Shot 8, real receipt shot overhead — A readable real receipt shows the store's name and logo, address, date and time, and possibly card digits, which puts other companies' marks and the staff member's neighbourhood on screen unless blurred, and the real total needs its own Evidence Record after the shoot.
+- [S2] Shots 3 and 6, props and set — "We made 5 Augusta classics at home" is false if the chips poured into the bowl or the ice cream come from shop packs, and any chip bag, bread, mayo or ice-cream carton, appliance badge or clothing logo in frame is another company's mark with no clearance (BC-20).
+- [S2] Music bed, shots 2–9 — No track or source is named, so neither the client's commercial-use-library rule nor BC-20 can be checked.
+- [S2] Ranking, shots 3–7 and spoken lines — Lines that assume the verdict ("Number one is egg salad. Yeah. I said it.", "Honestly?", "Don't skip this") and HERO treatments fixed to placeholder positions (the pause and music dip on #3, the trophy on #1) push the shoot to act out a ranking that the Reel presents as the Nerd's real verdict.
+- [S2] Keyword trigger, shots 7 and 9 — "Fight us in the comments" invites ranking arguments on a Reel whose subject word is also the DM trigger, so ordinary comments containing "Augusta" will send the sales DM to people who never asked for it.
+- [S2] Audio column vs spoken lines, shots 1, 2, 8 — Every line is written "to camera", but the Nerd is out of frame in shot 1 (hands only), shot 2 (pan along the counter, where the name lower-third would sit over food with no person on screen) and shot 8 (overhead receipt), and the audio column lists no voice before shot 9, so it is unresolved whether these lines are recorded live on camera or as voiceover.
+- [S2] Safe area, all composited text (especially the shot 2 lower-third) — The storyboard's safe area (clear of the top 270 px and bottom 384 px) still allows text at y 270–288 and y 1344–1536, which are both outside the registry's burned-text band of 15–70 % of frame height, i.e. y 288–1344 on a 1920 px frame (BC-28).
+- [S2] Claim expiry, organic post and DM automation — EV-tripnerd-001 to -006 are valid only "until the 2027 menu is published", yet an organic Reel that stays up and a DM that sends forever ("The pimento cheese is still $1.50") have no expiry date or re-check trigger.
+- [S1] Hook B — "Here's the proof" presents one person's taste verdict as proof.
+- [S1] Shots 2 and 8, text in the scene — The handwritten price cards and the phone-calculator screen are readable claims nobody controls, and they must match the EV figures and the composited price text exactly.
+- [S1] Shot 9 and caption — The CTA is still an open choice ("Comment" vs "DM", "[Comment / DM]"), and the two need different automation triggers.
+- [S1] Shot 10 loop — "Picks the green-wrapped sandwich back up" comes after shot 1 unwrapped the sandwich and bit it, so the loop needs a second, still-wrapped hero sandwich or the matched frame will show the sandwich magically restored.
+- [S1] Shot 10 reference — The real-reference field ("matches shot 1") points back into the storyboard instead of to an outside real reference (BC-34).
+- [S1] Lighting, all shots — One window side light across a tasting shoot with five items will change with sun and cloud between takes.
+- [S1] Shot 6 — The ice cream sandwich will soften and drip under window light over repeated takes.
+- [S1] Brand, composited text — The storyboard names no typeface (the client's fonts are Poppins and Inter) and does not confirm that the wordmark taken from the CDN is the approved master file rather than a web copy.
+(Pass 1 only) Shot risk:
+- Shot 1 — LOW — real phone footage plus composited text; not generated
+- Shot 2 — LOW — real phone footage plus composited text; not generated
+- Shot 3 — LOW — real phone footage plus composited text; not generated
+- Shot 4 — LOW — real phone footage plus composited text; not generated
+- Shot 5 — LOW — real phone footage plus composited text; not generated
+- Shot 6 — LOW — real phone footage plus composited text; not generated
+- Shot 7 — LOW — real phone footage plus composited text; not generated
+- Shot 8 — LOW — real phone footage plus composited text; not generated
+- Shot 9 — LOW — real phone footage plus composited text and the real wordmark file; not generated
+- Shot 10 — LOW — real phone footage only; not generated
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.

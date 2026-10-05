@@ -67,6 +67,9 @@ doesn't fit.
   three delivery routes tested and closed; the model is not a byte-faithful conduit and fails by
   confabulation (6107 of 12000 bytes, fabricated JPEG terminator). Check asset reachability
   *before* generating.
+- [2026-10-05 — The keyword DM is part of the ad](learnings/2026-10-05-the-keyword-dm-is-part-of-the-ad.md):
+  isolated Pass 1 on a no-AI Reel storyboard: 0/10 shots above LOW risk, yet 3 S4 + 5 S3 —
+  2 of the 3 S4s were in the keyword DM reply. Put the DM in the packet and the EV records.
 
 ### Web
 *None yet.*

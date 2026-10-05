@@ -3,11 +3,20 @@ title: "Reel script — The $1.50 Augusta menu, made at home"
 type: brief
 client: tripnerd
 owner: Karl
-status: draft
+status: superseded
 created: 2026-10-05
 updated: 2026-10-05
+superseded_by: ../../campaigns/2026-10-05-augusta-menu/campaign-bible.md
 tags: [instagram, reel, script, augusta, food-review, awareness]
 ---
+
+> **Superseded 2026-10-05.** The production script now lives in the campaign Bible §5:
+> [campaigns/2026-10-05-augusta-menu/campaign-bible.md](../../campaigns/2026-10-05-augusta-menu/campaign-bible.md),
+> shot list in [shotlist.md](../../campaigns/2026-10-05-augusta-menu/shotlist.md). Main changes:
+> "whole menu" → "recreated five Augusta classics"; receipt compares the same five items ($10);
+> lines cut to fit the timeline; "cheapest part" → "the easy part"; CTA "Comment NERDNOTES /
+> DM AUGUSTA for our Augusta notes"; white deli paper instead of green wrap. Kept for the
+> reasoning trail.
 
 # Reel: "The $1.50 Augusta menu, made at home (and ranked)"
 

@@ -1,0 +1,6 @@
+{
+  "order": ["chips", "straws", "pimento", "peach", "egg"],
+  "scores": {"chips": 6, "straws": 7, "pimento": 8, "peach": 9},
+  "name": "FirstName",
+  "receipt": "0.00"
+}
