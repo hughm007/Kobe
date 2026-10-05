@@ -1494,3 +1494,18 @@ marked superseded.
 (how "Augusta" may be used), sign-off of EV-001…006/008/009. CLIENT_APPROVER — cast a real staff
 member + written consent; confirm EV-007 by email; supply the master logo. ManyChat setup.
 **Learned:** `knowledge/learnings/2026-10-05-the-keyword-dm-is-part-of-the-ad.md`.
+
+## 2026-10-05 (late) — TripNerd Augusta Reel: AI judges declined; rebuilt as a two-judge table
+
+**Asked:** AI-generated people as Nerds/guests judging the five foods, Hell's Kitchen style.
+**Declined** for the posted ad: FTC Consumer Reviews and Testimonials Rule (no reviews from people
+who don't exist, AI included; insider reviews must be disclosed), TripNerd Growth Plan p.6, "The
+Parking Lot" precedent, and people eating is the worst AI-video failure mode. Also corrected: the
+five foods are Augusta National concessions, not TripNerd's suite menu.
+**Decided (owner):** two real Nerds at a judging table ("Nerd Tribunal"); each scores every item
+out of 10 on a paddle; the average sets the rank.
+**Did:** rebuilt shot list, Bible (§3, §5–§8, §16), renderer (two scores + average per card, rank
+computed from averages, two-name caption; worst-case render passes 22/22), approval page (v3, same
+link), edit kit v3 on Higgsfield storage (hash-verified renderer copy). 0 generation credits.
+**Open:** cast two staff + both consents; props (~$40–60) payer; the next Skeptic regression must
+cover the two-judge version before STORYBOARD APPROVED; all earlier role-holder items stand.

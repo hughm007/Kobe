@@ -27,13 +27,14 @@ tags: [campaign, bible, instagram, reel, awareness, augusta, food-review]
 | **Platform(s)** | Instagram Reels, organic, 9:16. Main post + 2 Trial Reels (non-followers first) |
 | **Objective** | Awareness and engagement (owner decision 2026-10-05, [client brief](../../client-brief.md)) |
 | **KPI + target** | Primary: non-follower views, 3-second hold, average watch time / completion, sends per reach, comments. Secondary: AUGUSTA keyword conversations. **Targets: UNKNOWN** — no @tripnerd Reel insights baseline yet (Supermetrics IG not connected). First post sets the baseline. |
-| **Budget (credits / $)** | Generation credits: **0 proposed** (no AI footage in this cut). Groceries and props ~$30–40 (ESTIMATE; payer UNKNOWN). |
+| **Budget (credits / $)** | Generation credits: **0 proposed** (no AI footage in this cut). Groceries ~$30–40 plus props (five cloches, two dry-erase paddles, tablecloth) ~$40–60 (ESTIMATES; payer UNKNOWN). |
+| **Format** | Two-judge table ("Nerd Tribunal"), owner-selected 2026-10-05: two real TripNerd staff score each item out of 10; the average sets the rank. |
 | **Depth** | **FULL** — first food-review piece for TripNerd (new concept family). Phases already answered by standing documents are recorded as skips in §16, not dropped. |
 | **Approval status** | **DRAFT** — Skeptic Pass 1 = BLOCK, regression 1-R = BLOCK (§14). Copy-level findings repaired twice; the remaining blocks need role-holders. Parked at the APPROVER gates (strategy → concept → storyboard) and CONFLICT C1 (§15). |
 
 **Parked at (never-stall rule):** (1) APPROVER: strategy, concept, storyboard, CTA, ending,
-and CONFLICT C1 (how "Augusta" may be used). (2) CLIENT_APPROVER: cast a real staff member,
-get their written consent (scope in [shotlist.md](shotlist.md)) and confirm it in writing;
+and CONFLICT C1 (how "Augusta" may be used). (2) CLIENT_APPROVER: cast two real staff members as
+judges, get both written consents (scope in [shotlist.md](shotlist.md)) and confirm them in writing;
 confirm EV-tripnerd-007 by email; supply or accept the wordmark. (3) APPROVER: sign off
 EV-tripnerd-001…006 and 008. (4) ManyChat keyword NERDNOTES set up and tested. Pass 1's S4/S3 findings that only these sign-offs can clear
 stay open until they happen. No spend gate is needed unless an optional paid item in §10 is
@@ -104,9 +105,9 @@ ahead. HYPOTHESIS.
 | Which real TripNerd staff member appears on camera (recommend whoever reviews name most), and do they consent to a 1-hour home shoot? | Production (all footage) | CLIENT_APPROVER |
 | Is the ManyChat keyword live? Comment trigger or DM trigger (§2 CTA decision)? | Posting (BC-19 parity) | APPROVER + client account access |
 | Who pays for groceries/props (~$30–40)? | Shoot | APPROVER |
-| Written (email) consent from the on-camera staff member (likeness, voice, first name, all variants, caption/DM, duration, withdrawal) + CLIENT_APPROVER written confirmation | Shoot (Skeptic S4) | CLIENT_APPROVER |
+| Written (email) consent from **both** judges (likeness, voice, first name, all variants, caption/DM, duration, withdrawal) + CLIENT_APPROVER written confirmation | Shoot (Skeptic S4) | CLIENT_APPROVER |
 | Sign-off of EV-tripnerd-001…006, 008 (public facts) | Posting (Skeptic S3) | APPROVER |
-| Location: the Nerd's own kitchen or the owner's written OK | Shoot | CLIENT_APPROVER |
+| Location: a TripNerd space or a home dining table with the owner's written OK | Shoot | CLIENT_APPROVER |
 | How "Augusta" may be used under the event-name rule (CONFLICT C1) | Concept gate | APPROVER |
 | Is the CDN wordmark the approved master file? Request the master from TripNerd | Brand sign-off | CLIENT_APPROVER |
 | The real ranking order and real scores | Final text overlays | Shoot day (the Nerd) |
@@ -163,11 +164,14 @@ tested, not assumed).
 ## 3. Creative concept and pack
 *Owner: `servicepow-creative-director`.*
 
-**APPROVED CONCEPT FAMILY:** *(awaiting APPROVER)* **"Nerd Kitchen"** — a real TripNerd Nerd
-recreates a famous event food at home, ranks it honestly, and lands on what TripNerd handles.
-Repeatable per event (Derby, Super Bowl, US Open) — that is the series value.
-**Why this one:** It borrows the food-review/ranking format food creators use to hold people
-to the end, but the subject stays in TripNerd's world (content system §3).
+**APPROVED CONCEPT FAMILY:** *(awaiting APPROVER)* **"Nerd Tribunal"** — two real TripNerd
+Nerds sit as a cooking-show judging panel (white cloth, cloches, score paddles), judge a famous
+event food dead seriously, and land on what TripNerd handles. Repeatable per event (Derby, Super
+Bowl, US Open) — that is the series value. *(Superseded single-judge version: "Nerd Kitchen".
+Format change selected by the owner 2026-10-05; see §16.)*
+**Why this one:** It borrows two formats people already watch to the end — the food-review
+ranking and the cooking-show judging panel — but the subject stays in TripNerd's world (content
+system §3). Two judges add disagreement, which gives viewers a side to pick in the comments.
 **ANGLE:** The famous cheap thing vs the actually hard part.
 
 **Client's last three angles** *(rotation evidence, BC-24; pasted from the client brief and
@@ -181,12 +185,11 @@ This angle (expertise + humour through a borrowed food format) repeats none of t
 
 **Anti-Generic Gate (BC-24):**
 - *Logo-swap test:* **PARTIAL.** The food segment (0:00–0:27) could be made by any Augusta
-  operator. Reworked element: the on-screen person is a named, real TripNerd Nerd with a
-  lower-third from 0:02 ("<Name> · TripNerd Nerd"), the scores sit on "Nerd verdict" cards,
-  and the payoff line uses the brand word ("That's what you want a Nerd for"). With those,
-  swapping the logo breaks the ad.
-- *Memory test:* "The travel nerds who ranked the Augusta sandwiches." Passes only if the
-  lower-third and the payoff line survive the edit.
+  operator. Reworked elements: the judges are named, real TripNerd Nerds ("[A] & [B] ·
+  TripNerd Nerds" from 0:02), the scores sit on "Nerd avg" cards, and the payoff line uses the
+  brand word ("That's what a Nerd's for"). With those, swapping the logo breaks the ad.
+- *Memory test:* "The two travel nerds who judged the Augusta sandwiches." Passes only if the
+  name caption and the payoff line survive the edit.
 
 **Stakes check:** wants — to know if the legend is worth it · could miss — the real winner ·
 continues if unsolved — they scroll on · success feels like — "I'm sending this to the group
@@ -197,7 +200,7 @@ chat" · why now — Augusta 2027 plans start now (buyers decide ~a year out).
 | Variant | Hook mechanism | First frame / action / text / audio | Why this target stops | Expected failure mode |
 |---|---|---|---|---|
 | **A (lead)** | Price legend | Hands unwrap a homemade sandwich from plain white deli paper, bite. **"$1.50 at Augusta since 2002."** + tag at 1.0 s **"Ours is homemade ↓"**. Crinkle + bite, no voice. | A known, slightly unbelievable fact; NPR-style headline | Golf-indifferent viewers scroll |
-| B (Trial) | Controversy question | Same picture. **"Pimento cheese or egg salad? Our homemade ranking."** | Picks a side before watching; comments | Weaker stop than a stated verdict |
+| B (Trial) | Controversy question | Same picture. **"Pimento cheese or egg salad? Two Nerds decide."** | Picks a side before watching; comments | Weaker stop than a stated verdict |
 | C | Challenge | Same picture. **"Can we make Augusta's $10 lunch for $10?"** | Open question, answered at the receipt | Answer is likely no |
 | **D (Trial)** | Price tease | Same picture. **"Augusta: $10 for these five. At home?"** | Open price question, answered at the receipt | Needs the real receipt to pay off |
 
@@ -266,11 +269,11 @@ follows from the line just spoken.
 | # | Viewer knows before | What happens | Viewer knows after | Emotional change | Why this beat exists | Leads into |
 |---|---|---|---|---|---|---|
 | 1 | Nothing | Unwrap + bite; $1.50 since 2002 | A famous cheap sandwich exists | Curiosity | Stop the scroll | "So we made…" |
-| 2 | The legend | Pan across 5 items; name lower-third | A Nerd is ranking 5 classics | Anticipation | Sets the countdown | #5 |
+| 2 | The legend | Judging table, two named Nerds, five cloches | Two Nerds will score 5 classics | Anticipation | Sets the countdown and the panel | #5 |
 | 3–6 | The rules | #5 → #2 with prices and scores | Scores climbing | Mounting stakes | Watch-time engine | #1 |
 | 7 | #2 known | #1 reveal + "Fight us in the comments" | The verdict | Indignation / agreement | Comments | Receipt |
 | 8 | Ranking done | Those 5 at Augusta $10 vs grocery bill | Augusta's lunch is cheaper | Surprise | Sets up the brand line | Payoff |
-| 9 | Lunch is cheap | Nerd: the house, passes, logistics | What TripNerd does | "Ha, fair" | Brand + CTA | Loop |
+| 9 | Lunch is cheap | Judges, split line: the house, passes, logistics | What TripNerd does | "Ha, fair" | Brand + CTA | Loop |
 | 10 | Everything | Picks the sandwich back up = frame 1 | — | — | Replay | Beat 1 |
 
 ---
@@ -285,10 +288,10 @@ Changes made in this campaign are listed below; the script file is updated to ma
 | Time | Line | Delivery | Evidence |
 |---|---|---|---|
 | 0:00–0:02 | (no voice — crinkle and bite; text carries "$1.50 at Augusta since 2002") | — | EV-tripnerd-001 |
-| 0:02–0:05 | "We lined up five Augusta classics at home." (8 words / 3.0 s; matches the on-screen text) | VO | — |
-| 0:05–0:24.5 | Five live verdicts, filmed in any order straight after each first bite: "[Item]. [score]." The edit sorts them #5 → #1 | Live, on camera | EV-001…005 per item (on the card) |
+| 0:02–0:05 | "Two Nerds. Five Augusta classics. Scored out of ten." (8 words / 3.0 s; matches the on-screen text) | VO (Nerd A) | — |
+| 0:05–0:24.5 | Five live verdicts. Both judges bite, write a score on their paddle, raise it; one judge says "[Item]. [score]." (alternating). The edit sorts items by average, #5 → #1 | Live, on camera | EV-001…005 per item (on the card) |
 | 0:24.5–0:28.5 | "Those five at Augusta: ten bucks. Ours?" (7 words / 4.0 s; the total is on screen, not spoken) | VO | EV-006 + EV-010 (receipt, after shoot) |
-| 0:28.5–0:34 | "Lunch is the easy part. House, passes, logistics? That's what a Nerd's for." (13 words / 5.5 s) | On camera | EV-tripnerd-007 |
+| 0:28.5–0:34 | Nerd A: "Lunch is the easy part." Nerd B: "House, passes, logistics? That's what a Nerd's for." (13 words / 5.5 s) | Live, two-shot | EV-tripnerd-007 |
 | 0:34–0:35 | (none — loop) | — | — |
 
 **Performance marks:** deadpan, real reactions, no mugging (performed-emotion ban). Every
@@ -311,14 +314,14 @@ text); verdict lines made templates; lower-third moved to the first face shot; C
 | # | Beat | Dur | Story job | Source | Motion axis (BC-31) | Real reference cited (BC-34) |
 |---|---|---|---|---|---|---|
 | 1 HERO | Hook | 2.0s | Attention | REAL + COMPOSITE text | Subject (unwrap, bite) + slow handheld push-in | NPR 2026-04-09 report on the $1.50 sandwich; Bounty × creator taste test (ID 28938598309099017) |
-| 2 | Setup | 3.0s | Understanding | REAL + COMPOSITE text | Camera lateral slide along counter | Callie's (ID 1618392068867243) real-kitchen look |
+| 2 | Setup | 3.0s | Understanding | REAL + COMPOSITE text + name caption | Subject (judges set paddles); locked two-shot | Gorse & Thistle (ID 4674925342826469) real staff to camera |
 | 3 | #5 | 3.5s | Attention/proof | REAL + COMPOSITE card + lower-third | Subject (pour / bite) | Creator food-review pacing (Bounty ID above) |
 | 4 | #4 | 3.5s | Proof | REAL + COMPOSITE card | Subject (snap / bite) | same |
 | 5 | #3 | 4.5s | Emotion | REAL + COMPOSITE card | Subject (bite) + tilt up to face | same |
 | 6 | #2 | 4.0s | Desire | REAL + COMPOSITE card | Subject (bite) | same |
 | 7 HERO | #1 | 4.0s | Action (comments) | REAL + COMPOSITE card | Subject (raise) + push-in | same |
 | 8 | Receipt | 4.0s | Proof | REAL + COMPOSITE card | Subject (receipt slid into frame) | Golfbreaks price-led ad (ID 1752623519328723) |
-| 9 | Payoff | 5.5s | Action | REAL + COMPOSITE (real logo file + CTA) | Subject (talks to camera, gestures) | Gorse & Thistle founders to camera (ID 4674925342826469) |
+| 9 | Payoff | 5.5s | Action | REAL + COMPOSITE (real logo file + CTA) | Subject (judges speak, set paddles down) | Gorse & Thistle founders to camera (ID 4674925342826469) |
 | 10 | Loop | 1.0s | Replay | REAL | Subject (lifts second wrapped sandwich; matches shot 1) | NPR 2026-04-09 (subject); framing matched to shot 1 |
 
 Total 35.0s. Every shot is phone footage of a real person and real food; every text element is
@@ -326,14 +329,16 @@ composited in the edit inside the 15–70% band (machine-checked by `build/rende
 text blocks inside). No generated shots. Items per rank follow the real verdict; HERO sits on
 the #1 position, whatever food lands there.
 
-**Visual language:** Bright home kitchen, honest food, not styled-food glossy.
-**Camera language:** Phone, vertical, mostly handheld close-ups at 45°/overhead; face shots
-at eye level.
-**Lighting language:** Window side light, no mixed colour temperatures.
+**Visual language:** Cooking-show judging table played straight: white cloth, silver cloches,
+dry-erase paddles; honest food, not styled-food glossy.
+**Camera language:** Phone 1 on a tripod for a locked eye-level two-shot (every verdict);
+phone 2 handheld for cloche lifts and food close-ups at 45°/overhead.
+**Lighting language:** One soft key from the side (window or lamp), no mixed colour temperatures.
 **Colour language:** Natural; TripNerd navy #07283d / blue #2ea3f2 / gold #e6a310 only in
 overlays.
-**Feeling Spec:** curiosity (fact) → anticipation (countdown) → indignation (#1) → surprise
-(receipt) → "ha, fair" (payoff). Cause per beat in the beat map.
+**Feeling Spec:** curiosity (fact) → anticipation (countdown, cloche reveals) → amusement (the
+judges' gravity over $1.50 food; any disagreement) → indignation (#1) → surprise (receipt) →
+"ha, fair" (payoff). Cause per beat in the beat map.
 **Sound Spine:** close food sound (crinkle, crunch, snap) carries the edit; music either a Meta
 Sound Collection track (licence terms saved and checked before export) or added in the
 Instagram app at upload; half a beat of silence before the #1 verdict lives in the voice track.
@@ -342,25 +347,31 @@ Shots 2 and 8 are voiceover.
 ---
 
 ## 7. Cast and performance
-*Owner: `servicepow-human-performance-realism`. No generated people in this campaign; this
-section briefs the real performer instead.*
+*Owner: `servicepow-human-performance-realism`. No generated people in this campaign (AI judges
+were requested and declined, §16); this section briefs the real performers instead.*
 
-**Characters:** One real TripNerd staff member ("the Nerd"). Identity: UNKNOWN (§1.2).
-**Character references:** N/A — real person, filmed.
-**Per-beat brief:** Wants — a fair verdict. Feels — mildly amused. Thinks — "is the legend
-overrated?" Looking at — the food, then the lens for verdicts only. Intensity — 3/10.
-**Restraint instructions:** No exaggerated faces, no "mmm" acting, no reading from a card on
-camera. If something tastes bad, say so.
+**Characters:** Two real TripNerd staff members, Nerd A and Nerd B, seated side by side as
+judges. Identities: UNKNOWN (§1.2). A third person brings the plates, hands only.
+**Character references:** N/A — real people, filmed.
+**Per-beat brief:** Wants — a fair verdict, and to win the argument. Feels — taking it far too
+seriously for $1.50 food (that gravity is the joke). Thinks — "is the legend overrated?" Looking
+at — the food, then each other when they disagree, then the lens for verdicts. Intensity — 3/10.
+**Restraint instructions:** Deadpan judging, no exaggerated faces, no "mmm" acting, no reading
+from a card on camera. Each judge scores independently before seeing the other's paddle. If
+something tastes bad, say so.
 **Inspection verdicts on generated footage:** N/A (none).
 
 ## 8. Continuity annex
 *Owner: `servicepow-continuity-supervisor`. Real shoot; one location, one session.*
 
-**Character bible:** Same top all shoot (solid colour, no logos except optional TripNerd tee).
-**Product bible:** Same five items, plain plates, decanted (no packaging); two identical
-sandwiches in white deli paper (shot 1 and shot 10); ice cream sandwich shot last, fresh per take.
-**Location bible:** One counter; tidy, no other brands, appliance badges or receipts' store
-details visible.
+**Character bible:** Each judge keeps the same top all shoot (solid colours that differ from
+each other, no logos except optional TripNerd tees); same seats (A on the left of frame, B on
+the right) throughout.
+**Product bible:** Same five items, plain plates under plain silver cloches, decanted (no
+packaging); two identical sandwiches in white deli paper (shot 1 and shot 10); ice cream
+sandwich fresh per take. Paddles wiped between items.
+**Location bible:** One table with a white cloth against a plain wall; no other brands,
+appliance badges or receipts' store details visible.
 **Lighting bible:** Shoot in one daylight window (about an hour); exposure and white balance
 locked; no overheads switched on midway.
 **Camera bible:** Same phone, 1080×1920 or 4K vertical, 30 fps, same lens.
@@ -604,6 +615,9 @@ evaluators' output withheld.
 | AUGUSTA DM keyword collision | S2 | strategy | NERDNOTES on both routes | REPAIRED |
 | S1s (competing asks, shot 1 read load, shot 2 text/VO mismatch, Hook D voice, #1 score, HERO rule, continuity, light, palette, shot 10 ref) | S1 | various | Comment route recommended; tag delayed to 1.0 s; text = VO; Hook D reworded; #1 card shows score; HERO rule clarified; sandwich A/B + fresh ice cream; 45-min tasting block; palette stated; shot 10 cites Bounty visual ref | REPAIRED |
 
+**Format change after Pass 1-R:** the storyboard moved to the two-judge table on 2026-10-05
+(owner choice). Pass 1-R did not see this version; the next regression covers it.
+
 **Next Skeptic run:** a fresh Pass 1 regression is required before `STORYBOARD APPROVED`. It is
 scheduled for when consent, EV sign-off, the C1 ruling and the ManyChat test are in, because
 until then it cannot return anything but BLOCK on those items (decision log).
@@ -648,6 +662,8 @@ reference the $1.50 fact face the same question.
 | 2026-10-05 | Pass 1-R (fresh subagent) returned BLOCK; transcribed verbatim; second repair round applied | campaign-director | BC-23 |
 | 2026-10-05 | Next Pass 1 regression deferred until consent, EV sign-off, C1 ruling and ManyChat test land | campaign-director | Those S4/S3 items need role-holders; a run before then can only return BLOCK. Required before STORYBOARD APPROVED; not skipped |
 | 2026-10-05 | Verdicts filmed live (no restaged tasting); keyword NERDNOTES on both routes; single DM message | OPERATOR | Pass 1-R findings |
+| 2026-10-05 | Owner asked for AI-generated people as Nerds/guests judging the food; **declined** for the posted ad | OPERATOR | FTC Consumer Reviews and Testimonials Rule (no reviews from people who don't exist, AI included; insider reviews must be disclosed); TripNerd Growth Plan p.6 (AI never creates a person, voice or testimonial); "The Parking Lot" precedent; people eating is the worst AI-video failure mode. Also: the five foods are Augusta National concessions, not TripNerd's suite menu |
+| 2026-10-05 | Format changed to a two-judge table with real staff ("Nerd Tribunal"); average of two scores sets the rank | Owner (APPROVER-level choice of format; gates still open) | Owner's idea; adds disagreement → comments. Same shoot effort plus a second person and props |
 
 <a id="approval-packet"></a>
 ## Approval packet
