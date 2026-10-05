@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: draft
 created: 2026-10-03
-updated: 2026-10-04
+updated: 2026-10-05
 tags: [client, instagram, tracker]
 ---
 
@@ -21,7 +21,8 @@ in each log.
 | Deal status | **OCTOBER TEST MONTH AGREED VERBALLY, $1,500** (meeting notes, 2026-10-04). The 90-day package ($4,000/mo) is on hold until the review. Plan: [`2026-10-test-month-plan.md`](2026-10-test-month-plan.md); deck https://claude.ai/artifact/9654ychr2HFWzMMSmkBHNJ. Nothing in writing yet |
 | Test month | **1–31 Oct 2026** (followers measured from Insights). Review in the first week of November. If partner access slips past Wed 7 Oct, propose four weeks from the first post instead |
 | TripNerd CEO | **Jason** (Karl, 2026-10-04). The growth plan is presented to him; the presented deck is https://claude.ai/artifact/PniaqVR1qdWmxnjGgur3Bx |
-| TripNerd approver | **NEEDS INPUT**: asked on the deck, slide 13 |
+| TripNerd approver | **NEEDS INPUT**: ask on the setup call ([`ops/week-one-setup-checklist.md`](ops/week-one-setup-checklist.md)). Nothing posts without their yes; yes on Wed 7 / Thu 8 posts needed by Tue 6 EOD |
+| TripNerd logo | **Decided (Karl, APPROVER, 2026-10-05):** the September transparent PNG, 1633×601, sha256 `1c4996e5dc60000c10ac31b3b1e31bc5d9d0aa95fbe0d05209163f9b1b0caa51`; TripNerd to confirm. File currently in the session scratchpad only, so it **needs a durable home** (Karl: commit to `clients/tripnerd/brand-assets/` or Drive) |
 | TripNerd inbox owner (DMs) | **NEEDS INPUT** |
 | On-camera Nerd | **NEEDS INPUT** |
 | Footage folder (Drive) | **NEEDS INPUT** |
@@ -46,27 +47,28 @@ in each log.
 
 | Post | Open item | Owner |
 |---|---|---|
-| 03 Two ways to see the 17th (now Wed) | Originals are on Taylor's phone (TripNerd). We only have 720p copies of V23/V24 in Higgsfield and a ~404×720 copy that is probably V16; V08 is missing. **Ask Taylor to AirDrop or Drive-share V16, V23, V24 and V08 originals by Tue noon.** Keep the big screen and named pro cropped. | Karl / TripNerd (Taylor) |
-| 01 Augusta, by the clock (Mon 5 Oct 2:00 PM) | **Stopped as a Reel (2026-10-04).** v1–v5 all failed the critic floor (best 7.7 against 8.0); the Skeptic was CONDITIONAL on v4/v5. No golf in frame, so a weak topic signal. **Recommended:** re-use the photos as the carousel "Augusta week, hour by hour", once TripNerd confirms the venue city. First Reel → "The 17th" (row above). See [`algorithm-niche-strategy.md`](algorithm-niche-strategy.md). **Awaiting Karl** | Karl |
+| **R01 Two ways to see the 17th = owed September video, Wed 7 Oct 12 PM** | Storyboard approved (Bible §16, 2026-10-05). **Waiting on Karl's clip upload** (Taylor's originals preferred; the 720p copies need Karl's written override). Then: build, machine QC, dual gate, Karl's phone watch (BC-25). BC-26/27 speech checks blocked until the whisper model hosts are allowed (403 at 2026-10-05). BC-19 needs Karl's bio-link screenshot | Karl / TripNerd (Taylor) / Claude |
+| **C02 What corporate hosts get wrong = new static 1, Thu 8 Oct 12:30 PM** | Text-led 7-card carousel in build (machine QC), then dual gate. Records: [`../2026-10-05-hosts-carousel/`](../2026-10-05-hosts-carousel/). BC-19 needs Karl's bio-link screenshot (else the tripnerd.com CTA is cut) | Claude / Karl |
+| 01 Augusta, by the clock | **Stopped as a Reel (2026-10-04); Karl's 2026-10-05 plan confirms it.** v1–v5 all failed the critic floor (best 7.7 against 8.0); the Skeptic was CONDITIONAL on v4/v5. No golf in frame, so a weak topic signal. **Recommended:** re-use the photos as the carousel "Augusta week, hour by hour", once TripNerd confirms the venue city. First Reel → "The 17th" (row above). See [`algorithm-niche-strategy.md`](algorithm-niche-strategy.md). **Awaiting Karl** | Karl |
 | Mon 5 Oct Story 1 (poll) | **Blocked on client inputs.** v2 (blocked), v3 (blocked) and v4 (critic HARD FAIL 7.4) all fail on the venue, consent, the Masters implication and the logo. Log: `stories/gate-log.md`. Re-gate once TripNerd replies | Karl / TripNerd |
 | Written confirmation + October invoice | Test month agreed verbally. **Don't start work on TripNerd's account before the $1,500 October invoice is sent** and the approver is named | Karl |
 | Supermetrics after 18 Oct | The free trial ends 18 Oct; a paid plan is a ServicePOW cost (price not checked). Decide by 16 Oct, or fall back to a weekly Insights export | Karl |
 | September statics and VIP Hosting Spot | The Augusta carousel needs re-reading against the Story gate's S4/S3 findings before it posts; VIP Hosting Spot is 16:9 (needs a vertical recut; AI label if it shows generated people) | Karl |
 | Confirmations from TripNerd (on the call, deck slide 13) | The venue's name and town; whether it was off the grounds, with the venue's OK to use its photos; guest and staff consent; TripNerd hosting; whether TripNerd sells that week. Files the BC-16/BC-20 records | Karl / Jason |
-| ASR check on the music (BC-26/27) | Whisper's model hosts are blocked here. Allow them in the environment network settings, or run the two commands in `qc/2026-10-04-v5-evidence-and-rights.md` | Karl |
+| ASR (BC-26/27) for any video | whisper is installed (2026-10-05) but its model download still returns 403. Karl is allowing `huggingface.co` and `openaipublic.azureedge.net` (may need a new session); fallback is Karl running the two `servicepow_source_qc.py` commands on his machine | Karl |
 | 04 Communication proof | Needs a real review (with permission to quote) and the actual guest briefing | TripNerd |
 | 07 How a TripNerd trip works | Needs the on-camera Nerd filmed | TripNerd |
 | 08 First-time guest | Needs a real guest's own words and written consent; no synthetic stand-in (FTC Fake Reviews Rule) | TripNerd |
 
 ## Content log
 
-> **October:** the post plan is now [`2026-10-test-month-plan.md`](2026-10-test-month-plan.md) §3 (7 videos and 6 statics). The rows below are the original launch queue, kept for the ideas; log October posts here as they go out.
+> **October:** the post plan is the PDF calendar with the 2026-10-05 swaps ([`2026-10-test-month-plan.md`](2026-10-test-month-plan.md) §3): 11 posts, 5 videos and 6 statics. Wed 7 = R01 Two ways (owed video); Thu 8 = C02 hosts carousel; Mon 12 = new Reel 1; Tue 13 = owed VIP carousel if photos arrive by Fri 9. The rows below are the original launch queue, kept for the ideas; log October posts here as they go out.
 
 | # | Day | Date | Format | Post | Status | Link | 7-day views | Non-follower % | Saves + sends | Follows |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 01 | 1 | Mon 5 Oct 2:00 PM | Reel | Augusta, by the clock ([edit plan](../2026-10-04-launch-reels/edit-plan-03-augusta-by-the-clock.md)) | drafted (v1) | | | | | |
-| 02 | | | Carousel | What corporate hosts get wrong | idea | | | | | |
-| 03 | 3 | Wed 7 Oct 12:00 PM | Reel | Two ways to see the 17th ([edit plan](../2026-10-04-launch-reels/edit-plan-01-two-ways-17th.md)) | blocked (originals) | | | | | |
+| 01 | | — | Reel | Augusta, by the clock ([edit plan](../2026-10-04-launch-reels/edit-plan-03-augusta-by-the-clock.md)) | stopped (v5, 2026-10-04) | | | | | |
+| 02 | | Thu 8 Oct 12:30 PM | Carousel | What corporate hosts get wrong (C02) | in production | | | | | |
+| 03 | | Wed 7 Oct 12:00 PM | Reel | Two ways to see the 17th, owed Sept video ([edit plan](../2026-10-04-launch-reels/edit-plan-01-two-ways-17th.md)) | planned (awaiting clips) | | | | | |
 | 04 | | | Proof | Communication proof | idea | | | | | |
 | 05 | | | Reel | What guests see vs. what we handle | idea | | | | | |
 | 06 | | | Carousel | Don't plan a golf major like a vacation | idea | | | | | |
@@ -96,6 +98,7 @@ Status values: `idea → planned → drafted → in edit → sent for approval �
 
 | Date | Decision | By |
 |---|---|---|
+| 2026-10-05 | Readiness plan approved: static = C02 text-led carousel (Thu 8); video = Two ways as the owed September video (Wed 7), Reel 1 moves to Mon 12; September logo accepted by APPROVER decision; Karl allows the ASR hosts. Ops pack written (`ops/`) | Karl (APPROVER) |
 | 2026-10-04 | PDF for Jason is now 2 pages: page 1 has the price and a dated posting calendar; page 2 has the follower-growth levers and **the boost-budget question** (suggest $250–500 from week 3, best organic Reel only, TripNerd's sign-off, reported separately) | Karl (instruction); Claude (content) |
 | 2026-10-04 | Pricing to Jason: 4 Reels at a $300 October rate + 4 statics at $75 = $1,500, plus the 3 owed September adverts (1 video, 2 statics) posted in October at no charge. One-page PDF in `deliverables/2026-10-october-pricing/` | Karl (instruction); Claude (layout) |
 | 2026-10-04 | **October = $1,500 intro test month; the bigger package waits on results. Already-paid content gets posted without being charged again** | TripNerd + Wyatt Johnson (meeting) |
