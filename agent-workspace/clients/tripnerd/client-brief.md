@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-10-05
 tags: [client, brief]
 source: Drive "ServicePow OS 2" — 04, 05, 37_EMAIL_MARKETING_OFFERING.md (synced 2026-08-25)
 ---
@@ -16,6 +16,16 @@ source: Drive "ServicePow OS 2" — 04, 05, 37_EMAIL_MARKETING_OFFERING.md (sync
 hospitality (Super Bowl, Augusta, field-level access). Buyers decide roughly **a year
 out**; a company buying corporate hospitality for eight clients is a distinct, higher-
 ticket B2B track. Confidence: VERIFIED.
+
+## Instagram — current main focus (owner decision, 2026-10-05)
+
+**Brand awareness and engagement come first for the 90-day plan (5 Oct 2026 – 2 Jan
+2027):** make @tripnerd a page people find, enjoy, follow and interact with. Primary
+metrics: views from non-followers, watch time/completion, sends, saves, follows per reach,
+comments. Enquiries and bookings stay the business outcome. Borrow popular formats (food
+reviews, rankings, price breakdowns, POV) but keep the subject inside TripNerd's world.
+Full system, rules and Grok prompts: [`instagram-content-system.md`](instagram-content-system.md).
+TripNerd's approver still needs to be told the primary KPI changed.
 
 ## Brand
 White wordmark, nerd-head mark, brand blue. **Brand standards win outright** over any

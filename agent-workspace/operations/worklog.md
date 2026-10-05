@@ -1444,3 +1444,20 @@ republished with audit, rationale and DM reply scripts.
 handling; consent for the 4 guests in mon-1's photo; approver sign-off; partner access.
 **Learned:** the Instagram web_profile endpoint fails for this account; `api/v1/feed/user/<username>/username/`
 works from the sandbox but rate-limits after ~1 page.
+
+## 2026-10-05 — TripNerd: Instagram main focus set to awareness/engagement; Grok prompt pack
+
+**Decided (owner):** TripNerd Instagram's main focus for the 90 days is brand awareness and
+engagement (non-follower views, watch time, sends, saves, follows, comments); leads second.
+Recorded in `clients/tripnerd/client-brief.md` and `clients/tripnerd/instagram-content-system.md`.
+
+**Did:** wrote the content system: format-borrowing table (food review → $1.50 Augusta menu
+made at home, rating spreads, price breakdowns, guess-the-sound, POV, day-in-the-life), rules,
+what Grok can/can't do, and a Grok prompt pack (project instructions + 5 task prompts).
+
+**Declined:** the AI-person food review at "the TripNerd suite" — a synthetic reviewer is a fake
+testimonial (FTC Fake Reviews Rule; TripNerd's plan p.6 bans AI people/voices/testimonials).
+Legal versions listed instead (real Nerd, at-home recreation, archive photos + real VO, creator).
+
+**Open:** tell TripNerd's approver the primary KPI changed (plan p.10 says "Likes never the
+goal"); connect Supermetrics Instagram insights once TripNerd grants access.
