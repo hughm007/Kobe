@@ -111,25 +111,28 @@ Source: [Instagram Insights export, file name / Supermetrics query], [date range
 | Measure | This week |
 |---|---|
 | Weekdays done (out of 5) | |
-| Comments answered on TripNerd's posts | |
-| DMs answered | |
-| Comments left on other accounts | |
+| Total minutes | |
+| Comments left on other accounts (by category) | |
+| DMs answered (enquiries handed to TripNerd) | |
 | Who did the outbound comments (us / TripNerd from our list) | |
-| Anything worth noting (a partner reply, a lead, a problem) | |
+| Notable (a partner reply, a lead, a problem) | |
+| Changing next week | |
 
-Source: [`ops/engagement-log.md`](ops/engagement-log.md), [date range].
+Source: [`ops/engagement-log.md`](ops/engagement-log.md) → Weekly summary, [date range]. Follows can't be credited to the comments alone; posts, Stories and any boost all feed them.
 
 ## 6. Follow-link clicks, per placement
 
-| Placement | Clicks this week | Clicks to date | Live since |
-|---|---|---|---|
-| Booking emails | | | |
-| Print / QR | | | |
-| Website | | | |
-| Email signatures | | | |
-| Past-guest email (one-time) | | | |
+| Placement | Link | Clicks this week | Clicks to date | Live since |
+|---|---|---|---|---|
+| Booking confirmation | `ig-booking` | | | |
+| Pre-trip email / itinerary | `ig-pretrip` | | | |
+| Printed (QR) | `ig-print` | | | |
+| Post-trip thank-you | `ig-posttrip` | | | |
+| Email signature | `ig-signature` | | | |
+| Website | `ig-website` | | | |
+| Past-guest email (one-time) | `ig-pastguest` | | | |
 
-Source: [link shortener dashboard, TripNerd's account], [date range]. Leave a row out until that placement is live.
+Source: [link shortener dashboard, TripNerd's account], [date range]. Link names from [`ops/follow-link-qr-pack.md`](ops/follow-link-qr-pack.md) §2. Leave a row out until that placement is live. Past-guest email: compare follows in the two days after it goes out with a normal day.
 
 ## 7. Guest loop
 

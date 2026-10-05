@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: draft
 created: 2026-10-03
-updated: 2026-10-04
+updated: 2026-10-05
 tags: [client, instagram, social, organic, operating-plan, 90-day]
 ---
 
@@ -23,6 +23,7 @@ Instagram work reads this file first, then [`tracker.md`](tracker.md), then the 
 | **Alternative (not chosen)** | Deck B, per-post pricing: https://claude.ai/artifact/Eoij3MkNGKXB2gHmGJEXsL |
 | **Decision history** | [`../../deliverables/2026-10-01-instagram-growth-plan.md`](../../deliverables/2026-10-01-instagram-growth-plan.md) |
 | **Roles** | OPERATOR, APPROVER and SPEND_APPROVER = Karl. CLIENT_APPROVER = TripNerd's named approver (**NEEDS INPUT**). |
+| **October ops** | [`ops/`](ops/README.md): week-one setup checklist, Stories runbook, boost brief and approval, daily engagement, guest loop, follow link and QR pack. Launch week: [`launch-week-2026-10-07.md`](launch-week-2026-10-07.md) |
 
 ## 1. The goal
 
@@ -111,11 +112,13 @@ All times are **US Eastern (ET)**.
 
 ## 4. The first ten posts (launch queue)
 
+> **Queue state 2026-10-05.** October posts follow the test-month plan §3 (the PDF calendar with the 2026-10-05 swaps); this queue is where the new Reels and statics are picked from. Runbooks: [`launch-week-2026-10-07.md`](launch-week-2026-10-07.md) and [`ops/`](ops/README.md).
+
 | # | Format | Post | Job | State |
 |---|---|---|---|---|
-| 01 | Reel | Augusta, by the clock: one Thursday told by the photos' real timestamps | Feel | **Rendered** (v1, 14 s); posts Mon 5 Oct 2:00 PM ET with in-app music |
-| 02 | Carousel | What corporate hosts get wrong | Teach | To make |
-| 03 | Reel | Two ways to see the 17th: the crowd path at THE PLAYERS, then TripNerd's rail | Feel | Needs full-res V16/V23/V24/V08 from Taylor's phone; only 720p (or worse) copies exist |
+| 01 | Reel | Augusta, by the clock: one Thursday told by the photos' real timestamps | Feel | **STOPPED as a Reel** (2026-10-04): five gate passes, best 7.7 against an 8.0 floor; no golf in frame. The photos may become a carousel once TripNerd confirms the venue city. Does not post |
+| 02 | Carousel | What corporate hosts get wrong | Teach | **C02: October new static 1, Thu 8 Oct 12:30 PM ET.** Text-led, 7 cards. To make; approver's yes by Tue 6 EOD |
+| 03 | Reel | Two ways to see the 17th: the crowd path at THE PLAYERS, then TripNerd's rail | Feel | **The owed September video** (Karl, 2026-10-05). **Wed 7 Oct 12:00 PM ET.** STORYBOARD APPROVED. Needs full-res V16/V23/V24/V08 from Taylor's phone (only 720p or worse copies exist); approver's yes by Tue 6 EOD |
 | 04 | Proof | Communication proof: a real review plus the actual guest briefing | Prove | To make (needs the real review and briefing) |
 | 05 | Reel | What guests see vs. what we handle | Prove | To make |
 | 06 | Carousel | Don't plan a golf major like a vacation | Teach | To make |
@@ -124,11 +127,11 @@ All times are **US Eastern (ET)**.
 | 09 | Reel | Who are you taking? (built to be sent) | Feel | To make |
 | 10 | Carousel | What "fully handled" really means | Teach | To make |
 
-- **01 and 03 are new Reels** built from TripNerd's camera roll; concepts, hooks and footage are in the [launch Reels Bible](../2026-10-04-launch-reels/campaign-bible.md).
-- **Not in the queue:** the September adverts, Their Camera Roll and VIP Hosting Spot (Karl, 2026-10-04). They are recognised on the proof slide only.
-- **First paid boost:** the best organic Reel by follows and sends, **only with TripNerd's approval and Karl's spend approval**.
+- **01 and 03 come from TripNerd's camera roll**; concepts, hooks and footage are in the [launch Reels Bible](../2026-10-04-launch-reels/campaign-bible.md). 01 is stopped; 03 is now the owed September video, not a new Reel.
+- **September adverts:** the 2026-10-04 "not in the queue" call was reversed by the meeting (already-paid work gets posted). The owed video is 03; the owed statics are the VIP Fan Experiences carousel (Tue 13 if TripNerd's photos arrive by Fri 9) and the Augusta carousel (Thu 22, after checks). Their Camera Roll and VIP Hosting Spot aren't on the October calendar (test-month plan §2).
+- **First paid boost:** the best organic Reel by follows and sends, **only with TripNerd's approval and Karl's spend approval**. October: from week 3, per [`ops/boost-brief-and-approval.md`](ops/boost-brief-and-approval.md).
 - **Hooks are drafts.**
-- **Before 01 and 03 post**, clear the open items in `tracker.md` → Blockers: originals located, guest consent, event marks.
+- **Before 03 posts**, clear its go/no-go list in [`launch-week-2026-10-07.md`](launch-week-2026-10-07.md) §2 and the open items in `tracker.md` → Blockers.
 
 ## 5. The 90 days
 

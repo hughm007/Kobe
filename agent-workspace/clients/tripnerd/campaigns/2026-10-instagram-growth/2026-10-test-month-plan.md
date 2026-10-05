@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: active
 created: 2026-10-04
-updated: 2026-10-04
+updated: 2026-10-05
 tags: [client, instagram, test-month, pricing, operating-plan]
 ---
 
@@ -41,18 +41,19 @@ tags: [client, instagram, test-month, pricing, operating-plan]
 
 ## 2. October scope
 
-**New for $1,500** (PROPOSAL; Karl confirms):
+**New for $1,500** (as priced in the PDF given to Jason; agreed verbally):
 
 | Item | Volume |
 |---|---|
 | Reels from TripNerd's footage | **4** (1–2 posted first as Trial Reels to non-followers) |
 | Statics (carousels or proof posts) | **4** |
-| Stories | Mon, Wed, Fri at 10 AM ET |
-| Monday report | Every Monday, with per-video analytics (Supermetrics, else an Insights export) |
+| Stories | Mon, Wed, Fri at 10 AM ET, plus each new post shared to Story within 15 min ([runbook](ops/stories-runbook.md)) |
+| Monday report | Every Monday, with per-video analytics (Supermetrics, else an Insights export). [Template](monday-report-template.md) |
+| Engagement | 20 min every weekday (§5c; [ops/](ops/README.md)) |
 
 **Why 4 + 4 and not 6 + 4:**
 - At the rate card ($325 a Reel, $75 a static, Deck B) this is **$1,600**, so $1,500 is 6% off. That's inside the 15% discount cap in `company/pricing-and-packaging.md`, so no override is needed.
-- With the 3 already-paid videos, October has **7 videos**. That is "8 toned down", as Wyatt offered.
+- With the 3 already-paid videos, October has **7 videos**. That is "8 toned down", as Wyatt offered. (The PDF calendar schedules 5 of them: the 4 new Reels and the owed video. See below.)
 - 6 new Reels would have meant 9 videos, more than the plan TripNerd just said was too much, at a price below the plan's. That gives away the $4,000 tier's value.
 - Footage is the bottleneck, and 4 Reels is what we can promise before TripNerd's archive arrives.
 
@@ -66,18 +67,18 @@ tags: [client, instagram, test-month, pricing, operating-plan]
 
 | Item | What it is | Before it posts |
 |---|---|---|
-| Their Camera Roll | 25 s, 9:16. Website photos plus short V23/V24 clips, no generation. Approved 29 Sep | Usage covers organic and paid (`posts/01-their-camera-roll.md`). Ready |
-| VIP Hosting Spot | **16:9**. Approved 27 Sep. Content INFERRED as "VIP ON 17 / Hospitality. Handled.", whose people "read as generated" | Needs a **vertical recut** (Karl: free, or post as is?). If it contains AI people, it needs the **AI label** and never runs as guest proof |
-| Third video (owed) | PROPOSAL: **"Two ways to see the 17th"** ([edit plan](../2026-10-04-launch-reels/edit-plan-01-two-ways-17th.md)) | Taylor's full-quality originals (V16, V23, V24, V08) |
-| VIP Fan Experiences carousel | September static | Confirm it hasn't been posted. Approver's yes on the date |
-| Augusta carousel | September static | The Story gate found S4/S3 risks on Augusta claims (`stories/gate-log.md`): venue and town, an on-grounds or Masters implication, consent. **Re-read the carousel against those before it posts**, even though TripNerd approved it in September |
+| Their Camera Roll | Delivered September video. 25 s, 9:16. Website photos plus short V23/V24 clips, no generation. Approved 29 Sep | Usage covers organic and paid (`posts/01-their-camera-roll.md`). **Not on the PDF calendar.** **NEEDS INPUT** (Karl): does it post in October, and when? |
+| VIP Hosting Spot | Delivered September video. **16:9**. Approved 27 Sep. Content INFERRED as "VIP ON 17 / Hospitality. Handled.", whose people "read as generated" | **Not on the PDF calendar.** Needs a **vertical recut** (Karl: free, or post as is?). If it contains AI people, it needs the **AI label** and never runs as guest proof |
+| **Owed video** | **"Two ways to see the 17th"** (Karl, 2026-10-05: this is the owed September video). STORYBOARD APPROVED ([edit plan](../2026-10-04-launch-reels/edit-plan-01-two-ways-17th.md); Bible decision log) | **Posts Wed 7 Oct, 12 PM.** Needs Taylor's full-quality originals (V16, V23, V24, V08), our gate, and the approver's yes by Tue 6 EOD ([runbook](launch-week-2026-10-07.md)) |
+| **Owed static 1:** VIP Fan Experiences carousel | September static. **An unfinished draft that needs TripNerd's photos** (Karl, 2026-10-05) | **Tue 13 Oct, 1 PM** if the photos arrive by Fri 9; otherwise new static 2 takes Tue 13 and this moves later. Confirm it hasn't been posted. Approver's yes |
+| **Owed static 2:** Augusta carousel | September static | **Thu 22 Oct, 12:30 PM, after checks.** The Story gate found S4/S3 risks on Augusta claims (`stories/gate-log.md`): venue and town, an on-grounds or Masters implication, consent. **TripNerd's written confirmation is needed on all three, and the carousel is re-read against them before it posts**, even though TripNerd approved it in September |
 
-**October total:** 7 videos and 6 statics, about 13 feed posts, 3–4 a week, more than half video. Today the account runs 3.2 posts a week, mostly static (FACT, 11 Sep audit).
+**October total (the PDF calendar):** **11 posts**, 5 videos (4 new Reels and the owed video) and 6 statics (4 new and 2 owed), about 3 a week. The 2 delivered September videos aren't on it (see the rows above). Today the account runs 3.2 posts a week, mostly static (FACT, 11 Sep audit).
 
 **Not in October at $1,500:**
-- first-line DMs (TripNerd answers its own DMs; we count enquiries);
+- first-line DMs (TripNerd answers its own DMs; we count enquiries). **Changed by the PDF:** the daily 20 minutes includes replying to comments and DMs; who does it is agreed on the setup call (§5c, [`ops/week-one-setup-checklist.md`](ops/week-one-setup-checklist.md));
 - Stories 5 days a week;
-- creators and paid boosts;
+- creators; paid boosts except as asked in §5b (TripNerd's budget, on top of the fee);
 - ManyChat;
 - the profile rebuild beyond a bio and link check.
 
@@ -85,28 +86,45 @@ All of these return with the higher tiers.
 
 ## 3. October calendar (ET)
 
-> **The client-facing schedule is the one in the PDF given to Jason** (`../../deliverables/2026-10-october-pricing/`, page 1). It shows 11 posts: the 4 new Reels, 4 new statics and 3 owed September adverts. The 2 delivered videos aren't in it.
-> - **Week 1:** Wed 7 12 PM Reel 1 · Thu 8 12:30 PM owed static 1
-> - **Week 2:** Mon 12 2 PM owed video · Tue 13 1 PM static 1 · Fri 16 11 AM Reel 2 as a Trial Reel
-> - **Week 3:** Tue 20 1 PM static 2 · Wed 21 12 PM Reel 3 · Thu 22 12:30 PM owed static 2
-> - **Week 4:** Mon 26 2 PM Reel 4 · Tue 27 1 PM static 3 · Thu 29 12:30 PM static 4
->
-> Stories go up at 10 AM Mon/Wed/Fri, plus a Story share within 15 minutes of each post. **Where the table below differs, the PDF wins.**
+> **The calendar is the PDF calendar with tonight's swaps** (Karl, 2026-10-05). The PDF given to Jason is `../../deliverables/2026-10-october-pricing/`, page 1.
+> - **Two swaps:** the owed video takes Wed 7 and new Reel 1 moves to Mon 12; new static 1 takes Thu 8 and the owed VIP carousel moves to Tue 13 (if its photos arrive).
+> - **Every other slot is unchanged, and the total stays at 11 posts.**
+> - **Jason hasn't been told yet.** Draft note: [`ops/2026-10-05-schedule-change-note.md`](ops/2026-10-05-schedule-change-note.md) (NOT SENT).
 
-Times are the presented plan's: Reels Mon 2 PM and Wed 12 PM, statics Tue 1 PM and Thu 12:30 PM, Trial Reels Fri 11 AM, Stories 10 AM. They get re-tuned from Insights after week one. Every post needs the approver's yes first.
+Times are the presented plan's: Reels Mon 2 PM and Wed 12 PM, statics Tue 1 PM and Thu 12:30 PM, Trial Reels Fri 11 AM, Stories 10 AM. They get re-tuned from Insights after week one. **Every post needs the named approver's yes first** (no approver is named yet).
 
-| Week | Dates | Feed posts (PROPOSAL; order moves with what's ready) | Setup and actions |
+| Date (ET) | PDF slot | Now posts | Needs before it posts |
 |---|---|---|---|
-| 1 | 5–11 Oct | Wed 7: **Their Camera Roll** · Thu 8: **VIP Fan Experiences** carousel | **Mon 5:** invoice $1,500, partner access (playbook), approver named, footage Drive folder opened, Taylor's originals requested. **When access lands:** Insights baseline (followers, September's net follows, median Reel views, non-follower share); Supermetrics Instagram Insights login; bio and link check. Stories from the first post |
-| 2 | 12–18 Oct | Mon 12: **Two ways to see the 17th** (owed) · Tue 13: new static 1 · Wed 14: new Reel 1 · Thu 15: **Augusta** carousel (after checks) · Fri 16: Trial Reel (hook variant of Reel 1, or Reel 2) | First Monday report (12 Oct, setup and baseline). **Supermetrics trial ends 18 Oct: Karl decides by 16 Oct** |
-| 3 | 19–25 Oct | Mon 19: **VIP Hosting Spot** (vertical cut) · Tue 20: new static 2 · Wed 21: new Reel 2 · Thu 22: new static 3 · Fri 23: new Reel 3 as a Trial Reel | Monday report. Footage-led Reel picks for week 4 |
-| 4 | 26 Oct–1 Nov | Mon 26: new Reel 4 · Tue 27: new static 4 | Monday report. Draft the October review |
-| Review | 2–6 Nov | none | **Review call in the first week of November.** Followers 1–31 Oct from Insights. TripNerd picks the November tier. Invoice November per tier |
+| Mon 5 Oct | Setup: partner access, starting numbers | Setup call with Jason | [`ops/week-one-setup-checklist.md`](ops/week-one-setup-checklist.md) |
+| Tue 6 Oct | Setup: first posts approved | Approver's yes on Wed 7 and Thu 8, **by end of day** | [`launch-week-2026-10-07.md`](launch-week-2026-10-07.md) |
+| **Wed 7 Oct, 12:00 PM** | Reel 1 | **CHANGED:** the **owed September video, "Two ways to see the 17th"** | Taylor's originals, the cut, our gate, the approver's yes |
+| **Thu 8 Oct, 12:30 PM** | Owed static advert 1 | **CHANGED:** **new static 1**, carousel C02 "What corporate hosts get wrong" (text-led, 7 cards) | To make; static QA and claims check; the approver's yes |
+| **Mon 12 Oct, 2:00 PM** | Owed video advert | **CHANGED:** **new Reel 1** | Picked from the footage (below) |
+| **Tue 13 Oct, 1:00 PM** | Static 1: carousel | **CHANGED:** the **owed VIP Fan Experiences carousel** if TripNerd's photos arrive by **Fri 9**; otherwise **new static 2** (06 or 10 below), and the owed carousel moves to a later static slot (Karl picks which) | The photos; finishing the draft |
+| Fri 16 Oct, 11:00 AM | Reel 2, as a Trial Reel | Unchanged | Posted from TripNerd's phone (Business Suite can't schedule Trial Reels) |
+| Tue 20 Oct, 1:00 PM | Static 2: proof post | Unchanged (if Tue 13 took new static 2, Karl re-picks this slot) | A proof post needs a real review or guest words with consent (04, 08) |
+| Wed 21 Oct, 12:00 PM | Reel 3 | Unchanged | |
+| Thu 22 Oct, 12:30 PM | Owed static advert 2 | Unchanged: the **owed Augusta carousel**, after checks | TripNerd's written confirmation of the venue and town, consent, and the Masters implication; then a re-read |
+| Mon 26 Oct, 2:00 PM | Reel 4 | Unchanged | |
+| Tue 27 Oct, 1:00 PM | Static 3: carousel | Unchanged | |
+| Thu 29 Oct, 12:30 PM | Static 4: proof post | Unchanged | As Tue 20 |
+
+**Stories:** 10 AM Mon/Wed/Fri, plus each new post shared to Story within 15 minutes ([`ops/stories-runbook.md`](ops/stories-runbook.md)). Optional, approver permitting: a Trial Reel variant of "Two ways" on Fri 9, 11 AM (not one of the 11 posts).
+
+**Setup and standing actions:**
+
+| Week | Actions |
+|---|---|
+| 1 (5–11 Oct) | **Mon 5:** invoice $1,500, partner access (playbook), approver named, footage Drive folder opened, Taylor's originals requested. **When access lands:** Insights baseline (followers, September's net follows, median Reel views, non-follower share); Supermetrics Instagram Insights login; bio and link check. Stories from the first post |
+| 2 (12–18 Oct) | First Monday report (12 Oct, setup and baseline). **Supermetrics trial ends 18 Oct: Karl decides by 16 Oct** |
+| 3 (19–25 Oct) | Monday report. Footage-led Reel picks for week 4. Earliest week for a boost, only per [`ops/boost-brief-and-approval.md`](ops/boost-brief-and-approval.md) |
+| 4 (26 Oct–1 Nov) | Monday report. Draft the October review |
+| Review (2–6 Nov) | **Review call in the first week of November.** Followers 1–31 Oct from Insights (organic). TripNerd picks the November tier. Invoice November per tier |
 
 **Which new Reels and statics:**
 - They are picked from the launch queue (README §4) and `algorithm-niche-strategy.md`: one big topic in frame 1, golf-fan moments first.
 - **Reels that need no new client input:** 05 What guests see vs. what we handle; 09 Who are you taking?
-- **Statics:** 02 What corporate hosts get wrong; 06 Don't plan a golf major like a vacation; 10 What "fully handled" really means.
+- **Statics:** 02 What corporate hosts get wrong (**now new static 1, Thu 8**, as C02); 06 Don't plan a golf major like a vacation; 10 What "fully handled" really means.
 - 04 and 08 need a real review or real guest words with consent. 07 needs the on-camera Nerd. Use them only if TripNerd supplies those.
 - **The footage TripNerd sends decides the final four Reels.**
 

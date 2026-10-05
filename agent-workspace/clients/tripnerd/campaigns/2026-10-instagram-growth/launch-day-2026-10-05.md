@@ -3,13 +3,15 @@ title: "TripNerd — launch day runbook, Mon 5 Oct 2026 (Day 1)"
 type: playbook
 client: tripnerd
 owner: Karl
-status: draft
+status: superseded
 created: 2026-10-04
-updated: 2026-10-04
+updated: 2026-10-05
 tags: [client, instagram, launch, runbook]
 ---
 
 # Launch day: Monday 5 October 2026
+
+> **SUPERSEDED 2026-10-05 by [`launch-week-2026-10-07.md`](launch-week-2026-10-07.md).** Mon 5 Oct is a setup day; the first posts are Wed 7 ("Two ways to see the 17th") and Thu 8 (carousel C02). Kept for the record.
 
 > **STATUS (Sun 4 Oct, late): recommendation is that Monday is an onboarding day. Nothing posts until TripNerd replies.**
 > - **Reel:** the Augusta stills Reel is stopped (Bible §13–14). The first Reel is "The 17th", from Taylor's originals.

@@ -45,7 +45,8 @@ Nothing posts on silence. Each line must be true by **Tue 6 Oct, end of day**:
 - [ ] **Partner access works** (the access test in [`../../../../playbooks/client-lifecycle/meta-partner-access.md`](../../../../playbooks/client-lifecycle/meta-partner-access.md) passed).
   - The test-month plan says nothing posts until partner access and a named approver are in place.
   - If access isn't working by Tue 6, the only way to make Wed 7 is TripNerd's poster posting from the app with our files. **Karl decides** whether that's allowed.
-- [ ] **Wed only:** Taylor's originals received at full quality, and TripNerd's one-line consent email on file (17th-hole clips, guests from behind; the suite with THE PLAYERS signage). See the setup checklist.
+- [ ] **Wed only:** Taylor's originals received at full quality.
+- [ ] **Wed only:** TripNerd's one-line consent email on file (17th-hole clips, guests from behind; the suite with THE PLAYERS signage). Karl's library clearance (2026-10-04) covers this internally; the email puts TripNerd's own yes on record. **Karl decides** whether a missing email holds the post. See the setup checklist, item 15.
 - [ ] **Thu only, if any card carries the logo:** it's the September transparent PNG (1633×601, sha256 `1c4996e5dc60000c10ac31b3b1e31bc5d9d0aa95fbe0d05209163f9b1b0caa51`), used under Karl's APPROVER decision while TripNerd confirms it. Never a redraw.
 
 ## 3. Pre-post checklist
@@ -84,7 +85,7 @@ Who: Karl (OPERATOR), through partner access. Only after the approver's yes.
 | **Within 15 min** | **Share to Story** ([stories runbook](ops/stories-runbook.md)). A plain share; sticker text only from the pre-approved list | TripNerd's poster, from the app. Whether a post can be shared to Story from Business Suite is UNVERIFIED; test it with partner access |
 | **First hour** | **Reply to every comment** in TripNerd's voice. Answer trip questions only with what TripNerd has confirmed; otherwise "DM us and a Nerd will help." Flag anything awkward to Karl before replying | As agreed on the setup call. Our recommendation: ServicePOW, through the Business Suite Inbox |
 | Same day | DMs answered; enquiries counted | TripNerd's DM owner (**NEEDS INPUT**: not named) |
-| **+24 h** (Thu 8 12 PM; Fri 9 12:30 PM) | Log in [`tracker.md`](tracker.md) → Content log (the columns are there): **Reel:** views, reach, non-follower %, average watch time, sends, saves, follows. **Carousel:** reach, saves, sends, follows. Set the status to `posted` and add the link | Karl / Claude, from Instagram Insights |
+| **+24 h** (Thu 8 12 PM; Fri 9 12:30 PM) | Log in [`tracker.md`](tracker.md) → Content log, in its existing columns (views, non-follower %, saves + sends, follows), and set the status to `posted` with the link. Take down at the same time, for the Monday report: **Reel:** reach, average watch time, and sends and saves separately. **Carousel:** reach, saves, sends. The tracker has no reach or watch-time columns as of 2026-10-05 | Karl / Claude, from Instagram Insights |
 
 ## 6. Fri 9 Oct: Trial Reel alternate (only if the approver agrees)
 

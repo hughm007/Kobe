@@ -5,13 +5,16 @@ client: tripnerd
 owner: Karl
 status: draft
 created: 2026-10-03
-updated: 2026-10-04
+updated: 2026-10-05
 tags: [client, instagram, calendar, 90-day]
 ---
 
 # 13-week calendar
 
-> **2026-10-04: October follows the test-month plan instead** ([`2026-10-test-month-plan.md`](2026-10-test-month-plan.md) §3). Weeks 1–4 below are superseded. Weeks 5+ apply only if TripNerd picks the $4,000 tier at the review.
+> **October follows the test-month plan, not this calendar** ([`2026-10-test-month-plan.md`](2026-10-test-month-plan.md) §3: the PDF calendar given to Jason, with the 2026-10-05 swaps).
+> - **Swaps (Karl, 2026-10-05):** Wed 7 Oct 12 PM is the owed September video "Two ways to see the 17th"; Thu 8 Oct 12:30 PM is new static 1, carousel C02 "What corporate hosts get wrong"; new Reel 1 moves to Mon 12 Oct 2 PM; Tue 13 Oct 1 PM is the owed VIP Fan Experiences carousel if TripNerd's photos arrive by Fri 9 (otherwise new static 2). Everything else as the PDF; 11 posts.
+> - Launch week runbook: [`launch-week-2026-10-07.md`](launch-week-2026-10-07.md). October ops: [`ops/`](ops/README.md).
+> - **Weeks 1–4 below are superseded** (including the Mon 5 Augusta Reel, which was stopped). Weeks 5+ apply only if TripNerd picks the $4,000 tier at the review.
 
 **Day 1 = Mon 5 Oct 2026** (Karl: posting starts 5 Oct). **Times are ET** (see README §3). If the start moves, keep the Day numbers and shift every date. Work from the Day column, not the date.
 
