@@ -1819,4 +1819,6 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - Added a slim Bible; v1 marked superseded.
 - The isolated Skeptic Pass 1 on the script is running.
 - The Group Chat Reel stays parked at storyboard v3.
+- **Update:** the isolated Skeptic BLOCKED Door to roar script v2 (photoreal generated venue, seat and drink frames read as documentary proof of unrecorded offers; the stills and the 17th video come from different venues and days; too much AI for the client's 'bridge short gaps' rule). Karl chose all real. Script v3 (`script-v3-all-real.md`) is a V23 + V24 cut list: one suite, one walk, EV-003/EV-006 on matching footage, no AI. It waits on Taylor's originals. Recommend posting it ≥2 weeks after Two ways (shared roar).
+- **Open flag for The Group Chat:** its F7/F8 stills (Augusta-week table and food) also come from a different venue than its 17th payoff. Swap them for V23 buffet frames when the originals arrive.
 

@@ -12,7 +12,7 @@ tags: [campaign, bible, slim, reel, higgsfield, arrival]
 
 # TripNerd: "Door to roar" Reel (SLIM Bible)
 
-> **Status: SCRIPT v2 BLOCKED at Skeptic Pass 1 (2026-10-05). Do not generate HF-1 to HF-7 until a repaired script passes.** Was: SCRIPT v2 WRITTEN ([`script-v2-higgsfield.md`](script-v2-higgsfield.md)).
+> **Status: SCRIPT v3 (all real, V23 + V24) is current: [`script-v3-all-real.md`](script-v3-all-real.md). Waits on Taylor's originals; then Pass 2/3 on the real cut.** v2 (generated frames) was BLOCKED at Skeptic Pass 1 and is superseded; HF-1 to HF-7 are not to be generated. Was: SCRIPT v2 WRITTEN ([`script-v2-higgsfield.md`](script-v2-higgsfield.md)).
 > - Isolated Skeptic Pass 1 on the script is in progress (§14).
 > - Karl builds the 7 generated frames himself in Higgsfield. **Karl is the SPEND_APPROVER, so his own generation is his spend decision.**
 > - Not gated. Not approved by TripNerd. Nothing posts.
@@ -76,5 +76,6 @@ evaluators' output withheld.
 |---|---|---|
 | 2026-10-05 | v1 (Grok-generated people and an AI "best trip ever" end line) advised against; v1 written as a real-footage script | Claude (director) |
 | 2026-10-05 | Karl: refine **his** arrival-to-roar idea; he builds the frames in Higgsfield; **no AI people** | Karl (APPROVER) |
+| 2026-10-05 | Karl: rebuild all real from V23 + V24 (no generated frames). Script v3 written: EV-003 (fallback wording) on V23's buffet-to-rail walk, EV-006 on V24 guests at the rail; beat 8 only with releases; avoids R01's windows except the roar; recommend posting ≥2 weeks after R01 | Karl (APPROVER) / Claude (director) |
 | 2026-10-05 | Skeptic Pass 1 on script v2: BLOCK. Photoreal generated venue, seat and drink frames read as documentary proof of unrecorded offers. The stills and the 17th-hole video come from different venues and days but read as one day. Generated share and placement go beyond the client's 'bridge short gaps' rule. Spend on HF frames stopped; path decision goes to Karl | Claude (director) |
 | 2026-10-05 | HF-5 drinks are non-alcoholic iced drinks (no alcohol-ad exposure on any future boost; no claim that drinks are included). Beat 2 uses a 1536-wide raw strip so the pan needs no zoom | Claude (director) |
