@@ -3,9 +3,9 @@ title: "TripNerd — Launch Reels from the camera roll"
 type: campaign-bible
 client: tripnerd
 campaign_id: 2026-10-04-launch-reels
-status: IN QC (Augusta v5)
+status: IN PRODUCTION (Reel 01 "Two ways"; Augusta stopped)
 created: 2026-10-04
-updated: 2026-10-04
+updated: 2026-10-05
 tags: [campaign, bible, instagram, reels, organic]
 ---
 
@@ -575,3 +575,14 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 | 2026-10-04 | v4 dual gate: critic HARD FAIL (procedural; creative 7.7, under the 8.0 floor), Skeptic **CONDITIONAL** (5 × S2, 6 × S1, no S3/S4). Repair, not an APPROVER acceptance: both reports agree on the clock-over-bar reading, visible retouching, the Polo pony and the brand read | campaign-director |
 | 2026-10-04 | **v5 repair** (see §13 v5): 4 shots, 7.83 s. Opens on 9:03 with brand, place and clock; closes on the 5:48 group. Bar and dessert removed; the clock runs over the pines; heals and clones replace blurs; the mix is rebalanced. Caption: "One Thursday in Augusta, hosted by TripNerd, by the clock. Who would you bring? Follow along for more days like this." Fresh dual gate dispatched | campaign-director |
 | 2026-10-04 | v5 dual gate: critic HARD FAIL (7.3; procedural BC-16/19/20/26/27/28), Skeptic **CONDITIONAL** (6 × S2, incl. the "Augusta, Georgia" location claim). **Augusta Reel stopped as a Reel:** five passes, best 7.7, hook capped at 6; no golf in frame, so a weak topic signal (see [`algorithm-niche-strategy.md`](../2026-10-instagram-growth/algorithm-niche-strategy.md)). **Recommendation to the APPROVER:** Monday Story only; first Reel "The 17th" (golf-fan moment) on Taylor's originals; the Augusta photos become a carousel once the venue city is confirmed. **Awaiting Karl** | campaign-director |
+| 2026-10-05 | **Karl's decisions for the October test month (plan approved 2026-10-05):**
+- **"Two ways to see the 17th" (Reel 01) is the owed September video advert.** It posts Wed 7 Oct, 12 PM ET, swapping with the PDF's "Reel 1", which moves to Mon 12 Oct, 2 PM. Monthly totals are unchanged.
+- **STORYBOARD APPROVED for Reel 01**, on edit plan 01, with two fixes before gating:
+  - S5 extends to ≥ 1.4 s (V24 14.9–16.4), meeting the plan's own 1.3 s text floor.
+  - S3 (the hush) is declared a calm beat for the motion gate.
+- **Framing for Reel 01:**
+  - The V23 banner is cropped to the TRIPNERD half.
+  - Guests are shown from behind only.
+  - The leaderboard and the named pro stay out of frame.
+  - Real sound only, no music.
+- **Logo:** the transparent TripNerd PNG (1633×601, sha256 `1c4996e5dc60000c10ac31b3b1e31bc5d9d0aa95fbe0d05209163f9b1b0caa51`, from the September client-approved work) is accepted as the brand file for October pieces. TripNerd is asked to confirm. | Karl (APPROVER) |
