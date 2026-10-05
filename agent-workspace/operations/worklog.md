@@ -1787,3 +1787,18 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - Karl's Google Business Profile screenshot plus the founding year if he wants the reviews card back.
 - Records: `clients/tripnerd/campaigns/2026-10-13-fan-experiences-carousel/`; evidence register "Used in" rows; tracker blocker and content-log rows.
 
+## 2026-10-05 (late): "Door to roar" Reel script for Grok (Karl's arrival-to-exit idea)
+- **The ask:** Karl wanted Grok to generate an advert covering arrival (car pickup, VIP lanyard), the spot, food, drinks, people, the Nerds, the main event, a late roar, leaving, and an end card of a group saying "this was the best trip ever".
+- **Advised against Grok making it.** Four reasons:
+  - it breaks TripNerd's agreed "AI never creates a person, a voice or a testimonial";
+  - the end card is a synthetic testimonial (FTC rule; disclosure doesn't cure it);
+  - car pickup and credentials are unconfirmed, and "VIP" is barred;
+  - it breaks the standing real-footage / no-sub-1080p rule.
+- **Wrote** `clients/tripnerd/campaigns/2026-10-05-door-to-roar-reel/script-v1.md`:
+  - a 15-beat, 30 s real-footage script (each beat: picture, text, sound, source and status);
+  - the "best trip ever" end card only as an unprompted, released real guest;
+  - a 13-shot list for TripNerd's next event;
+  - 5 CONFIRM questions;
+  - 3 Grok prompts (storyboard; empty-scene concept frames, not for posting; a message draft).
+- **Honest flag:** the short cut possible from current footage mostly repeats "Two ways" and the Hosting spot. The new value (arrival, Nerds, leaving) needs filming, so it is not an October post.
+
