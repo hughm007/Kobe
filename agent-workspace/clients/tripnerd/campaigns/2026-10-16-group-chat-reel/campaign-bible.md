@@ -12,7 +12,7 @@ tags: [campaign, bible, full, reel, video, instagram, chat-thread, trial-reel, o
 
 # TripNerd — "The Group Chat" Reel (FULL Bible)
 
-> **Approval status: CONCEPT APPROVED.**
+> **Approval status: CONCEPT APPROVED. Storyboard v1 BLOCKED at Skeptic Pass 1 (2026-10-05); repairs to storyboard v2 pending Karl's two decisions.**
 > - The storyboard is built (visual frames plus §6).
 > - Skeptic Pass 1 is in progress (§14).
 > - **Next gate: STORYBOARD APPROVED (Karl, APPROVER), then the SPEND_APPROVER gate for one generated shot (F6.5).**
@@ -173,7 +173,37 @@ Not run. This happens at the master.
 
 | Pass | Packet | Verdict |
 |---|---|---|
-| Pass 1 (storyboard) | `scratchpad/gate_groupchat_sb1_skeptic_1791230634/packet.txt` (contamination scan clean) | *in progress; transcribed verbatim on return* |
+| Pass 1 (storyboard v1) | `scratchpad/gate_groupchat_sb1_skeptic_1791230634/packet.txt` (contamination scan clean) | **BLOCK** (1 × S4, 3 × S3). Verbatim below |
+
+```
+SKEPTIC VERDICT — Pass 1
+Verdict: BLOCK
+Findings:
+- [S4] F8 / claims — The "Lunch? Already out." super sits on a photo of dessert tartlets, so it is untrue of its own picture. "Lunch" is also a specific meal-inclusion claim with no record behind it, since EV-007 approves only "a hosted spread, set out for guests". Use EV-007's wording, or a line that does not name a meal.
+- [S3] F5→F6 / claims (hotels) — "...hotel? where do we even sit??" is answered straight away by "found one." plus the TripNerd link card. That implies TripNerd solves the hotel, and CLIENT-FACTS has no record of TripNerd arranging hotels. F7 makes it worse: a check-in table on what looks like ballroom carpet reads as a hotel lobby. The ad then never answers "hotel?", so the promise is both unsupported and left open.
+- [S3] F9 / claims (seats) — "This is where you sit." turns EV-006, a single past fact ("guests watched from the rail", with no date), into a forward promise to the viewer. It also says "sit" when the evidence says "from the rail". There is no record of seats, and EV-006's approved wording is not used.
+- [S3] Alternate cut / truth and realism — With F9-F11 cut, the only golf image left in a Reel that opens "Golf trip this spring" is the generated fairway in F6.5. AI footage becomes the only depiction of the product. It also leaves the "Golf trip" premise without any real payoff.
+- [S2] F1 + F6.5 / industry-professional and target-customer lens — "Golf trip" in a four-person group chat, followed by an empty fairway at dawn, reads as a trip to play golf (tee times). TripNerd's evidenced product is hosting spectators at tournaments, and the main cut only makes that clear at 12.2 s.
+- [S2] F6.5 / realism and disclosure — The shot sits right after the TripNerd link card and leads into TripNerd's real table, so the sequence frames it as the venue TripNerd takes you to. No caption claims that, but the cut does.
+- [S2] F6.5 / trust — 1.5 s of generated scenery forces the platform AI label onto the whole Reel. That invites viewers to discount the real proof in F7-F11, which is the Reel's main persuasive asset. The planned match-cut from F6 to F7 avoids this.
+- [S2] F1 + F9 / claims — "this spring" next to the island-green 17th effectively dates and names the event. CLIENT-FACTS allows EV-006 only with no event name, year or date beside it.
+- [S2] F7 / proof integrity — The proof photo has visible blur patches on the bottles. That is an alteration beyond "ordinary colour and light correction", and the smudges read as tampering on a proof image.
+- [S2] F9-F11 / rights and realism (unverifiable at Pass 1) — The payoff is still placeholders, so these must clear in Pass 2:
+  - the source is 1080p or better after the 9:16 crop or push-ins;
+  - no identifiable player, leaderboard, scoreboard or event marks appear in the background;
+  - the F9 guests cannot be identified;
+  - the packet has no evidence that the tournament allows spectator video to be used commercially.
+- [S2] F7 / F8 resolution — Push-ins on phone photos letterboxed in a 9:16 frame enlarge them further. F8 already looks soft, and the client's rule bars building from footage below 1080p. Because they are proof photos, AI upscaling is not allowed to fix this.
+- [S2] F4 and F12 / placement — The F4 super runs to about y=1680, into the bottom ~20% where platform UI sits. In F12, "Bringing the group chat?" is plain text pushed to x≈990, into the right-edge UI column, and not the chat bubble the storyboard specifies.
+- [S2] F12 / claims (EV-005) — "link in bio" may run only once the Instagram bio link has been re-checked on a phone. That receipt is still owed, so this is an open delivery condition.
+- [S1] F1-F6 / testimonial test — The chat reads as a dramatized scenario, not a customer testimonial: no generated face or voice, and no praise line. Under H2's cold open, though, there is no brand framing until 6.4 s, so it could pass as a real customer's screen recording. No hook variant may add a review-style line.
+- [S1] F1-F6 / trade dress — The chat UI is generic, but "Seen by 3" uses Instagram/Messenger wording and the typing-dots bubble is shared by every major app. The synthesized ping must not copy any app's real notification tone.
+- [S1] F11 / audio — Crowd audio from a different recording (V08) is laid under the V24 picture. That is acceptable only if the sync looks natural and the sound is the same kind of moment.
+(Pass 1 only) Shot risk:
+- F6.5 — MEDIUM — Main risks: grass and mowing stripes shimmering or warping under the forward dolly through mist, tree lines and course layout that golfers would spot as fake, and failing to reach native 1080p.
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.
+```
 
 ## 15. CONFLICTS
 None open.
@@ -186,4 +216,5 @@ None open.
 | 2026-10-05 | Higgsfield limited to one labelled bridge shot (F6.5): no people; proof shots stay real | Karl (APPROVER) |
 | 2026-10-05 | Depth FULL; §1/§2 inherited; §5 and §7 N/A (no spoken lines, no generated people) | Claude (director) |
 | 2026-10-05 | "Seen by 3" (not 4): Mike plus three friends. Emoji dropped from rendered text (no colour-emoji font) | Claude (director) |
+| 2026-10-05 | Skeptic Pass 1 on storyboard v1: BLOCK (S4 F8 'Lunch'; S3 hotel promise, 'This is where you sit', version B with AI fairway as the only golf). Storyboard gate not reached; repairs routed to v2 | Claude (director) |
 | 2026-10-05 | F7/F8 crops narrowed so they stay below the face exclusion line (the guard tripped on the first attempt) | Claude (director) |
