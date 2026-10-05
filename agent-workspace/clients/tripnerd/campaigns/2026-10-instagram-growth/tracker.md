@@ -39,7 +39,7 @@ in each log.
 - [ ] Posting times set from Insights
 - [ ] Profile rebuilt: bio (≤150 characters), Highlights, link
 - [ ] DM keywords drafted; ManyChat proposed to TripNerd with cost (its sign-off)
-- [ ] SuperGrok bought (our tool; Karl)
+- [x] SuperGrok bought (our tool; Karl, 2026-10-05). TripNerd Grok Project files: [`../../grok/`](../../grok/01-project-instructions.md); setup [`operations/grok-setup.md`](../../../../operations/grok-setup.md)
 - [ ] Full-resolution TripNerd logo files received
 - [ ] October invoice ($1,500) sent
 

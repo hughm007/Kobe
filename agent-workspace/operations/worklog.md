@@ -1754,3 +1754,14 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - TripNerd naming an approver (needed by Tue 6 EOD for Wed/Thu);
   - the DMs promise (the PDF says we reply; the 20 minutes a day is unpriced).
 - **Learning candidate (not yet filed):** a checklist carousel that ends on "handled" implies every listed step is a service. Map claims per step, not only per card.
+
+## 2026-10-05 (late): Grok (SuperGrok) setup for TripNerd and future clients
+- **Karl bought SuperGrok** and asked for the best setup plus the key TripNerd information to give it, including the client-approved adverts.
+- **Written:**
+  - `clients/tripnerd/grok/01-project-instructions.md`: a paste-in block of 2,899 characters (under the ~4,000 limit).
+  - `02-knowledge-file.md`: facts with labels and EV IDs, can't-say list, agreed rules, October scope and calendar (no fees), growth strategy, the **two client-approved adverts (Their Camera Roll; the hosting spot) with Karl's verdicts and the standing rules**, and the unknowns.
+  - `03-bot-roles-and-automations.md`: 7 roles (trend scout, hooks and captions, weekly prep, engagement targets without written comments, Monday report, reply drafts, concept sketches for internal use only) with schedules.
+  - `operations/grok-setup.md` and `templates/grok-client-project-template.md`.
+- **Positioning:** Grok drafts and scans trends; the workspace stays the source of truth and the gate. Privacy settings, what never goes into Grok, and a monthly check that its drafts are actually used.
+- **Grok features cited from web sources on 2026-10-05**, marked "verify in app".
+- **Tracker:** the SuperGrok item is ticked. The connector register has a Grok row.
