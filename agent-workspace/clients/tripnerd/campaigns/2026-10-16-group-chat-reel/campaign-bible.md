@@ -12,7 +12,7 @@ tags: [campaign, bible, full, reel, video, instagram, chat-thread, trial-reel, o
 
 # TripNerd — "The Group Chat" Reel (FULL Bible)
 
-> **Approval status: CONCEPT APPROVED. Storyboard v1 BLOCKED at Skeptic Pass 1 (2026-10-05); storyboard v2 built with every flagged repair; fresh isolated Skeptic Pass 1 on v2 in progress.**
+> **Approval status: CONCEPT APPROVED. Storyboard v1 BLOCKED at Skeptic Pass 1 (2026-10-05); storyboard v3 current. Pass 1 on v2: BLOCK on one S3 (the BC-19/EV-005 receipt; no creative change). S2/S1 fixes are in v3. STORYBOARD APPROVED awaits Karl.**
 > - The storyboard is built (visual frames plus §6).
 > - Skeptic Pass 1 is in progress (§14).
 > - **Next gate: STORYBOARD APPROVED (Karl, APPROVER), then the SPEND_APPROVER gate for one generated shot (F6.5).**
@@ -160,6 +160,21 @@ Frames: `scratchpad/group_chat/frames/group-chat-v1-F*.png` (not committed). Bui
 
 **Cross-campaign flag:** the C02 and C03 carousels use the scrubbed working copies of IMG_1901/1907 (blur patches on bottles and cups). The same S2 proof-integrity point applies to them at their gates. Fix: re-crop from the raw originals below the scrub pads, or accept the S2 explicitly.
 
+### Storyboard v3 (2026-10-05): fixes to the Pass 1-on-v2 findings
+
+| Finding | v3 change |
+|---|---|
+| S3 F12 CTA (EV-005 receipt owed) | **Open, Karl:** the BC-19 phone screenshot. No creative change. Release blocker |
+| S2 opening reads as *playing* golf | F1: "Who's going to watch the golf tournament?" Group: "Tournament watch crew". Spectating is clear at 0 s. Hooks H2 and H4 must keep the group name visible in frame 1; H4 is reworded "POV: you're the one booking the tournament trip." |
+| S2 supers read as chat messages | Supers restyled as brand voice: square white plate, navy text, logo-blue bar, "TRIPNERD" kicker. Never a rounded bubble |
+| S1 F4 collision and shaved bubble | F4 scrolls up so the caption sits below the typing dots; no clipped text |
+| Header title colliding with the avatars | Title left-aligned; avatars to its right, clear of x 950 |
+| S2 F7 "staff on hand" with no staff visible | **Open, Karl's choice:** (a) accept the S2; or (b) re-crop the raw IMG_1907 to include the lanyarded torsos (y ≥ 1160). That brings incidental third-party marks into frame (laptop logos, a sanitiser label), unretouched |
+| S2 viewing-spot read as a promise | **Open, Karl's acceptance:** the "Ours:" past-tense framing is kept. EV-006 is used verbatim |
+| S2 F9/F11 (picture readability, crowd identifiability, same-event audio, marks) | Carried to **Pass 2 on the real files**. Release holds until then. Crowd faces get blurred or cropped unless they're unidentifiable at phone size; the roar audio comes from the same clip as the picture unless V08 is shown to be the same moment |
+
+**Re-verification:** the v3 changes (F1 text, caption style, header, F4 layout) are re-attacked in the next isolated Skeptic pass, which runs on the real footage (Pass 2). No gate is treated as passed on v3 until then.
+
 ## 9. Brand and product fidelity (COMPOSITE marking)
 
 | Shot | Identity-bearing element | Marking |
@@ -208,6 +223,29 @@ Not run. This happens at the master.
 
 | Pass | Packet | Verdict |
 |---|---|---|
+| Pass 1 (storyboard v2) | `scratchpad/gate_groupchat_sb2_skeptic_1791230931/packet.txt` (scan clean) | **BLOCK on one S3: the BC-19/EV-005 receipt (no creative change)**; 7 × S2, 3 × S1. Verbatim below |
+
+```
+SKEPTIC VERDICT — Pass 1
+Verdict: BLOCK
+Findings:
+- [S3] F12 / CTA — "Plan yours · link in bio" depends on EV-005, and CLIENT-FACTS says the phone re-check receipt for the bio link is still owed, so the CTA has no evidence behind it yet and points viewers to a destination nobody has checked. This clears once the EV-005 receipt is filed. No creative change is needed.
+- [S2] F5→F6→F9 / truth (rubric 1) — The chat asks "...where do we even watch from??", gets the answer "found one." plus the TripNerd link, then pays off with the rail at the island-green 17th, and "Plan yours" closes it. A viewer heading to some other tournament can read that as a promise of a comparable viewing spot. EV-006 records one past instance only, and there is no record for seats. The "Ours:" past-tense framing reduces this but does not remove it.
+- [S2] F7 / picture vs line (rubric 2) — The super says "with staff on hand", but the crop deliberately removes the three lanyarded staff the record shows. What is on screen is an unattended branded cloth over patterned indoor carpet, which reads as an empty expo booth rather than a staffed table at a tournament. The picture doesn't contradict the line, but it leaves it without visible support, and a competitor could screenshot it as "staff on hand?"
+- [S2] F9 / picture vs line (rubric 2) — The real media sits in a letterboxed band about 1080 x 760 px, roughly 40% of the frame. Unless the island green and the rail are clearly readable at phone size in that band, the specific "island-green 17th" line has no visible picture behind it. This can't be confirmed until the footage exists.
+- [S2] F9–F11 / unverifiable payoff — 7.3 s of the 19.5 s, including the entire proof payoff, are still "REAL FOOTAGE TO COME" placeholders. The checks for identifiable pros, leaderboards, broadcast material, and event or tournament marks on signage and rails (which could imply a partnership with no record behind it) cannot be run now. This needs a mandatory Pass 2 re-run on the actual files, and the release rule must hold.
+- [S2] F11 / rights and truth — The crowd-eruption shot may show identifiable members of the public. The consent provision covers guests, not the crowd. The placeholder also shows the picture (V24) paired with audio from a different file (V08). The roar must sync plausibly with the visible reaction and must come from the same event. Otherwise the documentary moment is a composite.
+- [S2] F1–F4 + H2/H4 / opening (rubric 5) — "Tournament crew", four members (a classic scramble foursome), "Golf tournament. We going?", "IN" and "ok who's booking" can all read as entering or playing in a tournament and booking a tee time or entry. Spectating only becomes clear at F5 (5.0 s), after the hook window. H2 and H4 contain no spectating cue at all.
+- [S2] F4, F7–F10 / testimonial read (rubric 3) — The supers use the same blue rounded-bubble style as the chat and the end-card "chat-style bubble", and the F4 super sits where an incoming message would be. That lets a viewer take the "Ours:" lines as chat messages from the crew, which merges the fictional Mike/Dan/Jess/Rob with the real F9 guests into an implied customer story. The risk is low because there is no review-style line, but the supers should read clearly as brand voice.
+- [S1] F4 — The super's top edge collides with the "Read by 3" label, and the scrolled "Golf tournament. We going?" bubble is clipped by the header with its text shaved. It reads as a render glitch rather than a scroll.
+- [S1] F3/F5/F6 / placement (rubric 6) — The newest outgoing bubbles and the link card end at x≈950 within y≈1060–1420, which is the top of the Reels right-rail icon band. That is clear, but by a thin margin. Nothing intrudes into the bottom 20%. All supers end above 1536 px.
+- [S1] F1–F6 / trade dress (rubric 4) — The UI is generic: navy header, initial avatars, dark/white bubbles, "Read by 3", original pings. It does not imitate any specific app's trade dress. No action needed.
+(Pass 1 only) Shot risk:
+- none — no AI-generated shot anywhere in F1–F12 (every frame is code-built or TripNerd's real photo/video); generation risk not applicable.
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.
+```
+
 | Pass 1 (storyboard v1) | `scratchpad/gate_groupchat_sb1_skeptic_1791230634/packet.txt` (contamination scan clean) | **BLOCK** (1 × S4, 3 × S3). Verbatim below |
 
 ```
@@ -252,6 +290,7 @@ None open.
 | 2026-10-05 | Depth FULL; §1/§2 inherited; §5 and §7 N/A (no spoken lines, no generated people) | Claude (director) |
 | 2026-10-05 | "Seen by 3" (not 4): Mike plus three friends. Emoji dropped from rendered text (no colour-emoji font) | Claude (director) |
 | 2026-10-05 | Karl: cut F6.5 (match-cut instead) and hold the Reel until the 17th-hole clips arrive (no version B) | Karl (APPROVER) |
+| 2026-10-05 | Pass 1 on v2: BLOCK on one S3 (BC-19 receipt only). Storyboard v3 built (spectating hook, brand-voice captions, F4/header layout) | Claude (director) |
 | 2026-10-05 | Storyboard v2 built; fresh isolated Skeptic Pass 1 spawned on v2 | Claude (director) |
 | 2026-10-05 | Skeptic Pass 1 on storyboard v1: BLOCK (S4 F8 'Lunch'; S3 hotel promise, 'This is where you sit', version B with AI fairway as the only golf). Storyboard gate not reached; repairs routed to v2 | Claude (director) |
 | 2026-10-05 | F7/F8 crops narrowed so they stay below the face exclusion line (the guard tripped on the first attempt) | Claude (director) |
