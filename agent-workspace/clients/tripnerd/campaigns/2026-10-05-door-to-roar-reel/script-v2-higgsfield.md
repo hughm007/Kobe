@@ -3,14 +3,16 @@ title: "TripNerd — 'Door to roar' Reel: script v2, frame by frame, for Karl to
 type: brief
 client: tripnerd
 owner: Karl
-status: draft
+status: blocked
 created: 2026-10-05
 updated: 2026-10-05
 tags: [reel, video, script, higgsfield, seedance, frame-by-frame, arrival]
 supersedes: script-v1.md (for the build; v1's shot list for TripNerd's next event still applies)
 ---
 
-# "Door to roar": script v2 (build-ready)
+> ⛔ **BLOCKED (2026-10-05) by the isolated Skeptic review. Don't generate these frames yet.** The photoreal generated doors, chairs, drinks and credential read as TripNerd's real venue and as unconfirmed offers (seats, drinks). The stills come from a different venue and day from the 17th-hole video. The verdict is in [`campaign-bible.md`](campaign-bible.md) §14.
+
+# "Door to roar": script v2
 
 **Your idea, refined:** one guest's day, from the door to the roar and back out the door.
 - **First half (Higgsfield):** *it's ready before you are.* Empty, prepared spaces waiting for the guest.
