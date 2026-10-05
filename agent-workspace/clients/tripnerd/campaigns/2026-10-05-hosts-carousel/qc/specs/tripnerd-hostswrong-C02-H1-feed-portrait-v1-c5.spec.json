@@ -1,0 +1,87 @@
+{
+ "name": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/bg/c5-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.22,
+  "pos": "top-right"
+ },
+ "blocks": [
+  {
+   "role": "label",
+   "text": "4 \u00b7 THE EXIT",
+   "size": 34,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.0662962962962963
+  },
+  {
+   "role": "numeral",
+   "text": "4",
+   "size": 470,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.12111111111111111
+  },
+  {
+   "role": "headline",
+   "text": "Don\u2019t end the day at the curb.",
+   "size": 72,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.49
+  },
+  {
+   "role": "support",
+   "text": "Decide how every guest gets home before anyone arrives.",
+   "size": 42,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.6448148148148148
+  },
+  {
+   "role": "cta",
+   "text": "Next: your checklist \u2192",
+   "size": 42,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "center",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "y_frac": 0.8951851851851852
+  }
+ ]
+}

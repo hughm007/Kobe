@@ -1,0 +1,59 @@
+# compose.py patch for the TripNerd hosts carousel v1 (2026-10-05)
+# base: /tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_v4/compose.py  sha256 d461a8bca634f4b605c99bfe64ed0bcaa4ac6a95b14d48c33fb80b43281da2e5
+#   (= .claude/skills/servicepow-static-ads/scripts/servicepow_static_compose.py sha256 56dfd13c0100c49b4fcbd4b321ffc0d6a9a9211360a1f2f9922fa666336441f7 with BOLD/REG repointed to Inter)
+# patched: /tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/compose.py  sha256 2583851c8b21c93bb4ccd0c0fe3adb0a484f23f1f1205eba97e32f5e602e270b
+# (a) BOLD = Montserrat ExtraBold; REG stays Inter SemiBold  (b) chip contrast vs blended chip colour  (c) optional chip_fill + chip_radius ('pill')
+--- /tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_v4/compose.py	2026-10-04 19:30:22.190223207 +0000
++++ /tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/compose.py	2026-10-05 01:53:54.572804552 +0000
+@@ -4,7 +4,8 @@
+ 
+ usage: servicepow_static_compose.py spec.json outdir/
+ Spec: {placement, background:{color|image}, logo:{file,width_frac,pos}, blocks:[
+-  {role: headline|support|cta|legal|fact, text, size, y_frac, bold?, chip?, fill?, align?}]}
++  {role: headline|support|cta|legal|fact, text, size, y_frac, bold?, chip?, fill?, align?,
++   chip_fill? [r,g,b,a] (default [0,0,0,200]), chip_radius? int|"pill"}]}
+ Needs Pillow (same .qcvenv pattern as the video toolkit).
+ """
+ import json, sys, hashlib
+@@ -13,7 +14,8 @@
+ 
+ PLACEMENTS={"feed-square":(1080,1080,.05,.05,.05,.05),"feed-portrait":(1080,1350,.05,.05,.05,.05),
+             "story":(1080,1920,.15,.20,.06,.06),"link":(1200,628,.05,.05,.05,.05)}
+-BOLD="/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/fonts/inter_2.ttf"; REG="/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/fonts/inter_1.ttf"  # repointed to Inter (per toolkit README)
++# (a) bold/headline face = Montserrat ExtraBold (apt fonts-montserrat 7.222-2, SIL OFL); body stays Inter SemiBold (SIL OFL)
++BOLD="/usr/share/fonts/truetype/montserrat/Montserrat-ExtraBold.ttf"; REG="/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/fonts/inter_1.ttf"  # REG repointed to Inter (per toolkit README)
+ 
+ def fit_bg(spec,W,H):
+     bg=spec.get("background",{})
+@@ -57,17 +59,29 @@
+             else: lines.append(cur); cur=w
+         if cur: lines.append(cur)
+         y=int(H*b["y_frac"]); fill=tuple(b.get("fill",[255,255,255])); x0=y0=None; x1=y1=0
++        # (c) optional chip_fill [r,g,b,a] (e.g. a white pill with navy text) and chip_radius ("pill" = half height)
++        chip_rgba=tuple(b.get("chip_fill",[0,0,0,200])); chip_rgba=chip_rgba+(255,)*(4-len(chip_rgba))
++        chip_bgs=[]
+         for ln in lines:
+             tw=d.textlength(ln,font=f)
+             x=(W-tw)/2 if b.get("align","center")=="center" else safe[0]
+             if b.get("chip"):
+-                d.rounded_rectangle([x-20,y-10,x+tw+20,y+b["size"]+12],10,fill=(0,0,0,200))
++                cbox=[x-20,y-10,x+tw+20,y+b["size"]+12]
++                rad=b.get("chip_radius",10); rad=(cbox[3]-cbox[1])//2 if rad=="pill" else int(rad)
++                # (b) contrast vs the BLENDED chip colour: sample the plate under the chip before drawing it
++                pre=img.crop(tuple(int(v) for v in cbox)).resize((1,1)).getpixel((0,0))[:3]
++                a=chip_rgba[3]/255.0
++                chip_bgs.append(tuple(round(a*c+(1-a)*p) for c,p in zip(chip_rgba[:3],pre)))
++                d.rounded_rectangle(cbox,rad,fill=chip_rgba)
+             d.text((x,y),ln,font=f,fill=fill)
+             x0=min(x0,x) if x0 is not None else x; y0=y0 if y0 is not None else y
+             x1=max(x1,x+tw); y1=y+b["size"]+12; y+=int(b["size"]*1.3)
+         # local background sample for contrast (corner just outside first line, inside box)
+         bgpx=img.crop((int(x0),int(y0),int(x0)+8,int(y0)+8)).resize((1,1)).getpixel((0,0))
+-        eff_bg=(0,0,0) if b.get("chip") else bgpx[:3]
++        if b.get("chip"):  # (b) worst line's blended chip colour, not pure black
++            eff_bg=min(chip_bgs,key=lambda c:contrast(fill,c))
++        else:
++            eff_bg=bgpx[:3]
+         manifest["elements"].append({"role":b["role"],"box":[int(x0),int(y0),int(x1),int(y1)],
+             "font_px":b["size"],"text":b["text"],"contrast":round(contrast(fill,eff_bg),2)})
+     name=spec.get("name",f"ad-{pk}")

@@ -1,0 +1,74 @@
+{
+ "name": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/bg/c1-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.3,
+  "pos": "top-center"
+ },
+ "blocks": [
+  {
+   "role": "headline",
+   "text": "Hosting clients at a golf tournament?",
+   "size": 96,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "center",
+   "y_frac": 0.2759259259259259
+  },
+  {
+   "role": "support",
+   "text": "Four moments decide the day.",
+   "size": 48,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": false,
+   "align": "center",
+   "y_frac": 0.5751851851851851
+  },
+  {
+   "role": "fact",
+   "text": "Arrival \u00b7 Timing \u00b7 Dining \u00b7 The exit",
+   "size": 34,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "center",
+   "y_frac": 0.6462962962962963
+  },
+  {
+   "role": "cta",
+   "text": "Swipe \u2192",
+   "size": 42,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "center",
+   "chip": true,
+   "chip_fill": [
+    32,
+    40,
+    56,
+    255
+   ],
+   "chip_radius": "pill",
+   "y_frac": 0.8640740740740741
+  }
+ ]
+}

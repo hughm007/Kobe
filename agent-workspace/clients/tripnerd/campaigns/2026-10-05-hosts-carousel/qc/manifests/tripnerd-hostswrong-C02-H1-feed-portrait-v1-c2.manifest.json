@@ -1,0 +1,99 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    789,
+    67,
+    1026,
+    154
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "label",
+   "box": [
+    54,
+    89,
+    259,
+    135
+   ],
+   "font_px": 34,
+   "text": "1 \u00b7 ARRIVAL",
+   "contrast": 5.15
+  },
+  {
+   "role": "numeral",
+   "box": [
+    54,
+    171,
+    191,
+    523
+   ],
+   "font_px": 340,
+   "text": "1",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    539,
+    778,
+    716
+   ],
+   "font_px": 72,
+   "text": "Don\u2019t make guests find the way in.",
+   "contrast": 14.77
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    748,
+    820,
+    856
+   ],
+   "font_px": 42,
+   "text": "Give them one check-in point and one host who knows their name.",
+   "contrast": 14.77
+  },
+  {
+   "role": "fact",
+   "box": [
+    54,
+    928,
+    779,
+    978
+   ],
+   "font_px": 38,
+   "text": "Ours: a staffed TripNerd check-in table.",
+   "contrast": 4.89
+  },
+  {
+   "role": "cta",
+   "box": [
+    382,
+    1208,
+    697,
+    1262
+   ],
+   "font_px": 42,
+   "text": "Next: timing \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png",
+ "sha256": "0ac2260b677bce85"
+}

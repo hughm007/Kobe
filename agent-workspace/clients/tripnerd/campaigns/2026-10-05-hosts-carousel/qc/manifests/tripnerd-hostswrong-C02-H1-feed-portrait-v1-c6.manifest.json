@@ -1,0 +1,159 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    789,
+    67,
+    1026,
+    154
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "label",
+   "box": [
+    54,
+    89,
+    368,
+    135
+   ],
+   "font_px": 34,
+   "text": "YOUR CHECKLIST",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    179,
+    684,
+    449
+   ],
+   "font_px": 72,
+   "text": "Before you host, answer four questions.",
+   "contrast": 14.77
+  },
+  {
+   "role": "label",
+   "box": [
+    54,
+    501,
+    235,
+    543
+   ],
+   "font_px": 30,
+   "text": "1 \u00b7 ARRIVAL",
+   "contrast": 5.15
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    559,
+    566,
+    623
+   ],
+   "font_px": 52,
+   "text": "Who meets them?",
+   "contrast": 14.77
+  },
+  {
+   "role": "label",
+   "box": [
+    54,
+    679,
+    214,
+    721
+   ],
+   "font_px": 30,
+   "text": "2 \u00b7 TIMING",
+   "contrast": 5.15
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    737,
+    654,
+    801
+   ],
+   "font_px": 52,
+   "text": "When\u2019s the moment?",
+   "contrast": 14.77
+  },
+  {
+   "role": "label",
+   "box": [
+    54,
+    857,
+    215,
+    899
+   ],
+   "font_px": 30,
+   "text": "3 \u00b7 DINING",
+   "contrast": 5.15
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    915,
+    564,
+    979
+   ],
+   "font_px": 52,
+   "text": "Where\u2019s the food?",
+   "contrast": 14.77
+  },
+  {
+   "role": "label",
+   "box": [
+    54,
+    1035,
+    244,
+    1077
+   ],
+   "font_px": 30,
+   "text": "4 \u00b7 THE EXIT",
+   "contrast": 5.15
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    1093,
+    717,
+    1157
+   ],
+   "font_px": 52,
+   "text": "How do they get home?",
+   "contrast": 14.77
+  },
+  {
+   "role": "cta",
+   "box": [
+    331,
+    1208,
+    748,
+    1262
+   ],
+   "font_px": 42,
+   "text": "Save this checklist",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png",
+ "sha256": "dfefe26c24321466"
+}

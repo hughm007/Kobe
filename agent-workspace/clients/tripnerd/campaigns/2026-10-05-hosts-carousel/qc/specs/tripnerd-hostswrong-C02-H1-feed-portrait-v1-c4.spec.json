@@ -1,0 +1,100 @@
+{
+ "name": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/bg/c4-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.22,
+  "pos": "top-right"
+ },
+ "blocks": [
+  {
+   "role": "label",
+   "text": "3 \u00b7 DINING",
+   "size": 34,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.0662962962962963
+  },
+  {
+   "role": "numeral",
+   "text": "3",
+   "size": 250,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.13
+  },
+  {
+   "role": "headline",
+   "text": "Don\u2019t pull guests away to eat.",
+   "size": 72,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.3359259259259259
+  },
+  {
+   "role": "support",
+   "text": "Put the food where the view is, so nobody misses a shot.",
+   "size": 42,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.49074074074074076
+  },
+  {
+   "role": "fact",
+   "text": "In our suite on 17, the buffet was steps from the rail.",
+   "size": 38,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.6240740740740741
+  },
+  {
+   "role": "cta",
+   "text": "Next: the exit \u2192",
+   "size": 42,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "center",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "y_frac": 0.8951851851851852
+  }
+ ]
+}

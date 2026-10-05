@@ -1,0 +1,111 @@
+PASS  X3:mode:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: 1080x1350
+PASS  X5:bytes:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: 69013 bytes (0.066 MB)
+PASS  X2:rebuild-exact:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:headline:'Hosting clients at a golf to': min 4.89:1, p5 4.89, median 4.89 over 62467 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:support:'Four moments decide the day.': min 4.89:1, p5 4.89, median 4.89 over 8800 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:fact:'Arrival · Timing · Dining · ': min 4.89:1, p5 4.89, median 4.89 over 6718 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:cta:'Swipe →': min 14.77:1, p5 14.77, median 14.77 over 2359 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: 5 boxes, floor 16px; tightest pair 36px (support:'Four moments decide ' ~ fact:'Arrival · Timing · D')
+PASS  X6:chip-safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:cta: chip [433, 1156, 646, 1220] vs safe [54, 67, 1026, 1283]
+INFO  OCR:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: 17/17 manifest words read back by tesseract
+PASS  X3:mode:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: 1080x1350
+PASS  X5:bytes:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: 70554 bytes (0.067 MB)
+PASS  X2:rebuild-exact:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:label:'1 · ARRIVAL': min 5.15:1, p5 5.15, median 5.15 over 2345 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:numeral:'1': min 5.15:1, p5 5.15, median 5.15 over 18472 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:headline:'Don’t make guests find the w': min 14.77:1, p5 14.77, median 14.77 over 31974 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:support:'Give them one check-in point': min 14.77:1, p5 14.77, median 14.77 over 13812 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:fact:'Ours: a staffed TripNerd che': min 4.89:1, p5 4.89, median 4.89 over 7241 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:cta:'Next: timing →': min 14.77:1, p5 14.77, median 14.77 over 4372 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: 7 boxes, floor 16px; tightest pair 16px (numeral:'1' ~ headline:'Don’t make guests fi')
+PASS  X6:chip-safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:cta: chip [362, 1198, 717, 1262] vs safe [54, 67, 1026, 1283]
+INFO  X6:plate:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: logo plate [773, 55, 1042, 166] extends past safe [54, 67, 1026, 1283] (background shape; the logo itself [789, 67, 1026, 154] is inside)
+INFO  OCR:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: 30/32 manifest words read back by tesseract; misses: label: wanted ['1', 'arrival'] got ['arrival', 't'] | numeral: wanted ['1'] got ['t']
+PASS  X3:mode:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: 1080x1350
+PASS  X5:bytes:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: 77595 bytes (0.074 MB)
+PASS  X2:rebuild-exact:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:label:'2 · TIMING': min 5.15:1, p5 5.15, median 5.15 over 2120 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:headline:'Don’t book lunch over the bi': min 14.77:1, p5 14.77, median 14.77 over 29692 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:support:'Check tee times and know whe': min 14.77:1, p5 14.77, median 14.77 over 12837 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:fact:'At THE PLAYERS, our guests w': min 4.89:1, p5 4.89, median 4.89 over 9646 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:numeral:'2': min 5.15:1, p5 5.15, median 5.15 over 35903 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:cta:'Next: dining →': min 14.77:1, p5 14.77, median 14.77 over 4371 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: 7 boxes, floor 16px; tightest pair 32px (headline:'Don’t book lunch ove' ~ support:'Check tee times and ')
+PASS  X6:chip-safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:cta: chip [364, 1198, 715, 1262] vs safe [54, 67, 1026, 1283]
+INFO  X6:plate:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: logo plate [773, 55, 1042, 166] extends past safe [54, 67, 1026, 1283] (background shape; the logo itself [789, 67, 1026, 154] is inside)
+INFO  OCR:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: 33/33 manifest words read back by tesseract
+PASS  X3:mode:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: 1080x1350
+PASS  X5:bytes:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: 71298 bytes (0.068 MB)
+PASS  X2:rebuild-exact:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:label:'3 · DINING': min 5.15:1, p5 5.15, median 5.15 over 2239 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:numeral:'3': min 5.15:1, p5 5.15, median 5.15 over 15734 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:headline:'Don’t pull guests away to ea': min 14.77:1, p5 14.77, median 14.77 over 27126 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:support:'Put the food where the view ': min 14.77:1, p5 14.77, median 14.77 over 11754 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:fact:'In our suite on 17, the buff': min 4.89:1, p5 4.89, median 4.89 over 8947 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:cta:'Next: the exit →': min 14.77:1, p5 14.77, median 14.77 over 4431 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: 7 boxes, floor 16px; tightest pair 16px (numeral:'3' ~ headline:'Don’t pull guests aw')
+PASS  X6:chip-safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:cta: chip [350, 1198, 729, 1262] vs safe [54, 67, 1026, 1283]
+INFO  X6:plate:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: logo plate [773, 55, 1042, 166] extends past safe [54, 67, 1026, 1283] (background shape; the logo itself [789, 67, 1026, 154] is inside)
+INFO  OCR:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: 35/36 manifest words read back by tesseract; misses: numeral: wanted ['3'] got ['5']
+PASS  X3:mode:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: 1080x1350
+PASS  X5:bytes:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: 65684 bytes (0.063 MB)
+PASS  X2:rebuild-exact:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:label:'4 · THE EXIT': min 5.15:1, p5 5.15, median 5.15 over 2355 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:numeral:'4': min 5.15:1, p5 5.15, median 5.15 over 52600 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:headline:'Don’t end the day at the cur': min 14.77:1, p5 14.77, median 14.77 over 26755 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:support:'Decide how every guest gets ': min 14.77:1, p5 14.77, median 14.77 over 12594 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:cta:'Next: your checklist →': min 14.77:1, p5 14.77, median 14.77 over 6537 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: 6 boxes, floor 16px; tightest pair 16px (numeral:'4' ~ headline:'Don’t end the day at')
+PASS  X6:chip-safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:cta: chip [278, 1198, 801, 1262] vs safe [54, 67, 1026, 1283]
+INFO  X6:plate:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: logo plate [773, 55, 1042, 166] extends past safe [54, 67, 1026, 1283] (background shape; the logo itself [789, 67, 1026, 154] is inside)
+INFO  OCR:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: 23/23 manifest words read back by tesseract
+PASS  X3:mode:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: 1080x1350
+PASS  X5:bytes:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: 93093 bytes (0.089 MB)
+PASS  X2:rebuild-exact:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label:'YOUR CHECKLIST': min 5.15:1, p5 5.15, median 5.15 over 3944 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:headline:'Before you host, answer four': min 14.77:1, p5 14.77, median 14.77 over 36303 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label:'1 · ARRIVAL': min 5.15:1, p5 5.15, median 5.15 over 1928 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support:'Who meets them?': min 14.77:1, p5 14.77, median 14.77 over 9050 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label:'2 · TIMING': min 5.15:1, p5 5.15, median 5.15 over 1684 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support:'When’s the moment?': min 14.77:1, p5 14.77, median 14.77 over 10498 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label:'3 · DINING': min 5.15:1, p5 5.15, median 5.15 over 1789 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support:'Where’s the food?': min 14.77:1, p5 14.77, median 14.77 over 9070 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label:'4 · THE EXIT': min 5.15:1, p5 5.15, median 5.15 over 1932 ink px (manifest says 5.15)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support:'How do they get home?': min 14.77:1, p5 14.77, median 14.77 over 11566 ink px (manifest says 14.77)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:cta:'Save this checklist': min 14.77:1, p5 14.77, median 14.77 over 6023 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: 12 boxes, floor 16px; tightest pair 16px (label:'1 · ARRIVAL' ~ support:'Who meets them?')
+PASS  X6:chip-safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:cta: chip [311, 1198, 768, 1262] vs safe [54, 67, 1026, 1283]
+INFO  X6:plate:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: logo plate [773, 55, 1042, 166] extends past safe [54, 67, 1026, 1283] (background shape; the logo itself [789, 67, 1026, 154] is inside)
+INFO  OCR:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: 33/34 manifest words read back by tesseract; misses: label: wanted ['1', 'arrival'] got ['1t', 'arrival']
+PASS  X3:mode:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: format=PNG mode=RGB alpha=no
+INFO  X3:colour:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: untagged RGB PNG (renders as sRGB); all colours specified in sRGB
+PASS  X4:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: 1080x1350
+PASS  X5:bytes:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: 69962 bytes (0.067 MB)
+PASS  X2:rebuild-exact:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: re-render == export pixel-for-pixel
+PASS  X2:boxes-match-manifest:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: rebuilt boxes == manifest boxes
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:headline:'Want the day handled?': min 4.89:1, p5 4.89, median 4.89 over 46538 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:support:'TripNerd hosts guests at gol': min 4.89:1, p5 4.89, median 4.89 over 16132 ink px (manifest says 4.89)
+PASS  X2:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:cta:'Plan yours at tripnerd.com': min 14.77:1, p5 14.77, median 14.77 over 9832 ink px (manifest says 14.77)
+PASS  X1:gaps:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: 4 boxes, floor 16px; tightest pair 44px (headline:'Want the day handled' ~ support:'TripNerd hosts guest')
+PASS  X6:chip-safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:cta: chip [192, 854, 887, 922] vs safe [54, 67, 1026, 1283]
+INFO  OCR:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: 18/18 manifest words read back by tesseract
+
+EXTRA-CHECKS: PASS (90 passed, 0 failed, 7 exports)

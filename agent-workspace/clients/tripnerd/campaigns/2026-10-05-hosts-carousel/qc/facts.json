@@ -1,0 +1,4 @@
+{
+ "must_contain": ["tripnerd.com"],
+ "must_not_contain": ["Masters","Augusta","2027","golf major","guarantee","best","#1","VIP","official","review","5-star","sold out","limited","PGA TOUR","always","every trip"]
+}

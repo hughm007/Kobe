@@ -1,0 +1,63 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    356,
+    1148,
+    723,
+    1283
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "headline",
+   "box": [
+    165,
+    372,
+    914,
+    623
+   ],
+   "font_px": 104,
+   "text": "Want the day handled?",
+   "contrast": 4.89
+  },
+  {
+   "role": "support",
+   "box": [
+    174,
+    667,
+    905,
+    780
+   ],
+   "font_px": 44,
+   "text": "TripNerd hosts guests at golf tournaments and other big events.",
+   "contrast": 4.89
+  },
+  {
+   "role": "cta",
+   "box": [
+    212,
+    864,
+    867,
+    922
+   ],
+   "font_px": 46,
+   "text": "Plan yours at tripnerd.com",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png",
+ "sha256": "9efcf91b32da39c2"
+}
