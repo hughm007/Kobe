@@ -243,3 +243,17 @@ Carousel "What corporate hosts get wrong" (7 cards). It reuses the proof lines i
   - consent for the 17th-hole clips;
   - whether to name THE PLAYERS at all.
 - **Account:** the boost budget; whether they have an ad account; the bio-link check.
+
+## 11. Footage and photos we have (what you can see vs. what you can only describe)
+
+| Asset | Status |
+|---|---|
+| Table-logo close-up, staff table (no faces), hosted food spread: 3 photos uploaded to this Project | **CLEARED.** You may see them and plan with them |
+| TripNerd logo file | **CLEARED** for layouts. Never redraw it |
+| 29 photos from a TripNerd hosted day, 9 Apr 2026 (check-in table, bar, porch, lawn, dining room, guests) | **INTERNAL ONLY**, not uploaded here. Don't plan posts around them until TripNerd's written checks are in |
+| 17th-hole suite videos (the walk, the suite, the rail, the roar) | **ORIGINALS PENDING** from TripNerd. Plan with them by description only |
+| An unidentified Dec 2025 video and 3 older photos | **UNKNOWN.** Not reviewed |
+| Approved adverts "Their Camera Roll" and "Hosting spot" | **APPROVED** (see section 9). Not uploaded here |
+| tripnerd.com "NERDS in Action" gallery | **NOT IN HAND.** Some photos show children |
+
+When you suggest a post, name which of these it needs. If it needs something not CLEARED, say "needs from TripNerd: …".

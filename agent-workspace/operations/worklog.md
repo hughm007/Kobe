@@ -1765,3 +1765,9 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **Positioning:** Grok drafts and scans trends; the workspace stays the source of truth and the gate. Privacy settings, what never goes into Grok, and a monthly check that its drafts are actually used.
 - **Grok features cited from web sources on 2026-10-05**, marked "verify in app".
 - **Tracker:** the SuperGrok item is ticked. The connector register has a Grok row.
+- **Real-footage hand-off and Grok photo access (2026-10-05):**
+  - **Sent to Karl:**
+    - an internal pack of TripNerd's 29 photos from 9 Apr (with a contact sheet; marked "do not post or upload to AI" until TripNerd's checks are in);
+    - a Grok-safe pack (3 faces-free graded photos, the logo, the footage index).
+  - **Docs:** knowledge file §11 (footage index) and setup guide §7 (upload to the Project; the Drive connector only from a separate Google account; test vision with one photo).
+  - **Found:** the Drive connected here is Wyatt's "My Drive". It also holds an unreviewed 578 MB video (Dec 2025) and 3 older photos. Higgsfield `show_medias` errored, so the 17th-hole copies couldn't be listed.

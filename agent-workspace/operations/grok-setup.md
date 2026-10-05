@@ -72,3 +72,32 @@ Feature names are as of 2026-10-05; verify them in the app.
 1. Fill [`templates/grok-client-project-template.md`](../templates/grok-client-project-template.md) from the client's brief, brand guide and evidence register.
 2. Create the Grok Project. Paste the instructions (keep them under 4,000 characters), upload the knowledge file, then add the bots you need.
 3. Record in the client's tracker that the Grok Project exists and when its knowledge file was last refreshed.
+
+## 7. Letting Grok see a client's photos
+
+**1. Recommended: upload into the Project.**
+- Upload the client's **Grok-safe pack** into the client's Grok Project → **Files**. For TripNerd: 3 faces-free photos, the logo, and the footage index.
+- **Test it:** ask "describe tripnerd-hosted-food-spread.png". If Grok describes it accurately, it can see the photos.
+
+**2. Optional: the Google Drive connector.**
+- Set up at grok.com/connectors → New Connector → Google Drive (feature from May 2026; verify in the app).
+- **Only with a separate Google account** that holds nothing but the Grok-safe folders. The connector reads the whole account.
+- Wyatt's and Karl's main Drives hold the ServicePOW OS and other clients' files, so **never connect those**.
+- Whether the connector can view images or video, not just documents, is **unconfirmed**. Test it with one photo before relying on it.
+
+**3. Video.**
+- Grok can plan from stills, frames and contact sheets, but it doesn't cut the finished advert.
+- Upload 3–6 frames per clip, never the guest-face frames. Finished edits stay in the ServicePOW pipeline (real footage, our gates).
+
+**Never upload:**
+- photos with identifiable guests, until the client confirms consent covers it;
+- anything marked INTERNAL ONLY (e.g. TripNerd's 9 Apr photo set);
+- children;
+- other clients' files.
+
+**What a Grok-safe pack holds:**
+- faces-free photos, graded only (no AI);
+- the client's logo file;
+- a `footage-index.md` saying what exists, what's cleared and what's missing.
+
+Build it in the session scratchpad and send it to Karl. The images stay out of git; the index lives in the client's `grok/02-knowledge-file.md` §11.
