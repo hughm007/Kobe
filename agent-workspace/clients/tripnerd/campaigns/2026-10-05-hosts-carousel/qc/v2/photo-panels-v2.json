@@ -1,0 +1,80 @@
+{
+ "c1": {
+  "source": "static_hosts/photos_v2/clean2_IMG_1901.png",
+  "source_sha256": "968ba34c73fa931e9fd40a138bcfe74418a4bdfb205adb220e092792685c3323",
+  "colour": "Apple Poppy Output Profile (from IMG_2004, sha256 2e9b3662e1ad2b0e) -> sRGB, perceptual",
+  "crop_src_px": [
+   0,
+   1406,
+   1187,
+   1868
+  ],
+  "exclusion_line_y": 1290,
+  "anchor": "bottom",
+  "scale": 0.8189,
+  "panel_px": [
+   972,
+   378
+  ],
+  "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c1-photo.png",
+  "sha256": "5816f4124d851515f12eb6fcd526819f0637da02f49ab68b4a4167deb78018da",
+  "box": [
+   54,
+   241,
+   1026,
+   619
+  ]
+ },
+ "c2": {
+  "source": "static_hosts/photos_v2/clean2_IMG_1907.png",
+  "source_sha256": "743e940253f8f80e80e127a9cdead94be759c38d309cfb60890d44fc2350aa9d",
+  "colour": "Apple Poppy Output Profile (from IMG_2004, sha256 2e9b3662e1ad2b0e) -> sRGB, perceptual",
+  "crop_src_px": [
+   0,
+   1162,
+   1536,
+   1860
+  ],
+  "exclusion_line_y": 1150,
+  "anchor": "bottom",
+  "scale": 0.6328,
+  "panel_px": [
+   972,
+   442
+  ],
+  "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c2-photo.png",
+  "sha256": "9d171a5e777469bafad501e2bc9be668c9b04e61cdd99523f62d487abb62ab35",
+  "box": [
+   54,
+   243,
+   1026,
+   685
+  ]
+ },
+ "c4": {
+  "source": "tn_assets/IMG_1998.JPG",
+  "source_sha256": "d5a7954b47b114307fc6d6fc5fa7cd30d1dd31e79fbd9bb67b5172270072931d",
+  "colour": "Apple Poppy Output Profile (from IMG_2004, sha256 2e9b3662e1ad2b0e) -> sRGB, perceptual",
+  "crop_src_px": [
+   0,
+   1110,
+   1536,
+   1881
+  ],
+  "exclusion_line_y": 1105,
+  "anchor": "top",
+  "scale": 0.6328,
+  "panel_px": [
+   972,
+   488
+  ],
+  "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c4-photo.png",
+  "sha256": "9fa02ff71efbb32ded2fc107aec04f6f42e7c92639736cd6c0888e5b1e3b509e",
+  "box": [
+   54,
+   243,
+   1026,
+   731
+  ]
+ }
+}

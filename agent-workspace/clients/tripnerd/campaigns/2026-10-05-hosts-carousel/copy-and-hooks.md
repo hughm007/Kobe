@@ -181,3 +181,117 @@ No other wording changed. No claim was added.
 | c5 | Navy graphic headed "4, The exit", with a very large blue numeral 4. White text: "Don’t end the day at the curb. Decide how every guest gets home before anyone arrives." A white button reads "Next: your checklist". |
 | c6 | Navy checklist graphic headed "Your checklist". White text: "Before you host, answer four questions." Four labelled questions separated by thin blue lines: Arrival, "Who meets them?"; Timing, "When’s the moment?"; Dining, "Where’s the food?"; The exit, "How do they get home?" A white button reads "Save this checklist". |
 | c7 | Blue graphic. Large navy text: "Want the day handled?" Below: "TripNerd hosts guests at golf tournaments and other big events." A white button reads "Plan yours at tripnerd.com". The TripNerd logo sits at the bottom. |
+
+---
+
+## 6. v2 (2026-10-05): final on-image text, caption and alt text
+
+**Why v2:** the v1 critic scored HARD FAIL 6.4 (human presence 3; c7 "Want the day handled?" implied transport), and the v1 Skeptic was CONDITIONAL with 6 × S2 ([`gate-log.md`](gate-log.md)). The v2 copy came verbatim from the campaign director's round-2 brief.
+
+**Status:** draft. Machine QC only. The dual gate (critic and Skeptic) has **not** run on v2, and TripNerd hasn't approved anything.
+
+**Exports:** `tripnerd-hostswrong-C02-H1-feed-portrait-v2-c1.png` … `-c7.png` (session scratchpad `static_hosts/exports_v2/`; hashes in [`qc/v2/sha256-v2.txt`](qc/v2/sha256-v2.txt); not committed).
+
+**Type and colour (unchanged from v1):** **M** = Montserrat ExtraBold, **I** = Inter SemiBold. Navy #202838, site blue #5896E9, logo blue #18A0F0, white.
+
+**Card system v2:**
+- **Logo:** the real file, 345 px wide, on a rounded #5896E9 plate at the **top-left** of every card (plate 54,67 → 431,217, fully inside the safe box). On c1 and c7 the plate is the card's own blue.
+- **Header row (c2–c5):** one numeral size (M 140, logo blue) beside the label (M 34, logo blue), right of the logo plate. On c6 the label "YOUR CHECKLIST" takes the same slot.
+- **Photo panels (c1, c2, c4):** real TripNerd photos, 972 px wide, inside the safe box, rounded corners, under the header. All text sits below the photo on flat navy or blue.
+- **Proof lines:** on a rounded site-blue band the width of the photo panel.
+- **CTAs:** pills. "Next: … →" chips on c2–c5 (M 40).
+
+### c1 COVER (site blue)
+| Role | Text | Face, px, colour |
+|---|---|---|
+| logo | real PNG, top-left | 345 px wide |
+| photo | IMG_1901 (marks scrubbed): the "TripNerd® FAN EXPERIENCES" tablecloth on the table front; no people in frame | panel 972×378 |
+| headline | Hosting clients at a golf tournament? | M 84, navy |
+| support | Four moments make or break a hosted day. | I 44, navy |
+| label | Arrival · The view · Food · The exit | M 32, navy |
+| cta | Swipe → | M 42, white on a navy pill |
+
+### c2 "1 · ARRIVAL" (navy)
+| Role | Text | Face, px, colour |
+|---|---|---|
+| numeral + label | 1 / 1 · ARRIVAL | M 140 / M 34, logo blue |
+| photo | IMG_1907 (marks scrubbed): the TripNerd-branded table with three staff in lanyards (a "STAF…" badge is legible), cropped from the chest down (no faces) | panel 972×442 |
+| headline | Give guests one place to arrive. | M 72, white |
+| support | One check-in point. One host who knows their name. | I 40, white |
+| fact (proof band) | Ours: a TripNerd-branded table, with staff on hand. | I 36, navy on site blue · **EV-tripnerd-008** |
+| cta | Next: the view → | M 40, navy on a white pill |
+
+### c3 "2 · THE VIEW" (navy, type-only)
+| Role | Text | Face, px, colour |
+|---|---|---|
+| numeral + label | 2 / 2 · THE VIEW | M 140 / M 34, logo blue |
+| headline | Seat guests where the moment happens. | M 96, white |
+| support | Know which hole matters, and get there before the leaders do. | I 46, white |
+| fact (proof band) | Ours: at the island-green 17th, guests watched from the rail. | I 40, navy on site blue · **EV-tripnerd-006** |
+| cta | Next: food → | M 40, navy on a white pill |
+
+### c4 "3 · FOOD" (navy)
+| Role | Text | Face, px, colour |
+|---|---|---|
+| numeral + label | 3 / 3 · FOOD | M 140 / M 34, logo blue |
+| photo | IMG_1998: dessert spread (tartlets, doughnuts, dessert cups), no people; the venue table card cropped out | panel 972×488 |
+| headline | Keep the food close to the action. | M 72, white |
+| support | Nobody should choose between lunch and the big shot. | I 40, white |
+| fact (proof band) | Ours: a hosted spread, set out for guests. | I 36, navy on site blue · **EV-tripnerd-007** |
+| cta | Next: the exit → | M 40, navy on a white pill |
+
+### c5 "4 · THE EXIT" (navy, type-only). No proof band, by design
+| Role | Text | Face, px, colour |
+|---|---|---|
+| numeral + label | 4 / 4 · THE EXIT | M 140 / M 34, logo blue |
+| headline | Plan the ride home before anyone arrives. | M 108, white |
+| support | Know how every guest gets back, and when. | I 50, white |
+| cta | Next: your checklist → | M 40, navy on a white pill |
+
+### c6 YOUR CHECKLIST (navy)
+| Role | Text | Face, px, colour |
+|---|---|---|
+| label (header slot) | YOUR CHECKLIST | M 34, logo blue |
+| headline | Before you host, answer four questions. | M 68, white |
+| label / support | 1 · ARRIVAL / Who meets them? | M 30, logo blue / M 48, white |
+| label / support | 2 · THE VIEW / Where do they watch? | same |
+| label / support | 3 · FOOD / Where’s the food? | same |
+| label / support | 4 · THE EXIT / How do they get home? | same |
+| cta | Save this checklist | M 42, navy on a white pill |
+
+### c7 CLOSE (site blue)
+| Role | Text | Face, px, colour |
+|---|---|---|
+| logo | real PNG, top-left | 345 px wide |
+| headline | Hosting clients or bringing friends? | M 100, navy |
+| support | TripNerd hosts guests at golf tournaments and other big events. | I 46, navy · **EV-tripnerd-004** |
+| cta | Plan yours · link in bio | M 48, navy on a white pill (bio link: **BC-19 pending**, EV-tripnerd-005) |
+
+**Departures from the brief's text (typographic only, no wording change):**
+1. "Where's the food?" is set with a typographic apostrophe (Where’s), as in v1.
+2. On c6 each moment label and its question are set as two lines (label above, question below), as in v1; the words are the brief's.
+3. "→" is the arrow glyph and "·" the middle dot, as written in the brief.
+
+No word was changed, added or dropped. Nothing names the event; "THE PLAYERS", "handled", "transport" and "tripnerd.com" appear on no card (`qc/v2/facts-v2.json`, BC-55 machine pass).
+
+### Caption v2 (verbatim from the brief; not approved; TripNerd's approver signs off before anything posts)
+
+> Hosting clients at a golf tournament? Four moments make or break a hosted day: arrival, the view, the food and the exit.
+>
+> Swipe for what to plan at each one, and save the checklist for your next hospitality day. Bringing friends instead of clients? Same four moments.
+>
+> Want help with yours? Plan it with TripNerd, link in bio. Follow @tripnerd for more from the events.
+>
+> #tripnerd #spreadtheNERD #golf #corporatehospitality
+
+### Alt text v2 (one per card; paste into Instagram's advanced settings)
+
+| Card | Alt text |
+|---|---|
+| c1 | Blue graphic. The TripNerd logo sits top left. Below it, a photo of a white tablecloth printed with the TripNerd Fan Experiences logo. Large navy text: "Hosting clients at a golf tournament?" Then: "Four moments make or break a hosted day. Arrival, the view, food, the exit." A navy button reads "Swipe". |
+| c2 | Navy graphic headed with a large blue numeral 1 and "1, Arrival" beside the TripNerd logo. A photo shows a TripNerd-branded table with laptops, clipboards and sunflowers, and three staff wearing lanyards, seen from the chest down. White text: "Give guests one place to arrive. One check-in point. One host who knows their name." A blue band reads "Ours: a TripNerd-branded table, with staff on hand." A white button reads "Next: the view". |
+| c3 | Navy graphic headed with a large blue numeral 2 and "2, The view" beside the TripNerd logo. Large white text: "Seat guests where the moment happens. Know which hole matters, and get there before the leaders do." A blue band reads "Ours: at the island-green 17th, guests watched from the rail." A white button reads "Next: food". |
+| c4 | Navy graphic headed with a large blue numeral 3 and "3, Food" beside the TripNerd logo. A photo shows a dessert table: fruit and berry tartlets on a platter, doughnuts and dessert cups. White text: "Keep the food close to the action. Nobody should choose between lunch and the big shot." A blue band reads "Ours: a hosted spread, set out for guests." A white button reads "Next: the exit". |
+| c5 | Navy graphic headed with a large blue numeral 4 and "4, The exit" beside the TripNerd logo. Large white text: "Plan the ride home before anyone arrives. Know how every guest gets back, and when." A white button reads "Next: your checklist". |
+| c6 | Navy checklist graphic with the TripNerd logo and "Your checklist" at the top. White text: "Before you host, answer four questions." Four labelled questions separated by thin blue lines: Arrival, "Who meets them?"; The view, "Where do they watch?"; Food, "Where’s the food?"; The exit, "How do they get home?" A white button reads "Save this checklist". |
+| c7 | Blue graphic with the TripNerd logo top left. Large navy text: "Hosting clients or bringing friends?" Below: "TripNerd hosts guests at golf tournaments and other big events." A white button reads "Plan yours, link in bio". |

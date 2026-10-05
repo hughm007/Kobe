@@ -1,0 +1,91 @@
+{
+ "name": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c1",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/bg_v2/c1-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.32,
+  "pos": "top-left",
+  "xy": [
+   70,
+   79
+  ]
+ },
+ "blocks": [
+  {
+   "role": "headline",
+   "text": "Hosting clients at a golf tournament?",
+   "size": 84,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.4825925925925926
+  },
+  {
+   "role": "support",
+   "text": "Four moments make or break a hosted day.",
+   "size": 44,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.7329629629629629
+  },
+  {
+   "role": "label",
+   "text": "Arrival \u00b7 The view \u00b7 Food \u00b7 The exit",
+   "size": 32,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.8314814814814815
+  },
+  {
+   "role": "cta",
+   "text": "Swipe \u2192",
+   "size": 42,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "chip": true,
+   "chip_fill": [
+    32,
+    40,
+    56,
+    255
+   ],
+   "chip_radius": "pill",
+   "x": 74,
+   "y_frac": 0.8951851851851852
+  }
+ ],
+ "photos": [
+  {
+   "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/photos_v2/tripnerd-hostswrong-C02-H1-feed-portrait-v2-c1-photo.png",
+   "box": [
+    54,
+    241,
+    1026,
+    619
+   ],
+   "radius": 20
+  }
+ ]
+}

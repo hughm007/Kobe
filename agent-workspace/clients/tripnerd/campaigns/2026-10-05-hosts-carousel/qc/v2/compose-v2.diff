@@ -1,0 +1,58 @@
+--- /tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/compose.py	2026-10-05 01:53:54.572804552 +0000
++++ /tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/compose_v2.py	2026-10-05 02:22:47.941371406 +0000
+@@ -5,7 +5,12 @@
+ usage: servicepow_static_compose.py spec.json outdir/
+ Spec: {placement, background:{color|image}, logo:{file,width_frac,pos}, blocks:[
+   {role: headline|support|cta|legal|fact, text, size, y_frac, bold?, chip?, fill?, align?,
+-   chip_fill? [r,g,b,a] (default [0,0,0,200]), chip_radius? int|"pill"}]}
++   chip_fill? [r,g,b,a] (default [0,0,0,200]), chip_radius? int|"pill", x? int}],
++  photos?:[{file, box:[x0,y0,x1,y1], radius?}]}
++v2 patch (TripNerd hosts carousel, 2026-10-05): (d) a background image already at WxH is used as-is (no resample);
++(e) logo.xy [x,y] places the logo at an absolute top-left (overrides pos); (f) photos: pre-sized real photo panels
++pasted 1:1 at box (size must equal the box; no resampling here), recorded in the manifest as role "photo";
++(g) block.x: absolute left edge for a left-aligned block (default safe[0]).
+ Needs Pillow (same .qcvenv pattern as the video toolkit).
+ """
+ import json, sys, hashlib
+@@ -20,7 +25,9 @@
+ def fit_bg(spec,W,H):
+     bg=spec.get("background",{})
+     if "image" in bg:
+-        im=Image.open(bg["image"]).convert("RGB"); s=max(W/im.width,H/im.height)
++        im=Image.open(bg["image"]).convert("RGB")
++        if im.size==(W,H): return im   # (d) exact-size plate: no resample
++        s=max(W/im.width,H/im.height)
+         im=im.resize((int(im.width*s)+1,int(im.height*s)+1))
+         x=(im.width-W)//2; y=(im.height-H)//2
+         return im.crop((x,y,x+W,y+H))
+@@ -39,6 +46,13 @@
+     safe=(int(W*sl),int(H*st),W-int(W*sr),H-int(H*sb))
+     img=fit_bg(spec,W,H); d=ImageDraw.Draw(img,"RGBA")
+     manifest={"placement":pk,"size":[W,H],"safe":list(safe),"elements":[]}
++    for ph in spec.get("photos",[]):   # (f) real photo panels, pre-sized, pasted 1:1
++        pim=Image.open(ph["file"]).convert("RGB"); bx=ph["box"]
++        assert pim.size==(bx[2]-bx[0],bx[3]-bx[1]), f"photo {ph['file']} is {pim.size}, box {bx}"
++        r4=4*ph.get("radius",0); m=Image.new("L",(pim.width*4,pim.height*4),0)   # 4x supersampled corner mask
++        ImageDraw.Draw(m).rounded_rectangle((0,0,m.width-1,m.height-1),r4,fill=255); m=m.resize(pim.size,Image.LANCZOS)
++        img.paste(pim,(bx[0],bx[1]),m)
++        manifest["elements"].append({"role":"photo","box":list(bx),"file":Path(ph["file"]).name})
+     lg=spec.get("logo")
+     if lg:
+         logo=Image.open(lg["file"]).convert("RGBA")
+@@ -47,6 +61,7 @@
+         pos=lg.get("pos","bottom-center")
+         x=(W-lw)//2 if "center" in pos else (safe[0] if "left" in pos else safe[2]-lw)
+         y=safe[1] if "top" in pos else safe[3]-lh
++        if "xy" in lg: x,y=lg["xy"]   # (e)
+         img.paste(logo,(x,y),logo)
+         manifest["elements"].append({"role":"logo","box":[x,y,x+lw,y+lh],"file":Path(lg["file"]).name})
+     for b in spec.get("blocks",[]):
+@@ -64,7 +79,7 @@
+         chip_bgs=[]
+         for ln in lines:
+             tw=d.textlength(ln,font=f)
+-            x=(W-tw)/2 if b.get("align","center")=="center" else safe[0]
++            x=(W-tw)/2 if b.get("align","center")=="center" else b.get("x",safe[0])   # (g)
+             if b.get("chip"):
+                 cbox=[x-20,y-10,x+tw+20,y+b["size"]+12]
+                 rad=b.get("chip_radius",10); rad=(cbox[3]-cbox[1])//2 if rad=="pill" else int(rad)

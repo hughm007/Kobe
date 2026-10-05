@@ -1,0 +1,94 @@
+{
+ "name": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c5",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/bg_v2/c5-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.32,
+  "pos": "top-left",
+  "xy": [
+   70,
+   79
+  ]
+ },
+ "blocks": [
+  {
+   "role": "numeral",
+   "text": "4",
+   "size": 140,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "x": 471,
+   "y_frac": 0.05
+  },
+  {
+   "role": "label",
+   "text": "4 \u00b7 THE EXIT",
+   "size": 34,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "x": 601,
+   "y_frac": 0.09888888888888889
+  },
+  {
+   "role": "headline",
+   "text": "Plan the ride home before anyone arrives.",
+   "size": 108,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.27296296296296296
+  },
+  {
+   "role": "support",
+   "text": "Know how every guest gets back, and when.",
+   "size": 50,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.7025925925925925
+  },
+  {
+   "role": "cta",
+   "text": "Next: your checklist \u2192",
+   "size": 40,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "x": 74,
+   "y_frac": 0.8966666666666666
+  }
+ ]
+}

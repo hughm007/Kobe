@@ -1,0 +1,171 @@
+{
+ "name": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c6",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/bg_v2/c6-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.32,
+  "pos": "top-left",
+  "xy": [
+   70,
+   79
+  ]
+ },
+ "blocks": [
+  {
+   "role": "label",
+   "text": "YOUR CHECKLIST",
+   "size": 34,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "x": 471,
+   "y_frac": 0.09074074074074075
+  },
+  {
+   "role": "headline",
+   "text": "Before you host, answer four questions.",
+   "size": 68,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.1811111111111111
+  },
+  {
+   "role": "label",
+   "text": "1 \u00b7 ARRIVAL",
+   "size": 30,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.4003703703703704
+  },
+  {
+   "role": "support",
+   "text": "Who meets them?",
+   "size": 48,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.44333333333333336
+  },
+  {
+   "role": "label",
+   "text": "2 \u00b7 THE VIEW",
+   "size": 30,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.5233333333333333
+  },
+  {
+   "role": "support",
+   "text": "Where do they watch?",
+   "size": 48,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.5662962962962963
+  },
+  {
+   "role": "label",
+   "text": "3 \u00b7 FOOD",
+   "size": 30,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.6462962962962963
+  },
+  {
+   "role": "support",
+   "text": "Where\u2019s the food?",
+   "size": 48,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.6892592592592592
+  },
+  {
+   "role": "label",
+   "text": "4 \u00b7 THE EXIT",
+   "size": 30,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.7692592592592593
+  },
+  {
+   "role": "support",
+   "text": "How do they get home?",
+   "size": 48,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.8122222222222222
+  },
+  {
+   "role": "cta",
+   "text": "Save this checklist",
+   "size": 42,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "x": 74,
+   "y_frac": 0.8951851851851852
+  }
+ ]
+}

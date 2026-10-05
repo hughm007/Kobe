@@ -1,0 +1,63 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    70,
+    79,
+    415,
+    205
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    350,
+    549,
+    852
+   ],
+   "font_px": 100,
+   "text": "Hosting clients or bringing friends?",
+   "contrast": 4.89
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    888,
+    817,
+    1005
+   ],
+   "font_px": 46,
+   "text": "TripNerd hosts guests at golf tournaments and other big events.",
+   "contrast": 4.89
+  },
+  {
+   "role": "cta",
+   "box": [
+    74,
+    1069,
+    640,
+    1129
+   ],
+   "font_px": 48,
+   "text": "Plan yours \u00b7 link in bio",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c7.png",
+ "sha256": "01166693f2c6324c"
+}

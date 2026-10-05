@@ -1,0 +1,74 @@
+{
+ "plates": [
+  {
+   "kind": "logo-plate",
+   "rect": [
+    54,
+    67,
+    431,
+    217
+   ],
+   "color": [
+    88,
+    150,
+    233
+   ]
+  },
+  {
+   "kind": "proof-band",
+   "rect": [
+    54,
+    1045,
+    1026,
+    1177
+   ],
+   "color": [
+    88,
+    150,
+    233
+   ]
+  },
+  {
+   "kind": "photo-panel",
+   "rect": [
+    54,
+    243,
+    1026,
+    685
+   ],
+   "source": "static_hosts/photos_v2/clean2_IMG_1907.png"
+  }
+ ],
+ "logo_box": [
+  70,
+  79,
+  415,
+  205
+ ],
+ "photo": {
+  "source": "static_hosts/photos_v2/clean2_IMG_1907.png",
+  "source_sha256": "743e940253f8f80e80e127a9cdead94be759c38d309cfb60890d44fc2350aa9d",
+  "colour": "Apple Poppy Output Profile (from IMG_2004, sha256 2e9b3662e1ad2b0e) -> sRGB, perceptual",
+  "crop_src_px": [
+   0,
+   1162,
+   1536,
+   1860
+  ],
+  "exclusion_line_y": 1150,
+  "anchor": "bottom",
+  "scale": 0.6328,
+  "panel_px": [
+   972,
+   442
+  ],
+  "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c2-photo.png",
+  "sha256": "9d171a5e777469bafad501e2bc9be668c9b04e61cdd99523f62d487abb62ab35",
+  "box": [
+   54,
+   243,
+   1026,
+   685
+  ]
+ }
+}
