@@ -1809,3 +1809,14 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **Skeptic Pass 1** spawned in isolation (packet scan clean); its verdict is pending transcription.
 - **Next:** STORYBOARD APPROVED (Karl) → SPEND_APPROVER for F6.5. Taylor's originals decide version A or B.
 
+## 2026-10-05 (late): "Door to roar" script v2 for Karl to build in Higgsfield
+- **Karl's choices:** his own arrival-to-roar idea, frames made by hand in Higgsfield, no AI people.
+- **Wrote** `clients/tripnerd/campaigns/2026-10-05-door-to-roar-reel/script-v2-higgsfield.md`:
+  - 15 beats; 7 generated empty-scene frames, each with an image prompt, a video prompt and settings (native 1080p, Seedance 2.5 or Cinema Studio 3.0);
+  - real stills for the table and food, and real V16/V24 for the people, the main event and the roar;
+  - editor specs and a reject checklist;
+  - the "best trip ever" line only as a real guest's words, with a release.
+- Added a slim Bible; v1 marked superseded.
+- The isolated Skeptic Pass 1 on the script is running.
+- The Group Chat Reel stays parked at storyboard v3.
+

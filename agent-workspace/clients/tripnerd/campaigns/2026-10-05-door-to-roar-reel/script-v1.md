@@ -3,11 +3,13 @@ title: "TripNerd — 'Door to roar' Reel: script v1, shot list and Grok prompts"
 type: brief
 client: tripnerd
 owner: Karl
-status: draft
+status: superseded
 created: 2026-10-05
 updated: 2026-10-05
 tags: [reel, video, script, shot-list, grok, arrival, real-footage]
 ---
+
+> **Superseded for the build by [`script-v2-higgsfield.md`](script-v2-higgsfield.md) (2026-10-05).** The §3 shot list for TripNerd's next event and the §4 questions still apply.
 
 # "Door to roar": script v1
 
