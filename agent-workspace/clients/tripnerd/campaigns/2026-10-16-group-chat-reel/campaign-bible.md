@@ -12,7 +12,7 @@ tags: [campaign, bible, full, reel, video, instagram, chat-thread, trial-reel, o
 
 # TripNerd — "The Group Chat" Reel (FULL Bible)
 
-> **Approval status: CONCEPT APPROVED. Storyboard v1 BLOCKED at Skeptic Pass 1 (2026-10-05); repairs to storyboard v2 pending Karl's two decisions.**
+> **Approval status: CONCEPT APPROVED. Storyboard v1 BLOCKED at Skeptic Pass 1 (2026-10-05); storyboard v2 built with every flagged repair; fresh isolated Skeptic Pass 1 on v2 in progress.**
 > - The storyboard is built (visual frames plus §6).
 > - Skeptic Pass 1 is in progress (§14).
 > - **Next gate: STORYBOARD APPROVED (Karl, APPROVER), then the SPEND_APPROVER gate for one generated shot (F6.5).**
@@ -125,6 +125,41 @@ Frames: `scratchpad/group_chat/frames/group-chat-v1-F*.png` (not committed). Bui
 
 **Version B** (the clips miss Fri 9): F1–F8, then F12, with F5's line B. No line promises a seat the video doesn't show.
 
+### Storyboard v2 (2026-10-05): repairs to the Pass 1 findings. **This supersedes the v1 table above wherever they differ**
+
+| Finding | v2 change |
+|---|---|
+| S4 F8 "Lunch? Already out." | Super is EV-007 verbatim: "Ours: a hosted spread, set out for guests." |
+| S3 hotel promise (F5) | F5 is now "...where do we even watch from??", answered by F9. No hotel line anywhere |
+| S3 F9 "This is where you sit." | Super is EV-006 verbatim: "Ours: at the island-green 17th, guests watched from the rail." |
+| S3 version B (AI fairway the only golf) | **Version B removed** (Karl: hold until the clips arrive) |
+| S2 "golf trip" reads as playing golf; "this spring" dates it | F1: "Golf tournament. We going?" Group name: "Tournament crew". No season |
+| S2 F6.5 framing and trust (AI label) | **F6.5 cut** (Karl). F6 match-cuts to F7. The Reel has no AI and no label |
+| S2 F7 blur patches on a proof photo | F7 uses the **raw, unretouched IMG_1907**, cropped at y ≥ 1430: below every face and below every scrub pad. Colour correction only. Motion is a pan of the crop window (scale 1.0, no zoom) |
+| S2 F7/F8 push-ins enlarge phone photos | F7: pan only. F8: push capped at ≤114% (the source-pixel limit at scale 0.876) |
+| S2 F4/F12 placement | Supers are left-aligned with a code assertion: bottom ≤ 80% of height, right edge ≤ x 950. Chat bubbles kept clear of the right UI column. F12 bubble is now visible (blue, navy text) |
+| S2 F12 EV-005 | Still open: needs the BC-19 phone receipt |
+| S2 F9–F11 Pass 2 items | Carried to Pass 2: ≥1080p after the crop, no identifiable player/leaderboard/marks, guests unidentifiable, commercial-use question for spectator video (added to TripNerd's questions) |
+| S1 "Seen by" wording | Now "Read by 3". Pings are original synthesised tones |
+
+**Timing v2 (19.5 s):**
+- F1 0–1.2
+- F2 1.2–2.8
+- F3 2.8–3.6
+- F4 3.6–5.0
+- F5 5.0–6.4
+- F6 6.4–7.4
+- F7 7.4–9.9
+- F8 9.9–12.2
+- F9 12.2–14.7
+- F10 14.7–16.1 (calm, ≥1.4 s)
+- F11 16.1–17.9
+- F12 17.9–19.5
+
+**§10 routing update:** F6.5 is cut, so **no Higgsfield generation and no spend** in this campaign. The SPEND_APPROVER gate is N/A.
+
+**Cross-campaign flag:** the C02 and C03 carousels use the scrubbed working copies of IMG_1901/1907 (blur patches on bottles and cups). The same S2 proof-integrity point applies to them at their gates. Fix: re-crop from the raw originals below the scrub pads, or accept the S2 explicitly.
+
 ## 9. Brand and product fidelity (COMPOSITE marking)
 
 | Shot | Identity-bearing element | Marking |
@@ -216,5 +251,7 @@ None open.
 | 2026-10-05 | Higgsfield limited to one labelled bridge shot (F6.5): no people; proof shots stay real | Karl (APPROVER) |
 | 2026-10-05 | Depth FULL; §1/§2 inherited; §5 and §7 N/A (no spoken lines, no generated people) | Claude (director) |
 | 2026-10-05 | "Seen by 3" (not 4): Mike plus three friends. Emoji dropped from rendered text (no colour-emoji font) | Claude (director) |
+| 2026-10-05 | Karl: cut F6.5 (match-cut instead) and hold the Reel until the 17th-hole clips arrive (no version B) | Karl (APPROVER) |
+| 2026-10-05 | Storyboard v2 built; fresh isolated Skeptic Pass 1 spawned on v2 | Claude (director) |
 | 2026-10-05 | Skeptic Pass 1 on storyboard v1: BLOCK (S4 F8 'Lunch'; S3 hotel promise, 'This is where you sit', version B with AI fairway as the only golf). Storyboard gate not reached; repairs routed to v2 | Claude (director) |
 | 2026-10-05 | F7/F8 crops narrowed so they stay below the face exclusion line (the guard tripped on the first attempt) | Claude (director) |
