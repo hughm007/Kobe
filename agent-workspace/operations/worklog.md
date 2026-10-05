@@ -1834,4 +1834,5 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **Blocked:** Higgsfield's CDN returns 403 from the container, so generated video can't be pulled here.
 - **Posting gates:** Jason's written OK for the AI actor; venue, photo and consent OKs; the "AUGUSTA" auto-reply live with a DM owner; the course-passes scope; the AI label. The isolated Skeptic Pass 3 is running.
 - **Records:** `clients/tripnerd/campaigns/2026-10-book-it-now-augusta/` (Bible, auto-reply setup, asks for TripNerd (NOT SENT), QC receipts); EV-tripnerd-009 in the register.
+- **Update:** the isolated Skeptic Pass 3 BLOCKED Book It Now v1. Its 3 × S4 are TripNerd gates: the AI-actor exception, the auto-reply live, consent. Built v2 with all fixable items: dropped the banner shot (blur blocks, venue sign, look-alike cut); mask-based phone composite; reply held about 3.5 s; Augusta cue at 0 s; on-screen independence line; softer beds; fuller keyboard. Sent v2 (17.8 MB). The Skeptic re-runs once TripNerd answers.
 
