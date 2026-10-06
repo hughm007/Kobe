@@ -1894,3 +1894,31 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - **INFERENCE: V23 and V24 are the 720×1280 copies** (the same batch, and Topaz upscales exist for them). Taylor's originals are still owed.
   - **Karl can confirm V23** with a local Get Info.
   - **Wrote** `clients/tripnerd/chatgpt-footage-finder-prompt.md`: the paste-ready prompt for ChatGPT (folder, map, naming, a first task that tests whether it can actually see media, the rules).
+
+## 2026-10-06 (later): R01 ChatGPT build prompt fact-checked and rewritten
+- **Karl's ask:** Grok's ChatGPT assembly brief for R01 ("Two ways to watch the 17th", posts Wed 7 Oct at 12 PM) rewritten so ChatGPT can build a client-ready Reel in one pass. Client approval needed today.
+- **Karl's decisions:** cut from the native V23/V24, logging the "720p copies acceptable for this item" override; drop both AI scenery bridges for real whips. The Reel has no AI and no label.
+- **Fact-check fixes:**
+  - "Lunch" → "Food + open bar inside" (tripnerd.com wording, EV-004 evidence);
+  - the H3 stat now reads "An estimated…" (golf.com and Wikipedia range from 70k to 150k);
+  - B07 is 1.25 s (the brief broke its own 1.2 s text floor);
+  - B08 comes from V24 (V16 is 404×720);
+  - the Camera Roll ban widened to 13.40–15.30;
+  - the H2/H3 variants reordered so no footage repeats;
+  - caption claims fixed ("lunch and the AC on" removed);
+  - fonts and colours brought back to the brand guide.
+  - The Meta Ad Library references are UNVERIFIED (facebook.com blocked).
+- **ChatGPT-specific hardening:**
+  - check ffmpeg first; ffprobe evidence;
+  - look at every beat before building;
+  - PIL text with uploaded TTFs;
+  - frame duplication, never interpolation;
+  - a PASS/FAIL self-check;
+  - a contact sheet for the client;
+  - a review copy under 9 MB so our gate can run (the Drive connector can't pull files over 10 MB).
+- **Records:** `clients/tripnerd/campaigns/2026-10-04-launch-reels/chatgpt-build-prompt-R01-v2.md` (fact-check table, upload checklist, prompt, caption, approval message NOT SENT, posting gates); launch-reels Bible §16 row; tracker R01 row.
+- **Open:**
+  - TripNerd approver still unnamed;
+  - Karl's phone watch;
+  - our QC and dual gate on the ChatGPT export;
+  - TripNerd's exact brand blue (#2ea3f2 vs #5896E9).

@@ -533,6 +533,7 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 ## 16. Decision log
 | Date | Decision | By |
 |---|---|---|
+| 2026-10-06 | R01 rebuilt as "Two ways to watch the 17th" (rail vs suite), built by ChatGPT from Grok's brief, fact-checked into `chatgpt-build-prompt-R01-v2.md`. **Karl:** cut from the native V23/V24 (not the Topaz `_topaz1080` upscales), which logs the override **"720p copies acceptable for this item"**; drop both AI bridges in favour of real whips, so there's no AI and no label. **Copy fixes:** "Food + open bar inside" (tripnerd.com wording) replaces "Lunch…"; H3 stat now reads "An estimated…"; B07 is 1.25 s (the 1.2 s text floor); B08 comes from V24 0.10–2.00 (native V16 measures 404×720); the Camera Roll ban is widened to 13.40–15.30. Fonts and colours follow the brand guide (Montserrat/Inter, #202838/#18A0F0); Wyatt's end card is kept as supplied. Posting still needs a named TripNerd approver's yes, Karl's phone watch, and our QC on the review copy | Karl (APPROVER) / Claude (director) |
 | 2026-10-04 | Remove "Their Camera Roll" and "VIP Hosting Spot" from the launch queue; acknowledge them as September work | Karl (APPROVER) |
 | 2026-10-04 | Strategy phase skipped: §2 inherits the APPROVER-approved Deck A operating plan (approved 2026-10-03) | campaign-director |
 | 2026-10-04 | Depth FULL, but phases 7/8/10 for generated material are N/A: real footage only, no generation, $0 spend | campaign-director |
