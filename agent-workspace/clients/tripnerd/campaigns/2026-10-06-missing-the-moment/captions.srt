@@ -1,27 +1,23 @@
 1
-00:00:00,300 --> 00:00:01,900
+00:00:00,300 --> 00:00:02,000
 You made it to the event.
 
 2
-00:00:01,900 --> 00:00:04,700
+00:00:02,000 --> 00:00:04,700
 But does it feel like you're actually there?
 
 3
-00:00:07,150 --> 00:00:09,000
-The biggest moment of the day…
+00:00:05,000 --> 00:00:07,200
+The biggest moment of the day...
 
 4
-00:00:09,000 --> 00:00:11,600
-and you're watching it on someone else's phone.
+00:00:07,200 --> 00:00:10,000
+and all you can see is the back of someone's hat.
 
 5
-00:00:11,900 --> 00:00:14,800
+00:00:13,100 --> 00:00:16,000
 Experience it differently, with TripNerd.
 
 6
-00:00:19,250 --> 00:00:20,900
+00:00:17,200 --> 00:00:19,550
 Don't just attend.
-
-7
-00:00:20,900 --> 00:00:23,750
-Make it a trip worth remembering.

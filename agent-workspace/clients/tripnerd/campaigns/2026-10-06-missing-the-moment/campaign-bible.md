@@ -329,3 +329,49 @@ VO2 now ends (8.82s) before the cut to the clear green, so "back of someone's ha
 This session never called Seedance or upscale. The source is unknown (another user or session on the same Higgsfield account?). Owner to confirm.
 
 **Status:** owner review (first-artifact rule). The dual gate runs on the locked cut. NOT CLIENT READY.
+
+---
+
+## v6: slower, continuous opening (2026-10-06)
+
+**Owner note (verbatim):** "Seems rushed. Try to like slow down. The clips or just don't have so many cuts like in the beginning when it's the guy in the crowd like just don't have any cuts just have him waiting there and chilling and then something big happens and he's just trying to look around everyone's clapping you can't really see and then show like the angle he has of a bunch of people in front of him"
+
+**Change:** the 0–8s opening is now ONE uncut take. It replaces the v5b opening cuts (o1 + hands).
+- Source: Kling 3.0 pro, 10s, sound on, job f9d556b4-32e3-4239-bbad-d0b53e7d8b8c (25 credits).
+  - Start frame: b3c7125f (him from behind, waiting).
+  - End frame: c9ed1ecb (hands-up crowd, same angle).
+- Shot QA:
+  - scene-cut detection found 0 cuts;
+  - his face never turns to camera (profile only when he looks around);
+  - crowd audio stays quiet to about 5.0s, then roars;
+  - hands go up from 6.0–6.5s;
+  - he turns and looks around from about 8.5s.
+- Used window: source 1.5–9.5s, giving 3.5s of calm waiting → eruption → him looking around.
+- The cut then goes straight to his blocked POV (wall of people), then the ball composite.
+
+**Timeline (21.9s):**
+
+| Time | Shot |
+|---|---|
+| 0–8.0 | long take |
+| 8.0–10.2 | POV |
+| 10.2–13.0 | ball composite (stays white, stops ~3–7 ft from pin) |
+| 13.0–15.0 | hug |
+| 15.0–15.8 | photo freeze |
+| 15.8–18.0 | him content |
+| 18.0–19.6 | patio |
+| 19.6–21.9 | end card |
+
+The cut count drops from 10 to 8, and the opening has none. Build script: `assemble-v6.sh`.
+
+**v6 masters (21.9s, 1080×1920, 30fps; −14.1 LUFS, TP −1.0 dBFS):**
+- ASR of the first 10.5s: VO1 and VO2 verbatim over the crowd roar.
+- CDN copy md5 matches the build.
+- Captioned: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/a2aff897-056d-4a13-876c-fc428ecbd2d3.mp4 (md5 44969110e3a2bf8da2fe6899ca1a3b84)
+- Clean: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/12d4eab3-fbd7-430d-8638-7f805fca72ba.mp4 (md5 eb563925f9b32cb6b074170e99cc2617)
+
+**Spend:** about 511.4 of the 520 cap. Any further generation needs SPEND_APPROVER sign-off.
+
+**Known compromise:** the crowd erupts in the long take before the ball-landing shot. The order reads as reaction → what he missed, so the roar is heard twice (once at the eruption, once on the ball shot).
+
+**Status:** owner review. The dual gate runs on the locked cut. NOT CLIENT READY.
