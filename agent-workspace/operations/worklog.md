@@ -1863,3 +1863,28 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - the `nano_banana_pro` jobs were served as `nano_banana_2`.
 - **Record:** `clients/tripnerd/campaigns/2026-10-book-it-now-augusta/script-ai-previz-v2-realism-stills.md` (job IDs, sizes, exact prompts, spend). Bible §16 row added.
 - **Open:** Karl's pick per frame; then image-to-video on the picks (priced first). All posting gates are unchanged.
+
+## 2026-10-06 (later): TripNerd real footage gathered into one Drive folder for ChatGPT
+- **Karl's ask:** put all of TripNerd's real photos and videos into his new Drive folder "TripNerd real client footage".
+- **Karl's choices:** move rather than copy; include the AI-upscaled clips, clearly labelled.
+- **Read-only inventory first.** It found a library not previously recorded here:
+  - `media/` (5 event folders: 185 TN_ photos, 25 TN_ videos), uploaded 2026-10-06 01:36 UTC;
+  - `media-upscaled/` (4 Topaz `_topaz1080` clips);
+  - 30 Augusta IMG_ photos loose in the root.
+- **Done in Drive:**
+  - moved `media` → "Originals by event";
+  - moved `media-upscaled` → "AI-upscaled copies (Topaz) - NOT originals";
+  - created "Augusta week 2026 - iPhone originals (IMG_)" and moved 29 IMG_ photos into it;
+  - added a README Google Doc.
+  - The first README overstated ("nothing is AI-edited", not verified). It was replaced and the first version trashed.
+- **Verified:**
+  - each move returned the new parent;
+  - the root now holds only the left-out files (IMG_2041 at 0 bytes, IMG_2446, IMG_2447, IMG_8378, the unidentified .mov, the Slide4 PNG);
+  - the README content was read back.
+- **Left out:** the files not clearly TripNerd's (listed in `clients/tripnerd/footage-drive-location.md`).
+- **Open:**
+  - check V23 and V24 resolution with ffprobe (might be Taylor's originals; would unblock R01, C03 and the Group Chat);
+  - check the same-size possible duplicates;
+  - re-upload IMG_2041;
+  - Karl to connect ChatGPT through a separate Google account (whole-Drive exposure otherwise) and decide on guest-photo upload (consent);
+  - update the Grok knowledge file §11 footage index when the next refresh is due.
