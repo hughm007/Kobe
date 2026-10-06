@@ -1928,3 +1928,7 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - a clean no-text export, text PNGs and a timing CSV for Wyatt's polish pass;
   - B04 re-described.
   - Bible §16 row added.
+- **R01 ChatGPT kit v2.3 (same day):** a downloadable `TN_R01_ChatGPT_kit.zip`, 424 KB, sha256 `c8e90912…42c2`. It holds `START-HERE.txt`, `PROMPT_for_ChatGPT.txt`, `11_ENDCARD.png`, Montserrat-ExtraBold and Inter-Medium.
+  - **End card:** the committed logo file (`1c4996e5…caa51`), unaltered, on #5896E9 (logo box x 190–830, y 620–856).
+  - **The two videos are excluded:** the Drive connector caps downloads at 10 MB. Karl attaches them from Drive in ChatGPT by their original names, and the prompt now recognises those names and rejects `topaz` files.
+  - **Rebuild:** scratchpad `r01_kit/`. Inter comes from apt `fonts-inter`; Montserrat from the system font.

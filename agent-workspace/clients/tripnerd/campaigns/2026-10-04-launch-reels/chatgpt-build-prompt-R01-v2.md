@@ -18,6 +18,7 @@ tags: [reel, r01, chatgpt, build-prompt, the-17th]
 - **Native clips.** Cut from the native V23 and V24, not the Topaz upscales. This logs the override "720p copies acceptable for this item".
 - **Drop both AI bridges.** Use real-footage whips.
 - **The Reel contains no AI.** There's no AI label and no disclosure line.
+- **v2.3:** a downloadable kit (prompt, end card built from the real logo file, fonts). The videos are attached from Drive by their original names.
 - **v2.2:** set line breaks and a 64 px size for every string, measured with Montserrat ExtraBold. That fixes the H3 line (it can't fit in 2 lines) and the hook's lone "17th".
 - **v2.1 (6 Oct, later):** end card 2.00 s (17.25 s total), H2/H3 required for Trial Reels, a clean export for Wyatt's polish pass, B04 re-described.
 
@@ -38,7 +39,7 @@ tags: [reel, r01, chatgpt, build-prompt, the-17th]
 | Caption "with lunch and the AC on", "everybody ends up at the rail" | Not on record | "food and an open bar", "you'll want to be at the rail" |
 | Alt line "Most fans watch from the stands. This is where TripNerd puts you." | It generalises about other fans, and implies a guaranteed seat | Rewritten (§4) |
 | Ban on V24 13.55–15.30 (the Camera Roll overlap) | Our record shows the Camera Roll cut used V24 13.4–14.9 | Ban widened to **13.40–15.30** |
-| Gold #e6a310, navy #07283d, Poppins | Not in TripNerd's brand record. The C02 carousel (Thu 8) and the client-approved September end card use Montserrat ExtraBold, Inter, navy #202838 and blue #18A0F0. #2ea3f2 is widely used as the default accent of the Divi WordPress theme ([Divi Engine](https://diviengine.com/2-things-you-should-change-on-every-divi-site-you-build/)), so it may be a theme default rather than a chosen brand colour (UNVERIFIED for tripnerd.com, which is blocked from here) | Montserrat ExtraBold + Inter, navy #202838, #18A0F0 underline. **Wyatt's end card (#2ea3f2) is kept as supplied for tomorrow.** Ask TripNerd for their exact brand blue |
+| Gold #e6a310, navy #07283d, Poppins | Not in TripNerd's brand record. The C02 carousel (Thu 8) and the client-approved September end card use Montserrat ExtraBold, Inter, navy #202838 and blue #18A0F0. #2ea3f2 is widely used as the default accent of the Divi WordPress theme ([Divi Engine](https://diviengine.com/2-things-you-should-change-on-every-divi-site-you-build/)), so it may be a theme default rather than a chosen brand colour (UNVERIFIED for tripnerd.com, which is blocked from here) | Montserrat ExtraBold + Inter, navy #202838, #18A0F0 underline. **Kit v2.3 end card: the real logo file on #5896E9 (the brand guide's logo blue).** Wyatt's #2ea3f2 card can be swapped in. Ask TripNerd for their exact brand blue |
 | Six Meta Ad Library references (pacing models) | UNVERIFIED: facebook.com is blocked from here. The pacing they describe (hook in 2 s, layered proof, reveal around 12 s, brand end) is standard and is kept | Kept out of the build prompt; ChatGPT can't watch them anyway |
 | "Normalise peaks to about −3 dBFS" | Instagram plays at about −14 LUFS; peak normalising alone leaves the loudness unpredictable | −14 LUFS integrated, true peak ≤ −1 dBTP |
 | End card held for 3.75 s | Watch time is one of Instagram's three main ranking signals (Adam Mosseri, Jan 2025). A long static ending invites a scroll before the loop | **End card 2.00 s; the Reel is 17.25 s.** The roar fades across the end card so the loop back into B01's roar feels continuous |
@@ -46,19 +47,26 @@ tags: [reel, r01, chatgpt, build-prompt, the-17th]
 | B04 described as a reaction "on the roar" | Our footage log puts V23 24 s at the walk out onto the balcony (view of the island green), filmed on a different day from the V24 roar | B04 is "the view opens"; no roar expected in the sound |
 | ChatGPT is the final finisher | ChatGPT puts the cut together but can't watch the result and refine it the way an editor would | ChatGPT also exports a **no-text clean cut, the text PNGs and a timing sheet**, so Wyatt can do a 20-minute polish in CapCut or Edits |
 
-## 2. Before pasting: what Wyatt uploads to ChatGPT
+## 2. How to hand it to ChatGPT (kit v2.3)
+**Kit** `TN_R01_ChatGPT_kit.zip` (sent in the Claude chat; rebuild with the steps in the worklog). It contains:
+- `START-HERE.txt`;
+- `PROMPT_for_ChatGPT.txt`;
+- `11_ENDCARD.png`: the committed logo file (sha256 `1c4996e5…caa51`) composited, unaltered, onto #5896E9, the brand guide's logo blue. Logo box x 190–830, y 620–856;
+- `Montserrat-ExtraBold.ttf` and `Inter-Medium.otf` (both under the SIL Open Font Licence).
 
-Everything is in Drive → "TripNerd real client footage", plus Wyatt's Mac.
+**The two videos aren't in the zip.** The Drive connector refuses downloads over 10 MB, so Karl attaches them from Drive in ChatGPT:
+- `TN_2026-03-14_the-players_V24.mp4` (12.2 MB)
+- `TN_2026-03-12_the-players_V23.mp4` (18.3 MB)
+- Location: Drive → TripNerd real client footage → Originals by event → the-players.
+- No renaming is needed; the prompt recognises the original names. **Never the `_topaz1080` files.**
 
-| Upload as | Where it comes from | Required |
-|---|---|---|
-| `V24.mp4` | Originals by event / the-players / `TN_2026-03-14_the-players_V24.mp4` (12.2 MB) | Yes |
-| `V23.mp4` | Originals by event / the-players / `TN_2026-03-12_the-players_V23.mp4` (18.3 MB) | Yes |
-| `11_ENDCARD.png` | Wyatt's `reel-oct7/frames/` (blue background + the original logo) | Yes |
-| `Montserrat-ExtraBold.ttf`, `Inter-Medium.ttf` | Google Fonts (free, open licence) | Yes |
-| `01_HOOK…09_PAYOFF.png`, `STORYBOARD.jpg` | Wyatt's frames folder | Optional, reference only |
+**Steps in ChatGPT:**
+1. New chat.
+2. **+** → upload `TN_R01_ChatGPT_kit.zip`.
+3. **+** → "Add from Google Drive" (or download then upload) → the two video files.
+4. Paste the contents of `PROMPT_for_ChatGPT.txt`, then send.
 
-**Don't upload** the `_topaz1080` files, V16, or the AI placeholder PNGs.
+**Wyatt's own end card** (#2ea3f2) can replace `11_ENDCARD.png` under the same file name, but then the logo box coordinates in the prompt must change.
 
 ## 3. The prompt (paste into ChatGPT as one message, with the files attached)
 
@@ -69,12 +77,13 @@ THE REEL IN ONE LINE
 "Two ways to watch the 17th": the hush and the roar at the island-green 17th, seen from TripNerd's suite (first at the rail, then inside), ending on TripNerd's brand. 17.25 seconds, built to loop. Real footage only. No AI-generated or AI-enhanced frames anywhere.
 
 FILES ATTACHED
-- V24.mp4: real footage, the view of the 17th from TripNerd's suite (hush, putt, roar)
-- V23.mp4: real footage, a walk through TripNerd's suite out to the rail
-- 11_ENDCARD.png: the end card, blue background with the real TripNerd logo already placed
-- Montserrat-ExtraBold.ttf and Inter-Medium.ttf
-- Optional reference PNGs: layout reference only. Never cut video from a still.
-If V24.mp4, V23.mp4, 11_ENDCARD.png or either font is missing, stop and tell me which.
+1. TN_R01_ChatGPT_kit.zip. Unzip it first with Python. It contains:
+   - 11_ENDCARD.png: the end card, TripNerd blue (#5896E9) with the real TripNerd logo already placed (logo box x 190-830, y 620-856)
+   - Montserrat-ExtraBold.ttf and Inter-Medium.otf (the fonts)
+   - PROMPT_for_ChatGPT.txt (a copy of these instructions) and START-HERE.txt (ignore)
+2. TN_2026-03-14_the-players_V24.mp4, called "V24" below: real footage, the view of the 17th from TripNerd's suite (hush, putt, roar).
+3. TN_2026-03-12_the-players_V23.mp4, called "V23" below: real footage, a walk through TripNerd's suite out to the rail.
+Never use any file with "topaz" in its name (those are AI-upscaled). If V24, V23, the end card or either font is missing, stop and tell me which.
 
 STEP 0: TOOLS AND SOURCES (report the results)
 1. Run `ffmpeg -version`. If it isn't available, use `imageio_ffmpeg.get_ffmpeg_exe()`. Tell me which one you used.
@@ -129,7 +138,7 @@ STEP 5: TEXT (render every line as a transparent PNG with Python PIL and the att
 - Hook and labels: Montserrat ExtraBold, 64 px, line height 78 px, white text on a navy #202838 rounded pill at 85% opacity, 24 px corner radius, 28 px side padding. Left edge of the pill at x = 72, top of the text block at y = 400. Use EXACTLY the line breaks given below (shown as " / "); don't auto-wrap. Every line fits: the widest is 774 px at 64 px, and the space inside the pill is 832 px.
 - Hook (B01) only: a 4 px #18A0F0 underline under the last hook line. The hook is ON from the very first frame (no fade-in), because it is the cover. Under the hook, "Ponte Vedra Beach, FL" in Inter Medium 34 px, white, on a navy pill at 70%. In H2 and H3, the first line is also ON from the very first frame.
 - Every other line: 6-frame fade in, 4-frame fade out, on screen for its whole beat (at least 1.2 s).
-- End card (B11): use 11_ENDCARD.png exactly as supplied. NEVER redraw, recolour, trace, move or regenerate the logo. Add "Trip like a Nerd." in Montserrat ExtraBold 88 px (736 px wide) and "Which way are you watching?" in Inter Medium 44 px. Both navy #202838, centred on x = 510 (the middle of the safe zone), inside the safe zone, not touching the logo. Never put white text on the blue end card.
+- End card (B11): use 11_ENDCARD.png exactly as supplied. NEVER redraw, recolour, trace, move or regenerate the logo. Add "Trip like a Nerd." in Montserrat ExtraBold 88 px (736 px wide) with its top at y = 950, and "Which way are you watching?" in Inter Medium 44 px (627 px wide) with its top at y = 1075. Both navy #202838, centred on x = 510 (the middle of the safe zone), below the logo (which ends at y = 856). Never put white text on the blue end card.
 - EXACT strings with EXACT line breaks (" / " means a new line). Copy them character for character, including " · " (space, middle dot, space):
   B01 hook: Two ways to watch / the 17th
   B01 pin:  Ponte Vedra Beach, FL
