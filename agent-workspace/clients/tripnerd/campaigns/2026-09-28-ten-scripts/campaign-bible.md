@@ -35,7 +35,7 @@ tags: [campaign, bible]
 **Business:** CONFIRMED — premium fan experiences, marquee sports hospitality; buyers decide about a year out; a company hosting eight clients is the higher-ticket B2B track.
 **Product:** CONFIRMED — hospitality suites on the 17th at THE PLAYERS (TPC Sawgrass); a hospitality house on tournament week (photos, Masters week — never named). Package contents UNKNOWN (bar, chef, transfers, hotel: not on file).
 **Pricing / offer mechanics:** UNKNOWN. No price appears in any script.
-**Competitors:** UNKNOWN on file (no competitive picture written).
+**Competitors:** see `../../marketing-plan/2026-10-06-competitive-picture-meta-ad-library.md` (Meta Ad Library, 2026-10-06; mechanisms, not a full market map).
 **Differentiation:** INFERRED — turnkey hospitality (check-in, bar, food, seating) with a real seat on 17; the "Nerd" brand voice.
 **Proof available:** CONFIRMED real suite and house footage; real staff and setups. Reviews/years-in-business exist per the brief but have no Evidence Record → not used in copy.
 **Objections:** INFERRED — "worth the money?", "is it really that close?", "who handles the logistics?".
