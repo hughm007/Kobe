@@ -1,0 +1,24 @@
+
+== <scratchpad>/book_it_now/out/TN-book-it-now-augusta-v3-DRAFT.mp4 ==
+  resolution                         PASS          1080x1920 (min dim >= 1080)
+  fps                                PASS          30.000
+  pix_fmt                            PASS          yuv420p
+  audio-48k-stereo                   PASS          48000 Hz / 2 ch
+  audio-peak/not-silent              PASS          peak -1.5 dB (<= -0.5), mean -18.2 dB (> -45.0)
+  no-frozen-sections                 PASS          none > 0.7s
+  no-black-sections                  PASS          none >= 0.3s
+  motion-gate                        PASS          edge travel 8.91 px/frame >= 1.6
+  hook-motion                        PASS          first 1.2s edge travel 1.01 (floor 1.0, WARN only)
+  no-flash-cuts                      PASS          8 detected cuts; shots < 0.4s: 0 (scene-detect — frame-check before trusting a FAIL on a whip-heavy edit)
+  aspect                             PASS          declared 9:16, got 1080x1920
+  duration                           PASS          declared 21.4s, got 21.42s (+/-2%)
+  expect:Still on the couch?         PASS          found on screen
+  expect:TripNerd hosted             PASS          found on screen
+  expect:Private executive home      PASS          found on screen
+  expect:Daily hospitality           PASS          found on screen
+  expect:Food & drink included       PASS          found on screen
+  expect:Way better than the couch.  FAIL          NOT found in OCR of sampled frames
+  expect:DM                          PASS          found on screen
+  expect:not affiliated              PASS          found on screen
+  contact-sheet                      PASS          <scratchpad>/book_it_now/out/TN-book-it-now-augusta-v3-DRAFT_sheet.jpg
+  OVERALL: FAIL

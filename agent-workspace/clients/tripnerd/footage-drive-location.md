@@ -43,7 +43,7 @@ tags: [footage, google-drive, assets, pointer, augusta, shortlist]
 ## Augusta "watching view" shortlist (scanned 2026-10-06)
 Karl asked for real Augusta course views from where TripNerd guests watch. Every masters-week photo and V25 was reviewed by eye: the 12 dated 2023–2024, all 118 dated 9–12 Apr 2026 (EXIF; 13 files carry a filename date one day later, which looks like the UTC date), and the 29 IMG_ originals. Downloads were byte-exact against Drive.
 
-**Key finding (INFERENCE, strong):** the course seen from TripNerd's hospitality lawn and veranda is most likely **the venue's own course, not Augusta National**. People are playing golf on it in P026, P119, P125, P135, P137, P143 and P146. Never caption these shots as Augusta National or "the Masters". TripNerd confirms the venue (setup checklist item 17).
+**Key finding (OBSERVED + strong inference, [EV-tripnerd-010](evidence-register.md)):** a buffet card in P150 reads "WestLake Country Club | Augusta", and people are playing golf on the course in P026, P119, P125, P135, P137, P143 and P146. West Lake is a separate club about five miles northwest of Augusta National (GolfPass). So the course seen from TripNerd's hospitality lawn and veranda is **West Lake's, not Augusta National**. Never caption these shots as Augusta National or "the Masters". TripNerd confirms the venue (setup checklist item 17).
 
 | Group | Files (Drive id) | What it shows | Gate |
 |---|---|---|---|
@@ -56,6 +56,8 @@ Karl asked for real Augusta course views from where TripNerd guests watch. Every
 | Exclude: marks or TV | P028 (tournament booklets with the logo); P094 and P141 (Private Party banner with flag imagery); P128 (event flag on the house); P045, P046, P162, P164, P165 (shirts with a yellow emblem, unverified mark); P147 (banner art); TV broadcast on screen in P020, P088, P100, P032, P116, P121, P124, P127, P136, P073; P006, P071, P075 (2024 marks); P051, P070 (look like stock or press, ASSUMPTION) | — | Do not use |
 
 Picks were sent to Karl as originals on 2026-10-06 (scratchpad zip, not committed).
+
+**The picks bucket in Drive (Karl, 2026-10-06):** "TripNerd real client footage" → **"Augusta advert picks - watching view (COPIES, internal)"** (folder id `1hEnQ5Yvb4HyTwW1Rtp3IL53eSlk3eqnC`). It holds **19 copies**: the 17 photo picks above, P150 (the macarons used in Book It Now v3) and V25. These are copies; the originals stay in "Originals by event / masters-week". P109 and P115 have the same byte size but different hashes (near-duplicates).
 
 ## Deliberately left out (not clearly TripNerd footage)
 - IMG_2446, IMG_2447 and IMG_8378 (Feb 2025; possibly personal).

@@ -165,6 +165,22 @@ This is the client KB home for TripNerd Evidence Records, in the format set by
 
 ---
 
+## EV-tripnerd-010: the Augusta-week 2026 hospitality venue (observed, not yet confirmed)
+
+| Field | Record |
+|---|---|
+| **Claim** | **Internal only, never on screen.** TripNerd's Augusta-week 2026 hospitality days (9–12 Apr) were at **West Lake Country Club, Augusta**. The course seen from its lawn and veranda is West Lake's, **not Augusta National** |
+| **Used in** | Copy and rights decisions for `campaigns/2026-10-book-it-now-augusta/` v3: no frame or line may imply the course is Augusta National; the venue name is softened out of shot 8 until the venue's OK |
+| **Evidence** | (1) A buffet card in `TN_2026-04-11_masters-week_P150.jpg` (Drive id `1bnjHj5CXPuFxMBmioBkZkzC2K_R0vkDj`) reads "WESTLAKE Country Club \| Augusta" above "Assorted mini desserts" (seen at full resolution, 2026-10-06). (2) People are playing golf on the course in P026, P119, P125, P135, P137, P143 and P146, which can't happen at Augusta National during tournament week. (3) GolfPass: West Lake Country Club is about five miles northwest of Augusta National and takes non-member play in Masters week (https://www.golfpass.com/travel-advisor/articles/augusta-georgia-masters-week-private-golf-clubs-guest-access) |
+| **Date captured** | 2026-10-06 |
+| **Captured by** | OPERATOR (Claude), from TripNerd's own Drive photos |
+| **Evidence status** | **OBSERVED** (one venue card) plus a strong inference. **Not confirmed by TripNerd.** Whether the 2024 photos (P005, P076, P078) are the same venue is unverified |
+| **Scope / expiry** | Supports setup-checklist item 17 answers (1) and (7). Becomes CONFIRMED when TripNerd names the venue in writing. Naming the venue publicly also needs the venue's OK |
+| **Approver** | CLIENT_APPROVER (TripNerd; not yet named) |
+| **Approval status** | Awaiting confirmation |
+
+---
+
 ## Cross-references: earlier Evidence Records (not renumbered)
 
 These were filed before this register existed, in

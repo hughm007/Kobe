@@ -1,0 +1,111 @@
+{
+ "master": "TN-book-it-now-augusta-v3-DRAFT.mp4",
+ "sha256": "48f60e39626c96d9b3e270a53ffad501087849e095f7eb067d92eecbd96c4497",
+ "frames": 642,
+ "duration_s": 21.4,
+ "timeline": [
+  [
+   "b1",
+   0.0,
+   2.2
+  ],
+  [
+   "b2",
+   2.2,
+   3.8
+  ],
+  [
+   "b3",
+   3.8,
+   7.8
+  ],
+  [
+   "b4",
+   7.8,
+   9.0
+  ],
+  [
+   "b5",
+   9.0,
+   10.8
+  ],
+  [
+   "b6",
+   10.8,
+   12.6
+  ],
+  [
+   "b7",
+   12.6,
+   14.4
+  ],
+  [
+   "b8",
+   14.4,
+   16.0
+  ],
+  [
+   "b9",
+   16.0,
+   18.4
+  ],
+  [
+   "b10",
+   18.4,
+   21.4
+  ]
+ ],
+ "captions": {
+  "b5": "TripNerd hosted",
+  "b6": "Private executive home",
+  "b7": "Daily hospitality",
+  "b8": "Food & drink included",
+  "b9": "Way better than the couch."
+ },
+ "real": {
+  "b5": {
+   "box": [
+    192,
+    0,
+    1344,
+    2048
+   ]
+  },
+  "b6": {
+   "box": [
+    0,
+    0,
+    1152,
+    2048
+   ]
+  },
+  "b7": {
+   "box": [
+    384,
+    0,
+    1536,
+    2048
+   ]
+  },
+  "b8": {
+   "box": [
+    300,
+    0,
+    1452,
+    2048
+   ]
+  },
+  "b9": {
+   "box": [
+    192,
+    0,
+    1344,
+    2048
+   ]
+  }
+ },
+ "scrubs": {
+  "b8": "venue dessert card(s) feathered-blurred (names the venue; permission pending)"
+ },
+ "beats_1_4": "unchanged from v2 (build_v2.py)"
+}
