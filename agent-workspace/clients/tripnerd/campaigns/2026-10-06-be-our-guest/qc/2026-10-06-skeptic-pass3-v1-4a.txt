@@ -1,0 +1,36 @@
+SKEPTIC — Pass 3 (BC-23), isolated subagent, Isolation Packet v1
+Master: tripnerd-be-our-guest-v1-4a-master.mp4 sha256 00affd65daeacd79176fe2f04fa06ceb1699f762882370eb21b008ee508235fa
+Run 2026-10-06 (fresh agent; no production reasoning). Transcribed verbatim.
+
+SKEPTIC VERDICT — Pass 3
+Verdict: BLOCK
+Findings:
+- [S4] 8.8–12.0 / client + competitor lens / BC-16 — "TripNerd's got the best spot." is a superlative with no Evidence Record. That fails BC-16 and breaks the client's own approved plan (p.6: "Every number, price or superlative needs a source"). The copy being directed does not substantiate it, and an S4 cannot be accepted under a CONDITIONAL.
+- [S3] whole master / competitor lens / BC-24 — The angle is not rotated against the Sep 26 Reel from ten days earlier. Both open on the island green and both run labels over footage from the same 2026 suite (logo wall, interior, course view). Logo-swap test fails: any 17th-hole suite seller could run this by changing only the super and the end card, because the TripNerd logo wall is on screen for about 1 s and is partly blocked by a guest. Memory test fails: the viewer leaves with the event's island green, not an idea that belongs to TripNerd.
+- [S2] 9.0–11.9 / trust test / competitor lens — While "best spot" is on screen, the text panel itself covers the island green (fully at ~9.8, partly at ~11.0) and a white tent post splits the view. A competitor gets a ready-made screenshot: the claim, a blocked view, and the hole hidden.
+- [S2] 4.6–6.6 / weakest-2s / client lens — The "THE SUITE" beat shows two guests looking down at their phones, with gray carpet filling the lower ~40% of the frame. It then whips (~5.6–6.0) into a motion-smeared pan past guests' backs, a floor fan and a TV. It is the worst stretch of the cut and does not sell a premium suite.
+- [S2] 12.0–15.0 / target customer / BC-19 — The ad presents 2026 footage as "your" POV next to "2027 packages". CLIENT-FACTS only confirm that a "17th Hole VIP Luxury Suite" is listed for 2027. Nothing confirms the 2027 suite is the same structure, position or view.
+- [S2] posting plan / BC-20 — The plan lets the owner add in-app music at posting on a Reel that "may be boosted". Instagram library music is generally not cleared for ads or branded use, so this leaves an uncleared-music path open unless the music is limited to cleared or royalty-free tracks.
+- [S2] whole master / industry-professional lens / BC-20 — CLIENT-FACTS confirm guest consent and that TripNerd owns the footage. They do not confirm that the PGA TOUR event's credential or ticket terms allow commercial use of footage shot at the tournament. On-screen exposure is all small or illegible: tiny, unidentifiable players on course (~2.2, ~14.0), broadcast images on video boards (~2.2, ~11.9) and on the suite TV (~6.5).
+- [S2] 9.0–11.9 / persuasion test — "Where would you sit? Tell us below." offers no defined options, and the edit never sets up a choice (rail vs table, etc.), so the comment prompt behind the engagement goal is vague. Nothing anywhere in the ad shows what a package includes (food, drink, service).
+- [S2] 12.0 / sound-on — Measured, not heard: the location sound drops ~12 dB in ~150 ms at the end-card cut (about -23 to -35 dBFS RMS), then fades to about -49 dBFS by 14.75. The CTA plays in near-silence and the drop may read as a dropout. There is also a +15 dB jump on the 2.42 cut, where the crowd roar starts.
+- [S1] 0.0–2.4 / first-3s — The island green is recognizable from frame 1 but occupies only a small upper-left patch, framed by the door jamb, the navy wall and the carpet. The hook rests on the POV super; the roar at 2.42 rescues the hold. Survivable.
+- [S1] 6.6–8.8 / industry-professional lens — "THE VIEW" never shows the island green. It shows the lake, the small island with a tree and the spectator bank, with a loose plastic strip hanging top-left (~7.8). Anyone who knows the course will see this is not the 17th view the open sets up.
+- [S1] 7.4–7.8 / likeness — A member of the public outside the suite fence (black tank top, face in profile) is identifiable and is not covered by the guest consent. She is incidental, but this matters more if the post is boosted.
+- [S1] 10.6–11.3 / likeness — A child sits on the floor under the guest table, seen from behind and not identifiable. Confirm the standing guest approval covers minors.
+- [S1] 12.0–15.0 / craft — The end-card background replays the same zoomed 17th-green take used at 2.4–4.6. It then pans past a dark post filling the right ~20% of the frame (~13.4–13.6) and ends on a silhouetted head under the CTA, so the close reads as a repeat rather than a final image.
+- [S1] 12.0–15.0 / cheese test — "Be our guest." is a stock hospitality line, and paired with "best spot" it tips the close toward salesy.
+- [S1] 12.0–15.0 / claims — The "®" on the end-card wordmark asserts a federal registration that CLIENT-FACTS do not confirm. It is acceptable only if it is part of the client's real logo file, as the packet states.
+Passed / no finding:
+- File: the sha256 matches the frozen master. 1080x1920, 24 fps, yuv420p, 15.000 s, AAC 48 kHz stereo. -16.6 LUFS integrated, -2.1 dBTP, LRA 10.9 LU. Hard cuts at 2.42, 4.62, 6.62, 8.83 and 12.04, with no flash frames.
+- BC-28: all burned-in text measured inside 29–67% of frame height. POV super 50–64%, labels 61–67%, panel 46–61%, end card 29–56%. Right edges stay at or under 86% of frame width, clear of the Reels right rail.
+- BC-42: all text a viewer must read is clean composited type. Incidental text (logo-wall tagline, recycle bin, video boards, TV) is illegible and irrelevant.
+- BC-17, BC-18 and BC-41: N/A. I saw no synthetic content. The AI-detection test found no synthetic tells, only real phone artifacts: motion blur, exposure shifts and softness from the upscale.
+- BC-21: the TripNerd name, the in-scene logo wall and the end-card wordmark are consistent. None of the banned slogans appear, no event logos are legible, and no alcohol is legible.
+- BC-19 core: "2027 packages: link in bio" matches the destination's 2027 listing.
+Unverified (cannot hear):
+- Whether the location sound carries background music, PA announcements or TV broadcast commentary. Spectral flatness is 0.33–0.52 throughout with no sustained tonal peaks, which fits crowd and ambience but does not prove it.
+- What guests are saying. faster-whisper small.en with VAD found no intelligible speech, only a low-confidence "Thank you." hallucination at 8.8–9.8 (no_speech_prob 0.58).
+- Whether the roar at 2.42 is the 17th shot's own sync sound.
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.

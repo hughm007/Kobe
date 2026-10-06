@@ -56,3 +56,46 @@ Master: 1080x1920 · 24 fps · yuv420p · 48 kHz/2 ch · peak -2.1 dB / mean -20
 hook motion 3.61 · no flash cuts · aspect 9:16 · duration 15.00 vs 15.0 → OVERALL PASS
 ebur128: I -16.6 LUFS, LRA 10.9 LU, true peak -2.1 dBFS (target -16 LUFS / -2 dBTP). ASR (VAD): 0 segments.
 Text band: 7/7 inside y 288-1344, x <= 940. (v1.4 before the limiter fix measured -14.6 LUFS / -0.6 dB — superseded.)
+
+
+=====================================================================
+v1.5 — two payoff variants, identical except the panel line
+  A tn-bog-v1-5-A.mp4 "TripNerd's got the best spot."  sha256 ccee5cc993d23b33be582a0e42a7742e7d6f79ad2f73c9638835aae86747c0c7
+  B tn-bog-v1-5-B.mp4 "This is TripNerd's spot."       sha256 01d10e2c64dacbc25190b28e0eff127b098b70c3b5b020ae4cb6ba83b50b1807
+Harness: qc.py sha256 cd48e66268f9df22dbf2d4fd5bc3c8d5412c7accbcc6c8aa14f8dde9d3caa743 (= canonical).
+
+PREFLIGHT — servicepow_qc.py (rebuilt 2026-08-26)
+  ffmpeg: present · ffprobe: present · numpy: present
+  OCR (expect-strings): UNAVAILABLE — expect checks will be INDETERMINATE
+  self-test planted-freeze detected: yes · planted-black detected: yes · still-clip fails motion gate: yes (score 0.0, density 0.0)
+PREFLIGHT: PASS
+
+Clip gate (conformed segments, `assemble.py --segments`; resolution/fps/no-frozen/no-black/motion/oner all PASS):
+  seg1 e3f7f373… motion 37.16 PASS · seg2 9f82afa6… 34.90 PASS · seg3 d6623a4d… 58.63 PASS ·
+  seg4 ba601a39… 11.05 PASS · seg5 fa304948… 39.28 PASS · seg6 fa76455e… 61.10 PASS   (6/6; ledger written)
+
+Master A and master B (--master --aspect 9:16 --duration 15.0 --endcard 3.0), identical rows:
+  resolution PASS 1080x1920 · fps PASS 24.000 · pix_fmt PASS yuv420p · audio PASS 48000 Hz / 2 ch ·
+  audio-peak/not-silent PASS peak -2.5 dB, mean -19.2 dB · no-frozen PASS · no-black PASS ·
+  motion-gate PASS A 26.81 / B 28.81 · hook-motion PASS 12.04 · no-flash-cuts PASS (scene-detect: 0 detected cuts;
+  actual hard cuts at 3.2 / 4.1 / 5.4 / 7.8 / 12.0 s, shortest shot 0.9 s) · aspect PASS · duration PASS 15.00 s · OVERALL: PASS
+ebur128 (encoded masters): I -16.0 LUFS · LRA 7.7 LU · true peak -2.5 dBFS (both).
+  (First v1.5 render used single-pass loudnorm → -18.3 LUFS; replaced by a measured static gain + limiter. Superseded.)
+
+BC-13 letterbox/pillarbox: ffmpeg cropdetect (limit 24) on all 358 sampled frames → crop=1080:1920:0:0 every frame (A and B). PASS.
+BC-15 expected strings: harness --expect INDETERMINATE (no tesseract). Substitute OCR — RapidOCR (onnxruntime), frames at
+  1.0 / 2.9 / 3.6 / 6.5 / 9.6 / 13.6 s:
+  A: "POV: | you're TripNerd's | guest at The Players" · "THE 17TH" · "TripNerd | FAN EXPERIENCES | THE SUITE" · "THE VIEW" ·
+     "TripNerd's got | the best spot. | Where would you sit — rail or table? | Tell us below." · "TripNerd | Beour | guest. | 2027 packages: link in bio"
+  B: same, panel "This is | TripNerd's spot. | Where would you sit — rail or table? | Tell us below."
+  Expected CTA "2027 packages: link in bio" read exactly in both.
+BC-26 bed (V07 0.5–15.5 s): faster-whisper small.en VAD 0 segments; no-VAD 0 segments. (base.en no-VAD on the full clip: one "You" token.) PASS.
+BC-27 master speech (no declared lines): small.en VAD → 0 segments (A, B). No-VAD → whole-window low-confidence tokens
+  (A "Whoa!"; B "Oh!", "Oh, I see."; no_speech_prob 0.14) — different words on identical audio = hallucination on crowd noise.
+  Isolated suite-guest shot (V23 40.4–42.0, master 4.1–5.4): VAD triggers; small.en "We'll see you next time." (nsp 0.53),
+  base.en "I'm going to go back here." (nsp 0.33) — unrelated texts = unintelligible guest chatter. FLAG for the BC-25 human listen.
+Cut gaps (40 ms RMS, ±0.3 s): body median -21.8 dB; minimum vs body at 3.2 s +1.9 · 4.1 s -3.2 · 5.4 s -1.6 · 7.8 s -0.8 ·
+  12.0 s -3.2 dB; end card 12.0–14.2 s median -2.2 dB vs body. (v1.4a: holes -10 to -16 dB; end card about -13 to -17 dB.)
+Text band (overlays.js, Chromium layout boxes): 8/8 inside y 288–1344, x <= 940 (hook 300–568 · labels 1170–1289 ·
+  ask_a / ask_b 1038–1336 · end 560–1069). Fonts loaded (Inter/Poppins). Wordmark file sha256 11bfe474… (real asset).
+Upload: both masters + contact sheet HTTP 200, media confirmed.

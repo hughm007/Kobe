@@ -17,15 +17,15 @@ const base = `
   body{position:relative;font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased;color:#fff}
   .t{position:absolute}
   .panel{background:rgba(${NAVY},.74);border-radius:30px;box-shadow:0 12px 34px rgba(0,0,0,.30)}
-  .hook{left:72px;top:960px;max-width:860px;padding:30px 40px 34px}
+  .hook{left:72px;top:300px;max-width:860px;padding:30px 40px 34px}
   .pov{font-weight:800;font-size:38px;letter-spacing:6px;color:${GOLD};margin-bottom:10px}
   .hl{font-family:Poppins,sans-serif;font-weight:800;font-size:70px;line-height:1.06;letter-spacing:-.5px}
   .lab{left:72px;top:1170px;padding:20px 32px 22px}
   .lab .bar{width:64px;height:7px;background:${GOLD};border-radius:4px;margin-bottom:14px}
   .lab .tx{font-weight:800;font-size:46px;letter-spacing:9px}
-  .ask{left:72px;top:880px;max-width:860px;padding:30px 40px 34px}
-  .ask .q{font-family:Poppins,sans-serif;font-weight:800;font-size:80px;line-height:1.04;letter-spacing:-.5px}
-  .ask .s{font-weight:600;font-size:44px;margin-top:14px}
+  .ask{left:72px;bottom:584px;max-width:860px;padding:26px 36px 30px}
+  .ask .q{font-family:Poppins,sans-serif;font-weight:800;font-size:66px;line-height:1.04;letter-spacing:-.5px}
+  .ask .s{font-weight:600;font-size:38px;line-height:1.22;margin-top:12px}
   .end{left:96px;top:560px;width:820px}
   .end img{width:380px;display:block}
   .end .bar{width:120px;height:10px;background:${GOLD};border-radius:5px;margin:44px 0 40px}
@@ -36,6 +36,7 @@ const base = `
     background:linear-gradient(180deg,rgba(${NAVY},.45) 0%,rgba(${NAVY},.85) 28%,rgba(${NAVY},.85) 62%,rgba(${NAVY},.50) 100%)}
 `;
 const html = (body) => `<!doctype html><html><head><meta charset="utf-8">${fontsCss}<style>${base}</style></head><body>${body}</body></html>`;
+const ask = (q) => html(`<div class="t panel ask" data-text><div class="q">${q}</div><div class="s">Where would you sit — rail or table?<br>Tell us below.</div></div>`);
 const label = (tx) => html(`<div class="t panel lab" data-text><div class="bar"></div><div class="tx">${tx}</div></div>`);
 const layers = {
   hook: html(`<div class="t panel hook" data-text><div class="pov">POV:</div><div class="hl">you're TripNerd's guest at The Players</div></div>`),
@@ -43,7 +44,10 @@ const layers = {
   balcony: label('THE BALCONY'),
   seventeen: label('THE 17TH'),
   view: label('THE VIEW'),
-  ask: html(`<div class="t panel ask" data-text><div class="q">TripNerd's got<br>the best spot.</div><div class="s">Where would you sit? Tell us below.</div></div>`),
+  // v1.5: bottom-anchored (bottom edge y 1336) so the island green above the panel stays clear.
+  // A = owner's line (superlative: needs an Evidence Record, BC-16); B = no claim.
+  ask_a: ask(`TripNerd's got<br>the best spot.`),
+  ask_b: ask(`This is<br>TripNerd's spot.`),
   end: html(`<div class="t end" data-text><img src="${logo}"><div class="bar"></div><div class="head">Be our<br>guest.</div><div class="cta">2027 packages: <b>link in bio</b></div></div>`),
   scrim: html(`<div class="t scrim"></div>`),
 };
