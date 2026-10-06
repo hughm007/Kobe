@@ -1509,3 +1509,15 @@ computed from averages, two-name caption; worst-case render passes 22/22), appro
 link), edit kit v3 on Higgsfield storage (hash-verified renderer copy). 0 generation credits.
 **Open:** cast two staff + both consents; props (~$40–60) payer; the next Skeptic regression must
 cover the two-judge version before STORYBOARD APPROVED; all earlier role-holder items stand.
+
+## 2026-10-06 — TripNerd: searched Drive for client-approved ads
+
+**Asked:** pull the client-approved TripNerd ads from Google Drive.
+**Found:** none labelled as approved. `16_APPROVED_CREATIVE_LIBRARY.md` says no client-approved
+entries exist. The Growth Plan's September approvals ("Their Camera Roll", "VIP Hosting Spot",
+two carousels) are not in this Drive. What is there: a new `media/` event archive (masters-week
+100+ photos + 2 videos; the-players 13 videos; phoenix-open 7; kentucky-derby 3; daytona 2;
+4 Topaz upscales), the Social Direction deck, and carousel slide 4/6.
+**Did:** pointer register at `clients/tripnerd/assets/2026-10-06-drive-media-register.md`.
+**Open:** where the approved ads live; contact sheet of the media (needs a link share or another
+route; the connector can't preview these files); guest consent and rights for the archive.
