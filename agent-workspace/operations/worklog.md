@@ -1922,3 +1922,9 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - Karl's phone watch;
   - our QC and dual gate on the ChatGPT export;
   - TripNerd's exact brand blue (#2ea3f2 vs #5896E9).
+- **R01 prompt v2.1 (same day):**
+  - end card 2.00 s (17.25 s total);
+  - H2 and H3 required, as Trial Reels;
+  - a clean no-text export, text PNGs and a timing CSV for Wyatt's polish pass;
+  - B04 re-described.
+  - Bible §16 row added.
