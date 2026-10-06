@@ -18,11 +18,11 @@ tags: [campaign, bible, instagram, reel, awareness, real-footage, the-players]
 | **Campaign ID** | 2026-10-06-be-our-guest |
 | **Client** | TripNerd (tripnerd.com) |
 | **Product** | Brand awareness; downstream = The Players hospitality (suite on the 17th). tripnerd.com/events/the-players-championship live, "March 2027 packages available" (CONFIRMED, fetched 2026-10-06) |
-| **Platform** | Instagram Reels, organic first (Trial Reel), 9:16, 1080×1920, 24 fps, 15.0 s (v1.5) |
+| **Platform** | Instagram Reels, organic first (Trial Reel), 9:16, 1080×1920, 24 fps, 16.2 s (v1.6, owner-paced) |
 | **Objective / KPI** | Awareness + engagement: 3-second hold, completion, sends, comments. Targets UNKNOWN (no baseline beyond public plays: Sep 26 = 104, Sep 30 = 137) |
 | **Budget** | 0 generation credits (real footage, no AI) |
 | **Depth** | FULL (new concept family, real people). Phases answered by standing documents recorded as skips in §16 |
-| **Approval status** | **IN PRODUCTION — v1.5 built in two payoff variants (A owner's line / B no superlative), QA1 PASS; dual gate running on frozen v1.5-B.** A is blocked under BC-16 until an Evidence Record exists (C6). Not CLIENT READY: gates, BC-25 human watch, bio link |
+| **Approval status** | **IN PRODUCTION — v1.6 (owner pacing) built in A/B, QA1 PASS; awaiting owner review.** v1.5-B gates: critic HARD FAIL 8.0, Skeptic BLOCK (S3 rotation). Open before CLIENT READY: C6 (A only), C7, C8, C9 (S3), BC-15/BC-33 named acceptance, both gates re-run on the chosen v1.6, BC-25 human watch, bio link |
 
 ## 1. Ground truth (skipped as a fresh run — see client brief, content system, Drive register)
 - Source: TripNerd's own Drive archive `media/` (masters-week, the-players), pulled 2026-10-06, all 13 file sizes matched Drive, bundle stored in Higgsfield (sha256 list in the bundle).
@@ -66,14 +66,44 @@ v1.5: each shot's own location sound with 0.3 s overlapping tails (hook roar 0.6
 |---|---|---|
 | v1.2 (`3e1b64d6…`) | HARD FAIL 6.5 ± 1.5 | [qc/2026-10-06-critic-v1-2.txt](qc/2026-10-06-critic-v1-2.txt) |
 | v1.4a (`00affd65…`) | HARD FAIL 7.3 ± 1.5 — axes AI 9 · hook 7 · human 7 · format 8 · audio 6 · CTA 7; BC-16 FAIL ("best spot", no Evidence Record); BC-19 conditional on the bio link; receipts missing BC-13/15/24/26/32/33; BC-25 outstanding | [qc/2026-10-06-critic-v1-4a.txt](qc/2026-10-06-critic-v1-4a.txt) |
-| v1.5-B (`01d10e2c…`) | PENDING (fresh agent running) | — |
+| v1.5-B (`01d10e2c…`) | HARD FAIL 8.0 ± 1.5 — axes AI 10 · hook 7 · human 7 · format 9 · audio 7 (provisional) · CTA 8; BC-16 OPEN (implied 2027-seat claim); BC-20 PARTIAL ("THE PLAYERS" on cups/hat 4.1–5.4, venue screen 6.0–7.8); BC-33 not run; BC-15 needs named acceptance of the substitute OCR | [qc/2026-10-06-critic-v1-5-B.txt](qc/2026-10-06-critic-v1-5-B.txt) |
 
 ## 14. Skeptic (BC-23)
 | Master | Verdict | Verbatim |
 |---|---|---|
 | v1.2 | BLOCK (2 × S4: placard logo visible frames 0–3 under a mis-tracked patch; consent unknown) | [qc/2026-10-06-skeptic-pass3-v1-2.txt](qc/2026-10-06-skeptic-pass3-v1-2.txt) |
 | v1.4a | BLOCK (S4 BC-16 "best spot"; S3 BC-24 rotation) — transcribed verbatim below | [qc/2026-10-06-skeptic-pass3-v1-4a.txt](qc/2026-10-06-skeptic-pass3-v1-4a.txt) |
-| v1.5-B | PENDING (isolated agent running) | — |
+| v1.5-B | BLOCK (S3 BC-24 rotation vs Sep 26; S2s: event cups, beer can, 2027 suite, footage terms, tiny ball, half-empty look, no hospitality shown) — transcribed verbatim below | [qc/2026-10-06-skeptic-pass3-v1-5-B.txt](qc/2026-10-06-skeptic-pass3-v1-5-B.txt) |
+
+v1.5-B verdict block (verbatim):
+```
+SKEPTIC VERDICT — Pass 3
+Verdict: BLOCK
+Findings:
+- [S3] Whole master / competitor + client lens (BC-24) — The angle is not rotated and the logo-swap test fails. The live Sep 26 Reel already used the island-green open, the same 2026 suite (logo wall, interior, course view) and text labels over the footage, and this master repeats all three. The only parts TripNerd owns are the 0.9 s logo-wall shot, the name in the text and the end card; any 17th-hole suite holder could post this shot for shot with its own name in place of TripNerd's.
+- [S2] 4.1–5.4 "THE SUITE" guest table / client lens — Aluminum cups printed "THE PLAYERS" can be read on the table next to the main guest in the shot. This breaks TripNerd's written rule "No event logos."
+- [S2] 4.1–5.4 / Meta alcohol policy if boosted — A readable Michelob ULTRA can, other beer cans and a guest drinking sit mid-frame. A boost would put a third-party alcohol trademark in TripNerd's paid ad and bring in Meta's alcohol rules (US 21+ age targeting), so the cans need blurring or the boost needs that age limit.
+- [S2] Whole master / BC-19 / trust test / target-customer lens — "This is TripNerd's spot" plus "Where would you sit — rail or table?" plus "2027 packages" suggests 2027 buyers get this exact suite, view and rail-or-table seating. The landing page confirms only a "17th Hole VIP Luxury Suite", and whether the 2027 suite is the same structure in the same position is not confirmed.
+- [S2] 0.0–3.2 / BC-20 / industry-professional lens — The open shows live tournament play filmed on site (balls on the 17th green, gallery reaction). The packet confirms guest consent but nothing shows that the event or credential terms allow commercial use of on-site competition footage, let alone paid use. This is unverified and must be confirmed before any boost.
+- [S2] 0.0–3.0 / first-3s test — The opening's payoff (balls finishing near the pin) is about 10 px at full resolution, so it cannot be seen on a phone. With sound off, the first 3 s read as a slow zoom on a crowd behind the super, and an out-of-focus head blocks the lower-left corner for about the first 1.5 s.
+- [S2] 7.8–9.0 / weakest-2s test — The key panel line "This is TripNerd's spot." appears over a stranger's back as he walks past the camera, and the shot then settles on one guest sitting alone at the rail. It is survivable, but these are the weakest two seconds and the pictures do not back up "TripNerd's spot."
+- [S2] 5.4–7.8 and 9.5–12.0 / competitor lens + trust test — Rows of empty white folding chairs on the suite balcony and one guest alone at the rail table make the suite look half-empty. A competitor could screenshot that in an ad that is selling the seat.
+- [S2] 3.2–5.4 / persuasion test + industry-professional lens — The hospitality being sold never appears on screen. The logo-wall brand shot sits over a bare buffet before service with a trash or recycling bin at the right of the frame, and the guest table shows clear stadium bags and cans. The ad proves the location, not the hospitality.
+- [S2] Audio, whole master — I cannot hear, so audio is UNVERIFIED by ear.
+  - Measured: -16.0 LUFS integrated, -2.5 dBTP, LRA 7.7 LU, 48 kHz stereo.
+  - The opening roar peaks at about -12 dBFS RMS between 0.5 and 1.4 s, with a second swell at 2.8–3.1 s that matches the visible cheering. The crowd bed runs through the end card and fades to silence at 14.5–15.0 s.
+  - Speech recognition (faster-whisper small.en and base.en, with and without voice detection) found no consistent intelligible speech, only patterns typical of misreading crowd noise.
+  - A human listen must still confirm there is no audible chatter, PA announcement, profanity or music bleed. Whether the 2024 crowd bed is free of speech (BC-26) cannot be checked from the master.
+- [S1] 4.1–4.5 / client lens — Guests' clothing shows incidental third-party marks: a Pittsburgh Steelers cap in the foreground and a Titleist cap. This is acceptable for organic posting; recheck if boosted.
+- [S1] 0.0–3.2 and 5.4–7.8 — Members of the public (the far gallery and spectators cheering below the suite) are not covered by the guest consent. They are distant or seen from behind, so they are hard to identify.
+- [S1] 7.8–12.0 / BC-28 — Text safe area passes but with little room.
+  - The POV box top is at 300 px (15.6%) and the panel box bottom at 1336 px (69.6%), so any reframe would break the 15–70% band.
+  - The engagement ask ("Where would you sit — rail or table? Tell us below.") is the smallest type in the ad, at about 27 px cap height.
+- [S1] 12.0–15.0 — "link in bio" goes nowhere on a boosted placement. A boost should use the ad's CTA button pointing to the same URL.
+- [S1] Cheese / AI-detection tests — "Be our guest." is a stock phrase and "Tell us below" leans toward comment bait. Nothing reads as synthetic: real cans, caps, natural camera motion and consistent detail, and every overlay uses real glyphs. The end-card wordmark matches the two-weight wordmark on the suite wall, and no banned slogan, number, price or superlative appears.
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.
+```
 
 v1.4a verdict block (verbatim):
 ```
@@ -117,7 +147,9 @@ evaluators' output withheld.
 | C4 | Identifiable guests (balcony table, balcony watchers, suite) — TripNerd rule: identifiable guests only with consent | **RESOLVED 2026-10-06** — owner: Jason (TripNerd) confirmed the guests shown are fine to feature; standing instruction "always assume that" (recorded in the client brief) |
 | C5 | Most sources are 404×720; scaled ×2.67 — softness at full screen | OPEN — v1.5 uses only V23/V24 (720×1280, ×1.5). Accept, or supply original camera files (Topaz versions would need an AI label per TripNerd rule) |
 | C6 | Owner directive "TripNerd's got the best spot." vs BC-16 + TripNerd p.6 ("every… superlative needs a source"); both v1.4a gates block on it; an owner instruction is not an Evidence Record | **OPEN — escalated to APPROVER.** Clears only with (a) a CLIENT_APPROVER's written confirmation from TripNerd that carries the basis for "best", filed as EV-tripnerd-nnn, or (b) variant B. Built both (v1.5-A/B) |
-| C7 | "This is TripNerd's spot" / POV next to "2027 packages" shows the 2026 suite; whether TripNerd's 2027 "17th Hole VIP Luxury Suite" is the same position is unconfirmed (v1.4a Skeptic S2) | OPEN — question for Jason |
+| C7 | "This is TripNerd's spot" / POV next to "2027 packages" shows the 2026 suite; whether TripNerd's 2027 "17th Hole VIP Luxury Suite" is the same position is unconfirmed (v1.4a/v1.5-B Skeptic S2; v1.5-B critic BC-16 OPEN) | OPEN — question for Jason; else reword so the 2026 seat isn't sold as the 2027 product |
+| C8 | Event marks / broadcast: TripNerd p.6 "No event logos, no broadcast footage." v1.5 showed legible "THE PLAYERS" cups + hat band (removed in v1.6); a small venue video board with the feed remains in THE VIEW; live play visible on the green in the hook; credential terms for commercial/paid use of on-site footage unknown | OPEN — CLIENT_APPROVER ruling (Jason) on incidental venue screens + confirmation of footage-use terms before any boost |
+| C9 | Skeptic S3 (BC-24, automatic block): angle not rotated vs the Sep 26 Reel — island-green open, same 2026 suite, text labels | OPEN — owner decision: structural change (drop place labels / different open), or new footage. An S3 cannot be accepted as CONDITIONAL |
 
 ## 16. Decision log
 | Date | Decision | By |
@@ -139,3 +171,6 @@ evaluators' output withheld.
 | 2026-10-06 | v1.5: hook = live roar at the 17th (inside 2 s); suite = logo wall + guests; "THE VIEW" shows the island green; panel lowered so the course stays visible; prompt "rail or table?"; audio overlaps + V07 bed + measured static gain (single-pass loudnorm gave −18.3 LUFS, replaced) | OPERATOR |
 | 2026-10-06 | Receipts filed: BC-13, BC-15 (substitute OCR), BC-24 declaration, BC-26; BC-32/BC-33 recorded N/A (no lines; real-time capture, no retiming) | Campaign Director |
 | 2026-10-06 | Dual gate launched on v1.5-B only: B tests every non-claim fix; A differs only in the claim line and is blocked by construction until C6 resolves — then a targeted re-check of the changed element (BC-16 + panel) | Campaign Director |
+| 2026-10-06 | v1.5-B dual gate: critic HARD FAIL 8.0 ± 1.5; Skeptic BLOCK (S3 BC-24). Verbatim in qc/ and §13–§14. Event-branded cups + beer can confirmed by OPERATOR at 2× zoom | Gates / OPERATOR |
+| 2026-10-06 | Owner: "feels rushed" → v1.6 even beats (3.6 / 0.9+2.1 / 3.2 / 3.4 / 3.0 s = 16.2 s); cups/can shot replaced; hook punch-in 1.15× top-right; panel after the walk-past | Owner / OPERATOR |
+| 2026-10-06 | Gates not re-run on v1.6 yet: owner direction first (first-artifact rule); C6–C9 and BC-15/BC-33 acceptances put to the owner | Campaign Director |

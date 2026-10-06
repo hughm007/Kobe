@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Be Our Guest — assemble the 15.0 s 9:16 master from real TripNerd footage (v1.5).
+"""Be Our Guest — assemble the 16.2 s 9:16 master from real TripNerd footage (v1.6: owner asked for longer, even beats).
 Runs in the Higgsfield sandbox. Expects src/*.mp4 (Drive originals) and ov_*.png (overlays.js) in the cwd.
 Uniform timebase: every segment -> fps=24 (hero footage is 24 fps), concat FILTER, hard picture cuts.
 Audio (v1.5, after the v1.4a gates measured holes at every cut and a collapse under the end card):
@@ -23,23 +23,27 @@ LUFS = {V23: -23.2, V24: -18.2, V07: -19.1}
 SRC_DUR = {V23: 54.14, V24: 31.1, V07: 16.63}
 ASK = f'ask_{VARIANT.lower()}'
 # (file, in, out, sharpen, zoom, audio tail s, overlay layers as (png, mode, start s))
+#   zoom: 1.0, or (factor, x-anchor 0..1, y-anchor 0..1) for a punch-in
 #   modes: hook = fade out at 2.0 s · in = fade/slide in, holds to the cut · out = holds, fades out
 #   before the cut · both = in + out · scrim / end = end-card animation
 EDL = [
-    (V24, 13.2, 16.4, 0.4, 1.00, 0.6, [('hook', 'hook', 0), ('seventeen', 'both', 2.25)]),  # roar + ball by the pin
+    (V24, 13.6, 17.2, 0.4, (1.15, 1.0, 0.0), 0.6,
+     [('hook', 'hook', 0), ('seventeen', 'both', 2.25)]),          # roar + ball by the pin; punch-in drops the foreground head
     (V23, 18.65, 19.55, 0.4, 1.00, 0.3, [('suite', 'in', 0)]),     # TripNerd logo wall + counter (clear of the TV)
-    (V23, 40.4, 41.7, 0.4, 1.00, 0.3, [('suite', 'out', 0)]),      # guests at the suite tables
-    (V23, 25.1, 27.5, 0.4, 1.12, 0.3, [('view', 'both', 0)]),      # balcony: island green, punched in
-    (V23, 49.6, 53.8, 0.4, 1.00, 0.3, [(ASK, 'both', 0)]),         # the rail table: payoff + comment prompt
-    (V24, 9.0, 12.0, 0.4, 1.00, 0.0, [('scrim', 'scrim', 0), ('end', 'end', 0)]),  # through the suite window
+    (V23, 48.6, 50.7, 0.4, 1.00, 0.3, [('suite', 'out', 0)]),      # guests on the suite's covered balcony (TV gone by 48.6; no cans or event cups)
+    (V23, 24.5, 27.7, 0.4, 1.12, 0.3, [('view', 'both', 0)]),      # door-to-balcony reveal: island green, punched in
+    (V23, 50.7, 54.1, 0.4, 1.00, 0.0, [(ASK, 'both', 0)]),         # the rail table: payoff + comment prompt
+    (V24, 9.0, 12.0, 0.4, 1.00, 0.0, [('scrim', 'scrim', 0), ('end', 'end', 0)]),  # through the suite windows
 ]
-BED = (V07, 0.5)          # 2024 crowd from the 17th walkway; ASR (small.en + VAD, base.en) found no speech
+BED = (V07, 0.0)          # 2024 crowd from the 17th walkway (0–16.2 s); ASR (small.en + VAD, base.en) found no speech
 BODY, BED_LUFS = -21.0, -23.0
 FPS = 24
 
 
 def picture(i, f, a, b, sh, z):
-    crop = '' if z == 1.0 else f',scale=trunc(iw*{z}/2)*2:trunc(ih*{z}/2)*2:flags=lanczos,crop=1080:1920:(iw-1080)/2:(ih-1920)*0.42'
+    z, ax, ay = z if isinstance(z, tuple) else (z, 0.5, 0.42)
+    crop = '' if z == 1.0 else (f',scale=trunc(iw*{z}/2)*2:trunc(ih*{z}/2)*2:flags=lanczos,'
+                                f'crop=1080:1920:(iw-1080)*{ax}:(ih-1920)*{ay}')
     return (f'[{i}:v]trim=start={a}:end={b},setpts=PTS-STARTPTS,fps={FPS},'
             f'scale=1080:1920:flags=lanczos:force_original_aspect_ratio=increase,crop=1080:1920{crop},setsar=1,'
             f'eq=contrast=1.04:saturation=1.07,unsharp=5:5:{sh}')

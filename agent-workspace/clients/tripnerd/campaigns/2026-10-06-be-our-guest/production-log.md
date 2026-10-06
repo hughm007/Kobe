@@ -16,9 +16,12 @@ tags: [production-log, reel, real-footage]
 |---|---|
 | Campaign Bible | [campaign-bible.md](campaign-bible.md) |
 | EDL + footage log | [shotlist.md](shotlist.md) |
-| **Master v1.5-A** — panel "TripNerd's got the best spot." (15.0 s, 1080×1920, 24 fps, H.264 + AAC 48 kHz, −16.0 LUFS, −2.5 dBTP) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/e510f35b-9e19-48a7-a4ce-88108e5ba2f4.mp4 — sha256 `ccee5cc993d23b33be582a0e42a7742e7d6f79ad2f73c9638835aae86747c0c7` |
-| **Master v1.5-B** — panel "This is TripNerd's spot." (same specs) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/c138f908-00d6-4a00-8c33-916a5a5a53ce.mp4 — sha256 `01d10e2c64dacbc25190b28e0eff127b098b70c3b5b020ae4cb6ba83b50b1807` |
-| Contact sheet v1.5 (A at 1 fps + B panel frame last) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/5e7ae0db-def2-4042-a9c7-7af48a738c02.jpg |
+| **Master v1.6-A** — "TripNerd's got the best spot." (16.2 s, 1080×1920, 24 fps, H.264 + AAC 48 kHz, −16.0 LUFS, −2.5 dBTP) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/f29127cd-98a9-4663-ae6b-639a0ce94429.mp4 — sha256 `2a8c9d919dd3b8238995e58ba6466417bd6cefb2d05122cf1fd40eaaf74966df` |
+| **Master v1.6-B** — "This is TripNerd's spot." (same specs) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/846e78bd-4e81-4d63-a4e5-dbc587ba77c4.mp4 — sha256 `7fa3490df548d34b9df72714856673e4050c5aa8095092259707153a3fe1ffe9` |
+| Contact sheet v1.6-B (1 fps) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/0a81cfd1-3223-42a4-a36e-a502446406c5.jpg |
+| Master v1.5-A (superseded) — panel "TripNerd's got the best spot." (15.0 s, 1080×1920, 24 fps, H.264 + AAC 48 kHz, −16.0 LUFS, −2.5 dBTP) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/e510f35b-9e19-48a7-a4ce-88108e5ba2f4.mp4 — sha256 `ccee5cc993d23b33be582a0e42a7742e7d6f79ad2f73c9638835aae86747c0c7` |
+| Master v1.5-B (superseded) — panel "This is TripNerd's spot." (same specs) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/c138f908-00d6-4a00-8c33-916a5a5a53ce.mp4 — sha256 `01d10e2c64dacbc25190b28e0eff127b098b70c3b5b020ae4cb6ba83b50b1807` |
+| Contact sheet v1.5 (superseded) (A at 1 fps + B panel frame last) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/5e7ae0db-def2-4042-a9c7-7af48a738c02.jpg |
 | Master v1.4a (superseded) (15.0 s, balcony open, 1080×1920, 24 fps, H.264 + AAC 48 kHz, −16.6 LUFS, −2.1 dBTP) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/4dbb2e1f-4386-43ef-aed8-8decad475f05.mp4 — sha256 `00affd65daeacd79176fe2f04fa06ceb1699f762882370eb21b008ee508235fa` |
 | Contact sheet v1.4a (superseded) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/886a4a85-89a9-4262-957f-2c1770b7aaab.jpg |
 | Master v1.4 (superseded: limiter auto-level, −14.6 LUFS) | `…/9cac3c27-446f-45a0-a0a6-fe9e5e3b7f67.mp4` |
@@ -35,11 +38,11 @@ tags: [production-log, reel, real-footage]
 ```
 unzip <bundle>.zip                      # src/*.mp4 + sha256.txt (verify: cd src && sha256sum -c ../sha256.txt)
 NODE_PATH=/usr/local/lib/node_modules node overlays.js . logo.png      # 8/8 text blocks in band
-python3 assemble.py tn-bog-v1-5-A.mp4 A                                # "TripNerd's got the best spot."
-python3 assemble.py tn-bog-v1-5-B.mp4 B                                # "This is TripNerd's spot."
+python3 assemble.py tn-bog-v1-6-A.mp4 A                                # "TripNerd's got the best spot."
+python3 assemble.py tn-bog-v1-6-B.mp4 B                                # "This is TripNerd's spot."
 python3 assemble.py --segments                                         # seg1..seg6 for the clip gate
 python3 servicepow_qc.py seg1.mp4 seg2.mp4 seg3.mp4 seg4.mp4 seg5.mp4 seg6.mp4 --gate-clips
-python3 servicepow_qc.py tn-bog-v1-5-B.mp4 --master --aspect 9:16 --duration 15.0 --endcard 3.0
+python3 servicepow_qc.py tn-bog-v1-6-B.mp4 --master --aspect 9:16 --duration 16.2 --endcard 3.0
 ```
 
 ## Spend
@@ -81,3 +84,10 @@ python3 servicepow_qc.py tn-bog-v1-5-B.mp4 --master --aspect 9:16 --duration 15.
   (unintelligible) flagged for the human listen. Receipts: [qc/2026-10-06-receipts-v1-5.md](qc/2026-10-06-receipts-v1-5.md).
 - Both masters + contact sheet uploaded (HTTP 200, confirmed). Dual gate launched on frozen v1.5-B (fresh critic +
   isolated Skeptic) — B tests every non-claim fix; A differs only in the claim line.
+- v1.5-B dual gate returned: critic HARD FAIL 8.0 ± 1.5 (on the floor; BC-16 implied 2027-seat claim, BC-20 event marks on
+  cups/hat + venue screen, BC-33 not run, BC-15 substitute needs named acceptance); Skeptic BLOCK (S3 BC-24 rotation vs
+  Sep 26; S2s incl. "THE PLAYERS" cups, Michelob ULTRA can, half-empty look, 2027 suite, footage terms). Verbatim in qc/.
+- Owner: "feels rushed" → v1.6 with longer, even beats (16.2 s); cups/can shot replaced; hook punch-in; panel after the
+  walk-past. First v1.6 render had a TV edge at the start of the guests shot → trimmed to V23 48.6 and rebuilt.
+- QA1 v1.6: 6/6 segments PASS; A and B OVERALL PASS; −16.0 LUFS, LRA 6.6; cropdetect full frame; OCR all supers; worst cut
+  dip −4.3 dB. Uploaded (HTTP 200, confirmed). Gates not yet re-run on v1.6 (owner direction first).

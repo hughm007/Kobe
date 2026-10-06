@@ -99,3 +99,23 @@ Cut gaps (40 ms RMS, ±0.3 s): body median -21.8 dB; minimum vs body at 3.2 s +1
 Text band (overlays.js, Chromium layout boxes): 8/8 inside y 288–1344, x <= 940 (hook 300–568 · labels 1170–1289 ·
   ask_a / ask_b 1038–1336 · end 560–1069). Fonts loaded (Inter/Poppins). Wordmark file sha256 11bfe474… (real asset).
 Upload: both masters + contact sheet HTTP 200, media confirmed.
+
+
+=====================================================================
+v1.6 — owner: "feels rushed" → longer, even beats (16.2 s); suite-guest shot with event cups/can replaced
+  A tn-bog-v1-6-A.mp4 sha256 2a8c9d919dd3b8238995e58ba6466417bd6cefb2d05122cf1fd40eaaf74966df
+  B tn-bog-v1-6-B.mp4 sha256 7fa3490df548d34b9df72714856673e4050c5aa8095092259707153a3fe1ffe9
+Harness qc.py sha256 cd48e662… (= canonical). PREFLIGHT: PASS (OCR unavailable — expect INDETERMINATE).
+Clip gate: seg1 989b6bde… 22.45 PASS · seg2 9f82afa6… 34.90 PASS · seg3 e551e75c… 43.59 PASS · seg4 5a4b0592… 10.84 PASS ·
+  seg5 c14434e2… 35.44 PASS · seg6 fa76455e… 61.10 PASS (6/6)
+Master A / B (--master --aspect 9:16 --duration 16.2 --endcard 3.0): all rows PASS; peak -2.2 dB, mean -19.2 dB; motion
+  A 26.69 / B 27.08; duration 16.21 s vs 16.2 → OVERALL PASS (both).
+ebur128: I -16.0 LUFS · LRA 6.6 LU (both). Pre-encode measure: -16.0 LUFS / -2.5 dBTP (static gain +1.6 dB).
+BC-13: cropdetect crop=1080:1920:0:0 on all 387 sampled frames (A, B).
+BC-15 (RapidOCR substitute; harness INDETERMINATE): every super read, incl. "2027 packages: link in bio" (A, B).
+BC-26 bed V07 0–16.2 s: small.en VAD 0 segments; no-VAD one "Thanks for watching!" (nsp 0.32, a known noise hallucination).
+BC-27: master small.en VAD 0 segments (A, B); no-VAD whole-window noise tokens only.
+Cut gaps (40 ms RMS): body -21.4 dB; cuts 3.6 +0.4 · 4.5 -4.3 · 6.6 -1.3 · 9.8 -1.3 · 13.2 -3.1 dB; end card -2.4 dB vs body.
+Visual checks by eye: hook punch-in removes the foreground head; guests shot starts at V23 48.6 (TV edge visible 48.2–48.5
+  removed); no event cups / beer cans legible in the new guests shot. Venue video board still visible, small, in THE VIEW
+  (needs client ruling, C8). Upload: A, B, sheet HTTP 200, confirmed.
