@@ -1939,3 +1939,9 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - **Patch:** opaque pill overlays at frames 264–301 and 359–440 → `TN_R01_review-small_v2.mp4`, 6.3 MB. Verified by OCR and by looking at the boundary frames.
   - **Prompt v2.4:** no-rewording rule; kit zip rebuilt.
   - **Open:** ChatGPT re-export of the 1080 master; B08 consent or replacement; TripNerd approval.
+- **R01 v3 (same day):** the opening is now V08 9.45–10.95, a different real roar (Karl uploaded V08; my Drive connector can't pull files over about 5 MB).
+  - **Correction:** V08's arms-up figure at 0–2.4 s is a marshal in silence, not a fist pump; the real roar is at 9.75–10.9 s.
+  - **Upscale:** standard Lanczos plus a light unsharp mask, no AI.
+  - **Output:** `TN_R01_review-small_v3.mp4`, 17.28 s, −14.2 LUFS.
+  - **Prompt v2.5 and kit:** V08 added.
+  - **Open:** the 1080 master (ChatGPT re-export with kit v2.5, or I build it if V23/V24 are uploaded); B08 guest consent; TripNerd's approval.

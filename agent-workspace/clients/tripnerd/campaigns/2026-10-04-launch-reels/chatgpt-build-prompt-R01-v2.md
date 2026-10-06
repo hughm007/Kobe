@@ -18,6 +18,7 @@ tags: [reel, r01, chatgpt, build-prompt, the-17th]
 - **Native clips.** Cut from the native V23 and V24, not the Topaz upscales. This logs the override "720p copies acceptable for this item".
 - **Drop both AI bridges.** Use real-footage whips.
 - **The Reel contains no AI.** There's no AI label and no disclosure line.
+- **v2.5:** B01 is now V08 9.45–10.95, a different real roar (Karl: no same putt twice); standard upscale with a light unsharp mask, no AI.
 - **v2.4:** B09 is now "Tickets get you in. / TripNerd gets you this."; rewording any on-screen string is forbidden (ChatGPT's first export changed B07).
 - **v2.3:** a downloadable kit (prompt, end card built from the real logo file, fonts). The videos are attached from Drive by their original names.
 - **v2.2:** set line breaks and a 64 px size for every string, measured with Montserrat ExtraBold. That fixes the H3 line (it can't fit in 2 lines) and the hook's lone "17th".
@@ -32,6 +33,7 @@ tags: [reel, r01, chatgpt, build-prompt, the-17th]
 | AI-01 and AI-02 scenery bridges | They put 1.2 s of AI, plus an AI label and a disclosure, on an otherwise all-real Reel. ChatGPT's image generator doesn't output 1080×1920 directly | Real whips built from neighbouring footage, with the same timing |
 | "Lunch + open bar inside" | The record supports "food" and "open bar": tripnerd.com's PLAYERS page lists "Full Open Bar & Food Within Suite" (EV-tripnerd-004 evidence). "Lunch" isn't on record, and an earlier piece was blocked on "Lunch" | **"Food + open bar inside"** |
 | "Our suite on the 17th." | CONFIRMED by record (EV-tripnerd-002, 006). Karl (6 Oct) wanted stronger "only through TripNerd" marketing. "Only" and "exclusive" are unprovable (other guests can use the venue's hospitality) and banned | **v2.4: "Tickets get you in. / TripNerd gets you this."** Supported by tripnerd.com's PLAYERS page, which sells the "17th Hole … Luxury Suite" (EV-tripnerd-004 evidence) |
+| B01 and B09 were the same V24 putt (15.55–17.05, then 17.05–19.75) | Karl: it reads as the only moment you get. V08 (2024): the roar at 9.75–10.9 s (−9 dB RMS) over a clean wide of the island green, with no board, hand or logos in 9.45–10.95. The arms-up figure at 0–2.4 s is a marshal in silence (−27 dB), not a cheer. 404×720 | **B01 = V08 9.45–10.95,** Lanczos + light unsharp, no AI upscaling |
 | ChatGPT's first export (6 Oct) | ChatGPT rewrote B07 as **"The bar is steps away."** (unapproved; "steps" is only INFERRED, EV-003). B08 shows guests' faces inside the suite and a Titleist cap logo, not "backs at the rail" | The prompt now forbids rewording. The review copy was patched to the approved B07 line and the new B09 line (v2). B08 is flagged for consent |
 | "2 · In the suite, out of the sun" | The V23 log shows an indoor lounge in the suite. INFERRED | Kept; ChatGPT must confirm B06 is indoors |
 | B07 on screen for 1.15 s | Breaks the brief's own minimum of 1.2 s per line | B07 1.25 s, B08 1.90 s; the beat total is unchanged |
@@ -85,7 +87,8 @@ FILES ATTACHED
    - PROMPT_for_ChatGPT.txt (a copy of these instructions) and START-HERE.txt (ignore)
 2. TN_2026-03-14_the-players_V24.mp4, called "V24" below: real footage, the view of the 17th from TripNerd's suite (hush, putt, roar).
 3. TN_2026-03-12_the-players_V23.mp4, called "V23" below: real footage, a walk through TripNerd's suite out to the rail.
-Never use any file with "topaz" in its name (those are AI-upscaled). If V24, V23, the end card or either font is missing, stop and tell me which.
+4. TN_2024-03-17_the-players_V08.mp4, called "V08" below: real footage, a different roar at the 17th (a wide shot of the island green and the crowd, 2024).
+Never use any file with "topaz" in its name (those are AI-upscaled). If V24, V23, V08, the end card or either font is missing, stop and tell me which.
 
 STEP 0: TOOLS AND SOURCES (report the results)
 1. Run `ffmpeg -version`. If it isn't available, use `imageio_ffmpeg.get_ffmpeg_exe()`. Tell me which one you used.
@@ -96,7 +99,7 @@ STEP 1: CUT LIST (authoritative; times in seconds)
 Output 1080x1920, 30 fps constant frame rate. Every beat comes from the videos. Never animate a still.
 
 Beat | Reel time   | Length | Source, in to out              | On-screen text
-B01  | 0.00-1.50   | 1.50   | V24 15.55-17.05 (the roar)     | "Two ways to watch the 17th" + "Ponte Vedra Beach, FL"
+B01  | 0.00-1.50   | 1.50   | V08 9.45-10.95 (roar #1)       | "Two ways to watch the 17th" + "Ponte Vedra Beach, FL"
 B02  | 1.50-2.70   | 1.20   | V24 9.00-10.20                 | "1 · At the rail"
 B03  | 2.70-5.20   | 2.50   | V24 10.20-12.70 (the hush)     | none, let it breathe
 B04  | 5.20-6.60   | 1.40   | V23 24.00-25.40 (the view opens) | none
@@ -111,10 +114,10 @@ Total = 17.25 s. Assert the sum in code.
 
 Cut rules:
 - NEVER use V24 13.40-15.30 (TripNerd already ran an ad with it).
-- B01 and B09 are two different moments; they must not overlap.
+- B01 (V08) and B09 (V24) are two different roars on different days. Never use the same moment twice.
 - If V24 ends before 20.35 s, end W2 where V24 ends and lengthen the end card so the total stays 17.25 s. Tell me if you did.
 - Converting to 30 fps: duplicate frames only (fps=30). NEVER use motion interpolation (minterpolate, RIFE, optical flow). It warps people.
-- Scale with Lanczos straight to 1080x1920 (the sources are already 9:16). No AI upscaling, no face or skin enhancement, no sharpening, no denoise, no stabilisation. Never crop through anyone's head.
+- Scale with Lanczos straight to 1080x1920 (the sources are already 9:16). V08 is only 404x720: for B01 ONLY, add a light unsharp mask (unsharp=5:5:0.6) after scaling. No AI upscaling, no face or skin enhancement, no sharpening, no denoise, no stabilisation. Never crop through anyone's head.
 
 STEP 2: LOOK BEFORE YOU BUILD
 Extract the middle frame of every beat, look at each one, and describe it to me in one line. Then check:
@@ -170,7 +173,7 @@ STEP 7: EXPORT
 5. TN_R01_cover.png: 1080x1920, a B01 frame with the hook. Keep the hook inside the centre 1080x1350 so the profile-grid crop still shows it.
 6. TN_R01_contact-sheet.jpg: one frame per beat in order, each labelled with its beat and time. The client approves from this.
 7. REQUIRED, after v1 is exported: two hook variants for testing. Only 0.00-5.20 changes; from 5.20 on, everything is identical to v1 (also 17.25 s), with the same export settings as item 1:
-   - H2 (TN_R01_v1_H2.mp4): 0.00-2.50 V24 10.20-12.70 (hush) with "Everyone goes quiet for this one…" | 2.50-4.00 V24 15.55-17.05 (roar) with "Two ways to watch the 17th" + "Ponte Vedra Beach, FL" | 4.00-5.20 V24 9.00-10.20 with "1 · At the rail".
+   - H2 (TN_R01_v1_H2.mp4): 0.00-2.50 V24 10.20-12.70 (hush) with "Everyone goes quiet for this one…" | 2.50-4.00 V08 9.45-10.95 (roar) with "Two ways to watch the 17th" + "Ponte Vedra Beach, FL" | 4.00-5.20 V24 9.00-10.20 with "1 · At the rail".
    - H3 (TN_R01_v1_H3.mp4): the same as H2, but the first line is "An estimated 100,000 balls a year land in this water."
 
 STEP 8: SELF-CHECK. Report each line as PASS or FAIL, with the evidence.
