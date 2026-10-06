@@ -253,3 +253,20 @@ The patio is built from TripNerd's own site photo (`tripnerd-augusta-experience-
 **Status:** owner first-artifact review (FIRST-ARTIFACT RULE). The dual gate runs once, on the frozen cut, after owner direction. NOT client ready.
 
 **Spend:** 377.9 of the 450 cap (balance 10,344.4).
+
+## Owner inputs (2026-10-06, after v4)
+1. **`TripNerd-Augusta-watching-view-picks-INTERNAL.zip`:** 17 TripNerd photos from Augusta week (2024/2026) plus clip V25. Its README says: internal, NOT cleared to post; faces need consent; the course seen beyond the fence is most likely the venue's own course, NOT Augusta National (INFERENCE); never caption it as Augusta National or the Masters.
+   **Use:** text and visual guidance for the hospitality beat only (grey wicker sectionals and fire tables, high-tops draped in black, white picket fence, tall pines, white tents, string lights, columned veranda with hanging ferns).
+   **Not used as generation inputs:** they are not cleared, and moving client media to the vendor was previously denied by the session classifier. The files were not uploaded anywhere. To get exact-match fidelity, the owner can upload the no-face picks (P115, P109, P036, P155, P078, P005) to Higgsfield directly.
+2. **Reference sheet (owner-uploaded to Higgsfield):** frames from Augusta National's own broadcast of the 12th hole, marked "REFERENCE ONLY — not for use in any TripNerd advert".
+   **Use:** as behaviour guidance only, written into the prompt. The broadcast is filmed from an elevated position on a long lens; the ball arrives from above and lands near or past the pin with one short hop, checks, and settles 2–5 ft away; the ball is small on screen.
+   **Not used as a generation input:** the frames are copyrighted and show the 12th hole, so using them would replicate a protected, identifiable venue.
+
+## v5 shot pass (workflow, credit-capped at 68.5 of the remaining 72)
+Shots regenerated:
+- ball (broadcast framing);
+- ball-flight insert;
+- blocked beat (keeps him visible);
+- hospitality lawn at golden hour.
+
+Each shot keeps a fallback to its v4 clip.
