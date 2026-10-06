@@ -1846,3 +1846,20 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - a build order.
 - Labelled INTERNAL PRE-VIZ, NOT FOR POSTING. Nothing generated or spent from this session.
 
+
+## 2026-10-06 (later): "Book It Now" pre-viz stills, realism pass, generated in Higgsfield
+- **Karl:** generate every pre-viz frame now, at the highest quality, realism first, credits uncapped.
+- **Ran 35 stills:**
+  - all 9 generated frames × 2 takes on `gpt_image_2_5` flare, max, 4k (2160×3840);
+  - a full alternate set on `nano_banana_pro` 4k (the server records it as `nano_banana_2`, 3072×5504);
+  - a realism shootout on frames 6 and 11: GPT sunburst, Seedream 4.5 high, Soul 2, Kling O1.
+- **Prompts rewritten for realism:** camera, lens and f-stop; skin and fabric imperfections; candid timing; no CGI look. All v1 content locks kept (blank cards, white screen, no text or marks, no recognisable course). Mike frames carry `389ec001`.
+- **Jobs:** 3 max/4k jobs failed and were re-run once; all succeeded.
+- **Spend:** 339.24 credits (balance 11,102.90 → 10,763.66; equals the `get_cost` total, so the failures weren't charged), plus 24.75 for the superseded batch 1.
+- **Gallery shown to Karl in three groups.** One 35-item call returned too much data to display reliably.
+- **Not verified:** realism and content locks. Higgsfield's CDN is 403 from the container, so Karl judges in the gallery.
+- **Found in the job records:**
+  - `soul_2` with an image reference rewrote the frame-11 prompt into a description of the couch still (index 116, off-brief);
+  - the `nano_banana_pro` jobs were served as `nano_banana_2`.
+- **Record:** `clients/tripnerd/campaigns/2026-10-book-it-now-augusta/script-ai-previz-v2-realism-stills.md` (job IDs, sizes, exact prompts, spend). Bible §16 row added.
+- **Open:** Karl's pick per frame; then image-to-video on the picks (priced first). All posting gates are unchanged.

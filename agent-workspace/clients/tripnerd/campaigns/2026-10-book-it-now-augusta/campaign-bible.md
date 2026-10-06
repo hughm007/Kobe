@@ -6,7 +6,7 @@ campaign_id: 2026-10-book-it-now-augusta
 owner: Karl
 status: active
 created: 2026-10-05
-updated: 2026-10-05
+updated: 2026-10-06
 tags: [campaign, bible, slim, reel, augusta, dm-keyword, ai-actor]
 ---
 
@@ -114,5 +114,6 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 | 2026-10-05 | Build "Book It Now" now with Karl's two Higgsfield stills; AI actor in the couch beats only; real Augusta photos; keyword auto-reply CTA; line as text | Karl (APPROVER) |
 | 2026-10-05 | Phone screen replaced (unverified claims in the generated screen). Real frames chosen to avoid faces where possible; IMG_1932 (bartender) chosen over IMG_1915 (foreground clutter); event marks on the banner blurred | Claude (director) |
 | 2026-10-06 | Karl: write an all-AI frame-by-frame for Higgsfield (pre-viz), with real footage swapped in later. Written as `script-ai-previz-v1.md`: INTERNAL PRE-VIZ, NOT FOR POSTING, with a slot map naming the real replacement and gate per AI frame. No generation from this session | Karl (APPROVER) / Claude (director) |
+| 2026-10-06 | Karl (SPEND_APPROVER): generate every pre-viz frame in Higgsfield, "don't worry about capping the credits… highest quality… realism". Ran 35 stills: 9 frames × 2 takes on `gpt_image_2_5` flare max 4k, a full `nano_banana_pro` set (served as `nano_banana_2`), and a realism shootout on frames 6 and 11 across 4 more models. Spent 339.24 credits (balance 11,102.90 → 10,763.66), plus 24.75 on the superseded batch 1. No visual QC possible here (CDN 403); Karl picks in the gallery. `soul_2` index 116 is off-brief (the server rewrote its prompt). Record: `script-ai-previz-v2-realism-stills.md`. Still INTERNAL PRE-VIZ | Karl (APPROVER, SPEND_APPROVER) / Claude (director) |
 | 2026-10-05 | Skeptic Pass 3 on v1: BLOCK (3 × S4 = TripNerd gates; 4 × S3). v2 built: banner shot dropped, mask-based screen composite, longer reply hold, Augusta cue at 0 s, on-screen independence line, softer temp beds. v2 sent to Karl | Claude (director) |
 | 2026-10-05 | Draft delivered before gates (first-artifact rule); Skeptic Pass 3 running on the frozen master | Claude (director) |
