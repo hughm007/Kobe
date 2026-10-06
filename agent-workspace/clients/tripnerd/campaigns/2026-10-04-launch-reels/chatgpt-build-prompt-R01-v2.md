@@ -18,6 +18,7 @@ tags: [reel, r01, chatgpt, build-prompt, the-17th]
 - **Native clips.** Cut from the native V23 and V24, not the Topaz upscales. This logs the override "720p copies acceptable for this item".
 - **Drop both AI bridges.** Use real-footage whips.
 - **The Reel contains no AI.** There's no AI label and no disclosure line.
+- **v2.4:** B09 is now "Tickets get you in. / TripNerd gets you this."; rewording any on-screen string is forbidden (ChatGPT's first export changed B07).
 - **v2.3:** a downloadable kit (prompt, end card built from the real logo file, fonts). The videos are attached from Drive by their original names.
 - **v2.2:** set line breaks and a 64 px size for every string, measured with Montserrat ExtraBold. That fixes the H3 line (it can't fit in 2 lines) and the hook's lone "17th".
 - **v2.1 (6 Oct, later):** end card 2.00 s (17.25 s total), H2/H3 required for Trial Reels, a clean export for Wyatt's polish pass, B04 re-described.
@@ -30,7 +31,8 @@ tags: [reel, r01, chatgpt, build-prompt, the-17th]
 | B08 from V16U | Native V16 measures **404×720** (ffprobe, 6 Oct). Too soft for 1080×1920 | V24 0.10–2.00. The footage log shows guests' backs at the rail, with 17 below |
 | AI-01 and AI-02 scenery bridges | They put 1.2 s of AI, plus an AI label and a disclosure, on an otherwise all-real Reel. ChatGPT's image generator doesn't output 1080×1920 directly | Real whips built from neighbouring footage, with the same timing |
 | "Lunch + open bar inside" | The record supports "food" and "open bar": tripnerd.com's PLAYERS page lists "Full Open Bar & Food Within Suite" (EV-tripnerd-004 evidence). "Lunch" isn't on record, and an earlier piece was blocked on "Lunch" | **"Food + open bar inside"** |
-| "Our suite on the 17th." | CONFIRMED by record: TripNerd-branded suite on the 17th (EV-tripnerd-002, 006) | Kept |
+| "Our suite on the 17th." | CONFIRMED by record (EV-tripnerd-002, 006). Karl (6 Oct) wanted stronger "only through TripNerd" marketing. "Only" and "exclusive" are unprovable (other guests can use the venue's hospitality) and banned | **v2.4: "Tickets get you in. / TripNerd gets you this."** Supported by tripnerd.com's PLAYERS page, which sells the "17th Hole … Luxury Suite" (EV-tripnerd-004 evidence) |
+| ChatGPT's first export (6 Oct) | ChatGPT rewrote B07 as **"The bar is steps away."** (unapproved; "steps" is only INFERRED, EV-003). B08 shows guests' faces inside the suite and a Titleist cap logo, not "backs at the rail" | The prompt now forbids rewording. The review copy was patched to the approved B07 line and the new B09 line (v2). B08 is flagged for consent |
 | "2 · In the suite, out of the sun" | The V23 log shows an indoor lounge in the suite. INFERRED | Kept; ChatGPT must confirm B06 is indoors |
 | B07 on screen for 1.15 s | Breaks the brief's own minimum of 1.2 s per line | B07 1.25 s, B08 1.90 s; the beat total is unchanged |
 | B07 source V23 8.60–9.75 | The footage log puts the buffet counter at V23 16–19 s. We can't confirm 8.60 shows food | ChatGPT checks the frame; the fallback is V23 16.00–17.25 |
@@ -102,7 +104,7 @@ W1   | 6.60-7.20   | 0.60   | V23 25.40-25.70, then V23 6.70-7.00 | none (whip, 
 B06  | 7.20-8.80   | 1.60   | V23 7.00-8.60                  | "2 · In the suite, out of the sun"
 B07  | 8.80-10.05  | 1.25   | V23 8.60-9.85                  | "Food + open bar inside"
 B08  | 10.05-11.95 | 1.90   | V24 0.10-2.00                  | none, the build
-B09  | 11.95-14.65 | 2.70   | V24 17.05-19.75 (second roar)  | "Our suite on the 17th."
+B09  | 11.95-14.65 | 2.70   | V24 17.05-19.75 (second roar)  | "Tickets get you in. / TripNerd gets you this."
 W2   | 14.65-15.25 | 0.60   | V24 19.75-20.35                | none (whip and dip, see Step 3)
 B11  | 15.25-17.25 | 2.00   | 11_ENDCARD.png                 | "Trip like a Nerd." + "Which way are you watching?"
 Total = 17.25 s. Assert the sum in code.
@@ -145,12 +147,13 @@ STEP 5: TEXT (render every line as a transparent PNG with Python PIL and the att
   B02:      1 · At the rail
   B06:      2 · In the suite, / out of the sun
   B07:      Food + open bar inside
-  B09:      Our suite on the 17th.
+  B09:      Tickets get you in. / TripNerd gets you this.
   B11:      Trip like a Nerd.
   B11:      Which way are you watching?
   H2 first line: Everyone goes quiet / for this one…
   H3 first line: An estimated 100,000 / balls a year land / in this water.   (the only 3-line text; on screen for 2.5 s)
 - No other text anywhere: no subtitles, hashtags, emoji, handles, prices, "tag a friend", or "comment X".
+- NEVER rewrite, shorten, "improve" or replace any on-screen string. Every word is approved by the client exactly as written.
 
 STEP 6: SOUND
 - Natural sound from the clips only. No music (we add music in Instagram later), no voiceover, no AI audio.
@@ -217,7 +220,7 @@ Then give me download links to every file.
 
 > Hi [name], here's tomorrow's Reel for 12 PM: "Two ways to watch the 17th". It's 17 seconds, all your own footage from the suite on 17, with no AI. The video, the caption and a one-page contact sheet are attached. Could you reply by [time] today with:
 > 1. OK to post as is, or what to change?
-> 2. Are these lines right: "Our suite on the 17th." and "Food + open bar inside" (from your PLAYERS page)?
+> 2. Are these lines right: "Tickets get you in. TripNerd gets you this." and "Food + open bar inside" (both from your PLAYERS page, which sells the 17th-hole suite with food and an open bar)?
 > 3. OK to show the guests who appear in these clips?
 >
 > Nothing posts without your yes. Thanks, Karl

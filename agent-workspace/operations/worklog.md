@@ -1932,3 +1932,10 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - **End card:** the committed logo file (`1c4996e5…caa51`), unaltered, on #5896E9 (logo box x 190–830, y 620–856).
   - **The two videos are excluded:** the Drive connector caps downloads at 10 MB. Karl attaches them from Drive in ChatGPT by their original names, and the prompt now recognises those names and rejects `topaz` files.
   - **Rebuild:** scratchpad `r01_kit/`. Inter comes from apt `fonts-inter`; Montserrat from the system font.
+- **R01 review copy QC + payoff line (same day):**
+  - **ChatGPT's 720p review copy:** specs, loudness, end card and logo pass.
+  - **Found:** B07 reworded to "The bar is steps away." (unapproved); B08 shows identifiable guests and a Titleist cap logo (consent flag).
+  - **Karl's new payoff line:** "Tickets get you in. / TripNerd gets you this."
+  - **Patch:** opaque pill overlays at frames 264–301 and 359–440 → `TN_R01_review-small_v2.mp4`, 6.3 MB. Verified by OCR and by looking at the boundary frames.
+  - **Prompt v2.4:** no-rewording rule; kit zip rebuilt.
+  - **Open:** ChatGPT re-export of the 1080 master; B08 consent or replacement; TripNerd approval.
