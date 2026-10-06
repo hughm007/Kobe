@@ -12,7 +12,7 @@ tags: [campaign, reel, build-record, qc, real-footage, launch-reels]
 
 # Two ways to see the 17th — builds v1 (H1, the approved board) and v2 (the owner's redirect)
 
-**Status: v2 is the current candidate for the Wed 7 Oct 12 PM ET slot (owner's redirect, 2026-10-06 evening); v1 stands as the board-faithful alternate. Owner review and TripNerd's approver pending.** Nothing is posted.
+**Status (2026-10-06, late): the owner rejected v2 ("don't like it, just stop") and built his own version outside this workspace; this line is stopped. v1 stands as the board-faithful alternate. Nothing posted. The owner's follow-up (a reference for a shot landing close to the pin at Augusta) is in [`reference-augusta-12.md`](reference-augusta-12.md).** Nothing is posted.
 
 ## v2 — "the same putt, two people" (owner's redirect, 2026-10-06)
 

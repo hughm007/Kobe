@@ -219,6 +219,7 @@ Per Reel (from Insights): views and the share from non-followers, reach, average
 4. Original files: the gallery and suite clips at full resolution (Taylor), the five Vimeo masters.
 5. The OK to quote Jon Reader and Sean Moseley by name, and 3–5 real "what hosts get wrong" points.
 6. The owner's decisions 1–6 above, and the plan's three (paid ceiling from Day 31, average booking margin, start date and approver).
+7. **A practice-day shoot at Masters week 2027 (Mon–Wed, when cameras are allowed):** an approach landing beside a pin filmed from behind the green (3–5 s) and a guest watching from the gallery behind 12 tee. Official Masters footage is reference only and never goes in an advert; the reference board and the two film routes are in [`../campaigns/2026-10-04-launch-reels/reference-augusta-12.md`](../campaigns/2026-10-04-launch-reels/reference-augusta-12.md).
 
 ## Sources used for the ranking statements (secondary; instagram.com is not reachable from this session)
 - Mosseri's three signals (watch time, sends per reach, likes per reach): [eclincher](https://www.eclincher.com/articles/how-the-instagram-algorithm-works-in-2026), [SocialPilot](https://www.socialpilot.co/de/blog/instagram-reels-algorithm), [Metricool](https://metricool.com/instagram-reels-guide/), [Dash Social](https://www.dashsocial.com/blog/how-the-instagram-algorithm-works)
