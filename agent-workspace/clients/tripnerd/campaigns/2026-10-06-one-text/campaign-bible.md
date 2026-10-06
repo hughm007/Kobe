@@ -59,6 +59,16 @@ slogan reuse; opens on a message, not a venue.
 
 Body and end card are shared; only bubble 1 changes per variant.
 
+**v2 direction (after the v1 gate failure and the research in
+[research-competitor-references.md](research-competitor-references.md)):** cut B — the hook is a
+composited thread graphic in TripNerd's own style (no AI hands, no iMessage/Instagram-DM look, no
+status bar or reply box — Meta "non-existent functionality" risk), both bubbles readable on frame 1
+or the reply by ~1.2 s; real TripNerd footage from ~2.2 s to the end card (arrival → hospitality →
+event moment → group, at least one large real face); music from the commercial library + real
+ambience or a real VO; burned-in captions; brand on screen < 25% of runtime; end line becomes
+"It starts with one message." (fixes text-vs-DM). Hook test H1 (thread on navy) vs H2 (bubbles
+over the strongest real venue moment). Zero generation spend unless a bridge is needed.
+
 ## 4–5. Spine and script
 No voice-over, no dialogue (no generated voice — p.6). Text carries the story:
 1. Bubble out: **"6 of us. Can you make it happen?"** → typing dots → TripNerd bubble: **"On it."**
