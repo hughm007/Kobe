@@ -10,9 +10,48 @@ updated: 2026-10-06
 tags: [campaign, reel, build-record, qc, real-footage, launch-reels]
 ---
 
-# Two ways to see the 17th — H1, build v1
+# Two ways to see the 17th — builds v1 (H1, the approved board) and v2 (the owner's redirect)
 
-**Status: DRAFT v1 BUILT (2026-10-06), for the Wed 7 Oct 12 PM ET slot; owner review and TripNerd's approver pending.** Nothing is posted.
+**Status: v2 is the current candidate for the Wed 7 Oct 12 PM ET slot (owner's redirect, 2026-10-06 evening); v1 stands as the board-faithful alternate. Owner review and TripNerd's approver pending.** Nothing is posted.
+
+## v2 — "the same putt, two people" (owner's redirect, 2026-10-06)
+
+**The owner's note, verbatim in spirit:** show a regular fan with a bad view at the back of the crowd during the big moment, jumping to see and not fitting in; then a TripNerd guest already in the moment, living it. Two ways to see: with TripNerd or without.
+
+**What was built (real footage and real sound only; nothing generated):** the same roar, twice. First from the back of the gallery, where you hear it go up ahead and hop to see over heads and see nothing, then look up at the suites. Then from the rail, where two guests are already there, the putt drops, and the roar is clear. Script: [`build/build_twoways_v2.py`](build/build_twoways_v2.py).
+
+| # | Seq | Source | Picture | Text |
+|---|---|---|---|---|
+| S1 | 0.0–3.6 | Gallery 2 (`2585923a-ec96-4e6e-b414-7fa8ab36cf58`, upscaled 1080p/30) 1.0–4.6, **1.45x crop anchored low** so heads and shoulders fill the frame; from 1.4 s the crop window **hops up three times** (90 px half-sines at 1.7 Hz) | The back of the standing crowd; the roar goes up ahead; the viewer is the fan on tiptoe | "Two ways to see the 17th." (0.1–1.3) · "Without TripNerd." (1.5–3.5) |
+| S2 | 3.6–5.0 | Gallery 2 14.8–16.2, 1.2x | The fan looks up at the hospitality suites | — |
+| S3 | 5.0–6.4 | V24 0.2–1.6 | Two guests already at the rail, seen from behind, 17 below | "With TripNerd." (5.2–7.0) |
+| S4 | 6.4–8.6 | V24 13.4–15.6 | The putt drops; the roar; arms up below | — |
+| S5 | 8.6–9.8 | V24 15.6–16.8, 103 % push | The roar settles | "Who are you bringing?" (8.4–9.8) |
+
+**Sound (real only):** Gallery 2's own walla under S1–S2; **the same V24 roar heard from the back** (low-passed at 2.2 kHz, −6 dB) from 1.3 s; the rail murmur (V24 0.2–1.6) under S3; the roar clear from 6.2 s, leading the picture cut. Static gain to −14 LUFS with the true-peak limiter: **−14.00 LUFS, −1.63 dBTP**.
+
+**Deliverable (FACT):** `TN-R01-two-ways-17th-v2.mp4`, 20,935,725 bytes, MD5 `5311d4612f3f3cc17522e58615243fcf`; 1080x1920, 30 fps, 9.8 s, H.264 CRF 16, AAC 192k 48 kHz. Zip `TN-R01-two-ways-17th-v2.zip`, 20,930,427 bytes, MD5 `21c8ac065bb1cfe99430e46385068407`. Contact sheet `TN-R01-two-ways-17th-v2-sheet.jpg`.
+- Stream: `https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/7e8f628e-7522-443e-99d5-6ea8ddd4ab16.mp4`
+- Download (zip): `https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/3a476080-48c0-49de-9a63-223de4e17693.zip`
+- Contact sheet: `https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/9a4691fe-d14e-4853-84d3-54e344196629.jpg`
+- **Verified 2026-10-06:** all three links answer HTTP 200 with the right byte counts; a fresh download of the mp4 and the zip matched the MD5s above (media `7e8f628e…` video, `3a476080…` file, `9a4691fe…` image, all confirmed).
+
+**QC (FACT):** harness `--master --aspect 9:16 --duration 9.8` → **OVERALL PASS** (peak −1.6 dB, mean −19.2 dB, motion 36.64 px/frame, hook 24.92, no flash cuts, 9.80 s). Speech screen: whisper `tiny` printed one phrase three times at fixed 2 s intervals over the opening walla (avg log-prob −0.91, language p = 0.39), the hallucination signature; re-checked with the `base` model and VAD on the first 6 s of the mix and on the Gallery 2 source window: **0 speech segments in both. Verdict: no speech.** Marks: no scoreboard, logo or broadcast in any shot (the suites in S2 are a building, no readable signage; V24 ranges with the board are outside the cut). People: a public crowd from behind (S1–S2), two guests from behind (S3), the crowd below (S4–S5). Spend: one upscale of Gallery 2, **0.33 credits** (21:16:37 UTC); the whole Two-ways job so far is 1.69 credits of touch-up upscales and no generation. **Not run:** Skeptic Pass 3, Critic scorecard.
+
+**Honest notes (ESTIMATE):** the "jumping" is a camera move added in post over real crowd footage, not a filmed actor; it reads as the fan's own eyes bobbing to see, which is the POV grammar the rail shot also uses. If the owner wants a *person* seen jumping at the back, that is a shoot (a Nerd or a volunteer at the next event) or an AI actor with the label and Jason's OK; it is not something we have on film. "Without TripNerd." / "With TripNerd." are the owner's words made into cards; the alternate pair "Not with TripNerd." read worse.
+
+**Caption (DRAFT v2):**
+> Same putt. Two ways to see it.
+> Without TripNerd: the back of the crowd, on your toes, guessing. With TripNerd: the rail, and the roar in your chest.
+> Who are you bringing? Send this to them. Talk to a Nerd: link in bio.
+> TripNerd is not sponsored by, affiliated with, or a partner of the tournament, the PGA TOUR or the venue.
+> #TripNerd #spreadtheNERD #islandgreen #golftrip
+
+---
+
+# v1 — H1, the board-faithful cut (alternate)
+
+**Status: DRAFT v1 BUILT (2026-10-06), originally for the Wed 7 Oct 12 PM ET slot; now the alternate to v2.** Nothing is posted.
 
 **Built to:** the storyboard Karl approved on 2026-10-04 in the "TripNerd Growth strategy" chat — `edit-plan-01-two-ways-17th.md` and `shotlist.md` on branch `claude/admiring-mendel-aqjyaw` (not yet merged here). This record and the script live in the same campaign folder so the two branches converge on merge. Script: [`build/build_twoways.py`](build/build_twoways.py).
 
