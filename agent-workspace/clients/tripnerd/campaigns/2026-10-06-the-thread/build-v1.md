@@ -14,7 +14,7 @@ tags: [campaign, reel, build-record, qc, real-footage, mechanism-led, instagram]
 
 **Ask (owner, 2026-10-06, night): "Build thread one now."** Script 1 of the round-2 mechanism-led set (`../2026-10-04-launch-reels/scripts-round-2-mechanism-led.md`): the planning pain is the villain (the mechanism the longest-running advertiser in the Meta Ad Library set has paid to run for 206 days), paid off with TripNerd's own material and the approved line.
 
-**Status:** v1 master built, machine-QC'd, frame-checked, speech-screened, uploaded and byte-verified. The dual quality gate (Skeptic Pass 3, Critic scorecard) ran on the frozen master; verdicts in §6. **Owner review pending. Nothing posts without the owner and TripNerd's approver.**
+**Status (updated):** the owner likes the thread and rejects the stills after it; direction for v2 in [`creative-direction-v2.md`](creative-direction-v2.md). v1 master built, machine-QC'd, frame-checked, speech-screened, uploaded and byte-verified. The dual quality gate (Skeptic Pass 3, Critic scorecard) ran on the frozen master; verdicts in §6. **Owner review pending. Nothing posts without the owner and TripNerd's approver.**
 
 ## 1. Links (Higgsfield private storage; verified byte-for-byte after upload)
 | File | Link | Size | MD5 |
@@ -62,7 +62,15 @@ No event, venue or tournament is named. The chat is a dramatisation: no real per
 Posting notes: original audio, sound on; a Trial Reel candidate (no followers see it unless it clears). No event name unless the owner takes decision 1 of the week-1 brief.
 
 ## 6. Dual quality gate (ran on the frozen master, md5 above)
-PENDING — appended when the workflow returns.
+Isolated workflow agents, packet-only. Verdicts received so far (the industry-professional lens, the Critic scorecard and the adversarial verification of blocking findings were still running when this was written; appended below when they land).
+
+| Lens | Verdict | Blocking findings | What they change |
+|---|---|---|---|
+| Client | PASS | none (S2: the wall graphic is never whole in frame during the pan; the chat's "badges" and "the house" set up one event while the footage shows another; the ® on the logo; two empty rooms carry the premium feel) | v2 names the event (the owner's direction) and raises the brand earlier |
+| Target customer | BLOCK | **S3: the newest chat bubble lands at 92–97 % of frame height, inside the Reels UI zone** (a layout bug: the anchor was added to the list top; fix: anchor the newest bubble at about 60 %). S2: the lockup's handle sits in the bottom zone; the first second is two-thirds empty; the suite photo reads as an empty breakout room; rights for the gallery faces not stated | both layout fixes go into v2; the stills go (the owner's note) |
+| Competitor | BLOCK | **S4: the tournament footage has no stated owner or licence in the packet** (a packet omission: V24 is TripNerd's own recording under Taylor's standing authorisation of 2026-09-28, which the verification step is given). S3: the picture names a venue the text does not | resolved by evidence; v2's event choice removes the mismatch |
+
+Carried into v2 as rules: bubble anchor at ~60 %, lockup bottom at or above 65 %, drop the years from the separators, confirm the ® with TripNerd, state footage provenance in every packet.
 
 ## 7. Decision log
 | Date | Decision | By |
