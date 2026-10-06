@@ -145,3 +145,111 @@ Both gates block v1, and the APPROVER's spend cap still has room. Repairs are ro
 **Known residual (flagged to the gates):** generated pseudo-emblems on some clothing (for example a small chest mark on the lead in the eruption shot).
 
 Both gates re-run fresh and isolated on v2; results below.
+
+## §13 Critic — master v2 (md5 01f6de85…)
+**VERDICT: HARD FAIL.** ServicePow-6: 6.8 ± 1.5. Scores:
+
+| Axis | Score |
+|---|---|
+| Doesn't-look-AI | 6 |
+| Hook | 6 |
+| Human presence | 7 |
+| Format fit | 8 |
+| Audio | 7 |
+| Message + CTA | 7 |
+
+AI-artifact risk: 6/10.
+
+Hard failures:
+1. **#4 Broken product (wrong geometry).** The "17th Hole VIP Suite" is shown as a generic parkland green, not the island green the package sells.
+2. **#2/#10.** The ball sits on the lip and never visibly drops. The cup has no pin while a flag stands elsewhere on the green. The caption "watching on someone else's phone" plays over a clear-view shot.
+
+Contributing:
+- The hook reads as "fans filming a celebrity".
+- The match cut framing is weak.
+- The cheer bridge drops to a hush.
+- The suite celebration is quieter than the gallery eruption.
+- The end card is about 4.3s, long for the placement.
+
+Receipts accepted: BC-01–07, 11, 12, 21, 27, 42. BC-41 FAILED. Many harness receipts are still missing (BC-08/09/10/13/14/15/26/28/30/32/33).
+
+CLAUDE-CAUGHT learnings: a real-venue product rendered as a generic venue; a payoff generated as a static near-miss; a pin/cup state error.
+
+## §14 Skeptic — Pass 3, master v2 (verbatim)
+```
+SKEPTIC VERDICT — Pass 3
+Verdict: BLOCK
+Findings:
+- [S3] 11.3–12.9s / industry-professional + competitor lens — The payoff ball never drops: it sits motionless on the cup lip for ~1.5s, nudges once, and the cut comes; the ad's defining moment is never shown and the ball hanging on the lip reads as broken physics.
+- [S3] 11.3–12.9s / industry-professional lens — The upright yellow flag stands well behind the cup in frame, so the ball is rolling toward a hole with no flagstick while a different pin stands across the green — any golfer reads this as not the hole in play.
+- [S3] 10.0–11.0s and 15.5–18.0s / client + truth lens (claims-and-proof) — The "17th Hole VIP Suite" label sits on a parkland green ringed by oaks with no water; TripNerd's only evidenced 17th Hole suite is at THE PLAYERS/TPC Sawgrass, whose 17th is the famous island green, so golf viewers will recognise the label/picture as fake; the specific elevated front-row view straight onto the green is also presented as fact while CLIENT-FACTS list "exact suite vantage" as unconfirmed.
+- [S2] 13.0–15.5s / continuity + claims lens — In the guest's reaction close-up the background is ground-level with spectators walking on the fairway at eye height just below the rail, contradicting the elevated greenside suite of the wide shots; premium vantage appears inconsistent/unsubstantiated.
+- [S2] 18.5–22.5s / continuity lens — Celebration relocates to a shaded bar counter overlooking an empty course with no crowd and different trees; plays as a separate location, not the same suite at the same moment, and the brief's "celebrating with companions" happens divorced from the action.
+- [S2] 6.3–7.5s / target-customer + realism lens — The fan's "late reaction" is a wide open-mouthed sideways shout at readable distance; reads as angry yelling (or as him speaking the VO line) rather than relatable frustration at missing the moment — the performed big-emotion-on-generated-person risk named in the realism policy.
+- [S2] 13.0–13.6s / realism lens — Guest's first reaction is a large theatrical "O" mouth in close-up; reads performed rather than in-the-moment and is held long enough for viewers to clock it as synthetic.
+- [S2] 7.0s and 14.8s / brand-assets lens — Small generated emblem on the hero's quarter-zip (left chest, round badge in the crowd shot, small mark in the suite close-up); policy names generated pseudo-marks on clothing a defect.
+- [S2] 0.0–2.0s / first-3s lens — Opening fan's expression is near-neutral/stern and the phones blocking him show black screens; the "can't see the action" frustration is not legible in the first second without the caption.
+- [S2] 9.5–11.0s / audio + brief lens — Momentary loudness drops to about −25 to −34 LUFS across the phone-to-suite match cut; the cut is not carried by a crowd-cheer sound bridge (cheer only returns ~11.5s, after the cut).
+- [S1] 1.5–2.0s / audio — Brief momentary dip to −29.6 LUFS at the cut between the first two crowd shots; audible hole in the room tone.
+- [S1] whole piece / technical — Integrated −14.9 LUFS, true peak −1.0 dBFS, LRA 6.7 LU acceptable for Reels; transcribed VO matches the intended script word-for-word and captions match VO; end card (real logo lockup, "Be there for the moment.", "Explore your next event", tripnerd.com) sits clear of the bottom 20% and right edge; no third-party marks found. (Recorded for the clean areas — no defect.)
+Tests: weakest-2s = 11.3–13.3s (hanging ball + wrong pin + theatrical "O" reaction) — not survivable, it is the payoff. First-3s = phones-in-the-way image clear, frustration weak (S2). Persuasion = problem/solution arc and VO are tight but the payoff moment is never delivered. Cheese = low; copy restrained. Trust = undermined by the 17th Hole label on a non-island green and the unconfirmed vantage. AI-detection = high risk at the ball-on-lip shot and the two big-emotion close-ups.
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.
+```
+
+## Campaign Director ruling after v2 (STOP AND REPORT)
+- **Edit-level fixes go into v3 at zero spend:**
+  - the ball drop now completes on screen;
+  - the insert is cropped to remove the stray flag;
+  - the label becomes "VIP Suite" (no "17th Hole");
+  - the shout and the "O"-mouth frames are trimmed;
+  - a cheer bridge and room-tone fill are added.
+- **The binding blocker is not fixable by more generic generation.** The package being sold is a specific real venue (the 17th-hole suite at the island green). A generated generic green misrepresents it, and an AI rendering of the real venue raises a third-party venue/trademark question and is still a synthetic depiction of a real product.
+- **The correct fix is real footage of the actual suite view.** TripNerd's Drive archive holds THE PLAYERS clips, including 17th-hole crowd footage; files larger than about 5 MB could not be pulled through the Drive connector, and the transfer to the production sandbox was denied by the session classifier.
+- **Owner decisions required:**
+  - (a) supply or approve transfer of real suite/17th footage;
+  - (b) or approve a generic, unnamed "VIP suite" positioning, with the CTA pointing to a general page rather than THE PLAYERS page;
+  - (c) or rule on rendering the island green (needs a trademark check).
+- **Client confirmations also required:** vantage, seated or standing, group size, food and drink.
+
+## OWNER REDIRECT (2026-10-06): Augusta version, v4 draft
+**APPROVER direction:** set the ad at Augusta; 15–20s; the camera stays on the packed-in fan; the crowd faces one way; the ball lands with backspin and sticks near the pin; the two women hug, frozen as a captured photo; the man content and smiling, not laughing; cheering only at the climax; no 17th-hole suite.
+
+**Fact check (verified 2026-10-06):**
+
+| Question | Source | Finding | Consequence |
+|---|---|---|---|
+| What TripNerd sells at Augusta | tripnerd.com/events/augusta-experience | Private Executive Home · Course Passes Included · Daily Hospitality · TripNerd Hosted · Food & Drink Included; FAQ: "Augusta has grandstands that are first come first serve as well as a single folding chair per person rule." | No reserved hole or seat exists |
+| Phones | golfmonthly.com and nbc reports | Phones are banned for patrons on all days | The phone device was removed |
+| Photos from the grounds | golfmonthly.com | Commercial use is restricted to licensed media | No Augusta course imagery was used; the course look is built from generic prompts |
+
+The patio is built from TripNerd's own site photo (`tripnerd-augusta-experience-2022-0213.jpg`) as a reference.
+
+**APPROVER choices (AskUserQuestion):** "Honest Augusta"; VO2 = "…and all you can see is the back of someone's hat."
+
+**Claims shown:** the group sits in folding chairs at the green (true for any badge holder; no reservation is implied); patio hospitality (published); end-card line "Course passes · Private home · Daily hospitality" (published package highlights); eyebrow "THE AUGUSTA EXPERIENCE" (TripNerd's product name). No Masters marks, wordmarks or "Masters" text. Flags are plain yellow; chairs are plain green.
+
+**Legal flag for the owner:** using "Augusta" in paid ads relies on descriptive use (TripNerd's site carries a non-affiliation disclaimer). Augusta National enforces its marks aggressively, so a check is recommended before spend. The course look (pines, azaleas, plain yellow flag) evokes Augusta; no protected marks appear.
+
+**v4 masters (20.0s; −14.1 LUFS; 1080×1920, 30fps):**
+- Captioned: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/6ae26de3-fe23-4de0-9beb-03fad1e3a276.mp4 (md5 ec1a4780126ccc849cd58c941fcd78d0)
+- Clean: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/f390e7da-fd30-42cc-8e90-d87269b6551a.mp4 (md5 39ee426013d7e2f2f7bf4b2dc9bc9a9e)
+
+**Structure:**
+
+| Time | Shot |
+|---|---|
+| 0–3.0 | Packed fan, camera on him |
+| 3.0–4.6 | His point of view |
+| 4.6–7.3 | Crowd rises and blocks him |
+| 7.3–8.3 | Clear wide view of the green |
+| 8.3–10.9 | Ball lands, checks back and sticks (1.5× punch-in); the only roar |
+| 10.9–12.9 | The women hug |
+| 12.9–13.6 | Photo-capture freeze with shutter |
+| 13.6–15.6 | He sits content, looking around |
+| 15.6–17.4 | TripNerd hospitality patio |
+| 17.4–20.0 | End card |
+
+**Status:** owner first-artifact review (FIRST-ARTIFACT RULE). The dual gate runs once, on the frozen cut, after owner direction. NOT client ready.
+
+**Spend:** 377.9 of the 450 cap (balance 10,344.4).
