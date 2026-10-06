@@ -62,7 +62,7 @@ No event, venue or tournament is named. The chat is a dramatisation: no real per
 Posting notes: original audio, sound on; a Trial Reel candidate (no followers see it unless it clears). No event name unless the owner takes decision 1 of the week-1 brief.
 
 ## 6. Dual quality gate (ran on the frozen master, md5 above)
-Isolated workflow agents, packet-only. Verdicts received so far (the industry-professional lens, the Critic scorecard and the adversarial verification of blocking findings were still running when this was written; appended below when they land).
+Isolated workflow agents, packet-only. Verdicts received so far (all nine agents reported; 23.6 minutes, 840k subagent tokens).
 
 | Lens | Verdict | Blocking findings | What they change |
 |---|---|---|---|
@@ -70,6 +70,9 @@ Isolated workflow agents, packet-only. Verdicts received so far (the industry-pr
 | Target customer | BLOCK | **S3: the newest chat bubble lands at 92–97 % of frame height, inside the Reels UI zone** (a layout bug: the anchor was added to the list top; fix: anchor the newest bubble at about 60 %). S2: the lockup's handle sits in the bottom zone; the first second is two-thirds empty; the suite photo reads as an empty breakout room; rights for the gallery faces not stated | both layout fixes go into v2; the stills go (the owner's note) |
 | Industry professional | BLOCK | **S3: the same UI-zone bug** (the "Booked" bubble at rows 1769–1865 of 1920). S2: a dead first 2.5 s; the month separators are set at timestamp size in mid-grey although they carry the whole joke; a soft dark obstruction (the shooter's hat or hand) pinned to the lower-left corner at 11.4–12.9 s; the in-clip push-in smears the far crowd; the two stills are slideshow filler and do not grade with the video; the lockup reads for about one second; the loop restarts with a flash from the brightest frame to an empty dark header. S1: the fake-chat format is a recognised template; venue recognisable, rights to state | all of it goes into v2: bigger separators, a live first second, crop the corner obstruction, no digital push on the video, a longer lockup, a loop seam, and the stills go |
 | Competitor | BLOCK | **S4: the tournament footage has no stated owner or licence in the packet** (a packet omission: V24 is TripNerd's own recording under Taylor's standing authorisation of 2026-09-28, which the verification step is given). S3: the picture names a venue the text does not | resolved by evidence; v2's event choice removes the mismatch |
+
+| Critic (ServicePow-6) | REVISE | Midpoint **7.5 ± 1.5** (floor 8.0): doesn't-look-AI 9 · hook inside 2 s 7 · human presence 7 · format fit 7 · audio design 8 (from measured facts) · message + CTA clarity 7. AI-artefact risk **2/10**. Formal hard failure: the packet carried no registry receipts (BC-16/17/18/19/20/21/25/32) and no Campaign Bible, so readiness is CANNOT ASSESS by the scorecard's own rule; the Critic called it "a verification block, not a defect seen on screen". | v2's packet states provenance, disclosure and the receipts; the "no verb in the close" note stands for the owner |
+| Verification (4 blocking findings, each attacked by a fresh agent) | all upheld | The two UI-zone findings confirmed by pixel measurement (bubble rows 1770–1865 of 1920); the provenance omission confirmed as a packet fact; the venue mismatch confirmed from the frames | v2 fixes all four by design |
 
 Carried into v2 as rules: bubble anchor at ~60 %, lockup bottom at or above 65 %, drop the years from the separators, confirm the ® with TripNerd, state footage provenance in every packet.
 
