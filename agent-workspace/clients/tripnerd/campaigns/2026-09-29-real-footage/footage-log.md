@@ -60,3 +60,15 @@ phone are the single biggest quality lever.**
 
 ## Addendum 2026-09-30 — the client's website adds real material this log did not list
 The NERDS gallery and the Higgsfield clips above are not the whole register. tripnerd.com also hosts **five Vimeo videos** (two are real suite tours: Daytona 500 and the 17th-hole suite, March 2026; the Derby film is unseen), **15 attributed Google reviews**, the **package lines** for each event, and more real photos on the event pages than the gallery holds. Full table, verbatim reviews, real-versus-stock calls and the site's own inconsistencies: `../2026-09-30-five-more-real-footage/real-material-inventory.md`. Nothing was downloaded from Vimeo; the masters are a NEEDS INPUT for TripNerd.
+
+## Addendum 2026-10-06 — full Higgsfield media IDs (the table above holds only the 8-character prefixes)
+Recorded so no session has to dig them out of a transcript again. Base URL: `https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/<id>.mp4`.
+
+| Clip | Media ID | Upscaled copy (bytedance 1080x1920/30, preset ugc) |
+|---|---|---|
+| V23 suite walk-through | `d925d5be-f787-4d64-b9fb-e084c07c709b` | `https://d8j0ntlcm91z4.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/hf_20261006_205713_2f22b3aa-6584-4f87-b514-7674f106ac72.mp4` (full 54 s) |
+| V24 suite POV, the roar | `2911d9d6-b5c8-4b80-b158-6139277672e1` | `https://d8j0ntlcm91z4.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/hf_20261006_203459_da1caa66-da93-4beb-9987-188ac87e660e.mp4` (full 31 s) |
+| Gallery walk 1 (= V16, the walk in and the green reveal) | `e037067e-8eef-4b07-a3d2-9de4bc5b694b` | job `745c171d-9c82-4adb-915a-b9a2f0cf6874` (2026-10-06; URL in the Two-ways build record) |
+| Gallery 2, looking up at the suites | `2585923a-ec96-4e6e-b414-7fa8ab36cf58` | not upscaled |
+| Gallery walk 3, toward 17 (speech in the audio) | `45e0a985-0fa0-4b91-9ed0-56a3cb403a9a` | not upscaled |
+| Owner's 720p cut | `17a07624-1deb-4d24-8271-d8f709ec6e92` | not upscaled |
