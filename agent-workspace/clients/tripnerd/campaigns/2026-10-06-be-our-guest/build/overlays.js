@@ -42,7 +42,8 @@ const layers = {
   suite: label('THE SUITE'),
   balcony: label('THE BALCONY'),
   seventeen: label('THE 17TH'),
-  ask: html(`<div class="t panel ask" data-text><div class="q">Where would<br>you sit?</div><div class="s">Tell us in the comments.</div></div>`),
+  view: label('THE VIEW'),
+  ask: html(`<div class="t panel ask" data-text><div class="pov">TRIPNERD'S SPOT</div><div class="q">Right on<br>the 17th.</div><div class="s">Where would you sit? Tell us below.</div></div>`),
   end: html(`<div class="t end" data-text><img src="${logo}"><div class="bar"></div><div class="head">Be our<br>guest.</div><div class="cta">Plan your group's trip at <b>tripnerd.com</b></div></div>`),
   scrim: html(`<div class="t scrim"></div>`),
 };

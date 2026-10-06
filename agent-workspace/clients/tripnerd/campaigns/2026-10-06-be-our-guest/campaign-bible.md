@@ -18,11 +18,11 @@ tags: [campaign, bible, instagram, reel, awareness, real-footage, the-players]
 | **Campaign ID** | 2026-10-06-be-our-guest |
 | **Client** | TripNerd (tripnerd.com) |
 | **Product** | Brand awareness; downstream = The Players hospitality (suite on the 17th). tripnerd.com/events/the-players-championship live, "March 2027 packages available" (CONFIRMED, fetched 2026-10-06) |
-| **Platform** | Instagram Reels, organic first (Trial Reel), 9:16, 1080×1920, 24 fps, 20.4 s |
+| **Platform** | Instagram Reels, organic first (Trial Reel), 9:16, 1080×1920, 24 fps, 15.0 s (v1.3) |
 | **Objective / KPI** | Awareness + engagement: 3-second hold, completion, sends, comments. Targets UNKNOWN (no baseline beyond public plays: Sep 26 = 104, Sep 30 = 137) |
 | **Budget** | 0 generation credits (real footage, no AI) |
 | **Depth** | FULL (new concept family, real people). Phases answered by standing documents recorded as skips in §16 |
-| **Approval status** | **IN PRODUCTION — v1.2 master frozen; dual gate running.** Not postable until consent (C4) is on file |
+| **Approval status** | **IN PRODUCTION — v1.3 (15 s owner trim) built; dual gate on v1.2 running, re-run on the final master required.** Not postable until consent (C4) is on file |
 
 ## 1. Ground truth (skipped as a fresh run — see client brief, content system, Drive register)
 - Source: TripNerd's own Drive archive `media/` (masters-week, the-players), pulled 2026-10-06, all 13 file sizes matched Drive, bundle stored in Higgsfield (sha256 list in the bundle).
@@ -39,7 +39,7 @@ Rotation vs live ads (BC-24): no host to camera, no photo grid, no island-green 
 ## 4–5. Script (supers only, no VO)
 - 0.0–2.4 "POV: you're our guest at The Players" (event name used only to say where guests are)
 - Labels: "THE SUITE" · "THE BALCONY" · "THE 17TH"
-- 14.9–17.4 "Where would you sit? / Tell us in the comments."
+- v1.3: "THE VIEW" (8–10 s) → "TRIPNERD'S SPOT / Right on the 17th. / Where would you sit? Tell us below." (10–12.5 s)
 - End card: real wordmark · "Be our guest." · "Plan your group's trip at tripnerd.com"
 Claims: none numeric. "Suite… on the 17th" is shown in TripNerd's own footage and stated on its site.
 
@@ -79,4 +79,5 @@ PENDING.
 | 2026-10-06 | Door placard event logo covered with a flat fill (logo clearance, not alteration of meaning) | OPERATOR |
 | 2026-10-06 | v1 → v1.1: suite shot moved past the TV; stand-alone logo-wall shot cut (Sep 26 overlap, brand-time budget) | OPERATOR |
 | 2026-10-06 | v1.1 → v1.2: V18 tee-shot shot failed the clip motion gate (0.56 < 1.6) → replaced with V16 crowd shot (22.6) | OPERATOR |
+| 2026-10-06 | Owner trim to ~15 s: drop the run of crowd views after "THE 17TH"; add "the view → TripNerd's spot → where would you sit?". "Best spot" rendered as "Right on the 17th" (superlative rule); swap only with TripNerd sign-off | Owner / OPERATOR |
 | 2026-10-06 | Phases 1, 2, 4, 5 skipped as fresh runs (answered by standing documents + teardown) | OPERATOR |

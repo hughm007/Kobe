@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Be Our Guest — assemble the 20.4 s 9:16 master from real TripNerd footage.
+"""Be Our Guest — assemble the 15.0 s 9:16 master from real TripNerd footage.
 Runs in the Higgsfield sandbox. Expects src/*.mp4 (Drive originals), s1c.mp4 (shot 1 with the event
 logo cleared by cover_logo.py) and ov_*.png (overlays.js) in the cwd.
 Uniform timebase: every segment -> fps=24 (hero footage is 24 fps), concat FILTER. Audio is each
@@ -16,15 +16,12 @@ LUFS = {V23: -23.2, V24: -18.2, V07: -19.1, V08: -18.4, V16: -20.9, 's1c.mp4': -
 # (file, in, out, sharpen, overlay layers)
 EDL = [
     ('s1c.mp4', 0.0, 2.4, 0.4, ['hook']),        # arrival: TRIPNERD door (logo cleared)
-    (V23, 10.3, 12.3, 0.4, ['suite']),           # inside the suite (from 10.3: no TV broadcast in frame)
-    (V23, 24.0, 26.0, 0.4, ['balcony']),         # out to the balcony
+    (V23, 10.3, 12.1, 0.4, ['suite']),           # inside the suite (from 10.3: no TV broadcast in frame)
+    (V23, 24.0, 25.8, 0.4, ['balcony']),         # out to the balcony
     (V24, 13.0, 15.0, 0.4, ['seventeen']),       # the 17th
-    (V07, 8.5, 10.0, 0.8, []),                   # crowd + island green
-    (V23, 30.0, 32.0, 0.4, []),                  # guests watching from the balcony
-    (V16, 8.5, 10.0, 0.8, []),                   # crowd streaming to the 17th (V18 tee shot failed the motion gate)
-    (V24, 16.0, 17.5, 0.4, []),                  # green, a fan's arms go up
+    (V23, 30.0, 32.0, 0.4, ['view']),            # guests looking out from the balcony
     (V23, 50.0, 52.5, 0.4, ['ask']),             # payoff: the table on the balcony
-    (V08, 3.0, 6.0, 0.8, ['scrim', 'end']),      # end card plate
+    (V24, 15.5, 18.0, 0.4, ['scrim', 'end']),    # end card plate (the green, under scrim)
 ]
 FPS = 24
 args = ['ffmpeg', '-v', 'error', '-y']

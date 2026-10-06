@@ -9,20 +9,21 @@ updated: 2026-10-06
 tags: [shotlist, edl, footage-log]
 ---
 
-# EDL — v1.2 (20.4 s · 9:16 · 1080×1920 · 24 fps)
+# EDL — v1.3 (15.0 s · 9:16 · 1080×1920 · 24 fps) — owner trim 2026-10-06
 
 | # | Master time | Source clip (Drive) | In–out (s) | Picture | Super | Conformed md5 (clip gate PASS) |
 |---|---|---|---|---|---|---|
 | 1 | 0.0–2.4 | TN_2026-03-12_the-players_V23 | 1.2–3.6 | POV to the suite doors, TRIPNERD placard (event logo covered) | POV: you're our guest at The Players | 11083ac5… |
-| 2 | 2.4–4.4 | V23 | 10.3–12.3 | TripNerd suite, logo wall | THE SUITE | f1536f37… |
-| 3 | 4.4–6.4 | V23 | 24.0–26.0 | Onto the balcony over the 17th | THE BALCONY | 3defe849… |
-| 4 | 6.4–8.4 | TN_2026-03-14_the-players_V24 | 13.0–15.0 | Island green + crowd from the suite | THE 17TH | cd0d57a5… |
-| 5 | 8.4–9.9 | TN_2024-03-16_the-players_V07 | 8.5–10.0 | Crowd at the 17th | — | 1be84ccb… |
-| 6 | 9.9–11.9 | V23 | 30.0–32.0 | Guests watching from the balcony (backs) | — | d2129d99… |
-| 7 | 11.9–13.4 | TN_2025-03-15_the-players_V16 | 8.5–10.0 | Crowd streaming to the 17th | — | 6f784a23… |
-| 8 | 13.4–14.9 | V24 | 16.0–17.5 | The green; a fan's arms go up | — | d5ce3db0… |
-| 9 | 14.9–17.4 | V23 | 50.0–52.5 | Two guests at a balcony table | Where would you sit? / Tell us in the comments. | 6202fcc6… |
-| 10 | 17.4–20.4 | TN_2024-03-17_the-players_V08 | 3.0–6.0 | Course plate under navy scrim | End card | 62de0551… |
+| 2 | 2.4–4.2 | V23 | 10.3–12.1 | TripNerd suite, logo wall | THE SUITE | 5b14191e… |
+| 3 | 4.2–6.0 | V23 | 24.0–25.8 | Onto the balcony over the 17th | THE BALCONY | 5f69f910… |
+| 4 | 6.0–8.0 | TN_2026-03-14_the-players_V24 | 13.0–15.0 | Island green + crowd from the suite | THE 17TH | cd0d57a5… |
+| 5 | 8.0–10.0 | V23 | 30.0–32.0 | Guests looking out from the balcony | THE VIEW | d2129d99… |
+| 6 | 10.0–12.5 | V23 | 50.0–52.5 | Two guests at a balcony table | TRIPNERD'S SPOT / Right on the 17th. / Where would you sit? Tell us below. | 6202fcc6… |
+| 7 | 12.5–15.0 | V24 | 15.5–18.0 | The green under navy scrim | End card | 6ed1a104… |
+
+v1.2 (20.4 s) had 6.5 s of crowd/course views after "THE 17TH"; the owner asked for ~15 s with a
+"the view → TripNerd's spot → where would you sit?" beat. "Best spot" was written as "Right on the
+17th" (TripNerd's rule: superlatives need a source); swap back only with TripNerd's sign-off.
 
 ## Footage log (all 13 Drive videos)
 | Clip | Res / fps / s | Content | Use |
