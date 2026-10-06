@@ -18,6 +18,7 @@ tags: [reel, r01, chatgpt, build-prompt, the-17th]
 - **Native clips.** Cut from the native V23 and V24, not the Topaz upscales. This logs the override "720p copies acceptable for this item".
 - **Drop both AI bridges.** Use real-footage whips.
 - **The Reel contains no AI.** There's no AI label and no disclosure line.
+- **v2.2:** set line breaks and a 64 px size for every string, measured with Montserrat ExtraBold. That fixes the H3 line (it can't fit in 2 lines) and the hook's lone "17th".
 - **v2.1 (6 Oct, later):** end card 2.00 s (17.25 s total), H2/H3 required for Trial Reels, a clean export for Wyatt's polish pass, B04 re-described.
 
 ## 1. What changed from Grok's brief, and why
@@ -125,19 +126,21 @@ STEP 4: COLOUR
 
 STEP 5: TEXT (render every line as a transparent PNG with Python PIL and the attached fonts; don't use ffmpeg drawtext)
 - SAFE ZONE, a hard rule: all text inside x 60-960 and y 270-1530 of the 1080x1920 frame. Nothing in the bottom 390 px or the right-hand 120 px, which Instagram's caption and buttons cover.
-- Hook and labels: Montserrat ExtraBold, 64-72 px, white text on a navy #202838 rounded pill at 85% opacity, 24 px corner radius, 28 px side padding. Left edge at x = 72, top of the text block around y = 400. Wrap to at most 2 lines inside the safe zone. Never shrink below 60 px.
-- Hook (B01) only: a 4 px #18A0F0 underline under the hook text. The hook is ON from the very first frame (no fade-in), because it is the cover. Under it, "Ponte Vedra Beach, FL" in Inter Medium 34 px, white, on a navy pill at 70%.
+- Hook and labels: Montserrat ExtraBold, 64 px, line height 78 px, white text on a navy #202838 rounded pill at 85% opacity, 24 px corner radius, 28 px side padding. Left edge of the pill at x = 72, top of the text block at y = 400. Use EXACTLY the line breaks given below (shown as " / "); don't auto-wrap. Every line fits: the widest is 774 px at 64 px, and the space inside the pill is 832 px.
+- Hook (B01) only: a 4 px #18A0F0 underline under the last hook line. The hook is ON from the very first frame (no fade-in), because it is the cover. The same goes for the first line of H2 and H3. Under it, "Ponte Vedra Beach, FL" in Inter Medium 34 px, white, on a navy pill at 70%.
 - Every other line: 6-frame fade in, 4-frame fade out, on screen for its whole beat (at least 1.2 s).
-- End card (B11): use 11_ENDCARD.png exactly as supplied. NEVER redraw, recolour, trace, move or regenerate the logo. Add "Trip like a Nerd." in Montserrat ExtraBold (about 88 px) and "Which way are you watching?" in Inter Medium (about 44 px). Both navy #202838, centred, inside the safe zone, not touching the logo. Never put white text on the blue end card.
-- EXACT strings. Copy them character for character, including " · " (space, middle dot, space):
-  Two ways to watch the 17th
-  Ponte Vedra Beach, FL
-  1 · At the rail
-  2 · In the suite, out of the sun
-  Food + open bar inside
-  Our suite on the 17th.
-  Trip like a Nerd.
-  Which way are you watching?
+- End card (B11): use 11_ENDCARD.png exactly as supplied. NEVER redraw, recolour, trace, move or regenerate the logo. Add "Trip like a Nerd." in Montserrat ExtraBold 88 px (736 px wide) and "Which way are you watching?" in Inter Medium 44 px. Both navy #202838, centred on x = 510 (the middle of the safe zone), inside the safe zone, not touching the logo. Never put white text on the blue end card.
+- EXACT strings with EXACT line breaks (" / " means a new line). Copy them character for character, including " · " (space, middle dot, space):
+  B01 hook: Two ways to watch / the 17th
+  B01 pin:  Ponte Vedra Beach, FL
+  B02:      1 · At the rail
+  B06:      2 · In the suite, / out of the sun
+  B07:      Food + open bar inside
+  B09:      Our suite on the 17th.
+  B11:      Trip like a Nerd.
+  B11:      Which way are you watching?
+  H2 first line: Everyone goes quiet / for this one…
+  H3 first line: An estimated 100,000 / balls a year land / in this water.   (the only 3-line text; on screen for 2.5 s)
 - No other text anywhere: no subtitles, hashtags, emoji, handles, prices, "tag a friend", or "comment X".
 
 STEP 6: SOUND
@@ -162,7 +165,7 @@ STEP 8: SELF-CHECK. Report each line as PASS or FAIL, with the evidence.
 - ffprobe of every export: resolution, fps, duration (17.25 +/- 0.04 s), codecs, bitrate, file size.
 - Measured loudness and true peak.
 - The beat table with the actual source in and out times you used, and any swap (for example B07).
-- Every on-screen string matches the exact list; the pixel box of each line is inside the safe zone; each is on screen for at least 1.2 s.
+- Every on-screen string matches the exact list, with the exact line breaks; the pixel box of each text block is inside the safe zone; each is on screen for at least 1.2 s.
 - None of these appear anywhere on screen: Masters, VIP, official, partner, sponsor, PGA TOUR, THE PLAYERS, TPC Sawgrass, golf major, #1, guarantee, best, ultimate, world-class, unforgettable, exclusive, limited, sold out, any price.
 - No AI-generated or AI-enhanced frame, and no frame interpolation, was used.
 - V24 13.40-15.30 was not used.
