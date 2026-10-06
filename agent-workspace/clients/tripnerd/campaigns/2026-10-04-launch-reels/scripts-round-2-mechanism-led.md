@@ -55,3 +55,14 @@ Source: [`../../marketing-plan/2026-10-06-competitive-picture-meta-ad-library.md
 
 ## What this round changes versus the first five
 The first five hung on an Augusta landing shot nobody can legally supply before April 2027. These five run on mechanisms that the longest-running advertisers in the set keep paying for, and on footage and photos TripNerd already owns. The two with the most evidence behind them are 1 and 2 (pain, by the clock). The one with the highest ceiling and the most friction is 3 (a real face). Ask for 3 now; it takes a month to get a person comfortable on camera.
+
+## Build ratings (owner's ask, 2026-10-06 night; ESTIMATE, 1–10, 8 = client-ready)
+Client-ready means a master that passes QC1, the Skeptic and the Critic, carries no unevidenced claim, and TripNerd's approver would accept. The numbers rate what each tool can deliver with what exists today. The ChatGPT column is an estimate (no test run; GPT-6 Astra's published descriptions cover documents, code and browsers, not video editing); the gap is access (the cleared footage in the sandbox, the pipeline, the gates), not model intelligence, and rating myself against a competitor is a conflict of interest. Nothing here has an owner approval yet; the last cut the owner saw was rejected.
+
+| Script | Claude Code | ChatGPT | What stops it being an 8 today |
+|---|---|---|---|
+| 1 The thread | 7 | 5 | Owner review and the two gates; the thread device is untested on this owner's eye. Material and claims are clean. |
+| 2 6:12 AM | 7 | 6 | The real run-of-show times (ask 3). With them, 8 after the gates. |
+| 3 Ask Taylor | 5 | 4 | No footage exists; neither tool can film. Once a phone take exists, the cut is routine (8 for either, given the files). |
+| 4 What the ticket doesn't include | 6 | 5 | Two inclusion lines wait on the package sheet as evidence; one photo needs a release. |
+| 5 Monday | 6 | 4 | The review-name OKs (ask 5). The claims discipline (verbatim quotes, no implied testimonial) is where a general tool slips. |
