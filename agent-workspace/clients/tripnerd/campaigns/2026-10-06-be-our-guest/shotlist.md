@@ -9,21 +9,23 @@ updated: 2026-10-06
 tags: [shotlist, edl, footage-log]
 ---
 
-# EDL — v1.3 (15.0 s · 9:16 · 1080×1920 · 24 fps) — owner trim 2026-10-06
+# EDL — v1.4a (15.0 s · 9:16 · 1080×1920 · 24 fps) — after the v1.2 dual gate + owner copy
 
-| # | Master time | Source clip (Drive) | In–out (s) | Picture | Super | Conformed md5 (clip gate PASS) |
+| # | Master time | Source (Drive) | In–out (s) | Picture | Super | Conformed md5 (clip gate PASS) |
 |---|---|---|---|---|---|---|
-| 1 | 0.0–2.4 | TN_2026-03-12_the-players_V23 | 1.2–3.6 | POV to the suite doors, TRIPNERD placard (event logo covered) | POV: you're our guest at The Players | 11083ac5… |
-| 2 | 2.4–4.2 | V23 | 10.3–12.1 | TripNerd suite, logo wall | THE SUITE | 5b14191e… |
-| 3 | 4.2–6.0 | V23 | 24.0–25.8 | Onto the balcony over the 17th | THE BALCONY | 5f69f910… |
-| 4 | 6.0–8.0 | TN_2026-03-14_the-players_V24 | 13.0–15.0 | Island green + crowd from the suite | THE 17TH | cd0d57a5… |
-| 5 | 8.0–10.0 | V23 | 30.0–32.0 | Guests looking out from the balcony | THE VIEW | d2129d99… |
-| 6 | 10.0–12.5 | V23 | 50.0–52.5 | Two guests at a balcony table | TRIPNERD'S SPOT / Right on the 17th. / Where would you sit? Tell us below. | 6202fcc6… |
-| 7 | 12.5–15.0 | V24 | 15.5–18.0 | The green under navy scrim | End card | 6ed1a104… |
+| 1 | 0.0–2.4 | TN_2026-03-12_the-players_V23 | 24.0–26.4 | Stepping onto the suite balcony; island-green 17th in frame 1 | POV: you're TripNerd's guest at The Players | 0a528682… |
+| 2 | 2.4–4.6 | TN_2026-03-14_the-players_V24 | 14.6–16.8 | The 17th green + crowd from the suite (clear of foreground head) | THE 17TH | 85262526… |
+| 3 | 4.6–6.6 | V23 | 46.0–48.0 | Suite in use: guests at tables, logo wall | THE SUITE | 858fb10f… |
+| 4 | 6.6–8.8 | V23 | 30.0–32.2 | Guests on the balcony looking out | THE VIEW | 057954d3… |
+| 5 | 8.8–12.0 | V23 | 50.0–53.2 | Guests at a balcony table | TripNerd's got the best spot. / Where would you sit? Tell us below. | 15e59f4a… |
+| 6 | 12.0–15.0 | V24 | 19.0–22.0 | View from the suite under navy scrim | End card: wordmark · Be our guest. · 2027 packages: link in bio | 047abf3d… |
 
-v1.2 (20.4 s) had 6.5 s of crowd/course views after "THE 17TH"; the owner asked for ~15 s with a
-"the view → TripNerd's spot → where would you sit?" beat. "Best spot" was written as "Right on the
-17th" (TripNerd's rule: superlatives need a source); swap back only with TripNerd's sign-off.
+Audio: each shot's location sound (high-pass 100 Hz, 0.12 s fades) over a continuous crowd bed (V24
+8.0–23.0 s, skipping its only speech at 3.8–5.8 s); loudnorm −16 LUFS / −2 dBTP; limiter without
+auto-level (v1.4 had auto-level on → −14.6 LUFS / −0.6 dB; fixed in v1.4a). Ships with ORIGINAL AUDIO.
+
+Removed vs v1.2/v1.3: the door/placard shot (event logo + patch), all 2024/2025 ground-level crowd
+shots, the empty-suite shot.
 
 ## Footage log (all 13 Drive videos)
 | Clip | Res / fps / s | Content | Use |

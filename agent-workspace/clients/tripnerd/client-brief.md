@@ -27,6 +27,13 @@ reviews, rankings, price breakdowns, POV) but keep the subject inside TripNerd's
 Full system, rules and Grok prompts: [`instagram-content-system.md`](instagram-content-system.md).
 TripNerd's approver still needs to be told the primary KPI changed.
 
+## Standing approvals (owner-recorded)
+- **Guest consent for TripNerd's own footage — CONFIRMED, standing.** 2026-10-06: the owner
+  reported that Jason (TripNerd contact) confirmed the guests shown in TripNerd's footage are
+  fine to feature, and instructed: "Always assume that." Applies to identifiable guests in
+  TripNerd's own archive footage. Does not cover footage from other companies (e.g. All Access
+  watermarked/branded clips) or anyone who asks to be removed.
+
 ## Brand
 White wordmark, nerd-head mark, brand blue. **Brand standards win outright** over any
 reference palette. Archetype for web/creative: Cinematic (G), story pages Warm editorial (A).

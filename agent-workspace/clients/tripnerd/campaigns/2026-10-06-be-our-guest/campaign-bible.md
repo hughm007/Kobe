@@ -67,7 +67,7 @@ PENDING.
 ## 15. CONFLICTS
 | ID | Conflict | Status |
 |---|---|---|
-| C4 | Identifiable guests (balcony table, balcony watchers, suite) — TripNerd rule: identifiable guests only with consent | **OPEN — CLIENT_APPROVER confirms consent (or names who is staff)** |
+| C4 | Identifiable guests (balcony table, balcony watchers, suite) — TripNerd rule: identifiable guests only with consent | **RESOLVED 2026-10-06** — owner: Jason (TripNerd) confirmed the guests shown are fine to feature; standing instruction "always assume that" (recorded in the client brief) |
 | C5 | Most sources are 404×720; scaled ×2.67 — softness at full screen | OPEN — accept, or supply the Topaz 1080p versions of V13/V16/V23/V24 (Drive `media-upscaled/`, AI upscale = labelled per TripNerd rule) or original camera files |
 
 ## 16. Decision log
@@ -80,4 +80,8 @@ PENDING.
 | 2026-10-06 | v1 → v1.1: suite shot moved past the TV; stand-alone logo-wall shot cut (Sep 26 overlap, brand-time budget) | OPERATOR |
 | 2026-10-06 | v1.1 → v1.2: V18 tee-shot shot failed the clip motion gate (0.56 < 1.6) → replaced with V16 crowd shot (22.6) | OPERATOR |
 | 2026-10-06 | Owner trim to ~15 s: drop the run of crowd views after "THE 17TH"; add "the view → TripNerd's spot → where would you sit?". "Best spot" rendered as "Right on the 17th" (superlative rule); swap only with TripNerd sign-off | Owner / OPERATOR |
+| 2026-10-06 | Dual gate on v1.2: critic HARD FAIL 6.5 ± 1.5; Skeptic BLOCK (2 × S4: placard logo visible frames 0–3 + censor-box look; consent unknown). Verbatim in qc/. | Gates |
+| 2026-10-06 | Owner directive: payoff copy "TripNerd's got the best spot." (superlative; TripNerd rule asks for a source — owner accepts; no Evidence Record) | Owner (APPROVER) |
+| 2026-10-06 | v1.4: door/placard shot removed (fixes both S4 logo findings); opens on the balcony reveal (17th in frame 1); suite-in-use shot with guests; hook names TripNerd; continuous crowd bed + 0.12 s fades + high-pass, loudnorm −16 LUFS / −2 dBTP; end card "2027 packages: link in bio" (bio link → /events/the-players-championship; no short URL exists — /players etc. 404) | OPERATOR |
+| 2026-10-06 | Audio declared: ships with ORIGINAL AUDIO (location sound) as judged; any in-app music is the owner's call at posting and was not gated | OPERATOR |
 | 2026-10-06 | Phases 1, 2, 4, 5 skipped as fresh runs (answered by standing documents + teardown) | OPERATOR |

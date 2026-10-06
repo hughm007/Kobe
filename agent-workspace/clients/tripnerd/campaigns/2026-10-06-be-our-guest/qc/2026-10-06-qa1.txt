@@ -46,3 +46,13 @@ seg03 cd0d57a5… 25.48 PASS · seg04 d2129d99… 17.80 PASS · seg05 6202fcc6�
 Master: resolution PASS · fps 24 PASS · yuv420p PASS · 48 kHz/2 ch PASS · peak -1.4 dB / mean -18.5 dB PASS · no frozen PASS ·
 no black PASS · motion 30.89 PASS · hook motion 7.64 PASS · no flash cuts PASS · aspect PASS · duration 15.00 vs 15.0 PASS · OVERALL PASS
 Loudness: I -16.0 LUFS, LRA 5.6 LU, peak -1.4 dBFS. ASR (VAD): 0 segments. Text band: 7/7.
+
+
+=====================================================================
+v1.4a — tripnerd-be-our-guest-v1-4a-master.mp4  sha256 00affd65daeacd79176fe2f04fa06ceb1699f762882370eb21b008ee508235fa
+Clip gate (conformed segments, identical picture chain to v1.4): seg00 0a528682… 8.65 PASS · seg01 85262526… 33.16 PASS ·
+seg02 858fb10f… 52.69 PASS · seg03 057954d3… 18.96 PASS · seg04 15e59f4a… 44.23 PASS · seg05 047abf3d… 159.08 PASS (6/6)
+Master: 1080x1920 · 24 fps · yuv420p · 48 kHz/2 ch · peak -2.1 dB / mean -20.2 dB · no frozen · no black · motion 31.03 ·
+hook motion 3.61 · no flash cuts · aspect 9:16 · duration 15.00 vs 15.0 → OVERALL PASS
+ebur128: I -16.6 LUFS, LRA 10.9 LU, true peak -2.1 dBFS (target -16 LUFS / -2 dBTP). ASR (VAD): 0 segments.
+Text band: 7/7 inside y 288-1344, x <= 940. (v1.4 before the limiter fix measured -14.6 LUFS / -0.6 dB — superseded.)

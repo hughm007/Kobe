@@ -1,0 +1,154 @@
+CREATIVE CRITIC — ServicePow-6 (BC-22), fresh agent, run 2026-10-06 on v1.2
+(master sha256 3e1b64d6…a25c6). Transcribed verbatim.
+
+CREATIVE CRITIC: QC VERDICT. TripNerd "Be Our Guest" Reel (master sha256 3e1b64d6…a25c6, re-verified on download)
+
+VERDICT: HARD FAIL
+
+How I watched, and what I could not do: I can't play video in real time and I can't hear. I watched through 2 fps contact sheets, then pulled full-resolution frames and single frames from every shot. Audio was checked by meter only (volumedetect, ebur128 with true peak, silencedetect, RMS in 100 ms windows, band energy, and faster-whisper base.en and small.en without VAD). I did not open anything under the campaigns folder. I opened tripnerd.com and /events/the-players-championship myself, rendered in Playwright at an iPhone 13 viewport.
+
+FIRST REACTION (stranger watch): Real, unpolished suite footage that feels like a friend's story. But the first 2.4 s are a glass door with a patched blue sign. The view that sells the product only arrives at 4.4 s. The sound is flat location audio waiting for music nobody has picked yet.
+
+FIVE QUESTIONS:
+- Who is it for: golf fans or group-trip planners thinking about The Players. Implied by "POV: you're our guest" and "Plan your group's trip". Answered, implicitly.
+- Why it matters: the suite balcony over the island-green 17th, shown at 4.4 s. It is never put into words, and the GA-crowd shots are not framed as a contrast, so the premium is left unstated. Partly answered.
+- What is offered: a TripNerd guest experience in a suite at The Players. The fact that March 2027 is bookable appears only in the caption ("next year's trip"), not in the master. Partly answered.
+- Why believe it: strong. Real footage, TripNerd logo wall, TRIPNERD suite placard. The visible patch on the placard undercuts it.
+- What to do next: comment "Where would you sit?" and also go to tripnerd.com. That is two asks, and the URL lands on a generic homepage (see BC-19). Answered, but diluted.
+
+SEMANTIC HARD FAILURES:
+1. #5 Incorrect branding, plus the client's rule "No event logos… Never imply official partnership", at 0.000–0.167 s. The brief says the event half of the placard is "covered in post with a flat colour fill". The pixels say otherwise:
+   - Frames 0–2 (0.000–0.083 s) show THE PLAYERS mark and wordmark plainly on the placard, next to TRIPNERD.
+   - Frame 3 still shows "AYERS" and frame 4 shows "S |".
+   - The fill trails the moving placard. In frame 0 it floats over empty glass and door frame beside the logo.
+   - Frame 0 is the default first frame and cover.
+   - From 0.2 to 2.4 s the fill is a visibly separate, slightly different blue rectangle. Its top and bottom edges step past the placard edges. It reads as a censor bar on the client's own sign, worst at 1.8–2.4 s when the sign fills the upper frame.
+   - TripNerd's own logo next to the event logo is exactly the "official partner" look the client's event page disclaims ("not sponsored by, affiliated with, or a partner of THE PLAYERS").
+2. #10 Visuals contradict the script, caption level only (fixable in copy). The planned caption says "This is Players week from our suite on the 17th." About 4.5 s of the cut is visibly shot at ground level among the public, not from the suite: 8.4–9.9 behind the GA crowd, 11.9–13.4 on the crowd path, 13.4–14.9 at the gallery by the water.
+
+Checked and not hit:
+- #1 random scene: every shot is tied to the 17th. The sequence is weak but not random; see the scores.
+- #2 the story makes sense.
+- #3 faces and hands: real footage, no issues.
+- #4 nothing broken; the suite is shown accurately, just empty.
+- #6 no major continuity error. Mixing 2024, 2025 and 2026 footage and changing weather is tolerable in a montage, but it does weaken the single-visit POV idea.
+- #7 lip sync: N/A, no dialogue.
+- #8 unusable audio: I can't rule on this by ear. Measured problems are listed under audio design.
+- #9 the CTA ask suits an awareness and engagement objective.
+
+REGISTRY VERIFICATION (by BC id):
+- BC-01 PASS (1080x1920, I confirmed it). BC-02 PASS (24/1). BC-03 PASS (yuv420p). BC-04 PASS (AAC, 48 kHz, stereo).
+- BC-05 PASS on integrated loudness: I re-measured −16.0 LUFS with LRA 7.6. Note: true peak is −1.3 dBTP against a declared −1.5 dBTP ceiling, 0.2 dB over. That is outside BC-05's integrated-loudness criterion, so it's a declared-spec miss, not a block.
+- BC-06 PASS. BC-07 PASS. BC-08 PASS. BC-09 PASS as reported (the receipt shows an overall figure, not per-shot numbers).
+- BC-10 PASS. My scene detection found cuts at 2.42, 4.42, 6.42, 9.92, 11.92, 13.42, 14.92 and 17.42. A second detection at 17.46 is the whip-pan start of the end-card plate, not a flash cut.
+- BC-11 PASS. BC-12 PASS. BC-14 PASS.
+- BC-13 RECEIPT MISSING from the packet. My own cropdetect found 39 of 39 samples full-frame, which points to a pass. File the harness line.
+- BC-15 RECEIPT MISSING. No --expect run. "tripnerd.com" is visible by eye from 17.6 to 20.4 s, but my eye is not a substitute for this gate.
+- BC-16 RECEIPT MISSING. No EV-ids or compliance sign-off.
+  - On my reading the master contains no numbers, prices or superlatives.
+  - The implied claim "TripNerd hosts guests in a suite on the 17th" is shown by the footage and matched by the live page ("17th Hole VIP Luxury Suite").
+  - It still needs a filed record or a ruling, and the caption claim fails for the GA shots.
+- BC-17 N/A and BC-18 N/A (no generated media).
+- BC-19 FAILED. Opened 2026-10-06 at an iPhone 13 viewport.
+  - Above the fold, the stated URL tripnerd.com shows "Trip like a Nerd. / Ultimate Fan Experiences / Now Booking in 2026 & 2027 / Book Smart". No Players and no suite; Players appears only below the fold.
+  - /events/the-players-championship above the fold shows "2027 The PLAYERS Championship · TPC Sawgrass · March 11–14, 2027 · Inquire About Event". The body lists the 17th Hole VIP Luxury Suite and "Full Open Bar & Food Within Suite". Full parity there.
+- BC-20 FAILED.
+  - Guest consent is UNKNOWN for identifiable people: two women at the balcony table (14.9–17.4, one shown in profile), a seated woman (4.4–6.4), two men on the balcony (9.9–11.9), and GA faces seen from the front (8.4–9.9, 11.9–13.4).
+  - The client's plan says "Identifiable guests appear only with consent."
+  - THE PLAYERS logo is uncleared in frames 0–4.
+  - The footage is TripNerd's own as stated; I did not verify that. There is no music in the file.
+- BC-21 FAILED.
+  - TripNerd's own marks are genuine. The end-card wordmark matches the white wordmark file served on tripnerd.com, and the logo wall and placard are photographed.
+  - But the opening shows a third-party mark the client bans next to the client's mark, and the fill visibly alters the client's sign.
+  - No brand-fidelity receipt was supplied.
+- BC-22 FAIL: this verdict.
+- BC-23: not seen by the critic, by design. The Campaign Director gates it.
+- BC-24 RECEIPT MISSING. No angle, rotation or anti-generic receipt. Risk to note: the cut reuses the same 2026 suite footage (logo wall, interior, course view) as the Sep 26 Reel, with a similar label device ("THE SUITE / THE BALCONY / THE 17TH" against its "REAL SUITE FOOTAGE"), ten days later.
+- BC-25 NO RECEIPT. Not the critic's to tick.
+- BC-26 N/A for the file as delivered (no looped or layered bed). Flag: the planned in-app music will be layered over the master and will never pass this gate.
+- BC-27 PASS. Receipt: 0 speech segments against 0 declared lines. My no-VAD runs returned only low-confidence fragments typical of Whisper hallucinating on noise ("Oh"; "We'll see you next week.", average log-prob −1.34). I can't confirm by ear whether any crowd chatter is intelligible.
+- BC-28 PASS. Receipt: 6 of 6 text blocks inside 288–1344 px. My frame read agrees.
+- BC-29 N/A. BC-30 PASS (10 of 10, md5-matched).
+- BC-31 N/A and BC-34 N/A: these are storyboard gates, and no storyboard was presented.
+- BC-32 N/A in substance: no spoken lines, and no receipt.
+- BC-33 RECEIPT MISSING. It applies because people are on video. Substantive risk is low on unretimed real footage, and I saw no retiming artifacts. It needs a run or a named acceptance.
+- BC-35 to BC-40 N/A (outbound). BC-41 N/A (no generated visuals).
+- BC-42 PASS, by my observation plus the overlay receipt: all readable text is composited from real glyphs or the real wordmark file.
+- BC-43 to BC-55 N/A (no generation, not web, not static).
+
+SERVICEPOW-6:
+- Doesn't look AI: 8. Every frame is plainly real phone footage: parallax, natural crowd motion, real reflections. Sources upscaled with lanczos from 404 px wide are soft at native size but read as phone footage. Points off for the fill patch, which makes the shot that sells authenticity look manipulated.
+- Hook inside 2 s: 6. The POV super lands at frame 0 and stays readable for 2.4 s, and POV is a native format. But the picture is a door of a temporary structure, a patched sign and the camera operator's reflection. The island green, the brand's most recognisable asset, doesn't appear until 4.4 s. Frame 0 also carries the banned logo.
+- Human presence: 6. Lots of real crowd energy (the fan's arms going up at 13.4 s). But the suite, which is the product, is shown empty at 2.4–4.4. Every guest is the back of a head. No host, no interaction, no food or drink. The few guest moments may have to go anyway because consent is unknown.
+- Format fit: 8. Native 9:16, a POV device that suits Reels, supers inside the safe band, readable consistent labels, and a 20 s length that helps completion. Points off for the slow open.
+- Audio design: 4.
+  - Measured hard level steps at the cuts: 8.4 s goes from about −12 to −23 dBFS RMS, roughly 11 dB in one 100 ms window. 17.4 s drops about 10 dB. 6.4 s drops about 6 dB.
+  - The end card sits at about −28 to −33 dBFS and then fades. There are no sound bridges or J/L-cuts.
+  - Shot 1 has more energy below 120 Hz than in the 300–3k band (−21.7 vs −25.7 dB), which is consistent with wind, handling or footstep rumble.
+  - Above 6 kHz is 24–31 dB below the mids in every shot, consistent with muffled, recompressed source audio.
+  - The music is deferred to the app, so the sound viewers will hear is never what was judged.
+- Message and CTA clarity: 7. The message lands: TripNerd hosts you in its suite at The Players. The end card asks with a verb, the brand and a URL. Points off for two competing asks, no 2027 or booking-window line in the master, and a URL that lands on a generic homepage. "Where would you sit?" relies on the three labels as its options.
+- Overall: 6.5 ± 1.5 (midpoint 6.5). Below the 8.0 floor, and three axes are at or below 6 (hook 6, human presence 6, audio 4).
+
+AI ARTIFACT RISK: 2/10. No synthetic tells; everything is real footage. The only manipulation tell is the flat-fill patch (0–2.4 s), which reads as a post-production censor box, not as AI. The upscale softness reads as authentic phone footage.
+
+TOP 3 REASONS NOT TO SHIP:
+1. THE PLAYERS logo is legible in frames 0–2 (with remnants to 0.167 s), on the default first frame. The cover that was supposed to hide it is mis-tracked and reads as a censor bar for the whole hook. This breaks the client's "No event logos / never imply partnership" rule and fails BC-20 and BC-21.
+2. Rights and receipts are not in place:
+   - Guest consent is UNKNOWN for identifiable guests and frontal crowd faces (BC-20).
+   - BC-19 failed: the stated URL doesn't show The Players above the fold.
+   - Receipts are missing for BC-13, BC-15, BC-16, BC-24, BC-25 and BC-33.
+3. Below the ServicePow-6 floor at 6.5 ± 1.5:
+   - Audio 4: about 11 dB level jumps, no sound bridges, and music undecided.
+   - Hook 6: 2.4 s on a door before the view.
+   - Human presence 6: empty suite, guests only from behind.
+
+FIX PER FAILURE:
+- Logo leak and patch → servicepow-video-production, then servicepow-brand-fidelity.
+  - Preferred: drop the placard close-up and open on the door push into the suite or on the balcony reveal.
+  - Otherwise: start shot 1 on a frame where the logo is out of frame, and redo the cover as a per-frame planar track matched to the placard's edges and colour.
+  - Brand-fidelity then reviews every frame from frame 0, plus the chosen cover frame.
+- Consent → servicepow-campaign-director to the CLIENT_APPROVER.
+  - Get consent confirmed for the two women at the table, the woman at 4.4 and the balcony men.
+  - If it can't be obtained, servicepow-video-production swaps or crops those shots.
+  - Get a compliance ruling under BC-20 on the frontal GA faces, or reframe them.
+- Audio → servicepow-audio-director.
+  - Add crossfades and J/L-cuts at 6.4, 8.4 and 17.4 s.
+  - Build a continuous crowd and room bed, ASR-verified under BC-26.
+  - High-pass the rumble on the walk-up.
+  - Give the end card a sound out.
+  - Decide music now: either pick the track and bounce a reference mix at the in-app relative level, or declare "original audio only" so what ships is what was judged.
+  - Re-limit to −1.5 dBTP.
+- Hook and sequence → servicepow-cinematography-editor, with servicepow-creative-director for hook variants.
+  - Get the 17th view on screen inside 2 s by cutting the door walk-up to about 1 s or opening on the balcony.
+  - Replace the empty-suite shot with suite-in-use footage if consented footage exists.
+  - Either frame or replace the ground-level GA shots (8.4–9.9, 11.9–14.9), which break the guest POV.
+- Caption → servicepow-creative-director, through the Campaign Director. Rewrite "from our suite on the 17th" so it doesn't claim the GA shots, or cut those shots.
+- BC-19 → servicepow-video-production for the end-card string, plus the caption and link-in-bio. Point to tripnerd.com/events/the-players-championship or a short redirect to it; that page passes parity cleanly. Then re-run BC-15 with --expect set to the new string.
+- Missing receipts → servicepow-campaign-director to run or file:
+  - BC-13: the harness line.
+  - BC-15: --expect.
+  - BC-16: EV-ids, or a written "no claims" ruling.
+  - BC-24: angle and rotation against the Sep 26 and Sep 30 excerpt, plus the logo-swap and memory tests.
+  - BC-25: the APPROVER's end-to-end watch.
+  - BC-33: a run, or a named acceptance.
+- After any repair, both gates re-run.
+
+LEARNING LOG (for the Campaign Director to file; all CLAUDE-CAUGHT; I wrote no files):
+1. A post-production cover on a moving sign lagged the sign, leaving the event logo visible in frames 0–4, while the brief said it was covered. No machine check looks at whether a cover/mask holds frame by frame. Proposed new check: verify every cover/mask frame by frame from frame 0, and review the cover/thumbnail frame.
+2. A mis-sized, two-tone flat fill reads as a censor bar.
+3. The caption's "from our suite" claim was not checked against where each shot was filmed.
+4. Footage with consent UNKNOWN reached the gate.
+5. The CTA URL was not opened at a mobile viewport before QC.
+
+HUMAN WATCHED END TO END: no receipt (BC-25; not the critic's to tick).
+HUMAN TASTE GATE: AWAITING (the APPROVER's to answer).
+
+ADVISORY (Direct-Response lens; it cannot block or clear):
+- Time to value proposition: the thing being bought (a suite seat over the 17th) first appears at 4.4 s. The POV door walk-up sits in front of the sale.
+- CTA directness: the end card does ask ("Plan your group's trip at tripnerd.com"). But it competes with the comment ask, and it leaves out the real reason to act now, "March 2027 packages available", even though buyers decide about a year out.
+- Persuasion vs cleverness: the cleverest element is the POV walk-in plus the comment prompt. Giving the door's 2.4 s to the balcony reveal with an "our suite on 17" style super would probably raise 3-second hold for cold viewers. The walk-in does echo TripNerd's best-ever video (the 2023 raw walkthrough, 7,147 plays), which is a sound instinct.
+- Challenger: no balcony-first or offer-first challenger cut was supplied. Either one is made, or the exemption is written down by name and shown to the APPROVER.
+- This is a single deliverable, not a pack; no sibling variants were supplied.
+
+VERDICT: HARD FAIL

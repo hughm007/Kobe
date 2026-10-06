@@ -3,7 +3,7 @@
 Runs in the Higgsfield sandbox. Expects src/*.mp4 (Drive originals), s1c.mp4 (shot 1 with the event
 logo cleared by cover_logo.py) and ov_*.png (overlays.js) in the cwd.
 Uniform timebase: every segment -> fps=24 (hero footage is 24 fps), concat FILTER. Audio is each
-shot's own location sound, levelled per source, then loudness-normalised (no music in the file;
+shot's own location sound (high-passed, 0.12 s fades) over a continuous crowd bed, then loudness-normalised (no music in the file;
 music is chosen in-app at posting).
 Usage: python3 assemble.py <out.mp4>
 """
@@ -15,14 +15,14 @@ V07, V08, V16 = V('2024-03-16_the-players_V07'), V('2024-03-17_the-players_V08')
 LUFS = {V23: -23.2, V24: -18.2, V07: -19.1, V08: -18.4, V16: -20.9, 's1c.mp4': -23.2}
 # (file, in, out, sharpen, overlay layers)
 EDL = [
-    ('s1c.mp4', 0.0, 2.4, 0.4, ['hook']),        # arrival: TRIPNERD door (logo cleared)
-    (V23, 10.3, 12.1, 0.4, ['suite']),           # inside the suite (from 10.3: no TV broadcast in frame)
-    (V23, 24.0, 25.8, 0.4, ['balcony']),         # out to the balcony
-    (V24, 13.0, 15.0, 0.4, ['seventeen']),       # the 17th
-    (V23, 30.0, 32.0, 0.4, ['view']),            # guests looking out from the balcony
-    (V23, 50.0, 52.5, 0.4, ['ask']),             # payoff: the table on the balcony
-    (V24, 15.5, 18.0, 0.4, ['scrim', 'end']),    # end card plate (the green, under scrim)
+    (V23, 24.0, 26.4, 0.4, ['hook']),            # balcony reveal: the 17th on screen from frame 1
+    (V24, 14.6, 16.8, 0.4, ['seventeen']),       # the 17th from the suite (clear of the foreground head)
+    (V23, 46.0, 48.0, 0.4, ['suite']),           # suite in use: guests at tables, logo wall behind
+    (V23, 30.0, 32.2, 0.4, ['view']),            # guests looking out from the balcony
+    (V23, 50.0, 53.2, 0.4, ['ask']),             # payoff: the table on the balcony
+    (V24, 19.0, 22.0, 0.4, ['scrim', 'end']),    # end card plate (from the suite, under scrim)
 ]
+BED = (V24, 8.0, 23.0)   # continuous crowd bed from the suite balcony (skips V24 3.8-5.8 s speech)
 FPS = 24
 args = ['ffmpeg', '-v', 'error', '-y']
 for f, a, b, _, _ in EDL:
@@ -53,15 +53,20 @@ for i, (f, a, b, sh, lays) in enumerate(EDL):
             fc.append(f'[{k}:v]format=rgba,fade=t=in:st=0.08:d=0.15:alpha=1,fade=t=out:st={d - 0.18:.3f}:d=0.15:alpha=1[o{i}{L}]')
             pos = "x=0:y='if(lt(t,0.08),24,if(lt(t,0.25),24*(1-(t-0.08)/0.17),0))':eval=frame"
         fc.append(f'[{cur}][o{i}{L}]overlay={pos}[c{i}{L}]'); cur = f'c{i}{L}'
-    g = -20.0 - LUFS[f] - (6.0 if 'end' in lays else 0.0)
-    fo = 0.6 if 'end' in lays else 0.04
+    g = -21.0 - LUFS[f] - (6.0 if 'end' in lays else 0.0)
+    fo = 1.0 if 'end' in lays else 0.12
     fc.append(f'[{i}:a]atrim=start={a}:end={b},asetpts=PTS-STARTPTS,aresample=48000,'
-              f'aformat=channel_layouts=stereo,volume={g:.1f}dB,afade=t=in:d=0.04,afade=t=out:st={d - fo:.3f}:d={fo}[a{i}]')
+              f'aformat=channel_layouts=stereo,highpass=f=100,volume={g:.1f}dB,afade=t=in:d=0.12,afade=t=out:st={d - fo:.3f}:d={fo}[a{i}]')
     cat += [f'[{cur}]', f'[a{i}]']
 fc.append(''.join(cat) + f'concat=n={len(EDL)}:v=1:a=1[vc][ac]')
 fc.append('[vc]settb=AVTB,format=yuv420p[v]')
-fc.append('[ac]loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[a]')
 total = sum(b - a for _, a, b, _, _ in EDL)
+bf, ba, bb = BED
+bi = len(EDL) + len(ov_index)
+args += ['-i', bf]
+fc.append(f'[{bi}:a]atrim=start={ba}:end={ba + total:.3f},asetpts=PTS-STARTPTS,aresample=48000,aformat=channel_layouts=stereo,'
+          f'highpass=f=100,volume={-27.0 - LUFS[bf]:.1f}dB,afade=t=in:d=0.3,afade=t=out:st={total - 1.2:.3f}:d=1.2[bed]')
+fc.append('[ac][bed]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-16:TP=-2:LRA=11,alimiter=limit=0.79:level=0,aresample=48000[a]')
 args += ['-filter_complex', ';'.join(fc), '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-preset', 'medium',
          '-crf', '17', '-profile:v', 'high', '-r', str(FPS), '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k',
          '-ar', '48000', '-ac', '2', '-movflags', '+faststart', '-t', f'{total:.3f}', OUT]
