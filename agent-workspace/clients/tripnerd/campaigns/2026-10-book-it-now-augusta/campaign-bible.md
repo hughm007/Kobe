@@ -12,10 +12,9 @@ tags: [campaign, bible, slim, reel, augusta, dm-keyword, ai-actor]
 
 # TripNerd: "Book It Now" (Augusta) Reel
 
-> **Status: DRAFT v2 BUILT** (2026-10-05). Skeptic Pass 3 on v1 = BLOCK (verbatim in §14). v2 fixes every finding that doesn't need TripNerd; the three S4 findings are TripNerd's posting gates. Was: DRAFT v1 BUILT.
-> - Master: `TN-book-it-now-augusta-v1-DRAFT.mp4` (sha256 in [`qc/sha256-v1.txt`](qc/sha256-v1.txt)).
-> - Sent to Karl.
-> - The isolated Skeptic Pass 3 is in progress (§14).
+> **Status: v4 IN PRODUCTION, blocked on network access** (2026-10-06). Karl's direction: no still images; after the tap the man **transforms from his couch onto a TripNerd hospitality-lawn sofa**. Script and generation plan: [`script-v4-transformation.md`](script-v4-transformation.md).
+> - Every Higgsfield host is blocked from this environment; Karl adds them to Allowed domains.
+> - v3 (real watching-view section) and v3.1 (phone screen re-fitted) are DRAFTS. v3 gate: critic **6.2, HARD FAIL**; Skeptic **VOID** ([`qc/gate-v3-2026-10-06.md`](qc/gate-v3-2026-10-06.md)).
 > - **Not postable** until every posting gate below clears.
 
 | Field | Entry |
@@ -82,6 +81,7 @@ tags: [campaign, bible, slim, reel, augusta, dm-keyword, ai-actor]
 | Pass | Packet | Verdict |
 |---|---|---|
 | Pass 3 (draft master v1) | `scratchpad/gate_bookitnow_v1_skeptic_1791236510/packet.txt` (contamination scan clean) | **BLOCK** (3 × S4, 4 × S3). Verbatim below |
+| Pass 3 (master v3, `a8c8463b…`) | `scratchpad/gate_bookitnow_v3_skeptic_1791324416/packet.txt` (contamination scan clean; the path carries "v3" by naming convention) | **VOID**: `SKEPTIC VOID — NOT INDEPENDENT`. Block at BC-23. **Likely cause:** the invoking prompt named other evaluators' output (VOID condition 3). The v4 pass is invoked with the packet path only. Full gate record: [`qc/gate-v3-2026-10-06.md`](qc/gate-v3-2026-10-06.md) |
 
 ```
 SKEPTIC VERDICT — Pass 3
@@ -111,6 +111,11 @@ Isolation: packet verified; production reasoning, cost, draft history, and other
 
 | Date | Decision | Who |
 |---|---|---|
+| 2026-10-06 | Karl: put the watching-view picks "in a bucket" and rebuild. Drive folder "Augusta advert picks - watching view (COPIES, internal)" (19 copies). v3 built: P155, P035, P115, P150 and P139 replace the face-on bartender, the condiments and the face-on lawn guests. A dessert card in P150 names West Lake Country Club (EV-tripnerd-010): the course in view is not Augusta National | Karl (APPROVER) / Claude (director) |
+| 2026-10-06 | v3 gate: critic 6.2 HARD FAIL (frozen stills, thin audio, composite seams, safe-band and claims items); Skeptic VOID; 6 of 6 verified S3/S4 audit findings held ([`qc/gate-v3-2026-10-06.md`](qc/gate-v3-2026-10-06.md)) | Claude (director) |
+| 2026-10-06 | Karl: "fix the screen, it is not properly centered." v3.1: the screen corners are re-fitted from the real screen edges, the button is centred, and no original UI shows through | Karl (APPROVER) / Claude (director) |
+| 2026-10-06 | Karl: no still images; replicas of real footage as AI motion. Karl chose people-free AI motion only (no AI replicas of guests), up to 600 credits on Seedance 2.5 with drafts first (SPEND_APPROVER), and the Higgsfield hosts allowlisted | Karl (APPROVER, SPEND_APPROVER) |
+| 2026-10-06 | Karl: after the tap, cut back to the man on the couch and **transform him onto a couch at the event**. **Supersedes the 2026-10-05 "no AI people at Augusta" decision** for this one actor. Done as a start-frame/end-frame transformation that lands on the real P005 lounge sofa, rather than Genjutsu World Shift (that preset copies another creator's worlds). Jason's AI-actor ask must now cover the venue too | Karl (APPROVER) / Claude (director) |
 | 2026-10-05 | Build "Book It Now" now with Karl's two Higgsfield stills; AI actor in the couch beats only; real Augusta photos; keyword auto-reply CTA; line as text | Karl (APPROVER) |
 | 2026-10-05 | Phone screen replaced (unverified claims in the generated screen). Real frames chosen to avoid faces where possible; IMG_1932 (bartender) chosen over IMG_1915 (foreground clutter); event marks on the banner blurred | Claude (director) |
 | 2026-10-06 | Karl: write an all-AI frame-by-frame for Higgsfield (pre-viz), with real footage swapped in later. Written as `script-ai-previz-v1.md`: INTERNAL PRE-VIZ, NOT FOR POSTING, with a slot map naming the real replacement and gate per AI frame. No generation from this session | Karl (APPROVER) / Claude (director) |

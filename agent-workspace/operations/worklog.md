@@ -1959,3 +1959,25 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - TripNerd's answers to item 17;
   - guest consent for the from-behind shots;
   - Karl's choice between upgrading Book It Now with these picks and a new Augusta advert concept.
+
+## 2026-10-06 — TripNerd Book It Now: picks bucket, v3/v3.1, v3 gate, v4 transformation plan
+- **Drive:** Karl's "bucket" is the folder "Augusta advert picks - watching view (COPIES, internal)" (`1hEnQ5Yvb4HyTwW1Rtp3IL53eSlk3eqnC`). It holds 19 copies; the originals were not moved.
+- **Venue finding:** a dessert card in P150 reads "WestLake Country Club | Augusta". West Lake is about 5 miles northwest of Augusta National (GolfPass). Filed as EV-tripnerd-010: the course in our photos is not Augusta National.
+- **v3 built:** the real watching-view section.
+- **v3 gated** (workflow `wf_755e351e-923`):
+  - critic 6.2, HARD FAIL;
+  - Skeptic VOID, because my invocation named other evaluators;
+  - 6 of 6 verified S3/S4 findings held.
+  - Record: `campaigns/2026-10-book-it-now-augusta/qc/gate-v3-2026-10-06.md`.
+- **v3.1:** the phone screen's corners are now fitted from the screen's own edges (Karl: "not properly centered").
+- **Karl's direction:**
+  - no stills;
+  - AI motion on people-free real photos only;
+  - spend up to 600 credits on Seedance 2.5 (SPEND_APPROVER);
+  - after the tap, he **transforms from his couch onto the TripNerd lawn sofa**. This supersedes the 5 Oct "no AI people at Augusta" decision for this one actor.
+- **v4 plan:** `script-v4-transformation.md`.
+  - The auto-reply is shortened to 29 words, and "course passes" is removed until TripNerd defines it.
+  - Six start images are prepared.
+- **BLOCKED:** every Higgsfield host (upload and CDN) is unreachable from the environment. Karl adds `upload.higgsfield.ai`, `d2ol7oe51mr4n9.cloudfront.net`, `d8j0ntlcm91z4.cloudfront.net` and `d3u0tzju9qaucj.cloudfront.net` to Allowed domains; per the docs the change reaches this running session within about a minute. A background watcher resumes the work when they open.
+- **Spend so far on v4:** 0 credits.
+- **Learning:** a Skeptic invoked from a workflow prompt that mentions other evaluators voids itself (condition 3). Invoke it with the packet path only.
