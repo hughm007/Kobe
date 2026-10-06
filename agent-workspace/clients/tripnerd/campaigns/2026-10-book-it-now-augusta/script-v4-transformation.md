@@ -87,3 +87,20 @@ A clip that alters the real place is rejected. AI must not "improve" what TripNe
 - **The venue's OK covers the lawn background (P005) and the house (P035).** TripNerd also confirms the house is the home it provides.
 - **V25 shows guests and a musician:** consent is needed, and V25's own audio is **not** used (the song's rights are unknown).
 - **Never imply the course is Augusta National** ([EV-tripnerd-010](../../evidence-register.md)).
+
+## Generation log
+
+| Time (UTC) | Job | What | Model / settings | Credits |
+|---|---|---|---|---|
+| 2026-10-06 23:12 | `4f92bc8f-4e62-4e8a-8be5-9b67d22d7e32` | Start frame: the actor on his couch, recomposed 9:16 with the TV out of frame | `gpt_image_2_5` flare, max, 4k; ref `389ec001-8d96-422d-9edf-e451b45ad8db` (Karl's couch still) | 15 |
+| 2026-10-06 23:12 | `f36eb118-be76-4f85-aa6d-c7472e95f605` | End frame (**concept test**): the actor on a grey wicker lounge sofa on an AI-made lawn. **Not** the real P005 lawn, because uploads are blocked | same | 15 |
+| 2026-10-06 23:16 | `bb918cf7-a5cd-43a8-8a63-455f470fa445` | Transformation draft, start→end frames (Higgsfield's "IN THE DARK" preset suggestion declined; generated literally) | `seedance_2_5` omni_reference, 480p draft, 5 s, 9:16, no audio | 15 |
+
+**v4 spend to date: 45 of the 600 approved.**
+- **Balance:** 9,876.6 before, 9,734.1 after.
+- **The difference is not v4.** The log for that window also shows Kling v3.0, Nano Banana 2.1, Seed Audio and Seedance (−60 at 23:15:05; −240 at 22:42) charges. None of them match a job this session submitted.
+- **Matching:** the three jobs above were matched to the transaction log by timestamp.
+
+**Visual QC: not done.** This environment still can't open Higgsfield's file servers (proxy 403). Karl reviews these three in the gallery.
+
+**The final transformation** uses an end frame rebuilt on the real P005 lawn photo once uploads work.
