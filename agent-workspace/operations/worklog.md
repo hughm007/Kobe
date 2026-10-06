@@ -1888,3 +1888,9 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - re-upload IMG_2041;
   - Karl to connect ChatGPT through a separate Google account (whole-Drive exposure otherwise) and decide on guest-photo upload (consent);
   - update the Grok knowledge file §11 footage index when the next refresh is due.
+- **Follow-up, same day: V23/V24 resolution check and ChatGPT prompt.**
+  - **Drive connector limits:** it refuses downloads over 10 MB (V23 18.3 MB, V24 12.2 MB). V08 (9.8 MB) crashed the connector. V16 downloaded byte-exact.
+  - **V16 measured 404×720,** 30 fps, 13.9 s, re-encoded 2026-08-25, with no camera tags. It's the known copy, not an original.
+  - **INFERENCE: V23 and V24 are the 720×1280 copies** (the same batch, and Topaz upscales exist for them). Taylor's originals are still owed.
+  - **Karl can confirm V23** with a local Get Info.
+  - **Wrote** `clients/tripnerd/chatgpt-footage-finder-prompt.md`: the paste-ready prompt for ChatGPT (folder, map, naming, a first task that tests whether it can actually see media, the rules).
