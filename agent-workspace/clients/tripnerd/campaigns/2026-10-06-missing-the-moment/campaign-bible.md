@@ -448,3 +448,62 @@ VO1 at 0.3, VO2 (new, seed_audio Miles) at 4.85, VO3 (new) at 11.3. Patio shot d
 - Critic running.
 
 **Status:** awaiting dual-gate verdicts. NOT CLIENT READY until both pass.
+
+### v7 dual gate (fresh, isolated; Skeptic on a clean isolation packet)
+
+**SKEPTIC Pass 3: BLOCK.**
+
+S4 findings:
+- 11.0–15.6: the payoff visually implies the unsupported "ropeside view" claim. Problem → solution: front-row chairs at the rope.
+- End card "THE AUGUSTA EXPERIENCE" plus the Augusta/broadcast look: rights not cleared.
+
+S3 findings:
+- Branded caps, lanyards and badges are unconfirmed. A badge on a lanyard also reads as the entry credential.
+- 11–13: performed celebration (open-mouth screams); realism §4.
+- Persuasion: what TripNerd actually sells (home, hospitality, hosting) is never shown.
+
+S2 findings:
+- Freeze at 13.0–13.8 (BC-06).
+- Low motion in the close-up (BC-09).
+- Rope line through the captions.
+- First 3s: static backs of heads (BC-14).
+- He smiles at the turn, not frustration.
+- Leap-and-hug is out of scale for a 3 ft shot.
+- Cap logo reads flat, not stitched.
+- CTA/destination match unverified (BC-19).
+- Subline lacks EV-ids.
+
+S1 finding: card tagline is unreadable.
+
+**CRITIC: HARD FAIL.** ServicePow-6 score 6.5 (floor 8.0); weakest axes are hook 5 and audio 6. AI-artifact risk 5/10.
+
+S3 findings:
+- Crowd claps 3.6–8.3 but the ball lands 9.22, with two roars: effect before cause.
+- Implied better-view claim, no evidence (BC-16).
+
+S2 findings:
+- The man grins/laughs in the hug shot; the women scream.
+- White cap → navy cap: the same man may read as two people.
+- Augusta trade dress (BC-20).
+
+S1 findings:
+- Rope strikes through the caption.
+- End card is half-built at 15.6, with dim eyebrow/URL.
+- Freeze needs a BC-06 exception.
+
+Weakest 2s: 0.0–2.0. Registry receipts missing.
+
+**Routing:**
+- Concept-level (OWNER/CLIENT): the core promise "you can't see it → TripNerd guests can" needs either CLIENT_APPROVER written substantiation of what TripNerd does on-course to secure viewing, or a re-spine around proven benefits.
+- Augusta rights: owner/legal.
+- Merch confirmation: client.
+- Zero-spend craft fixes (queued):
+  - captions above the rope;
+  - end card built by 15.6 with AA contrast;
+  - motion on the freeze and close-up;
+  - single-roar audio logic.
+- Regeneration fixes (spend approved):
+  - calmer hug (closed-mouth joy, man content);
+  - stitched-look cap.
+
+**Status:** BLOCKED. NOT CLIENT READY. Awaiting owner decision on the claim spine.
