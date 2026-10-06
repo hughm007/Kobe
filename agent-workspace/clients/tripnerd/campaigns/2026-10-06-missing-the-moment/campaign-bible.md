@@ -270,3 +270,62 @@ Shots regenerated:
 - hospitality lawn at golden hour.
 
 Each shot keeps a fallback to its v4 clip.
+
+## Owner notes round 2 (after v4) → v5b
+Owner notes:
+1. The hero must face the same way as the crowd.
+2. Keep the wide POV angle but make it realistic.
+3. Celebration beat: shot from behind him, everyone's hands up clapping, he looks around and can't see.
+4. The ball must never disappear and must stay white; it can bounce and must stop close to the pin (3–7 ft).
+
+**Spend gate:** the SPEND_APPROVER raised the cap from 450 to **520** (AskUserQuestion, approved). The workflow shot pass was stopped before the "blocked" shot started, because owner note 1 superseded it. Two renders already in flight (a broadcast-style ball and a ball-flight insert) were charged and inspected: the ball never reads, so neither was used.
+
+**How each note was solved:**
+
+| Note | Solution |
+|---|---|
+| 1 | New keyframe (nano_banana_2_1, 4K) from behind and to the right of the hero, everyone facing the green; Kling Pro motion. |
+| 2 | 4K-realism re-render of the POV composition (nano_banana_2_1, 4K), then a second edit pass to remove an Augusta-like white scoreboard and wall behind the green. Motion in **Kling 4K mode**. |
+| 3 | New keyframe from the same camera position as note 1 with the crowd's hands raised. Kling attempt 1 rejected (only a few hands up; he smiled). Attempt 2 accepted: a dense wall of raised clapping hands, his face never toward camera, frustrated. |
+| 4 | **Composited CG ball, not generated.** It is drawn on the locked-off green plate (from the v4 ball clip) with a physics path: steep entry from the top, landing about 2 m past the hole, one short hop, spin back, stop about 0.35 m (≈1.2 ft) to the front-right of the cup. Swept-sphere motion blur keeps it opaque white on every frame. It has a perspective-scaled size (cup ≈ 70 px, ball ≈ 23–28 px), a contact shadow, matched softness and grain, and a synthesized thud and tap. The plate's own generated ball is painted out from a clean frame (camera verified static: green-region frame difference ≤ 3/255). The gallery begins clapping on the plate exactly when the CG ball stops. |
+
+The owner's reference sheet (Augusta National 12th-hole broadcast frames) was used only as behaviour guidance: the composite matches its "drops in from above, one hop, checks, settles within 2–5 ft" behaviour.
+
+Composite file: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/7b633df5-e73c-4e19-9869-169188f74974.mp4
+
+**v5b structure (20.6s):**
+
+| Time | Shot |
+|---|---|
+| 0–3.0 | Hero from behind |
+| 3.0–4.2 | Realistic POV |
+| 4.2–8.9 | Hands-up wall, hero looking around |
+| 8.9–9.6 | Clear wide green |
+| 9.6–12.4 | Ball lands 10.2, hops 10.46, stops 11.22; roar 11.25 |
+| 12.4–14.4 | Hug |
+| 14.4–15.1 | Photo freeze |
+| 15.1–16.7 | Content close-up |
+| 16.7–18.2 | Patio |
+| 18.2–20.6 | End card |
+
+VO2 now ends (8.82s) before the cut to the clear green, so "back of someone's hat" plays over the hands.
+
+**v5b masters (20.6s, 1080×1920, 30fps; −14.2 LUFS, TP −1.4 dBFS; ASR: all 4 VO lines, no undeclared speech):**
+- Captioned: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/adbd7624-d5d7-4382-9db8-7a5397496619.mp4 (md5 e5bae388f74749a5c418d0d8732ad347)
+- Clean: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/7e072ed0-fc7d-497f-be05-d0d79212b594.mp4 (md5 f0562f0e70f309552308a4e6ce5d2a82)
+
+**Spend:** this campaign's own jobs total about 486.4 of the 520 cap (balance 10,722.3 → 9,931.9).
+
+**Unattributed charges on the account (not made by this session):**
+
+| Time (UTC) | Charge | Credits |
+|---|---|---|
+| 22:37:01 | Seedance 2.5 | −60 |
+| 22:38:03 | Bytedance Image Upscale | −2 |
+| 22:38:05 | Bytedance Image Upscale | −2 |
+| 22:42:43 | Seedance 2.5 | −240 |
+| **Total** | | **−304** |
+
+This session never called Seedance or upscale. The source is unknown (another user or session on the same Higgsfield account?). Owner to confirm.
+
+**Status:** owner review (first-artifact rule). The dual gate runs on the locked cut. NOT CLIENT READY.
