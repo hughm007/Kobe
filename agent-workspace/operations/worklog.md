@@ -1945,3 +1945,17 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - **Output:** `TN_R01_review-small_v3.mp4`, 17.28 s, −14.2 LUFS.
   - **Prompt v2.5 and kit:** V08 added.
   - **Open:** the 1080 master (ChatGPT re-export with kit v2.5, or I build it if V23/V24 are uploaded); B08 guest consent; TripNerd's approval.
+
+## 2026-10-06 — TripNerd: Augusta "watching view" footage scan
+- **Asked (Karl):** find real Augusta green shots from a TripNerd guest's watching perspective; then "let me see those so I can download them. I want to make an Augusta advert".
+- **Done:** every masters-week photo and V25 reviewed by eye. That is 12 photos from 2023–24, 118 from 9–12 Apr 2026 (byte-exact downloads, all iPhone 15 Plus at 1536×2048) and the 29 IMG_ originals.
+  - **Sent to Karl as originals:** the first 8 picks, then a 17-photo picks sheet plus a zip (V25 and a README). Scratchpad only; nothing committed.
+- **Finding (INFERENCE, strong):** the course seen from the hospitality lawn and veranda is most likely the venue's own course, **not Augusta National**. People are playing on it in P026, P119, P125, P135, P137, P143 and P146.
+  - The only Augusta National green shots are P072, P074 and P077 (2024 practice day). Those are personal use only under the patron policy, so they're excluded from ads.
+- **Records:**
+  - `clients/tripnerd/footage-drive-location.md`: new shortlist section with tiers, Drive IDs and the exclude list.
+  - Setup checklist item 17: a 7th question (which course the lawn overlooks).
+- **Open:**
+  - TripNerd's answers to item 17;
+  - guest consent for the from-behind shots;
+  - Karl's choice between upgrading Book It Now with these picks and a new Augusta advert concept.

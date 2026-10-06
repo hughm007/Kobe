@@ -6,7 +6,7 @@ owner: Karl
 status: active
 created: 2026-10-06
 updated: 2026-10-06
-tags: [footage, google-drive, assets, pointer]
+tags: [footage, google-drive, assets, pointer, augusta, shortlist]
 ---
 
 # TripNerd real footage: location pointer
@@ -39,6 +39,23 @@ tags: [footage, google-drive, assets, pointer]
 
   - **Taylor's originals are still owed.** R01 Two ways, the C03 rail frames and the Group Chat F9–F11 stay blocked.
   - **Karl can confirm in 30 seconds:** download V23, then on a Mac use Get Info → More Info → Dimensions, or on Windows Properties → Details → Frame width and height.
+
+## Augusta "watching view" shortlist (scanned 2026-10-06)
+Karl asked for real Augusta course views from where TripNerd guests watch. Every masters-week photo and V25 was reviewed by eye: the 12 dated 2023–2024, all 118 dated 9–12 Apr 2026 (EXIF; 13 files carry a filename date one day later, which looks like the UTC date), and the 29 IMG_ originals. Downloads were byte-exact against Drive.
+
+**Key finding (INFERENCE, strong):** the course seen from TripNerd's hospitality lawn and veranda is most likely **the venue's own course, not Augusta National**. People are playing golf on it in P026, P119, P125, P135, P137, P143 and P146. Never caption these shots as Augusta National or "the Masters". TripNerd confirms the venue (setup checklist item 17).
+
+| Group | Files (Drive id) | What it shows | Gate |
+|---|---|---|---|
+| No recognisable faces | P026 `1kZ8rb-QUlS1h2lEBkZHPx85t3JajQh2o`; P119 `1KwhPFJTvD13cZZtOsKxI6_OwifNL6eWP`; P115 `1CFAQKHMveqkCMbG10CNEQSrVodl2iX0x`; P109 `1TFIUGqeUTOeao5cmiZuGGCa7sb9T7Ebg`; P036 `11IcASIKe9P7jKUIAGsRv0Oz0FZMvtaSR`; P155 `1hgukPM4e6vUTcS5-stvCK3sxLOVotrso`; plus P005, P076, P078 (2024) | Along the fence down the fairway; the hospitality lawn toward the course; the view from under the veranda | Venue confirmation |
+| Guests watching, from behind | P126 `10dyyC_FpwiX27-xtjsHzHXnkA7GGLaYN`; P139 `1TcBey8OgodVfLZi4oRrN82GfUn493yg6`; P140 `1I4Qp3aUhYWPa87GSwYnVcpqjECfroS9q`; P029 `1NnvvUNe3MAYRYc6nF6xoR3y2a-IzBO7y`; P103 `11JiojrkVauE4tGKSKMzbu5GtGuJAtoys` | Guests lined along the white fence looking out at the course | Venue confirmation + guest consent |
+| Veranda, faces | P117 `1pCFD-uksfbPhA0lSZ5A8wga9zmiiWKte` (bartender); P107 `1H1QPn0fFLBOzvsN8axzA4Vbs-lHquvSb`; IMG_1915, IMG_1932, IMG_2016 | Veranda bar or tables with the course beyond | + staff and guest consent |
+| House | P035 `1hNSdt0CjVZXW8rgAi9TU1oscPa6cOdYy` | Brick colonial house, no people. A small yellow flag by the door looks like an event flag: crop it out | Not confirmed as the TripNerd house |
+| Video | V25 `1o5qgIWsBSFuujQ4eZOCJPyCt07ekZ3-a` | 3.9 s, **404×720**, AAC stereo. Veranda live music, then a pan to the lawn and course | Below the 1080 master rule; faces at tables |
+| Inside Augusta National | P072, P074, P077 (8 Apr 2024, a practice day) | Fairway and green from patron ground level | **Exclude from ads.** The patron policy allows practice-day photos for personal use only |
+| Exclude: marks or TV | P028 (tournament booklets with the logo); P094 and P141 (Private Party banner with flag imagery); P128 (event flag on the house); P045, P046, P162, P164, P165 (shirts with a yellow emblem, unverified mark); P147 (banner art); TV broadcast on screen in P020, P088, P100, P032, P116, P121, P124, P127, P136, P073; P006, P071, P075 (2024 marks); P051, P070 (look like stock or press, ASSUMPTION) | — | Do not use |
+
+Picks were sent to Karl as originals on 2026-10-06 (scratchpad zip, not committed).
 
 ## Deliberately left out (not clearly TripNerd footage)
 - IMG_2446, IMG_2447 and IMG_8378 (Feb 2025; possibly personal).
