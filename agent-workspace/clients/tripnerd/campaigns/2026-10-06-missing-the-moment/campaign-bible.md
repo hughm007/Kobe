@@ -375,3 +375,76 @@ The cut count drops from 10 to 8, and the opening has none. Build script: `assem
 **Known compromise:** the crowd erupts in the long take before the ball-landing shot. The order reads as reaction → what he missed, so the roar is heard twice (once at the eruption, once on the ball shot).
 
 **Status:** owner review. The dual gate runs on the locked cut. NOT CLIENT READY.
+
+---
+
+## v7: shorter, more TripNerd, broadcast ball (2026-10-06)
+
+**Owner notes (summary):**
+- Cut the POV shot.
+- 14–18s.
+- VO: "the biggest moment of the day… and you can't even see it", then the TripNerd payoff.
+- A more realistic ball drop, using the owner's broadcast reference sheet.
+- TripNerd lanyards on the guests and a TripNerd cap on him.
+
+**Approvals (AskUserQuestion):**
+- SPEND_APPROVER: "use what you need for quality, flow and realism … no spending cap."
+- VO: the safe rewrite.
+
+**Claim handling:**
+- Owner's line "right-on-the-ropes view / never outside of a moment" is NOT used. It is unsupported: the FAQ says grandstands are first-come and there are no reserved spots.
+- VO3 is now "With TripNerd, you're not just at the event. You're in it."
+
+**Reference sheet:** the owner's sheet is copyrighted Masters broadcast frames, marked reference-only. Used only as a framing guide; no frames used.
+
+**Production:**
+- Ball plate: new broadcast-telephoto keyframe (nano_banana_2_1 4K), re-composed so the pin sits at about 74% of frame height, above the platform-UI zone. Animated with Kling 3.0 Pro (job 872af706).
+- CG ball (`ball-comp-v7.py`, r=8px at the cup, HX/HY 413/1425):
+  - lands about 3 m past the pin;
+  - checks, then spins back;
+  - rests about 1 m (≈3.4 ft) from the cup;
+  - always white.
+- Bug fixed: a masked PIL paste squared alpha, making the moving ball invisible.
+- Guests:
+  - Edited the 4K keyframes (blank navy cap and cards, #2ea3f2 lanyards).
+  - Composited the real logo file onto them before animation (brand-asset law §1).
+  - Animated with Kling: hug c282a54b; close-up f80eac85.
+- Close-up card: flickered navy/grey in the Kling output. Fixed with per-frame tracked replacement (`card-fix-v7.py`, OpenCV). The cap logo held.
+
+**Timeline (17.8s):**
+
+| Time | Shot |
+|---|---|
+| 0–8.6 | long take (LONG_IN 1.4) |
+| 8.6–11.0 | ball |
+| 11.0–13.0 | hug |
+| 13.0–13.8 | photo |
+| 13.8–15.6 | close-up |
+| 15.6–17.8 | end card |
+
+VO1 at 0.3, VO2 (new, seed_audio Miles) at 4.85, VO3 (new) at 11.3. Patio shot dropped. Build script: `assemble-v7.sh`.
+
+**v7 masters (17.8s, −14.4 LUFS, −1.0 dBTP):**
+- ASR: all VO lines verbatim.
+- Captioned: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/7a4dffcb-009e-4674-ad25-948f7edbd7ca.mp4 (md5 e354b50ea641c050d7d5162742b757fa)
+- Clean: https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/00f08c25-0afb-4359-a8e9-f439e387c879.mp4 (md5 d6319399b797f206e955e7d507bc5004)
+
+**Spend:**
+- v7 jobs: 67.3 credits (4× Kling 12.5, 7× Nano Banana 2.1, 2× Seed Audio). Campaign total about 578.7.
+- Further account charges NOT made by this session, 22:59–23:35 UTC, 187.5 credits total:
+
+| Time (UTC) | Charge | Credits |
+|---|---|---|
+| 22:59 | Kling | −14 |
+| 23:09 | upscale | −2 |
+| 23:12 | GPT Image 2.5 Flare ×2 | −30 |
+| 23:15 | Seedance 2.5 | −60 |
+| 23:16 | Seedance 2.5 | −15 |
+| 23:28 | Seedance 2.5 | −60 |
+| 23:35 | GPT Image 2.0 | −6.5 |
+
+**Gate:**
+- First Skeptic run VOIDED itself: the packet was not in the isolation format and carried draft history. Re-run with a clean packet.
+- Critic running.
+
+**Status:** awaiting dual-gate verdicts. NOT CLIENT READY until both pass.
