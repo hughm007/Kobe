@@ -24,3 +24,9 @@ A FAIL is a claim by an instrument, and instruments have ranges. Before repairin
 read the check's implementation and reproduce the measurement at full fidelity; **fix the film only
 when the film is wrong**. Never silently pass a FAIL either — a standing limit gets recorded next
 to the result, every time, until the harness ruling lands.
+
+## Addendum 2026-10-06 — three more instrument limits, from the TripNerd ROAR build
+- **Speech screen, whisper `tiny` on crowd noise:** returned seven evenly spaced "No, no" segments (avg log-prob −0.92, language p = 0.27) on an 8 s continuous roar with no words. Treat low-confidence repeated short words on noise as hallucination; confirm with the source-footage screen or a larger model before calling a clip "speech". (1st observation.)
+- **Sandbox lease:** a `nohup sleep 880 &` started inside a *foreground* `sandbox_exec` does not keep the sandbox alive; the files were gone on the next call. Only a `sandbox_exec` with `background:true` (its own `sleep 880`) holds the 15-minute lease. (2nd confirmation; the 2026-09-29 learning used the background form.)
+- **`pkill -f <pattern>` inside `sandbox_exec`** matches the call's own command line (the pattern is in it) and kills the call before anything runs; exit code −1, no output. Kill by PID from `ps` instead.
+- **Egress:** this container cannot reach `upload.higgsfield.ai` (proxy 403); presigned PUTs must run from the sandbox where the bytes are. Scripts cross into the sandbox by heredoc (≤16 KB per call; split larger files and byte-check with md5).
