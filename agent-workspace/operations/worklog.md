@@ -1521,3 +1521,18 @@ two carousels) are not in this Drive. What is there: a new `media/` event archiv
 **Did:** pointer register at `clients/tripnerd/assets/2026-10-06-drive-media-register.md`.
 **Open:** where the approved ads live; contact sheet of the media (needs a link share or another
 route; the connector can't preview these files); guest consent and rights for the archive.
+
+## 2026-10-06 — TripNerd: "One Text" Reel built (v1, all-AI scenes)
+
+**Asked:** build concept #2 "One Text" with Higgsfield and show it. Mid-build: use real TripNerd
+footage or a mix where it looks best, guided by proven competitor ads.
+**Did:** Bible + shot list in `clients/tripnerd/campaigns/2026-10-06-one-text/`. Storyboard
+revised (hug/cheer/island-green shots dropped for the realism floor and live-ad rotation). New
+terrace keyframe (GPT Image 2.5) + four Kling 3.0 pro clips; tracked blur over the AI phone
+screen; composited bubbles + end card with the real wordmark; SFX bed (no speech); assembled
+15.0 s 1080×1920 24 fps master, uploaded to Higgsfield storage. QA1 canonical harness
+(hash-matched): master PASS 12/12, conformed clips PASS, ASR 0 speech. Spend 40.75 credits
+(cap 200). Dual gate (critic + isolated Skeptic) launched; competitor research launched.
+**Open:** gate verdicts; CONFLICT C2 (every person is AI — TripNerd p.6 needs a written
+exception or v2); C3 (who answers DMs); v2 real-footage mix needs Drive clip access (owner-only
+archive); preflight ran after generation (process miss, logged).
