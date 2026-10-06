@@ -1540,3 +1540,17 @@ archive); preflight ran after generation (process miss, logged).
 no-AI-people rule; S3: unverified DM promise, fake venue under an AI label, angle not rotated).
 Also caught: hero footwear drift across shots 2–4 that my QA2 missed. v1 is a reference cut only;
 not polished further. v2 = real TripNerd footage, pending clip access. Learning filed.
+
+## 2026-10-06 — TripNerd: "Be Our Guest" Reel built from real footage (v1.2)
+
+**Asked:** build the Be Our Guest ad from TripNerd's real footage (Roadtrips #1 format as guide).
+**Did:** owner opened two Drive folders to link access; 13 videos pulled and bundled into
+Higgsfield storage. Reviewed every clip: excluded V12 (All Access suite branding) and V15
+(All Access repost watermarks), scoreboard frames, suite TV. Cleared "THE PLAYERS" from the door
+placard with a tracked flat fill. Cut 20.4 s: POV through TripNerd's suite door → suite →
+balcony → the 17th → crowds → table payoff with a comment prompt → end card (real wordmark,
+tripnerd.com, whose Players page is live). Real location sound, −16 LUFS. QA1 (hash-matched
+harness): 10/10 segments PASS after replacing a static clip, master 12/12 PASS, no speech.
+0 credits. Dual gate running. Campaign: `clients/tripnerd/campaigns/2026-10-06-be-our-guest/`.
+**Open:** guest consent (C4); low source resolution (C5); Drive folders still on "anyone with
+the link" at last check — owner to switch back to Restricted.

@@ -39,9 +39,22 @@ johnsonwyatt282@gmail.com). Read via the Google Drive connector on 2026-10-06.
 | `TripNerdSocialDirection` (Slides, 2026-09-11) | `19MUSAoxylJhHzTFmkqU9-PogTyWMF_dN6SOKnMFUV-U` | Service Pow social strategy deck for TripNerd (competitor audit, five formats, 90-day plan) |
 | `TripNerd_Slide4_Review_1080x1350.png` (2026-09-22) | `1xvN9FK4LUgSWet2zj4RrOCa700SuwGFZ` | Carousel slide 4 of 6: "43 five-star Google reviews. Nine years of fans." + Robert D. review quote. Slides 1–3 and 5–6 not in Drive |
 
+## Footage review (2026-10-06, videos only — photos not reviewed)
+The owner opened `masters-week/` and `the-players/` to link access; all 13 videos were pulled
+(sizes matched Drive) and bundled into Higgsfield storage (`…/8bfb305f-798c-4318-8b87-7fbffd85fe65.zip`,
+private-by-obscurity link — contains guest footage). Full per-clip log:
+[campaigns/2026-10-06-be-our-guest/shotlist.md](../campaigns/2026-10-06-be-our-guest/shotlist.md).
+- **Do not use V15** — someone else's repost ("@allaccessgte / @allaccess_events" watermarks,
+  burned-in player caption).
+- **Do not use V12** — filmed inside an "All Access Golf Travel & Events" suite (other company's
+  branding). TripNerd's own branded suite appears only in the 2026 clips (V23, V24).
+- Scoreboards naming pros (Scheffler, Clark, McIlroy, Thomas) appear in V08, V14, V15, V24 —
+  avoid those frames. The suite TV in V23 shows the golf broadcast — avoid.
+- 11 of 13 clips are 404×720 (V23, V24 are 720×1280). Topaz 1080p versions of V13/V16/V23/V24
+  exist in `media-upscaled/` (not opened).
+
 ## Not yet known
-- What the photos and videos show (Drive had not indexed them; files too large to view
-  through the connector). Need a contact sheet before using any in an ad.
+- What the photos show (not reviewed).
 - Whether identifiable guests consented, and whether any frame was shot on tournament
   grounds (no footage from the grounds; event marks).
 - Who shot the footage and who owns the rights (BC-20).
