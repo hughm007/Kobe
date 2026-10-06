@@ -70,6 +70,9 @@ doesn't fit.
 - [2026-10-05 — The keyword DM is part of the ad](learnings/2026-10-05-the-keyword-dm-is-part-of-the-ad.md):
   isolated Pass 1 on a no-AI Reel storyboard: 0/10 shots above LOW risk, yet 3 S4 + 5 S3 —
   2 of the 3 S4s were in the keyword DM reply. Put the DM in the packet and the EV records.
+- [2026-10-06 — All-AI scenario ads fail for real-experience sellers](learnings/2026-10-06-ai-scenario-ads-fail-for-real-experience-sellers.md):
+  TripNerd "One Text" v1 passed machine QC but failed critic (5.8) and Skeptic (S4): client bans AI
+  people, logo-swap fails, near-silent audio, wardrobe drift. Real footage must carry people beats.
 
 ### Web
 *None yet.*

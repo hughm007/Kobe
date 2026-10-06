@@ -1536,3 +1536,7 @@ screen; composited bubbles + end card with the real wordmark; SFX bed (no speech
 **Open:** gate verdicts; CONFLICT C2 (every person is AI — TripNerd p.6 needs a written
 exception or v2); C3 (who answers DMs); v2 real-footage mix needs Drive clip access (owner-only
 archive); preflight ran after generation (process miss, logged).
+**Update (same day):** dual gate on v1 — critic HARD FAIL 5.8 ± 1.5, Skeptic BLOCK (S4: client's
+no-AI-people rule; S3: unverified DM promise, fake venue under an AI label, angle not rotated).
+Also caught: hero footwear drift across shots 2–4 that my QA2 missed. v1 is a reference cut only;
+not polished further. v2 = real TripNerd footage, pending clip access. Learning filed.

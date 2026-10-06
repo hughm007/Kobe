@@ -24,7 +24,7 @@ tags: [campaign, bible, instagram, reel, awareness, ai-generated, scenario]
 | **KPI + target** | Primary: 3-second hold, completion, sends, DMs per reach. **Targets: UNKNOWN** (no @tripnerd Reel insights baseline) |
 | **Budget** | Generation credits — cap **200** (owner instruction 2026-10-06 "build it… use all capabilities, mainly Higgsfield"); estimate in §10, actuals in production-log |
 | **Depth** | **FULL** (generated people, new concept family). Phases answered by standing documents are recorded as skips in §16. First-artifact rule applies: a viewable draft reaches the owner before the dual gate runs on the frozen master. |
-| **Approval status** | **IN PRODUCTION (owner-directed draft)** — see §16 for what was approved, by whom, and what is still open. **Not postable:** CONFLICT C2 (§15) is OPEN. |
+| **Approval status** | **IN PRODUCTION — v1 FAILED both readiness gates** (critic HARD FAIL 5.8; Skeptic BLOCK, S4). v1 is a reference cut only, never to be posted. v2 (real TripNerd footage) awaits clip access. |
 
 ---
 
@@ -107,10 +107,29 @@ bridge into the room; the open French doors bridge to the terrace. End card ride
 terrace shot's tail (no black, no static plate).
 
 ## 13. QC verdict — gate 1 of 2 (critic score)
-PENDING — runs once on the frozen master.
+**v1: HARD FAIL — ServicePow-6 5.8 ± 1.5** (floor 8.0; five axes ≤ 6). Verbatim:
+[qc/2026-10-06-critic-v1.txt](qc/2026-10-06-critic-v1.txt). Top reasons: BC-21 (client's
+no-AI-people rule broken, zero real footage), BC-19 (DM destination unverified), generic/slow to
+show the offer (logo-swap fails), near-silent audio, BC-41 hero footwear drift (white → black →
+white sneakers across shots 2–4 — missed by OPERATOR QA2).
 
 ## 14. Skeptic verdicts — gate 2 of 2
-PENDING — isolated subagent, Isolation Packet only, verdict transcribed verbatim.
+**v1 Pass 3: BLOCK** — 1 × S4, 3 × S3, 6 × S2, 4 × S1. Verbatim:
+[qc/2026-10-06-skeptic-pass3-v1.txt](qc/2026-10-06-skeptic-pass3-v1.txt).
+
+| Finding | Severity | Routed to | Disposition |
+|---|---|---|---|
+| Every human is AI; breaks TripNerd p.6 | S4 | Rebuild (v2) with real footage carrying every people beat — or CLIENT_APPROVER written amendment | OPEN → v2 |
+| Instant "On it." + DM CTA, DM coverage unknown | S3 | CLIENT_APPROVER confirms DM owner + response window; until then no act-out of an instant reply | OPEN (C3) |
+| Fake venue under an AI label from a brand that claims real guests | S3 | v2 real footage | OPEN → v2 |
+| Angle not rotated ("handled" echo), logo-swap fails | S3 | Creative director: angle must show something only TripNerd has (real access moment) | OPEN → v2 |
+| Weak first 3 s (blur, silence, offer unseen until 8 s) | S2 | v2 hook: real event footage in the first second; readable tracked UI or no phone | OPEN → v2 |
+| "Text" vs "DM" mismatch | S2 | Copy: DM-styled thread or "It starts with one message." | OPEN → v2 |
+| Fantasy-concierge exchange (no event/date) | S2 | Copy: thread names an event + date | OPEN → v2 |
+| Never shows what TripNerd sells | S2 | v2 real footage | OPEN → v2 |
+| Audio near-silent; music unchosen | S2 | Audio bed with real room/crowd sound; music chosen and QC'd | OPEN → v2 |
+| AI label set at posting only | S2 | Verify on the live post | OPEN |
+| Course geography mismatch; notification look; TV blossom; catalog wardrobe | S1 | Moot if v2 replaces the shots | — |
 
 ## 15. CONFLICTS
 | ID | Conflict | Status |
@@ -130,4 +149,5 @@ PENDING — isolated subagent, Isolation Packet only, verdict transcribed verbat
 | 2026-10-06 | Process miss recorded: the QC preflight (BC-29/BC-43) ran after generation, not before. Toolchain and delivery path had been proven by earlier sandbox renders/uploads in the same session; recorded, not excused. | OPERATOR |
 | 2026-10-06 | Owner, mid-build: "build your own clips by referencing real client footage… or just do the mix… do what will look best based on proven Meta Ad Library adverts." → v1 (all-AI) finished as the first viewable artifact; real-footage mix (v2) planned: AI only for the hands-only texting hook, real TripNerd event footage for everything after — also resolves most of C2. | Owner (APPROVER) |
 | 2026-10-06 | v2 blocked on access: the Drive `media/` archive is owner-only, so the Higgsfield sandbox cannot download it. Needs either link-sharing of the specific clips (owner approval required — it exposes guest footage to anyone with the link) or an upload through the Higgsfield upload widget. | OPERATOR → owner |
+| 2026-10-06 | Dual gate on v1: critic HARD FAIL 5.8 ± 1.5, Skeptic BLOCK (S4). Decision: do not polish v1 — its S4 finding survives any AI fix. Route to v2 (real footage; AI only for a person-free or hands-only bridge, labelled). Skeptic noted the harness task list appeared in its run (no reasoning/cost/verdicts; disregarded) — isolation held. | OPERATOR |
 | 2026-10-06 | Competitor reference research started (Meta Ad Library + public Reels, every cited ad verified). Note: Ad Library does not publish likes/views for commercial ads; run length is the public proxy. | OPERATOR |
