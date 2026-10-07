@@ -91,6 +91,8 @@ def aread(p,ss,dur,af=None):
     cmd=['ffmpeg','-v','error','-ss','%.4f'%ss,'-i',p,'-t','%.4f'%dur,'-vn']+(['-af',af] if af else [])+['-ac','2','-ar',str(SR),'-f','f32le','-']
     return np.frombuffer(subprocess.run(cmd,capture_output=True,check=True).stdout,np.float32).reshape(-1,2).copy()
 rng=np.random.default_rng(3)
+rt=rng.standard_normal(int((tA+0.6)*SR)).astype(np.float32); rt=np.convolve(rt,np.ones(48)/48,mode='same'); rt=np.stack([rt,rt],1)/max(np.abs(rt).max(),1e-6)
+place(rt,0.0,-46.0,fi=0.05,fo=0.5)                                                                                   # a quiet room bed under the thread: no digital silence
 for e in json.load(open(P['ARRIVALS'])):
     if e['kind']=='in': f=rng.uniform(0.97,1.03); place(tone(1318*f,1760*f),e['t'],-12.0)
     elif e['kind']=='keys':
@@ -103,7 +105,7 @@ place(aread(A,A_IN,A_SLOW-A_IN,af='highpass=f=80'),tA,-9.0,fi=0.3,fo=0.2)       
 place(thump(120,70,glide=0.06,decay=0.11,amp=0.6),mt(P['BOUNCE']),P['THUMP_DB'])                                      # the bounce
 tROAR=mt(P['BALL_STOP'])-0.35
 place(aread('src/v24.mp4',12.6,tAER+0.25-(tROAR-0.7),af='highpass=f=80,lowpass=f=1500'),tROAR-0.7,P['ROAR1_DB'],fi=0.25,fo=0.25)   # the real crowd across the green, rising
-place(aread('src/v24.mp4',13.55,tE-tAER+0.4,af='highpass=f=80,lowpass=f=5000'),tAER,P['ROAR2_DB'],fi=0.15,fo=0.4)              # opens up on the cut to the drone
+place(aread('src/v24.mp4',13.55,DUR-tAER+0.1,af='highpass=f=80,lowpass=f=5000'),tAER,P['ROAR2_DB'],fi=0.15,fo=1.2)              # opens up on the cut to the drone and carries under the card
 place(aread('src/gal1.mp4',7.0,DUR-tAER+0.5,af='highpass=f=2500'),tAER-0.2,-16.0,fi=0.3,fo=1.0)                                  # outdoor air
 place(noise_sweep(0.5,0.4,seed=11,c0=0.01,c1=0.3),tAER-0.12,P['WHOOSH_DB'])                                                       # the drone move's air
 # the turn shot's own sound (his line and the near applause); the bed dips 6 dB under the line

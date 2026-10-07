@@ -4,7 +4,7 @@
 
 **Owner ask (2026-10-07, verbatim in substance):** the texts float up, which a real phone does not do; replicate the phone completely with no legal issues; texting 8 s, not 10; find a workaround to remove "Scenes dramatized" and its grey highlight completely; transition to an aerial view that comes down and toward the TripNerd guests and around to behind them celebrating; if it can be done with good realism, the guy turns around and says "Thanks to TripNerd" and raises a drink, if that is allowed at Augusta; use the voice of the host from the first client-approved advert; build it and return a viewable link.
 
-**Status:** v7 master built, machine-QC'd, speech-screened, uploaded and byte-verified; the dual gate launched on the frozen master (verdicts in §5). Owner review pending; TripNerd's approver pending.
+**Status:** v7 gated (all four lenses BLOCK, Critic 6.5 HARD FAIL; §5). **v7.1 is the delivered cut** (§1a): the gate's mechanical findings fixed with no spend; the blocking decisions (venue, on-screen label, the spoken line, the beer) are the owner's. Owner review pending; TripNerd's approver pending.
 
 ## 1. Links (Higgsfield private storage; verified byte-for-byte after upload)
 | File | Link | Bytes | MD5 |
@@ -16,6 +16,26 @@
 | Turn shot, cap fix only (recovery copy) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/50038716-9b03-4ebe-bf0d-5bb4160126cb.mp4 | — | `128011c0939c1c8c3755adf761ab6586` |
 
 Superseded before anyone saw it: a first v7 master (`…/e7d3e9c6-0372-4b3a-8de9-0385a5ee78f8.mp4`, MD5 `6a451f77…`) built before I found the generated marks on the polo sleeve; its sheet `98ef5a30` and kit `379a7aca` go with it. Do not use.
+
+## 1a. v7.1 — the delivered cut (verified byte-for-byte after upload)
+| File | Link | Bytes | MD5 |
+|---|---|---|---|
+| **v7.1 master, no on-screen label (as the owner asked), 22.71 s** | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/d86d032b-0432-4ee9-bf14-4a0d3696d2c7.mp4 | 31,965,855 | `cb75da6531efa60877432e4494b1bb56` |
+| **v7.1 labelled variant** (text-only "AI-generated scenes", 34 px white, soft shadow, no box, 7.7–19.79 s) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/9465f1a4-844d-401e-ae0b-3346ce8651a5.mp4 | 30,833,068 | `91b36245757d32b8a062b766c19fbdc5` |
+| Contact sheet (2 fps, 8x6) | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/ad0dfb5a-48cd-496a-aec2-02bb6a584463.jpg | 554,671 | `f6f7f1687e859667cee2513682454d18` |
+| Build kit | https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/cdb4f84b-27e9-4803-a1df-447017830e40.zip | 28,260 | `e6134def9d9e6ad00d64ad10f66beb0d` |
+
+Superseded, never delivered: the v7 master `806a5ea7` (gated) and two intermediate v7.1 uploads (`8f35ac8c`, `52e89c77`, left unconfirmed).
+
+What v7.1 changes against the gated v7 (all spend-free, all re-checked at native size):
+- the script-like mark on the toasting arm's sleeve hem removed (`build/hemfix.py`; 10 fps native strip across 17.8–20.08 s clean);
+- the chair-back roundels and the two knit recolours now follow the camera tilt (`build/gallfix2.py`, phase-correlation offset per frame, boxes clamped); roundels gone at 9.7 s; the centre patron's top charcoal from the first visible frame;
+- the landing starts at clean 0.6 s, after the opening whip, so no blurred frames sit under the crossfade (total 22.71 s; landing 7.7–9.5, ball stops 9.0, drone 9.5–15.25, turn 15.25–19.79, card 19.79–22.71);
+- thread: a received message pops in whole (no empty grey frame, no text fade); the sent bubble eases out of the right end of the compose field instead of appearing mid-screen;
+- sound: the bounce on the contact frame; a quiet room bed under the thread (about −48 dBFS, no digital silence); the crowd carried under the card (about −38 dBFS) instead of dropping to silence; −13.99 LUFS, −0.99 dBTP.
+- QC on both files: every harness row PASS except the thread's frozen holds (FAIL, recorded for the APPROVER) and hook motion (WARN).
+
+Not fixed in v7.1 (each needs new generation, an owner decision, or both): the venue look; the on-screen label (the labelled variant exists); the line spoken behind the cup and the speaking guest; the beer; the faint cap oval and arc; the wall of spectators across the hole in the drone shot; the drone's terrain reshaping and the drone-to-turn bump; frame-doubled slow motion; the crossfade hitch; the sent-bubble tail shape; the Reels bottom-zone placement of the ball and the typing.
 
 ## 2. What changed, and how each owner note was handled
 | Owner note | v7 | Status |
@@ -45,8 +65,20 @@ Timeline: thread 0–8.0 (crossfade 7.7–8.0) · landing 7.7–9.8 (bounce ~8.0
 - Native inspection: cap and polo clean at 17.6, 18.5, 19.4, 20.0 s; a faint smooth oval remains where the cap badge was, with a thin light arc on its left edge on the closest frames; a thin second white pole with a teal base stands beside the flagstick in the drone's last seconds and the turn shot (it is in the owner's still); the line is spoken while the cup is at his mouth, so the lips are partly hidden.
 - Not verified: a human end-to-end watch at phone size; lip-sync beyond frame inspection; the drone's terrain reshaping at full speed by a person.
 
-## 5. Dual gate (isolated agents on the frozen master MD5 `b99e998d…`; packet md5 `43000a2e…`)
-Pending; rows are added as each verdict lands.
+## 5. Dual gate (isolated agents on the frozen v7 master MD5 `b99e998d…`; packet md5 `43000a2e…`)
+All four Skeptic lenses BLOCK; the Critic scores ServicePow-6 **6.5 ± 1.5, HARD FAIL**, AI-artifact risk 6/10.
+
+| Lens | Verdict | Blocking findings (S3/S4) | What I did |
+|---|---|---|---|
+| Client (TripNerd) | BLOCK | S4 a generated script-like wordmark on the toasting arm's sleeve hem 18.8–20.08 s (my packet said the polo was clean: wrong); S4 the course reads unmistakably as one famous club and tournament, implying access with no clearance; S4 no on-screen AI label with synthetic people who speak; S3 the line spoken behind the cup, plus the faint cap oval; S3 a beer raised to camera as the hero gesture | the hem mark removed in v7.1 (`hemfix.py`, verified at 10 fps across 17.8–20.08 s); the label offered as a text-only variant; venue, line and beer are the owner's |
+| Target customer | BLOCK | S4 venue implies access TripNerd may not sell; S3 a wall of spectators stands across the hole in the drone shot (galleries never stand there); S3 the sleeve-hem mark | hem fixed; the crowd placement is inside the generated drone shot and needs a new take or a different shot (owner's call, spend) |
+| Industry professional | BLOCK | S3 a gallery patron's green top turns charcoal mid-shot at 8.2–8.35 s (my recolour box did not follow the camera tilt); S3 the cap oval and bright arc at the focal point; S2s: the bounce thump 8 frames early, frame-doubled slow motion and a dead stop, a crossfade hitch at 7.96 s, the sent bubble jumping mid-screen on its first frame, the sent tail lumpy, the drone terrain morph, the drone-to-turn join bumping in picture and sound, the line behind the cup, digital silence under the card and the thread, the ball and the typing in the Reels bottom zone | the recolour and roundel boxes now follow the camera (`gallfix2.py`); the sent bubble eased out of the field; the received message pops in whole; the bounce moved to the contact frame; the crowd carries under the card; a quiet room bed under the thread. Not done: the cap re-texture, the slow-motion interpolation, the crossfade hitch, the join, the tail shape, the reframe |
+| Competitor | BLOCK | S4 the chair-back roundels still visible 7.85–9.8 s (my packet said removed: wrong, same tilt cause); S4 the sleeve wordmark; S4 venue trade dress and implied access (Lanham Act §43(a); golf-hole trade dress has been protected, Pebble Beach v. Tour 18); S4 implied claim TripNerd can sell this event with no Evidence Record; S4 no conspicuous disclosure with New York's synthetic-performer law in force; S3 a synthetic guest speaking to camera is a testimonial in substance (16 CFR 255 and Part 465) | roundels and hem fixed in v7.1 and checked at native size; the labelled variant built; venue, claim evidence and the line are the owner's |
+| Critic | 6.5 ± 1.5, HARD FAIL | BC-06 frozen thread holds; the line behind the cup; the drone morph (BC-41, no receipt); BC-16 to BC-21 receipts missing (Evidence Record, synthetic-person receipt, disclosure set, landing-page parity, venue and voice clearance, brand fidelity); BC-25 no human watch | top fixes named: close the compliance gap (venue or clearance, label, evidence, parity, human watch); re-perform the turn without speech behind the cup and fix the drone; motion in frame 1 and a verb CTA |
+
+**My two packet errors this round, stated plainly:** I wrote that the polo was clean after checking four frames that did not include the sleeve hem, and I carried forward the v6.1 statement that the chair roundels were removed without re-checking the part of the landing clip v7 now shows. The roundel and knit boxes assumed a locked camera; the clip tilts. Both are fixed in v7.1 and both claims were re-verified at native size before delivery.
+
+**New legal fact (checked 2026-10-07):** New York's synthetic-performer advertising law (S.8420-A, signed 2025-12-11, in force since 2026-06-09) requires an ad that uses an AI-generated performer to disclose it conspicuously; penalties $1,000 first, $5,000 after (Hunton, Cooley, Skadden summaries). Whether a platform AI badge satisfies "conspicuous" is not settled. The owner asked for the on-screen label to go; v7.1 ships without it as asked and as a labelled variant (small white text, no box) for any audience that can reach New York.
 
 ## 6. Decision log
 - The orbit was attempted and rejected on realism; the descent ships. A second orbit attempt would cost about 10.5 credits a take with the same failure risk.

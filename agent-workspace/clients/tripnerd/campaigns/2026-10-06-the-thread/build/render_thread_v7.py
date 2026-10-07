@@ -63,19 +63,18 @@ def incoming(im,tf,who,txt,ty,tm,ny,by):
                 cx=x0+42+i*33; cy=y0+h/2; r=10
                 d.ellipse((cx-r,cy-r,cx+r,cy+r),fill=(c,c,c+3))
     else:
-        k=ease_out((tf-tm)/0.18); w=typ_w+(full_w-typ_w)*k
-        bubble(d,bx,by,w,BH,GREY,'left')
-        if k>0.35:
-            a=min(1,(k-0.35)/0.5); c=int(255*(1-a))
-            d.text((bx+PADX,by+PADY-3),txt,font=FT,fill=(c,c,c))
+        k=ease_out((tf-tm)/0.12); sc=0.92+0.08*k                      # the message pops in at once, scaled from its tail corner
+        w=full_w*sc; h=BH*sc; y0=by+BH-h
+        bubble(d,bx,y0,w,h,GREY,'left')
+        d.text((bx+PADX*sc,y0+(PADY-3)*sc),txt,font=FT,fill=INK)
     avatar(d,ax,by+BH-76,who[0])
 def outgoing(im,tf):
     d=ImageDraw.Draw(im); w=tw(T3,FT)+2*PADX; x_end=W-44-w; y_end=L['b3']
     if tf<SEND: return
-    p=ease_out((tf-SEND)/FLY)
+    x=min(max((tf-SEND)/FLY,0),1); p=x*x*(3-2*x)                     # ease in and out: the first frame stays at the field
     # start: the text sits in the compose field; end: the bubble in its slot
-    x0=150+(x_end-150)*p; y0=(COMP_Y+(COMP_H-BH)/2)+(y_end-(COMP_Y+(COMP_H-BH)/2))*p
-    bubble(d,x0,y0,w,BH,BLUE,'right' if p>0.6 else None)
+    xs=W-40-96-w; x0=xs+(x_end-xs)*p; y0=(COMP_Y+(COMP_H-BH)/2)+(y_end-(COMP_Y+(COMP_H-BH)/2))*p
+    bubble(d,x0,y0,w,BH,BLUE,'right' if p>0.85 else None)
     d.text((x0+PADX,y0+PADY-3),T3,font=FT,fill=(255,255,255))
 def chrome(im,tf):
     d=ImageDraw.Draw(im)
