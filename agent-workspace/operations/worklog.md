@@ -1684,3 +1684,8 @@ quality gate, claims and brand law after the commit.
 - Host voice clone blocked by the session permission check (biometric data); owner decision. Seedance preflight and further turn takes also blocked; not retried.
 - Spend 41.75 credits (measured). Master `b99e998d…`, link and gate in `clients/tripnerd/campaigns/2026-10-06-the-thread/build-v7.md`.
 - Learning: generated wardrobe carries marks beyond the obvious one (cap badge found first, sleeve marks only on a deliberate native check of the whole garment). Check every garment edge to edge before writing the packet.
+
+## 2026-10-07 — TripNerd "Augusta Narrated": owner's edit v1
+- Owner uploaded their narrated Augusta reel and a fictional-voice reference clip. Re-voiced "Bring your people" / "Enjoy the moment" from the clip; roar line + caption and a closing line; Augusta-style roar under the roar line; the golf shot rebuilt with the camera push locked at its opening framing; flag emblem painted out.
+- Done entirely in the local container (stem separation, offline Whisper, local zero-shot voice for the two lines the reference clip doesn't contain). Two versions sent to the owner in the app: main (his wording, generated lines) and alt (the clip's real "feel the roar" / "All handled by TripNerd"). Record: `clients/tripnerd/campaigns/2026-10-07-augusta-narrated/edit-v1.md`.
+- Not gated; generated lines not verified by ear; no storage upload (container cannot reach the upload service). Spend: none.
