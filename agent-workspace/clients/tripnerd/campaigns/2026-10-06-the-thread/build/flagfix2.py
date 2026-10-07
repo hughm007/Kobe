@@ -4,7 +4,7 @@
 # flag colour (folds kept). Writes A4k_clean.mp4 (source 0.7-3.3 s, 4k, original audio). Usage: flagfix2.py [test <t>]
 import subprocess, numpy as np, sys
 from PIL import Image
-A='/home/user/owner/A4k.mp4'; OUT='/home/user/owner/A4k_clean.mp4'; W,H=3840,2160; T0,TL=0.7,2.6; FB=W*H*3
+A='/home/user/owner/A4k.mp4'; OUT='/home/user/owner/A4k_clean.mp4'; W,H=3840,2160; T0,TL=0.4,2.9; FB=W*H*3
 X0,X1,Y0,Y1=1400,2800,0,620; CS=40; THR=22
 def enclosed(m):
     l=np.maximum.accumulate(m,axis=1); r=np.maximum.accumulate(m[:,::-1],axis=1)[:,::-1]; u=np.maximum.accumulate(m,axis=0); d=np.maximum.accumulate(m[::-1,:],axis=0)[::-1,:]; return l&r&u&d

@@ -20,12 +20,13 @@ def probe(p):
     o=subprocess.run(['ffprobe','-v','error','-select_streams','v:0','-show_entries','stream=width,height','-of','csv=p=0',p],capture_output=True,text=True).stdout.strip().split(','); return int(o[0]),int(o[1])
 aw,ah=probe(A); cw,ch=probe(C); cwA=int(ah*9/16)//2*2
 FB=ImageFont.truetype('fonts/Montserrat-ExtraBold.ttf',58); FHh=ImageFont.truetype('fonts/Montserrat-Medium.ttf',40); FD=ImageFont.truetype('fonts/Montserrat-Medium.ttf',40)
-FX=ImageFont.truetype('fonts/Montserrat-ExtraBold.ttf',96); FS=ImageFont.truetype('fonts/Montserrat-SemiBold.ttf',46)
+FX=ImageFont.truetype('fonts/Montserrat-ExtraBold.ttf',96); FS=ImageFont.truetype('fonts/Montserrat-SemiBold.ttf',54)
 LOGO=Image.open('src/logo.png').convert('RGBA'); LOGO=LOGO.resize((700,int(700*LOGO.height/LOGO.width)),Image.LANCZOS)
 def shadow_text(L,xy,t,font,fill=(255,255,255,255),blur=14,alpha=170):
     S=Image.new('RGBA',L.size,(0,0,0,0)); d=ImageDraw.Draw(S); d.text((xy[0]+4,xy[1]+6),t,font=font,fill=(0,0,0,alpha)); S=S.filter(ImageFilter.GaussianBlur(blur)); L.alpha_composite(S); ImageDraw.Draw(L).text(xy,t,font=font,fill=fill)
 def headline():
     L=Image.new('RGBA',(W,H),(0,0,0,0)); d=ImageDraw.Draw(L); y=P['HEAD_TOP']
+    S=Image.new('RGBA',(W,H),(0,0,0,0)); ImageDraw.Draw(S).rounded_rectangle((70,y-80,W-70,y+112*len(P['HEAD'])+130),radius=70,fill=(0,0,0,int(255*P.get('SCRIM',0.32)))); S=S.filter(ImageFilter.GaussianBlur(48)); L.alpha_composite(S)   # a soft scrim so the type reads over sky and arms
     for line in P['HEAD']:
         bb=d.textbbox((0,0),line,font=FX); shadow_text(L,((W-(bb[2]-bb[0]))//2-bb[0],y),line,FX); y+=112
     bb=d.textbbox((0,0),P['SUB'],font=FS); shadow_text(L,((W-(bb[2]-bb[0]))//2-bb[0],y+18),P['SUB'],FS,fill=(255,255,255,235),blur=10,alpha=150); return L
@@ -83,7 +84,7 @@ pr=subprocess.Popen(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb2
 for f in frames: pr.stdin.write(f.tobytes())
 pr.stdin.close(); pr.wait()
 # ---------- concat + the disclosure label over both generated shots (through the whip) ----------
-LBL_IN=tA+0.3; LBL_OUT=tE-0.1
+LBL_IN=tA; LBL_OUT=tE-0.1
 TOTAL=tE+E_LEN   # the looped label PNG never ends on its own: cap the output at the sum of the segments
 run(['-i','out/seg1_v4.mp4','-i','out/seg2_v4.mp4','-i','out/seg3_v4.mp4','-i','out/seg4_v4.mp4','-loop','1','-i','out/disclose.png','-filter_complex',"[0:v]fps=24,settb=AVTB[a];[1:v]fps=24,settb=AVTB[b];[2:v]fps=24,settb=AVTB[c];[3:v]fps=24,settb=AVTB[e];[a][b][c][e]concat=n=4:v=1:a=0[v0];[4:v]format=rgba,fade=in:st=%.2f:d=0.2:alpha=1,fade=out:st=%.2f:d=0.2:alpha=1,setpts=PTS-STARTPTS[dc];[v0][dc]overlay=0:0:shortest=1:enable='between(t,%.2f,%.2f)'[v]"%(LBL_IN,LBL_OUT-0.2,LBL_IN,LBL_OUT),'-map','[v]','-t','%.4f'%TOTAL]+ENC+['-movflags','+faststart','out/%s_silent.mp4'%NAME])
 DUR=float(subprocess.run(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0','out/%s_silent.mp4'%NAME],capture_output=True,text=True).stdout.strip())
