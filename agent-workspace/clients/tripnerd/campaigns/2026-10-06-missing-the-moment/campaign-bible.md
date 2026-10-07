@@ -507,3 +507,65 @@ Weakest 2s: 0.0–2.0. Registry receipts missing.
   - stitched-look cap.
 
 **Status:** BLOCKED. NOT CLIENT READY. Awaiting owner decision on the claim spine.
+
+---
+
+## v8: new concept, "Golf Boys → TripNerd. Booked." (2026-10-07)
+
+**Owner direction (summary):**
+1. Opening: a full-screen phone group chat, bubbles popping up, ending "TripNerd. Booked.".
+2. Hyper music starts on that bubble.
+3. Pan to the owner's golf-shot clip, with the crowd roar building as the ball nears the hole.
+4. Pan to the TripNerd guests clapping in their seats.
+5. Camera goes aerial, comes beside them, then settles behind them: the man and two women stand clapping and cheering, and the golfer and caddie hug on the green while everyone celebrates.
+6. End card.
+
+**Owner assets used (all owner-generated in Higgsfield):**
+- Golf clip: hf 80981ec6 (md5 6f76e4c5…, matches the upload).
+- Behind-view still: 5cbb4036.
+- Chat mock-up: 9892db06, used as copy reference only; the chat is rebuilt as animation.
+
+**Build:**
+- Chat: `v8/chat-animation.py`.
+  - Generic messaging UI, no Apple marks. Liberation Sans plus Noto emoji.
+  - Seven bubbles, trimmed for readability.
+  - "bucket list shit" changed to "Bucket list": Meta ad policy bars profanity.
+- Golf: owner clip reframed 16:9 → 9:16 with a crop that tracks both the flag and the ball (`v8/golf-crop-track.py`). Clip from 0.8s, 4.24s long.
+- Camera move:
+  - Start frame: hugkey, the front view with the real logo composited.
+  - End frame: owner behind-view, mirrored for correct 180° geography; recomposed to 9:16 with the trio standing and cheering (nano_banana_2_1 8a359df0).
+  - Removed for rights and garbled text: the Masters-style leaderboard and the caddie's bib lettering.
+  - Both models rendered it. Chosen: Seedance 2.5 c77899f4 (1080p, 8s). It has the elevated near-aerial move and natural, closed-mouth reactions.
+  - Rejected: Kling fc0ab8e4 (skipped the aerial; logos crisper).
+- Music: original synthesized 140 BPM bed (`v8/music-synth.py`), no licensing exposure. It starts on "Booked", builds with a riser into the celebration, and ends on a final hit at the end card.
+- Crowd audio:
+  - owner clip audio plus the long-take crowd, ramping up to the ball reaching the cup;
+  - the Seedance roar and applause over the celebration.
+- End card: built from the real logo file. Built by 0.4s; contrast raised; CTA "Book now".
+
+**Timeline (19.74s):**
+
+| Time | Shot |
+|---|---|
+| 0–5.6 | chat ("TripNerd. Booked." at 4.55, music in) |
+| 5.3 | whip-pan |
+| 5.3–9.54 | golf (ball at the cup ≈ 8.7–9.0) |
+| 9.24 | whip-pan |
+| 9.24–17.24 | celebration orbit |
+| 17.24–19.74 | end card |
+
+**Master:** https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/0dc0974f-33d9-47c1-bf17-7d59be214cfa.mp4 (md5 d273ac3949e92790c2d6aacab0039c40). −14.6 LUFS, −1.0 dBTP, 1080×1920, 30fps.
+
+**Spend (this session, v8):** 124 credits (Nano 3, Kling 25, Seedance 96). Other account charges in this window match the owner's own Higgsfield work.
+
+**Known risks for the gate:**
+- **Rights:**
+  - "Augusta" and "Players" named in the chat; THE PLAYERS is a PGA TOUR mark.
+  - Augusta look and caddie white coveralls (Masters trade dress).
+  - End-card eyebrow "THE AUGUSTA EXPERIENCE".
+- **Implied claim:** guests ropeside at the green at the winning putt. There is no "can't see" contrast now, but the vantage is still implied.
+- **Brand:** logos on the cap and cards are soft in the Seedance render (animated from the composited real file). Needs a brand-fidelity check.
+- **Disclosure:** AI people throughout; AI disclosure toggle ON at upload.
+- **Audio:** not human-auditioned (QA was by meters only); the synthesized music needs a listen.
+
+**Status:** owner first-artifact review. Dual gate runs on the locked cut. NOT CLIENT READY.
