@@ -1990,3 +1990,11 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - the green shot is AI-generated: made-up spectators and an Augusta National look. That breaks TripNerd's "AI never creates a person" rule and needs the Instagram AI label. It is not postable until TripNerd OKs it;
   - "handle the details" (the barred root "handled");
   - the end card's "Now booking 2027" (unverified).
+
+## 2026-10-07 — TripNerd Augusta Reel: best-quality Instagram export (Karl)
+- **Ask:** export the Reel at the best quality for posting through Meta Business Suite on TripNerd's Instagram.
+- **Found:** the upload is byte-identical to the 20 s cut, and it already meets the Reels spec (1080×1920, 30 fps, H.264 High, BT.709, faststart, −14.2 LUFS). It was delivered **unchanged**, because a re-encode would only lose quality.
+- **22 s version:** re-rendered from the same source. The crf 14 render was 34.6 MiB, over the 30 MiB chat limit, so I delivered a 2-pass 10.4 Mbps encode (28.4 MiB; SSIM 0.995 against the source).
+- **Receipts:** `campaigns/2026-10-book-it-now-augusta/qc/chatgpt-reel-ig-export-2026-10-07.txt`.
+- **Still open before posting:** the AI label (the green shot is AI), the music licence, TripNerd's approver, guest consent and the venue OK.
+

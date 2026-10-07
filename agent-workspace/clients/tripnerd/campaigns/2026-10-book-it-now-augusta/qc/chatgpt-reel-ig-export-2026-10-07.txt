@@ -1,0 +1,19 @@
+TripNerd Augusta Reel: Instagram export for Meta Business Suite (2026-10-07)
+Ask (Karl): "export this video back to me with the best quality possible for an instagram reel"
+Upload: aa4a2ef8-...mp4 (byte-identical to the 20 s cut, sha256 c5216a49...)
+
+20 s: delivered UNCHANGED (no re-encode; it already meets Reels spec, so any re-encode would only lose quality)
+  sha256 c5216a490f1524a0360d7cf2a2bfa3d36e81da82e2333d4aade603fb72af0699
+  h264 High, 1080x1920, 30/1 fps CFR, yuv420p, bt709 (space, primaries, transfer), 11.5 Mbps, 600 frames
+  aac LC 48 kHz stereo, 202 kbps; 20.000 s; -14.2 LUFS, -1.2 dBTP; atoms ftyp,moov,free,mdat (faststart)
+
+22 s: re-rendered from the same source with chatgpt-reel-22s-build.sh filters
+  First render at crf 14 / preset slower was 34.6 MiB, over the 30 MiB chat-delivery limit, so it was not sent.
+  Delivered: 2-pass x264 preset slower, 10.4 Mbps target (maxrate 16M), High@4.2, yuv420p, bt709 tags, g=60,
+             aac 256k 48 kHz stereo, +faststart
+  sha256 8a355d99ea5ca51de895da4bff65807619fa2518b779afa1e124423ffeb1f2a9 (29,755,630 bytes, 28.38 MiB)
+  1080x1920, 30/1 fps, 660 frames, 22.01 s; -14.3 LUFS, -1.1 dBTP; atoms ftyp,moov,free,mdat
+  SSIM vs source (frames 0-417, untouched section): 0.9951; vs the crf 14 render: 0.9937
+
+Posting status: NOT cleared. Open gates: AI label (the green shot is AI-generated), music licence,
+TripNerd approver, consent for the real guest footage, venue OK.
