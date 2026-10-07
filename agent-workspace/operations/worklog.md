@@ -1981,3 +1981,12 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **BLOCKED:** every Higgsfield host (upload and CDN) is unreachable from the environment. Karl adds `upload.higgsfield.ai`, `d2ol7oe51mr4n9.cloudfront.net`, `d8j0ntlcm91z4.cloudfront.net` and `d3u0tzju9qaucj.cloudfront.net` to Allowed domains; per the docs the change reaches this running session within about a minute. A background watcher resumes the work when they open.
 - **Spend so far on v4:** 0 credits.
 - **Learning:** a Skeptic invoked from a workflow prompt that mentions other evaluators voids itself (condition 3). Invoke it with the packet path only.
+
+## 2026-10-07 — TripNerd Augusta Reel: 20 s → 22 s holds (Karl)
+- **Ask:** Karl wanted two shots held 1 s longer each: the real V25 veranda shot ("Bring your people. / Enjoy the moment.") and the "Let TripNerd handle the details" green shot.
+- **How:** each shot's last second is played at half speed with repeated frames (no interpolation, no AI). Frame blending was tried first and dropped: it left a double image on the pan. The audio stretches inside the voice-over pauses at 14.58 s and 17.49 s, so no word is cut.
+- **Result:** 22.0 s, −14.3 LUFS, −1.1 dBTP. Receipts: `campaigns/2026-10-book-it-now-augusta/qc/chatgpt-reel-22s-*`.
+- **Flagged to Karl, who chose to keep it:**
+  - the green shot is AI-generated: made-up spectators and an Augusta National look. That breaks TripNerd's "AI never creates a person" rule and needs the Instagram AI label. It is not postable until TripNerd OKs it;
+  - "handle the details" (the barred root "handled");
+  - the end card's "Now booking 2027" (unverified).
