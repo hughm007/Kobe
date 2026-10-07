@@ -1697,3 +1697,35 @@ quality gate, claims and brand law after the commit.
   - the isolated Skeptic and critic on the frozen master.
 
   Nothing posted.
+
+## 2026-10-07 (late afternoon) — TripNerd "Augusta, handled" A5 and A6: the 20 s voice cut, then the Instagram posting master
+- **A5 (owner's ask):**
+  - slow the voiceover so the ad runs 20 s;
+  - speak "Bring your people", "Enjoy the moment" and "Let TripNerd handle the details";
+  - say "All done with TripNerd!" as it fades into the end card, with no caption.
+
+  Built at 20.00 s. The list is read slower (5.4–12.1 s), with three more lines in the host voice; the music now starts at 0.21 s so the drop still lands on the cut into the end shot. ASR found every line in order. QA1 PASS.
+- **A6 (owner's ask): "upscale the whole advert … export … best way to post on Instagram".**
+  - **Advised against a whole-ad 4k upscale.** Reels serve at 1080×1920 and are re-encoded on upload. Running the card and logo through an AI upscaler also risks warped type and a warped logo (brand-asset law).
+  - **The owner said "do what you recommend".** So we upscaled only the two 404×720 real shots and made one top-quality encode: H.264 High 4.2, 17.3 Mb/s, BT.709, AAC 320 kb/s, faststart.
+  - **The first render was rejected.** ByteDance's upscale gave the foliage a painted texture.
+  - **The final render uses Topaz Video upscales.** Faces stay true, trees look natural, and the image is sharper than A5.
+  - **Checks:** QA1 PASS; −14.2 LUFS / −1.2 dBTP; ASR matches; the upload was byte-verified (MD5 `d02414b9…`).
+  - The learning is filed and indexed.
+- **Spend:**
+  - A5 voice: 1.6 credits. We told the owner 3.2; the ledger is correct, and the correction is recorded.
+  - A6 upscales: 10.31 credits.
+  - Build total: 187.51 of the 400 cap.
+- **Found:**
+  - **The GitHub repo `hughm007/Kobe` is public.** Client documents, Drive IDs of link-shared folders and media links are readable by anyone. Raised with the owner. It's the owner's call whether to make the repo private.
+- **Open:**
+  - **Before posting:**
+    - Karl's watch and listen on a phone;
+    - TripNerd's OK on the AI voice and the generated gallery;
+    - the venue-look call;
+    - "Now booking 2027";
+    - the musician's consent;
+    - Meta's AI label at posting.
+  - **Not yet run:** the isolated Skeptic and critic on the frozen master.
+
+  Nothing posted.

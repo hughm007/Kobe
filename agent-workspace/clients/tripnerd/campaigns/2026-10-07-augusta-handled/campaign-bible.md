@@ -90,6 +90,8 @@ LEARNINGS: captured at close; production observations so far in [`production-log
 | 2026-10-07 | Clip A re-upscaled to 4k (same source and tool) because the owner's 4k file could not leave this container; then flag emblem painted out with `flagfix3` (the committed `flagfix2` left visible outlines on this upscale), then the other session's `gallfix` | Director |
 | 2026-10-07 | The end shot leaves at source 2.62 s, while the ball sits beside the cup (it never drops and then rolls away). The card cuts in on the music's beat, hard cuts on the drop and the beat, total 18.12 s | Director |
 | 2026-10-07 | B3 withdrawn: its hook carries the generated flag emblem that the v3 QA1 missed (corrected in `qc/qa1.md`) | Director |
+| 2026-10-07 | **A5 on the owner's note** ("the voiceover feels rushed … 20 seconds … bring your people, enjoy the moment, Let TripNerd handle the details … 'All done with TripNerd!' as it fades into the end card, no caption"): total 20.0 s; the list read slower (5.40–12.11 s); three more lines in the host voice; the sign-off spoken over the card with no caption | Karl (APPROVER) |
+| 2026-10-07 | **A6 = the posting master** (owner: "upscale … export … best way to post on Instagram"). No 4k export: Instagram serves Reels at 1080×1920 and re-encodes every upload, so the gain is in the sources and the encode. Upscale only the two 404×720 real shots (Topaz Video; ByteDance rejected for painted foliage); nothing generated is upscaled, and no text or logo passes through an AI model. One encode at H.264 High 1080×1920 30 fps, ~17 Mb/s, AAC 320 kb/s | Director (owner delegated: "do what you recommend") |
 
 ## CONFLICTS
 None open.

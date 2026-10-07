@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # TripNerd "Augusta, handled" A6 = A5 re-mastered for Instagram (owner, 2026-10-07): the two 404x720 real shots (V19, V25) replaced by
-# ByteDance 2k 'ugc' upscales (one resample to frame, no unsharp), a single near-lossless path into one final encode at Instagram's
+# Topaz Video 2160p upscales (src/*_up.mp4 = Topaz jobs 299ab2b2 / c70356ed; one resample to frame, no unsharp), a single near-lossless path into one final encode at Instagram's
 # best upload spec (H.264 High 4.2, 1080x1920, 30 fps, CRF 14 capped 30 Mb/s, BT.709 tags, AAC-LC 320 kb/s 48 kHz, faststart).
 # Same timeline, text and mix as A5: 20.0 s, 9:16, 30 fps. The real-footage version with the owner's notes of 2026-10-07:
 # hook (V19, real) | the Private Executive Home | the veranda + checklist, read by the hosting-spot host's voice | V25 (real) |

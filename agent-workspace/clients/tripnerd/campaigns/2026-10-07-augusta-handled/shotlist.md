@@ -12,7 +12,20 @@ tags: [shot-manifest, routing, real-footage, seedance, augusta]
 
 # Shot manifest — 15.0 s, 9:16, 1080×1920, 30 fps
 
-## A4 (current): 18.12 s
+## A6 (current, the posting master): 20.0 s
+A5's edit with the real shots upscaled. **Picture:** V19 (shot 1) and V25 (shot 4) now come from Topaz Video 2160p upscales of the same frames (REAL-ASSET, upscaled; no content generated). **Sound:** identical to A5. **Export:** one high-quality encode.
+
+## A5: 20.0 s (owner: slower voice, voice on every line)
+| # | Time | Picture | Super / sound |
+|---|---|---|---|
+| 1 | 0.0–3.0 | V19 hook | "Augusta is the bucket-list moment." · music from 0.21 s |
+| 2 | 3.0–5.3 | House push-in | "Planning it shouldn't be the hard part." |
+| 3 | 5.3–12.3 | Veranda + checklist | Host voice reads the list 5.40–12.11 (atempo 1.08); ticks 6.44 / 7.68 / 9.44 / 10.88 |
+| 4 | 12.3–14.9 | V25 | "Bring your people." → "Enjoy the moment." · voice 12.40–14.62 |
+| 5 | 14.9–17.51 (hard cut on the drop) | Clip A end shot, as A4 | "Let TripNerd handle the details." · voice 15.15–17.24 |
+| 6 | 17.51–20.0 | Camera-roll card, as A4 | Voice "All done with TripNerd!" 17.62–19.13 (no caption) |
+
+## A4: 18.12 s
 | # | Time | Picture (route) | Super / sound |
 |---|---|---|---|
 | 1 | 0.0–3.0 | V19 hook, as A3 (REAL-ASSET) | "Augusta is the bucket-list moment." · Golden Storm groove (track from 2.11 s) |

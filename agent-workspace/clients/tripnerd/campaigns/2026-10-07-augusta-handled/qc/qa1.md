@@ -12,7 +12,24 @@ tags: [qa1, machine-qc]
 
 # QA1 — machine harness
 
-## A4 (`7c406481dbf56a63f188fca12565e583`) — current
+## A6 (`d02414b97d91636fa2c7fdaf10f94169`) — current, the posting master
+Harness `servicepow_qc.py` (MD5 `321ef0b7…`), `--master --aspect 9:16 --duration 20 --endcard 2.49`: **OVERALL PASS**.
+1080×1920 · 30.000 fps · yuv420p · 48 kHz / 2 ch · peak −1.2 dB, mean −17.0 dB · no frozen or black sections · motion 10.53 px/frame · 1 detected cut, no shot under 0.4 s · duration 20.00 s.
+
+- **Encode (ffprobe):** H.264 High, level 4.2, 17.3 Mb/s video; BT.709 primaries, transfer and matrix tagged; AAC-LC 320 kb/s 48 kHz stereo; faststart; 44.0 MB. A5 for comparison: 11.7 Mb/s.
+- **Loudness (ebur128 on the encoded file):** −14.2 LUFS integrated, true peak −1.2 dBFS, LRA 8.5 LU. BC-05 PASS; the −1 dBTP production target is met.
+- **BC-27 (ASR on the master, faster-whisper base.en):** "With TripNerd, enjoy course access, private executive accommodations, daily hospitality, and concierge support." 0.0–12.8 s · "Bring your people, enjoy the moment." 12.8–15.3 s · "Let TripNerd handle the details, all done with TripNerd." 15.3–19.1 s. Matches the declared lines. The mix is identical to A5's (same script, inputs and printed timings).
+- **Upscale review (frames viewed at 1:1 on the 1080-wide master):**
+  - ByteDance 2k "ugc": faces true, hard edges sharper, but the foliage turns into a painted, posterised texture (worst on the hook's tree line against the sunset). **Rejected.**
+  - Topaz 2160p: natural trees, sharper furniture, fence and people than A5. The musician and the close guest keep their real features, with nothing invented. **Used.** See [`A6-upscaler-compare-hook.jpg`](A6-upscaler-compare-hook.jpg) (A5 Lanczos | ByteDance | Topaz) and [`A6-hook-A5-vs-A6.jpg`](A6-hook-A5-vs-A6.jpg).
+- **Framing:** the hook keeps A5's left-anchored 1.22× punch-in (one resample from the upscale). The West Lake golfer stays out of frame.
+- **Frames viewed:** [`A6-frames.jpg`](A6-frames.jpg) (1.5, 4.0, 8.0, 12.6, 14.2, 16.0, 17.0, 18.8 s; tiled in name order). Supers, panel, end shot and card match A5.
+- **Upload:** PUT 200; re-downloaded MD5 equals the render.
+
+## A5 (`b3b109ec64adf73b8f77040c07cd84c5`) — superseded by A6
+Harness OVERALL PASS (20.00 s), −14.2 LUFS, true peak −1.2 dBFS. ASR on the master found every line in order: the list 4.8–11.9 s · "Bring your people, enjoy the moment" 12.7–14.4 s · "Let TripNerd handle the details" 15.2–16.8 s · "All done with TripNerd" 17.7–19.0 s (no caption, as asked).
+
+## A4 (`7c406481dbf56a63f188fca12565e583`) — superseded by A5/A6
 Harness `servicepow_qc.py` (MD5 `321ef0b7…`, written into a reset sandbox as source and hash-verified), `--master --aspect 9:16 --duration 18.12 --endcard 2.5`:
 **OVERALL PASS.**
 
