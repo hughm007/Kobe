@@ -1677,3 +1677,10 @@ quality gate, claims and brand law after the commit.
 - **QC:** harness FAIL on the thread's holds (design, APPROVER's acceptance needed) and on the flash-cut row (frame-check PASS: real cuts 10.6/12.95/13.37/16.77, shortest 0.42 s); everything else PASS; −14.01 LUFS / −0.99 dBTP; speech 0. Frames checked at native on all four edges of the generated shots before the packet was written. Master MD5 and links in the record; the dual gate launched on the frozen master.
 - **Learning (recorded):** never describe a generated clip from a contact sheet; check native crops on all four frame edges, and compare against what the still contains before claiming anything was removed.
 - **Open:** owner review of v6.1; the freeze-row acceptance; the venue-evoking look (clear or genericise); the phone-look call; TripNerd's approver; the AI label at posting; the bio-link parity check. Nothing posted.
+
+## 2026-10-07 — TripNerd "The thread" v7 (owner's v7 notes)
+- Thread rebuilt to real phone behaviour (pinned messages, dots morph in place, typed-and-sent message), 8.0 s; "Scenes dramatized" removed (disclosure moves to the platform toggle and caption; no EU targeting without a label).
+- New shots: drone descent to behind the guests (Kling 3.0 pro); the orbit take was rejected on realism. Turn-and-toast with a plain cup (Kling 3.0 pro, own voice). Line changed to "Told you we'd make it." because "Thanks to TripNerd" from a generated guest is a synthetic endorsement.
+- Host voice clone blocked by the session permission check (biometric data); owner decision. Seedance preflight and further turn takes also blocked; not retried.
+- Spend 41.75 credits (measured). Master `b99e998d…`, link and gate in `clients/tripnerd/campaigns/2026-10-06-the-thread/build-v7.md`.
+- Learning: generated wardrobe carries marks beyond the obvious one (cap badge found first, sleeve marks only on a deliberate native check of the whole garment). Check every garment edge to edge before writing the packet.
