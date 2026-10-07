@@ -1729,3 +1729,10 @@ quality gate, claims and brand law after the commit.
   - **Not yet run:** the isolated Skeptic and critic on the frozen master.
 
   Nothing posted.
+- **Reel cover (same day, later).** The owner's draft cover was rebuilt from source, not sharpened:
+  - **Source frame:** the ad's first frame (V19 2.4 s), matched by correlation (0.99), taken from the Topaz upscale and graded.
+  - **Type and logo:** type re-set at 2×; the real logo placed on its brand-blue pill.
+  - **Fits every Instagram crop:** all text and the logo sit inside the 1080×1350 safe block, so nothing is cut off in the 9:16, 4:5 or 3:4 grid crops.
+  - **Subline:** recommended as "Homes. Hospitality. Concierge." "Suites" is not an Augusta product.
+  - **Delivered:** both versions, as PNG links and JPEGs in `deliverables/`.
+  - **Spend:** 0 credits.
