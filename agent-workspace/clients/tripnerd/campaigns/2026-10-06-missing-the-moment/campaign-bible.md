@@ -649,4 +649,118 @@ One further Kling charge of 12.5 at 01:42:48Z matches no generation call in this
 - Synthesized music unauditioned.
 - AI disclosure ON at upload.
 
-**Status:** owner review. Dual gate running on the locked master; results are appended below when complete. NOT CLIENT READY until both gates and the APPROVER human watch clear.
+**Status:** superseded by v9.1 (below) after the dual gate blocked v9.
+
+### v9 dual gate (run `wf_b353dfc5-571`: isolated Skeptic on a clean packet, Critic cold, adversarial verifier per report)
+
+**SKEPTIC Pass 3: BLOCK.**
+
+S4:
+- Rope-side front-row guests plus "Be there for the moment." imply the unsupported "right-on-the-ropes view" and cut against the FAQ (first come, first served).
+
+S3 findings:
+- Tournament putt under "Course passes" implies the passes cover competition rounds.
+- Model-painted TripNerd marks on the badge cards (BC-21).
+- Branded lanyards and credential unconfirmed by the client.
+- "Players" (PGA TOUR mark) in the copy.
+- Augusta word and trade-dress check open.
+- "iMessage" wordmark and iOS chrome in the chat.
+- Every chat bubble at 71–88% of frame height (BC-28).
+- Five "Golf Boys" in the chat, but one man and two women in the payoff.
+- Performed emotion at readable distance (realism §4).
+- BC-19 cannot run (no landing page).
+
+S2 findings:
+- Flag mismatch between shots.
+- Impossible camera positions and an empty near side of the green.
+- Weakest 2s: the static telephoto roll at 7–9s.
+- Thin first 3s.
+- Logo-swap risk.
+- Short end-card read time.
+- BC-16 has no EV ids.
+- BC-18 not set.
+
+S1 findings:
+- Whip-pans showing stacked ghost frames.
+- Golfer reaching short of the cup.
+- Composite ball sharper than the grass.
+
+**CRITIC: HARD FAIL.** ServicePow-6 is 6.7 ± 1.5, with hook and format fit at 6. AI-artifact risk 5/10.
+- Hard failures: row 5 (model-painted lanyard marks) and row 10 (chat cast ≠ payoff cast).
+- Registry: BC-16, BC-18, BC-19, BC-20, BC-21, BC-24, BC-25 and BC-28 open or failing.
+
+**Verifier:** confirmed nearly every blocking item. It also found continuity misses neither gate caught:
+- the blonde's skirt becomes shorts within the one take;
+- the man's trousers go grey → beige.
+
+Two items were softened:
+- the "no Players package" part, refuted by the workspace;
+- the BC-41 constant-speed claim: the ball does slow about 27% into the cup.
+
+**Campaign Director ruling:** run a repair round (v9.1) on everything that is ours to fix. Items that need the owner, client or legal are listed for decision, not worked around.
+
+---
+
+## v9.1: gate repair round (2026-10-07)
+
+**Zero-spend fixes:**
+- **Chat** (`v9.1/chat-animation.py`):
+  - Top-anchored thread, so all text sits within 23–69.5% of frame height (BC-28).
+  - No "iMessage" placeholder and no "9:41" (status icons only).
+  - Cast now matches the payoff: the group is "Golf Crew ⛳" with Jess and Kate, and "me" is the man.
+  - "Players" removed; the hook is now "Alright, serious question… are we actually doing Augusta this year?".
+  - The hook is on screen from 0.15s.
+  - This changes the owner's chat copy and is flagged in the owner delivery note (reversible to the v9 copy).
+- **Putt** (`v9.1/putt-drop-composite.py`): soft contact shadow under the rolling ball, and the sprite softened to match the grass.
+- **Edit** (`v9.1/assemble-v9.1.sh`):
+  - golf shot from 1.25s for 3.75s, trimming the static early roll (weakest 2s); the drop lands at 9.4s;
+  - golf graded warmer to match the celebration light;
+  - directional-blur whip-pans instead of a tmix ghost stack;
+  - end card held 2.8s (was 2.3s);
+  - limiter set to 0.83 for true peak ≤ −1 dBTP.
+
+**Regeneration fixes (spend under the owner's standing no-cap authorization):**
+- **Start keyframe** (`v9.1/start-keyframe-logo-removal.py` → media 00083703): the composited logos are removed from the badge cards and cap. The video model re-paints any mark soft, and §1 allows only the real file locked sharp, so the cards and cap are now plain.
+- **End keyframe** (nano_banana_2_1 edit of ce0e0c8e → job 32525725, verified to within a ~4px shift of the original):
+  - blonde guest in a short navy skirt (matching the front);
+  - man in light grey trousers (matching the front);
+  - rectangular yellow flag on a white flagstick (matching the golf clip).
+  - No lettering on the caddie, bag or flag.
+- **Camera move:** Seedance 2.5 renders 87f7ea86 and a2d2ae89.
+  - **Chosen: 87f7ea86 ("s1").** Continuous (0.1s checks and flow residual), plain cards and cap, consistent wardrobe front and back, and varied clapping before the arms go up.
+  - a2d2ae89 rejected: a stray golf bag appears beside the chairs in the aerial.
+  - Window 0.69–7.04s, ending on the golfer bending at the cup with the caddie waiting by the bag.
+
+**Timeline (19.0s):**
+
+| Time | Shot |
+|---|---|
+| 0–6.7 | chat |
+| 6.4 | whip-pan |
+| 6.4–10.15 | golf (drop 9.4) |
+| 9.85 | whip-pan |
+| 9.85–16.2 | celebration move |
+| 16.2–19.0 | end card |
+
+**Master:** https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/0e6dd608-6a01-42ac-8745-cf864276e574.mp4
+- md5 011a3f74ab982b5768ba0a0d15887aeb
+- 19.0s, 570 frames, 1080×1920, 30fps, −14.6 LUFS, −1.3 dBTP
+
+**Build incident (recorded):**
+- The sandbox was reset mid-round, and all working media was rebuilt from the repo scripts and source URLs.
+- Golf md5 matches; tracking reproduced exactly; asset byte sizes match.
+- A first rebuild set the golf slot to 4.0s, which overran the clip (3.53s available) and truncated the video at 9.93s.
+- It was caught by a frame-count probe before upload and fixed by re-balancing the golf and celebration slots.
+
+**Spend (v9.1, live ledger):** 174 credits (nano_banana_2_1 2 × 3, Seedance 2.5 2 × 84).
+
+**Still owner/client/legal (cannot be fixed in the edit):**
+- Ropeside front-row implication (S4) vs the FAQ: needs a CLIENT_APPROVER ruling or a restage a row back.
+- Augusta word, end-card eyebrow and Masters-like trade dress (white coveralls, azaleas): legal check.
+- Whether TripNerd issues lanyards or credentials.
+- "Book now" landing page (BC-19).
+- AI disclosure toggle at upload (BC-18).
+- Owner override of the realism §4 ban on readable-distance celebration: the owner directed clapping and cheering.
+- APPROVER human watch with sound (BC-25).
+
+**Status:** v9.1 dual gate running (`wf_86720eba-05a`); results are appended when complete. NOT CLIENT READY.
