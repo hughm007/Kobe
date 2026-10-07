@@ -763,4 +763,56 @@ Two items were softened:
 - Owner override of the realism §4 ban on readable-distance celebration: the owner directed clapping and cheering.
 - APPROVER human watch with sound (BC-25).
 
-**Status:** v9.1 dual gate running (`wf_86720eba-05a`); results are appended when complete. NOT CLIENT READY.
+**Status:** see the v9.1 dual-gate result below.
+
+### v9.1 dual gate (run `wf_86720eba-05a`: fresh isolated Skeptic on a new clean packet, Critic cold, adversarial verifier per report)
+
+**Cleared by the repair.** None of these are raised any more:
+- chat UI (BC-28 checked and passing: all text 21–70%);
+- "iMessage";
+- the "Players" mark;
+- the cast mismatch;
+- model-painted marks (no marks outside the real end-card logo);
+- the wardrobe drift;
+- the whip ghosting.
+
+**SKEPTIC Pass 3: BLOCK.**
+- S4: ropeside front-row implication vs the FAQ (verifier: PARTLY).
+- S4: Augusta word and trade dress, rights open (BC-20).
+- S3: performed emotion at readable distance, 10.4–12.6s (owner-directed; needs an APPROVER waiver or a restage).
+- S3: BC-19 has no landing page.
+- S2s:
+  - lanyards imply TripNerd credentials;
+  - the home and hospitality are never shown;
+  - putt vs celebration light;
+  - static opening;
+  - near-silent CTA tail;
+  - waxy front-facing faces.
+- S1s:
+  - "Delivered" lands at 6.35s, just before the whip;
+  - ball shadow subtle;
+  - drone-height move;
+  - bag position;
+  - EV ids;
+  - BC-18.
+
+**CRITIC: HARD FAIL**, with no semantic hard failures at major level.
+- ServicePow-6 is 7.0 ± 1.5 (up from 6.7), with "doesn't look AI" at 6.
+- Blocks: BC-16 (ropeside implication, no EV ids), BC-18, BC-19, BC-20, BC-25, and missing machine-harness receipts.
+
+**Campaign Director ruling:** everything still blocking is an owner, client or legal decision, a concept-level restage, or an unrun human or harness gate. No further edit-level repair would clear the gate.
+
+Decisions needed:
+1. **CLIENT_APPROVER:** may guests be shown at the rope? If not, restage them inside a mixed crowd, a row back, without matching lanyards.
+2. **Legal:** clear "Augusta" and the trade dress.
+3. **APPROVER:** waive the realism §4 performed-emotion ban for the owner-directed clapping, or restage it wider and smaller.
+4. **Landing page** for "Book now".
+5. **Disclosure toggle** at upload.
+6. **Human watch** with sound.
+
+**Optional craft upgrades with spend:**
+- show the home and hospitality;
+- match the putt-shot light to the celebration;
+- add an audio sting under the CTA.
+
+**Status:** owner review. NOT CLIENT READY.
