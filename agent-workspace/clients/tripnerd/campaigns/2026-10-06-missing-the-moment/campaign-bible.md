@@ -569,3 +569,84 @@ Weakest 2s: 0.0–2.0. Registry receipts missing.
 - **Audio:** not human-auditioned (QA was by meters only); the synthesized music needs a listen.
 
 **Status:** owner first-artifact review. Dual gate runs on the locked cut. NOT CLIENT READY.
+
+---
+
+## v9: 6.7s chat, 19.0s, putt holes, walk-and-bend ending (2026-10-07)
+
+**Owner direction:**
+- Typing opening of about 6–7s.
+- End the ad at 19s.
+- Replace the golfer/caddie hug: the golfer walks to the hole and bends down to get his ball. The pickup itself need not be shown.
+- End card right after.
+- The caddie waits patiently or claps (director's call: waits by the bag).
+
+**Changes:**
+- **Chat** (`v9/chat-animation.py`):
+  - runs 6.7s, with an animated typing indicator before each friend's bubble;
+  - "TripNerd. Booked." lands at 5.90s and the music enters on it.
+- **Putt drop** (`v9/putt-drop-composite.py`, `v9/golf-track.py`):
+  - In the owner's golf clip the ball stopped about 1 m past the cup. That contradicts a golfer retrieving it from the hole, so it was a story-logic fix.
+  - The ball path is re-composited from frame 56 into the cup at frame 102:
+    - cup tracked by template match;
+    - original ball removed with a camera-aligned temporal fill;
+    - real ball sprite re-pasted on a smooth break;
+    - 3-frame sink into the cup.
+  - Drop at 9.65s, with a cup-rattle SFX and the roar peaking on it.
+- **Golf framing:** 9:16 crop tracking flag + ball (centre held on the flag after the drop).
+- **End frame for the camera move:**
+  - Built from nano_banana_2_1 edits of the behind-view still 8a359df0: golfer bent at the cup (6dfc22f3), then yellow flag + plain white caddie cap (397e66c3).
+  - Local cleanup of pseudo-text and pseudo-emblem → 4cbc4ce9.
+  - Outfit continuity: the blonde guest's navy skirt is matched front-to-back by a local pixel recolour → ce0e0c8e. The nano attempt 70a94b27 re-composed the frame and hid the golfer, so it was rejected.
+- **Camera move, round 1** (start bd85d79c, end 4cbc4ce9): Seedance 32d96ac9, Seedance 4d7fa8b2, Kling a1afdaec.
+  - 32d96ac9 rejected: hidden hard cut at 2.2→2.3s.
+  - 4d7fa8b2 was the interim pick, but the blonde's navy skirt becomes white trousers from behind.
+- **Camera move, round 2** (end ce0e0c8e): Seedance 1c7b4e71 and 1f5ead42.
+  - Both fix the outfit continuity; neither has a hidden cut (0.1s frame checks plus motion-compensated frame differencing).
+  - **Chosen: 1c7b4e71.** Its front section has smiling, natural applause, where 1f5ead42's guests look down.
+  - Walk-and-bend runs about 5.3–7.0s inside the render.
+
+**Assembly** (`v9/assemble-v9.sh r1.mp4 0.44`):
+
+| Time | Shot |
+|---|---|
+| 0–6.7 | chat |
+| 6.4 | whip-pan |
+| 6.4–10.4 | golf (drop 9.65) |
+| 10.1 | whip-pan |
+| 10.1–16.7 | celebration move, ending on the golfer bending at the cup |
+| 16.7–19.0 | end card (real logo file; "Book now") |
+
+- Audio: chat blips; original 140 BPM synth bed from 5.9s, ducked under the golf; roar building to the drop; celebration crowd; final hit at the card.
+- Loudness: two-pass fixed gain to −14.6 LUFS, −1.0 dBTP.
+
+**Master:** https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/c79d6264-9900-4a08-b04d-02fa4ab9cbf4.mp4
+- md5 034754aa902afafc4ff5fcc37cf84e5c
+- 19.0s, 1080×1920, 30fps, −14.6 LUFS, −1.0 dBTP
+
+**QA (frames and meters; NOT human-auditioned):**
+- Chat legible.
+- Putt drops cleanly at the lip (full-res crop).
+- Faces and hands clean.
+- Behind-view order man–blonde–ponytail (correct 180°).
+- Flag yellow throughout.
+- Only the golfer and caddie on the green.
+- RMS: chat −31…−45 dBFS; music entry −13; golf −17 → −9 at the drop; celebration −10…−15; end-card decay to −49.
+
+**Spend (v9 window, from the live transaction ledger):** 376 credits match this session's generation calls:
+- Seedance 4 × 84 = 336
+- Kling 25
+- Nano 5 × 3 = 15
+
+One further Kling charge of 12.5 at 01:42:48Z matches no generation call in this session.
+
+**Open risks (owner/legal):**
+- "Augusta" and "Players" named in the chat; THE PLAYERS is a PGA TOUR mark.
+- Caddie white coveralls read as Masters trade dress.
+- End-card eyebrow "THE AUGUSTA EXPERIENCE".
+- Implied ropeside vantage.
+- Soft badge logos.
+- Synthesized music unauditioned.
+- AI disclosure ON at upload.
+
+**Status:** owner review. Dual gate running on the locked master; results are appended below when complete. NOT CLIENT READY until both gates and the APPROVER human watch clear.
