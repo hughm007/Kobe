@@ -12,6 +12,11 @@ tags: [shot-manifest, routing, real-footage, seedance, augusta]
 
 # Shot manifest — 15.0 s, 9:16, 1080×1920, 30 fps
 
+**v3 timing (current):** hook 0–3.0 · house 3.0–5.5 · list 5.5–10.95 (veranda stretched 1.14× to fill it) · V25 10.95–13.0 · lockup 13.0–15.0.
+Audio: original music bed (`build/music.py`) throughout, ducked 9 dB under the voice; voice = Seed Audio "Miles" (`d6217608`, atempo 1.04) reading
+"With TripNerd, enjoy course access, private executive accommodations, daily hospitality, and concierge support." at 5.5–10.83 s;
+ticks at 6.32 / 7.24 / 8.74 / 9.78 s (on the words). B3 has no on-screen AI label. The table below is the v1/v2 timing.
+
 Beat times are the centres of 0.25 s crossfades. Supers are composited (Pillow, Montserrat ExtraBold/SemiBold; build script [`build/assemble.py`](build/assemble.py)).
 
 | # | Time | Picture | Source (route) | Super | Motion |

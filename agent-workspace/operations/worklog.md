@@ -1656,3 +1656,12 @@ quality gate, claims and brand law after the commit.
 - **Spend:** 172 credits (two 2-credit upscales, Seedance 48 + 60 + 60; one veranda take rejected for an invented foreground pillar). Other spends in the same window (Seedance −60/−96, Kling −25, Nano Banana −3) are the owner's other session.
 - **QC:** QA1 picture rows all PASS on A2 and B1; the audio row FAILs by declaration (silent master) — BC-05 OPEN until music or a real VO. QA2 caught a golfer on West Lake's fairway in A1's first half-second under the Augusta line → A2 (1.22× punch-in) supersedes A1.
 - **Open:** Karl's review of A2/B1; audio choice; TripNerd's written OK on the four lines and the venue; the musician's consent; the house photo being a home TripNerd books; the dual gate (isolated Skeptic + critic) on the masters frozen after Karl's notes. Nothing posted.
+
+## 2026-10-07 (morning) — TripNerd "Augusta, handled" v3: music, a voice on the list, no opening label (owner's notes)
+- **Ask (Karl):** add music and someone speaking when the list pops up; remove the "AI-generated" tag at the start; give the advert back. The tag only existed on B, so B3 is the advert; A3 gets the same audio.
+- **Voice:** Higgsfield Seed Audio "Miles" reading Karl's line verbatim (2 takes, 0.8 credits each; the +10 take used at atempo 1.04). Karl chose this over his own recording, knowingly departing from TripNerd's "AI never creates a voice" rule — TripNerd's OK is a posting condition.
+- **Music:** an original bed composed in code (`build/music.py`) — Higgsfield has no music model for ads, Instagram's library isn't cleared for paid ads, free libraries carry Content ID risk.
+- **QC:** harness OVERALL PASS on B3 and A3 (−13.7 LUFS / −1.0 dBTP); BC-26 music bed has no words; BC-27 transcript matches the line; ticks land on the spoken words; B3's opening has no label and the generated flag is plain yellow at full resolution.
+- **Tooling:** the Higgsfield sandbox now resets between idle calls — keep a background `sleep` running as a lease while staging files across calls; the QC harness was re-staged in three pieces and hash-verified (`321ef0b7…`).
+- **Spend:** 1.6 credits this round; build total 173.6.
+- **Open:** Karl's listen; TripNerd's OK on the AI voice, B's generated crowd and the four lines; Meta's AI label on at posting; the dual gate on the frozen master. Nothing posted.
