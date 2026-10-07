@@ -12,7 +12,48 @@ tags: [qa1, machine-qc]
 
 # QA1 — machine harness
 
-## v3 (B3 `5d3b4f7e…`, A3 `d65b9adb…`) — current
+## A4 (`7c406481dbf56a63f188fca12565e583`) — current
+Harness `servicepow_qc.py` (MD5 `321ef0b7…`, written into a reset sandbox as source and hash-verified), `--master --aspect 9:16 --duration 18.12 --endcard 2.5`:
+**OVERALL PASS.**
+
+| Row | Result |
+|---|---|
+| resolution | 1080×1920 |
+| fps | 30.000 |
+| pix_fmt | yuv420p |
+| audio | 48 kHz / 2 ch |
+| peak / mean | −1.0 dB peak, −16.1 dB mean |
+| frozen sections | none |
+| black sections | none |
+| motion | 11.93 px/frame |
+| hook motion | 9.96 (in `qc/harness.txt` of the first render; same picture) |
+| flash cuts | 1 detected cut, no shot under 0.4 s |
+| aspect | PASS |
+| duration | 18.13 s against 18.12 declared |
+
+- **Loudness (ffmpeg ebur128 on the encoded file):** −14.0 LUFS integrated, true peak −0.9 dBFS, LRA 7.5 LU. The WAV mix measured −14.21 LUFS / −1.20 dBTP; AAC adds about 0.3 dB. BC-05 (integrated loudness within the declared −14 target) PASS. Our own −1 dBTP production target is missed by 0.1 dB on the encoded file, recorded as is.
+- **BC-26 (bed speech-free):** faster-whisper base.en, VAD off, on `out/music4.wav` (the Mixkit bed as mixed). One segment, the token "MUSIC" (no_speech 0.20, logprob −1.18); no confident speech. PASS.
+- **BC-27 (speech matches the declared line):** the edited voice reads "With trip nerd, enjoy course access, private executive accommodations, daily hospitality, and concierge support." It matches the owner's line; the ASR spells the brand phonetically. PASS.
+- **Sync:**
+  - the voice runs 5.50–10.85 s and the panel holds to 10.85 s;
+  - the ticks land on the spoken words (6.38 / 7.38 / 8.86 / 9.96 s);
+  - the music's drop lands on the cut into the end shot: mix RMS −20 dB at 12.9 s, then −8 dB at 13.0 s.
+- **Centring (from `endclip.json`):** the 9:16 window holds the flagstick at 0.50 of frame width from the moment the flag is in view. It eases from 1.0× to 1.4× and the cup ends at 75 % of frame height. At the cut (source 2.62 s) the ball sits beside the cup.
+- **Flag emblem (BC-21 / trade dress):** the cleaned 4k source `A4k_clean3` (`eb69e0bf…`) was checked on all 59 frames where the flag is in view, at native resolution (sheets `fl_f3_*`). No emblem is visible. Frames 24–27 keep a few-pixel dark dash at a fold crease, which does not read as a mark.
+- **Frames viewed:**
+  - [`A4-frames.jpg`](A4-frames.jpg): 1.0, 4.0, 7.7, 10.0, 11.8, 14.2, 15.4, 17.7 s;
+  - [`A4-endshot-frames.jpg`](A4-endshot-frames.jpg): 13.1–15.9 s;
+  - [`A4-card-frames.jpg`](A4-card-frames.jpg): 15.7–18.0 s;
+  - the 2 fps contact sheet.
+- **BC-28 (safe area):** all burned text sits between 18 % and 65 % of frame height (supers at 24–36 %, the checklist panel 18–55 %, the card's text 36–65 %).
+- **Not run:** BC-15 OCR (no tesseract in the sandbox; supers verified by eye in the frame strips).
+
+## Correction to v3 (recorded 2026-10-07, A4 build)
+The v3 line "B3 frames 0.2 / 1.0 / 2.0 / 2.8 s … full-resolution flag crops: plain yellow, no emblem" **was wrong**. Clip A's flag carries a generated, tournament-style outline emblem (a map-and-flag drawing) from about source 1.5 to 1.7 s, and fainter on neighbouring frames. B3's hook uses raw clip A 0.7–3.8 s, so it contains the emblem. The Thread v3 gate had already upheld this as S4 (`origin/claude/brave-mendel-0vxkwj`, the-thread/build-v3.md). The 1080p frame crops at four sample times missed it.
+
+**B3 is withdrawn: do not post.** Any rebuild of B takes its hook from the cleaned 4k clip.
+
+## v3 (B3 `5d3b4f7e…`, A3 `d65b9adb…`) — superseded by A4
 Same harness (MD5 `321ef0b7…`, re-staged in a reset sandbox and hash-verified), `--master --aspect 9:16 --duration 15 --endcard 2.0`:
 **OVERALL PASS on both.** resolution 1080×1920 · fps 30.000 · yuv420p · audio 48 kHz / 2 ch · peak −1.0 dB, mean −16.9 dB ·
 no frozen sections · no black sections · motion 7.44 (B3) / 7.83 (A3) px/frame · hook motion 9.83 / 9.96 · 0 flash cuts ·

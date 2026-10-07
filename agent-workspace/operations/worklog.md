@@ -1665,3 +1665,35 @@ quality gate, claims and brand law after the commit.
 - **Tooling:** the Higgsfield sandbox now resets between idle calls — keep a background `sleep` running as a lease while staging files across calls; the QC harness was re-staged in three pieces and hash-verified (`321ef0b7…`).
 - **Spend:** 1.6 credits this round; build total 173.6.
 - **Open:** Karl's listen; TripNerd's OK on the AI voice, B's generated crowd and the four lines; Meta's AI label on at posting; the dual gate on the frozen master. Nothing posted.
+
+## 2026-10-07 (afternoon) — TripNerd "Augusta, handled" A4: the real-footage advert with the owner's five notes
+- **Ask (Karl), on A3:**
+  - add his ball-landing clip at the end, centred;
+  - use better music, legally clear, in the style of the niche's popular Reels;
+  - use TripNerd's client-approved end card;
+  - use the voice of the AI host from the client-approved hosting spot for the list ("same voice, use all of it").
+- **Built A4 (18.12 s):** the A3 body, then a hard cut on the music's drop to clip A at 4k. The 9:16 window follows the flagstick and ball and settles with the cup centred at 75 % height, under "Let TripNerd handle the details." Then a hard cut on the beat to TripNerd's camera-roll end card (ported from the approved renderer).
+- **Music:** the niche's longest-running video ads, measured, use instrumental beds in two families: upbeat ~117–136 BPM (the golf-trip leader) and cinematic ~78–89. Pick: Mixkit #470 "Golden Storm"; its licence names social posts and online ads, with no attribution.
+  - Evidence: `clients/tripnerd/campaigns/2026-10-07-augusta-handled/qc/music-licence.md`.
+  - Research: `clients/tripnerd/marketing-plan/2026-10-07-niche-reel-music-research.md`.
+- **Voice:** the host's speech was cut from the hosting spot and separated with Demucs (Adobe's enhancer could not be polled from this client). Seed Audio reads the line from that audio reference. Saving the clone was refused (voice slots full); nothing was deleted.
+- **Found and fixed:**
+  - Clip A's flag carries a generated tournament-style emblem. The committed paint-out (`flagfix2`) left visible outlines on this upscale; `flagfix3` removes it, checked on all 59 flag frames at native 4k.
+  - **B3, delivered this morning, contains the emblem.** The v3 QA1 line was wrong; it is corrected, and B3 is withdrawn.
+- **QC:**
+  - harness OVERALL PASS;
+  - −14.0 LUFS (true peak −0.9 dBFS after AAC; the WAV mix −1.2);
+  - BC-26 bed speech-free; BC-27 voice matches the line;
+  - final upload byte-verified (MD5 `7c406481…`).
+- **Spend:** 2.0 credits (4k upscale and two voice takes); build total 175.6 of 400.
+- **Tooling:** the sandbox reset three times. The fix is one `background:true` pipeline that persists results as it goes (learning filed and indexed).
+- **Open:**
+  - Karl's watch and listen;
+  - TripNerd's OK on the AI voice and the generated gallery (their agreed rule);
+  - the owner's call on the venue look and the green tops;
+  - "Now booking 2027" for Augusta;
+  - the musician's consent and the house photo;
+  - Meta's AI label at posting;
+  - the isolated Skeptic and critic on the frozen master.
+
+  Nothing posted.

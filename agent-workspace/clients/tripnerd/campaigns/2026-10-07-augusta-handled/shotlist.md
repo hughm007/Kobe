@@ -12,7 +12,18 @@ tags: [shot-manifest, routing, real-footage, seedance, augusta]
 
 # Shot manifest — 15.0 s, 9:16, 1080×1920, 30 fps
 
-**v3 timing (current):** hook 0–3.0 · house 3.0–5.5 · list 5.5–10.95 (veranda stretched 1.14× to fill it) · V25 10.95–13.0 · lockup 13.0–15.0.
+## A4 (current): 18.12 s
+| # | Time | Picture (route) | Super / sound |
+|---|---|---|---|
+| 1 | 0.0–3.0 | V19 hook, as A3 (REAL-ASSET) | "Augusta is the bucket-list moment." · Golden Storm groove (track from 2.11 s) |
+| 2 | 3.0–5.5 | House push-in, as A3 (REFERENCE-GROUNDED) | "Planning it shouldn't be the hard part." |
+| 3 | 5.5–10.95 | Veranda + checklist, as A3 (REFERENCE-GROUNDED) | Voice (the hosting-spot host's, Seed Audio `505d1f23`) 5.50–10.85; ticks 6.38 / 7.38 / 8.86 / 9.96; music ducked 9 dB |
+| 4 | 10.95–13.0 | V25, as A3 (REAL-ASSET) | "Bring your people." → "Enjoy the moment." |
+| 5 | 13.0–15.62 (hard cut on the drop) | Owner's clip A (Seedance `adac6b4d`), re-upscaled to 4k (`a852db04`), flag cleaned (`flagfix3`) and gallery cleaned (`gallfix`). Source 0–2.62 s: the whip-tilt down from the pines, the flag, the ball rolling in to sit beside the cup. 9:16 window centred on the flagstick, easing 1.0→1.4×, cup at 75 % height (`endclip.py`) (owner's GENERATE clip) | "Let TripNerd handle the details." 13.3–15.58 · the track's drop at 13.0 |
+| 6 | 15.62–18.12 (hard cut on the beat) | TripNerd's approved camera-roll card (`card.py`): blue gradient slides up over the end shot, real logo `46ae277a`, "Now booking 2027", "Talk to a Nerd" pill with the tap, tripnerd.com (COMPOSITE) | the card's whoosh, kick (on the beat), tap; music fades over the last 0.6 s |
+
+## v3 timing (superseded by A4)
+**v3 timing:** hook 0–3.0 · house 3.0–5.5 · list 5.5–10.95 (veranda stretched 1.14× to fill it) · V25 10.95–13.0 · lockup 13.0–15.0.
 Audio: original music bed (`build/music.py`) throughout, ducked 9 dB under the voice; voice = Seed Audio "Miles" (`d6217608`, atempo 1.04) reading
 "With TripNerd, enjoy course access, private executive accommodations, daily hospitality, and concierge support." at 5.5–10.83 s;
 ticks at 6.32 / 7.24 / 8.74 / 9.78 s (on the words). B3 has no on-screen AI label. The table below is the v1/v2 timing.

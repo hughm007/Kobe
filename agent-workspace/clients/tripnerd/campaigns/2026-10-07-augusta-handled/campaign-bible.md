@@ -18,7 +18,7 @@ current family (The thread v2, 2026-10-06); variant A is real-footage lane with 
 Variant B (the owner's generated clip as the hook) would be FULL by doctrine (generated people), so it
 is built as a **held** variant only and is not postable without the extra approvals in §Decision log.
 
-LANE: A realistic   FORMAT: 15.0 s · 9:16 · 1080×1920 · 30 fps · Instagram Reels / Meta placements · v3: original music + AI voice on the list (−14 LUFS)
+LANE: A realistic (A4 adds the owner's generated end shot)   FORMAT: A4 18.12 s · 9:16 · 1080×1920 · 30 fps · Instagram Reels / Meta placements · Mixkit "Golden Storm" bed + the hosting-spot host's voice on the list (−14 LUFS) · TripNerd's camera-roll end card (v3: 15.0 s, original music, Seed Audio "Miles")
 
 CLIENT TRUTH (read, not assumed):
 - [`../../client-brief.md`](../../client-brief.md), [`../../brand-guide.md`](../../brand-guide.md) (typeface fields blank; approved TripNerd lockups use Montserrat)
@@ -47,24 +47,26 @@ four inclusions ticking in over TripNerd's veranda → real guests and live musi
 BEAT MAP / SHOT MANIFEST: [`shotlist.md`](shotlist.md)
 ROUTING RECORD: in [`shotlist.md`](shotlist.md) §Routing (REAL-ASSET ×3, REFERENCE-GROUNDED ×2, COMPOSITE text/lockup; variant B hook = owner's GENERATE clip)
 
-GATES RUN: preflight ☑ · QA1 ☑ v3 OVERALL PASS on B3 and A3, BC-26 and BC-27 PASS (see [`qc/qa1.md`](qc/qa1.md)) · QA2 ☑ A2 PASS with two confirmations open, B1 HOLD (see [`qc/qa2.md`](qc/qa2.md)) · Skeptic (isolated) ☐ · Critic scorecard ☐ — the dual gate runs once, on the masters frozen after the owner's notes (first-artifact rule)
+GATES RUN: preflight ☑ · QA1 ☑ A4 OVERALL PASS, BC-05/26/27 PASS, flag-emblem check on every flag frame at native 4k (see [`qc/qa1.md`](qc/qa1.md); the v3 "no emblem" line on B3 corrected there) · QA2 ☑ A4 HOLD for posting (generated gallery, venue look, AI voice; see [`qc/qa2.md`](qc/qa2.md)) · Skeptic (isolated) ☐ · Critic scorecard ☐ — the dual gate runs once, on the master the owner freezes (first-artifact rule)
 
 APPROVALS:
 - Concept + plan + spend cap (400 credits): Karl (APPROVER, SPEND_APPROVER), 2026-10-07, by approving the plan
 - Readiness (BC-22 + BC-23): pending
-- Owner review: drafts A2/B1 reviewed 2026-10-07 (notes: add music, a voice on the list, remove B's opening label) → **B3 delivered, review pending**
+- Owner review: drafts A2/B1 reviewed 2026-10-07 (notes: add music, a voice on the list, remove B's opening label) → B3/A3 delivered → owner's notes on A3 ("the advert opening on real footage"): end on his ball-landing clip, centred; better, legally clear music in the style of the niche's popular Reels; TripNerd's client-approved end card; the voice of the AI host from the client-approved hosting spot → **A4 delivered 2026-10-07, review pending**
+- Spend: A4 used 2.0 credits (4k upscale 0.4, two Seed Audio takes); build total 175.6 of the 400 cap.
 
 LEARNINGS: captured at close; production observations so far in [`production-log.md`](production-log.md) §Observations.
 
 ## Caption (DRAFT — posts only with Karl's and TripNerd's approval)
 > Augusta is the bucket-list trip. We handle the rest: course access, a private executive home, daily
 > hospitality and concierge support. Bring your people.
-> Get the Augusta details: link in bio.
+> Talk to a Nerd: tripnerd.com (link in bio).
 >
 > TripNerd is not affiliated with, sponsored by, endorsed by, or an official partner of Augusta National,
 > Inc. or The Masters Tournament.
 
-**B3 must have Meta's AI label switched on at posting** (its hook is a generated scene and the list voice is AI) — the on-screen label was removed at the owner's request; per `_servicepow/policies/realism-and-disclosure.md` §3 the platform toggle is the disclosure mechanism (BC-18). A3 also carries the AI voice and AI-animated photos: switch the label on for it too.
+**A4 must have Meta's AI label switched on at posting.** It carries a generated green and gallery (the end shot), an AI voice cloned from the hosting spot's AI host, and AI-animated photos. The music is a licensed Mixkit track (not AI); its licence evidence is in [`qc/music-licence.md`](qc/music-licence.md).
+**B3 is withdrawn** (its hook carries the generated flag emblem; see [`qc/qa1.md`](qc/qa1.md)). Before the withdrawal, B3 also needed Meta's AI label at posting. (its hook is a generated scene and the list voice is AI) — the on-screen label was removed at the owner's request; per `_servicepow/policies/realism-and-disclosure.md` §3 the platform toggle is the disclosure mechanism (BC-18). A3 also carries the AI voice and AI-animated photos: switch the label on for it too.
 
 ## Decision log (§16)
 | Date | Decision | By |
@@ -81,13 +83,22 @@ LEARNINGS: captured at close; production observations so far in [`production-log
 | 2026-10-07 | B's on-screen "AI-generated scene" label removed (owner); disclosure moves to Meta's AI toggle at posting (policy §3) | Karl / Director |
 | 2026-10-07 | Beats retimed to hold the whole spoken line: list 5.5–10.95 s (voice 5.5–10.83 s at atempo 1.04), house 3.0–5.5, V25 10.95–13.0, lockup 13.0–15.0; ticks land on the spoken words | Director |
 | 2026-10-07 | Draft A1 superseded by A2: a golfer on West Lake's fairway sat at the right edge for ~0.5 s under the Augusta line; A2 adds a 1.22× left-anchored punch-in on the hook (no timing change) | Director (QA2 frame review) |
+| 2026-10-07 | **A4 on the owner's notes to A3.** End on his ball-landing clip (clip A, 4k), centred: the 9:16 window follows the flagstick and ball and settles with the cup centred. Music: niche research + a legally clear track, the director's pick. End card: TripNerd's client-approved camera-roll card. Voice on the list: the AI host from the client-approved hosting spot ("same voice, use all of it"). | Karl (APPROVER) |
+| 2026-10-07 | **Adding clip A moves A4 out of the "no generated people" lane.** It now carries the same holds as B (generated gallery under TripNerd's rule; the venue look; green tops in the gallery). It is the owner's call to include the clip; the holds are stated here and in the handback, not decided by the director | Director (recorded) / Karl (call) |
+| 2026-10-07 | Music = Mixkit #470 "Golden Storm" (Diego Nava), Stock Music Free License (social posts and online ads named; no attribution). It is the upbeat family the niche's longest-running golf-trip advertiser runs, and its drop lands on the cut into the end shot. Not other brands' songs, and not Instagram's trending audio (not cleared for ads). Fallback if a claim appears: the original bed (`build/music.py`) | Director (owner delegated the music call) |
+| 2026-10-07 | Voice: the host's speech was cut from the hosting spot, the music separated with Demucs (Adobe's enhancer could not be polled from this client), and the result uploaded as an audio reference. Seed Audio reads the owner's line in that voice (take 2, speech_rate +22). Saving the clone was refused: all three custom-voice slots are in use; none were deleted | Director |
+| 2026-10-07 | Clip A re-upscaled to 4k (same source and tool) because the owner's 4k file could not leave this container; then flag emblem painted out with `flagfix3` (the committed `flagfix2` left visible outlines on this upscale), then the other session's `gallfix` | Director |
+| 2026-10-07 | The end shot leaves at source 2.62 s, while the ball sits beside the cup (it never drops and then rolls away). The card cuts in on the music's beat, hard cuts on the drop and the beat, total 18.12 s | Director |
+| 2026-10-07 | B3 withdrawn: its hook carries the generated flag emblem that the v3 QA1 missed (corrected in `qc/qa1.md`) | Director |
 
 ## CONFLICTS
 None open.
 
 ## Open items
-1. **Owner review** of B3 (and A3) — links in [`production-log.md`](production-log.md) §Deliverables.
-1a. **TripNerd's written OK on the AI voice and on B's generated crowd figures** (their agreed rule), plus Meta's AI label on at posting.
+1. **Owner review** of A4 (link in [`production-log.md`](production-log.md) §Deliverables) — including a listen to the cloned voice, which is measured, not heard, by the director.
+1a. **TripNerd's written OK on the AI voice and on the end shot's generated gallery** (their agreed rule), plus Meta's AI label on at posting.
+1b. **The venue look in the end shot** (yellow flag, azaleas, pines, green chairs, green tops in the gallery): keep it as the owner's call, or genericise it. Every reviewer of The thread blocked it without a clearance.
+1c. **"Now booking 2027" on the card:** it came from the approved camera-roll card. Confirm with TripNerd that Augusta 2027 is on sale before posting.
 2. **Audio:** done in v3 (music + voice, −14 LUFS). Karl's listen is the human check (BC-25); swap the AI voice for a human take if TripNerd says no.
 3. **TripNerd's written OK** on the four inclusion lines (EV-tripnerd-007) and on the venue (setup checklist item 17).
 4. **The musician in V25 (10.4–11.4 s)** is a performer, not a guest; Jason's standing consent covers guests in TripNerd's archive — confirm it covers the performer, or swap to V25's later frames.
