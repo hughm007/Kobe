@@ -3,9 +3,9 @@ title: "TripNerd — Brand Guide"
 type: brief
 client: tripnerd
 owner: Karl
-status: prospect
+status: active
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-10-04
 tags: [client, brand, voice, design]
 ---
 
@@ -19,7 +19,19 @@ the working essentials here. If they didn't, build this from their existing mate
 mark what's inferred rather than confirmed — the distinction matters when a client
 disputes a choice later.
 
-**Source:** ☐ Client-supplied guide (location: …) ☐ Inferred from existing materials ☐ Built by us
+**Source:** ☐ Client-supplied guide (location: …) ☑ Inferred from existing materials (below, 2026-10-04) ☐ Built by us
+
+## Working voice, inferred from TripNerd's own materials (2026-10-04; INFERRED, not client-confirmed)
+
+The sections below this one are still the unfilled template (**NEEDS INPUT:** a client-supplied guide, or a session to build one). Until then, this is what their site, LinkedIn, Facebook and reviews show, and what every piece written for them has used.
+
+- **They name themselves "Nerds" and own it:** "Trip like a Nerd", "Talk to a Nerd", "NERDS in Action" (the gallery), "Kind words from happy Nerds" (the reviews page), "#spreadtheNERD" (Facebook tagline, X bio). Playful about the name, serious about the hosting.
+- **Hospitality first, event second.** The product is the handled week: the home, the suite, food and drink, the people at the check-in table. The approved line that captures it: **"Hospitality. Handled."** (the hosting spot, client-approved 2026-09-27).
+- **Plain and concrete** beats hype. Their reviews praise communication, detail and "seamless"; use those words, not superlatives.
+- **Address:** "you" and "your group"; "we" for TripNerd. US spelling.
+- **Words to avoid in anything we make** (no Evidence Record; audit §9): "#1", "100% guarantee", "VIP", "best", "ultimate", "loudest hole in golf", star ratings and review counts, years-in-business claims.
+- **Marks:** event names only to say where guests went (and only where the owner allows it); never a tournament logo, badge, broadcast or sponsor board; never "Masters" or "National".
+- **Sources:** the site crawl of 2026-09-30 (`marketing-plan/2026-09-30-online-presence-audit.md`), the review inventory (`campaigns/2026-09-30-five-more-real-footage/real-material-inventory.md`), the client brief.
 
 ---
 

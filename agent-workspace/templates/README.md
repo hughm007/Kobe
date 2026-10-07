@@ -12,6 +12,7 @@ Fill-in-the-blank starting points for documents we produce repeatedly.
 | [`campaign-brief.md`](campaign-brief.md) | Any paid campaign, before budget is committed |
 | [`creative-brief.md`](creative-brief.md) | Briefing any creative execution — ad, video, design |
 | [`content-brief.md`](content-brief.md) | Briefing a single content piece |
+| [`reel-brief.md`](reel-brief.md) | One short-form vertical video (Reel, TikTok, Short): what it does, what it looks like, how it travels, what must clear, how it is built |
 | [`website-discovery.md`](website-discovery.md) | Discovery for a website build or rebuild |
 | [`proposal.md`](proposal.md) | Client proposals |
 | [`meeting-notes.md`](meeting-notes.md) | Any client call or internal meeting |
