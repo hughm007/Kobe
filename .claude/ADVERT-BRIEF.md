@@ -31,3 +31,9 @@ replace or override any Service Pow policy or gate.
 - Flag a field that is weak, not just empty: more than one main message, a hook that does not
   match the audience, a call to action that does not serve the objective, or footage that
   cannot support the message.
+
+## Client context
+
+Before filling the brief for a client, read that client's folder in the repo root and use it.
+- TripNerd: `Tripnerd Oct Insights/` (audience data, provisional 3/10 marketing review,
+  target audience of US men aged 35 to 54, and the targeting plan).
