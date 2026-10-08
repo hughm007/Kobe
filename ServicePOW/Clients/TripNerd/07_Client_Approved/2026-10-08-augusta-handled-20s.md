@@ -33,7 +33,11 @@ tags: [assets, video, approved, augusta, real-footage]
   - A5 re-encoded at 5.3 Mb/s: 2.44 and 5.92.
 - **Full-quality A6 (17 Mb/s), the better upload if bandwidth allows:** https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/d22feed8-c96a-4d1c-b11c-0731f4284b43.mp4 (MD5 `d02414b97d91636fa2c7fdaf10f94169`).
 
-**Approval:** the owner filed this as client approved on 2026-10-08 ("put this into client approved adverts"). No score was given.
+**Approval:**
+- **Client approved by Jason (TripNerd)**, as reported by the owner on 2026-10-08.
+- **Owner score: 7.7 / 10.** Recorded as given: "I just really don't like how the house is a still image and it looks fake, but it was approved by Jason so its client approved."
+
+**Why it is a 7.7 (FACT):** shot 2 (3.0–5.3 s) is TripNerd's published "Private Executive Home" photo, animated by Seedance 2.5 as a slow push-in to the door (job `ddb843fe`). There is no TripNerd video of the house. The motion is small and the picture is a photo, so it reads as a still and as fake. The other real shots (the lawn hook, the veranda live music) and the end card were not faulted.
 
 **Build record:** [`../05_Edit_Project/2026-10-07-augusta-handled/`](../05_Edit_Project/2026-10-07-augusta-handled/)
 - Campaign Bible, production log (A1–A6), shot list, QA1/QA2.
@@ -43,4 +47,4 @@ tags: [assets, video, approved, augusta, real-footage]
 - **Meta's AI label on:** AI voice, generated gallery in the end shot.
 - **"Now booking 2027":** confirm it is accurate.
 - **The musician's consent:** confirm it.
-- **TripNerd's written OK:** if this approval is TripNerd's, it covers the AI voice, the generated gallery and the venue look. Record who approved.
+- **TripNerd's approval:** Jason approved the cut as delivered. That cut includes the AI voice, the generated end-shot gallery and the venue look. Keep a written copy, such as Jason's message, in this folder, or note where it lives.

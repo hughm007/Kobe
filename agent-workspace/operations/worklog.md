@@ -1736,3 +1736,16 @@ quality gate, claims and brand law after the commit.
   - **Subline:** recommended as "Homes. Hospitality. Concierge." "Suites" is not an Augusta product.
   - **Delivered:** both versions, as PNG links and JPEGs in `deliverables/`.
   - **Spend:** 0 credits.
+
+## 2026-10-08 — TripNerd moved to ServicePOW/Clients/TripNerd (01–08); Augusta client approved (7.7)
+- **Reorganisation:** TripNerd's 111 files now sit in the owner's 01–08 structure at `ServicePOW/Clients/TripNerd/`.
+  - Every link pointing to the moved files was rewritten. A link check finds the same 23 pre-existing broken links before and after the move, so the move broke none.
+  - Three byte-identical images were removed from the intro-video build.
+  - The legacy QC scripts in `playbooks/ads/scripts/` were kept: a gate script still runs them.
+- **Augusta, handled:** client approved by Jason (TripNerd).
+  - The owner's file is the A6 master re-encoded at 5.3 Mb/s, filed in `07_Client_Approved/`.
+  - **Owner score 7.7:** the house shot (an animated photo) "looks fake". The learning is filed.
+- **Open:**
+  - **Index pages for folders 02/03/04/06:** pending the cross-branch advert inventory.
+  - **Written copy of Jason's approval:** to be filed.
+  - **Branches:** the other sessions' branches are not merged.
