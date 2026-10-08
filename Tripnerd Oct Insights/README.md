@@ -4,6 +4,18 @@ Source: Instagram Insights, Audience tab, screenshots taken around 9:42 to 9:43 
 Window: last 30 days (Sep 6 to Oct 6, 2026). Numbers below are transcribed from the screenshots.
 Screenshot of the top-cities list was supplied separately; its capture time is not shown.
 
+## Profile (screenshot 9:41 AM CDT)
+
+| Metric | Value |
+|---|---|
+| Posts | 515 |
+| Followers | 4,650 |
+| Following | 495 |
+| Views, last 30 days | 13.9K |
+| Category | Event Planner |
+| Bio | "What sporting event is on your bucket list? Gain access to these experiences for lifelong memories!" |
+| Link | linktr.ee/tripnerd |
+
 ## Followers
 
 | Metric | Value |
@@ -70,3 +82,6 @@ Screenshot of the top-cities list was supplied separately; its capture time is n
   followers. That is a hypothesis to check, not a confirmed finding.
 - Core real audience looks like men aged 35 to 54.
 - The two best posts produced 3 follows combined in 30 days.
+- 13.9K views in 30 days on a 4,650-follower account, with a net follower loss, means views are
+  not turning into follows. The bio names no offer, price, location or booking step, and the
+  only link is a Linktree, which adds a click before any booking.
