@@ -24,7 +24,7 @@ For TripNerd's Augusta Reel (A6), we upscaled two 404×720 phone clips (a sunset
 
 **Sources:**
 - Topaz Video jobs `299ab2b2` and `c70356ed`; ByteDance jobs `66aaa88d` and `2bffad90`.
-- Comparison frame: `clients/tripnerd/campaigns/2026-10-07-augusta-handled/qc/A6-upscaler-compare-hook.jpg`.
+- Comparison frame: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-07-augusta-handled/qc/A6-upscaler-compare-hook.jpg`.
 - The production log, observation 14.
 
 ## What we think it means

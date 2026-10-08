@@ -37,7 +37,7 @@ The consequences:
 - A chair used as the foreground occlusion in three shots had no real reference at all.
 
 **Source:** the storyboard v1–v5 reference tables compared with the frames viewed full-size on 2026-09-28. Details
-are in `clients/tripnerd/campaigns/2026-09-28-ten-scripts/campaign-bible.md` §14 (fifth run, Director's finding).
+are in `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-28-ten-scripts/campaign-bible.md` §14 (fifth run, Director's finding).
 
 ## What we think it means
 

@@ -41,7 +41,7 @@ No event, venue or tournament is named. The chat is a dramatisation: no real per
 - **Sound:** V24's own audio (8.0–11.6 s as the murmur, 13.1–17.1 s as the roar); synthesised UI tones and one swoosh (sound design, as on the approved camera-roll advert); no music. Static gain + true-peak limiter: **−14.00 LUFS, −2.29 dBTP.**
 - **Type:** Montserrat (OFL). **Logo:** the real file `46ae277a`, unaltered, in the lockup. The wall graphic in photo A is TripNerd's own signage, photographed.
 - **Not used, and why:** the Drive check-in photo with the TripNerd drape (IMG_1901/1907) is in Wyatt's Drive and cannot reach the sandbox without a share change or a multi-megabyte relay; v2 can swap it in once it is in Higgsfield (the widget, or a shared link). The script called for it; the suite-wall photo took its place as the "Booked" image.
-- **Code:** [`build/`](build/) (`render_thread.py`, `assemble.py`, `cutcheck.py`), copies of the sandbox scripts.
+- **Code:** [`build/`](build) (`render_thread.py`, `assemble.py`, `cutcheck.py`), copies of the sandbox scripts.
 
 ## 4. Machine QC (servicepow_qc.py, md5 `321ef0b7…`, preflight PASS in the sandbox)
 | Row | Result |

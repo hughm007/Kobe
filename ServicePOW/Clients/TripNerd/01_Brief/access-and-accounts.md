@@ -66,7 +66,7 @@ conversation to have at the end.
 ## Offboarding checklist
 
 Run this when the engagement ends — see
-[`../../playbooks/client-lifecycle/onboarding.md`](../../playbooks/client-lifecycle/onboarding.md).
+[`../../playbooks/client-lifecycle/onboarding.md`](../../../../agent-workspace/playbooks/client-lifecycle/onboarding.md).
 
 - ☐ Transfer or confirm ownership of every asset above
 - ☐ Remove Service Pow users from client systems

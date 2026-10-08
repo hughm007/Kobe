@@ -74,4 +74,4 @@ plan-view check to the still-first gate for real places.
 ## Related
 
 - [2026-09-23 reference-driven macro beat](2026-09-23-reference-driven-macro-beat-model-test.md) — the opposite case: for an object the model does not know (a specific cup), references were what made it right.
-- Deliverable: `clients/tripnerd/deliverables/2026-09-23-17th-hole-v6-frame-log.md` (frame 1 realism review).
+- Deliverable: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-23-17th-hole/2026-09-23-17th-hole-v6-frame-log.md` (frame 1 realism review).

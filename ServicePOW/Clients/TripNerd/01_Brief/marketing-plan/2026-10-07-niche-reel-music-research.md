@@ -50,7 +50,7 @@ tags: [meta-ad-library, music, reels, licensing, competitive-intelligence]
 - **Not usable:**
   - the songs in these ads, which are licensed to those advertisers (or are commercial recordings like the Epic Golf track);
   - trending Instagram audio, because Meta's music library for business accounts and ads does not carry trending commercial songs, and ads using it get muted or rejected.
-- **Usable:** a track whose licence names online ads and social posts. Mixkit's Stock Music Free License does ("Social Media video posts", "Online marketing ads", no attribution). Evidence: [`../campaigns/2026-10-07-augusta-handled/qc/music-licence.md`](../campaigns/2026-10-07-augusta-handled/qc/music-licence.md).
+- **Usable:** a track whose licence names online ads and social posts. Mixkit's Stock Music Free License does ("Social Media video posts", "Online marketing ads", no attribution). Evidence: [`../campaigns/2026-10-07-augusta-handled/qc/music-licence.md`](../../05_Edit_Project/2026-10-07-augusta-handled/qc/music-licence.md).
 - **RECOMMENDATION, taken for A4:** bake a cleared track into the master rather than adding music in the Instagram app. It plays the same organic and paid, nothing gets muted, and the Reel credits as TripNerd's original audio.
 
 ## The pick for Augusta A4

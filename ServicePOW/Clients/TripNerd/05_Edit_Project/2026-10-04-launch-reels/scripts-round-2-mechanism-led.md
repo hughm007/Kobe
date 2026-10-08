@@ -12,7 +12,7 @@ tags: [scripts, reel, mechanisms, real-footage, competitive-intelligence]
 
 # Five scripts, each built on a mechanism the category is paying to run
 
-Source: [`../../marketing-plan/2026-10-06-competitive-picture-meta-ad-library.md`](../../marketing-plan/2026-10-06-competitive-picture-meta-ad-library.md). Every script uses TripNerd's own material; the one shot still missing from the library (a ball landing beside a pin) is not required by any of them. 9:16, no music, real sound where TripNerd has it. Nothing posts without the owner and TripNerd's approver.
+Source: [`../../marketing-plan/2026-10-06-competitive-picture-meta-ad-library.md`](../../01_Brief/marketing-plan/2026-10-06-competitive-picture-meta-ad-library.md). Every script uses TripNerd's own material; the one shot still missing from the library (a ball landing beside a pin) is not required by any of them. 9:16, no music, real sound where TripNerd has it. Nothing posts without the owner and TripNerd's approver.
 
 ## 1. "The thread." — 15 s · mechanism: the planning pain is the villain (Epic Golf Club, 206 days running)
 - 0.0–1.0: black; one notification tone; a composited group thread, no names, avatars as initials. First bubble, dated **March 2025**: "Masters this year?"

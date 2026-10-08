@@ -29,7 +29,7 @@ The work spanned two plan-mode pauses and long local-writing gaps.
 | A failed render followed by an unguarded PUT | Uploaded an empty file to a reserved slot (never confirmed) |
 | `create_voice_from_confirmed_audio` with all three custom-voice slots used | Refused, no charge. Seed Audio with `medias:[{role:"audio_references"}]` cloned the voice per request instead (0.8 credits a take) |
 
-**Source:** this session's tool results; the campaign's production log (`clients/tripnerd/campaigns/2026-10-07-augusta-handled/production-log.md`, observations 8–13).
+**Source:** this session's tool results; the campaign's production log (`ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-07-augusta-handled/production-log.md`, observations 8–13).
 
 ## What we think it means
 - Treat the sandbox as a disposable worker.

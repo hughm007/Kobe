@@ -77,7 +77,7 @@ agent-workspace/
 ├── README.md          ← human-facing orientation
 ├── inbox/             ← the front desk: unsorted drop-off, triaged not stored
 ├── company/           ← Service Pow itself: identity, offers, voice, pricing
-├── clients/           ← one folder per client. The filing cabinets.
+├── clients/           ← one folder per client. The filing cabinets. (TripNerd moved to ../ServicePOW/Clients/TripNerd/ on 2026-10-08)
 ├── playbooks/         ← how we do the work. Repeatable, discipline-specific.
 ├── templates/         ← fill-in-the-blank starting points
 ├── knowledge/         ← what we've learned. Decisions, learnings, research.
@@ -132,6 +132,7 @@ When you create something, use this table. When in doubt, prefer the more specif
 | A raw thing someone dropped on you, not yet sorted | `inbox/` — then triage it out within the session |
 | A fact about Service Pow itself | `company/` |
 | Anything specific to one client | `clients/<client-slug>/` |
+| Anything for **TripNerd** | [`../ServicePOW/Clients/TripNerd/`](../ServicePOW/Clients/TripNerd/README.md) — the 01–08 structure (brief · original footage · approved brand assets · generated assets · edit project · review exports · client approved · performance). Campaign Bibles live in `05_Edit_Project/<date-slug>/`. |
 | A repeatable process — "how we always do X" | `playbooks/<discipline>/` |
 | A blank structure to be filled in each time | `templates/` |
 | A choice we made and the reasoning behind it | `knowledge/decisions/` |

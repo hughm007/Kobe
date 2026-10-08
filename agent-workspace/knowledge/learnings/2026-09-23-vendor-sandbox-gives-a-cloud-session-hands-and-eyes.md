@@ -34,7 +34,7 @@ Turnaround: roughly 45 minutes from first generation to a QC'd 30s master, two r
 ffmpeg input-index bug, one for audio and a cut shot). MCP client timeout is 60s per sandbox call
 regardless of the tool's own timeout, so long steps must run in the background and be polled.
 
-**Source:** this session's transcript; `clients/tripnerd/deliverables/17th-hole-v3-build/`.
+**Source:** this session's transcript; `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-23-17th-hole/v3-build`.
 
 ## What we think it means
 
@@ -69,4 +69,4 @@ reused clip for an audio stream" to preflight.
 - ☐ Third occurrence → promote into a playbook and link back from here
 
 ## Related
-- `clients/tripnerd/deliverables/2026-09-23-17th-hole-30s-v3.md`
+- `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-23-17th-hole/2026-09-23-17th-hole-30s-v3.md`

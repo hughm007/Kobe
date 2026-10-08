@@ -18,12 +18,12 @@ source: TripNerd THEIR CAMERA ROLL build v1, owner approved 2026-09-29 and ranke
 
 Decision `knowledge/decisions/0008-real-client-material-first-for-video-ads.md` makes this kind of route the default.
 
-**Reference implementation:** `clients/tripnerd/campaigns/2026-09-29-all-events/build-v1/`
+**Reference implementation:** `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-29-all-events/build-v1`
 - `setup.sh` stages the inputs;
 - `render.py` renders frames (both cuts from one file);
 - `audio.py` does the sound design and mix.
 
-Record and QA: `…/2026-09-29-all-events/build-v1.md`. Owner verdict: `clients/tripnerd/Client approved adverts/2026-09-29-their-camera-roll-25s.md`.
+Record and QA: `…/2026-09-29-all-events/build-v1.md`. Owner verdict: `ServicePOW/Clients/TripNerd/Client approved adverts/2026-09-29-their-camera-roll-25s.md`.
 
 ## Use it when
 - The client has **at least 8 real photos across at least 3 occasions** (events, jobs, locations) and **at least 1 real phone video** with a moment in it.

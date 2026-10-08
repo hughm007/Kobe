@@ -81,7 +81,7 @@ page copy than the brand guide itself, because it's the language that already co
 ## Assets
 
 Where the master files live, and who can grant access. Pointers only — don't commit
-large binaries. See [`../../assets/README.md`](../../assets/README.md).
+large binaries. See [`../../assets/README.md`](../../../../agent-workspace/assets/README.md).
 
 | Asset | Location | Access via |
 |---|---|---|

@@ -12,7 +12,7 @@ tags: [campaign, reel, build-record, qc, real-footage, kinetic-type]
 
 # ROAR v1 — build record
 
-**Status: DRAFT v1 BUILT, owner review pending.** Bible: [`campaign-bible.md`](campaign-bible.md). Scripts: [`build/`](build/).
+**Status: DRAFT v1 BUILT, owner review pending.** Bible: [`campaign-bible.md`](campaign-bible.md). Scripts: [`build/`](build).
 
 ## Deliverable (FACT)
 - **File:** `TripNerd-ROAR-8s-v1.mp4`, 18,365,672 bytes, MD5 `600551b3b1fe39e776737e78ee12af2a`.

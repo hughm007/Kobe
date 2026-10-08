@@ -21,10 +21,10 @@ is built as a **held** variant only and is not postable without the extra approv
 LANE: A realistic (A4 adds the owner's generated end shot)   FORMAT: A4 18.12 s · 9:16 · 1080×1920 · 30 fps · Instagram Reels / Meta placements · Mixkit "Golden Storm" bed + the hosting-spot host's voice on the list (−14 LUFS) · TripNerd's camera-roll end card (v3: 15.0 s, original music, Seed Audio "Miles")
 
 CLIENT TRUTH (read, not assumed):
-- [`../../client-brief.md`](../../client-brief.md), [`../../brand-guide.md`](../../brand-guide.md) (typeface fields blank; approved TripNerd lockups use Montserrat)
+- [`../../client-brief.md`](../../01_Brief/client-brief.md), [`../../brand-guide.md`](../../01_Brief/brand-guide.md) (typeface fields blank; approved TripNerd lockups use Montserrat)
 - TripNerd's live Augusta page, read 2026-10-07: `https://www.tripnerd.com/events/augusta-experience`
-- Footage inventory and the West Lake finding: `clients/tripnerd/footage-drive-location.md` on branch `claude/admiring-mendel-aqjyaw` (EV-tripnerd-010)
-- Drive media register (V19/V25, link access): `clients/tripnerd/assets/2026-10-06-drive-media-register.md` on branch `claude/quirky-davinci-soivtu`
+- Footage inventory and the West Lake finding: `ServicePOW/Clients/TripNerd/footage-drive-location.md` on branch `claude/admiring-mendel-aqjyaw` (EV-tripnerd-010)
+- Drive media register (V19/V25, link access): `ServicePOW/Clients/TripNerd/assets/2026-10-06-drive-media-register.md` on branch `claude/quirky-davinci-soivtu`
 
 CLAIMS BOUNDS:
 | On-screen line | Source (TripNerd's own words) | State |

@@ -7,7 +7,7 @@ status: active
 created: 2026-09-30
 updated: 2026-09-30
 tags: [content, social, audit, presence, client-intelligence, method]
-source: TripNerd presence audit, 2026-09-30 (clients/tripnerd/marketing-plan/2026-09-30-online-presence-audit.md)
+source: TripNerd presence audit, 2026-09-30 (ServicePOW/Clients/TripNerd/01_Brief/marketing-plan/2026-09-30-online-presence-audit.md)
 ---
 
 # Online-presence audit

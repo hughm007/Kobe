@@ -31,7 +31,7 @@ strengths. The one deduction: "the quality of the advert full screen looks low".
 | Body master | 1280x720 export, Lanczos-upscaled to 1080p | build record 2026-09-25 |
 | Opening master | native 1920x1080 | same |
 
-**Source:** owner's message in the session of 2026-09-27; `clients/tripnerd/Client approved adverts/`.
+**Source:** owner's message in the session of 2026-09-27; `ServicePOW/Clients/TripNerd/Client approved adverts/`.
 
 ## What we think it means
 
@@ -68,6 +68,6 @@ check's description to "and no source segment upscaled to reach it" so the rule 
 
 ## Related
 
-- `clients/tripnerd/deliverables/2026-09-25-hosting-spot-drone-opening.md`
-- `clients/tripnerd/deliverables/2026-09-24-hosting-spot-endcard-fix.md`
+- `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-24-hosting-spot/2026-09-25-hosting-spot-drone-opening.md`
+- `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-24-hosting-spot/2026-09-24-hosting-spot-endcard-fix.md`
 - `playbooks/ads/recipes/hosting-spot-20s.md`

@@ -25,7 +25,7 @@ Higgsfield and Adobe were used only for touch-up (2k upscale, 1080p video upscal
 | Advert | Share of picture that is real client material | Generation used for | Owner verdict | Source |
 |---|---|---|---|---|
 | 911 Drain realistic lane (runs 9–10, 2026-09-02) | none | all picture (realistic mood B-roll) | **4/10** | `operations/run-ledger.md`, `knowledge/EVIDENCE-INDEX.md` FAILED |
-| TripNerd YOUR PEOPLE cut v1 (2026-09-29) | small (reference frames only) | people, performances, voice | **Killed:** "sucks, i hate it scratch the whole advert idea" | `clients/tripnerd/campaigns/2026-09-28-ten-scripts/your-people-build-log.md` |
+| TripNerd YOUR PEOPLE cut v1 (2026-09-29) | small (reference frames only) | people, performances, voice | **Killed:** "sucks, i hate it scratch the whole advert idea" | `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-28-ten-scripts/your-people-build-log.md` |
 | TripNerd hosting spot, drone opening (2026-09-27) | most (the body is the owner's cut with real suite footage) | the opening aerial of a famous hole | **8.4/10.** "the realism was there"; the deduction was resolution | `Client approved adverts/2026-09-25-…md` |
 | **TripNerd THEIR CAMERA ROLL (2026-09-29)** | **all** | nothing (touch-up only) | **Approved, ranked above the 8.4:** "we need to be able to capitalize on the real client footage and this advert is a good example of that" | `Client approved adverts/2026-09-29-their-camera-roll-25s.md` |
 

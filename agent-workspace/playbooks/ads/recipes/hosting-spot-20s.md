@@ -81,7 +81,7 @@ the card. Run it as written; change only the inputs table and the copy table.
 4. **Proof macros.** Three-model 720p test if generated (Seedance / Gemini / Wan), then 1080p on the winner. Describe sizes by comparison, never with units (learning 2026-09-23 macro beat).
 5. **People beats.** Real footage or real photo with `start_image`. Backs, profiles, dots. Consent list written before the cut.
 6. **Voice.** Record or generate the three lines. Word-level transcript with faster-whisper; place captions on the measured word times, not on guesses.
-7. **Assemble.** `clients/tripnerd/deliverables/17th-hole-v3-build/build_v7.py` with the shots JSON template beside this file (`hosting-spot-20s.shots.json`): video and still shots, captions, placed audio tracks, end card from the real logo file. Uniform timebase, one bed, loudnorm −14 LUFS / −1 dBTP.
+7. **Assemble.** `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-23-17th-hole/v3-build/build_v7.py` with the shots JSON template beside this file (`hosting-spot-20s.shots.json`): video and still shots, captions, placed audio tracks, end card from the real logo file. Uniform timebase, one bed, loudnorm −14 LUFS / −1 dBTP.
 8. **End card.** `gen_card.py` (in the same build folder) with the brand blue, the logo file, tagline below the logo, CTA pill, URL. Crossfade 0.4 s from the last shot.
 9. **QC.** Contact sheet at 2 fps for the whole film and 4 fps for the last five seconds; ffprobe (1920x1080 or 1080x1920, yuv420p, tv range, bt709); loudness; transcript check of every caption against its voice word; brand-fidelity pass on the logo; claims pass on every word on screen; consent list; tournament marks. **Wardrobe wordmark check:** zoom every garment, cap, bag or glass that carries the brand and read the spelling letter by letter; generated embroidery misspells (the reference shot read "TripNers"). Fix by tracked composite of the real logo file (`17th-hole-v3-build/polofix.py`), never by regenerating the shot.
 10. **Deliver.** Upload, owner watch with sound (nobody here can hear it), one round of notes, lock.
@@ -94,10 +94,10 @@ the card. Run it as written; change only the inputs table and the copy table.
 
 ## Related
 
-- `clients/tripnerd/deliverables/2026-09-24-hosting-spot-endcard-fix.md` (the end card replacement on the reference file)
+- `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-24-hosting-spot/2026-09-24-hosting-spot-endcard-fix.md` (the end card replacement on the reference file)
 - `knowledge/learnings/2026-09-23-famous-landmark-model-memory-beats-references.md`
 - `knowledge/learnings/2026-09-23-reference-driven-macro-beat-model-test.md`
 - `playbooks/ads/video-production.md` (blocking tier) and the canonical blocking-check registry
 
 ## Swapping the opening shot (added 2026-09-25)
-Replace the picture only; the audio bed stays. Re-set the opening overlays on the new shot from the measured positions (`17th-hole-v3-build/title_overlay.py`), fade-in included, and concat with the body (`17th-hole-v3-build/opening_swap.sh`). Before trusting the cut point, diff the frames either side of it: phone editors let text layers overrun a cut by a frame (the owner's export did), so start the body on the first clean frame and lengthen the opening by the same count. Record: `clients/tripnerd/deliverables/2026-09-25-hosting-spot-drone-opening.md`.
+Replace the picture only; the audio bed stays. Re-set the opening overlays on the new shot from the measured positions (`17th-hole-v3-build/title_overlay.py`), fade-in included, and concat with the body (`17th-hole-v3-build/opening_swap.sh`). Before trusting the cut point, diff the frames either side of it: phone editors let text layers overrun a cut by a frame (the owner's export did), so start the body on the first clean frame and lengthen the opening by the same count. Record: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-24-hosting-spot/2026-09-25-hosting-spot-drone-opening.md`.

@@ -30,7 +30,7 @@ TripNerd THEIR CAMERA ROLL build, 2026-09-29, from a Claude Code cloud session. 
 
 Result: auto-tone improved all ten photos (flat, hazy upscales gained contrast and colour) with faces unchanged. Owner verdict on the film is pending.
 
-**Source:** this session's transcript and the campaign record `clients/tripnerd/campaigns/2026-09-29-all-events/build-v1.md`.
+**Source:** this session's transcript and the campaign record `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-29-all-events/build-v1.md`.
 
 ## What we think it means
 

@@ -48,7 +48,7 @@ Then, in order:
 | Client | Folder | Status | Services | Owner |
 |---|---|---|---|---|
 | 911 Drain | [`911drain/`](911drain/) | **Active** — main account | **NEEDS INPUT** | Karl |
-| TripNerd | [`tripnerd/`](tripnerd/) | Prospect | — | Karl |
+| TripNerd | [`ServicePOW/Clients/TripNerd/`](../../ServicePOW/Clients/TripNerd) (moved 2026-10-08 to the 01–08 production structure) | Active | — | Karl |
 | WaveReaction | [`wavereaction/`](wavereaction/) | Prospect | — | Karl |
 
 ### Active vs. prospect

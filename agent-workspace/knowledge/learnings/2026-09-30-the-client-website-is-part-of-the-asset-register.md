@@ -48,4 +48,4 @@ The register is not complete until the client's public web presence has been rea
 
 ## What we did with it
 
-The routine is now a playbook: [`playbooks/ads/real-material-intake.md`](../../playbooks/ads/real-material-intake.md). It runs before any concept work for a client. The inventory is in `clients/tripnerd/campaigns/2026-09-30-five-more-real-footage/real-material-inventory.md`.
+The routine is now a playbook: [`playbooks/ads/real-material-intake.md`](../../playbooks/ads/real-material-intake.md). It runs before any concept work for a client. The inventory is in `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-30-five-more-real-footage/real-material-inventory.md`.
