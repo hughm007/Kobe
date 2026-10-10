@@ -90,6 +90,8 @@
   .opts span::before { content: '\2610  '; }
   .why2 { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.4rem; }
   .mock { display: block; width: min(100%, 22rem); height: auto; }
+  .order { background: var(--accent-soft); border-radius: 12px; padding: 1rem 1.2rem; display: grid; gap: 0.5rem; }
+  .order ol { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.3rem; }
   footer { border-top: 1px solid var(--line); padding-top: 1rem; color: var(--muted); font-size: 0.9rem; }
   @media print {
     @page { size: letter; margin: 0.55in; }
@@ -107,6 +109,13 @@
     .phone { width: 14rem; }
     .mock { width: 15.6rem; }
     .ask li { padding: 0.7rem 1rem; }
+    .order { display: block; break-inside: avoid; padding: 0.7rem 1rem; break-before: page; }
+    .c2 .pair { gap: 1rem; }
+    .c2 .why2 { gap: 0.2rem; }
+    .ask li > span:not(.opts) { font-size: 0.9em; }
+    .opts span { font-size: 0.85rem; padding: 0.15rem 0.6rem; }
+    .flag { padding: 0.6rem 0.9rem; font-size: 0.88rem; }
+    .order > * + * { margin-top: 0.4rem; }
     .ask li + li { margin-top: 0.55rem; }
     .ask { gap: 0.55rem; }
     .ask li > span:not(.opts) { font-size: 0.95em; line-height: 1.35; }
@@ -143,7 +152,7 @@
     </ul>
   </section>
 
-  <section class="break">
+  <section class="break c2">
     <p class="eyebrow">Change 2</p>
     <h2>Replace the Linktree with one inquiry page</h2>
     <div class="pair">
@@ -173,14 +182,26 @@
       <li>Every lead arrives with the trip, group size, and whether it's a corporate sale.</li>
       <li>Inquiries can be counted, so we can see which posts and ads bring them in.</li>
     </ul>
+    <div class="order">
+      <h3>The order matters: page first, bio second</h3>
+      <ol>
+        <li><b>Build and test the inquiry page.</b> Owner: ____________. Estimate: about one week.</li>
+        <li><b>Then change the bio and the link,</b> on the same day. Estimate: under an hour.</li>
+        <li><b>Review the numbers after 30 days:</b> link taps, "TRIP" messages, quote requests.</li>
+      </ol>
+      <p>The bio is never changed before the page is live, so no visitor is ever sent to a dead link.</p>
+    </div>
   </section>
 
-  <section class="break">
-    <h2>Four questions for you</h2>
+  <section>
+    <h2>Five questions for you</h2>
     <ol class="ask">
       <li><b>What proof can we show in the bio?</b>
         <span>The line "🏆 __ yrs · ___ trips planned" needs real numbers you can back up: years in business and trips planned. If those aren't available, we can use a client review count instead, or drop the line.</span>
         <span class="opts"><span>Years: ____</span><span>Trips planned: ____</span><span>Use reviews instead</span><span>Drop the line</span></span></li>
+      <li><b>Should the gray category line under the name change?</b>
+        <span>It reads "Event Planner" today, which undersells a VIP travel service. A category such as "Travel Company" fits better, if Instagram offers it in its list.</span>
+        <span class="opts"><span>Travel Company</span><span>Keep Event Planner</span><span>Other: ________</span></span></li>
       <li><b>Should we pin three posts to the top of the profile?</b>
         <span>Suggested: the trips TripNerd plans, one client's story, and how booking works. Pinned posts are the first thing a visitor sees, and these three answer "what do you do, can I trust you, how do I book." Client photos would be used only with the client's permission.</span>
         <span class="opts"><span>Yes, pin these three</span><span>Yes, but different posts</span><span>No</span></span></li>
