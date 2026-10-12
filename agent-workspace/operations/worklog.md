@@ -1694,3 +1694,9 @@ quality gate, claims and brand law after the commit.
 - Mapped which seconds of real material the two approved adverts used (hosting spot: owner's 720p suite cut; Camera Roll: 10 gallery heroes + tiles, V23 29.8–33.2, V24 13.6–15.8 and murmur) against the register; listed the unused clips (V23 door-to-rail and rail guests, V24 backs and hush, the 2022 Daytona suite tour `553c8ee2`, the tournament-week house photos, the reviews).
 - Drafted five scripts mapped to the plan's queue slots (05, 09, 07-companion, a February Daytona Reel, 04): `clients/tripnerd/campaigns/2026-10-12-october-real-footage-scripts/scripts.md`. Clips not re-viewed this session (descriptions from the 1 fps logs). No spend, nothing built or posted.
 - Open: staff/guest consent, package wording Evidence Record, OK to quote Sean M., newer Daytona footage and V23/V24 originals.
+
+## 2026-10-12 — TripNerd: review of five drafted adverts (owner's request; review and plan only)
+- Reviewed D1 ROAR v1 (ours), and four owner drafts: D2 "POV: you're TripNerd's guest" 15 s, D3 "Book It Now" first cut 30 s, D4 "back of someone's hat" 20 s, D5 "players17 suite on 17" 9x16 30 s v2. Exact MD5s in the record.
+- Method: full decode, 2–10 fps frame strips and native crops at problem moments, cut maps, loudness, local stem split + offline transcription. Not judged by ear; approved references not openable (storage host blocked), compared via their records.
+- Verdicts: D5 FIX (lead; cut its 6.3 s of generated golf, which fixes the overcast/sunny mismatch and the putt shown twice; est. 7.6 from the render, ~8.0 from raw clips), D2 POLISH (backup), D1 ARCHIVE, D3 ARCHIVE (two pins on one green, Augusta trade dress, DM CTA with no DM coverage), D4 REBUILD THE IDEA, parked (ball enters from above and stops at the lip; the "different" experience is a lawn chair any patron has).
+- Record: `clients/tripnerd/campaigns/2026-10-12-draft-review/review.md`. Nothing edited, generated, spent or posted.
