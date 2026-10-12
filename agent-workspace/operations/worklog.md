@@ -1380,3 +1380,19 @@ as with Drive and Vercel; a baseline advance is the owner's ruling, not a sessio
 
 **Next:** the first real client use of the lane runs `canva-procedure.md` end to end, with the dual
 quality gate, claims and brand law after the commit.
+
+## 2026-10-12 — TripNerd: unused-footage October plan and clip asks for Jason
+
+**Did:** built a usage ledger of every TripNerd cut (approved and draft) across branches, and a
+rest-of-October plan using only never-used footage: five concepts (Door to rail; Augusta golden-hour
+carousel; Scottsdale; Daytona; Louisville parked to November), a weekly schedule, and nine prioritized
+asks for Jason with a copy-ready message. Files:
+`clients/tripnerd/campaigns/2026-10-12-unused-footage-plan/`.
+
+**Found:** Script 2 ("Who's in the seat next to you?") reuses draft footage, so it is superseded.
+P005 and P078 are reserved for "Book It Now" Augusta v4 and are excluded. No approved TripNerd advert
+has been posted.
+
+**Open:** 12 videos (V01–V06, V09–V11, V20–V22) have never been watched or logged; Drive video
+download is blocked in this environment, so Karl logs them. Jason's answers to asks 1–4 gate this
+month's posting.
