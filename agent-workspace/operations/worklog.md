@@ -1700,3 +1700,14 @@ quality gate, claims and brand law after the commit.
 - Method: full decode, 2–10 fps frame strips and native crops at problem moments, cut maps, loudness, local stem split + offline transcription. Not judged by ear; approved references not openable (storage host blocked), compared via their records.
 - Verdicts: D5 FIX (lead; cut its 6.3 s of generated golf, which fixes the overcast/sunny mismatch and the putt shown twice; est. 7.6 from the render, ~8.0 from raw clips), D2 POLISH (backup), D1 ARCHIVE, D3 ARCHIVE (two pins on one green, Augusta trade dress, DM CTA with no DM coverage), D4 REBUILD THE IDEA, parked (ball enters from above and stops at the lip; the "different" experience is a lawn chair any patron has).
 - Record: `clients/tripnerd/campaigns/2026-10-12-draft-review/review.md`. Nothing edited, generated, spent or posted.
+
+## 2026-10-12 — TripNerd: D5 parked; Daytona 500 footage inventoried; five Daytona scripts
+- Owner chose Daytona 500 as the next advert. D5 parked as a first draft in the new `clients/tripnerd/Parked draft adverts/` folder (pointer, MD5 `005a1f76…`, fix plan, reopen checks). No "Colby" folder exists in the workspace; this location is my assumption, easy to move.
+- Daytona inventory (`campaigns/2026-10-12-daytona-500/footage-inventory.md`):
+  - the 2022 suite tour (one take, pre-race, 720p, room-tone audio);
+  - nine race-day photos (EXIF 2022-02-20 and 2023-02-19; the track/start-finish group with GARAGE TOUR credentials, the seats over pit road, dusk, under the lights, the flyover);
+  - the hotel photo is not ours;
+  - Drive V05/V06 (2024-02-19) unreviewed: the connector cannot hand video to this session.
+- Five scripts (`scripts.md`): Race day by the clock (8.0, lead), Their camera roll: Daytona (8.0), Tent to pit road (7.5), The countdown (7.5, weekly series), Bring your clients (7.0). All real material; nothing generated or spent.
+- Open: owner attaches V05/V06; TripNerd's package email, consents (minors in gallery_08 and 020), photo ownership, event-name decision.
+- Also seen in Drive: an owner-made folder of clips for the October Script 2 ("Who's in the seat next to you?"), created 2026-10-12 17:40.
