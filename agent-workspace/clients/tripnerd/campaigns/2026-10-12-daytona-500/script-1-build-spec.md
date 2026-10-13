@@ -4,9 +4,10 @@ type: brief
 client: tripnerd
 campaign_id: 2026-10-12-daytona-500
 owner: Karl
-status: draft
+status: superseded
 created: 2026-10-13
 updated: 2026-10-13
+superseded_by: script-1-v2.md
 tags: [client, daytona, reel, build-spec, real-footage, instagram]
 ---
 

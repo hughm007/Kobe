@@ -1718,3 +1718,28 @@ quality gate, claims and brand law after the commit.
 - **Upscaling:** none needed, thanks to the full-width framed layout (about 1.05x).
 - **Plan B:** drop the start/finish-line photo if consent or track-access confirmation misses Thursday noon.
 - **Blockers:** Higgsfield failed to connect and the container had no outbound access at writing; the sound library is unnamed; TripNerd's consent and package answers are pending; the 2024 clips are unseen. Nothing built, spent or posted.
+
+## 2026-10-13 — TripNerd Daytona Script 1: cold review, v2 rewrite, prompt for Grok
+- **Reviews:** three fresh-context reviews of the v1 storyboard (packet in the scratchpad; maker reasoning withheld).
+  - Critic: CANNOT ASSESS, predicted HARD FAIL 5.8 ± 1.5.
+  - Skeptic: BLOCK, 3 S4 and 7 S3.
+  - Hook tournament: H3 (night burnout with a guest filming, then rewind) as A, H4 ("Race day, timestamped.") as B.
+- **Findings I verified:**
+  - the track photo (minors, "VIP", marks, implied 2027 access);
+  - 2022 footage under a 2027 label;
+  - no Evidence Records;
+  - gallery_05 and gallery_01 are the same moment;
+  - burnout scored as a field pass;
+  - empty stands described as packed;
+  - safe-area failures;
+  - Hendrick and Sunoco marks.
+- **v2** (`clients/tripnerd/campaigns/2026-10-12-daytona-500/script-1-v2.md`, 16.4 s):
+  - cold open on gallery_05 at 6:56 PM, rewind to 4:54 (gallery_07, "Headsets on."), back to the 6:56 wide reveal;
+  - the clock rolls to FEB 21, 2027;
+  - 2022 suite clips labelled 2022, with a question CTA and a send ask;
+  - no consent or claim dependencies on screen.
+  - Estimate about 7.2 ± 1.5; about 8 with the phone originals and the 2024 race clips.
+- **Superseded:** the v1 build spec is marked superseded.
+- **Grok prompt:** `grokbot-prompt-script-1.md` (self-contained: rules, exact media descriptions, current script, known weaknesses, asks).
+- **Learning recorded:** `knowledge/learnings/2026-10-13-describe-real-media-from-full-size-views-not-contact-sheets.md`.
+- Nothing built, generated, spent or posted.
