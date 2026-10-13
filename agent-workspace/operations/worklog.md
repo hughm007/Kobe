@@ -1711,3 +1711,10 @@ quality gate, claims and brand law after the commit.
 - Five scripts (`scripts.md`): Race day by the clock (8.0, lead), Their camera roll: Daytona (8.0), Tent to pit road (7.5), The countdown (7.5, weekly series), Bring your clients (7.0). All real material; nothing generated or spent.
 - Open: owner attaches V05/V06; TripNerd's package email, consents (minors in gallery_08 and 020), photo ownership, event-name decision.
 - Also seen in Drive: an owner-made folder of clips for the October Script 2 ("Who's in the seat next to you?"), created 2026-10-12 17:40.
+
+## 2026-10-13 — TripNerd Daytona Script 1 "Race day, by the clock": build spec for Friday 16 Oct
+- Spec: `clients/tripnerd/campaigns/2026-10-12-daytona-500/script-1-build-spec.md`.
+- **Media:** 4 real 2023 stills (EXIF times 12:26 / 16:54 / 18:56 plus one untimed night shot) with push-ins; 2 real 2022 video segments (tent 6.2–7.5 s, pit road 34.0–35.5 s); composited clock, captions and end card; licensed sound effects and music plus real room tone. No generation, no AI animation of photos.
+- **Upscaling:** none needed, thanks to the full-width framed layout (about 1.05x).
+- **Plan B:** drop the start/finish-line photo if consent or track-access confirmation misses Thursday noon.
+- **Blockers:** Higgsfield failed to connect and the container had no outbound access at writing; the sound library is unnamed; TripNerd's consent and package answers are pending; the 2024 clips are unseen. Nothing built, spent or posted.
