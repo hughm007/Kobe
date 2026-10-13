@@ -58,7 +58,14 @@
     "TRANSFERS",
     "[Daily transfers \u2014 confirm]"
    ]
-  ]
+  ],
+  "theme": {
+   "base": "16,38,30",
+   "tint": "22,58,42",
+   "accent": "#F4A3C0",
+   "ink": "246,244,240",
+   "muted": "#C9D8CE"
+  }
  },
  {
   "slug": "ponte-vedra",
@@ -114,7 +121,14 @@
     "TRANSFERS",
     "[Daily transfers \u2014 confirm]"
    ]
-  ]
+  ],
+  "theme": {
+   "base": "8,32,52",
+   "tint": "14,52,82",
+   "accent": "#FFB08A",
+   "ink": "244,247,250",
+   "muted": "#BFD0DE"
+  }
  },
  {
   "slug": "scottsdale",
@@ -169,7 +183,14 @@
     "TRANSFERS",
     "[Daily transfers \u2014 confirm]"
    ]
-  ]
+  ],
+  "theme": {
+   "base": "60,26,16",
+   "tint": "110,52,30",
+   "accent": "#FFC861",
+   "ink": "252,244,236",
+   "muted": "#E6CDBD"
+  }
  },
  {
   "slug": "louisville",
@@ -223,7 +244,14 @@
     "TRANSFERS",
     "[Daily transfers \u2014 confirm]"
    ]
-  ]
+  ],
+  "theme": {
+   "base": "54,10,24",
+   "tint": "96,22,44",
+   "accent": "#F7BFCB",
+   "ink": "252,244,244",
+   "muted": "#E2C2C9"
+  }
  },
  {
   "slug": "daytona",
@@ -272,6 +300,13 @@
     "TRANSFERS",
     "[Daily transfers \u2014 confirm]"
    ]
-  ]
+  ],
+  "theme": {
+   "base": "16,17,21",
+   "tint": "34,36,44",
+   "accent": "#FF8A2A",
+   "ink": "244,245,247",
+   "muted": "#BFC3CC"
+  }
  }
 ]

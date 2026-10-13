@@ -19,6 +19,17 @@ of git); `build.py` + `events.json` rebuild them from the Drive photos.
 in writing]". Review count and years kept as bracketed placeholders. tripnerd.com on every slide; link in bio
 on the dates, group and end slides.
 
+## Color per event
+Palettes come from the place and season, not from any event's official colors (trade dress).
+
+| Set | Palette |
+|---|---|
+| Augusta | Pine green + azalea pink (replaces green + yellow, which echoes tournament colors) |
+| Ponte Vedra | Ocean navy + sunset coral |
+| Scottsdale | Adobe rust + desert-sun gold |
+| Louisville | Rose burgundy + blush |
+| Daytona | Asphalt charcoal + signal orange |
+
 ## Photos used (Drive event folders)
 | Set | Cover | Hook | Included (blurred) | Proof | Corporate | End (blurred) |
 |---|---|---|---|---|---|---|

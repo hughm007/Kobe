@@ -13,25 +13,25 @@ CSS = f"""
 @font-face{{font-family:Jost;font-weight:500;src:url(file://{FONTS}/jost-2.ttf)}}
 @font-face{{font-family:Jost;font-weight:600;src:url(file://{FONTS}/jost-3.ttf)}}
 *{{margin:0;padding:0;box-sizing:border-box}}
-html,body{{width:1080px;height:1350px;overflow:hidden;background:#062a1c}}
-.s{{position:relative;width:1080px;height:1350px;overflow:hidden;color:#ecf9f0;font-family:Jost}}
+html,body{{width:1080px;height:1350px;overflow:hidden;background:rgb(var(--base))}}
+.s{{position:relative;width:1080px;height:1350px;overflow:hidden;color:rgb(var(--ink));font-family:Jost}}
 .bg{{position:absolute;inset:0;background-size:cover}}
-.tint{{position:absolute;inset:0;background:#0b3a26;mix-blend-mode:multiply;opacity:.38}}
+.tint{{position:absolute;inset:0;background:rgb(var(--tint));mix-blend-mode:multiply;opacity:.38}}
 .grad{{position:absolute;inset:0}}
-.frame{{position:absolute;inset:40px;border:1px solid rgba(236,249,240,.38)}}
+.frame{{position:absolute;inset:40px;border:1px solid rgba(var(--ink),.38)}}
 .logo{{position:absolute;left:80px;top:80px;width:205px}}
-.pg{{position:absolute;right:83px;top:84px;font:500 21px Jost;letter-spacing:.2em;color:#b9d2c0}}
-.url{{position:absolute;right:83px;bottom:84px;font:500 21px Jost;letter-spacing:.22em;color:#d6e4db}}
-.cta{{position:absolute;left:80px;bottom:84px;font:600 20px Jost;letter-spacing:.22em;color:#f3e844}}
-.y{{color:#f3e844}} .i{{font-style:italic}}
+.pg{{position:absolute;right:83px;top:84px;font:500 21px Jost;letter-spacing:.2em;color:var(--muted)}}
+.url{{position:absolute;right:83px;bottom:84px;font:500 21px Jost;letter-spacing:.22em;color:var(--muted)}}
+.cta{{position:absolute;left:80px;bottom:84px;font:600 20px Jost;letter-spacing:.22em;color:var(--accent)}}
+.y{{color:var(--accent)}} .i{{font-style:italic}}
 .h{{font-family:IS;font-weight:400;line-height:.92;letter-spacing:-.01em}}
 .meta{{position:absolute;left:80px;bottom:128px;font:400 27px Jost;letter-spacing:.2em;line-height:38px;text-transform:uppercase}}
 .meta b{{font-weight:600;letter-spacing:.24em}}
-.side{{position:absolute;right:83px;font:500 17px Jost;letter-spacing:.24em;color:#ecf9f0}}
-.lab{{font:600 22px Jost;letter-spacing:.24em;color:#f3e844;padding-bottom:16px;border-bottom:1px solid rgba(236,249,240,.3);margin-bottom:20px}}
+.side{{position:absolute;right:83px;font:500 17px Jost;letter-spacing:.24em;color:rgb(var(--ink))}}
+.lab{{font:600 22px Jost;letter-spacing:.24em;color:var(--accent);padding-bottom:16px;border-bottom:1px solid rgba(var(--ink),.3);margin-bottom:20px}}
 .val{{font-family:IS;font-size:48px;line-height:1.08}}
-.box{{display:inline-block;border:1.5px solid #ecf9f0;padding:22px 30px;font:600 22px Jost;letter-spacing:.26em}}
-.small{{font:500 16px Jost;letter-spacing:.2em;color:#a8c2b2}}
+.box{{display:inline-block;border:1.5px solid rgb(var(--ink));padding:22px 30px;font:600 22px Jost;letter-spacing:.26em}}
+.small{{font:500 16px Jost;letter-spacing:.2em;color:var(--muted)}}
 """
 
 def esc(s): return html.escape(s).replace('\n', '<br>')
@@ -50,9 +50,9 @@ def base(img, pos, grad, frame=False, size='cover'):
             + ('<div class="frame"></div>' if frame else '')
             + f'<img class="logo" src="file://{PREP}/logo.png">')
 
-G_BOTTOM = 'linear-gradient(180deg,rgba(4,30,20,.55) 0%,rgba(4,30,20,.05) 22%,rgba(4,30,20,.10) 45%,rgba(4,36,24,.86) 72%,rgba(4,36,24,.97) 100%)'
-G_COVER = 'linear-gradient(180deg,rgba(4,30,20,.55) 0%,rgba(4,30,20,.25) 30%,rgba(4,36,24,.55) 55%,rgba(4,36,24,.92) 85%,rgba(4,36,24,.98) 100%)'
-G_FULL = 'linear-gradient(180deg,rgba(6,42,28,.78),rgba(6,42,28,.86) 60%,rgba(5,36,24,.96))'
+G_BOTTOM = 'linear-gradient(180deg,rgba(var(--base),.55) 0%,rgba(var(--base),.05) 22%,rgba(var(--base),.10) 45%,rgba(var(--base),.86) 72%,rgba(var(--base),.97) 100%)'
+G_COVER = 'linear-gradient(180deg,rgba(var(--base),.55) 0%,rgba(var(--base),.25) 30%,rgba(var(--base),.55) 55%,rgba(var(--base),.92) 85%,rgba(var(--base),.98) 100%)'
+G_FULL = 'linear-gradient(180deg,rgba(var(--base),.78),rgba(var(--base),.86) 60%,rgba(var(--base),.96))'
 
 def cover(e, n, tot):
     return base(*e['cover'][:2], G_COVER, size=(e['cover'][2] if len(e['cover'])>2 else 'cover')) + f'''
@@ -85,7 +85,7 @@ def proof(e, n, tot):
 <div class="pg">{n:02d} / {tot:02d}</div>
 <div style="position:absolute;left:100px;right:100px;bottom:190px">
  <div class="h" style="font-size:96px">{rich(e['proof_line'])}</div>
- <div style="margin-top:34px;border-left:1.5px solid rgba(236,249,240,.5);padding-left:26px">
+ <div style="margin-top:34px;border-left:1.5px solid rgba(var(--ink),.5);padding-left:26px">
   <div class="h i" style="font-size:40px;line-height:1.18">&#8220;[Real customer quote, verbatim from a Google review, with permission]&#8221;</div>
   <div class="small" style="margin-top:14px">[NAME] · [EVENT] · [YEAR]</div></div></div>
 <div class="url">TRIPNERD.COM</div>'''
@@ -106,9 +106,9 @@ def endcard(e, n, tot):
  <div class="h" style="font-size:136px">Your {esc(e['month'])},<br><span class="y i">handled.</span></div>
  <div style="font:400 32px Jost;line-height:1.45;margin-top:40px;max-width:820px">Tell us the trip and how many are coming. We&#8217;ll send the options.</div></div>
 <div style="position:absolute;left:80px;bottom:200px">
- <div style="font:600 64px Jost;letter-spacing:.06em;color:#f3e844">tripnerd.com</div>
+ <div style="font:600 64px Jost;letter-spacing:.06em;color:var(--accent)">tripnerd.com</div>
  <div style="font:500 24px Jost;letter-spacing:.2em;margin-top:18px">TAP THE LINK IN BIO · OR SEND US A DM</div></div>
-<div class="cta" style="color:#b9d2c0;font-weight:500">SEND THIS TO WHO YOU&#8217;D BRING</div><div class="url">@TRIPNERD</div>'''
+<div class="cta" style="color:var(--muted);font-weight:500">SEND THIS TO WHO YOU&#8217;D BRING</div><div class="url">@TRIPNERD</div>'''
 
 T = {'cover': cover, 'hook': hook, 'included': included, 'proof': proof, 'corporate': corporate, 'end': endcard}
 
@@ -116,7 +116,8 @@ def render(e):
     tot = len(e['slides']); files = []
     for k, kind in enumerate(e['slides'], 1):
         body = T[kind](e, k, tot)
-        h = f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="s">{body}</div></body></html>'
+        t = e['theme']; vars_ = f":root{{--base:{t['base']};--tint:{t['tint']};--accent:{t['accent']};--ink:{t['ink']};--muted:{t['muted']}}}"
+        h = f'<!doctype html><html><head><meta charset="utf-8"><style>{vars_}{CSS}</style></head><body><div class="s">{body}</div></body></html>'
         hp = os.path.join(D, 'html', f"{e['slug']}-{k:02d}.html"); os.makedirs(os.path.dirname(hp), exist_ok=True)
         open(hp, 'w').write(h)
         png = os.path.join(OUT, f"TripNerd-{e['slug']}-{k:02d}-{kind}.png")
