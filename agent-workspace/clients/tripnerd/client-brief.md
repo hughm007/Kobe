@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-09-28
 tags: [client, brief]
 source: Drive "ServicePow OS 2" — 04, 05, 37_EMAIL_MARKETING_OFFERING.md (synced 2026-08-25)
 ---
@@ -16,6 +16,18 @@ source: Drive "ServicePow OS 2" — 04, 05, 37_EMAIL_MARKETING_OFFERING.md (sync
 hospitality (Super Bowl, Augusta, field-level access). Buyers decide roughly **a year
 out**; a company buying corporate hospitality for eight clients is a distinct, higher-
 ticket B2B track. Confidence: VERIFIED.
+
+## Standing media authorization (2026-09-28)
+**Taylor (TripNerd) has authorised Service Pow to use any TripNerd photos, videos and assets in
+TripNerd's advertising.** Relayed in writing by the owner on 2026-09-28, with the instruction to
+always assume it for TripNerd. Confidence: CONFIRMED (the owner's written statement).
+- **Covers:** TripNerd's own footage and photos, including footage filmed at the venues where it
+  hosts and its on-site crowd recordings; its logos and brand files; using any of these as
+  generation references; showing the venues where TripNerd hosts. Do not re-ask per campaign.
+- **Cannot cover (not TripNerd's to give):** third-party marks (THE PLAYERS, PGA TOUR, Masters and
+  Augusta names and logos, sponsors, broadcast graphics) stay out of every advert; the likeness of
+  identifiable guests in TripNerd's footage still needs those guests' releases. Ask Taylor once
+  whether event terms include photo consent, and only for an advert that shows a guest's face.
 
 ## Brand
 White wordmark, nerd-head mark, brand blue. **Brand standards win outright** over any

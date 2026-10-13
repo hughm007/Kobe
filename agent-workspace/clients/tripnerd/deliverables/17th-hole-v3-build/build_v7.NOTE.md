@@ -1,0 +1,1 @@
+# build_v7.py: identical to build_v5.py plus a "still" shot type (Ken Burns zoompan on a real photo, EXIF-rotated, 9:16 crop around a pan point) and an "ss" trim on audio tracks. The sandbox copy at /home/user/v7/build_v7.py is the one that ran; the repo copy is written from the same text.

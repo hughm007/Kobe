@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: prospect
 created: 2026-08-24
-updated: 2026-08-24
+updated: 2026-09-30
 tags: [client, access, operations]
 ---
 
@@ -74,3 +74,26 @@ Run this when the engagement ends — see
 - ☐ Hand over source files and documentation
 - ☐ Cancel or reassign anything billed through us
 - ☐ Archive the client folder with a closing note
+
+## Online presence register (2026-09-30)
+
+Public identifiers found in the presence audit, with **access status**. No credentials belong here. The full evidence is in [`marketing-plan/2026-09-30-online-presence-audit.md`](marketing-plan/2026-09-30-online-presence-audit.md).
+
+| System | Public identifier | Linked from site? | Our access today |
+|---|---|---|---|
+| Website | tripnerd.com (Webflow; design credited to Peacetime Propaganda) | n/a | UNKNOWN: who holds the Webflow, domain and DNS accounts |
+| Google Analytics 4 | `G-YYWZH6HL7E` | n/a | UNKNOWN |
+| Meta Pixel | `1326206675807966` | n/a | UNKNOWN |
+| LinkedIn page | `linkedin.com/company/tripnerd` | Yes | UNKNOWN |
+| Facebook page | `facebook.com/TripNerdFanExperience` | Yes | UNKNOWN |
+| Instagram | `@tripnerd` | Yes | UNKNOWN |
+| TikTok | `@tripnerd` (created 2022-04-05, 4 followers) | No | UNKNOWN |
+| YouTube | channel `UCpFWBQIOwCfkdeoJyANsHdA` (empty; ownership unconfirmed) | No | UNKNOWN |
+| X | `@tripnerd` (probably theirs; unconfirmed) | No | UNKNOWN |
+| Vimeo | account "Jason Driscoll" `user117769548` (Plus; personal, not a brand account) | Embedded | UNKNOWN |
+| Google Business Profile | listing for "TripNerd, LLC Chicago" | Yes (review link) | UNKNOWN |
+| BBB | profile 0654-1000122800 | Yes | UNKNOWN |
+| HubSpot | a HubSpot script is on the site | n/a | UNKNOWN: CRM or email tool not confirmed |
+| Search Console, Tag Manager, Google Ads, Meta Business Manager | none found (no Tag Manager or Ads tag on the site) | n/a | UNKNOWN |
+
+Step 2 of the growth plan asks the client for delegated agency access wherever it is offered (see "How we access" above).
