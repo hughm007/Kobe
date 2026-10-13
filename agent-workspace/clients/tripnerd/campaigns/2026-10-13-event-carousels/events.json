@@ -1,0 +1,277 @@
+[
+ {
+  "slug": "augusta",
+  "place": "Augusta",
+  "month": "April",
+  "year": "2027",
+  "city": "Augusta, GA",
+  "slides": [
+   "cover",
+   "hook",
+   "included",
+   "proof",
+   "corporate",
+   "end"
+  ],
+  "cover": [
+   "P076",
+   "38% 50%"
+  ],
+  "hook": [
+   "P103",
+   "50% 40%"
+  ],
+  "incl": [
+   "P109-blur",
+   "50% 50%"
+  ],
+  "proof": [
+   "P140",
+   "50% 45%"
+  ],
+  "corp": [
+   "P036",
+   "100% 100%",
+   "auto 128%"
+  ],
+  "end": [
+   "P119-blur",
+   "50% 50%"
+  ],
+  "hook_line": "You've watched it every year. *This year, be there.*",
+  "hook_sub": "The week handled. You show up.",
+  "proof_line": "[43] five-star Google reviews. *[Nine] years of fans.*",
+  "included": [
+   [
+    "ACCESS",
+    "[Event access \u2014\nconfirm in writing]"
+   ],
+   [
+    "HOSPITALITY",
+    "Hosted, near the grounds\n[confirm venue]"
+   ],
+   [
+    "STAY",
+    "[Hotel \u2014 confirm]"
+   ],
+   [
+    "TRANSFERS",
+    "[Daily transfers \u2014 confirm]"
+   ]
+  ]
+ },
+ {
+  "slug": "ponte-vedra",
+  "place": "Ponte Vedra",
+  "month": "March",
+  "year": "2027",
+  "city": "Ponte Vedra Beach, FL",
+  "cover_size": 160,
+  "slides": [
+   "cover",
+   "hook",
+   "included",
+   "corporate",
+   "end"
+  ],
+  "cover": [
+   "P069",
+   "62% 50%"
+  ],
+  "hook": [
+   "P068",
+   "40% 50%"
+  ],
+  "incl": [
+   "P061-blur",
+   "50% 50%"
+  ],
+  "corp": [
+   "P084",
+   "50% 55%"
+  ],
+  "end": [
+   "P064-blur",
+   "50% 50%"
+  ],
+  "hook_line": "You've seen the island green on TV. *See it from the rail.*",
+  "hook_size": 94,
+  "hook_sub": "The week handled. You show up.",
+  "included": [
+   [
+    "ACCESS",
+    "[Event access \u2014\nconfirm in writing]"
+   ],
+   [
+    "HOSPITALITY",
+    "[Suite / hospitality \u2014\nconfirm]"
+   ],
+   [
+    "STAY",
+    "[Hotel \u2014 confirm]"
+   ],
+   [
+    "TRANSFERS",
+    "[Daily transfers \u2014 confirm]"
+   ]
+  ]
+ },
+ {
+  "slug": "scottsdale",
+  "place": "Scottsdale",
+  "month": "February",
+  "year": "2027",
+  "city": "Scottsdale, AZ",
+  "cover_size": 160,
+  "slides": [
+   "cover",
+   "hook",
+   "included",
+   "corporate",
+   "end"
+  ],
+  "cover": [
+   "P059",
+   "45% 40%"
+  ],
+  "hook": [
+   "P052-dof",
+   "40% 50%"
+  ],
+  "incl": [
+   "P001-blur",
+   "50% 50%"
+  ],
+  "corp": [
+   "P054-dof",
+   "55% 50%"
+  ],
+  "end": [
+   "P052-blur",
+   "50% 50%"
+  ],
+  "hook_line": "Somewhere it's snowing. *You're here.*",
+  "hook_sub": "The week handled. You show up.",
+  "included": [
+   [
+    "ACCESS",
+    "[Event access \u2014\nconfirm in writing]"
+   ],
+   [
+    "HOSPITALITY",
+    "[Suite / hospitality \u2014\nconfirm]"
+   ],
+   [
+    "STAY",
+    "[Hotel \u2014 confirm]"
+   ],
+   [
+    "TRANSFERS",
+    "[Daily transfers \u2014 confirm]"
+   ]
+  ]
+ },
+ {
+  "slug": "louisville",
+  "place": "Louisville",
+  "month": "May",
+  "year": "2027",
+  "city": "Louisville, KY",
+  "slides": [
+   "cover",
+   "hook",
+   "included",
+   "corporate",
+   "end"
+  ],
+  "cover": [
+   "P181",
+   "28% 50%"
+  ],
+  "hook": [
+   "P174",
+   "50% 45%"
+  ],
+  "incl": [
+   "P183-blur",
+   "50% 50%"
+  ],
+  "corp": [
+   "P178",
+   "45% 50%"
+  ],
+  "end": [
+   "P047-blur",
+   "50% 50%"
+  ],
+  "hook_line": "Big hats. Bigger day. *Your seats, handled.*",
+  "hook_sub": "Dress up. Show up. We handle the rest.",
+  "included": [
+   [
+    "ACCESS",
+    "[Event access \u2014\nconfirm in writing]"
+   ],
+   [
+    "HOSPITALITY",
+    "[Hospitality \u2014 confirm]"
+   ],
+   [
+    "STAY",
+    "[Hotel \u2014 confirm]"
+   ],
+   [
+    "TRANSFERS",
+    "[Daily transfers \u2014 confirm]"
+   ]
+  ]
+ },
+ {
+  "slug": "daytona",
+  "place": "Daytona",
+  "month": "February",
+  "year": "2027",
+  "city": "Daytona Beach, FL",
+  "slides": [
+   "cover",
+   "hook",
+   "included",
+   "end"
+  ],
+  "cover": [
+   "DV05-1_5",
+   "50% 20%"
+  ],
+  "hook": [
+   "DV05-2_5-dof",
+   "50% 30%"
+  ],
+  "incl": [
+   "DV05-0_5-blur",
+   "50% 50%"
+  ],
+  "end": [
+   "DV06-0_5-blur",
+   "50% 50%"
+  ],
+  "hook_line": "You've heard it on TV. *Now feel it.*",
+  "hook_sub": "The week handled. You show up.",
+  "included": [
+   [
+    "ACCESS",
+    "[Event access \u2014\nconfirm in writing]"
+   ],
+   [
+    "HOSPITALITY",
+    "[Hospitality \u2014 confirm]"
+   ],
+   [
+    "STAY",
+    "[Hotel \u2014 confirm]"
+   ],
+   [
+    "TRANSFERS",
+    "[Daily transfers \u2014 confirm]"
+   ]
+  ]
+ }
+]
