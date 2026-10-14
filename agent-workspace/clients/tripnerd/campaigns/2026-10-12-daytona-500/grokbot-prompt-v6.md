@@ -1,5 +1,5 @@
 ---
-title: "Prompt for Grok: improve TripNerd Daytona Reel 'Race day, by the clock' (v6, latest script scored 76/100)"
+title: "Prompt for Grok: improve TripNerd Daytona Reel 'Race day, by the clock' (v6, latest script scored 76/100, reference ads added)"
 type: brief
 client: tripnerd
 campaign_id: 2026-10-12-daytona-500
@@ -12,7 +12,7 @@ tags: [client, daytona, reel, prompt, external-review]
 
 Paste everything below the line into Grok.
 
-**Before you paste:** fill in the **Reference style** line in section 1 (the four Meta reference ads). Grok can't match a style it hasn't been told about.
+**Reference ads:** section 1 links two Meta Ad Library ads. Grok may not be able to open Meta pages; the prompt tells it to say so rather than guess. If it can't, paste screenshots of the two ads into the same chat.
 
 **Before anything posts, get in writing from TripNerd:** (1) that a 2027 Daytona Beach package exists, its date and what's included; (2) that the covered seats in Photos A/B and Videos F/G are TripNerd's; (3) consent for anyone recognizable.
 
@@ -26,7 +26,7 @@ You are a senior performance creative director and Reels editor for a premium sp
 - **Account:** @tripnerd on Instagram, about 4,650 followers. Organic Reel, posting **Sunday or Tuesday, 12–3 PM Central** (when the audience is most active, per Instagram Insights).
 - **Audience for this cut:** race fans and friend groups who might book a race-weekend trip together. **Corporate hosts are out of scope here**; they get a separate Reel.
 - **What counts as success, in order:** 3-second hold and reach to non-followers; sends (shares by DM); saves; profile visits and follows; enquiries through the link in bio.
-- **Reference style (match this):** [Karl: describe the four reference Meta ads: how they open in the first 2 seconds, their pace and cut speed, how the on-screen text looks and moves, the music or sound, their length, and how they end.]
+- **Reference style (match this):** two Meta Ad Library ads Karl chose for their flow, professional look, views and brand awareness: https://www.facebook.com/ads/library/?id=1359090269544806 and https://www.facebook.com/ads/library/?id=1132079595907496 . Open both and match how they open in the first 2 seconds, their pace and cut speed, how their on-screen text looks and moves, their sound, length and ending. Borrow structure and pacing only: never copy their footage, wording, music or branding. **If you cannot open these links, say so at the top of your answer and do not guess what they contain.**
 - **Standard to beat:** TripNerd's owner approved a 25-second Reel called "Their Camera Roll". It shows real guest photos from several events as a phone camera roll (grid, tap, swipe, a suite video that "comes alive", event list, brand-blue end card). This new Reel should feel fresh next to it: no grid, no camera-roll interface.
 
 ## 2. Hard rules (do not break any of them)
@@ -124,7 +124,7 @@ Scored on the TripNerd 100-point rubric below. History: v2 (still photos, clock 
 
 ## 6. What I want from you
 1. **Diagnose:** in five bullets, where a non-follower would scroll away, misunderstand the offer or forget the brand in v6. Be blunt.
-2. **Improve v6** using only the media in section 3 and all eleven rules in section 2, matched to the reference style in section 1. Change only the beats that need it, and say why for each change. Same table format (time, picture with exact source and seconds, on-screen text, sound). 14–18 s.
+2. **Improve v6** using only the media in section 3 and all eleven rules in section 2, matched to the reference ads in section 1 (say which elements you borrowed from each). Change only the beats that need it, and say why for each change. Same table format (time, picture with exact source and seconds, on-screen text, sound). 14–18 s.
 3. **Score your version** on the 100-point rubric in section 5, category by category, with one line of evidence each. Don't inflate scores or predict views; if a category can't improve without new material, say so.
 4. **Two opening hooks** (first 2 s: picture + text + sound) to A/B test against v6's beat 1, at least one using real audio from Video F or G, and why.
 5. **Copy:** three caption first lines (under 125 characters, no banned words) and two end-card headlines.
