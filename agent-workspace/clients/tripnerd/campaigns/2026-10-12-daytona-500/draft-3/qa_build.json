@@ -1,0 +1,374 @@
+{
+ "text_boxes": [
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "This beats watching",
+   "box": [
+    78,
+    1120,
+    1001,
+    1208
+   ]
+  },
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "from home.",
+   "box": [
+    274,
+    1224,
+    806,
+    1290
+   ]
+  },
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "2024",
+   "box": [
+    920,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "Race weekend,",
+   "box": [
+    191,
+    1108,
+    888,
+    1186
+   ]
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "the TripNerd way.",
+   "box": [
+    133,
+    1202,
+    946,
+    1290
+   ]
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "2024",
+   "box": [
+    920,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 3,
+   "card": "Bring your people.",
+   "text": "Bring your people.",
+   "box": [
+    116,
+    1202,
+    964,
+    1290
+   ]
+  },
+  {
+   "beat": 3,
+   "card": "Bring your people.",
+   "text": "2024",
+   "box": [
+    920,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 4,
+   "card": "Headsets on. Drinks up.",
+   "text": "Headsets on.",
+   "box": [
+    244,
+    400,
+    836,
+    465
+   ]
+  },
+  {
+   "beat": 4,
+   "card": "Headsets on. Drinks up.",
+   "text": "Drinks up.",
+   "box": [
+    306,
+    481,
+    774,
+    568
+   ]
+  },
+  {
+   "beat": 4,
+   "card": "Headsets on. Drinks up.",
+   "text": "2023",
+   "box": [
+    923,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 5,
+   "card": "Stay for the burnout.",
+   "text": "Stay for the burnout.",
+   "box": [
+    84,
+    400,
+    996,
+    479
+   ]
+  },
+  {
+   "beat": 5,
+   "card": "Stay for the burnout.",
+   "text": "2023",
+   "box": [
+    923,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 6,
+   "card": "end",
+   "text": "[original logo on #5896E9 plate]",
+   "box": [
+    204,
+    470,
+    876,
+    760
+   ],
+   "logo": true
+  },
+  {
+   "beat": 6,
+   "card": "end",
+   "text": "Daytona Beach 2027",
+   "box": [
+    38,
+    856,
+    1042,
+    944
+   ]
+  },
+  {
+   "beat": 6,
+   "card": "end",
+   "text": "Plan yours · tripnerd.com",
+   "box": [
+    170,
+    984,
+    910,
+    1041
+   ]
+  }
+ ],
+ "beats": [
+  {
+   "beat": 1,
+   "out": "0.0-2.5",
+   "frames": 60,
+   "source": "V06 2.000-3.500 s (frames 60-104 of 30 fps) at 60%, crop x 640-1045 full height",
+   "v06_frames": [
+    60,
+    60,
+    61,
+    62,
+    63,
+    63,
+    64,
+    65,
+    66,
+    66,
+    67,
+    68,
+    69,
+    69,
+    70,
+    71,
+    72,
+    72,
+    73,
+    74,
+    75,
+    75,
+    76,
+    77,
+    78,
+    78,
+    79,
+    80,
+    81,
+    81,
+    82,
+    83,
+    84,
+    84,
+    85,
+    86,
+    87,
+    87,
+    88,
+    89,
+    90,
+    90,
+    91,
+    92,
+    93,
+    93,
+    94,
+    95,
+    96,
+    96,
+    97,
+    98,
+    99,
+    99,
+    100,
+    101,
+    102,
+    102,
+    103,
+    104
+   ]
+  },
+  {
+   "beat": 2,
+   "out": "2.5-4.5",
+   "frames": 48,
+   "source": "V05 0.000-1.958 s (frames 0-47), full frame"
+  },
+  {
+   "beat": 3,
+   "out": "4.5-7.0",
+   "frames": 60,
+   "source": "V05 3.000-5.458 s (frames 72-131), full frame"
+  },
+  {
+   "beat": 4,
+   "out": "7.0-9.5",
+   "frames": 60,
+   "source": "Photo B tripnerd_gallery_07.jpg, crop x 590-1024 full height, static"
+  },
+  {
+   "beat": 5,
+   "out": "9.5-13.0",
+   "frames": 84,
+   "source": "Photo A tripnerd_gallery_05.jpg, crop x 360-772, y 0-733, static"
+  },
+  {
+   "beat": 6,
+   "out": "13.0-16.0",
+   "frames": 72,
+   "source": "End card: navy #202838, original logo file on #5896E9 plate"
+  }
+ ],
+ "audio": {
+  "pass1": "V05 source 0.00-9.00 s -> output 0.00-9.00 s",
+  "pass2": "V05 source 0.00-8.00 s -> output 8.00-16.00 s",
+  "crossfade": "equal-power, output 8.00-9.00 s",
+  "gain_ride": {
+   "floor_dbfs": -17.0,
+   "max_db": 12.0,
+   "max_applied_db": 11.34,
+   "applied_per_250ms_db": [
+    4.4,
+    2.2,
+    0.9,
+    0.2,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.2,
+    0.5,
+    1.0,
+    1.7,
+    3.0,
+    5.4,
+    8.1,
+    10.2,
+    9.9,
+    6.5,
+    2.9,
+    0.7,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.2,
+    0.5,
+    1.0,
+    1.7,
+    3.0,
+    5.4,
+    8.2,
+    10.5
+   ]
+  },
+  "loudnorm_pass1": {
+   "input_i": "-11.22",
+   "input_tp": "-0.51",
+   "input_lra": "2.60",
+   "input_thresh": "-21.22",
+   "output_i": "-13.99",
+   "output_tp": "-3.48",
+   "output_lra": "3.30",
+   "output_thresh": "-23.99",
+   "normalization_type": "dynamic",
+   "target_offset": "-0.01"
+  }
+ }
+}
