@@ -10,12 +10,12 @@ import build_reel3 as b
 import build_reel_hq as h
 
 LAYOUT = sys.argv[1] if len(sys.argv) > 1 else 'full'          # 'full' = photos full-bleed; 'logo' = boxed photos + TripNerd logo
-VAR = 'photo'
+VAR = sys.argv[2] if len(sys.argv) > 2 else 'photo'
 D = b.D
 W, H, FPS, T = 1080, 1920, 30, 18.0
 SR = 48000
 OUT = D + 'out_final_v3/'
-NAME = f'TripNerd-Daytona-Reel-18s-{"FULLSCREEN" if LAYOUT == "full" else "BOXED-LOGO"}.mp4'
+NAME = f'TripNerd-Daytona-Reel-18s-{"FULLSCREEN" if LAYOUT == "full" else "BOXED-LOGO"}{"-burnout-video" if VAR == "video" else ""}.mp4'
 LOGO = D + '../tn/brand-assets/tripnerd-logo-colour-1633x601.png'
 # full-bleed 9:16 crop boxes (x0, y0, x1, y1) in source pixels, chosen to keep the people / card in frame
 FULL_BOX = {'tripnerd-daytona_hospitality-suite.jpg': (270, 0, 571, 535),
@@ -159,9 +159,9 @@ def main():
     # 11.5-14.5 burnout
     if VAR == 'video':
         burn = h.burnout_frames()
-        L = b.text_layer('The burnout. The memories.', 6, anchor='top', y_ref=380, size=84)
+        L = b.text_layer('The burnout. The memories.', 6, year='2023', anchor='top', y_ref=380, size=84)
         idx = [12 + int(np.floor(k * 24 / 30)) for k in range(90)]
-        for i in idx: frames.append(b.comp(burn[i], L))
+        for i in idx: frames.append(lg(b.comp(burn[i], L)))
         QA['cuts'].append({'t': '11.5-14.5', 'what': f'Kling 3.0 Pro animation of Photo A (AI), clip frames {idx[0] + 20}-{idx[-1] + 20} at real speed'})
     else:
         frames += [photo_frame(b.PHOTO_A, 'The burnout. The memories.', 6, year='2023', gap=40, size=84)] * 90
@@ -215,7 +215,7 @@ def main():
     for f in frames: p.stdin.write(np.ascontiguousarray(f).tobytes())
     p.stdin.close(); p.wait()
     QA.update(race_gain_db=round(20 * np.log10(g), 1), burn_gain_db=round(20 * np.log10(gb), 1), premaster=j)
-    json.dump(QA, open(OUT + f'qa_build_{LAYOUT}.json', 'w'), indent=1, default=str)
+    json.dump(QA, open(OUT + f'qa_build_{LAYOUT}_{VAR}.json', 'w'), indent=1, default=str)
     print('done', p.returncode, OUT + NAME)
 
 
