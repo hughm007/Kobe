@@ -49,3 +49,19 @@ tags: [client, phoenix-open, ai-video, spend-gate]
 1. **The prompt's geography vs the frames.** Both frames were shot from the same suite, looking across the tee/desert side. Neither shows the green-and-bunker the prompt flies over, and the start frame is from above, not "low inside" the crowd. The model will invent the middle, which raises the morphing risk. The handoff's own fallback (a simple crowd-to-rail rise) is the lower-risk prompt.
 2. **The opener becomes synthetic.** Keep the "This is the 16th." card on the real bunker blast, not on the AI clip. Policy: no documentary caption on a synthetic shot.
 3. **Disclosure:** the platform AI toggle must be ON for this Reel (`_servicepow/policies/realism-and-disclosure.md` §3). Output name: `TN-PHX-R3_flyup_AI.mp4`.
+
+## Execution: try 1 (2026-10-19, approved by owner: "whichever model will give the best quality and fit")
+- **Model:** `kling_o3_flf` (Kling 3.0 Omni Frames), pro, 4 s, sound off, 9:16.
+- **Frames:** start = media `441493d1…` (START_crowd_clean), end = media `bf535b97…` (END_suite_rail_clean).
+- **Prompt:** the handoff's **fallback** (a crowd-to-rail move matching the real frames), not the verbatim fly-over-the-green prompt.
+- **Job:** `b2a9b47a-5bb9-4479-944f-a64accf08950`. Output: 1080x1920, 24 fps, 97 frames, 4.04 s.
+- **Spend:** quote 5 credits (re-quoted with frames attached); the balance went from 3,603.64 to **3,598.64 (actual 5)**. Try 2 not used.
+
+**QA, done at full size in the Higgsfield sandbox:**
+- **Motion:** a smooth pan from the GA crowd past the canopy pillar to the rail. Guests in the end frame match the real frame.
+- **Faces and crowd:** no warped faces, extra limbs, melting or flicker seen at full size on 4 sampled frames.
+- **FAIL as delivered:** **the model invented legible sponsor wordmarks on the far wall** ("TROOIN", a misspelt **Troon**, a real golf-management company, plus two more boxes).
+- **Fix chosen:** paint the wall band out with the wall's own colour, as on every real shot (`renderC.py` → `render2.paint_out`). It's free and deterministic; a re-roll could invent marks again.
+- **Incidental apparel logos** on caps carry over from the real end frame (as in the source footage).
+
+**Assembly blocked on transfer:** this container's network blocks Higgsfield's CDN. The owner downloads the clip and uploads it here, then `renderC.py` + `mixC.py` build Reel 3 / version C (14.0 s; the drop at 2.0 lands on the real bunker blast).
