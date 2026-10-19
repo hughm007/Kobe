@@ -1749,3 +1749,5 @@ quality gate, claims and brand law after the commit.
 - Video concepts proposed: 1 "Down there / Up here" (recommended), 2 "Phoenix, handled", 3 "This close" (pro-likeness risk), 4 single-shot pan.
 - Built a blind two-step Grok challenge (`campaigns/2026-10-19-phoenix-open/grok-challenge/`); media zip lives outside the repo (scratchpad), not committed.
 - Open: originals + capture dates, TripNerd seat/structure confirmation, V01 release, pro-player decision, hotel name.
+- Grok Step 1 answer received and reconciled (`grok-challenge/reconciliation.md`): Grok won 7 of 11 disputed points (V04 has the real crowd swell; V03 board names Spieth/Hoffman/Kitayama; WM/FedEx wall band in every 16th frame; P01 likely a screenshot; P08 clean crop; P09 evidence-only; my pack re-encode dropped GPS). Claude kept the product-focus and sound-off hook points. Merged concept "Down there / Up here" recommended.
+- NEEDS INPUT: Grok's answer cites owner rules not on record here (Jason face approval, no blurring, banned words incl. "handled" and "send this to…"). If confirmed, the Augusta cover, Phoenix concept 2 and Daytona v2 send line break them.
