@@ -1,6 +1,6 @@
 ---
-title: "TripNerd — client-approved video adverts"
-type: register
+title: "TripNerd — Daytona suite Reel 18 s (approved 2026-10-19)"
+type: profile
 client: tripnerd
 owner: Karl
 status: active
@@ -8,17 +8,9 @@ created: 2026-10-19
 tags: [client, approved, video, register]
 ---
 
-# TripNerd client-approved video adverts
+# Daytona suite Reel, 18 s (pointer)
 
-One row per approved advert. Media is never committed to git: each row names the file and its
-SHA-256 so the master can be matched wherever it is stored (Drive, phone, editor).
-
-| # | Advert | Length | Approved | Approved by | Record |
-|---|---|---|---|---|---|
-| 1 | Hosting spot, drone opening v2 | — | before 2026-10-12 | owner (score 8.4) | see `../campaigns/2026-10-12-unused-footage-plan/footage-usage-ledger.md` |
-| 2 | Their Camera Roll | 25 s | 2026-09-29 | owner | same ledger |
-| 3 | Augusta, handled A6 | — | before 2026-10-12 | Jason | same ledger |
-| 4 | **Daytona suite Reel, 18 s, boxed + logo, moving burnout** | 18.0 s | 2026-10-19 | owner (Karl) | below |
+Index of all approved adverts: [README.md](README.md). Master bytes are not in git.
 
 ## 4. Daytona suite Reel (TN-DAYTONA-001)
 

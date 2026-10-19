@@ -15,7 +15,7 @@ Built from every remote branch (newest copy of each file); see the per-advert re
 
 ## Status facts
 - **No TripNerd advert is recorded as posted** (run-4 `08_Performance/README.md`; growth tracker has no `posted` row).
-- Approved: Hosting spot drone opening v2 (owner score 8.4) · Their Camera Roll 25 s (owner approved 2026-09-29) · **Augusta, handled A6 (approved by Jason)**. · **Daytona suite Reel 18 s (owner approved 2026-10-19)**; register: `../../deliverables/approved-video-adverts.md`.
+- Approved: Hosting spot drone opening v2 (owner score 8.4) · Their Camera Roll 25 s (owner approved 2026-09-29) · **Augusta, handled A6 (approved by Jason)**. · **Daytona suite Reel 18 s (owner approved 2026-10-19)**; register: `../../Client approved adverts/README.md`.
 - The 2026-10-12 "unused footage" scripts checked only two approved adverts, so Script 2 reuses draft footage (V24 0–2, 10.0–11.2; V23 39–41, 48.5–51 all appear in draft cuts). **Do not build Script 2 as written.**
 
 ## Already used (do not reuse)

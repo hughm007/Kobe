@@ -1400,7 +1400,7 @@ month's posting.
 ## 2026-10-19 — TripNerd: Daytona 18 s Reel approved; process and AI rule captured
 
 **Did:** owner approved `TripNerd-Daytona-Reel-18s-BOXED-LOGO-burnout-video.mp4` (SHA-256 3172dafa…).
-Created the TripNerd approved-video register (`clients/tripnerd/deliverables/approved-video-adverts.md`),
+Added it to the existing register `clients/tripnerd/Client approved adverts/` (README row + pointer file),
 added the approval and the used seconds of V05/V06 and the Daytona photos to the footage ledger, and
 wrote the reusable process as `playbooks/ads/real-media-reel.md`.
 

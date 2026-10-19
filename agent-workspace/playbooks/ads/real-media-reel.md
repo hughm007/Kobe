@@ -16,7 +16,7 @@ Use this when a client has real event photos and short phone clips and wants a v
 It replays what got TripNerd's Daytona Reel approved, minus the rounds we wasted.
 Worked example and code: `clients/tripnerd/campaigns/2026-10-12-daytona-500/final-18s/`
 (`final_cut_v3.py`, `build_card_open2s.py`, `compose_music_v3.py`). Approved master:
-`clients/tripnerd/deliverables/approved-video-adverts.md` #4. Company law and the
+`clients/tripnerd/Client approved adverts/2026-10-19-daytona-suite-reel-18s.md`. Company law and the
 blocking-check registry still apply; this file does not restate them.
 
 ## 0. Owner preferences (standing)
