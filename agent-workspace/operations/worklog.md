@@ -1396,3 +1396,18 @@ has been posted.
 **Open:** 12 videos (V01–V06, V09–V11, V20–V22) have never been watched or logged; Drive video
 download is blocked in this environment, so Karl logs them. Jason's answers to asks 1–4 gate this
 month's posting.
+
+## 2026-10-19 — TripNerd: Daytona 18 s Reel approved; process and AI rule captured
+
+**Did:** owner approved `TripNerd-Daytona-Reel-18s-BOXED-LOGO-burnout-video.mp4` (SHA-256 3172dafa…).
+Created the TripNerd approved-video register (`clients/tripnerd/deliverables/approved-video-adverts.md`),
+added the approval and the used seconds of V05/V06 and the Daytona photos to the footage ledger, and
+wrote the reusable process as `playbooks/ads/real-media-reel.md`.
+
+**Decided (owner):** AI is allowed in any advert for any client unless the owner says otherwise; use it
+without asking, the owner judges whether it looks too AI. Recorded in `.claude/ADVERT-BRIEF.md`
+(loaded every session).
+
+**Open:** the master MP4 lives only in this session's container and in the chat; save it to Drive.
+Father-son and wow-guests photos need their years from TripNerd. "Now booking 2027" waits on Jason.
+This work is on branch `claude/friendly-feynman-v2rci5`, not yet on `main`.

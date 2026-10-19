@@ -37,3 +37,15 @@ replace or override any Service Pow policy or gate.
 Before filling the brief for a client, read that client's folder in the repo root and use it.
 - TripNerd: `Tripnerd Oct Insights/` (audience data, provisional 3/10 marketing review,
   target audience of US men aged 35 to 54, and the targeting plan).
+
+## Owner standing rule: AI in adverts (2026-10-19)
+
+AI-generated or AI-animated media is allowed in any advert, for any client, unless the owner
+says otherwise for that job. Use it without asking first and without defaulting to an all-real
+fallback. The owner is the judge of whether something looks too AI: only drop an AI shot on
+your own if it is plainly, badly fake; otherwise use it and let the owner decide. This does not
+change the platform AI-content toggle at posting, and it never permits a synthetic person
+presented as a real customer or reviewer (realism-and-disclosure policy §2).
+
+Process that produced the approved TripNerd Daytona Reel, to reuse on every Reel:
+`agent-workspace/playbooks/ads/real-media-reel.md`.

@@ -15,7 +15,7 @@ Built from every remote branch (newest copy of each file); see the per-advert re
 
 ## Status facts
 - **No TripNerd advert is recorded as posted** (run-4 `08_Performance/README.md`; growth tracker has no `posted` row).
-- Approved: Hosting spot drone opening v2 (owner score 8.4) · Their Camera Roll 25 s (owner approved 2026-09-29) · **Augusta, handled A6 (approved by Jason)**.
+- Approved: Hosting spot drone opening v2 (owner score 8.4) · Their Camera Roll 25 s (owner approved 2026-09-29) · **Augusta, handled A6 (approved by Jason)**. · **Daytona suite Reel 18 s (owner approved 2026-10-19)**; register: `../../deliverables/approved-video-adverts.md`.
 - The 2026-10-12 "unused footage" scripts checked only two approved adverts, so Script 2 reuses draft footage (V24 0–2, 10.0–11.2; V23 39–41, 48.5–51 all appear in draft cuts). **Do not build Script 2 as written.**
 
 ## Already used (do not reuse)
@@ -23,6 +23,9 @@ Built from every remote branch (newest copy of each file); see the per-advert re
 |---|---|---|
 | V23 (Players suite, 54.1 s) | picture 29.8–33.2 | 1.2–3.6, 4.2–5.2, 10.3–12.3, 18.65–19.55, 24.0–27.7, 30.0–32.2, 40.4–41.7, 46.0–48.0, 48.6–54.1 |
 | V24 (Players suite, 31.1 s) | picture 13.6–15.8; audio 13.3–16.9, 19–27 | picture 0.2–1.6, 8.4–22.0; audio 0–3.8, 8.0–28 |
+| V05 (Daytona 2024) | Daytona 18 s: picture 0.0-3.5; audio 0.0-3.5, 3.5-8.0 | earlier Daytona drafts (see campaign folder) |
+| V06 (Daytona 2024) | Daytona 18 s: picture 2.00-3.47; audio 0.0-2.25, 2.0-4.0, 4.0-6.0 | earlier Daytona drafts |
+| Daytona photos | Daytona 18 s: hospitality-suite, Photo A (gallery_05, as Kling burnout), Photo B (gallery_07), father-son, wow-guests | — |
 | V16 | — | picture 2.0–6.5, 8.5–10.0; audio 2.0–13.9 |
 | V07 | — | picture 8.5–10.0 (and 1.0–4.6, 14.8–16.2 if HF 2585923a = V07); audio bed 0–16.2 |
 | V08 | — | picture 3.0–6.0 |
@@ -35,7 +38,7 @@ Built from every remote branch (newest copy of each file); see the per-advert re
 | NERDS website gallery | 10 heroes + 71 tiles in Their Camera Roll | — |
 
 ## The untouched pool
-**Videos never cut:** V01–V04, V20–V22 (Phoenix, 7) · V05–V06 (Daytona 2024) · V09–V11 (Derby) · V13 (path to 17, flare) · V14 (17th crowds; scoreboard) · V17 (possible duplicate of V16) · Daytona 2022 suite tour `553c8ee2`. Excluded for third-party branding: V12, V15.
+**Videos never cut:** V01–V04, V20–V22 (Phoenix, 7) · V09–V11 (Derby) · V13 (path to 17, flare) · V14 (17th crowds; scoreboard) · V17 (possible duplicate of V16) · Daytona 2022 suite tour `553c8ee2`. Excluded for third-party branding: V12, V15.
 **Twelve of these (V01–V06, V09–V11, V20–V22) have never been watched or logged.** Their content is unknown.
 
 **Unused stretches of V23 (no built cut):** 0–1.2, 5.2–10.3 (avoid the event banner at 3.5–5.5), 12.3–18.65 (TV at 17.5: crop), 19.55–24.0 (TVs at 19.8, 20.5), 27.7–29.5, 33.25–40.4, 41.7–46.0 (faces), 48.0–48.6.

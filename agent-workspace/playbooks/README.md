@@ -35,6 +35,7 @@ whole point of the folder.
 ### Advertising
 - [`ads/campaign-launch.md`](ads/campaign-launch.md) — planning, build, QA, launch
 - [`ads/creative-testing.md`](ads/creative-testing.md) — how we test creative so results mean something
+- [`ads/real-media-reel.md`](ads/real-media-reel.md) — photos + phone clips → approved-quality Reel; owner preferences (AI allowed, owner judges)
 
 ### Content
 - [`content/content-engine.md`](content/content-engine.md) — planning and producing content
