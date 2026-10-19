@@ -1743,3 +1743,9 @@ quality gate, claims and brand law after the commit.
 - **Grok prompt:** `grokbot-prompt-script-1.md` (self-contained: rules, exact media descriptions, current script, known weaknesses, asks).
 - **Learning recorded:** `knowledge/learnings/2026-10-13-describe-real-media-from-full-size-views-not-contact-sheets.md`.
 - Nothing built, generated, spent or posted.
+
+## 2026-10-19 — TripNerd Phoenix: owner footage reviewed, Grok challenge pack
+- Owner uploaded 4 iPhone videos (IMG_0075/0192/0112/0097, 720x1280 copies, GPS = TPC Scottsdale) and 10 photos. Reviewed at full size plus audio: no real crowd roar in any clip; V01 has an identifiable face 0–1.5 s; P08 "2025" board is the same moment as P09 "2024" (label 2024 only); P10 is an unrelated Augusta eclipse composite (exclude).
+- Video concepts proposed: 1 "Down there / Up here" (recommended), 2 "Phoenix, handled", 3 "This close" (pro-likeness risk), 4 single-shot pan.
+- Built a blind two-step Grok challenge (`campaigns/2026-10-19-phoenix-open/grok-challenge/`); media zip lives outside the repo (scratchpad), not committed.
+- Open: originals + capture dates, TripNerd seat/structure confirmation, V01 release, pro-player decision, hotel name.
