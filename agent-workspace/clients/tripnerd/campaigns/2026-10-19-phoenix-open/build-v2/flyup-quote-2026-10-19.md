@@ -65,3 +65,34 @@ tags: [client, phoenix-open, ai-video, spend-gate]
 - **Incidental apparel logos** on caps carry over from the real end frame (as in the source footage).
 
 **Assembly blocked on transfer:** this container's network blocks Higgsfield's CDN. The owner downloads the clip and uploads it here, then `renderC.py` + `mixC.py` build Reel 3 / version C (14.0 s; the drop at 2.0 lands on the real bunker blast).
+
+## Owner review of try 1, and the redo request (2026-10-19)
+**Owner verdict on try 1: REJECTED.**
+- No aerial: it's a sideways wipe.
+- The crowd is frozen.
+- "TROON" is legible.
+
+**Lesson:** a first-and-last-frame model given two frames from the same vantage interpolates a pan between them. It cannot invent an aerial.
+
+**Redo spec (owner):**
+- Image-to-video, **start frame only**: a real bunker/green frame.
+- The owner's drone-reveal prompt plus a negative prompt.
+- 9:16, about 4 s, the best Kling or Veo model.
+- Quote first, 2 tries maximum.
+- **Edit:** the drone reveal (about 2 s), card "This is the 16th.", then a hard cut on the music hit to the real suite rail, card "Now watch it from up here."
+
+**Start frame:** `drone/START_green_bunker_clean.png` (V03 src about 5.03 s).
+- Green, flag and bunker, with the player seen from behind.
+- Wall logos painted out in the wall's own colour; residual specks removed.
+
+**Quotes (`get_cost`, 9:16, 4 s, nothing submitted):**
+
+| Model | Per try | 2 tries |
+|---|---|---|
+| Veo 3.1 preview (best variant), high | **40** | 80 |
+| Veo 3.1 preview, ultra | 60 | 120 |
+| Kling 3.0, pro, silent | 7 | 14 |
+
+**Notes:**
+- `negative_prompt` is not a documented parameter on either model. The API accepted it without error, but it may be ignored. The prompt already carries the exclusions.
+- **Policy flag:** "This is the 16th." over a generated stadium reveal frames synthetic footage as the real venue (`realism-and-disclosure.md` §1). Suggested swap: **"Picture the 16th."**
