@@ -211,3 +211,21 @@ tags: [client, phoenix-open, ai-video, spend-gate]
 
 - **Blocked:** the owner uploads the cleaned PNG to Higgsfield and sends the media_id; this container cannot upload.
 - **Note:** the prompt names TPC Scottsdale; the generated venue is synthetic, so the AI toggle stays ON.
+
+### Veo run on the owner's TPC Scottsdale prompt (2026-10-20)
+- **Uploaded media `9d5a35ad…` (`TN-PHX_V03_lastframe.png`) was the RAW frame** (WM Phoenix Open and FedEx on the wall).
+  - Cleaned in the Higgsfield sandbox: wall rows 403–613 filled with the wall's own colour.
+  - Re-uploaded from the sandbox as **`59b82fa7-9d57-44e1-a365-8d1e170294fb`** and used as the start frame.
+- **Run:** `veo3_1` preview high, 6 s, 9:16. The owner's prompt, audio line and negative prompt verbatim.
+  - Job `e55473f1-edc0-4f28-a923-4f964d6e6ee0`. **60 credits.**
+- **QA (full size):**
+
+| Check | Result |
+|---|---|
+| Golfer still, start frame matched | ✅ |
+| Camera eases to a hold for the final second | ✅ |
+| Setting | ✅ Sonoran desert, saguaros, mountains, a two-storey skybox building, packed stands |
+| Camera height | ⚠ A pull-back and tilt-up ending in a view across the hole from stand level, with fan heads in the foreground. **Not a high aerial.** |
+| Crowd | ⚠ Mostly standing, small movements; little visible clapping or cheering |
+| Text | ❌ **Legible pseudo-text on navy boards** ("Ivodecees / BHO 201…") at wall level, left and right, in the final 2–3 s |
+| Native audio | ❌ **Fades** (−30 → −39 dB) instead of swelling; it would be replaced by the real-crowd mix |
