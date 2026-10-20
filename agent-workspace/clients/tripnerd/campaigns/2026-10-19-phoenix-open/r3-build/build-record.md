@@ -47,3 +47,17 @@ tags: [client, phoenix-open, reel, real-footage, build]
 - Jason's written confirmations (seats; 2027 package; faces).
 - Derby static for ticket matching.
 - Dual gate not run. **Owner review: PENDING.**
+
+## v5 (owner script v5, 2026-10-20): AI ticket opener, STOPPED at QA
+- **Generation:** Veo 3.1 preview high, 4 s, 9:16, the owner's prompt and negative prompt verbatim. Job `32283283-3226-43ef-85e9-ed03f0c54f4f`. **40 credits** (one try, under the per-try level the owner approved earlier). Balance 3,092.14 → 3,052.14.
+- **QA FAIL (full size):**
+  1. **It reads as a baseball stadium,** not the 16th: a red-dirt warning track along the field, MLB-style light-tower press boxes, a flat oval outfield.
+  2. **The camera is not locked off:** it dollies forward and up about 30% of frame height. The stub slides off the bottom; curtains swing in from about 3 s.
+  3. **No rack focus:** the background just sharpens as the camera moves.
+  4. **Passes:** blank stub (no text), no hands or faces, condensation on the glass.
+- **Not built further; no more spend.**
+- **Prepared:** `renderR5.py` (the stub face is perspective-warped and blur-matched to the stub's own focus every frame) and `mixR5.py` (one music track, real audio only on V03, ducked about 40% under the swing, slammed back at 5.6 s).
+- **Blocked on:**
+  - an opener decision;
+  - Wyatt's Pixabay track file.
+- **No-AI alternative mocked:** `r3/opener_alt_mock.jpg`, the ticket graphic over the **real P02 photo of the 16th from the suite**, with a blur-based rack focus between ticket and stadium. Free, and truthful about the venue.
