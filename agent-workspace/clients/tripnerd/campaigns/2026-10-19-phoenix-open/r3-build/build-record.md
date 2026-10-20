@@ -61,3 +61,26 @@ tags: [client, phoenix-open, reel, real-footage, build]
   - an opener decision;
   - Wyatt's Pixabay track file.
 - **No-AI alternative mocked:** `r3/opener_alt_mock.jpg`, the ticket graphic over the **real P02 photo of the 16th from the suite**, with a blur-based rack focus between ticket and stadium. Free, and truthful about the venue.
+
+## v5 opener, attempt 2 (owner brief: ledge → tilt-up → real 16th), 2026-10-20
+- **Owner frames uploaded:**
+  - `34f01443` = V01 0.0 (start reference);
+  - `b359cb91` = desert / stands view;
+  - `43fd954f` = the full 16th green from the suite. **Used as the END frame**, since it best matches "settle on the full 16th".
+- **Start frame:** GPT Image 2.5, high, 2k, referenced on V01 0.0. Job `a5697fad-4367-4648-b33f-62750417abb8`, **2.75 credits**.
+  - Matches the suite: canopy, white posts, brushed-metal ledge, glass rail, the 16th behind.
+  - Plastic cup with ice, lime and condensation; **blank** cream stub with a torn edge; no hands.
+- **Move:** Kling 3.0 pro, 3 s, silent, start = that image, end = the real frame. The owner's negative prompt verbatim. Job `23373a17-4a99-4ef6-aed8-f716a394ee41`, **5.25 credits**.
+  - Output 1080x1912, 24 fps, 73 frames.
+- **QA (full size):**
+  - ✅ Holds on the ledge (cup + blank stub) to about 0.8 s.
+  - ✅ Tilts up past the canopy, posts and glass rail; guests are seen from behind; **lands exactly on the real 16th frame**.
+  - ❌ About 1.0–1.15 s: **the cup smears and warps** as the camera passes it (3–4 frames).
+  - ⚠ About 2.0–2.3 s: the move swings through an **invented stand with garbled banner lettering** and a sun flare before settling. It's fast, but readable on a pause.
+  - The move is a tilt **plus** a right pan, not a pure tilt.
+- **Edit plan:**
+  - ticket face tracked on the stub 0.0–0.8 s;
+  - speed-ramp through 1.0–2.3 s (about 1.6x) so the smear and the invented stand pass in about 6 frames;
+  - hold the real end frame;
+  - cut at 3.0 s to V03 at 1.9 s.
+- **Total spend this attempt:** 8.0 credits.
