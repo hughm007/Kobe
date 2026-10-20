@@ -96,3 +96,23 @@ tags: [client, phoenix-open, ai-video, spend-gate]
 **Notes:**
 - `negative_prompt` is not a documented parameter on either model. The API accepted it without error, but it may be ignored. The prompt already carries the exclusions.
 - **Policy flag:** "This is the 16th." over a generated stadium reveal frames synthetic footage as the real venue (`realism-and-disclosure.md` §1). Suggested swap: **"Picture the 16th."**
+
+## Drone reveal: execution (2026-10-19/20)
+**Owner approved:** Veo 3.1 (`veo3_1`, variant `veo-3-1-preview`, quality high), 9:16, 4 s, start frame media `48c59f54…`, **80 credits max**.
+**Card:** the owner kept "This is the 16th." after the policy flag. This is recorded as the owner's decision.
+
+| Try | Job | Prompt | Result (full-size QA in the Higgsfield sandbox) |
+|---|---|---|---|
+| 1 | `7ab0214c-99a7-48bc-96b8-29e6887c3b3d` | Owner's prompt verbatim plus the negative prompt (passed through) | **Not a high rise:** a continuous pull-back and tilt-up from the green that reveals invented **towering multi-tier grandstands** (the real 16th's stands are lower). The crowd is **alive** (fans clapping in the foreground, backs of heads). **Invented pseudo-text boards** ("O6AN'S", "KIEI") appear from about 2.4 s; a small illegible emblem sits on the upper facade from about 1.3 s. |
+| 2 | `b74c06f5-8666-4d29-8dc7-c23c15bc1575` | The same, with an explicit vertical climb and "all walls, boards and banners are plain blank white" | **Clean:** no text or logos found. But the **motion is weak:** a slow pull-back and slight tilt, the stands barely change, and the player stands still. No aerial. |
+
+- **Spend:** 2 × 40 = **80 credits** (balance 3,598.64 → **3,518.64**). The cap is reached; no further tries without new approval.
+- **Finding:** with a ground-level phone start frame, Veo keeps the camera plausible for that vantage and will not take it "high into the sky". A true aerial needs either an already-elevated start frame or text-to-video. Text-to-video would fully invent the venue.
+- **Assembly:** `renderD.py` + `mixD.py`, dry-run verified with a stand-in hook. The timeline is 14.0 s:
+  - 0–2 s: drone + "This is the 16th.";
+  - **2.0: hit, then a hard cut to the real rail** with "Now watch it from up here.";
+  - 3.5: the real blast (slow motion, snap at 5.5);
+  - 6.5: "Pros play right below.";
+  - 9.0: the rail photo (DRAFT line);
+  - 11.0: end card.
+- **Blocked:** the clip has to be downloaded by the owner (Higgsfield's CDN is blocked from this container).
