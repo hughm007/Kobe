@@ -125,3 +125,13 @@ tags: [client, phoenix-open, ai-video, spend-gate]
   - **Ball: PASS.** It is visible left of the flagstick in every sampled frame from 0.0 to 3.95 s and shrinks naturally with the pull-back.
   - **Move:** a continuous pull-back and tilt-up that reveals packed stands; the crowd is alive. Still not a high aerial.
   - **Text: FAIL after about 2.0 s.** A dark board reading "RGFTOH" enters at the left edge, and tiny marks appear on the upper facade boards by 3.9 s. The edit uses about 0–2.0 s; the board's entry at the left edge is handled by a slight punch-in or trim at assembly, then checked frame by frame.
+
+### Owner review of try 3: "feels dead". Next spec
+- **The owner wants the player to hit the shot**, the crowd to erupt (as energetic as real, or more), and only the camera angle to change (a pull-back and rise).
+- **Root cause:** the start frame was taken *after* the shot (the player standing still), so there was nothing to animate.
+- **New start frame:** `drone/START_backswing_clean.png`, V03 src 2.62 s, at the top of the backswing. Wall logos painted out and specks removed; no rail banner in this frame.
+- **Prompt:** swing → sand explodes → the ball arcs onto the green and stops left of the flagstick, staying visible → the stands erupt → the camera rises and pulls back from impact.
+- **Quotes:** Veo 3.1 preview, high, 9:16: **6 s = 60 credits** (recommended, for room to land the action and the climb); 4 s = 40.
+- **Policy notes:**
+  - The crowd eruption is generated, and stronger than the real recorded reaction. That is the owner's creative choice, with the AI toggle ON.
+  - The pro is recognisable from the real event: organic use only until cleared.
