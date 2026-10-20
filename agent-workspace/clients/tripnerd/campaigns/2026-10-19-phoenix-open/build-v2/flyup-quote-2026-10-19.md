@@ -229,3 +229,22 @@ tags: [client, phoenix-open, ai-video, spend-gate]
 | Crowd | ⚠ Mostly standing, small movements; little visible clapping or cheering |
 | Text | ❌ **Legible pseudo-text on navy boards** ("Ivodecees / BHO 201…") at wall level, left and right, in the final 2–3 s |
 | Native audio | ❌ **Fades** (−30 → −39 dB) instead of swelling; it would be replaced by the real-crowd mix |
+
+### DELIVERED: one-shot v1, `TN-PHX_bunker_oneshot_AI_v1.mp4` (owner: "trim to 1.5–2 s, after the real V03, flow smoothly")
+- **Frame match:** the Veo start image is **V03's very last frame** (8.14 s; best-match error 6.8 vs ≥12 for its neighbours).
+  - The real part therefore runs **2.47 s → 8.14 s** (171 frames, 5.70 s): the real swing, splash, ball landing and spin-back, and the golfer standing during the real crowd reaction.
+  - Untouched apart from the standing wall-logo cover and despeck.
+- **AI part:** the whole 6 s Veo move retimed into **2.0 s** (59 frames).
+  - Smoothstep easing: it starts at the real shot's pace and settles into the hold. Optical-flow in-betweens; a 4-frame dissolve at the join.
+  - **The two invented lettered navy boards are covered** with the wall's own colour, keyframe-tracked and snapped to the board pixels. Verified at full size from 6.2 s to the end.
+- **Sound (real recordings only):**
+  - V03's audio with its real splash; the real crowd +6 dB after the ball lands.
+  - Under the aerial: the V03 crowd carried on, V04's real roar (peak placed on the hold), V02 and V01 stadium bed, all ramped.
+  - Ends at its loudest (−13 dB per 0.25 s on the final hold).
+  - **−14.3 LUFS integrated, −3.4 dBTP.** No synthesised sounds, no music.
+- **Checks:**
+  - **Spec:** 7.67 s, 1080x1920, 30 fps, H.264 plus AAC.
+  - **Join:** smooth (frame difference 1–3 at frame 171; no spike).
+  - **Mid-move motion:** a smooth peak (no jump).
+- **SHA-256 (first 16):** `295c396438c9961f`
+- **Not run:** dual gate. **Owner review:** PENDING. The AI toggle is required.
