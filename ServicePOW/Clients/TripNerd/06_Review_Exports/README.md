@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: active
 created: 2026-10-08
-updated: 2026-10-08
+updated: 2026-10-20
 tags: [adverts, register, review-exports, index]
 ---
 
@@ -119,6 +119,7 @@ These live as scripts and campaign notes, not as adverts. Each is listed once:
 | Hosts carousel C02 | v3 | AM |
 | Fan Experiences carousel C03 | held | AM |
 | Launch-week Story poll | v4, BLOCK | AM |
+| **Derby ticket-stub statics** (4:5 PNGs, 2026-10-20): "Everyone's filming it." and "The bubbly's cold." | v1, files in [`2026-10-20-derby-ticket-statics/`](2026-10-20-derby-ticket-statics/); owner review, and Jason to confirm the date and checklist | here: `2026-10-20-derby-ticket-statics/` |
 | IG Story week v3 | zip https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/923c510a-90d0-463c-8fc5-5d52daa28911.zip | QD |
 
 **Source of this register:** a read-only scan of every branch on 2026-10-08. Every link above was checked verbatim against its branch record.
