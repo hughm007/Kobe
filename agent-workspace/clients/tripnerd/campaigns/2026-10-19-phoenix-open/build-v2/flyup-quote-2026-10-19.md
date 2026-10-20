@@ -135,3 +135,19 @@ tags: [client, phoenix-open, ai-video, spend-gate]
 - **Policy notes:**
   - The crowd eruption is generated, and stronger than the real recorded reaction. That is the owner's creative choice, with the AI toggle ON.
   - The pro is recognisable from the real event: organic use only until cleared.
+
+### Try 4: energetic version (owner: 6 s, "hit the shot, crowd roars, then zoom out")
+- **Start frame:** the owner's `TN-PHX_bunker_address.png` (V03 at about 2.0 s, the player at address, 720x1280).
+  - **It carried** the WM Phoenix Open scoreboard, the "50/50 RAFFLE / #ThePeoplesOpen / $35,840 GUARANTEED JACKPOT" line, and FedEx and WM on the wall.
+  - **Cleaned in the Higgsfield sandbox:** the wall rows filled with the wall's own colour (stopping before the camera operator); the frame cropped below the scoreboard (613x1090 → 1080x1920, a 1.17x reframe).
+  - Uploaded from the sandbox as media `546b67ef-5b0e-4b17-b9a7-b809b2eb8cbd`.
+- **Model:** `veo3_1`, veo-3-1-preview, high, 6 s, 9:16. Native audio prompted as a club thud then a crowd roar.
+- **Job:** `3745604e-3453-4fc0-a3f8-8072aa7b1fe8`. **60 credits** (balance 3,478.64 → **3,418.64**).
+- **Total AI spend on the Phoenix hook:** 5 (Kling) + 40 + 40 + 40 + 60 = **185 credits**.
+- **QA (full size):**
+  - **Swing: PASS.** The backswing and downswing play out; the sand explodes at about 2.3 s.
+  - **Crowd: PASS, strong.** The stands erupt with arms up from about 3.4 s. Native audio goes from −35 to −12 dB at 3.5 s (a real roar build). Foreground spectators are seen from behind.
+  - **Camera:** a pull-back and tilt-up from impact, revealing packed multi-tier stands. A clear reveal, but not a very high aerial.
+  - **Text/logos: PASS.** Walls blank; no lettering found in the revealed stands.
+  - **Ball: FAIL.** It leaves with the sand spray, but no ball is found on the green from about 3.3 s (white-blob search plus zoomed flag crops). No visible landing, backspin or stop.
+- **Recommendation to the owner:** keep this take (energy and roar) and add a **broadcast-style ball tracer**: a composited graphic arc and landing marker, as TV does, honest as a graphic. Or a 5th try from a tighter start frame (another 60).
