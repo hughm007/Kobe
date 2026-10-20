@@ -116,3 +116,12 @@ tags: [client, phoenix-open, ai-video, spend-gate]
   - 9.0: the rail photo (DRAFT line);
   - 11.0: end card.
 - **Blocked:** the clip has to be downloaded by the owner (Higgsfield's CDN is blocked from this container).
+
+### Try 3: owner-requested redo of try 1 ("the golf ball disappears")
+- **Diagnosis:** the real ball is in the start frame, but it is about 6 px wide (at x≈477, y≈987, just left of and above the flagstick base). The model treated it as noise. The dark object behind the flag is a course camera on a stand, not the ball.
+- **Change:** same model, settings and frame. The prompt states that a single white ball rests motionless left of the flagstick, stays visible in every frame and is kept in view near the centre; "disappearing ball, vanishing objects" was added to the negative prompt. Higgsfield's "IN THE DARK" preset suggestion was declined as unrelated.
+- **Job:** `8ceb52c4-e296-47e2-ae8d-e25a538d8155`. **40 credits**, approved by the owner's "redo, try one"; this one try is above the earlier 80 cap. Total drone spend so far: 120.
+- **QA (full size):**
+  - **Ball: PASS.** It is visible left of the flagstick in every sampled frame from 0.0 to 3.95 s and shrinks naturally with the pull-back.
+  - **Move:** a continuous pull-back and tilt-up that reveals packed stands; the crowd is alive. Still not a high aerial.
+  - **Text: FAIL after about 2.0 s.** A dark board reading "RGFTOH" enters at the left edge, and tiny marks appear on the upper facade boards by 3.9 s. The edit uses about 0–2.0 s; the board's entry at the left edge is handled by a slight punch-in or trim at assembly, then checked frame by frame.
