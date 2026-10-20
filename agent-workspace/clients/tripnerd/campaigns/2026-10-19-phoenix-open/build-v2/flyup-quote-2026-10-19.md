@@ -180,3 +180,19 @@ tags: [client, phoenix-open, ai-video, spend-gate]
 - The real crowd swell is boosted after the ball lands.
 - Under the aerial: real Phoenix crowd roars (V03 tail plus V04's real swell, plus suite ambience), boosted.
 - No synthesised impacts or metallic sounds. Final mix −14 LUFS / −1 dBTP.
+
+### One continuous shot: real 2.47 → 5.03 s plus a Kling pull-back (owner: "Kling first, start at 2.47")
+- **Start frame:** the owner uploaded media `855433bb…`. That is `START_green_bunker_clean.png` (V03 at about 5.03 s), not the 4.70 frame; verified in the sandbox.
+  - **No re-upload needed:** the real clip now runs to that exact frame (ball spun back, settling).
+  - `stitchE.py` ends the real part on the identical PNG, so the AI clip continues from the same pixels.
+- **Kling:** `kling3_0` pro, 6 s, silent, 9:16. Job `70ba6e1a-b4b4-4d39-9330-8186b7dec3cb`. **10.5 credits** (quoted with the frame attached).
+- **QA (full size):**
+  - First frame matches the real frame.
+  - A smooth slow pull-back and tilt-up; the stands cheer with arms raised, natural at this distance.
+  - Walls plain; one tiny illegible dark sign.
+  - Invented background: pines, trees and buildings (not Scottsdale desert).
+  - **Not a high aerial** (consistent with every model from a ground-level start frame).
+- **Build plan:**
+  - `stitchE.py`: 78 real frames, then Kling 24→30 fps via optical-flow in-betweens; 3-frame dissolve at the join; about 8.6 s.
+  - `mixE.py`: real-only audio, the real splash, +6 dB crowd after landing, a layered real-crowd crescendo under the aerial, −14 LUFS. Dry-run verified with a stand-in.
+- **Blocked:** the owner downloads the Kling clip and uploads it here (Higgsfield's CDN is blocked from this container).
