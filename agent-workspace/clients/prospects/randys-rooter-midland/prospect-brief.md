@@ -60,3 +60,17 @@ Sources: https://www.ibegin.com/directory/visit/10548388 · https://directory.ye
 1. The current post says nothing about plumbing; a scroller can't tell who posted it or why.
 2. The new version keeps their idea and adds a reason to care, a reason to call, and the number.
 3. **Test:** H1 vs H2 as a small boosted local test. Their 3.8 Google rating is a second offer: review generation.
+
+## v2 (2026-10-20): editorial redesign
+Karl liked the wording but said v1 "looks like AI slop". v2 keeps the copy and changes only the layout. Builder: scratchpad `randys_rooter/build_v2.py`.
+
+| Change | v1 | v2 |
+|---|---|---|
+| Photo | Drop-shadowed, rounded card | Full-bleed photo |
+| Alignment | Everything centred | Left-aligned on an 84 px grid |
+| Colour | Several accents | One accent colour, used on the payoff line |
+| Sticker | Tilted "TRASH" sticker | Removed |
+| CTA | Pill button and navy block | Thin rule, wordmark on the left, phone number on the right |
+| Labelling | — | A small caps label: "KITCHEN DRAIN TIP" |
+
+**Limit:** the source photo is 600×380, so the full-bleed photo is upscaled about 1.8× (feed) or 2.5× (Story). That's acceptable on a phone. Production needs their own high-resolution photo.
