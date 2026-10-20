@@ -80,3 +80,32 @@ The owner reports Ad 1 is client approved. His polish brief: keep all copy, the 
   - the SAP banner on the rail wall, replaced with the wall section 60 px to its right, so the rail stays continuous.
 
   No people or other objects were touched or added. To revert, remove `retouch=` from the v1.1 spec. The signs then show, and the only way to hide them would be to let the Polaroid touch the rail.
+
+## v2 of Ad 1 (2026-10-20): engagement pass on the client-approved v1
+
+**Base:** the approved v1, as the owner attached it, not v1.1. The copy, ticket layout, Polaroid crop and position, and logo file and placement are unchanged.
+
+**File:** `TN-DERBY-01-everyones-filming-it-v2.png`, MD5 `49e69bc8a4a43eba14af57bd5a852c7a`.
+
+**Verified unchanged:**
+- The headline-to-checklist region of the ticket is pixel-identical to v1 (max difference 0).
+- The logo pixels are identical to v1.
+- The build now reproduces v1, v1.1 and Ad 2 byte for byte. A label offset changed in the v1.1 round had broken this; it is fixed.
+
+**What changed:**
+- **Crowd:** the lower crowd is darkened and desaturated by 12 % on a smooth ramp from y 760 to 860, above which the horses and rail are untouched. Mean luminance of the bottom third went from 121.4 to 106.3.
+- **Polaroid photo:** warmer and brighter (brightness 1.08, a slight red lift, a slight blue cut).
+- **Depth:**
+  - three-layer shadows on the ticket and Polaroid (contact, mid, ambient);
+  - the ticket's bottom-right corner is lifted: lighter paper, an extra shadow underneath and no crease line;
+  - the paper grain is unchanged.
+- **One human detail:** a small hand-drawn arrow from "Ours:" to the TripNerd banner.
+- **Stamp:**
+  - freshly inked in a deeper blue, with a slight ink spread on the ring and type;
+  - uneven density, heavier on one side; rotated −14°;
+  - the mascot is still cropped from the real logo file, in original colours.
+- **Not done, on purpose:** the optional "ticket over a raised phone" pop-out. The ticket sits in the sky, and the nearest phones are about 70 px below it. Moving it would change the approved layout and pull the eye down before the headline.
+
+**Caption (owner to approve), 67 characters:** "Filming it or living it? 🐎 Tell us which one you were on Derby Day."
+**Hashtags:** #DerbyDay #Louisville #TripNerd #FanExperiences #BucketListTravel
+**Trademark caution:** "Kentucky Derby" is a registered mark of Churchill Downs, so #KentuckyDerby is left off the paid version. "Derby Day" is used descriptively.

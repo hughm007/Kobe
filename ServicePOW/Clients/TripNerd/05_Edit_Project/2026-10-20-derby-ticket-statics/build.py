@@ -32,10 +32,16 @@ def shadow_of(rgba, blur, alpha, off):
     big = Image.new('RGBA', (rgba.width+2*pad, rgba.height+2*pad), (0, 0, 0, 0)); big.alpha_composite(sh, (pad+off[0], pad+off[1]))
     return big.filter(ImageFilter.GaussianBlur(blur)), pad
 
-def paste_rot(base, rgba, cx, cy, deg, shadow=(14, 120, (6, 10))):
+def paste_rot(base, rgba, cx, cy, deg, shadow=(14, 120, (6, 10)), layers=None, corner=None):
     r = rgba.rotate(deg, resample=Image.BICUBIC, expand=True)
-    sh, pad = shadow_of(r, shadow[0]*S, shadow[1], (shadow[2][0]*S, shadow[2][1]*S))
-    base.alpha_composite(sh, (int(cx - r.width/2 - pad), int(cy - r.height/2 - pad)))
+    for sd in (layers or [shadow]):     # e.g. a tight contact shadow plus a wide ambient one
+        sh, pad = shadow_of(r, sd[0]*S, sd[1], (sd[2][0]*S, sd[2][1]*S))
+        base.alpha_composite(sh, (int(cx - r.width/2 - pad), int(cy - r.height/2 - pad)))
+    if corner:  # extra soft shadow under a lifted corner, given in rotated-layer coordinates (fx, fy, radius, alpha)
+        fx, fy, rad, al = corner; blob = Image.new('L', r.size, 0)
+        ImageDraw.Draw(blob).ellipse((r.width*fx - rad*S, r.height*fy - rad*S*0.6, r.width*fx + rad*S, r.height*fy + rad*S*0.6), fill=al)
+        blob = blob.filter(ImageFilter.GaussianBlur(rad*S*0.45)); sh = Image.new('RGBA', r.size, (0, 0, 0, 0)); sh.putalpha(blob)
+        base.alpha_composite(sh, (int(cx - r.width/2 + 10*S), int(cy - r.height/2 + 16*S)))
     base.alpha_composite(r, (int(cx - r.width/2), int(cy - r.height/2)))
     return (int(cx - r.width/2), int(cy - r.height/2), int(cx + r.width/2), int(cy + r.height/2))
 
@@ -62,13 +68,14 @@ def torn_mask(w, h, tooth):
 def checkmark(d, x, y, s, w):
     d.line([(x, y + s*0.55), (x + s*0.38, y + s*0.92), (x + s, y + s*0.05)], fill=INK, width=w, joint='curve')
 
-def stamp(logo, diam):
+def stamp(logo, diam, fresh=False):
     """Round ink stamp: ring + curved text in ink, centred mascot cropped from the real logo file (true colours),
     the whole stamp faded through a distressed alpha mask (opacity only, no recolour)."""
     D = diam; st = Image.new('RGBA', (D, D), (0, 0, 0, 0)); d = ImageDraw.Draw(st)
+    INKC = (34, 70, 168) if fresh else STAMP
     c = D/2; ring = max(3, D//60)
-    d.ellipse((ring, ring, D-ring, D-ring), outline=STAMP+(255,), width=ring)
-    d.ellipse((D*0.17, D*0.17, D*0.83, D*0.83), outline=STAMP+(255,), width=max(2, ring//2))
+    d.ellipse((ring, ring, D-ring, D-ring), outline=INKC+(255,), width=ring)
+    d.ellipse((D*0.17, D*0.17, D*0.83, D*0.83), outline=INKC+(255,), width=max(2, ring//2))
     txt = '  TRIPNERD  •  FAN EXPERIENCES  •  LOUISVILLE  •'
     ft = F(CB, D*0.075); r = D*0.415
     ang = -90.0
@@ -77,7 +84,7 @@ def stamp(logo, diam):
     for ch in txt:
         cw = d.textlength(ch, font=ft); a = ang + step*cw/2
         g = Image.new('RGBA', (int(D*0.12), int(D*0.12)), (0, 0, 0, 0)); gd = ImageDraw.Draw(g)
-        gd.text((g.width/2, g.height/2), ch, font=ft, fill=STAMP+(255,), anchor='mm')
+        gd.text((g.width/2, g.height/2), ch, font=ft, fill=INKC+(255,), anchor='mm')
         g = g.rotate(-(a+90), resample=Image.BICUBIC)
         x = c + r*math.cos(math.radians(a)); y = c + r*math.sin(math.radians(a))
         st.alpha_composite(g, (int(x - g.width/2), int(y - g.height/2)))
@@ -87,6 +94,17 @@ def stamp(logo, diam):
     m = logo.crop((cols[0], rows[0], cols[-1]+1, rows[-1]+1))
     mh = int(D*0.50); m = m.resize((round(m.width*mh/m.height), mh), Image.LANCZOS)
     st.alpha_composite(m, (int(c - m.width/2), int(c - m.height/2 - D*0.01)))
+    if fresh:   # freshly inked: ink spreads a hair (ring and type only), denser but uneven, pressed at an angle
+        ink = st.copy(); ink.putalpha(ink.split()[3].filter(ImageFilter.GaussianBlur(0.9)))
+        st = Image.alpha_composite(ink, st)
+        lo = rng.uniform(0.45, 1.0, (6, 6)).astype(np.float32)
+        lo = np.asarray(Image.fromarray((lo*255).astype(np.uint8)).resize((D, D), Image.BICUBIC), np.float32)/255
+        gx = np.linspace(1.0, 0.72, D)[None, :]                       # heavier on one side, as when rocked onto the paper
+        sp = (rng.random((D, D)) > 0.06).astype(np.float32)
+        sp = np.asarray(Image.fromarray((sp*255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.7)), np.float32)/255
+        al = np.asarray(st.split()[3], np.float32) * (0.55 + 0.45*lo) * gx * (0.45 + 0.55*sp) * 0.95
+        st.putalpha(Image.fromarray(al.clip(0, 255).astype(np.uint8)))
+        return st.rotate(-14, resample=Image.BICUBIC)
     # ink fade: blotchy low-frequency + speckle mask, multiplied into alpha
     lo = rng.uniform(0.55, 1.0, (8, 8)).astype(np.float32)
     lo = np.asarray(Image.fromarray((lo*255).astype(np.uint8)).resize((D, D), Image.BICUBIC), np.float32)/255
@@ -96,7 +114,7 @@ def stamp(logo, diam):
     st.putalpha(Image.fromarray(al.clip(0, 255).astype(np.uint8)))
     return st
 
-def ticket(headline, logo):
+def ticket(headline, logo, fresh_stamp=False, curl=False):
     w, h = 470*S, 760*S; pad = 34*S
     t = paper_texture(w, h).convert('RGBA'); d = ImageDraw.Draw(t)
     y = 30*S
@@ -131,17 +149,26 @@ def ticket(headline, logo):
     x = 0
     while x < w: d.ellipse((x, y - 3*S, x + 6*S, y + 3*S), fill=(0, 0, 0, 0)); x += 14*S
     y += 18*S
-    st = stamp(logo, 150*S)
+    st = stamp(logo, 150*S, fresh_stamp)
     t.alpha_composite(st, (int(w/2 - st.width/2), int(y)))
     y += st.height + 12*S
     ff = F(CB, 17*S); foot = 'TALK TO A NERD · TRIPNERD.COM'
     d.text(((w - d.textlength(foot, font=ff))/2, y), foot, font=ff, fill=INK); y += 40*S
     t = t.crop((0, 0, w, int(y)))
     t.putalpha(torn_mask(t.width, t.height, 14*S)) if True else None
+    if curl:    # bottom-right corner lifting off the photo: light catches the raised paper, a soft crease shades its base
+        a = np.asarray(t, np.float32).copy(); hh, ww = a.shape[:2]
+        yy, xx = np.mgrid[0:hh, 0:ww].astype(np.float32)
+        r = 120*S; dd = ((ww - xx) + (hh - yy)) / r                       # 0 at the corner, 1 at the crease
+        lift = np.clip(1 - dd, 0, 1)
+        crease = np.exp(-((dd - 1.0)**2) / 0.004)
+        a[..., :3] *= (1 + 0.06*lift**1.5)[..., None]               # raised paper catches a little more light
+        a[..., :3] *= (1 - 0.035*np.clip(dd - 0.55, 0, 0.45)/0.45*(dd < 1.0))[..., None]   # soft falloff toward the bend, no hard crease
+        t = Image.fromarray(a.clip(0, 255).astype(np.uint8))
     # re-punch perforation holes into alpha
     return t
 
-def polaroid(photo, label, scale=1.0, texture=False, label_size=40):
+def polaroid(photo, label, scale=1.0, texture=False, label_size=40, warm=False, arrow=False, label_dy=4):
     k = scale; pw = int(300*S*k); bd = int(16*S*k); inner = pw - 2*bd
     sq = photo.resize((inner, inner), Image.LANCZOS)
     if texture:   # white card stock with a faint grain, made after the ticket so the ticket's grain is unchanged
@@ -151,9 +178,23 @@ def polaroid(photo, label, scale=1.0, texture=False, label_size=40):
         p = Image.fromarray(card).convert('RGBA')
     else:
         p = Image.new('RGBA', (pw, pw + int(58*S*k)), (250, 249, 245, 255))
-    p.paste(grade(sq, 1.06, 1.04, 1.03), (bd, bd))
+    if warm:    # "ours" is the better place to be: a touch brighter and warmer than the crowd
+        g = np.asarray(grade(sq, 1.10, 1.05, 1.08), np.float32); g[..., 0] *= 1.045; g[..., 1] *= 1.012; g[..., 2] *= 0.93
+        p.paste(Image.fromarray(g.clip(0, 255).astype(np.uint8)), (bd, bd))
+    else:
+        p.paste(grade(sq, 1.06, 1.04, 1.03), (bd, bd))
     d = ImageDraw.Draw(p); hf = F(HAND, label_size*S)
-    d.text((int(24*S*k), inner + bd + int(2*S*k)), label, font=hf, fill=(30, 40, 90))
+    d.text((int(24*S*k), inner + bd + int(label_dy*S*k)), label, font=hf, fill=(30, 40, 90))
+    if arrow:   # one small hand-drawn arrow from "Ours:" up to the TripNerd banner in the photo
+        x0 = int(24*S*k) + d.textlength(label, font=hf) + 8*S; y0 = inner + bd + (label_dy + 22)*S
+        pts = []
+        for i in range(25):
+            u = i/24; x = x0 + (u*62*S); y = y0 - (u*u*0)*0 - math.sin(u*math.pi*0.5)*58*S + math.sin(u*9)*0.8*S
+            pts.append((x, y))
+        d.line(pts, fill=(30, 40, 90), width=int(3.2*S), joint='curve')
+        ex, ey = pts[-1]; px, py = pts[-4]; ang = math.atan2(ey - py, ex - px)
+        for da in (2.55, -2.45):
+            d.line([(ex, ey), (ex + 13*S*math.cos(ang + da), ey + 13*S*math.sin(ang + da))], fill=(30, 40, 90), width=int(3.2*S))
     return p
 
 def logo_layer(logo, width):
@@ -184,13 +225,21 @@ def build(spec):
     src = load(spec['photo'])
     if spec.get('retouch'): src = retouch(src, spec['retouch'])
     src = grade(src, *spec.get('grade', (1.10, 1.06, 1.02)))
-    base = cover(src, spec['crop']).convert('RGBA')
+    base = cover(src, spec['crop'])
+    if spec.get('crowd'):   # "they're filming": the phone crowd sits ~12 % darker and less saturated than the cards
+        y0, y1, k = spec['crowd']
+        a = np.asarray(base, np.float32); yy = np.linspace(0, H, a.shape[0])[:, None]
+        m = np.clip((yy - y0) / (y1 - y0), 0, 1); m = m*m*(3 - 2*m)
+        L = a.mean(2, keepdims=True); des = L + (a - L)*(1 - k*m[..., None])
+        a = des * (1 - k*m[..., None])
+        base = Image.fromarray(a.clip(0, 255).astype(np.uint8))
+    base = base.convert('RGBA')
     logo = Image.open(os.path.join(SRC, 'logo.png')).convert('RGBA')
-    tk = ticket(spec['headline'], logo)
-    box_t = paste_rot(base, tk, spec['ticket'][0]*S, spec['ticket'][1]*S, spec['ticket'][2])
+    tk = ticket(spec['headline'], logo, spec.get('fresh_stamp', False), spec.get('curl', False))
+    box_t = paste_rot(base, tk, spec['ticket'][0]*S, spec['ticket'][1]*S, spec['ticket'][2], layers=spec.get('ticket_layers'), corner=spec.get('ticket_corner'))
     pol_src = load('IMG_1901.JPG').crop(spec.get('pol_crop', (100, 700, 1440, 2040)))
-    pol = polaroid(pol_src, 'Ours:', spec.get('pol_scale', 1.0), spec.get('pol_texture', False), spec.get('pol_label', 40))
-    box_p = paste_rot(base, pol, spec['polaroid'][0]*S, spec['polaroid'][1]*S, spec['polaroid'][2], shadow=spec.get('pol_shadow', (10, 110, (4, 7))))
+    pol = polaroid(pol_src, 'Ours:', spec.get('pol_scale', 1.0), spec.get('pol_texture', False), spec.get('pol_label', 40), spec.get('pol_warm', False), spec.get('pol_arrow', False), spec.get('pol_label_dy', 4))
+    box_p = paste_rot(base, pol, spec['polaroid'][0]*S, spec['polaroid'][1]*S, spec['polaroid'][2], shadow=spec.get('pol_shadow', (10, 110, (4, 7))), layers=spec.get('pol_layers'))
     lg = logo_layer(logo, 250*S)
     sh, pad = shadow_of(lg, 10*S, 90, (0, 3*S)); base.alpha_composite(sh, (60*S - pad, 52*S - pad)); base.alpha_composite(lg, (60*S, 52*S))
     out = base.convert('RGB').resize((W, H), Image.LANCZOS)
@@ -206,10 +255,17 @@ SPECS = [
  # faces, tilted opposite the ticket; ticket and Polaroid lifted clear of the rail and horses; light extra lift on the photo only.
  dict(name='TN-DERBY-01-everyones-filming-it-v1.1', photo='TN_2026-05-02_kentucky-derby_P050.jpg', crop=(0, 0, 1229, 1536),
       grade=(1.13, 1.08, 1.02), headline=["EVERYONE'S FILMING IT.", "YOU'RE LIVING IT."], ticket=(810, 340, -4),
-      polaroid=(318, 440, 7), pol_scale=1.25, pol_texture=True, pol_label=46, pol_crop=(110, 1170, 990, 2050),
+      polaroid=(318, 440, 7), pol_scale=1.25, pol_texture=True, pol_label=46, pol_label_dy=2, pol_crop=(110, 1170, 990, 2050),
       pol_shadow=(14, 125, (6, 10)),
       # the TwinSpires lettering and the SAP rail banner sit on the rail line, so the lifted Polaroid can no longer cover them
       retouch=[('clone', (252, 786, 314, 817), 60), ('fill', (374, 756, 445, 777))]),
+ # v2 "engagement pass" on the client-approved v1 (owner, 2026-10-20): v1 layout, copy, ticket, Polaroid crop and logo kept;
+ # crowd darkened, warm Polaroid, layered shadows + lifted ticket corner, one hand-drawn arrow, freshly inked stamp.
+ dict(name='TN-DERBY-01-everyones-filming-it-v2', photo='TN_2026-05-02_kentucky-derby_P050.jpg', crop=(0, 0, 1229, 1536),
+      headline=["EVERYONE'S FILMING IT.", "YOU'RE LIVING IT."], ticket=(810, 360, -4), polaroid=(345, 520, 6),
+      crowd=(760, 860, 0.12), fresh_stamp=True, curl=True,
+      ticket_layers=[(3, 150, (1, 3)), (12, 95, (5, 10)), (30, 70, (14, 26))], ticket_corner=(0.95, 0.97, 60, 95),
+      pol_warm=True, pol_arrow=True, pol_layers=[(3, 150, (1, 2)), (10, 95, (4, 8)), (24, 65, (10, 20))]),
 ]
 for sp in SPECS:
     if len(sys.argv) < 5 or sys.argv[4] == sp['name']: build(sp)
