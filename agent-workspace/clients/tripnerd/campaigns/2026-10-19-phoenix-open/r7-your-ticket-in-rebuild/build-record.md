@@ -3,7 +3,7 @@ title: Phoenix Open Reel 3 "Your Ticket In" rebuild, build record
 type: report
 client: tripnerd
 owner: Karl
-status: draft
+status: active
 created: 2026-10-20
 updated: 2026-10-20
 tags: [reels, phoenix-open, video-production]
@@ -11,7 +11,27 @@ tags: [reels, phoenix-open, video-production]
 
 # Reel 3 "Your Ticket In": rebuild per BRIEF.md + owner updates (2026-10-20)
 
-**Status:** the silent picture is rendered (17.63 s, 529 frames). The mix is waiting on the music MP3; Pixabay can't be reached from the build container, so the owner downloads the chosen track.
+**Status: DELIVERED 2026-10-20.** `TripNerd_PHX_Reel3_YourTicketIn_FINAL.mp4` is 17.70 s, 531 frames, 1080x1920, 30 fps, H.264 + AAC, measured at −14.1 LUFS / −1.2 dBTP. The MP4 was sent in chat; the binary lives outside the repo, and `contact7.jpg` is its contact sheet.
+
+**Music:** [EDM Hybrid Intro (Tidal Rush, Hype Build), OpenMindAudio](https://pixabay.com/music/electro-edm-hybrid-intro-tidal-rush-hype-build-456799/). Pixabay Content License; not Content-ID registered; the owner downloaded the MP3.
+
+**Owner sign-offs:**
+- V01 starts at 2.5 s.
+- Photos run 2 beats each.
+- The logo file stands in for "TRIPNERD FAN EXPERIENCES".
+- FOOD + DRINK INCLUDED and HOTEL ✓ (both on TripNerd's public Phoenix Open page).
+- "PHOENIX OPEN" appears as factual text only, with no tournament marks.
+
+## Measured on the delivered MP3
+
+- **Drop attack:** 46.5205 s.
+- **Kick grid:** 124.0 BPM, with a beat at 46.532 s. The hi-hats sit on the off-beat at +0.24 s.
+- **Sync:** the drop attack is locked to the flash frame at 5.100 s, so the music starts at 41.4205 s in the track. In the final file the drop attack measures at 5.105 s.
+- **Cut frames:** 269, 299, 328, 357, 386, 415, 444, each within 16.5 ms (half a frame) of a beat. The file ends at frame 531 (17.70 s), which is beat +26.
+- **Levels:** worst 0.5 s dip after the drop is −1.6 dB. The music fades out (cos²) over the last 1.0 s.
+- **Audio rules:** no clink and no crowd tail, per the owner's final rule that only music plus V03 crowd is heard.
+
+## Superseded plan, kept for the record
 
 ## Inputs
 
@@ -49,5 +69,4 @@ tags: [reels, phoenix-open, video-production]
 
 ## Open items
 
-- **Claims Jason has not yet confirmed in writing:** FOOD + DRINK INCLUDED, HOTEL ✓, faces, and the Feb 2027 package.
-- "PHOENIX OPEN" appears on the ticket, as the brief asks. That is a tournament trademark in on-screen text.
+- Written confirmation is still pending for guest faces and the Feb 2027 package. The owner approved the food/drink and hotel lines from the public page.

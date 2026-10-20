@@ -6,7 +6,7 @@
 #   5  5.1-...   V03 from 1.9 s, real audio under the music                                    "This is the 16th." on the blast
 #   6            P05, P08, P02, P04, P09, P01, hard cuts every 2 beats, static cover crops          "Food & drink included."
 #   7            end card on TripNerd blue: original logo, "Phoenix 2027", "Talk to a Nerd", "Link in bio"
-#   python3 renderR7.py <out.mp4> <timing.json>     timing.json: {"bpm": float, "v03_beats": int, "end_beats": int}
+#   python3 renderR7.py <out.mp4> <timing.json>     timing.json: {"bpm": float, "grid_offset": s, "v03_beats": int, "end_beats": int}
 import subprocess, sys, json, numpy as np, cv2
 from PIL import Image, ImageDraw
 sys.argv_saved = sys.argv; sys.argv = ['x', 'o']
@@ -75,7 +75,8 @@ def endcard_bg():
 def build(out, timing):
     T = json.load(open(timing)); P = 60.0 / T['bpm']
     fr = lambda t: int(round(t * 30))
-    t_ph = DROP + T['v03_beats'] * P
+    g0 = DROP + T.get('grid_offset', 0.0)                              # first post-drop beat of the music's kick grid, in reel time
+    t_ph = g0 + T['v03_beats'] * P
     cuts = [t_ph + 2 * j * P for j in range(7)]                        # 6 photos, 2 beats each; cuts[6] = end card in
     t_end = cuts[6] + T['end_beats'] * P
     TK, stamp_c = ticket(); seq = []
@@ -126,7 +127,7 @@ def build(out, timing):
     for f in seq: p_.stdin.write(np.ascontiguousarray(f).tobytes())
     p_.stdin.close(); p_.wait()
     meta = {'frames': N, 'dur_s': N / 30, 'drop_s': DROP, 'v03_out_s': fr(t_ph) / 30, 'photo_cuts_s': [fr(c) / 30 for c in cuts],
-            'end_s': fr(t_end) / 30, 'blast_card_s': (fr(DROP) + 29) / 30, 'bpm': T['bpm']}
+            'end_s': fr(t_end) / 30, 'beat_times_s': [round(g0 + k * P, 4) for k in range(0, 2 * 13 + 1)], 'blast_card_s': (fr(DROP) + 29) / 30, 'bpm': T['bpm']}
     json.dump(meta, open(out + '.json', 'w'), indent=1); print(meta)
 
 if __name__ == '__main__':

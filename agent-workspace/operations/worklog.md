@@ -1758,3 +1758,19 @@ quality gate, claims and brand law after the commit.
 - Owner clarified: wanted the S1 SCRIPT (pre-production) for Grok/ChatGPT review, not a build. Wrote `S1-from-our-seats-SCRIPT-for-review.md` + reference-footage zip. The earlier S1 render is parked, not the deliverable.
 - Built Phoenix Reel 3 'Your Seat's On This Ticket' from the owner's final script (17 s, real footage, ticket open, logos left as filmed per owner). TEMPBEAT + NoMusic. Drive link not possible via connector (size); owner to upload. Record: `campaigns/2026-10-19-phoenix-open/r3-build/`.
 - Phoenix 'Your Ticket In' (owner brief): built renderR6/mixR6, preview with marked slots for AI first frame + 2 guest photos + music; V01 start moved to 2.45 s (pole), drop at 7.9 s (real roar). Blocked on owner uploads; 'Food & drink included.' needs evidence. Record: `campaigns/2026-10-19-phoenix-open/r6-your-ticket-in/`.
+
+## 2026-10-20: TripNerd Phoenix Reel 3 "Your Ticket In" rebuild delivered
+
+**Did**
+- Rebuilt Reel 3 from `BRIEF.md` plus the owner's updates. Build files are in `clients/tripnerd/campaigns/2026-10-19-phoenix-open/r7-your-ticket-in-rebuild/`.
+- Opener: the Higgsfield clip slowed to 50% with optical flow, and the ticket face tracked to the stub with an LK + RANSAC homography.
+- Picked the music by scoring about 190 Pixabay tracks in the Higgsfield sandbox (non-Content-ID only). The owner downloaded track #1.
+- Locked the measured drop to the white flash, cut on the 124.0 BPM kick grid, and delivered a 17.70 s MP4 at −14 LUFS.
+
+**Learned**
+- Pixabay is blocked from the build container, but the Higgsfield sandbox can read Pixabay pages through r.jina.ai and download MP3s there for analysis. Files can't come back into this container, so the owner still downloads the track.
+- My sandbox drop estimate was 30 ms off; full-band flux locked onto the off-beat hi-hats. Measure the beat phase on low-band (kick) onsets.
+
+**Open**
+- Written confirmation for guest faces and the Feb 2027 package.
+- Upload the MP4 to the Drive Phoenix folder (the connector can't upload MP4s this size).
