@@ -196,3 +196,18 @@ tags: [client, phoenix-open, ai-video, spend-gate]
   - `stitchE.py`: 78 real frames, then Kling 24→30 fps via optical-flow in-betweens; 3-frame dissolve at the join; about 8.6 s.
   - `mixE.py`: real-only audio, the real splash, +6 dB crowd after landing, a layered real-crowd crescendo under the aerial, −14 LUFS. Dry-run verified with a stand-in.
 - **Blocked:** the owner downloads the Kling clip and uploads it here (Higgsfield's CDN is blocked from this container).
+
+### Owner prompt v2: "TPC Scottsdale enclosed stadium" aerial from the ball-on-green frame (2026-10-20)
+- **Owner image:** `images/30.webp` (720x1280). This is the raw V03 frame at about 4.8–5.0 s: the golfer standing, the ball near the flag. **It carries the WM Phoenix Open and FedEx wall logos.**
+- **Cleaned:** `hold/TN-PHX_ball_on_green_clean.png`, 1080x1920. Wall rows 406–609 are filled with the wall's own colour and despecked; nothing else is changed.
+- **Prompt:** the owner's prompt, audio line and negative prompt verbatim; 9:16, 6 s, start frame only.
+
+**Quotes (with the "IN THE DARK" preset suggestion declined):**
+
+| Model | Credits |
+|---|---|
+| Veo 3.1 preview high, 6 s | **60** (recommended: proven on this scene, native crowd audio, accepts the negative prompt) |
+| Cinema Studio 3.0, 1080p, audio, 6 s | 78 |
+
+- **Blocked:** the owner uploads the cleaned PNG to Higgsfield and sends the media_id; this container cannot upload.
+- **Note:** the prompt names TPC Scottsdale; the generated venue is synthetic, so the AI toggle stays ON.
