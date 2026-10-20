@@ -151,3 +151,32 @@ tags: [client, phoenix-open, ai-video, spend-gate]
   - **Text/logos: PASS.** Walls blank; no lettering found in the revealed stands.
   - **Ball: FAIL.** It leaves with the sand spray, but no ball is found on the green from about 3.3 s (white-blob search plus zoomed flag crops). No visible landing, backspin or stop.
 - **Recommendation to the owner:** keep this take (energy and roar) and add a **broadcast-style ball tracer**: a composited graphic arc and landing marker, as TV does, honest as a graphic. Or a 5th try from a tighter start frame (another 60).
+
+### Owner review of try 4: REJECTED
+- The AI regenerated the swing: the ball and backspin are gone, the club warps, the impact sounds like a driver "ping", and there's no aerial.
+- **New owner spec: real shot untouched + AI pull-back only.**
+
+**1. The real segment:**
+- V03 (`IMG_0112`) **1.90 → 4.70 s**, 84 frames, picture and swing untouched (1.5x lanczos scale only), real audio.
+- **Ball path, measured:** after the splash it is visible on the green left of the flagstick from about 4.3 s, moves back away from the pin, and stops at about 4.9–5.3 s. **The cut at 4.70 s** catches it mid spin-back.
+- **The standing wall-logo cover is kept** (wall rows only; it does not touch the swing) so the AI start frame and the real clip match.
+- ⚠ **Flag:** 1.90–2.45 s is the phone's zoom-in, and **the WM Phoenix Open scoreboard is legible** (event logo, "50/50 RAFFLE", "#ThePeoplesOpen", jackpot line, and the pro's name at about 1.9 s). Alternative: start at 2.47 s, which still shows the full downswing (impact about 2.87 s).
+
+**2. AI start frame:** `real/LAST_frame_real_4.70.png`, the painted, despecked last frame (1080x1920). Prompt and negative prompt exactly as given by the owner.
+
+**Quotes (4 s, 9:16):**
+
+| Model | Per try | 2 tries |
+|---|---|---|
+| Veo 3.1 preview high | 40 | 80 |
+| Kling 3.0 pro, silent | 7 | 14 |
+
+**3. Stitch plan:**
+- Play the AI clip's 24 fps frames one-for-one at 30 fps (1.25x, no duplicate-frame judder).
+- A 3-frame dissolve from the real last frame into AI frame 0 hides any small colour shift.
+
+**4. Audio plan:**
+- Real V03 audio throughout the real part (the real sand splash).
+- The real crowd swell is boosted after the ball lands.
+- Under the aerial: real Phoenix crowd roars (V03 tail plus V04's real swell, plus suite ambience), boosted.
+- No synthesised impacts or metallic sounds. Final mix −14 LUFS / −1 dBTP.
