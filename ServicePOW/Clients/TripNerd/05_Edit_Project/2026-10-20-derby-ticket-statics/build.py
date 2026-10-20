@@ -141,27 +141,56 @@ def ticket(headline, logo):
     # re-punch perforation holes into alpha
     return t
 
-def polaroid(photo, label):
-    pw = 300*S; inner = pw - 2*16*S
+def polaroid(photo, label, scale=1.0, texture=False, label_size=40):
+    k = scale; pw = int(300*S*k); bd = int(16*S*k); inner = pw - 2*bd
     sq = photo.resize((inner, inner), Image.LANCZOS)
-    p = Image.new('RGBA', (pw, pw + 58*S), (250, 249, 245, 255))
-    p.paste(grade(sq, 1.06, 1.04, 1.03), (16*S, 16*S))
-    d = ImageDraw.Draw(p); hf = F(HAND, 40*S)
-    d.text((24*S, inner + 16*S + 4*S), label, font=hf, fill=(30, 40, 90))
+    if texture:   # white card stock with a faint grain, made after the ticket so the ticket's grain is unchanged
+        n = rng.normal(0, 3.2, (pw + int(58*S*k), pw)).astype(np.float32)
+        lo = np.asarray(Image.fromarray(((rng.normal(0, 1, ((pw+int(58*S*k))//6+1, pw//6+1))*14)+128).clip(0, 255).astype(np.uint8)).resize((pw, pw + int(58*S*k)), Image.BICUBIC), np.float32) - 128
+        card = (np.array((250, 249, 245), np.float32)[None, None, :] + (n + lo*0.25)[..., None]).clip(0, 255).astype(np.uint8)
+        p = Image.fromarray(card).convert('RGBA')
+    else:
+        p = Image.new('RGBA', (pw, pw + int(58*S*k)), (250, 249, 245, 255))
+    p.paste(grade(sq, 1.06, 1.04, 1.03), (bd, bd))
+    d = ImageDraw.Draw(p); hf = F(HAND, label_size*S)
+    d.text((int(24*S*k), inner + bd + int(2*S*k)), label, font=hf, fill=(30, 40, 90))
     return p
 
 def logo_layer(logo, width):
     a = logo.crop(logo.getbbox()); return a.resize((width, round(a.height*width/a.width)), Image.LANCZOS)
 
+def retouch(im, ops):
+    """Manual (non-AI) removal of third-party sign graphics, disclosed in the record: 'clone' copies a same-height strip of
+    plain surface from beside the sign (keeps the rail continuous); 'fill' interpolates each row between the plain colour
+    left and right of the lettering. Feathered 3 px. No people are touched."""
+    a = np.asarray(im, np.float32).copy()
+    for op in ops:
+        if op[0] == 'clone':
+            _, (x0, y0, x1, y1), dx = op
+            patch = a[y0:y1, x0+dx:x1+dx].copy()
+        else:
+            _, (x0, y0, x1, y1) = op
+            L = a[y0:y1, x0-3:x0].mean(1); R = a[y0:y1, x1:x1+3].mean(1)
+            t = np.linspace(0, 1, x1-x0)[None, :, None]
+            patch = L[:, None, :]*(1-t) + R[:, None, :]*t + np.random.default_rng(11).normal(0, 2.0, (y1-y0, x1-x0, 1))   # own generator: the ticket grain stays identical
+        h, w = patch.shape[:2]
+        m = np.ones((h, w), np.float32); f = 3
+        for i in range(f):
+            v = (i+1)/(f+1); m[i, :] = np.minimum(m[i, :], v); m[-1-i, :] = np.minimum(m[-1-i, :], v); m[:, i] = np.minimum(m[:, i], v); m[:, -1-i] = np.minimum(m[:, -1-i], v)
+        a[y0:y1, x0:x1] = a[y0:y1, x0:x1]*(1-m[..., None]) + patch*m[..., None]
+    return Image.fromarray(a.clip(0, 255).astype(np.uint8))
+
 def build(spec):
-    src = grade(load(spec['photo']), *spec.get('grade', (1.10, 1.06, 1.02)))
+    src = load(spec['photo'])
+    if spec.get('retouch'): src = retouch(src, spec['retouch'])
+    src = grade(src, *spec.get('grade', (1.10, 1.06, 1.02)))
     base = cover(src, spec['crop']).convert('RGBA')
     logo = Image.open(os.path.join(SRC, 'logo.png')).convert('RGBA')
     tk = ticket(spec['headline'], logo)
     box_t = paste_rot(base, tk, spec['ticket'][0]*S, spec['ticket'][1]*S, spec['ticket'][2])
-    pol_src = load('IMG_1901.JPG').crop((100, 700, 1440, 2040))
-    pol = polaroid(pol_src, 'Ours:')
-    box_p = paste_rot(base, pol, spec['polaroid'][0]*S, spec['polaroid'][1]*S, spec['polaroid'][2], shadow=(10, 110, (4, 7)))
+    pol_src = load('IMG_1901.JPG').crop(spec.get('pol_crop', (100, 700, 1440, 2040)))
+    pol = polaroid(pol_src, 'Ours:', spec.get('pol_scale', 1.0), spec.get('pol_texture', False), spec.get('pol_label', 40))
+    box_p = paste_rot(base, pol, spec['polaroid'][0]*S, spec['polaroid'][1]*S, spec['polaroid'][2], shadow=spec.get('pol_shadow', (10, 110, (4, 7))))
     lg = logo_layer(logo, 250*S)
     sh, pad = shadow_of(lg, 10*S, 90, (0, 3*S)); base.alpha_composite(sh, (60*S - pad, 52*S - pad)); base.alpha_composite(lg, (60*S, 52*S))
     out = base.convert('RGB').resize((W, H), Image.LANCZOS)
@@ -173,6 +202,14 @@ SPECS = [
       headline=["EVERYONE'S FILMING IT.", "YOU'RE LIVING IT."], ticket=(810, 360, -4), polaroid=(345, 520, 6)),
  dict(name='TN-DERBY-02-the-bubblys-cold', photo='TN_2026-05-01_kentucky-derby_P179.jpg', crop=(0, 0, 1536, 1920),
       headline=["THE BUBBLY'S COLD.", "THE PLAN'S DONE."], ticket=(650, 858, 3.5), polaroid=(190, 1110, -7)),
+ # v1.1, the client-approved Ad 1 polished (owner, 2026-10-20): bigger textured Polaroid, tighter banner+flowers crop with no
+ # faces, tilted opposite the ticket; ticket and Polaroid lifted clear of the rail and horses; light extra lift on the photo only.
+ dict(name='TN-DERBY-01-everyones-filming-it-v1.1', photo='TN_2026-05-02_kentucky-derby_P050.jpg', crop=(0, 0, 1229, 1536),
+      grade=(1.13, 1.08, 1.02), headline=["EVERYONE'S FILMING IT.", "YOU'RE LIVING IT."], ticket=(810, 340, -4),
+      polaroid=(318, 440, 7), pol_scale=1.25, pol_texture=True, pol_label=46, pol_crop=(110, 1170, 990, 2050),
+      pol_shadow=(14, 125, (6, 10)),
+      # the TwinSpires lettering and the SAP rail banner sit on the rail line, so the lifted Polaroid can no longer cover them
+      retouch=[('clone', (252, 786, 314, 817), 60), ('fill', (374, 756, 445, 777))]),
 ]
 for sp in SPECS:
     if len(sys.argv) < 5 or sys.argv[4] == sp['name']: build(sp)

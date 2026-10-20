@@ -55,3 +55,28 @@ tags: [static-ads, derby, louisville, real-photos, ticket]
    - the couple in P179;
    - the three staff at the check-in table (IMG_1901);
    - the IMG_1901 table is from Augusta week, not the Derby. Confirm the same check-in setup is used at the Derby, or supply a Derby check-in photo.
+
+## v1.1 of Ad 1 (2026-10-20): polish of the client-approved version
+
+The owner reports Ad 1 is client approved. His polish brief: keep all copy, the ticket, the stamp and the logo, and refine the Polaroid, the spacing and the finish.
+
+**File:** `TN-DERBY-01-everyones-filming-it-v1.1.png`, MD5 `a36d9af3fa3b4bc8634fcdafbaf3e4f4`.
+
+**Ticket unchanged:** the ticket interior is pixel-identical to v1 (max difference 0, compared after the 20 px lift). The logo is the same file and the same placement.
+
+**What changed:**
+- **Polaroid:**
+  - 25 % larger; tilt +7°, opposite to the ticket's −4°;
+  - stronger soft shadow; grain on the white card border;
+  - "Ours:" set larger (Caveat Bold, 40 → 46 px at 1x scale);
+  - the photo inside is cropped tight on the TripNerd banner and the flowers, with no faces. No hospitality photo was attached, so this is the brief's fallback.
+- **Spacing:**
+  - ticket lifted 20 px; its lowest edge is at y 664, and the outer rail is at y ≈ 703;
+  - Polaroid lowest edge at y 685; all horses fully visible;
+  - Polaroid more than 40 px from the logo.
+- **Finish:** photo only, colour 1.10 → 1.13 and contrast 1.06 → 1.08.
+- **Disclosed retouch:** two third-party sign graphics sit on the rail line, so the lifted Polaroid could no longer cover them, and blur is banned. They were painted out by hand (no AI), using the plain surface beside each:
+  - the "twinspires" lettering on the navy tent fascia, filled with the fascia colour;
+  - the SAP banner on the rail wall, replaced with the wall section 60 px to its right, so the rail stays continuous.
+
+  No people or other objects were touched or added. To revert, remove `retouch=` from the v1.1 spec. The signs then show, and the only way to hide them would be to let the Polaroid touch the rail.
