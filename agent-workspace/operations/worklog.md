@@ -1998,3 +1998,11 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **Receipts:** `campaigns/2026-10-book-it-now-augusta/qc/chatgpt-reel-ig-export-2026-10-07.txt`.
 - **Still open before posting:** the AI label (the green shot is AI), the music licence, TripNerd's approver, guest consent and the venue OK.
 
+
+## 2026-10-20 — Prospect: Randy's Rooter & Plumbing (Midland, TX), spec static ad
+- **Ask:** Karl sent their onion-photo Facebook post and asked for it to be elevated. It is spec work to pitch them; nothing is posted.
+- **Built:** 3 hooks × feed and Story (6 PNGs) plus a before/after sheet, sent to Karl. Records: `clients/prospects/randys-rooter-midland/prospect-brief.md`.
+- **Open:**
+  - the phone number conflicts between listings;
+  - there's no real logo or photo rights;
+  - the static QC manifest checks fail on the hand-built comps (OCR used instead).
