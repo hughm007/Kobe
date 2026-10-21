@@ -298,3 +298,38 @@ No banned words (checked).
 - The only still is the hotel photo.
 
 **Known compromise:** the tilt-down food clip puts food in every top band. The caption sits over the counter and glasses, but the tip of one topping touches it in the last ~0.15 s.
+
+## "Calm premium" FINAL (2026-10-21)
+
+**Delivered:** `TripNerd_PHX2027_Reel_Calm_FINAL.mp4`
+- 1080×1920, 30 fps, 28.07 s, 842 frames, −14.2 LUFS / −1.5 dBTP.
+- Built with `renderR15.py`, `mixR15.py` and `timing_r15.json` (124 BPM, drop frame 261).
+- Frame sheet: `calm_final_frames.jpg`.
+
+**Timeline:** drop on the cut at 8.70 s; music starts at 37.82 s in the track.
+
+| Time (s) | Shot | Caption |
+|---|---|---|
+| 0.00–1.93 | Drone; 24→30 fps by flow blending, so no repeated frames | "Phoenix Open 2027." |
+| 1.93–4.37 | V01 pan from 2.5 s, real speed, crowd audio under the music | "Everyone wants the 16th." |
+| 4.37–6.30 | Opener: source frames 0–17 at ~37% speed, flow-blended; ticket tracked on the stub | "TripNerd gets you in." |
+| 6.30–8.70 | Stamp: push in (0.48 s), flat 360° spin (1.77 s), soft white flash, hard cut on the drop | — |
+| 8.70–11.13 | V03 bunker from 3.6 s, its only use | "Do the Phoenix Open with TripNerd." |
+| 11.13–13.07 | Ticket line 1: slides in once; check draws at 11.60 s with a tick | — |
+| 13.07–15.97 | Suite: V01 0–1.93 s at ~67% speed, flow-blended | — |
+| 15.97–17.90 | Ticket line 2: check at 16.47 s | — |
+| 17.90–20.33 | New food clip: source 1.93–4.00 s at 85% speed, flow-blended; 9:16 crop follows the pan from flatbread → tostadas → short rib → sweet box → drinks | — |
+| 20.33–22.27 | Ticket line 3: check at 20.80 s | — |
+| 22.27–25.17 | Fairmont 06 pan; the music dips −20 dB with water ambience and returns on the kick at 22.74 s | — |
+| 25.17–28.07 | End card: "Do the trip right with TripNerd." / "Talk to a Nerd" / "Link in bio"; music resolves at 28.07 s | — |
+
+**Captions:**
+- Montserrat 70, white, two-layer soft shadow, centre x 520.
+- One line is centred at y 305; two lines at y 345 (top edge ≥ 262 px). Fully faded in by frame 6.
+- Nothing below y 1300 apart from the end-card buttons. The "Link in bio" pill sits at y ≈ 1265, clear of the bottom 350 px.
+
+**QA:**
+- Decoded-output motion check: 0 repeated frames in every video segment.
+- The first R15 render had a drone repeat every 5th frame (24 fps source sampled to 30 fps). Fixed with flow blending.
+
+**Known limit:** the two glasses span ~45% of the 16:9 width, but a 9:16 full-height window holds 31.6%. The food shot ends with the front drink fully framed and the second glass partly visible behind it. Showing both in full would need letterboxing, which is banned.

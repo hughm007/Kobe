@@ -1876,3 +1876,16 @@ quality gate, claims and brand law after the commit.
 **Learned**
 - A 16:9 tilt-down AI food clip can't show "food + both drinks" in a single 9:16 crop. A two-panel stack of wide windows shows it without upscaling.
 - A post-limiter pass after the mix2 master pushed true peak over 0 dBTP. Use the mix2 master directly.
+
+## 2026-10-21: TripNerd PHX 2027 Reel "calm premium" FINAL delivered
+
+**Did**
+- 28.07 s revision of the checklist reel:
+  - Slower beats, flat stamp spin into the drop, bunker once.
+  - Ticket checklist, with each line cutting to its proof: suite, the new food clip with a pan-following 9:16 crop, the Fairmont dip.
+  - End card.
+- −14.2 LUFS.
+- Motion check: 0 repeated frames.
+
+**Learned**
+- Sampling a 24 fps source onto a 30 fps timeline by nearest frame repeats every 5th frame, a visible judder. Flow-blend every off-rate source, even at "real speed".
