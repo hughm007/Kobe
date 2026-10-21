@@ -160,3 +160,38 @@ No banned words (checked).
 - The drop audio lands 5 ms after the flash.
 - The stamp landing frame is identical to the pre-turn frame.
 - P05 shows a drink but no food (no food photo exists).
+
+## FINAL (2026-10-21): TripNerd is the hero, scheduled to post 12pm ET
+
+**Delivered:** `TripNerd_PHX_Reel3_FINAL.mp4`, 19.33 s, 580 frames, −14.1 LUFS / −1.4 dBTP.
+- **Drop:** frame 217 (7.233 s); the music starts at 39.287 s in the track.
+- **Built with:** `renderR11.py`, `timing_r11.json` and `mixR7.py`, then remuxed.
+
+**Shots and captions:**
+
+| Shot | Caption |
+|---|---|
+| Opener: real frames 0–22, held (~65% speed) | "Phoenix Open 2027." |
+| V01 | "Everyone wants the 16th." |
+| Ticket at 1.06×, hold 1.47 s; push to S = 2.8 so the caption sits on the ticket's blue band; flat CW stamp turn | "TripNerd gets you in." |
+| V03 from 3.6 s | "Hole 16. With TripNerd." |
+| WEB_crowd | "This is the 16th." |
+| WEB_suite | "Your 16th Hole LOGE Suite." (approved; TripNerd's site lists "16th Hole LOGE Suite Tickets") |
+| WEB_bar | "Food & drink included." |
+| WEB_hotel pan | "Hotel included." |
+| End card | "The Phoenix Open, the TripNerd way." + "Talk to a Nerd" (96/46 px padding) + "Link in bio" |
+
+**How it was built:**
+- **Web photos:** split from the owner's strip at 300×201 px each (the thumbnails, not the 800×535 / 1920×1280 originals named in the brief). Shown sharp at 2.4× (720×482) over a blurred, darkened fill of themselves.
+- **Hero shot:** WEB_hero not used (optional; also a thumbnail).
+- **Grade:** one warm/bright grade on footage and photos only, never on the logo or ticket.
+- **Checks:**
+  - Stamp aspect 0.997–1.002.
+  - The landing frame equals the pre-turn frame.
+  - Every shot starts within 17 ms of a beat.
+  - The drop audio lands 5 ms after the flash.
+  - The photos and the hold are static (codec noise only).
+  - No banned words.
+
+**Open:**
+- Replace the web thumbnails with the originals when TripNerd sends them, then re-render (`renderR11.py` takes them as-is; switch the card scale to native).

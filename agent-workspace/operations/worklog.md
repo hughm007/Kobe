@@ -1819,3 +1819,14 @@ quality gate, claims and brand law after the commit.
 **Learned**
 - When a background frame is derived from an earlier shot, take it from the clean frame, not the captioned one.
 - An owner reports a fast accelerating zoom as "squish" even when the geometry measures true.
+
+## 2026-10-21: TripNerd Phoenix Reel 3 FINAL delivered (posts tomorrow 12pm ET)
+
+**Did**
+- Final hero-TripNerd build using the 4 web photos (suite, bar, hotel, crowd).
+- New owner caption arc, warm grade, a 1.47 s ticket hold and a flat stamp turn on the drop.
+- Hotel pan carried into the padded end card. 19.33 s.
+
+**Open**
+- The web photos are the 300×201 thumbnails split from the owner's strip. They're shown at 2.4× in cards; the full-res originals would improve shots 6–9.
+- Posting is the owner's action; nothing was published from here.
