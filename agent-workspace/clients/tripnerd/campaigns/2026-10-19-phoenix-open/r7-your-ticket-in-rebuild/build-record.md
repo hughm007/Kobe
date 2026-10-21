@@ -333,3 +333,36 @@ No banned words (checked).
 - The first R15 render had a drone repeat every 5th frame (24 fps source sampled to 30 fps). Fixed with flow blending.
 
 **Known limit:** the two glasses span ~45% of the 16:9 width, but a 9:16 full-height window holds 31.6%. The food shot ends with the front drink fully framed and the second glass partly visible behind it. Showing both in full would need letterboxing, which is banned.
+
+## "Smooth premium" FINAL (R16, 2026-10-21)
+
+**Delivered:** `TripNerd_PHX2027_Reel_Smooth_FINAL.mp4`
+- 1080×1920, 30 fps, 31.47 s, 944 frames, −14.1 LUFS / −1.3 dBTP.
+- Built with `renderR16.py`, `mixR16.py` and `timing_r16.json` (124 BPM, drop frame 319; music starts at 35.887 s in the track).
+- Frame sheet: `smooth_final_frames.jpg`.
+
+| Beats | Time (s) | Shot | Caption |
+|---|---|---|---|
+| −22..−16 | 0.00–2.90 | Drone: whole 16:9 frame as an 80% inset over its own blur (40 px, darkened); real speed, 24→30 fps by flow | "Phoenix Open 2027." (fully in by frame 5) |
+| −16..−10 | 2.90–5.80 | V01 stadium pan from 2.5 s, 70% speed with flow; native 9:16 | "Everyone wants the 16th." |
+| −10..−5 | 5.80–8.23 | Opener: clean source frames 0–20, ~23% speed with flow; ticket overlay removed | "TripNerd gets you in." |
+| −5..0 | 8.23–10.63 | Stamp: push-in (0.48 s), flat 360° spin, soft flash, **hard cut** | — |
+| 0..6 | 10.63–13.53 | V03 bunker from 3.6 s, 70% speed with flow; drop + V03 crowd roar | "Do the Phoenix Open with TripNerd." |
+| 6..12 | 13.53–16.47 | Full ticket held once (sub-pixel push), then a 0.6 s shrink to the corner card (450×270 at x 590–1040, y 270–540) | — |
+| 12..20 | 16.47–20.33 | Suite: V01 0–1.0 s, ~23% speed; 576×640 source window shifted toward the course; check 1 at 16.47 | — |
+| 20..28 | 20.33–24.20 | Food: new clip 0.6–4.0 s, ~86% speed; whole 16:9 inset; check 2 at 20.33; whip-blur out | — |
+| 28..36 | 24.20–28.07 | Pool: 06 still, whole-photo inset with a lateral pan (no zoom); check 3 at 24.20; music −9 dB with water; card scales up at 27.57 | — |
+| 36..43 | 28.07–31.47 | End card: logo settles at a uniform 1.05→1.0, headline and buttons fade in; music resolves on the final frame | — |
+
+**QA:**
+- 0 repeated frames in every video segment.
+- Static frames occur only in the end-card hold and 2 frames at the spin's ease ends.
+- Drop onset at 10.62 s against the cut at 10.633 s.
+- Ticks are +5.0, +5.9 and +3.7 dB over the local bed.
+- Pool dip is −9.4 dB; the music recovers by the end card.
+
+**Known limits:**
+1. The food clip is a lateral dolly. The second glass touches the right edge of the source frame and the boards/plates are cut at the edges as the camera passes, so no single frame shows the whole spread. A new locked-off wide clip would be needed.
+2. V01 and V03 are native 9:16 (720×1280). A 75–80%-width inset of a 9:16 clip is 1536 px tall and cannot fit between the caption zone and the bottom UI zone, so they play full frame (uncropped).
+3. The suite (only ~1 s of pillar-free source) and opener (0.7 s clean) are heavy flow-blended slow motion.
+4. The mix2 master overshot TP at 0.85; `mixR16.master16` does a 4× oversampled TP limit and re-measures after AAC encoding.

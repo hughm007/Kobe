@@ -1889,3 +1889,17 @@ quality gate, claims and brand law after the commit.
 
 **Learned**
 - Sampling a 24 fps source onto a 30 fps timeline by nearest frame repeats every 5th frame, a visible judder. Flow-blend every off-rate source, even at "real speed".
+
+## 2026-10-21: TripNerd PHX 2027 Reel "smooth premium" FINAL (R16) delivered
+
+**Did**
+- 31.5 s re-edit:
+  - Whole-frame insets over a blurred copy for the 16:9 clips and the pool photo.
+  - Persistent corner ticket card; checks draw over the proof shots on bar downbeats.
+  - Dissolves and one whip; the only hard cut is the drop.
+- −14.1 LUFS / −1.3 dBTP.
+- 0 repeated video frames.
+
+**Learned**
+- A long, deliberate dip lowers integrated loudness, so loudnorm pushes the rest into the limiter, and AAC then overshoots true peak. Master with an oversampled TP limiter and measure after encoding.
+- PIL size-rounding on slow graphic pushes makes 1 px steps (held frames). Render slow pushes with sub-pixel warpAffine.
