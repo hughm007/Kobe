@@ -1807,3 +1807,15 @@ quality gate, claims and brand law after the commit.
 **Open**
 - Food photography for TripNerd's hospitality (none exists in the pack).
 - Confirm P06 is the package hotel; it now appears with no caption.
+
+## 2026-10-21: TripNerd Phoenix Reel 3 v4 delivered
+
+**Did**
+- New owner caption arc that sells TripNerd at the event.
+- Opener built from real frames only (optical-flow in-betweens on this AI clip warped).
+- Smoother push, with an automated stamp-aspect assert in the render.
+- Three photos (P02, the P05 crop, P06 pan) and a padded end-card button. 19.8 s.
+
+**Learned**
+- When a background frame is derived from an earlier shot, take it from the clean frame, not the captioned one.
+- An owner reports a fast accelerating zoom as "squish" even when the geometry measures true.

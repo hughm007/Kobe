@@ -129,3 +129,34 @@ The owner's reply left both hotel options in, so both were rendered. The main cu
   - The drop audio is 5 ms after the flash.
   - Every cut is within 16.5 ms of a beat.
   - All four captioned photos are static (P04's only change is 17 px of codec flicker, zero shift).
+
+## v4 revision (2026-10-21, third pass): sell TripNerd AT the Phoenix Open
+
+**Delivered:** `TripNerd_PHX_Reel3_YourTicketIn_v4.mp4`, 19.80 s, 594 frames, −14.0 LUFS / −1.2 dBTP. Built with `renderR10.py`, `timing_r10.json` and `mixR7.py`, then remuxed.
+
+**Caption arc** (owner-supplied copy; one caption per shot, on for the whole shot; white on a black plate at alpha 170, y = 460):
+
+| Shot | Caption |
+|---|---|
+| Opener | "Phoenix Open 2027." |
+| V01 | "Everyone wants the 16th." |
+| Ticket | "TripNerd gets you in." |
+| V03 | "Hole 16. With TripNerd." |
+| P02 | "Your spot at the 16th." |
+| P05 crop | "Food & drink included." |
+| P06 pan | "Hotel included." |
+| End card | "The Phoenix Open, done the TripNerd way." + padded "Talk to a Nerd" button (78/40 px padding) + "Link in bio" |
+
+No banned words (checked).
+
+**Changes from v3:**
+- **Opener:** REAL source frames 0–22 only, at near real time, with no synthesized frames. It now runs 0.93 s, and V01 becomes 6 beats.
+- **Push:** ease-in-out on one scale factor. Every push and turn frame is asserted to have a stamp aspect within ±0.5% (measured 0.998–1.003). v3 had also measured round, so the "squish" was the hard-accelerating push.
+- **Photos:** P09 (backs of heads, pillars) and P04 (back of head, pole) dropped. Three photos remain: P02, the P05 crop and P06.
+- **Ghost-caption bug** (found in QA): the ticket background was taken from the captioned V01 frame. It now uses the clean frame.
+
+**Checks:**
+- Every shot start is within 16 ms of a beat.
+- The drop audio lands 5 ms after the flash.
+- The stamp landing frame is identical to the pre-turn frame.
+- P05 shows a drink but no food (no food photo exists).
