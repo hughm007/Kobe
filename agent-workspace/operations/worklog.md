@@ -1846,3 +1846,17 @@ quality gate, claims and brand law after the commit.
 
 **Learned**
 - Pasted chat images are downsized (~2000 px). Ask for file uploads when resolution matters.
+
+## 2026-10-21: TripNerd Phoenix Open 2027 Reel, final Explore cut delivered
+
+**Did**
+- Built a 19.87 s Explore/non-follower cut:
+  - Aerial hook and the tall INCLUDED ticket with the stamp in its stub.
+  - The drop, suite POV, the AI food clip and the roar peak.
+  - The Fairmont quiet with the stamp landing on the kick, then a looping end card.
+- Also delivered the IG caption and a cover recommendation.
+
+**Open**
+- A full-res 02_tee_16th would restore the planned 3-cut suite sequence.
+- The food clip is the only enlarged source (1.78×).
+- Posting is the owner's action.

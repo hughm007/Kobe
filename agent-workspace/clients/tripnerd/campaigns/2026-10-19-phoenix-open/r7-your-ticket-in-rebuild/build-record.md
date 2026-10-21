@@ -220,3 +220,44 @@ No banned words (checked).
 - Swap in the original for a true full-bleed 9:16 crop.
 
 **Checks:** no banned words.
+
+## FINAL Explore cut (2026-10-21): "TripNerd is how you do the Phoenix Open"
+
+**Delivered:** `TripNerd_PHX2027_Reel_FINAL_Explore.mp4`, 19.87 s, 596 frames.
+- **Loudness:** −14.8 LUFS / −1.2 dBTP. The audio was trimmed 0.7 dB after a −0.6 dBTP master.
+- **Built with:** `final13.py` (shared pieces), `renderR13.py`, `mixR13.py` and `timing_r13.json`.
+
+**Assets:**
+- Photo pack 01, 03, 04, 05, 06b.
+- The owner's opener, V03, and the AI food clip `hf_20261021_175347…` (0:02–0:04).
+- The original logo file and the EDM Hybrid Intro track.
+
+**Timeline:** drop at 6.30 s (frame 189); music starts at 40.221 s in the track.
+
+| Time (s) | Shot | Caption |
+|---|---|---|
+| 0–1.47 | 01 aerial, push 1.0→1.3 (ease-out) on the stadium at (2240, 1280) | "The loudest hole in golf." |
+| 1.47–2.93 | 05 | "Everyone wants the 16th." (the "20,000" figure is unconfirmed: sources say 17k–20k+) |
+| 2.93–4.37 | Opener, real frames 0–22 held (~63%) | "Here's how you get in." |
+| 4.37–6.30 | Tall `SuiteTicket`: 3 INCLUDED rows; stamp alone in the stub; flat CW spin over the last 2 beats; the landing frame is asserted identical to the hold | — |
+| 6.30 | DROP flash | — |
+| 6.30–9.20 | V03 from 3.6 s | "Hole 16. With TripNerd." |
+| 9.20–11.63 | 03 → 04 | "Your view from the 16th Hole LOGE Suite." |
+| 11.63–13.57 | Food clip, 9:16 crop at cx 0.47 | "Food & drink included." |
+| 13.57–14.07 | V03 6.5 s, roar +5 dB over the music: the loudest 0.4 s at −8.7 dB | — |
+| 14.07–16.97 | 06b Fairmont pan (620 source px). 150 ms duck to −30 dB + water; mini ticket; stamp beside the text at 14.533 s; music fully back on the kick at 14.537 s (100 ms fade-up) | "Then you stay here." |
+| 16.97–19.87 | End card (padded button); last 9 frames crossfade into frame 1 for the loop (last frame vs frame 1 mean difference 0.5) | — |
+
+**How it was built:**
+- **Captions:** all the same size (Montserrat ExtraBold 70) at y = 340, centred at x = 500 (clear of the right-side UI), on a light translucent bar with a subtle shadow.
+- **Grade:** a warm/bright grade with +12% saturation and +7% contrast on all footage. Never applied to the logo or ticket graphics.
+
+**Deviations:**
+- **02_tee_16th:** 1856×1044, too small for 9:16 without upscaling, so 05 takes shot 2 and the suite POV is 03 → 04 (two cuts).
+- **06b chosen** over 06: 06 can't be verified as the Fairmont.
+- **The food clip is 1080p**, so its 9:16 crop is enlarged 1.78× (the only enlarged source).
+
+**IG caption:**
+> The loudest hole in golf, from your own seat in the 16th Hole LOGE Suite. ⛳🔥 / Food & drink included. Then back to the Fairmont Scottsdale Princess. / Who are you bringing to the 16th? 👇 / #WMPhoenixOpen #PhoenixOpen #Scottsdale #GolfTrip #TripNerd
+
+**Cover:** frame 0 (the aerial with the hook text).
