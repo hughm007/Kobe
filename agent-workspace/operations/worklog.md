@@ -1792,3 +1792,18 @@ quality gate, claims and brand law after the commit.
 **Open**
 - Confirm P06 is the package hotel; that picks which cut ships.
 - Food isn't shown in any photo, only drinks.
+
+## 2026-10-21: TripNerd Phoenix Reel 3 v3 delivered
+
+**Did**
+- Replaced the 3D logo spin with a flat 2D stamp turn that lands pixel-identical on the flash.
+- Photo captions now come strictly from what each image shows: P09/P02 "Hole 16.", P05/P04 "Drinks in hand.". P03 removed.
+- Added the P06 hotel pan, carried into the end card at the same speed. 19.8 s.
+
+**Learned**
+- Draw graphics that get pushed in on at 4× resolution and only ever downscale; this keeps rotation and push-ins sharp.
+- The owner reads "Food & drink" literally per frame: a caption needs its subject large in frame, not a bottle in the corner.
+
+**Open**
+- Food photography for TripNerd's hospitality (none exists in the pack).
+- Confirm P06 is the package hotel; it now appears with no caption.

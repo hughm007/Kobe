@@ -97,3 +97,35 @@ The owner's reply left both hotel options in, so both were rendered. The main cu
   - The ticket quad is 5% larger, so no AI-stub edge or teeth show. The source stub has no printed text (contrast-checked).
 - **End card.** The logo is at a fixed 880×324 with no scale-in (v1 measured correct; the 0.92→1.0 scale-in was the only shape change). Its elements cut on beats.
 - **Muxing.** `-shortest` trimmed 2 end-card frames on v2, so it was remuxed. Fix the mux step before reuse.
+
+## v3 revision (2026-10-21, second pass)
+
+**Delivered:** `TripNerd_PHX_Reel3_YourTicketIn_v3.mp4`, 19.80 s, 594 frames, −14.0 LUFS / −1.2 dBTP.
+
+**Built with:** `renderR9.py` + `ticket9.py` (the ticket drawn at 4× size, with the stamp as its own layer) + `mixR7.py`. The v2 mux issue is fixed by remuxing the silent video with the mixed audio.
+
+**Changes from v2:**
+- **Stamp spin.** The Y-axis logo spin is replaced by a FLAT stamp turn: the whole stamp (ring text + mascot) rotates 360° clockwise about its own centre.
+  - Smootherstep easing, 2 beats (5.77–6.73 s).
+  - The camera is locked at the end of the push, so there's no squish or blur.
+  - The landing frame (201) is asserted identical to the pre-spin frame (172) in the raw render.
+  - The end-card logo does not spin.
+- **Photos**, each static with one caption:
+
+  | Photo | Crop | Caption |
+  |---|---|---|
+  | P09 | cover, cx 0.55 | "Hole 16." |
+  | P02 | cover, cx 0.22 | "Hole 16." |
+  | P05 | box 0,450,558,1442 (guest holding a cup) | "Drinks in hand." |
+  | P04 | box 0,364,639,1500 (cup in hand + bottle) | "Drinks in hand." |
+
+  - P03 is removed (the green-hat photo the owner flagged). The P04/P05 crops exclude the green-hat man entirely.
+  - There is no food photo in the pack, so the caption reads "Drinks in hand." The ticket still says FOOD + DRINK INCLUDED.
+- **P06 hotel ending.**
+  - P06 pans for 5 beats (14.50–16.90 s) with no caption. The first 30% eases in, then it holds a constant 5.88 px/frame.
+  - The end-card foreground enters at that same speed and decelerates to rest over 18 frames. The background stays static.
+- **Opener.** Unchanged from v2: the slowed clip move with no added drift (the owner clarified "locked").
+- **Checks.**
+  - The drop audio is 5 ms after the flash.
+  - Every cut is within 16.5 ms of a beat.
+  - All four captioned photos are static (P04's only change is 17 px of codec flicker, zero shift).
