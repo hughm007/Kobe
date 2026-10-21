@@ -195,3 +195,28 @@ No banned words (checked).
 
 **Open:**
 - Replace the web thumbnails with the originals when TripNerd sends them, then re-render (`renderR11.py` takes them as-is; switch the card scale to native).
+
+## v5 (2026-10-21): v4 + new ending "From the noise to the quiet"
+
+**Delivered:** `TripNerd_PHX_Reel3_v5_quiet.mp4`, 19.33 s, 580 frames, −14.0 LUFS / −1.2 dBTP. Built with `renderR12.py`, `timing_r12.json` and `mixR12.py`.
+
+**Kept section:** 0–14.50 s is v4 unchanged. The owner's attached file was byte-identical to our v4. Decoded frames 0–434 differ from v4 by a mean of 0.000, and the audio for 0–13.9 s is within 0.04 dB of v4.
+
+**New ending:**
+
+| Time (s) | Beat | Picture | Audio |
+|---|---|---|---|
+| 14.00–14.50 | 15 → 16 | (food & drink photo) | V03 roar (source 6.25–6.75 s) swells over the music, ending ~5 dB above it; the loudest 0.4 s window of the Reel at −9.5 dB |
+| 14.50 | 16 | Hard cut to FSP_01 (Fairmont pool); caption "Stay at the Fairmont Scottsdale Princess." | Music ducks to −30 dB in 30 ms (the quiet measures −35 dB); crowd cut; synthesized pool ambience (band-limited noise swells + soft drips, no voices) |
+| 14.50–14.80 | — | Hotel ticket slides up into the lower-middle: same paper and header band with the original logo, plus one real-text line, "HOTEL: Fairmont Scottsdale Princess" | Quiet + water |
+| 14.80–14.97 | — | Stamp (`stamp_k`, a geometric circle) presses down: uniform scale 1.6→1.0 on a square raster, so it can't go oval | Quiet + water |
+| 14.967 | 17 | Stamp lands | Music back at full (8 ms ramp); attack measured at 14.978 s |
+| 16.90 | 21 | Cut to the v4 end card (unchanged), which arrives at the pan speed | — |
+| 16.90–19.33 | 21 → 26 | End card holds | Music fades over the last second |
+
+**Fairmont photo:**
+- Both attachments arrived as 2000×1333 chat images, not the 6720×4480 original.
+- To honor the no-upscaling rule, it runs at native pixels as a 1080×1333 band (y 293–1626) with a blurred extension fill, panning 360 px.
+- Swap in the original for a true full-bleed 9:16 crop.
+
+**Checks:** no banned words.

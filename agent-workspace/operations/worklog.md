@@ -1830,3 +1830,19 @@ quality gate, claims and brand law after the commit.
 **Open**
 - The web photos are the 300×201 thumbnails split from the owner's strip. They're shown at 2.4× in cards; the full-res originals would improve shots 6–9.
 - Posting is the owner's action; nothing was published from here.
+
+## 2026-10-21: TripNerd Phoenix Reel 3 v5 ("noise to quiet" ending) delivered
+
+**Did**
+- Kept v4 through the food & drink beat (verified identical).
+- New ending:
+  - 0.5 s crowd-roar peak.
+  - Hard cut to the Fairmont pool with a music duck and synthesized pool ambience.
+  - Hotel ticket slide-in; the stamp lands on beat 17 as the music returns.
+  - End card on beat 21. 19.33 s.
+
+**Open**
+- The Fairmont photo only arrived as a 2000×1333 chat image, so it's shown native-size in a band. A file upload of the 6720×4480 original allows a full-bleed crop.
+
+**Learned**
+- Pasted chat images are downsized (~2000 px). Ask for file uploads when resolution matters.
