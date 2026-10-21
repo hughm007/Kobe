@@ -70,3 +70,30 @@ tags: [reels, phoenix-open, video-production]
 ## Open items
 
 - Written confirmation is still pending for guest faces and the Feb 2027 package. The owner approved the food/drink and hotel lines from the public page.
+
+## v2 revision (2026-10-21), owner revision pass
+
+**Delivered:**
+- `TripNerd_PHX_Reel3_YourTicketIn_v2.mp4`, without the hotel line: 17.40 s, 522 frames, −14.0 LUFS / −1.0 dBTP.
+- `_v2_HOTEL.mp4`, which adds P06 with "Hotel included.": 18.37 s, 551 frames.
+
+The owner's reply left both hotel options in, so both were rendered. The main cut drops P06 because nothing confirms it is the package hotel.
+
+**Built with:** `renderR8.py` + `mixR7.py` (V03 source start now comes from the meta file; 10 ms fade-in when the music starts mid-track).
+
+**Changes from v1:**
+- **Ticket sequence.** Rise (1 beat), then a perfectly still hold (2 beats; frames 130–158 are identical), then a push into the stamp (1 beat). The original logo file then does a 360° Y-axis perspective spin (2 beats, smootherstep). The back half shows the logo un-mirrored. The spin lands on the exact original pixels (880×324) on frame 201; the white flash/drop is frame 202 (6.733 s).
+- **Music.** The drop is unchanged at 46.5205 s, so the music now starts at 39.787 s in the track. Every section boundary sits on the 124 BPM kick grid; the worst cut-to-beat error is 16.5 ms.
+- **Photos.** Matched to the real inclusions:
+  - P03 + P09: "Hole 16."
+  - P02 + P04: "Food & drink included." (water bottles on the rail; cup in hand in P04)
+  - [P06: "Hotel included." — HOTEL cut only]
+  - **Dropped:** P08 (same scene as P09, the reported repeat), P01 (soft), P05 (same scene as P02/P04), P07 (fan shop), P10 (Augusta).
+  - No photo shows food.
+- **Captions.** All cut on with no scale animation. The earlier "zoom" was the caption pop-in; the photo pixels were already static. Photo captions moved to y = 480, clear of faces.
+- **V03.** Starts at 3.6 s, once the spectator's head and the rail are out of the bottom-left. This loses the sand blast (visible 2.9–3.2 s).
+- **Opener.**
+  - Source 0.00–0.72 s, giving 1.43 s at 50% speed. The cup rim warps from source frame ~18.
+  - The ticket quad is 5% larger, so no AI-stub edge or teeth show. The source stub has no printed text (contrast-checked).
+- **End card.** The logo is at a fixed 880×324 with no scale-in (v1 measured correct; the 0.92→1.0 scale-in was the only shape change). Its elements cut on beats.
+- **Muxing.** `-shortest` trimmed 2 end-card frames on v2, so it was remuxed. Fix the mux step before reuse.

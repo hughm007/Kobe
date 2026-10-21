@@ -14,10 +14,11 @@ def build(meta, music, mdrop):
     bus = np.zeros((N, 2), np.float32)
     mstart = mdrop - drop; assert mstart >= 0, 'track drop must sit at least 5.1 s into the track'
     mu = load(music, mstart, T) * 0.75
+    mu[:int(0.01 * SR)] *= np.linspace(0, 1, int(0.01 * SR))[:, None]       # click-free start mid-track
     nf = int(1.0 * SR); mu[-nf:] *= (np.cos(np.linspace(0, np.pi / 2, nf)) ** 2)[:, None]   # clean fade over the last second
     bus += mu
     v3d = meta['v03_out_s'] - drop                                             # crowd stops with the cut to the first photo
-    v3 = m.src('V03', 1.9, v3d)
+    v3 = m.src('V03', meta.get('v03_src', 1.9), v3d)
     post = mu[int(drop * SR):int((drop + 4) * SR)]
     g = 20 * np.log10(rms(post) / rms(v3)) - 9.0                              # crowd sits ~9 dB under the music
     m.place(bus, v3, drop, g, fin=0.005, fout=0.03)

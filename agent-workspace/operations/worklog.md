@@ -1774,3 +1774,21 @@ quality gate, claims and brand law after the commit.
 **Open**
 - Written confirmation for guest faces and the Feb 2027 package.
 - Upload the MP4 to the Drive Phoenix folder (the connector can't upload MP4s this size).
+
+## 2026-10-21: TripNerd Phoenix Reel 3 v2 (revision pass) delivered
+
+**Did**
+- Added the ticket hold and the original-logo 360° spin landing on the drop.
+- Matched photo captions to real inclusions, from photo evidence only.
+- Removed the photo repeat (P08 ≈ P09).
+- Moved V03 to start after the spectator's head clears.
+- Shortened the opener to before the cup warps, and enlarged the stub overlay.
+- Delivered two cuts: without the hotel line (main; P06 is not confirmed as the package hotel) and with it.
+
+**Learned**
+- A caption pop-in reads as a "zoom" to the owner. Use static cut-on text over still photos.
+- `mix2.master`'s `-shortest` can trim the last video frames. Verify the decoded frame count after muxing.
+
+**Open**
+- Confirm P06 is the package hotel; that picks which cut ships.
+- Food isn't shown in any photo, only drinks.
