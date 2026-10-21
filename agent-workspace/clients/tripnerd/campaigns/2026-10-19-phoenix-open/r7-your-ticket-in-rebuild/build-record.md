@@ -366,3 +366,31 @@ No banned words (checked).
 2. V01 and V03 are native 9:16 (720×1280). A 75–80%-width inset of a 9:16 clip is 1536 px tall and cannot fit between the caption zone and the bottom UI zone, so they play full frame (uncropped).
 3. The suite (only ~1 s of pillar-free source) and opener (0.7 s clean) are heavy flow-blended slow motion.
 4. The mix2 master overshot TP at 0.85; `mixR16.master16` does a 4× oversampled TP limit and re-measures after AAC encoding.
+
+## R17 FINAL (2026-10-21): seven owner fixes
+
+**Delivered:** `TripNerd_PHX2027_Reel_R17_FINAL.mp4`
+- 1080×1920, 30 fps, 31.47 s, 944 frames, −14.1 LUFS / −2.1 dBTP.
+- Built with `renderR17.py`, `mixR16.py` and `timing_r16.json`.
+- Frame sheet: `r17_final_frames.png`.
+
+**Fixes:**
+- Continuous 0.6 s ticket shrink into a 30%-larger corner card (585×351, x 455–1040, y 445–796).
+- No ticket over the bunker: the bunker dissolves to navy, then the ticket slides in opaque.
+- Suite is V01 5.6–8.15 s at 60% (course view from the rail; pillar 0%).
+- Drone and pool full frame; stadium, opener, bunker, suite and food at 80% inset over a 60 px blur with a 20 px feather.
+- 0.4 s on-beat dissolves everywhere except the drop.
+- Proof captions: "Inside the 16th.", "Eat. Drink. Watch.", "Then unwind at the Fairmont."
+
+**Food:**
+- Rendered with the original clip only: src 1.46–4.00 s at 60%, flow-blended. It ends on both drinks, with the second glass touching the right frame edge.
+- Generation spend this round was 179 credits:
+  - Seedance 2.5 extension `3078f1f1`: good, both drinks fully in frame and held. Not used, because the CDN is blocked from this container and the file wasn't attached.
+  - Pull-back extension `97863486`: rejected.
+  - 21:9 reframe `409324e5`: rejected.
+- `renderR17.py` picks up `*3078f1f1*.mp4` automatically from the uploads directory if it's attached later.
+
+**QA:**
+- 0 held frames in any video segment.
+- Hard cut only at the drop (10.63 s); the drop onset measured 10.62 s.
+- Ticks are +4.9, +5.9 and +3.7 dB over the bed.

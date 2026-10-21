@@ -1903,3 +1903,15 @@ quality gate, claims and brand law after the commit.
 **Learned**
 - A long, deliberate dip lowers integrated loudness, so loudnorm pushes the rest into the limiter, and AAC then overshoots true peak. Master with an oversampled TP limiter and measure after encoding.
 - PIL size-rounding on slow graphic pushes makes 1 px steps (held frames). Render slow pushes with sub-pixel warpAffine.
+
+## 2026-10-21: TripNerd PHX 2027 Reel R17 FINAL delivered (seven owner fixes)
+
+**Did**
+- R17 with all the framing, transition, ticket, suite and caption fixes.
+- Food uses the original clip at 60%.
+- Spent 179 Higgsfield credits on food extension attempts. One is good but wasn't usable here, because the container can't reach Higgsfield's CDN.
+
+**Learned**
+- Seedance video_extension continues a clip seamlessly (frame diff 1.9), but it does not reliably follow "pull back" camera directions.
+- Reframe 21:9 re-renders at 946p and doesn't guarantee which side gets the extra width.
+- Check that the container can download generation outputs BEFORE spending on them.
