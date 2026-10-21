@@ -1860,3 +1860,19 @@ quality gate, claims and brand law after the commit.
 - A full-res 02_tee_16th would restore the planned 3-cut suite sequence.
 - The food clip is the only enlarged source (1.78×).
 - Posting is the owner's action.
+
+## 2026-10-21: TripNerd PHX 2027 Reel "ticket checklist" FINAL delivered
+
+**Did**
+- 21.8 s cut:
+  - Drone, then the V01 pan.
+  - Opener with the checklist ticket on the stub.
+  - Stamp push and flat spin into the drop.
+  - Bunker (once).
+  - Three ticket check beats, each followed by its proof: suite video, a wide food stack, the Fairmont pan.
+  - End card.
+- All video plays as motion; a motion check was run on the decoded output.
+
+**Learned**
+- A 16:9 tilt-down AI food clip can't show "food + both drinks" in a single 9:16 crop. A two-panel stack of wide windows shows it without upscaling.
+- A post-limiter pass after the mix2 master pushed true peak over 0 dBTP. Use the mix2 master directly.

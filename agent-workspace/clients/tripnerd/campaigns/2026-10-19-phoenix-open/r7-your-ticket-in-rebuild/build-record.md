@@ -261,3 +261,40 @@ No banned words (checked).
 > The loudest hole in golf, from your own seat in the 16th Hole LOGE Suite. ⛳🔥 / Food & drink included. Then back to the Fairmont Scottsdale Princess. / Who are you bringing to the 16th? 👇 / #WMPhoenixOpen #PhoenixOpen #Scottsdale #GolfTrip #TripNerd
 
 **Cover:** frame 0 (the aerial with the hook text).
+
+## "Ticket checklist" FINAL (2026-10-21)
+
+**Delivered:** `TripNerd_PHX2027_Reel_Checklist_FINAL.mp4`, 21.78 s, 653 frames, −14.0 LUFS / −1.0 dBTP. Built with `renderR14.py`, `mixR14.py` and `timing_r14.json`.
+
+**Timeline:** drop on the flash at 7.233 s; music starts at 39.287 s in the track; every cut is within 13 ms of a beat.
+
+| Time (s) | Beats | Shot | Caption |
+|---|---|---|---|
+| 0–1.93 | 4 | Drone 0:00–0:02, crop centred on the 16th | "Phoenix Open 2027." |
+| 1.93–4.33 | 5 | V01 pan from 2.5 s | "Everyone wants the 16th." |
+| 4.33–5.80 | 3 | Opener: real frames 0–22 held (~65%), the checklist ticket tracked on the stub | "TripNerd gets you in." |
+| 5.80–7.23 | 1 + 2 | Push into the stub stamp (one scale factor), then a flat CW 360° spin; the landing frame is asserted identical | — |
+| 7.23 | — | Flash / DROP | — |
+| 7.23–9.67 | 5 | V03 from 3.6 s, its only use; crowd 7 dB under the music | "Do the Phoenix Open with TripNerd." |
+| 9.67–10.63 | 2 | Ticket ck1: slides in, line-1 check draws on the beat | — |
+| 10.63–12.57 | 4 | Suite: V01 0.0–1.93 s (guests at the rail; doesn't overlap the pan segment) | "Your 16th Hole LOGE Suite." |
+| 12.57–13.53 | 2 | Ticket ck2 | — |
+| 13.53–15.00 | 3 | Food stack: two 1215×1077 windows downscaled into 1080×957 panels, ~55% speed from real frames | "Food & drink included." |
+| 15.00–15.97 | 2 | Ticket ck3 | — |
+| 15.97–18.37 | 5 | 06 pan (06 shows mission-style buildings beside the TPC tents) | "Fairmont Scottsdale Princess included." |
+| 18.37–21.78 | 7 | End card: "Do the trip right with TripNerd.", filled "Talk to a Nerd" + outlined "Link in bio" buttons | — |
+
+**Ticket:** one `ChecklistTicket` design throughout:
+- Header band with the original logo.
+- 3 real-text lines with checkboxes; checks are drawn-on strokes.
+- A highlight tint on the active line.
+- The stamp alone in the perforated stub, asserted not to overlap any text.
+
+**Sound:** hotel cut ducks to −35 dB for one beat, with water ambience, and the music is back on the kick at 16.438 s.
+
+**Motion check** (decoded output):
+- Every video segment changes frame to frame.
+- Longest hold: 3 frames in the food stack and 2 in the opener (both held real frames at reduced speed); 0 in the others.
+- The only still is the hotel photo.
+
+**Known compromise:** the tilt-down food clip puts food in every top band. The caption sits over the counter and glasses, but the tip of one topping touches it in the last ~0.15 s.
