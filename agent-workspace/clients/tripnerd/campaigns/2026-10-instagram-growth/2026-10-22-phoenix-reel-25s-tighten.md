@@ -50,3 +50,11 @@ All other cuts are 0.4 s dissolves centred on beats.
 - **Claims to confirm with TripNerd:** LOGE suite, hotel included, Fairmont, Feb 2027.
 
 **sha256:** 4d451f8ad687ddb799e6230be13dfd290c06b34a62c668f01eef58ac0fee3976
+
+## v2 (food clip inserted)
+- **Food clip:** Karl's `TripNerd_PHX_food_9x16.mp4`, 1080×1920 at 24 fps, 4.04 s; its audio is not used.
+- **Why it's retimed:** both cups are fully inside the frame only in its last ~0.3 s. So the shot plays at real speed, then eases to a stop over its last 1.8 s, using 120 fps motion-interpolated frames. Both cups are fully in frame from 17.9 s to the dissolve.
+- **Source limit:** the left cup's lime wedge runs off the left edge in every frame of the source.
+- **Note:** the clip looks AI-generated (styled golden-hour food), so the Reel needs Instagram's AI label unless TripNerd confirms it is real footage.
+- **Measured:** 24.39 s, −14.1 LUFS, −1.5 dBTP.
+- **sha256:** 4433c3a8ddce1172a9e651705b570743abd899872b149c008ecf32930525c279

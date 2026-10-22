@@ -2017,3 +2017,4 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **Built:** rebuilt from Karl's source zips. The ticket, card, captions and end card were rebuilt in code (no old project files existed); the stamp is lifted from the old render; the music is re-edited on the beat.
 - **Blocked:** the food and 9:16 suite clips were not supplied.
 - **Record:** `campaigns/2026-10-instagram-growth/2026-10-22-phoenix-reel-25s-tighten.md`.
+- **2026-10-22:** Phoenix Reel v2 is in, with the food clip inserted and eased to a stop on both drinks. Still pending: the 9:16 suite clip; TripNerd's confirmation of the claims.
