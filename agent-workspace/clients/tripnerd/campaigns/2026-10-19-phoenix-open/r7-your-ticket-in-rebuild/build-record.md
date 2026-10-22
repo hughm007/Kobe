@@ -453,3 +453,17 @@ No banned words (checked).
 - Captions are top-left at one size (60 px) and asserted clear of the card.
 
 **7. Cuts:** pre-drop cuts sit on the build's audible stabs; post-drop cuts sit on kick-grid beats that carry a hit (124 BPM, beat 0 = 10.645 s). Every cut and check is within ±32 ms of a measured hit.
+
+## R20 FINAL (2026-10-22): no tight crops, branded corner ticket
+
+**Delivered:** `TripNerd_PHX2027_Reel_R20_FINAL.mp4`
+- 30.97 s, 929 frames, −14.1 LUFS / −2.0 dBTP.
+- Every cut, the logo sequence, the ticket hold, the checks and the captions are identical to R19 (verified against R19's meta).
+- Built with `renderR20.py`.
+
+**Changes:**
+- **Drink shot:** the whole source frame (frames 2–20) in the 80% inset. The cup is whole, with the stands and crowd behind it. The pillars and canopy are back in frame; the owner prioritised no crop.
+- **Drone and pool:** whole frame fitted to full width over an edge-extended blur, with a 36 px feather top and bottom. No 9:16 crop.
+- **First ticket:** starts at 0.82 scale, so it is whole with margin (x 81–959 at f245) before the push. Rotation is 0 during the push, then exactly 360°. f313 is identical to f271.
+- **Corner card:** the full branded Ticket15 (logo header, border, checklist, stamp stub), shrunk as one piece to 410 px (38%), x 630–1040, y 250–496. The row tint fades. It stays on through the suite, food and pool shots.
+- **Food pan:** unchanged from R19: one forward pan with no reversal (max speed change 0.64 px per frame).
