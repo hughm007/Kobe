@@ -2012,3 +2012,8 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **Not posted.** It needs the AI label and TripNerd's OK on AI-animated guests.
 - **Credits:** the balance has fallen to 2,097 from 9,734 on 6 Oct. That drop is not from this session's jobs.
 - **Log:** `campaigns/2026-10-instagram-growth/2026-10-22-phoenix-16th-suite-animation-log.md`.
+
+## 2026-10-22 — TripNerd Phoenix Reel tightened to 24.4 s (v1 preview)
+- **Built:** rebuilt from Karl's source zips. The ticket, card, captions and end card were rebuilt in code (no old project files existed); the stamp is lifted from the old render; the music is re-edited on the beat.
+- **Blocked:** the food and 9:16 suite clips were not supplied.
+- **Record:** `campaigns/2026-10-instagram-growth/2026-10-22-phoenix-reel-25s-tighten.md`.
