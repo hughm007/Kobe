@@ -2006,3 +2006,9 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
   - the phone number conflicts between listings;
   - there's no real logo or photo rights;
   - the static QC manifest checks fail on the hand-built comps (OCR used instead).
+
+## 2026-10-22 — TripNerd: Phoenix 16th-hole suite photo animated (Higgsfield)
+- **Preview job:** Seedance 2.5, 480p, 15 credits, job `517a3039`. Karl's prompt was used word for word.
+- **Not posted.** It needs the AI label and TripNerd's OK on AI-animated guests.
+- **Credits:** the balance has fallen to 2,097 from 9,734 on 6 Oct. That drop is not from this session's jobs.
+- **Log:** `campaigns/2026-10-instagram-growth/2026-10-22-phoenix-16th-suite-animation-log.md`.
