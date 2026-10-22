@@ -420,3 +420,36 @@ No banned words (checked).
 **6. Stamp:**
 - 2.0 s eased log-scale push (frames 247–306) with a 1.5 s flat spin inside it (262–306), landing at 307–313, then a flash and the hard cut on the drop at frame 319.
 - It enters by dissolving from the opener into the ticket.
+
+## R19 FINAL (2026-10-22): pacing and polish pass
+
+**Delivered:** `TripNerd_PHX2027_Reel_R19_FINAL.mp4`
+- 1080×1920, 30 fps, 30.97 s, 929 frames, −14.1 LUFS / −2.0 dBTP.
+- Built with `renderR19.py` and `mixR16.py`.
+
+**1. Logo sequence:**
+- Push frames 241–270 (8.03–9.03 s), no rotation.
+- Hold 271–276 (0.2 s).
+- Flat 360° spin 277–312 (9.23–10.43 s).
+- Hold 313–318; the landed frame is asserted equal to the pre-spin frame.
+- Hard cut at frame 319, on the drop hit at 10.625 s.
+
+**2. Ticket:**
+- Fully in at 13.267 s and held 1.750 s in continuous time.
+- 0.6 s eased shrink (15.017–15.617 s); the navy tint fades over the same 0.6 s and the ticket swaps to the checklist late in the move.
+
+**3. Opener:** window x 12–70% / y 30–88% of the source: no pillar or canopy, course visible.
+
+**4. Food:**
+- Speed eases in from rest, which removes the direction-flip lurch against the suite drift.
+- Gap-corrected timeline; eases to a stop and holds 32 frames before the pool dissolve.
+- Second glass still touches the source edge (owner accepted).
+
+**5. Food background:** edge-extended blur with a 36 px feather. Pool stays full-frame.
+
+**6. Corner card:**
+- Clean 3-line checklist, 460×214, x 580–1040, y 250–464, 34 px Montserrat ExtraBold.
+- 38% width cannot fit 34 px "16th Hole LOGE Suite".
+- Captions are top-left at one size (60 px) and asserted clear of the card.
+
+**7. Cuts:** pre-drop cuts sit on the build's audible stabs; post-drop cuts sit on kick-grid beats that carry a hit (124 BPM, beat 0 = 10.645 s). Every cut and check is within ±32 ms of a measured hit.
