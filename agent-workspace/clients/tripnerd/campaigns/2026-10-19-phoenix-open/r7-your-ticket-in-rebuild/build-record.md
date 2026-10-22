@@ -394,3 +394,29 @@ No banned words (checked).
 - 0 held frames in any video segment.
 - Hard cut only at the drop (10.63 s); the drop onset measured 10.62 s.
 - Ticks are +4.9, +5.9 and +3.7 dB over the bed.
+
+## R18 FINAL (2026-10-22): six owner fixes on R17
+
+**Delivered:** `TripNerd_PHX2027_Reel_R18_FINAL.mp4`
+- 1080×1920, 30 fps, 31.47 s, 944 frames, −14.1 LUFS / −2.1 dBTP.
+- Built with `renderR18.py` and `mixR16.py`.
+
+**1. Food:**
+- The judder came from the source dropping frames at 62→63 and 95→96.
+- Fix: a gap-corrected virtual timeline with flow-filled gaps. Food plays at 100% speed, eases to a stop over 0.6 s, then holds the last frame 1.4 s.
+- Jitter: mean 0.19 px, max 1.38, no spikes.
+- Accepted by the owner: the second glass touches the right edge of the source frame.
+
+**2. Feather:** 36 px smoothstep on every inset edge.
+
+**3. Bunker:** a clean 0.4 s dissolve to the full ticket (no navy-only step, no slide-in).
+
+**4. Card and captions:**
+- Corner card is 380×228 (35% width), at x 660–1040, y 250–478.
+- Proof captions are left-aligned, x 44 to ≤640.
+
+**5. Opener:** window x 130–1080 / y 223–1912 (9:16), which removes the near-left pillar. The remaining columns cover under 5% of the frame area.
+
+**6. Stamp:**
+- 2.0 s eased log-scale push (frames 247–306) with a 1.5 s flat spin inside it (262–306), landing at 307–313, then a flash and the hard cut on the drop at frame 319.
+- It enters by dissolving from the opener into the ticket.
