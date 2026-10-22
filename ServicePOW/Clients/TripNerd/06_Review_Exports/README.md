@@ -43,6 +43,7 @@ Client-approved adverts are in [`../07_Client_Approved/`](../07_Client_Approved/
 | 13 | Book It Now (Augusta) | v3.1; no storage link | **Not postable**; v4 blocked | AM |
 | 14 | Augusta, by the clock (R03) | v5; no storage link | **Stopped** after five passes (best 7.7) | AM |
 | 15 | YOUR PEOPLE, 30 s 16:9 | cut v1 (media fe4d67c6) | **REJECTED** ("scratch the whole advert idea") | here: `2026-09-28-ten-scripts/` |
+| 16 | **Phoenix Open Reel** (31 s 9:16; built by another session, owner's file) | "16th Hole Suite" fix, [`2026-10-22-phoenix-open-16th-hole-suite/`](2026-10-22-phoenix-open-16th-hole-suite/) | Owner review; the claims (suite, hotel, Fairmont, Feb 2027) are with TripNerd | here: `2026-10-22-phoenix-open-16th-hole-suite-fix/` |
 
 ## Superseded versions (kept for the record; do not post)
 
