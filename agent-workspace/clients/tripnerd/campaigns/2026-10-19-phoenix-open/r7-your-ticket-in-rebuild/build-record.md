@@ -467,3 +467,20 @@ No banned words (checked).
 - **First ticket:** starts at 0.82 scale, so it is whole with margin (x 81–959 at f245) before the push. Rotation is 0 during the push, then exactly 360°. f313 is identical to f271.
 - **Corner card:** the full branded Ticket15 (logo header, border, checklist, stamp stub), shrunk as one piece to 410 px (38%), x 630–1040, y 250–496. The row tint fades. It stays on through the suite, food and pool shots.
 - **Food pan:** unchanged from R19: one forward pan with no reversal (max speed change 0.64 px per frame).
+
+## R21 FINAL (2026-10-22): owner's final client-ready pass
+
+**Delivered:** `TripNerd_PHX2027_Reel_R21_FINAL.mp4`
+- 1080×1920, 30 fps, 30.97 s, 929 frames, −14.0 LUFS / −1.9 dBTP.
+- Built with `renderR21.py` and `mixR21.py`.
+- Cuts, logo sequence, ticket hold, checks and caption timing are identical to R20 (checked against R20's meta).
+
+**Changes:**
+- **No blurred backgrounds:** every shot fills 9:16. V01 and V03 are native 9:16 with a ≤3% push; the drone and pool are 9:16 pan-and-scan windows on the 16th and the pool.
+- **New suite clip** (`fe88ebd4`, 0–2.5 s): replaces the cup shot, full frame with a 3% push, caption in the sky.
+- **New 9:16 food clip** (`840c49b9`, 0.5–4.0 s):
+  - Full frame, no push.
+  - The source camera speed alternates about 13/20 px per frame, so it is re-timed by measured camera travel: an even ~12.7 px per frame, easing in and out.
+  - Ends on its last frame with both drinks fully in frame.
+- **Corner card:** the full branded ticket at 390 px (36%), x 650–1040, y 250–484, so "Eat. Drink. Watch." fits on one line above the food. The two-line version overlapped the pizza and the skillet.
+- **End fade:** the music now fades over the last 1.5 s with a cosine curve (end card −12 dB, −23 dB at 30.3 s, −41 dB at 30.8 s).
