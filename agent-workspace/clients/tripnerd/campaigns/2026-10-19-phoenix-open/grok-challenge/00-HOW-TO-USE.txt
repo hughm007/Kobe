@@ -1,0 +1,16 @@
+TripNerd Phoenix Open: Grok challenge pack
+
+1. Unzip this folder.
+2. Open a new Grok chat. Upload all 10 photos (photos/) and the 4 keyframe sheets
+   (video-keyframes/). Also try uploading the 4 videos (videos/). If Grok
+   refuses or can't play them, the keyframe sheets cover what they show.
+   If Grok limits uploads per message, send the files across two messages
+   and say "more files coming, don't answer yet".
+3. Paste the text of STEP-1-PASTE-INTO-GROK.md and send it.
+4. ONLY AFTER Grok answers, paste STEP-2-PASTE-AFTER-GROK-ANSWERS.md.
+   (Keeping Step 2 back is what makes it a real blind test.)
+5. Bring Grok's two answers back to Claude for a final reconciliation.
+
+File key:
+  V01 = IMG_0075  V02 = IMG_0192  V03 = IMG_0112  V04 = IMG_0097
+  P01-P05 = first photo batch, P06-P10 = second photo batch

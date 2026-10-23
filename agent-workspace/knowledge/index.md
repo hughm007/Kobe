@@ -118,6 +118,7 @@ the section below.
 | Flash-cut detector false-positives on multi-frame wipes | **3** (gate rounds 1 and 2 + the 2026-09-29 camera-roll build, where 11–12 were reported against 1 real hard cut) | **Due for a harness ruling**. Until then, frame-check every FAIL and record it (see harness-instrument-limits) |
 | Build location must be chosen by where the heaviest inputs live | 2 ([build-where-the-assets-are](learnings/2026-08-31-build-where-the-assets-are.md), [vendor-sandbox-gives-hands-and-eyes](learnings/2026-09-23-vendor-sandbox-gives-a-cloud-session-hands-and-eyes.md)) | Watching — second measurement from the other side: when the inputs live with the vendor, build in the vendor's sandbox |
 | The expensive gate belongs at publish, not on drafts | 1 ([first-artifact-in-ten-minutes](learnings/2026-08-31-first-artifact-in-ten-minutes.md)) | Forming — Owner-stated; changes the default order of work |
+| Describe media from full-size views, never from contact sheets (night read as dusk, empty stands as packed, a duplicate moment as progression, faces missed at a frame edge) | 2 ([describe-real-media-from-full-size-views](learnings/2026-10-13-describe-real-media-from-full-size-views-not-contact-sheets.md) · the 2026-10-07 generated-clip rule in the worklog) | Watching — promote on a third |
 
 ## Promoted to playbooks
 

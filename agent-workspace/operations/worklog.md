@@ -1674,6 +1674,8 @@ This work is on branch `claude/friendly-feynman-v2rci5`, not yet on `main`.
 - **Owner's note on v2:** "you're just using the wrong footage after"; supplied two Higgsfield clips (byte-identical to his own generations: Seedance 2.5 `adac6b4d`, the ball landing by the pin, and Kling 3.0 `0c1646c7`, the group in the TripNerd suite watching it on the TV and erupting) and asked for them added after the text messages, blended, as a finished product.
 - **Built v3 (16.6 s, 24 fps):** the v2 thread (drift raised so the silence beat never reads as a freeze) → crossfade → the landing (a 9:16 window of the 16:9 clip held on the flag) → crossfade → the suite (a 9:16 window that starts on the TV and pans left to the men as they erupt) → the lockup in the upper band, loop fade. Both clips upscaled once to 4k so the 9:16 window stays sharp. Sound: the thread's tones, the clips' own generated sound under disclosure, TripNerd's real gallery murmur and real crowd swell beneath; −14.0 LUFS. Record: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-06-the-thread/build-v3.md`.
 - **Brand fidelity, said plainly:** clip B's wall carries a generated rendering of the TripNerd mark (no glasses on the nerd head, different line weight; checked at full resolution against the real file), and lanyards carry small generated "TripNerd" text. The window keeps the wall out of frame (a sliver of the glasses outline can touch the right edge in the first second) and the real logo file carries the brand in the lockup; the finding is recorded as the owner's call, not passed silently. Clip A's flag carries a faint dark fleck, an artefact, not a mark.
+- **Built v3 (16.6 s, 24 fps):** the v2 thread (drift raised so the silence beat never reads as a freeze) → crossfade → the landing (a 9:16 window of the 16:9 clip held on the flag) → crossfade → the suite (a 9:16 window that starts on the TV and pans left to the men as they erupt) → the lockup in the upper band, loop fade. Both clips upscaled once to 4k so the 9:16 window stays sharp. Sound: the thread's tones, the clips' own generated sound under disclosure, TripNerd's real gallery murmur and real crowd swell beneath; −14.0 LUFS. Record: `clients/tripnerd/campaigns/2026-10-06-the-thread/build-v3.md`.
+- **Brand fidelity, said plainly:** clip B's wall carries a generated rendering of the TripNerd mark (no glasses on the nerd head, different line weight; checked at full resolution against the real file), and lanyards carry small generated "TripNerd" text. The window keeps the wall out of frame (a sliver of the glasses outline can touch the right edge in the first second) and the real logo file carries the brand in the lockup; the finding is recorded as the owner's call, not passed silently. Clip A's flag was recorded as carrying only a faint fleck; the v3 gate later found a small outline emblem on it at 1.5–1.7 s (corrected in the v4 entry).
 - **Label fixed before delivery:** the v2 gate called the disclosure label small, low-contrast and mislabelled for its first shot; v3 carries "Scenes dramatized" (US spelling, 40 px on a darker pill, 59–63 % of frame height, 8.0–10.5 s, over the first generated shot). Re-rendered and re-checked after the change.
 - **QC:** harness PASS on every row (crossfades removed the flash-cut false positive); hook-motion WARN as before; speech screen 0; −14.03 LUFS / −1.00 dBTP. Final master MD5 `acf8ec1b4303cc7d69fc54ad2a1322de`, 12,484,620 B, 16.60 s; master, contact sheet and build kit uploaded to the Higgsfield account and byte-verified after upload (links in the record). Spend by this build (FACT, ledger): Bytedance Video Upscale −0.4 credits ×2 at 23:41 UTC, nothing else. Dual gate launched on the frozen master; verdicts appended to the record when they land.
 - **Ledger note (FACT):** the other spends in the same hour (Seedance 2.5 −180 at 23:42 and −60 at 23:28, GPT Image 2.0 −6.5/−6.5/−11, GPT Image 2.5 Flare −2.75, Nano Banana 2.1 −3, Kling v3.0 −12.5 ×4, between 23:14 and 23:54 UTC) are the owner's own work in the account, not this session's.
@@ -1792,3 +1794,269 @@ This work is on branch `claude/friendly-feynman-v2rci5`, not yet on `main`.
   - **Phoenix claims, TripNerd still to confirm:** suite access, hotel, Fairmont, Feb 2027.
   - **Derby claims, Jason to confirm:** the date and the checklist.
   - **Nothing posted.**
+## 2026-10-07 (early, v4) — TripNerd "The thread" v4: energy at the ball, the owner's lawn-chair gallery erupting, a TripNerd end card
+- **Owner's note on v3 (00:11):** more energy when the ball is within five feet; drop the suite ("watching it on TV is not as good as an experience"); pan to his Higgsfield image of people in lawn chairs celebrating and jumping, wide enough to show the crowd behind the three in front with TripNerd lanyards; a line like "get first sights on it with TripNerd"; a TripNerd end card; "build and give back to me."
+- **What the v3 gate found first (13 agents, 34.6 min, HARD FAIL 7.2):** an outline emblem on the owner's landing-clip flag at 1.5–1.7 s of the source (upheld by two verifiers; I had recorded "a faint fleck" — wrong, corrected in `build-v3.md`), the lanyard wordmark in the suite clip, the ball never stopping, the label not covering the suite shot, the lockup colliding with the TV. v3 marked superseded.
+- **Built v4 (15.39 s):** the landing now ends at the ball's closest approach with a punch-in and a half-speed lip beat; **the flag emblem painted out frame by frame** (`build/flagfix2.py`: local-contrast detection inside the flag, filled with the local flag colour; a faint trace may remain on a paused native frame); a 7-frame rendered whip pan; the owner's still (GPT Image 2 `8dec124e`) with its **tournament scoreboard removed** (third-party trade dress, replaced by the pines above it, no generation), outpainted to 9:16 (Higgsfield, 2 credits) and animated once with **Kling 3.0 pro (5 s, 9:16, sound on, job `31993a42`)**: the three spring up, the crowd behind rises, the two women hug; lanyards plain straps; composited headline "FIRST SIGHT / OF IT. / With TripNerd." (the owner's phrase without the imperative); the gallery held 2.0 s and cut on the arms-apex before the hug, no punch-in on generated people (the design panel's judges, both); a hard cut to a brand-blue end card (2.6 s) from the real logo file; label from 8.0 s to the card. Sound: the real V24 roar leads the ball by three frames, low-passed across the green, opened on the whip, ducked and low-passed on the card; whoosh, thumps, the chat tone a fifth down on the card; −14 LUFS. Record: `clients/tripnerd/campaigns/2026-10-06-the-thread/build-v4.md`.
+- **Design panel (Workflow, nothing generated):** three treatments and three Kling prompts, judged; grafted: the half-speed lip beat, the roar leading the picture and the low-pass-then-open "perspective" trick, the hard cut with the roar ducking, the loop seam, continuous label coverage, the "first-hand" headline alternative. The Kling prompt was mine (fired before the panel landed; its prompts agreed on backs-to-camera, chairs planted, plain straps).
+- **Spend (FACT, ledger):** outpaint 2 credits; Kling 3.0 pro 12.5 credits (00:29 UTC); total 14.5 credits. Balance before 9,183.55. Precedent cited for proceed-and-inform: the owner's instruction "build" plus the Kling takes in the 17th-hole builds.
+- **Policy deviations recorded, both the owner's:** a performed celebration at readable distance (realism §4 floor; his explicit ask); green polos/quarter-zips in the landing gallery that two v3 reviewers called "green jackets" (not recoloured).
+- **Open:** owner review of v4; the headline wording ("first sight" reads as a front-row promise to the compliance lens; "SEE IT FIRST-HAND." is the safer alternative); TripNerd's approver; the AI label at posting; the package sheet for "badges"/"the house"; the bio-link parity receipt; the lanyard wordmark composite if the owner wants the mark on the straps. Nothing posted.
+
+## 2026-10-07 (early, v5) — TripNerd "The thread" v5: v4 lengthened ("feels too rushed")
+- **Owner's note on v4 (01:12):** "Make the advert a little bit longer, feels too rushed." Delivered v5 (16.79 s, from 15.38): the landing starts 0.3 s earlier and its half-speed beat now covers the last 0.2 s of the ball's approach so the shot ends on the ball at the cup and never shows it leaving (the v4 gate's buyer lens had called the eruption "not earned" because the ball was visibly rolling away); the gallery is held 3.0 s (from 2.0), through the women's turn and 0.7 s into their embrace (faces in profile at readable distance for that last beat, accepted by the owner's ask); the card 2.9 s; a soft scrim under the headline and "With TripNerd." at 54 px (the v4 client lens: least legible text); the label now starts with the crossfade. Nothing regenerated, no spend. Record: `clients/tripnerd/campaigns/2026-10-06-the-thread/build-v5.md`.
+- **v4 gate, partial at the time of writing (two of four lenses in, both BLOCK):** S3 (client lens) the caddie in white coveralls on the green in the owner's still, a venue-specific uniform; S3 (buyer lens) the ball rolling away (fixed in v5); S2s: headline legibility (fixed), green tops on two seated patrons in the landing clip, generated tags on the landing clip's chair backs, the trade-dress clearance receipt, the pending Evidence Record, the quiet open. Verdicts folded into the records when the run completes; a v5 gate launched on the frozen v5 master.
+- **Open:** the caddie-coveralls cue (owner's call: accept, or paint the golfer and caddie out of his still and regenerate the clip, about 12.5 credits and a fresh review); the headline wording; TripNerd's approver; the AI label at posting; the package sheet. Nothing posted.
+
+## 2026-10-07 (early, v6) — TripNerd "The thread" v6: phone-style thread, three messages, applause not eruption
+- **Owner's note on v5 (01:38):** "Make the text as formatted like Apple text messages, like iPhone, and only have like two or three messages and make it a lot slower and stop making the caddy and the golfer hug. And the ball never goes in, so don't make them too excited, just like clapping because it was a good shot. make these fixes and then give me the advert back."
+- **Built v6 (19.58 s, 24 fps):** a white phone-style thread (grey/blue bubbles with tails, typing dots, day/time separators, a "Delivered" receipt, initials avatars; no platform name, icons or status bar; fictional names Jake and Ryan) with three messages a year apart over 10.25 s → the v5 landing cut → a 0.42 s whip → a **new Kling 3.0 pro take (job `7bc4c0e2`, 12.5 credits)** from the owner's still with the golfer and caddie cloned out (no generation): the three stand and applaud, the crowd behind applauds, cut before the turn → the headline → the card, loop fade to white. Sound: the V24 crowd 6 dB lower so it reads as applause, the Kling applause carrying the gallery. Record: `clients/tripnerd/campaigns/2026-10-06-the-thread/build-v6.md`; scripts in `build/` (`render_thread_v6.py`, `assemble_v6.py`, `cutcheck_v6.py`, `params_v6.json`).
+- **QC, said plainly:** the harness FAILs two rows on this cut and both are recorded, not passed: the freeze row on the holds between the three messages (the owner's "a lot slower"; his acceptance needed, or a faster thread) and the flash-cut row, where the still thread collapses the detector's global median so every frame of live motion reads as a cut (`cutcheck_v6.py` with a rolling median: real cuts 10.1/12.85/13.27/16.67 s, shortest shot 0.42 s). Everything else PASS; hook WARN; −14.10 LUFS / −0.99 dBTP; speech 0. Master MD5 `993bba8d07edd90112c3a8333f961c12`, 13,569,300 B; master and sheet byte-verified after upload; the dual gate launched on the frozen master (02:03 UTC).
+- **v4 gate landed (11 agents, 38.3 min): all four lenses BLOCK, Critic 7.2, HARD FAIL on receipts.** Upheld S3s: the ball rolling away (fixed in v5), the caddie's venue-specific uniform (removed in v6), the Evidence Record for "badges"/"the house" (the lines are gone from the v6 thread; the client receipt stays open), and **a process error of mine: the v5 build reused the v4 output filename while the gate was still reading it**, so the file on disk no longer matched the packet's MD5 (the certified v4 bytes survive as `out/v4_final_15s.mp4`, MD5 verified; from v6 every version has its own output name). Folded into `build-v4.md` §6. The v5 gate is still running.
+- **Spend (FACT, ledger):** Kling v3.0 −12.5 at 01:42:48 UTC; nothing else by this build. The other spends in the window (Kling −25, Seedance 2.5 −84 ×2, Nano Banana −3 ×4, 01:27–01:41) are the owner's own session.
+- **Open:** owner review of v6; the freeze-row acceptance; the phone-look trade-dress call (the client lens is briefed on it); the headline wording; TripNerd's approver; the AI label at posting; the package sheet; the bio-link parity check; the green tops / chair tags / chairs-behind-the-crowd staging in the owner's own assets; the ® on the logo. Nothing posted.
+
+## 2026-10-07 (early, v6.1) — TripNerd "The thread": v6 withdrawn on its gate; v6.1 is a frame-by-frame repair, no new generation
+- **v6 gate (five isolated agents, 02:03–02:20 UTC): all four lenses BLOCK, Critic 7.0, HARD FAIL.** The blocker was mine to own: the applause clip carried two player-and-caddie groups on the far fairway at both frame edges (a caddie in white coveralls, a figure in a green jacket) and a stone bridge; they were in the owner's still from the start (the v4 gate had even mentioned "a second caddie at far left by a golf bag"), I removed only the pair by the flag, missed them again on a 180 px contact sheet, and wrote "the green beyond is empty" in the packet. Also found: generated roundels on the landing clip's chair backs (S3), two kelly-green knits (S3/S2), the ball still receding during the half-speed beat (measured), the whip's hard-edged sliver and seams, the phone chrome ('+', mic dot, 9:41), the blank first frame. Folded into `build-v6.md` §5; v6 marked WITHDRAWN.
+- **v6.1 built (19.71 s), no spend:** the far-fairway figures and the bridge painted out of every frame of the applause clip (`build/farfix4.py`: the still inpainted, aligned per frame with the push tracked, pasted over non-grass pixels in those regions, the foreground people and the rising crowd protected); the chair roundels painted out and the knits recoloured charcoal in the 4k landing clip (`build/gallfix.py`); the landing retimed so the push-in and the half-speed beat sit on the ball's closest approach and the shot ends beside the cup; the whip re-rendered from a fully blurred strip; the thread opens on the typing indicator, loses the composer bar and 9:41, keeps the avatar whole, holds "Booked" 1.75 s; label to the cut; loop fade to pure white. Record: `clients/tripnerd/campaigns/2026-10-06-the-thread/build-v6.1.md`.
+- **QC:** harness FAIL on the thread's holds (design, APPROVER's acceptance needed) and on the flash-cut row (frame-check PASS: real cuts 10.6/12.95/13.37/16.77, shortest 0.42 s); everything else PASS; −14.01 LUFS / −0.99 dBTP; speech 0. Frames checked at native on all four edges of the generated shots before the packet was written. Master MD5 and links in the record; the dual gate launched on the frozen master.
+- **Learning (recorded):** never describe a generated clip from a contact sheet; check native crops on all four frame edges, and compare against what the still contains before claiming anything was removed.
+- **Open:** owner review of v6.1; the freeze-row acceptance; the venue-evoking look (clear or genericise); the phone-look call; TripNerd's approver; the AI label at posting; the bio-link parity check. Nothing posted.
+
+## 2026-10-07 — TripNerd "The thread" v7 (owner's v7 notes)
+- Thread rebuilt to real phone behaviour (pinned messages, dots morph in place, typed-and-sent message), 8.0 s; "Scenes dramatized" removed (disclosure moves to the platform toggle and caption; no EU targeting without a label).
+- New shots: drone descent to behind the guests (Kling 3.0 pro); the orbit take was rejected on realism. Turn-and-toast with a plain cup (Kling 3.0 pro, own voice). Line changed to "Told you we'd make it." because "Thanks to TripNerd" from a generated guest is a synthetic endorsement.
+- Host voice clone blocked by the session permission check (biometric data); owner decision. Seedance preflight and further turn takes also blocked; not retried.
+- Spend 41.75 credits (measured). Master `b99e998d…`, link and gate in `clients/tripnerd/campaigns/2026-10-06-the-thread/build-v7.md`.
+- Learning: generated wardrobe carries marks beyond the obvious one (cap badge found first, sleeve marks only on a deliberate native check of the whole garment). Check every garment edge to edge before writing the packet.
+
+## 2026-10-07 — TripNerd "Augusta Narrated": owner's edit v1
+- Owner uploaded their narrated Augusta reel and a fictional-voice reference clip. Re-voiced "Bring your people" / "Enjoy the moment" from the clip; roar line + caption and a closing line; Augusta-style roar under the roar line; the golf shot rebuilt with the camera push locked at its opening framing; flag emblem painted out.
+- Done entirely in the local container (stem separation, offline Whisper, local zero-shot voice for the two lines the reference clip doesn't contain). Two versions sent to the owner in the app: main (his wording, generated lines) and alt (the clip's real "feel the roar" / "All handled by TripNerd"). Record: `clients/tripnerd/campaigns/2026-10-07-augusta-narrated/edit-v1.md`.
+- Not gated; generated lines not verified by ear; no storage upload (container cannot reach the upload service). Spend: none.
+
+## 2026-10-12 — TripNerd: five October Reel scripts from real footage the approved adverts never used
+- Mapped which seconds of real material the two approved adverts used (hosting spot: owner's 720p suite cut; Camera Roll: 10 gallery heroes + tiles, V23 29.8–33.2, V24 13.6–15.8 and murmur) against the register; listed the unused clips (V23 door-to-rail and rail guests, V24 backs and hush, the 2022 Daytona suite tour `553c8ee2`, the tournament-week house photos, the reviews).
+- Drafted five scripts mapped to the plan's queue slots (05, 09, 07-companion, a February Daytona Reel, 04): `clients/tripnerd/campaigns/2026-10-12-october-real-footage-scripts/scripts.md`. Clips not re-viewed this session (descriptions from the 1 fps logs). No spend, nothing built or posted.
+- Open: staff/guest consent, package wording Evidence Record, OK to quote Sean M., newer Daytona footage and V23/V24 originals.
+
+## 2026-10-12 — TripNerd: review of five drafted adverts (owner's request; review and plan only)
+- Reviewed D1 ROAR v1 (ours), and four owner drafts: D2 "POV: you're TripNerd's guest" 15 s, D3 "Book It Now" first cut 30 s, D4 "back of someone's hat" 20 s, D5 "players17 suite on 17" 9x16 30 s v2. Exact MD5s in the record.
+- Method: full decode, 2–10 fps frame strips and native crops at problem moments, cut maps, loudness, local stem split + offline transcription. Not judged by ear; approved references not openable (storage host blocked), compared via their records.
+- Verdicts: D5 FIX (lead; cut its 6.3 s of generated golf, which fixes the overcast/sunny mismatch and the putt shown twice; est. 7.6 from the render, ~8.0 from raw clips), D2 POLISH (backup), D1 ARCHIVE, D3 ARCHIVE (two pins on one green, Augusta trade dress, DM CTA with no DM coverage), D4 REBUILD THE IDEA, parked (ball enters from above and stops at the lip; the "different" experience is a lawn chair any patron has).
+- Record: `clients/tripnerd/campaigns/2026-10-12-draft-review/review.md`. Nothing edited, generated, spent or posted.
+
+## 2026-10-12 — TripNerd: D5 parked; Daytona 500 footage inventoried; five Daytona scripts
+- Owner chose Daytona 500 as the next advert. D5 parked as a first draft in the new `clients/tripnerd/Parked draft adverts/` folder (pointer, MD5 `005a1f76…`, fix plan, reopen checks). No "Colby" folder exists in the workspace; this location is my assumption, easy to move.
+- Daytona inventory (`campaigns/2026-10-12-daytona-500/footage-inventory.md`):
+  - the 2022 suite tour (one take, pre-race, 720p, room-tone audio);
+  - nine race-day photos (EXIF 2022-02-20 and 2023-02-19; the track/start-finish group with GARAGE TOUR credentials, the seats over pit road, dusk, under the lights, the flyover);
+  - the hotel photo is not ours;
+  - Drive V05/V06 (2024-02-19) unreviewed: the connector cannot hand video to this session.
+- Five scripts (`scripts.md`): Race day by the clock (8.0, lead), Their camera roll: Daytona (8.0), Tent to pit road (7.5), The countdown (7.5, weekly series), Bring your clients (7.0). All real material; nothing generated or spent.
+- Open: owner attaches V05/V06; TripNerd's package email, consents (minors in gallery_08 and 020), photo ownership, event-name decision.
+- Also seen in Drive: an owner-made folder of clips for the October Script 2 ("Who's in the seat next to you?"), created 2026-10-12 17:40.
+
+## 2026-10-13 — TripNerd Daytona Script 1 "Race day, by the clock": build spec for Friday 16 Oct
+- Spec: `clients/tripnerd/campaigns/2026-10-12-daytona-500/script-1-build-spec.md`.
+- **Media:** 4 real 2023 stills (EXIF times 12:26 / 16:54 / 18:56 plus one untimed night shot) with push-ins; 2 real 2022 video segments (tent 6.2–7.5 s, pit road 34.0–35.5 s); composited clock, captions and end card; licensed sound effects and music plus real room tone. No generation, no AI animation of photos.
+- **Upscaling:** none needed, thanks to the full-width framed layout (about 1.05x).
+- **Plan B:** drop the start/finish-line photo if consent or track-access confirmation misses Thursday noon.
+- **Blockers:** Higgsfield failed to connect and the container had no outbound access at writing; the sound library is unnamed; TripNerd's consent and package answers are pending; the 2024 clips are unseen. Nothing built, spent or posted.
+
+## 2026-10-13 — TripNerd Daytona Script 1: cold review, v2 rewrite, prompt for Grok
+- **Reviews:** three fresh-context reviews of the v1 storyboard (packet in the scratchpad; maker reasoning withheld).
+  - Critic: CANNOT ASSESS, predicted HARD FAIL 5.8 ± 1.5.
+  - Skeptic: BLOCK, 3 S4 and 7 S3.
+  - Hook tournament: H3 (night burnout with a guest filming, then rewind) as A, H4 ("Race day, timestamped.") as B.
+- **Findings I verified:**
+  - the track photo (minors, "VIP", marks, implied 2027 access);
+  - 2022 footage under a 2027 label;
+  - no Evidence Records;
+  - gallery_05 and gallery_01 are the same moment;
+  - burnout scored as a field pass;
+  - empty stands described as packed;
+  - safe-area failures;
+  - Hendrick and Sunoco marks.
+- **v2** (`clients/tripnerd/campaigns/2026-10-12-daytona-500/script-1-v2.md`, 16.4 s):
+  - cold open on gallery_05 at 6:56 PM, rewind to 4:54 (gallery_07, "Headsets on."), back to the 6:56 wide reveal;
+  - the clock rolls to FEB 21, 2027;
+  - 2022 suite clips labelled 2022, with a question CTA and a send ask;
+  - no consent or claim dependencies on screen.
+  - Estimate about 7.2 ± 1.5; about 8 with the phone originals and the 2024 race clips.
+- **Superseded:** the v1 build spec is marked superseded.
+- **Grok prompt:** `grokbot-prompt-script-1.md` (self-contained: rules, exact media descriptions, current script, known weaknesses, asks).
+- **Learning recorded:** `knowledge/learnings/2026-10-13-describe-real-media-from-full-size-views-not-contact-sheets.md`.
+- Nothing built, generated, spent or posted.
+
+## 2026-10-19 — TripNerd Phoenix: owner footage reviewed, Grok challenge pack
+- Owner uploaded 4 iPhone videos (IMG_0075/0192/0112/0097, 720x1280 copies, GPS = TPC Scottsdale) and 10 photos. Reviewed at full size plus audio: no real crowd roar in any clip; V01 has an identifiable face 0–1.5 s; P08 "2025" board is the same moment as P09 "2024" (label 2024 only); P10 is an unrelated Augusta eclipse composite (exclude).
+- Video concepts proposed: 1 "Down there / Up here" (recommended), 2 "Phoenix, handled", 3 "This close" (pro-likeness risk), 4 single-shot pan.
+- Built a blind two-step Grok challenge (`campaigns/2026-10-19-phoenix-open/grok-challenge/`); media zip lives outside the repo (scratchpad), not committed.
+- Open: originals + capture dates, TripNerd seat/structure confirmation, V01 release, pro-player decision, hotel name.
+- Grok Step 1 answer received and reconciled (`grok-challenge/reconciliation.md`): Grok won 7 of 11 disputed points (V04 has the real crowd swell; V03 board names Spieth/Hoffman/Kitayama; WM/FedEx wall band in every 16th frame; P01 likely a screenshot; P08 clean crop; P09 evidence-only; my pack re-encode dropped GPS). Claude kept the product-focus and sound-off hook points. Merged concept "Down there / Up here" recommended.
+- NEEDS INPUT: Grok's answer cites owner rules not on record here (Jason face approval, no blurring, banned words incl. "handled" and "send this to…"). If confirmed, the Augusta cover, Phoenix concept 2 and Daytona v2 send line break them.
+- Built Phoenix A "Down there / Up here" (13.0 s) and B near-miss (14.8 s) from real owner footage: solid brand panels over the wall band (owner-approved), tracked panel on V03, P08 crop + 2024, approved end card with "Link in bio", real audio at −14 LUFS. QA1 clean. Dual gate not run; owner review pending. Record: `campaigns/2026-10-19-phoenix-open/build-v1/build-record.md`.
+- Phoenix v2 "This is the 16th." built (13.0 s, 8 cuts on 120 BPM, slow-mo bunker blast snapping on a bass hit at 2.0, whip crowd→suite, drop at 4.0, logos removed by tracked wall-colour fills, animated white type, synthesized SFX). Delivered TEMP-beat and FX-only drafts; waiting on owner's Pixabay track to lay the drop at 4.0. Version C (AI fly-up) spec written, not generated; awaiting price quote + SPEND_APPROVER. Record: `campaigns/2026-10-19-phoenix-open/build-v2/`.
+- Phoenix awareness: assessed the one-shot as an opener (hook yes; awareness needs the brand plus real guests in 3 s) and drafted 5 scripts from real footage (`campaigns/2026-10-19-phoenix-open/awareness-scripts-v1.md`). Lead: S1 'From our seats'; challenger: S3 'Guess where we watched this'.
+- Built Phoenix S1 'From our seats' (13 s, real footage only, logo badge 0.3–9.5 s; NoMusic + TEMPBEAT) and a round-table handoff zip for Grok/ChatGPT/owner with a shared answer template and a decision log (`campaigns/2026-10-19-phoenix-open/s1-build/`).
+- Owner clarified: wanted the S1 SCRIPT (pre-production) for Grok/ChatGPT review, not a build. Wrote `S1-from-our-seats-SCRIPT-for-review.md` + reference-footage zip. The earlier S1 render is parked, not the deliverable.
+- Built Phoenix Reel 3 'Your Seat's On This Ticket' from the owner's final script (17 s, real footage, ticket open, logos left as filmed per owner). TEMPBEAT + NoMusic. Drive link not possible via connector (size); owner to upload. Record: `campaigns/2026-10-19-phoenix-open/r3-build/`.
+- Phoenix 'Your Ticket In' (owner brief): built renderR6/mixR6, preview with marked slots for AI first frame + 2 guest photos + music; V01 start moved to 2.45 s (pole), drop at 7.9 s (real roar). Blocked on owner uploads; 'Food & drink included.' needs evidence. Record: `campaigns/2026-10-19-phoenix-open/r6-your-ticket-in/`.
+
+## 2026-10-20: TripNerd Phoenix Reel 3 "Your Ticket In" rebuild delivered
+
+**Did**
+- Rebuilt Reel 3 from `BRIEF.md` plus the owner's updates. Build files are in `clients/tripnerd/campaigns/2026-10-19-phoenix-open/r7-your-ticket-in-rebuild/`.
+- Opener: the Higgsfield clip slowed to 50% with optical flow, and the ticket face tracked to the stub with an LK + RANSAC homography.
+- Picked the music by scoring about 190 Pixabay tracks in the Higgsfield sandbox (non-Content-ID only). The owner downloaded track #1.
+- Locked the measured drop to the white flash, cut on the 124.0 BPM kick grid, and delivered a 17.70 s MP4 at −14 LUFS.
+
+**Learned**
+- Pixabay is blocked from the build container, but the Higgsfield sandbox can read Pixabay pages through r.jina.ai and download MP3s there for analysis. Files can't come back into this container, so the owner still downloads the track.
+- My sandbox drop estimate was 30 ms off; full-band flux locked onto the off-beat hi-hats. Measure the beat phase on low-band (kick) onsets.
+
+**Open**
+- Written confirmation for guest faces and the Feb 2027 package.
+- Upload the MP4 to the Drive Phoenix folder (the connector can't upload MP4s this size).
+
+## 2026-10-21: TripNerd Phoenix Reel 3 v2 (revision pass) delivered
+
+**Did**
+- Added the ticket hold and the original-logo 360° spin landing on the drop.
+- Matched photo captions to real inclusions, from photo evidence only.
+- Removed the photo repeat (P08 ≈ P09).
+- Moved V03 to start after the spectator's head clears.
+- Shortened the opener to before the cup warps, and enlarged the stub overlay.
+- Delivered two cuts: without the hotel line (main; P06 is not confirmed as the package hotel) and with it.
+
+**Learned**
+- A caption pop-in reads as a "zoom" to the owner. Use static cut-on text over still photos.
+- `mix2.master`'s `-shortest` can trim the last video frames. Verify the decoded frame count after muxing.
+
+**Open**
+- Confirm P06 is the package hotel; that picks which cut ships.
+- Food isn't shown in any photo, only drinks.
+
+## 2026-10-21: TripNerd Phoenix Reel 3 v3 delivered
+
+**Did**
+- Replaced the 3D logo spin with a flat 2D stamp turn that lands pixel-identical on the flash.
+- Photo captions now come strictly from what each image shows: P09/P02 "Hole 16.", P05/P04 "Drinks in hand.". P03 removed.
+- Added the P06 hotel pan, carried into the end card at the same speed. 19.8 s.
+
+**Learned**
+- Draw graphics that get pushed in on at 4× resolution and only ever downscale; this keeps rotation and push-ins sharp.
+- The owner reads "Food & drink" literally per frame: a caption needs its subject large in frame, not a bottle in the corner.
+
+**Open**
+- Food photography for TripNerd's hospitality (none exists in the pack).
+- Confirm P06 is the package hotel; it now appears with no caption.
+
+## 2026-10-21: TripNerd Phoenix Reel 3 v4 delivered
+
+**Did**
+- New owner caption arc that sells TripNerd at the event.
+- Opener built from real frames only (optical-flow in-betweens on this AI clip warped).
+- Smoother push, with an automated stamp-aspect assert in the render.
+- Three photos (P02, the P05 crop, P06 pan) and a padded end-card button. 19.8 s.
+
+**Learned**
+- When a background frame is derived from an earlier shot, take it from the clean frame, not the captioned one.
+- An owner reports a fast accelerating zoom as "squish" even when the geometry measures true.
+
+## 2026-10-21: TripNerd Phoenix Reel 3 FINAL delivered (posts tomorrow 12pm ET)
+
+**Did**
+- Final hero-TripNerd build using the 4 web photos (suite, bar, hotel, crowd).
+- New owner caption arc, warm grade, a 1.47 s ticket hold and a flat stamp turn on the drop.
+- Hotel pan carried into the padded end card. 19.33 s.
+
+**Open**
+- The web photos are the 300×201 thumbnails split from the owner's strip. They're shown at 2.4× in cards; the full-res originals would improve shots 6–9.
+- Posting is the owner's action; nothing was published from here.
+
+## 2026-10-21: TripNerd Phoenix Reel 3 v5 ("noise to quiet" ending) delivered
+
+**Did**
+- Kept v4 through the food & drink beat (verified identical).
+- New ending:
+  - 0.5 s crowd-roar peak.
+  - Hard cut to the Fairmont pool with a music duck and synthesized pool ambience.
+  - Hotel ticket slide-in; the stamp lands on beat 17 as the music returns.
+  - End card on beat 21. 19.33 s.
+
+**Open**
+- The Fairmont photo only arrived as a 2000×1333 chat image, so it's shown native-size in a band. A file upload of the 6720×4480 original allows a full-bleed crop.
+
+**Learned**
+- Pasted chat images are downsized (~2000 px). Ask for file uploads when resolution matters.
+
+## 2026-10-21: TripNerd Phoenix Open 2027 Reel, final Explore cut delivered
+
+**Did**
+- Built a 19.87 s Explore/non-follower cut:
+  - Aerial hook and the tall INCLUDED ticket with the stamp in its stub.
+  - The drop, suite POV, the AI food clip and the roar peak.
+  - The Fairmont quiet with the stamp landing on the kick, then a looping end card.
+- Also delivered the IG caption and a cover recommendation.
+
+**Open**
+- A full-res 02_tee_16th would restore the planned 3-cut suite sequence.
+- The food clip is the only enlarged source (1.78×).
+- Posting is the owner's action.
+
+## 2026-10-21: TripNerd PHX 2027 Reel "ticket checklist" FINAL delivered
+
+**Did**
+- 21.8 s cut:
+  - Drone, then the V01 pan.
+  - Opener with the checklist ticket on the stub.
+  - Stamp push and flat spin into the drop.
+  - Bunker (once).
+  - Three ticket check beats, each followed by its proof: suite video, a wide food stack, the Fairmont pan.
+  - End card.
+- All video plays as motion; a motion check was run on the decoded output.
+
+**Learned**
+- A 16:9 tilt-down AI food clip can't show "food + both drinks" in a single 9:16 crop. A two-panel stack of wide windows shows it without upscaling.
+- A post-limiter pass after the mix2 master pushed true peak over 0 dBTP. Use the mix2 master directly.
+
+## 2026-10-21: TripNerd PHX 2027 Reel "calm premium" FINAL delivered
+
+**Did**
+- 28.07 s revision of the checklist reel:
+  - Slower beats, flat stamp spin into the drop, bunker once.
+  - Ticket checklist, with each line cutting to its proof: suite, the new food clip with a pan-following 9:16 crop, the Fairmont dip.
+  - End card.
+- −14.2 LUFS.
+- Motion check: 0 repeated frames.
+
+**Learned**
+- Sampling a 24 fps source onto a 30 fps timeline by nearest frame repeats every 5th frame, a visible judder. Flow-blend every off-rate source, even at "real speed".
+
+## 2026-10-21: TripNerd PHX 2027 Reel "smooth premium" FINAL (R16) delivered
+
+**Did**
+- 31.5 s re-edit:
+  - Whole-frame insets over a blurred copy for the 16:9 clips and the pool photo.
+  - Persistent corner ticket card; checks draw over the proof shots on bar downbeats.
+  - Dissolves and one whip; the only hard cut is the drop.
+- −14.1 LUFS / −1.3 dBTP.
+- 0 repeated video frames.
+
+**Learned**
+- A long, deliberate dip lowers integrated loudness, so loudnorm pushes the rest into the limiter, and AAC then overshoots true peak. Master with an oversampled TP limiter and measure after encoding.
+- PIL size-rounding on slow graphic pushes makes 1 px steps (held frames). Render slow pushes with sub-pixel warpAffine.
+
+## 2026-10-21: TripNerd PHX 2027 Reel R17 FINAL delivered (seven owner fixes)
+
+**Did**
+- R17 with all the framing, transition, ticket, suite and caption fixes.
+- Food uses the original clip at 60%.
+- Spent 179 Higgsfield credits on food extension attempts. One is good but wasn't usable here, because the container can't reach Higgsfield's CDN.
+
+**Learned**
+- Seedance video_extension continues a clip seamlessly (frame diff 1.9), but it does not reliably follow "pull back" camera directions.
+- Reframe 21:9 re-renders at 946p and doesn't guarantee which side gets the extra width.
+- Check that the container can download generation outputs BEFORE spending on them.
