@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-10-02
+updated: 2026-10-23
 tags: [index, knowledge]
 ---
 
@@ -18,6 +18,8 @@ This is a map, not an archive. Keep entries to one line each — enough to know 
 open the file.
 
 ---
+
+> **Baseline evidence:** what is PROVEN / FAILED / PROVISIONAL lives in [EVIDENCE-INDEX.md](EVIDENCE-INDEX.md) — start there for the verified baseline.
 
 ## Decisions
 
@@ -47,7 +49,7 @@ doesn't fit.
 - [2026-09-23 — Broadcast commentary and a gallery roar in an AI cut](learnings/2026-09-23-hushed-commentary-and-one-roar.md): seed_audio loudness/speech/pitch controls, one measured roar source placed by its attack, faster-whisper transcript QC, and a sandbox shell gotcha.
 - [2026-08-25 — Checks beat prose](learnings/2026-08-25-checks-beat-prose.md): the v8
   "2:07 AM" kill showed binary blocking checks catch what quality prose never does;
-  the 31-check gate exists because scores alone passed a dead ad.
+  the blocking-check gate exists because scores alone passed a dead ad.
 - [2026-08-26 — Correctness is the floor, conversion is the objective](learnings/2026-08-26-correctness-floor-conversion-objective.md):
   Owner-directed promotion; produced the DR lens and the Performance Challenger Rule.
 - [2026-10-04 — Stills-only Reels hit a hook ceiling](learnings/2026-10-04-stills-reels-hit-a-hook-ceiling.md): five cuts of event-hospitality stills topped out at 7.7 against the 8.0 floor; the hook is capped when the paid-for moment isn't on camera.
@@ -63,6 +65,9 @@ doesn't fit.
   four S3/S4s from strings that self-refuted on their own surface, picture, or loop order.
 - [2026-08-31 — Code-rendered films freeze without a boil](learnings/2026-08-31-code-rendered-films-freeze-without-a-boil.md):
   73% still images until every stroke boiled; measured down to declared calm holds.
+- [Decouple audio from visual generation](learnings/2026-09-02-audio-decoupled-from-visual.md) — never pick a video model for its bundled audio.
+- [Photorealism is not physical correctness](learnings/2026-09-02-photorealism-is-not-physical-correctness.md) — trade and device shots need reference grounding.
+- [Model performance observations](learnings/2026-09-02-model-performance-observations.md) — provisional, Run 9/10 only.
 
 ### Clients and process (advertising ops)
 - [2026-08-31 — Gates need frozen artifacts](learnings/2026-08-31-gates-need-frozen-artifacts.md):
@@ -87,6 +92,8 @@ doesn't fit.
 - [2026-10-06 — All-AI scenario ads fail for real-experience sellers](learnings/2026-10-06-ai-scenario-ads-fail-for-real-experience-sellers.md):
   TripNerd "One Text" v1 passed machine QC but failed critic (5.8) and Skeptic (S4): client bans AI
   people, logo-swap fails, near-silent audio, wardrobe drift. Real footage must carry people beats.
+- [911 Drain's assets were misfiled, not missing](learnings/2026-09-02-client-assets-were-misfiled-not-missing.md) — the ad system could not see them.
+- [Discoverability is a production capability](learnings/2026-09-02-asset-discoverability-is-a-production-capability.md) — 'does not exist' ≠ 'cannot be discovered'.
 
 ### Web
 *None yet.*
@@ -114,6 +121,11 @@ doesn't fit.
 | 2026-10-01 | Instagram follower growth — ranking signals, format benchmarks, creators, giveaways, paid, fake-influence law (2025–26) | [research/2026-10-01-instagram-growth-evidence.md](research/2026-10-01-instagram-growth-evidence.md) |
 
 ---
+- [Intro video Rev 3 — bar-raiser brief](research/2026-08-31-hero-video-bar-raiser.md) — hero video craft + delivery research.
+
+## Production log
+
+- [911 Drain 'Look Us Up' — Skeptic Pass-1 findings](production-log/2026-08-26-lookusup-pass1-findings.md) — paper stage, two rounds.
 
 ## Patterns to watch
 
@@ -141,5 +153,5 @@ playbook rule stays visible.
 | Pattern | Playbook | Learnings behind it |
 |---|---|---|
 | Real client material first; generation fills gaps (owner ranking follows real-material share) | [decision 0008](decisions/0008-real-client-material-first-for-video-ads.md) · [recipe: camera roll](../playbooks/ads/recipes/camera-roll-real-photos.md) · router Lane C | [real-client-material-outranked-generation](learnings/2026-09-29-real-client-material-plus-motion-design-outranked-generation.md) (4 owner verdicts), [strengths-only 8.4](learnings/2026-09-27-strengths-only-realism-scored-8-4-master-resolution-capped-it.md), 911 Drain 4/10 realistic lane (run ledger); promoted at the owner's explicit directive, 2026-09-29 |
-| Blocking checks + ServicePow-6 scoring before any ad ships | [playbooks/ads/video-production.md](../playbooks/ads/video-production.md) | Imported from the Drive OS (19_PRODUCTION_LEARNINGS); local trail starts with checks-beat-prose |
+| Blocking checks + ServicePow-6 scoring before any ad ships | canonical registry `.claude/skills/_servicepow/data/blocking-checks.yaml` (historical trail: [playbooks/ads/video-production.md](../playbooks/ads/video-production.md), superseded 2026-09-01) | Imported from the Drive OS (19_PRODUCTION_LEARNINGS); local trail starts with checks-beat-prose |
 | Performance Challenger Rule — production QA paired with performance-marketing QA; clever-mechanism packs ship a problem/solution-first challenger and the market decides | [playbooks/ads/video-production.md](../playbooks/ads/video-production.md) (Doctrine, advisory tier) + the creative-critic Direct-Response lens | [correctness-floor-conversion-objective](learnings/2026-08-26-correctness-floor-conversion-objective.md) — promoted at occurrence #1 by explicit Owner directive, recorded as such |

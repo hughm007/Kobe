@@ -10,6 +10,8 @@ tags: [ads, craft, generation, realism, canonical]
 source: servicepow-ad-producer v4.0 §4–§6 (2026-08-20), imported verbatim 2026-08-26. See decision 0005.
 ---
 
+> ⚠ **Dead path (noted 2026-09-28):** links below to `.claude/skills/servicepow-higgsfield-intelligence/…` no longer resolve — that skill was displaced 2026-09-01 (historical copy: `.claude/skills-archive/20260901T214812Z/servicepow-higgsfield-intelligence/references/higgsfield-capability-map.md`). Current model and credit facts come from **live tool state** (LAW §5) via `servicepow-higgsfield-production`; delivery gates live only in the canonical blocking-check registry (`.claude/skills/_servicepow/data/blocking-checks.yaml`). Body below is verbatim evidence.
+
 # Prompt craft, Production Law and the realism standard
 
 > **Canonical home for how shots are actually built.** Load at generation time — not into every

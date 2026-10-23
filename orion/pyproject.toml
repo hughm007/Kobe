@@ -13,12 +13,21 @@ dependencies = [
 # which keeps `uv sync` usable on a machine with no working audio stack.
 voice = [
     "sounddevice>=0.4",
-    "numpy>=1.24",
     "websockets>=13",
 ]
 dev = [
     "pytest>=8.0",
 ]
+
+# Default groups: plain `uv sync` (with or without --extra voice) installs these, so
+# an exact sync never silently uninstalls the test runner or the coding-job SDK.
+[dependency-groups]
+dev = ["pytest>=8.0"]
+# delegate_coding_task (bundles the Claude Code runtime).
+coder = ["claude-agent-sdk>=0.2"]
+
+[tool.uv]
+default-groups = ["dev", "coder"]
 
 [project.scripts]
 orion = "orion.cli:main"

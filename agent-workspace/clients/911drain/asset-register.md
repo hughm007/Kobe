@@ -45,6 +45,8 @@ Canonical location (all rows): `servicepow-v2/public/work/911drain/`
 | SP-911-012 | STATIC AD | `servicepow-v2/public/work/ads/911drain-clogged-drain.webp` (1080x1350) | — | **NO — owner confirmed AI-made or AI-edited, 2026-09-22** | Owner-supplied | n/a | n/a | no | As SP-911-011 |
 | SP-911-013 | STATIC AD | `servicepow-v2/public/work/ads/911drain-emergency-plumber.webp` (1080x1350) | — | **NO — owner confirmed AI-made or AI-edited, 2026-09-22** | Owner-supplied | n/a | n/a | no | **Van livery reads "DRAIN & SEWER REPAIR" (SP-911-023).** Held off the ServicePOW site with the wrap (SP-911-002) — `case-studies.json` → `holds.sewer-scope` — owner decision 2026-09-22 |
 
+> **Copy note (2026-09-28):** a byte-identical copy of SP-911-001 also sits at `campaigns/2026-09-02-lookusup-proto/refs/logo-REAL.png` (same sha256 `052c9548`). The `-REAL` suffix predates this register and is **not** a verification — its status is **UNKNOWN**, exactly like the canonical file. This register is the authority, not filenames.
+
 ## Non-file assets that still bind production
 | ID | Type | Value | Restriction |
 |---|---|---|---|
