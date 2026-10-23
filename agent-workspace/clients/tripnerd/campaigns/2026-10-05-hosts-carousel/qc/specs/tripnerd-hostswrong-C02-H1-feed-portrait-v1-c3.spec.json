@@ -1,0 +1,100 @@
+{
+ "name": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/bg/c3-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.22,
+  "pos": "top-right"
+ },
+ "blocks": [
+  {
+   "role": "label",
+   "text": "2 \u00b7 TIMING",
+   "size": 34,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.0662962962962963
+  },
+  {
+   "role": "headline",
+   "text": "Don\u2019t book lunch over the big moment.",
+   "size": 66,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.14777777777777779
+  },
+  {
+   "role": "support",
+   "text": "Check tee times and know when the leaders reach your hole.",
+   "size": 42,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.2922222222222222
+  },
+  {
+   "role": "fact",
+   "text": "At THE PLAYERS, our guests watched 17 from the rail.",
+   "size": 38,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.4255555555555556
+  },
+  {
+   "role": "numeral",
+   "text": "2",
+   "size": 380,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.5285185185185185
+  },
+  {
+   "role": "cta",
+   "text": "Next: dining \u2192",
+   "size": 42,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "center",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "y_frac": 0.8951851851851852
+  }
+ ]
+}

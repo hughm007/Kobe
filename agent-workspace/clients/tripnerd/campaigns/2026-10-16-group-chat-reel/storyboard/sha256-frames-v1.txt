@@ -1,0 +1,14 @@
+65eb957c312cde9b47fadf5ebfea93730d771b6c50182854938f23e93cc82602  frames/group-chat-v1-F01.png
+0fa1f6d4dce571223a03aabf88e8c383e539d1c357c4c15149a37da4a1832706  frames/group-chat-v1-F02.png
+f873c53c8ac3a9f4d5602e86ee14eb268334fdf6b4bcb33720cf4517cfb23282  frames/group-chat-v1-F03.png
+030de10c4397826b8c8b50190dad27daa21367b2927ec78abdcf19ebb6086aaf  frames/group-chat-v1-F04.png
+2f804e50e3de3aed62cfcf926ca982503da12426068f931372d59afb4ea8cf6c  frames/group-chat-v1-F05.png
+e0e48348c4e75051ec63f50a38fb934bcaaf0c82e461924d1182dfdf5abd2b29  frames/group-chat-v1-F06.png
+702182341d27ab872c13870c95920f4c96ec00d467c292a073d9dacfa9ae6580  frames/group-chat-v1-F06b.png
+6f0931c2b6f297ebef9c329d0f5c8c7fa4659e7b426ecf561691a207be8bf27c  frames/group-chat-v1-F07.png
+f074c4f1df04f02683999d191661b7900085553082ccceefea76ff6f6e91a865  frames/group-chat-v1-F08.png
+01b8bde3fc895b32cc4108d5adc46418cbc55812f0958884f503b148f1140f17  frames/group-chat-v1-F09.png
+d36317950160872e9fa6818d2b9263a3bdb75cdb547cb385cd711d2a30e238ab  frames/group-chat-v1-F10.png
+dff7dbe660e7ec1b9c872cc591ace22430f9ae5e5b2cdde58cfcb42f3a1bdfba  frames/group-chat-v1-F11.png
+34255733d0b0c79108a8ae35743de1851eaf1d69466e11d38baac5476e55a1da  frames/group-chat-v1-F12.png
+7f047bc6fd366d34374bdf25337f9d08abfa4fbfe494a6991cb706851ebcd445  frames/group-chat-v1-storyboard-strip.png

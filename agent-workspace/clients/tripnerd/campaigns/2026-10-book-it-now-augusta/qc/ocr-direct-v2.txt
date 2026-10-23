@@ -1,0 +1,3 @@
+Direct OCR on exact frames, v2 (2026-10-05):
+t=15.0s couch line: TRIPNERD  Way better than the couch.
+t=6.5s button (binarised): ['Augusta week with us includes a', 'dates and details.', 'Get the Augusta details']

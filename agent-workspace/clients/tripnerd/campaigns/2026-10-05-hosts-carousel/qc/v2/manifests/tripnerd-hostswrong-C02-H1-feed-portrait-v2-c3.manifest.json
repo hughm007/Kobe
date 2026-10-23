@@ -1,0 +1,99 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    70,
+    79,
+    415,
+    205
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "numeral",
+   "box": [
+    471,
+    67,
+    554,
+    219
+   ],
+   "font_px": 140,
+   "text": "2",
+   "contrast": 5.15
+  },
+  {
+   "role": "label",
+   "box": [
+    586,
+    133,
+    818,
+    179
+   ],
+   "font_px": 34,
+   "text": "2 \u00b7 THE VIEW",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    363,
+    651,
+    843
+   ],
+   "font_px": 96,
+   "text": "Seat guests where the moment happens.",
+   "contrast": 14.77
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    875,
+    807,
+    992
+   ],
+   "font_px": 46,
+   "text": "Know which hole matters, and get there before the leaders do.",
+   "contrast": 14.77
+  },
+  {
+   "role": "fact",
+   "box": [
+    86,
+    1048,
+    808,
+    1152
+   ],
+   "font_px": 40,
+   "text": "Ours: at the island-green 17th, guests watched from the rail.",
+   "contrast": 4.89
+  },
+  {
+   "role": "cta",
+   "box": [
+    74,
+    1210,
+    329,
+    1262
+   ],
+   "font_px": 40,
+   "text": "Next: food \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c3.png",
+ "sha256": "1a3325ecad9a40c8"
+}

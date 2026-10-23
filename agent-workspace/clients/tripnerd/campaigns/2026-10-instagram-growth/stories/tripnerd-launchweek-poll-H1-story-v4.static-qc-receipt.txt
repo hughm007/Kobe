@@ -1,0 +1,20 @@
+PASS  BC-51:dims:tripnerd-launchweek-poll-H1-story-v4.png: 1080x1920 vs (1080, 1920)
+PASS  BC-51:size:tripnerd-launchweek-poll-H1-story-v4.png: 3051KB (<8MB)
+PASS  BC-52:safe:tripnerd-launchweek-poll-H1-story-v4.png:headline: box [190, 316, 889, 412] vs safe [64, 288, 1016, 1536]
+PASS  BC-52:size:tripnerd-launchweek-poll-H1-story-v4.png:headline: 84px (floor 64)
+PASS  BC-52:contrast:tripnerd-launchweek-poll-H1-story-v4.png:headline: 21.0:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-launchweek-poll-H1-story-v4.png:support: box [183, 437, 896, 491] vs safe [64, 288, 1016, 1536]
+PASS  BC-52:size:tripnerd-launchweek-poll-H1-story-v4.png:support: 42px (floor 36)
+PASS  BC-52:contrast:tripnerd-launchweek-poll-H1-story-v4.png:support: 21.0:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-launchweek-poll-H1-story-v4.png:cta: box [282, 533, 797, 589] vs safe [64, 288, 1016, 1536]
+PASS  BC-52:size:tripnerd-launchweek-poll-H1-story-v4.png:cta: 44px (floor 40)
+PASS  BC-52:contrast:tripnerd-launchweek-poll-H1-story-v4.png:cta: 21.0:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-launchweek-poll-H1-story-v4.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-launchweek-poll-H1-story-v4.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-launchweek-poll-H1-story-v4.png: clean
+PASS  BC-55:barred:'best':tripnerd-launchweek-poll-H1-story-v4.png: clean
+PASS  BC-55:barred:'Augusta week':tripnerd-launchweek-poll-H1-story-v4.png: clean
+PASS  BC-55:present:'Augusta in April.': in set
+
+STATIC-QC: PASS (17 passed, 0 failed, 1 exports)
+0fb1a29df51f103945f6442c1705fb0cbf2655db240e170069a62bdafc8d7917  static_v4/exports/tripnerd-launchweek-poll-H1-story-v4.png

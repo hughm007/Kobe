@@ -1,0 +1,120 @@
+{
+ "name": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c2",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/bg_v2/c2-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.32,
+  "pos": "top-left",
+  "xy": [
+   70,
+   79
+  ]
+ },
+ "blocks": [
+  {
+   "role": "numeral",
+   "text": "1",
+   "size": 140,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "x": 471,
+   "y_frac": 0.05
+  },
+  {
+   "role": "label",
+   "text": "1 \u00b7 ARRIVAL",
+   "size": 34,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "x": 559,
+   "y_frac": 0.09888888888888889
+  },
+  {
+   "role": "headline",
+   "text": "Give guests one place to arrive.",
+   "size": 72,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.5314814814814814
+  },
+  {
+   "role": "support",
+   "text": "One check-in point. One host who knows their name.",
+   "size": 40,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.6803703703703704
+  },
+  {
+   "role": "fact",
+   "text": "Ours: a TripNerd-branded table, with staff on hand.",
+   "size": 36,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": false,
+   "align": "left",
+   "x": 86,
+   "y_frac": 0.79
+  },
+  {
+   "role": "cta",
+   "text": "Next: the view \u2192",
+   "size": 40,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "x": 74,
+   "y_frac": 0.8966666666666666
+  }
+ ],
+ "photos": [
+  {
+   "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/photos_v2/tripnerd-hostswrong-C02-H1-feed-portrait-v2-c2-photo.png",
+   "box": [
+    54,
+    243,
+    1026,
+    685
+   ],
+   "radius": 20
+  }
+ ]
+}

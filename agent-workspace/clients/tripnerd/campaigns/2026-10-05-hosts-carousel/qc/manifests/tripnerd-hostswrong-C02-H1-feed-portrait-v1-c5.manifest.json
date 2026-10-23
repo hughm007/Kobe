@@ -1,0 +1,87 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    789,
+    67,
+    1026,
+    154
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "label",
+   "box": [
+    54,
+    89,
+    270,
+    135
+   ],
+   "font_px": 34,
+   "text": "4 \u00b7 THE EXIT",
+   "contrast": 5.15
+  },
+  {
+   "role": "numeral",
+   "box": [
+    54,
+    163,
+    383,
+    645
+   ],
+   "font_px": 470,
+   "text": "4",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    661,
+    742,
+    838
+   ],
+   "font_px": 72,
+   "text": "Don\u2019t end the day at the curb.",
+   "contrast": 14.77
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    870,
+    766,
+    978
+   ],
+   "font_px": 42,
+   "text": "Decide how every guest gets home before anyone arrives.",
+   "contrast": 14.77
+  },
+  {
+   "role": "cta",
+   "box": [
+    298,
+    1208,
+    781,
+    1262
+   ],
+   "font_px": 42,
+   "text": "Next: your checklist \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png",
+ "sha256": "86bbb736760ccb1e"
+}

@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-09-30
+updated: 2026-10-02
 tags: [index, knowledge]
 ---
 
@@ -50,6 +50,9 @@ doesn't fit.
   the 31-check gate exists because scores alone passed a dead ad.
 - [2026-08-26 — Correctness is the floor, conversion is the objective](learnings/2026-08-26-correctness-floor-conversion-objective.md):
   Owner-directed promotion; produced the DR lens and the Performance Challenger Rule.
+- [2026-10-04 — Stills-only Reels hit a hook ceiling](learnings/2026-10-04-stills-reels-hit-a-hook-ceiling.md): five cuts of event-hospitality stills topped out at 7.7 against the 8.0 floor; the hook is capped when the paid-for moment isn't on camera.
+- [2026-10-04 — Follower targets next to a fee get priced per follower](learnings/2026-10-04-follower-targets-next-to-a-fee-get-priced-per-follower.md): a +8% follower target beside a 90-day fee became "$ per follower" and cut the deal to a one-month test; lead with booking break-even.
+- [2026-10-04 — Verify retouching on rendered frames](learnings/2026-10-04-verify-retouch-on-rendered-frames.md): a logo survived because QC cropped around the box, not the subject. Clone and heal beat blur.
 - [2026-08-31 — Frames catch what code review cannot](learnings/2026-08-31-frames-catch-what-code-review-cannot.md):
   15 defects across 3 build rounds, all invisible to clean code — **third occurrence, promoted** (probe-pass advisory in the video playbook).
 - [2026-08-31 — Claim qualifiers drop in re-transcription](learnings/2026-08-31-claim-qualifiers-drop-in-transcription.md):
@@ -75,6 +78,9 @@ doesn't fit.
   three delivery routes tested and closed; the model is not a byte-faithful conduit and fails by
   confabulation (6107 of 12000 bytes, fabricated JPEG terminator). Check asset reachability
   *before* generating.
+- [2026-10-02 — Drive binaries reach the container via saved tool results](learnings/2026-10-02-drive-binaries-reach-the-container-via-saved-tool-results.md):
+  oversized Drive downloads are saved to disk by the harness; decoding locally gave 29/29 byte-exact JPEGs.
+  Drive is a working intake route even though the CDN egress wall still holds.
 
 ### Web
 *None yet.*
@@ -99,6 +105,7 @@ doesn't fit.
 | Date | Subject | File |
 |---|---|---|
 | 2026-08-25 | Design intelligence — the ServicePow Style Bank archetypes, hard laws, and how they translate to static + motion work | [research/design-intelligence.md](research/design-intelligence.md) |
+| 2026-10-01 | Instagram follower growth — ranking signals, format benchmarks, creators, giveaways, paid, fake-influence law (2025–26) | [research/2026-10-01-instagram-growth-evidence.md](research/2026-10-01-instagram-growth-evidence.md) |
 
 ---
 

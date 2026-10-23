@@ -1,0 +1,4 @@
+--master TN-R03-augusta-by-the-clock-H3-v5.mp4  (blocking 27: declared lines exactly once each, nothing undeclared)
+  no --expect-line declared. VERDICT: FAIL — a master with speech must declare it; a silent master should still be declared (zero lines is a declaration, but then ANY detected speech fails).
+  ASR UNAVAILABLE (openai-whisper not installed).
+  VERDICT: UNVERIFIED — speech match cannot be checked

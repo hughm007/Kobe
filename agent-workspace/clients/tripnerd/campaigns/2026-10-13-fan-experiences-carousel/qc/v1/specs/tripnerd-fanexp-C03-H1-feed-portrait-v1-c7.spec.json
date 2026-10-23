@@ -1,0 +1,66 @@
+{
+ "name": "tripnerd-fanexp-C03-H1-feed-portrait-v1-c7",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_vip/bg_v1/c7-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.32,
+  "pos": "top-left",
+  "xy": [
+   70,
+   79
+  ]
+ },
+ "blocks": [
+  {
+   "role": "headline",
+   "text": "Bringing friends to a big event?",
+   "size": 104,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.32037037037037036
+  },
+  {
+   "role": "support",
+   "text": "Trip like a Nerd.",
+   "size": 56,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.632962962962963
+  },
+  {
+   "role": "cta",
+   "text": "Plan yours \u00b7 link in bio",
+   "size": 48,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "x": 74,
+   "y_frac": 0.7307407407407407
+  }
+ ]
+}

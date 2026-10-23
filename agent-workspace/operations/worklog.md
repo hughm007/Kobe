@@ -2060,3 +2060,640 @@ This work is on branch `claude/friendly-feynman-v2rci5`, not yet on `main`.
 - Seedance video_extension continues a clip seamlessly (frame diff 1.9), but it does not reliably follow "pull back" camera directions.
 - Reframe 21:9 re-renders at 946p and doesn't guarantee which side gets the extra width.
 - Check that the container can download generation outputs BEFORE spending on them.
+---
+
+## 2026-10-01 — TripNerd Instagram follower growth plan (draft deck)
+
+**Did:** Karl asked for a researched plan to grow TripNerd's Instagram following (video and
+static adverts plus everything else our resources allow), presented professionally. Three
+research passes (TripNerd itself, 20+ category/creator accounts, platform evidence) plus the
+existing Sept 11 "Social Direction" deck and Sept invoice found in Drive. Built a 32-slide deck
+(Slides artifact, private): https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ. Source notes
+filed at `clients/tripnerd/deliverables/2026-10-01-instagram-growth-plan.md` (status: draft);
+reusable platform evidence at `knowledge/research/2026-10-01-instagram-growth-evidence.md`.
+
+**Decided (recommendation, not yet owner-approved):** creators yes (biggest lever); carousels
+yes, 1–2/wk; giveaways once per season only; video for reach, statics for retargeting; no
+follow-back growth services. Base case ~10,000 followers in 12 months (ESTIMATE, from 4,730).
+
+**Found:** On Location follower count conflicts (169K in Sept deck vs 57K indexed); the June
+Kicksta/Ascend Viral doc describes the wrong "tripnerd"; clients/README still lists TripNerd as
+Prospect though it is billing. All three flagged in the deliverable, none silently changed.
+
+**Not verified:** live IG baseline and Meta Ad Library (egress-blocked); deck not rendered or
+eyeballed after publish. Nothing sent to the client; no spend; no generation.
+
+**Open:** Karl reviews the deck and shares it; resolve the On Location number; price the plan as
+a retainer; Insights access is the day-1 dependency.
+
+---
+
+## 2026-10-02 — TripNerd Instagram plan v2 (client-ready deck)
+
+**Did:** Karl supplied a Perplexity research brief and a 64-page ChatGPT strategy report and asked
+for a tighter, more professional deck for an existing client (no pitch). Read both in full, reconciled
+them with our v1 plan, and rebuilt the same artifact as 20 slides
+(https://claude.ai/artifact/PZicQM3VjVj2n3YHbPXBQQ, version 4). Reconciliation decisions are
+recorded in `clients/tripnerd/deliverables/2026-10-01-instagram-growth-plan.md` (v2 section).
+
+**Decided (plan, pending Karl):** 4→6 posts/week ramp; Core 90-day budget $5,600; two creator pilots
+then one per tentpole; no giveaway before Day 45; ~10,000 followers at month 12 (estimate).
+
+**Not verified:** deck not rendered or eyeballed after publish; live IG baseline still unavailable
+(egress-blocked); the reports' site findings (THE PLAYERS FAQ, form length) taken from the ChatGPT
+report, not re-checked here. Nothing sent to the client.
+
+---
+
+## 2026-10-02 (later) — TripNerd Instagram plan v3: redesign with TripNerd's own photos
+
+**Did:** Karl asked for a more beautiful, to-the-point deck that makes TripNerd feel safe. Found
+29 TripNerd camera-roll photos in Drive, pulled them byte-exact (new transport — see learning
+2026-10-02), picked 17, uploaded them to the deck's asset store, and rebuilt the deck as 21 slides
+(artifact version 5): new camera-roll, growth-engine and safeguards slides; Playfair Display
+headlines. Rendered every slide locally with Playwright and fixed overflow before publishing.
+
+**Open:** Karl to confirm the photos are TripNerd-supplied (provenance UNKNOWN by doctrine) before
+the deck is shared; photos not committed to git. Pricing/publishing-scope caveat from v2 still open.
+
+---
+
+## 2026-10-02 (evening) — TripNerd plan v4: slide 2 reframe + algorithm slides
+
+**Did:** Edited slide 2 with Karl (entertainment as the reason to follow; Reels over static adverts,
+Buffer-sourced). Then turned Karl's notes on a creator video about Instagram's algorithms into two new
+slides (05 how ranking works per surface, with what we'll do for TripNerd; 07 what lifts and kills reach),
+after verifying each claim against Instagram's own posts, @creators guidance, Buffer and TechCrunch.
+Deck is now 23 slides, artifact version 14; rendered locally before publish (deck runtime not opened).
+
+**Decided:** unverified claims from the notes left out (Edits watermark boost; first-hour push as a
+stated mechanic); "one feed post a day" kept only as our house practice.
+
+**Open:** Karl's "(CONSERVATIVE ESTIMATE)" label on 10,000 contradicts our scenarios (10,000 = base
+case) — awaiting his call. Photo provenance, pricing/publishing scope and sharing still with Karl.
+Nothing sent to the client.
+
+**Follow-up (version 15):** Karl asked for only credible content from his Wispr Flow notes. Stripped
+non-note and unconfirmed items from slides 05/07 and added ManyChat auto-DMs (07, 16). ManyChat
+subscription cost is unpriced and needs Karl's approval before the plan commits to it.
+
+---
+
+## 2026-10-02 (night) — TripNerd plan v5: Perplexity creative brief integrated
+
+**Did:** Triaged a Perplexity creative-direction brief against the deck; ~70% duplicated existing
+slides. Added two slides ("Be there." creative platform with the send-to-who-you'd-take ending;
+two Reel formulas + one-variable Trial Reel testing), rebuilt the first ten posts around
+share-driven Reels, added an on-trip shot checklist and a retention-focused Stories line. Deck is 25
+slides, artifact version 20; rendered locally before publish. Karl's viewer edit to the Conversion
+title was preserved (publish conflict caught and merged).
+
+**Open:** "Be there." is PROPOSED and needs TripNerd's approval; first-ten Reels depend on archive
+video that TripNerd hasn't supplied; the brief has no trend data (Karl's original ask to Perplexity).
+Earlier opens unchanged (estimate label, ManyChat cost, photo provenance, sharing).
+
+**Follow-up (version 21):** Built the two approved September adverts into the first ten posts (01 Their
+Camera Roll, 03 VIP Hosting Spot recut vertical) and added an authenticity slide from Karl's
+personal-brand video notes, plus listen-first research and an outcome bio. Deck 26 slides. Open: confirm
+which file is which advert, and clear the Camera Roll's music/consent/AI-label items before posting.
+
+**Follow-up (version 22):** TripNerd logo as the profile picture on slide 19; $1,500/mo fee and an
+Investment slide listing ServicePOW's tool stack (~$419/mo, included); removed every assumed client
+budget. Flagged to Karl: $1,500 sits at the retainer floor against a much larger scope, and showing tool
+costs cuts against the pricing rule "never price on what it cost to make".
+
+**Follow-up (12-slide CEO deck):** New artifact https://claude.ai/artifact/UAaB3bcsmJu379cEzpoFkg with only what
+Karl says the CEO wants (algorithms, content mix, weekly schedule, first ten, 30/60/90 roadmap, measurement,
+cost, roles). 27-slide deck kept. Follower target restated as ~6,300 organic / ~10,000 with approved paid.
+
+**Follow-up (10-slide CEO deck):** https://claude.ai/artifact/URga8vJyxUGnUecoaGGZoC — adds a proof slide (real frames of the
+approved suite Reel + category data + "no results yet") and a step-by-step production slide with tools and owners.
+Open: Karl to confirm the approved Reel version and that music/consent/AI-label items were cleared; price breakdown.
+
+**Pricing (2026-10-03):** Karl set TripNerd unit rates at $250/video, $50/static (below-floor, Karl-approved, logged in
+the deliverable notes). Itemized 90-day plan = $12,700 incl. a proposed $500/mo management line; options sent. Decks unchanged
+until Karl picks the monthly number.
+
+**Follow-up (two priced decks):** $1,500/mo 10-slide deck unchanged; new identical deck at $325/Reel + $75/static
+(https://claude.ai/artifact/Eoij3MkNGKXB2gHmGJEXsL): $3,200 for Days 1–30, up to $5,800/mo after, $14,800 for 90 days.
+
+**Follow-up (phase pricing):** Slide 08 (roadmap) in both 10-slide decks now prices each phase. $1,500 deck: Test /
+Double down / Roll $1,500 each ($4,500). $325/$75 deck: Test $3,200 (8 Reels $2,600 + 8 statics $600), Double down
+and Roll $5,800 each (16 Reels $5,200 + 8 statics $600), $14,800 total; each phase stays $3,200 without the ramp.
+
+**Follow-up (deck A scaled pricing):** Deck A (https://claude.ai/artifact/URga8vJyxUGnUecoaGGZoC) now prices phases by
+volume: Test $1,500 (8 Reels, 8 statics); Double down and Roll $2,700 each ($1,500 base + 8 more Reels at $150);
+90 days $6,900; stays $1,500 if the ramp isn't approved. Cost slide updated to match. 12- and 27-slide decks still show $1,500 flat.
+
+**Follow-up (deck A intro framing):** Deck A now shows Test $1,500 as an introductory rate and Double down / Roll at
+$2,750 a month as TripNerd's standard rate; 90 days $7,000. No-ramp fallback removed; open question for Karl.
+
+**Follow-up (expenses removed, deck A repriced):** At Karl's request, removed every ServicePOW expense from both
+10-slide decks. That means the tools table, the tool-cost footer and the "tools built in" lines. The cost slide's
+middle column is now "Included every month". Deck A: Test is now $1,950 (intro rate), and Double down and Roll
+are $3,575/mo each (same ×1.833 step as before), for $9,100 over 90 days. Deck B's prices are unchanged.
+Published as deck A v7 and deck B v5. The 12- and 27-slide decks still show the expenses and $1,500.
+
+**Follow-up (partner direction):** Rewrote both 10-slide decks so they close on value, with no price justification.
+- Slide 10 is now "What you get, and what it takes". It leads with the view targets: 1,500+ median Reel views by
+  Day 90, up from 253; 5,000+ by month 12; over half of views from non-followers.
+- The cover subtitle is more ambitious.
+- Removed the "discounted so you see results" and "stays $3,200 without the ramp" footers.
+
+Published as deck A v8 and deck B v6. "Take it or leave it" was deliberately kept off the slides.
+
+**Follow-up (no unsure guarantees; deck A $4,000):**
+- Karl asked that no outcome be presented as a guarantee unless it's certain. Both 10-slide decks now promise only deliverables we control.
+- View and follower numbers appear only as labelled targets on slide 09.
+- Day 60/90 outcomes are now labelled as goals; collabs and boosts are marked "if you approve it".
+- Deck A is $1,950 for month one, then $4,000/mo: $9,950 over 90 days.
+- Karl's in-viewer edit to slide 10 ("intro 40% discount") was kept. The actual gap is 51%; this is flagged to Karl.
+- Published: deck A v18, deck B v7.
+
+**Follow-up (deck A $1,750):** Deck A's prices and discounts against standard pricing (deck B: $325 per Reel, $75 per static):
+- Days 1–30: $1,750, 45% off $3,200.
+- From Day 31: $4,000/mo, 31% off $5,800.
+- 90 days: $9,750 against $14,800.
+
+The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits to the roadmap were kept. Published as deck A v23.
+
+## 2026-10-03 — TripNerd: Deck A embedded as the operating plan
+- **New:** `clients/tripnerd/campaigns/2026-10-instagram-growth/`.
+  - `README.md`: goal, scope and price, weekly rhythm, first ten posts, 90-day gates, and what Claude does,
+    reminds about, or never does. It maps each piece of work to existing skills and policies.
+  - `calendar.md`: 13 weeks keyed to Day numbers.
+  - `tracker.md`: setup, blockers, content log, invoices, decisions.
+  - `monday-report-template.md`.
+  - `deck-a-snapshot/`: artifact v23 source.
+- **Status:** PROPOSED. Day 1 is ASSUMED to be 5 Oct 2026 until Karl records the signed start date.
+- **Pointers added:** workspace `CLAUDE.md` §13, the client brief, the deliverable notes, and the clients index.
+- **TripNerd set to Active** in `clients/README.md` and `access-and-accounts.md`, per the Sep invoice and CLAUDE.md.
+- **CLAUDE.md change** (§12 asks that it be logged): one pointer paragraph in §13 "Current state".
+- **Open:**
+  - This branch is not on `main`. Routines and fresh sessions clone `main` and won't see the plan until it is merged (Karl's go-ahead needed).
+  - No Instagram data connector is set up. Supermetrics is installed at org level, but its connection is incomplete.
+
+**Follow-up (post 01 walkthrough):** Researched "Their Camera Roll".
+- The approved cut is still INFERRED to be TripNerd 17 v15.
+- Only a 720p review encode exists; no master was found.
+- v15 has ~10 s of AI: two bridges with generated people, a generated golfer and crowd, and AI motion on the cup photo. It also uses a cloned voice-over and placeholder music.
+- **Correction:** the proof slide's "real faces only" was false. Both decks now say "your own footage, with short AI bridges" (deck A v24, deck B v8; deck snapshot updated).
+- Edit plan for a real-footage-only organic cut: `campaigns/2026-10-instagram-growth/posts/01-their-camera-roll.md`.
+
+## 2026-10-04 — TripNerd: launch Reels from the camera roll
+- **Karl:** take the September adverts (Their Camera Roll, VIP Hosting Spot) out of the launch queue and recognise them only. Build new Reels from TripNerd's camera roll as the follower strategy.
+- **Routed through `servicepow-campaign-director`.** New Bible: `clients/tripnerd/campaigns/2026-10-04-launch-reels/campaign-bible.md`, plus `footage-inventory.md`.
+- **Inventory:**
+  - THE PLAYERS clips V07–V24 (seen as contact sheets; originals' location UNKNOWN).
+  - Suite photos.
+  - 29 Augusta photos from Thu 9 Apr 2026 with real timestamps (no Augusta video).
+- **Four concept families**, Anti-Generic Gate, stakes check, 10 hooks → 6 survivors. Skeptic paper attack exempted (zero-spend organic; Trial Reels decide); the dual gate still runs on finished cuts.
+- **Recommended:**
+  - Slot 01: "Two ways to see the 17th".
+  - Slot 03: "Augusta, by the clock" (conditional: Their Camera Roll may already be built on those photos).
+  - **CONCEPT gate awaits Karl.**
+- **Decks:** launch queue and roadmap updated in both (deck A v26, deck B v9). Snapshot, operating plan, calendar and tracker updated.
+- **Superseded:** `posts/01-their-camera-roll.md` (kept for the v15 facts).
+
+**Follow-up (launch Reels edit plans):**
+- **Concept gate:** Karl said "write the edit plans", recorded as CONCEPT APPROVED.
+- **Written:**
+  - `shotlist.md`: all ten fields per shot.
+  - `edit-plan-01-two-ways-17th.md`: 10.6 s, real sound, no music.
+  - `edit-plan-03-augusta-by-the-clock.md`: 14 s, 9 photos + a black card, real EXIF timestamps.
+  - Bible §4, §6, §9, §11, §12; §5, §7, §8, §10 marked N/A.
+- **Rule change applied:** the 1.3 s average shot-length floor dropped the earlier 0.9 s-per-photo idea.
+- **Found on the photos:**
+  - IMG_1985 (TripNerd's Private Party banner) shows the Masters flag logo.
+  - IMG_1916 has guest-facing laptop screens to check.
+- **Storyboard strips:** sent to Karl in session, not committed (they show guest faces).
+- **Next gate:** STORYBOARD (Karl). Then he cuts; then the dual gate runs on the cuts.
+
+**Follow-up (library clearance):** Karl, 2026-10-04: "everything in the TripNerd library is cleared to post and use."
+- **Recorded in:** Bible §1.2 and §9 plus the Decision log, the footage inventory, both edit plans, the tracker, and the deliverable notes.
+- **Resolves:** photo ownership, guest consent, and event marks in frame.
+- **Not covered:** an identifiable pro's likeness (third-party right), so the board and pro stay cropped.
+- **Recommended:** a written TripNerd confirmation on file.
+- **Remaining blockers:** the originals' location (V16/V23/V24/V08); the "Their Camera Roll" content check (Reel 03 rotation); the music choice for Reel 03; the IMG_1916 screen check.
+
+## 2026-10-04 — TripNerd launch prep for Mon 5 Oct (Day 1)
+- **Karl:** posting a Reel and a Story tomorrow. In-app music for the Augusta Reel. Find the originals of V16/V23/V24/V08.
+- **Footage search** (Kobe, all branches, Drive, Higgsfield, 15 cloud sessions, artifacts):
+  - V23 and V24: 720p copies in Higgsfield only, plus AI upscales.
+  - V16: probably a 404×720 Higgsfield copy.
+  - V08: not found.
+  - Originals are on Taylor's (TripNerd) phone.
+  - **Correction:** "Their Camera Roll" is a website-photo + V23/V24 piece, not TripNerd 17 v15. Fixed in the Bible, the posts/01 file and the deliverable notes.
+  - The fuller records sit on unmerged branch `claude/brave-mendel-0vxkwj`.
+- **Queue changes:**
+  - The Augusta Reel moves to slot 01 (Mon 2:00 PM ET); "Two ways" moves to slot 03 (Wed), pending originals.
+  - Augusta v1 rendered by script from the original photos: 1080×1920, 14 s, no audio (music in-app). Sent to Karl.
+  - Story 1 background rendered.
+- **Posting times** set from Sprout Social and Buffer 2026 studies:
+  - Mon 2 PM Reel · Tue 1 PM carousel · Wed 12 PM Reel · Thu 12:30 PM proof · Fri 11 AM Trial Reel · Stories 10 AM. Day 31+ adds Tue 6 PM and Thu 9 AM Reels.
+  - No weekend feed posts.
+  - Written into README §3, the calendar and the deck posting slide (deck A v27, deck B v10). Queue 01/03 swapped on both decks.
+- **Runbook:** `launch-day-2026-10-05.md`.
+- **Dual gate** (critic + Skeptic Pass 3) dispatched on the frozen Augusta file. Verdicts pending.
+
+**Follow-up (Augusta Reel gates):**
+- **v1:** critic HARD FAIL (6.2/10), Skeptic BLOCK (3 × S3). Problems: the Masters mark and a pro's photo on TripNerd's banner, a condiment-table ending, black-card text clipped at the edge, no place cue, a silent master.
+- **v2 rendered:** 11.07 s on a 92 BPM grid.
+  - Removed the banner, bar and condiment shots.
+  - "Thursday in Augusta" on S1, with the logo above the UI zone.
+  - Re-wrapped card held 2 s with grain.
+  - Dinner shot cropped.
+  - Ends on the 5:48 PM group with "Who would you bring?"
+  - 18 Mbps.
+- **QC harness:** all checks PASS except audio (in-app music by design; Karl to confirm the exemption).
+- **Filed:** v1 verdicts in Bible §13 and §14 (verbatim).
+- **v2 dual gate dispatched**, both checks independent.
+- **Updated:** shot list, runbook and edit plan.
+- **Still open for Karl:** the BC-25 human watch, confirming attendance during play, the bio link, the audio exemption.
+
+**Follow-up (Augusta Reel v2 gate → v3):**
+- **v2:** critic HARD FAIL 7.0 (BC-04/05 audio; per-shot motion). Skeptic BLOCK (S4: Masters badges and cap in IMG_1926; S3: Masters cap and logo in IMG_1989; S3: the card's attendance claim).
+- **v3 visual master:**
+  - Mark-free photos only (2004, 1901, 1933, 1995, 1998).
+  - Cold open on the lawn with "with TripNerd"; pans pass the per-shot motion gate; the card is INDETERMINATE (human eyes).
+  - Caption gains the follow ask; "link in bio" removed.
+- **Blocked on Karl:** a cleared audio track to bake in, and attendance confirmation. Fallback: Story only on Monday, Reel on Tuesday 1 PM.
+- **Process learning:** Skeptic runs need a unique scratch folder (it found leftovers from another run).
+
+
+## 2026-10-04 (evening): TripNerd Augusta Reel v4 → v5, gates, algorithm and niche strategy
+- **v4 (Karl: "use a free music file… remove any marks that are not TripNerd marks"):**
+  - original music bed composed in code and baked in (−13.9 LUFS);
+  - non-TripNerd marks retouched out;
+  - the attendance card replaced by a racing clock (the IMG_1934–1984 gap made "No photos from this part" unprovable).
+  - **Gate:** critic HARD FAIL 7.7 (procedural + below the floor); Skeptic CONDITIONAL. The Polo pony was missed: the box sat 25 px low (CLAUDE-CAUGHT).
+- **v5 (7.83 s, 4 shots):**
+  - opens on the 9:03 check-in, with brand, place and clock from frame 0;
+  - the clock runs over the pines; heals and clones replace blurs; the mix is rebalanced.
+  - **Gate:** critic HARD FAIL 7.3; Skeptic CONDITIONAL (new: the "Augusta, Georgia" location claim isn't proven; venues can be in North Augusta SC, Evans and nearby).
+- **Receipts filed:** `qc/2026-10-04-v5-evidence-and-rights.md`.
+- **BC-26/27 UNVERIFIED:** the Whisper model hosts are blocked by the environment network policy. PocketSphinx was tried and is invalid on music (it "heard" words in pure synth).
+- **Decision proposed to Karl:**
+  - stop the Augusta stills as a Reel (five passes, hook capped at 6, no golf in frame);
+  - Monday Story only, on a new clean background (gate running);
+  - first Reel "The 17th" from Taylor's originals;
+  - Augusta photos become a carousel.
+- **New:** `clients/tripnerd/campaigns/2026-10-instagram-growth/algorithm-niche-strategy.md`. Karl asked to aim the content at the niches the algorithm favours. Its content:
+  - how topic matching ("Your Algorithm") plus watch time and sends decide non-follower reach;
+  - a niche map with golf-fan moments and golf-trip culture first;
+  - a 9-rule Reel checklist.
+- **Learnings:** stills-only Reels hit a hook ceiling; verify retouching on rendered frames.
+- **Open:**
+  - Karl's call on the Monday plan;
+  - Taylor's originals;
+  - one TripNerd confirmation email (city, consent, hosting);
+  - the BC-25 watch and the bio-link check;
+  - an ASR run;
+  - the Story gate verdicts.
+- **Later the same evening (Story gates):** the Monday Story went through v2–v4 and every version failed.
+  - v2 BLOCK: "Augusta week" in October reads as now.
+  - v3 BLOCK: the venue and consent aren't filed, and the tournament Thursday implies on-grounds.
+  - v4: critic HARD FAIL 7.4 (no logo file; BC-16/20/21 records; the Masters meaning).
+  - v4 was composed with the static-ads pipeline; static QC 17/17.
+  - **Conclusion:** the blockers are client inputs.
+- **Recommendation to Karl:** Monday = onboarding (signature + invoice 1, approver, access, Insights baseline, profile); posting starts when TripNerd's answers and Taylor's clips land. Message draft: `clients/tripnerd/campaigns/2026-10-instagram-growth/2026-10-04-message-to-tripnerd.md` (not sent).
+- **Deck for the CEO (Jason):** Karl wants every ask in the growth plan itself, not a follow-up text. In the presented 13-slide deck (PniaqVR1qdWmxnjGgur3Bx, v4):
+  - added slide 13 "What we need from you to start" (footage first, the Augusta questions, access and brand, people, decisions);
+  - swapped the launch queue so 01 = The 17th.
+  - The snapshot is in `campaigns/2026-10-instagram-growth/deck-presented-snapshot/`, and the message draft is superseded.
+  - **Open:** re-date the cover and roadmap once the start is known; fill the margin blanks on the call.
+- **The presented deck was cut to 6 slides** (v7; Karl: fewer slides, no repeats, organised as what he needs / what we need / what they need from us / what we give them). The three decisions and the checklist are merged on the last slide. Karl's edit to the AI rule ("mainly") was carried into the merged rules. The snapshot is updated.
+- **Deck restored to the 12-slide version** Karl prefers (v8; byte-identical to 1791141386-0fe1 except his "Mainly" AI edit). New playbook: `playbooks/client-lifecycle/meta-partner-access.md`, covering partner access via the business portfolio, the daily use of Business Suite, and its limits (Trial Reels and Story stickers are app-only), linked from onboarding §4.
+
+## 2026-10-04 (late) — TripNerd: October test-month plan from the meeting notes
+
+- **The meeting** (Karl's notes; Wyatt Johnson pitched):
+  - TripNerd found $4,000 a month too high for about +400 followers.
+  - **They agreed October as a $1,500 intro test month.** The 90-day package waits on results.
+  - They want a sliding scale tied to follower growth.
+  - The $1,200 already paid (3 videos + 2 statics) gets finished and posted at no charge.
+  - That's $2,700 over about five weeks.
+- **Built:**
+  - Client deck "TripNerd October Test Month", 5 slides: https://claude.ai/artifact/9654ychr2HFWzMMSmkBHNJ. Snapshot in `test-month-deck-snapshot/`.
+  - Operating plan: `clients/tripnerd/campaigns/2026-10-instagram-growth/2026-10-test-month-plan.md`. It holds the scope, a dated October calendar, the needs, the scorecard, the November tiers and the admin.
+  - The tracker, README, calendar and workspace `CLAUDE.md` now point there. The 90-day plan is marked on hold.
+- **Scope set as a PROPOSAL:**
+  - 4 new Reels + 4 statics ($1,600 at the rate card, so 6% off, inside the cap), plus Stories Mon/Wed/Fri and the Monday report.
+  - With the paid items, that's 7 videos and 6 statics.
+  - I cut my own earlier 6-Reel draft: it would have put more volume on the account than the 8-Reel plan TripNerd balked at.
+- **November tiers, PROPOSAL:** under 100 net new followers stays at $1,500; 100–199 is $2,500; 200+ is $4,000.
+  - Buffer's cadence benchmark suggests about 50 in October (ESTIMATE), so $1,500 is the likely November.
+- **The flat-$1,500 rework of the 12-slide pitch deck was abandoned** (never published). The presented deck is unchanged.
+- **Learning:** `knowledge/learnings/2026-10-04-follower-targets-next-to-a-fee-get-priced-per-follower.md`.
+- **Open:**
+  - Karl to confirm the scope, the third video and the tiers;
+  - the October invoice of $1,500;
+  - written confirmation;
+  - the Supermetrics paid-plan decision by 16 Oct (trial ends 18 Oct);
+  - the VIP Hosting Spot vertical cut and AI-label check;
+  - the Augusta carousel re-read against the Story gate;
+  - plus everything open from the earlier entries (access, approver, footage, Taylor's originals, logo, Augusta answers).
+- **Pricing one-pager for Jason (same night):** `clients/tripnerd/deliverables/2026-10-october-pricing/TripNerd-October-Pricing.pdf`. It shows 4 Reels at a $300 October rate plus 4 statics at $75, which is $1,500 (against $1,600 at standard). It adds the 3 owed September adverts at no charge, so 11 posts in total, with a week-by-week schedule and the strategy for each format. The November tiers and the 2 delivered videos are left off.
+- **The PDF went to 2 pages** (Karl asked for a dated week-by-week calendar, follower-growth methods and the boost-budget question). At one page it overflowed by about 1.5 in even at 8.5 pt, so it was split to stay readable. The boost suggestion ($250–500 from week 3) is recorded in the test-month plan §5b with its gates.
+- **PDF page 2 now has "Beyond the posts"** (Karl: add the recommendation):
+  - the daily 20-minute engagement block (included in October, unpriced labour);
+  - the guest loop;
+  - follow links and QR codes on TripNerd's own channels;
+  - a "what we won't do" line (follow-for-follow, mass liking, bots, bought followers).
+  - "Why this mix" moved to page 1. Open: who runs the daily block, since outbound engagement is app-side and partner access may not cover it (plan §5c).
+
+## 2026-10-05 (night): TripNerd readiness for the October test month
+- **Plan approved by Karl.**
+  - Static = C02 "What corporate hosts get wrong" (Thu 8).
+  - Video = "Two ways to see the 17th" as the owed September video (Wed 7); Reel 1 moves to Mon 12.
+  - The September logo is accepted by APPROVER decision and is now committed at `clients/tripnerd/brand-assets/`.
+  - The brand guide is filled with the logo row, inferred colours and fonts, and measured contrast.
+- **Ops pack done** (`clients/tripnerd/campaigns/2026-10-instagram-growth/ops/` plus `launch-week-2026-10-07.md`):
+  - week-one call checklist;
+  - October Monday report template;
+  - Stories runbook;
+  - boost brief and approval order;
+  - engagement routine and log;
+  - guest-loop kit;
+  - follow-link/QR pack (QR decodes verified);
+  - schedule-change note for Jason (NOT SENT).
+  - The plan, calendar, README and client brief are synced; the tracker is updated.
+- **C02 carousel:**
+  - **v1:** critic HARD FAIL 6.4 (implied transport on the close card; human presence 3); Skeptic CONDITIONAL (6 × S2). Verbatim in `campaigns/2026-10-05-hosts-carousel/gate-log.md`.
+  - **v2:** built with copy fixes and faces-free real photos; machine QC passes.
+  - **Gate held:** human presence is still thin. Waiting on a rail still from Karl's 17th-hole clips, so the last repair round isn't spent on an expected fail.
+  - Evidence register created: `clients/tripnerd/evidence-register.md`.
+- **Video:** not started.
+  - Waiting on Karl's clip upload (or the 720p override) and the bio-link screenshot (BC-19).
+  - whisper, tesseract and Montserrat are installed. The whisper model download still returns 403 (allowlist pending).
+- **Open:**
+  - the clips;
+  - the BC-19 screenshot;
+  - the network allowlist;
+  - TripNerd naming an approver (needed by Tue 6 EOD for Wed/Thu);
+  - the DMs promise (the PDF says we reply; the 20 minutes a day is unpriced).
+- **Learning candidate (not yet filed):** a checklist carousel that ends on "handled" implies every listed step is a service. Map claims per step, not only per card.
+
+## 2026-10-05 (late): Grok (SuperGrok) setup for TripNerd and future clients
+- **Karl bought SuperGrok** and asked for the best setup plus the key TripNerd information to give it, including the client-approved adverts.
+- **Written:**
+  - `clients/tripnerd/grok/01-project-instructions.md`: a paste-in block of 2,899 characters (under the ~4,000 limit).
+  - `02-knowledge-file.md`: facts with labels and EV IDs, can't-say list, agreed rules, October scope and calendar (no fees), growth strategy, the **two client-approved adverts (Their Camera Roll; the hosting spot) with Karl's verdicts and the standing rules**, and the unknowns.
+  - `03-bot-roles-and-automations.md`: 7 roles (trend scout, hooks and captions, weekly prep, engagement targets without written comments, Monday report, reply drafts, concept sketches for internal use only) with schedules.
+  - `operations/grok-setup.md` and `templates/grok-client-project-template.md`.
+- **Positioning:** Grok drafts and scans trends; the workspace stays the source of truth and the gate. Privacy settings, what never goes into Grok, and a monthly check that its drafts are actually used.
+- **Grok features cited from web sources on 2026-10-05**, marked "verify in app".
+- **Tracker:** the SuperGrok item is ticked. The connector register has a Grok row.
+- **Real-footage hand-off and Grok photo access (2026-10-05):**
+  - **Sent to Karl:**
+    - an internal pack of TripNerd's 29 photos from 9 Apr (with a contact sheet; marked "do not post or upload to AI" until TripNerd's checks are in);
+    - a Grok-safe pack (3 faces-free graded photos, the logo, the footage index).
+  - **Docs:** knowledge file §11 (footage index) and setup guide §7 (upload to the Project; the Drive connector only from a separate Google account; test vision with one photo).
+  - **Found:** the Drive connected here is Wyatt's "My Drive". It also holds an unreviewed 578 MB video (Dec 2025) and 3 older photos. Higgsfield `show_medias` errored, so the 17th-hole copies couldn't be listed.
+
+## 2026-10-05 (late): finished the owed VIP Fan Experiences carousel as C03 v1 (draft, not gated)
+- **Source:** Karl's 3 Sep design artifact "TripNerd VIP Carousel": 7 slides, all photo slots empty, several unproven lines. Left untouched; C03 is a new build in the static pipeline (TripNerd palette, Montserrat/Inter, committed logo).
+- **Copy fixed against the barred list and the evidence register:**
+  - cut "VIP", "Ultimate", Augusta, Super Bowl, "handled", "every", "one call", "field-level", the hotel/transfers placeholder, "2026 & 2027", "Book Smart" (no source) and the reviews card ("43 five-star / nine years" exists only in the Drive-OS brief sync; no primary source);
+  - kept Karl's row-40 hook (it matches the owner-approved hook direction);
+  - proof lines are EV-004/006/007/008 verbatim.
+- **Also fixed:** Karl's slide 2 mocked "a lanyard" and "a buffet in a tent", but TripNerd's own staff wear lanyards and its hosting proof is a buffet spread. Replaced with "A ticket gets you in."
+- **Photos:** c5 IMG_1901 left crop (exclusion line 1160, below every face) and c6 IMG_1998 tartlet close-up. Conventional grade, downscale only. c1 and c3 carry labelled empty frames for the 17th-hole rail stills.
+- **QC:** `servicepow_static_qc.py` exit 0 (362/0); extra checks exit 0 (112/0) after one fix (a c4 gap of 12 px against the 16 px floor). Both photo panels were checked by eye at full size: no faces.
+- **Not done:** dual gate (held for the rail frames), Karl's taste check, TripNerd approver.
+- **Open:**
+  - Taylor's originals are now the single input blocking R01, C02 and C03;
+  - Karl's Google Business Profile screenshot plus the founding year if he wants the reviews card back.
+- Records: `clients/tripnerd/campaigns/2026-10-13-fan-experiences-carousel/`; evidence register "Used in" rows; tracker blocker and content-log rows.
+
+## 2026-10-05 (late): "Door to roar" Reel script for Grok (Karl's arrival-to-exit idea)
+- **The ask:** Karl wanted Grok to generate an advert covering arrival (car pickup, VIP lanyard), the spot, food, drinks, people, the Nerds, the main event, a late roar, leaving, and an end card of a group saying "this was the best trip ever".
+- **Advised against Grok making it.** Four reasons:
+  - it breaks TripNerd's agreed "AI never creates a person, a voice or a testimonial";
+  - the end card is a synthetic testimonial (FTC rule; disclosure doesn't cure it);
+  - car pickup and credentials are unconfirmed, and "VIP" is barred;
+  - it breaks the standing real-footage / no-sub-1080p rule.
+- **Wrote** `clients/tripnerd/campaigns/2026-10-05-door-to-roar-reel/script-v1.md`:
+  - a 15-beat, 30 s real-footage script (each beat: picture, text, sound, source and status);
+  - the "best trip ever" end card only as an unprompted, released real guest;
+  - a 13-shot list for TripNerd's next event;
+  - 5 CONFIRM questions;
+  - 3 Grok prompts (storyboard; empty-scene concept frames, not for posting; a message draft).
+- **Honest flag:** the short cut possible from current footage mostly repeats "Two ways" and the Hosting spot. The new value (arrival, Nerds, leaving) needs filming, so it is not an October post.
+
+## 2026-10-05 (late): "The Group Chat" Reel: concept approved, storyboard built (R02, Fri 16 Oct)
+- **Karl chose** "The Group Chat" (a chat-thread opening, new for TripNerd) and limited Higgsfield to one labelled bridge shot with no people (F6.5).
+- **Built:** the FULL Bible with the 13-frame storyboard (all 10 fields), 4 hooks, COMPOSITE marking and routing. Storyboard frames were built in code (chat UI generic, no Apple look, no photo avatars); real stills IMG_1907/1998 used downscale only, below the face line (the guard tripped once and the crop was fixed).
+- **Higgsfield live state:** 11,779.65 credits, Ultra plan. F6.5 routes to Seedance 2.5 (480p preview, finalised at 1080p); the backup is Cinema Studio 3.0. No read-only price quote is available. **Nothing generated.**
+- **Skeptic Pass 1** spawned in isolation (packet scan clean); its verdict is pending transcription.
+- **Next:** STORYBOARD APPROVED (Karl) → SPEND_APPROVER for F6.5. Taylor's originals decide version A or B.
+
+## 2026-10-05 (late): "Door to roar" script v2 for Karl to build in Higgsfield
+- **Karl's choices:** his own arrival-to-roar idea, frames made by hand in Higgsfield, no AI people.
+- **Wrote** `clients/tripnerd/campaigns/2026-10-05-door-to-roar-reel/script-v2-higgsfield.md`:
+  - 15 beats; 7 generated empty-scene frames, each with an image prompt, a video prompt and settings (native 1080p, Seedance 2.5 or Cinema Studio 3.0);
+  - real stills for the table and food, and real V16/V24 for the people, the main event and the roar;
+  - editor specs and a reject checklist;
+  - the "best trip ever" line only as a real guest's words, with a release.
+- Added a slim Bible; v1 marked superseded.
+- The isolated Skeptic Pass 1 on the script is running.
+- The Group Chat Reel stays parked at storyboard v3.
+- **Update:** the isolated Skeptic BLOCKED Door to roar script v2 (photoreal generated venue, seat and drink frames read as documentary proof of unrecorded offers; the stills and the 17th video come from different venues and days; too much AI for the client's 'bridge short gaps' rule). Karl chose all real. Script v3 (`script-v3-all-real.md`) is a V23 + V24 cut list: one suite, one walk, EV-003/EV-006 on matching footage, no AI. It waits on Taylor's originals. Recommend posting it ≥2 weeks after Two ways (shared roar).
+- **Open flag for The Group Chat:** its F7/F8 stills (Augusta-week table and food) also come from a different venue than its 17th payoff. Swap them for V23 buffet frames when the originals arrive.
+
+## 2026-10-05 (late): "Book It Now" (Augusta) Reel: draft v1 built and sent to Karl
+- **Karl's script and stills:** couch → DM "AUGUSTA" → reply → tap → Augusta → end card, with his two Higgsfield stills. **His decisions:** AI couch skit + real Augusta; real keyword auto-reply CTA ("Get the Augusta details", not "Book now"); the line as text.
+- **Built in code:**
+  - DM UI;
+  - the phone's generated screen (unverified claims) replaced via perspective warp, with the thumb kept on top;
+  - real 9 Apr photos IMG_1985 (event flag logo, player photo and TV blurred as third-party marks), IMG_1932, IMG_2034, IMG_2036;
+  - end card from EV-tripnerd-009 (tripnerd.com Augusta inclusions, Karl's screenshots of 5 Oct).
+- **Specs:** 20 s, 1080×1920, 30 fps, −14.0 LUFS. Send copy 17.9 MB.
+- **QC:** structural checks all pass. The script exits 1 only on sampled-frame OCR; 2 strings were found by direct OCR and the button was verified by eye.
+- **Blocked:** Higgsfield's CDN returns 403 from the container, so generated video can't be pulled here.
+- **Posting gates:** Jason's written OK for the AI actor; venue, photo and consent OKs; the "AUGUSTA" auto-reply live with a DM owner; the course-passes scope; the AI label. The isolated Skeptic Pass 3 is running.
+- **Records:** `clients/tripnerd/campaigns/2026-10-book-it-now-augusta/` (Bible, auto-reply setup, asks for TripNerd (NOT SENT), QC receipts); EV-tripnerd-009 in the register.
+- **Update:** the isolated Skeptic Pass 3 BLOCKED Book It Now v1. Its 3 × S4 are TripNerd gates: the AI-actor exception, the auto-reply live, consent. Built v2 with all fixable items: dropped the banner shot (blur blocks, venue sign, look-alike cut); mask-based phone composite; reply held about 3.5 s; Augusta cue at 0 s; on-screen independence line; softer beds; fuller keyboard. Sent v2 (17.8 MB). The Skeptic re-runs once TripNerd answers.
+
+## 2026-10-06: "Book It Now" all-AI pre-viz script
+- Karl asked for an all-AI frame-by-frame version to build in Higgsfield, with real footage incorporated later.
+- **Wrote** `clients/tripnerd/campaigns/2026-10-book-it-now-augusta/script-ai-previz-v1.md`:
+  - a continuity bible (Mike = Karl's couch still `389ec001` as @image1; plain wardrobe and blank lanyard cards);
+  - 12 frames: 10 Higgsfield frames with image and video prompts, plus 2 existing code-built screens;
+  - a reject checklist;
+  - a slot map giving each AI frame's real replacement and gate;
+  - a build order.
+- Labelled INTERNAL PRE-VIZ, NOT FOR POSTING. Nothing generated or spent from this session.
+
+
+## 2026-10-06 (later): "Book It Now" pre-viz stills, realism pass, generated in Higgsfield
+- **Karl:** generate every pre-viz frame now, at the highest quality, realism first, credits uncapped.
+- **Ran 35 stills:**
+  - all 9 generated frames × 2 takes on `gpt_image_2_5` flare, max, 4k (2160×3840);
+  - a full alternate set on `nano_banana_pro` 4k (the server records it as `nano_banana_2`, 3072×5504);
+  - a realism shootout on frames 6 and 11: GPT sunburst, Seedream 4.5 high, Soul 2, Kling O1.
+- **Prompts rewritten for realism:** camera, lens and f-stop; skin and fabric imperfections; candid timing; no CGI look. All v1 content locks kept (blank cards, white screen, no text or marks, no recognisable course). Mike frames carry `389ec001`.
+- **Jobs:** 3 max/4k jobs failed and were re-run once; all succeeded.
+- **Spend:** 339.24 credits (balance 11,102.90 → 10,763.66; equals the `get_cost` total, so the failures weren't charged), plus 24.75 for the superseded batch 1.
+- **Gallery shown to Karl in three groups.** One 35-item call returned too much data to display reliably.
+- **Not verified:** realism and content locks. Higgsfield's CDN is 403 from the container, so Karl judges in the gallery.
+- **Found in the job records:**
+  - `soul_2` with an image reference rewrote the frame-11 prompt into a description of the couch still (index 116, off-brief);
+  - the `nano_banana_pro` jobs were served as `nano_banana_2`.
+- **Record:** `clients/tripnerd/campaigns/2026-10-book-it-now-augusta/script-ai-previz-v2-realism-stills.md` (job IDs, sizes, exact prompts, spend). Bible §16 row added.
+- **Open:** Karl's pick per frame; then image-to-video on the picks (priced first). All posting gates are unchanged.
+
+## 2026-10-06 (later): TripNerd real footage gathered into one Drive folder for ChatGPT
+- **Karl's ask:** put all of TripNerd's real photos and videos into his new Drive folder "TripNerd real client footage".
+- **Karl's choices:** move rather than copy; include the AI-upscaled clips, clearly labelled.
+- **Read-only inventory first.** It found a library not previously recorded here:
+  - `media/` (5 event folders: 185 TN_ photos, 25 TN_ videos), uploaded 2026-10-06 01:36 UTC;
+  - `media-upscaled/` (4 Topaz `_topaz1080` clips);
+  - 30 Augusta IMG_ photos loose in the root.
+- **Done in Drive:**
+  - moved `media` → "Originals by event";
+  - moved `media-upscaled` → "AI-upscaled copies (Topaz) - NOT originals";
+  - created "Augusta week 2026 - iPhone originals (IMG_)" and moved 29 IMG_ photos into it;
+  - added a README Google Doc.
+  - The first README overstated ("nothing is AI-edited", not verified). It was replaced and the first version trashed.
+- **Verified:**
+  - each move returned the new parent;
+  - the root now holds only the left-out files (IMG_2041 at 0 bytes, IMG_2446, IMG_2447, IMG_8378, the unidentified .mov, the Slide4 PNG);
+  - the README content was read back.
+- **Left out:** the files not clearly TripNerd's (listed in `clients/tripnerd/footage-drive-location.md`).
+- **Open:**
+  - check V23 and V24 resolution with ffprobe (might be Taylor's originals; would unblock R01, C03 and the Group Chat);
+  - check the same-size possible duplicates;
+  - re-upload IMG_2041;
+  - Karl to connect ChatGPT through a separate Google account (whole-Drive exposure otherwise) and decide on guest-photo upload (consent);
+  - update the Grok knowledge file §11 footage index when the next refresh is due.
+- **Follow-up, same day: V23/V24 resolution check and ChatGPT prompt.**
+  - **Drive connector limits:** it refuses downloads over 10 MB (V23 18.3 MB, V24 12.2 MB). V08 (9.8 MB) crashed the connector. V16 downloaded byte-exact.
+  - **V16 measured 404×720,** 30 fps, 13.9 s, re-encoded 2026-08-25, with no camera tags. It's the known copy, not an original.
+  - **INFERENCE: V23 and V24 are the 720×1280 copies** (the same batch, and Topaz upscales exist for them). Taylor's originals are still owed.
+  - **Karl can confirm V23** with a local Get Info.
+  - **Wrote** `clients/tripnerd/chatgpt-footage-finder-prompt.md`: the paste-ready prompt for ChatGPT (folder, map, naming, a first task that tests whether it can actually see media, the rules).
+
+## 2026-10-06 (later): R01 ChatGPT build prompt fact-checked and rewritten
+- **Karl's ask:** Grok's ChatGPT assembly brief for R01 ("Two ways to watch the 17th", posts Wed 7 Oct at 12 PM) rewritten so ChatGPT can build a client-ready Reel in one pass. Client approval needed today.
+- **Karl's decisions:** cut from the native V23/V24, logging the "720p copies acceptable for this item" override; drop both AI scenery bridges for real whips. The Reel has no AI and no label.
+- **Fact-check fixes:**
+  - "Lunch" → "Food + open bar inside" (tripnerd.com wording, EV-004 evidence);
+  - the H3 stat now reads "An estimated…" (golf.com and Wikipedia range from 70k to 150k);
+  - B07 is 1.25 s (the brief broke its own 1.2 s text floor);
+  - B08 comes from V24 (V16 is 404×720);
+  - the Camera Roll ban widened to 13.40–15.30;
+  - the H2/H3 variants reordered so no footage repeats;
+  - caption claims fixed ("lunch and the AC on" removed);
+  - fonts and colours brought back to the brand guide.
+  - The Meta Ad Library references are UNVERIFIED (facebook.com blocked).
+- **ChatGPT-specific hardening:**
+  - check ffmpeg first; ffprobe evidence;
+  - look at every beat before building;
+  - PIL text with uploaded TTFs;
+  - frame duplication, never interpolation;
+  - a PASS/FAIL self-check;
+  - a contact sheet for the client;
+  - a review copy under 9 MB so our gate can run (the Drive connector can't pull files over 10 MB).
+- **Records:** `clients/tripnerd/campaigns/2026-10-04-launch-reels/chatgpt-build-prompt-R01-v2.md` (fact-check table, upload checklist, prompt, caption, approval message NOT SENT, posting gates); launch-reels Bible §16 row; tracker R01 row.
+- **Open:**
+  - TripNerd approver still unnamed;
+  - Karl's phone watch;
+  - our QC and dual gate on the ChatGPT export;
+  - TripNerd's exact brand blue (#2ea3f2 vs #5896E9).
+- **R01 prompt v2.1 (same day):**
+  - end card 2.00 s (17.25 s total);
+  - H2 and H3 required, as Trial Reels;
+  - a clean no-text export, text PNGs and a timing CSV for Wyatt's polish pass;
+  - B04 re-described.
+  - Bible §16 row added.
+- **R01 ChatGPT kit v2.3 (same day):** a downloadable `TN_R01_ChatGPT_kit.zip`, 424 KB, sha256 `c8e90912…42c2`. It holds `START-HERE.txt`, `PROMPT_for_ChatGPT.txt`, `11_ENDCARD.png`, Montserrat-ExtraBold and Inter-Medium.
+  - **End card:** the committed logo file (`1c4996e5…caa51`), unaltered, on #5896E9 (logo box x 190–830, y 620–856).
+  - **The two videos are excluded:** the Drive connector caps downloads at 10 MB. Karl attaches them from Drive in ChatGPT by their original names, and the prompt now recognises those names and rejects `topaz` files.
+  - **Rebuild:** scratchpad `r01_kit/`. Inter comes from apt `fonts-inter`; Montserrat from the system font.
+- **R01 review copy QC + payoff line (same day):**
+  - **ChatGPT's 720p review copy:** specs, loudness, end card and logo pass.
+  - **Found:** B07 reworded to "The bar is steps away." (unapproved); B08 shows identifiable guests and a Titleist cap logo (consent flag).
+  - **Karl's new payoff line:** "Tickets get you in. / TripNerd gets you this."
+  - **Patch:** opaque pill overlays at frames 264–301 and 359–440 → `TN_R01_review-small_v2.mp4`, 6.3 MB. Verified by OCR and by looking at the boundary frames.
+  - **Prompt v2.4:** no-rewording rule; kit zip rebuilt.
+  - **Open:** ChatGPT re-export of the 1080 master; B08 consent or replacement; TripNerd approval.
+- **R01 v3 (same day):** the opening is now V08 9.45–10.95, a different real roar (Karl uploaded V08; my Drive connector can't pull files over about 5 MB).
+  - **Correction:** V08's arms-up figure at 0–2.4 s is a marshal in silence, not a fist pump; the real roar is at 9.75–10.9 s.
+  - **Upscale:** standard Lanczos plus a light unsharp mask, no AI.
+  - **Output:** `TN_R01_review-small_v3.mp4`, 17.28 s, −14.2 LUFS.
+  - **Prompt v2.5 and kit:** V08 added.
+  - **Open:** the 1080 master (ChatGPT re-export with kit v2.5, or I build it if V23/V24 are uploaded); B08 guest consent; TripNerd's approval.
+
+## 2026-10-06 — TripNerd: Augusta "watching view" footage scan
+- **Asked (Karl):** find real Augusta green shots from a TripNerd guest's watching perspective; then "let me see those so I can download them. I want to make an Augusta advert".
+- **Done:** every masters-week photo and V25 reviewed by eye. That is 12 photos from 2023–24, 118 from 9–12 Apr 2026 (byte-exact downloads, all iPhone 15 Plus at 1536×2048) and the 29 IMG_ originals.
+  - **Sent to Karl as originals:** the first 8 picks, then a 17-photo picks sheet plus a zip (V25 and a README). Scratchpad only; nothing committed.
+- **Finding (INFERENCE, strong):** the course seen from the hospitality lawn and veranda is most likely the venue's own course, **not Augusta National**. People are playing on it in P026, P119, P125, P135, P137, P143 and P146.
+  - The only Augusta National green shots are P072, P074 and P077 (2024 practice day). Those are personal use only under the patron policy, so they're excluded from ads.
+- **Records:**
+  - `clients/tripnerd/footage-drive-location.md`: new shortlist section with tiers, Drive IDs and the exclude list.
+  - Setup checklist item 17: a 7th question (which course the lawn overlooks).
+- **Open:**
+  - TripNerd's answers to item 17;
+  - guest consent for the from-behind shots;
+  - Karl's choice between upgrading Book It Now with these picks and a new Augusta advert concept.
+
+## 2026-10-06 — TripNerd Book It Now: picks bucket, v3/v3.1, v3 gate, v4 transformation plan
+- **Drive:** Karl's "bucket" is the folder "Augusta advert picks - watching view (COPIES, internal)" (`1hEnQ5Yvb4HyTwW1Rtp3IL53eSlk3eqnC`). It holds 19 copies; the originals were not moved.
+- **Venue finding:** a dessert card in P150 reads "WestLake Country Club | Augusta". West Lake is about 5 miles northwest of Augusta National (GolfPass). Filed as EV-tripnerd-010: the course in our photos is not Augusta National.
+- **v3 built:** the real watching-view section.
+- **v3 gated** (workflow `wf_755e351e-923`):
+  - critic 6.2, HARD FAIL;
+  - Skeptic VOID, because my invocation named other evaluators;
+  - 6 of 6 verified S3/S4 findings held.
+  - Record: `campaigns/2026-10-book-it-now-augusta/qc/gate-v3-2026-10-06.md`.
+- **v3.1:** the phone screen's corners are now fitted from the screen's own edges (Karl: "not properly centered").
+- **Karl's direction:**
+  - no stills;
+  - AI motion on people-free real photos only;
+  - spend up to 600 credits on Seedance 2.5 (SPEND_APPROVER);
+  - after the tap, he **transforms from his couch onto the TripNerd lawn sofa**. This supersedes the 5 Oct "no AI people at Augusta" decision for this one actor.
+- **v4 plan:** `script-v4-transformation.md`.
+  - The auto-reply is shortened to 29 words, and "course passes" is removed until TripNerd defines it.
+  - Six start images are prepared.
+- **BLOCKED:** every Higgsfield host (upload and CDN) is unreachable from the environment. Karl adds `upload.higgsfield.ai`, `d2ol7oe51mr4n9.cloudfront.net`, `d8j0ntlcm91z4.cloudfront.net` and `d3u0tzju9qaucj.cloudfront.net` to Allowed domains; per the docs the change reaches this running session within about a minute. A background watcher resumes the work when they open.
+- **Spend so far on v4:** 0 credits.
+- **Learning:** a Skeptic invoked from a workflow prompt that mentions other evaluators voids itself (condition 3). Invoke it with the packet path only.
+
+## 2026-10-07 — TripNerd Augusta Reel: 20 s → 22 s holds (Karl)
+- **Ask:** Karl wanted two shots held 1 s longer each: the real V25 veranda shot ("Bring your people. / Enjoy the moment.") and the "Let TripNerd handle the details" green shot.
+- **How:** each shot's last second is played at half speed with repeated frames (no interpolation, no AI). Frame blending was tried first and dropped: it left a double image on the pan. The audio stretches inside the voice-over pauses at 14.58 s and 17.49 s, so no word is cut.
+- **Result:** 22.0 s, −14.3 LUFS, −1.1 dBTP. Receipts: `campaigns/2026-10-book-it-now-augusta/qc/chatgpt-reel-22s-*`.
+- **Flagged to Karl, who chose to keep it:**
+  - the green shot is AI-generated: made-up spectators and an Augusta National look. That breaks TripNerd's "AI never creates a person" rule and needs the Instagram AI label. It is not postable until TripNerd OKs it;
+  - "handle the details" (the barred root "handled");
+  - the end card's "Now booking 2027" (unverified).
+
+## 2026-10-07 — TripNerd Augusta Reel: best-quality Instagram export (Karl)
+- **Ask:** export the Reel at the best quality for posting through Meta Business Suite on TripNerd's Instagram.
+- **Found:** the upload is byte-identical to the 20 s cut, and it already meets the Reels spec (1080×1920, 30 fps, H.264 High, BT.709, faststart, −14.2 LUFS). It was delivered **unchanged**, because a re-encode would only lose quality.
+- **22 s version:** re-rendered from the same source. The crf 14 render was 34.6 MiB, over the 30 MiB chat limit, so I delivered a 2-pass 10.4 Mbps encode (28.4 MiB; SSIM 0.995 against the source).
+- **Receipts:** `campaigns/2026-10-book-it-now-augusta/qc/chatgpt-reel-ig-export-2026-10-07.txt`.
+- **Still open before posting:** the AI label (the green shot is AI), the music licence, TripNerd's approver, guest consent and the venue OK.
+
+
+## 2026-10-20 — Prospect: Randy's Rooter & Plumbing (Midland, TX), spec static ad
+- **Ask:** Karl sent their onion-photo Facebook post and asked for it to be elevated. It is spec work to pitch them; nothing is posted.
+- **Built:** 3 hooks × feed and Story (6 PNGs) plus a before/after sheet, sent to Karl. Records: `clients/prospects/randys-rooter-midland/prospect-brief.md`.
+- **Open:**
+  - the phone number conflicts between listings;
+  - there's no real logo or photo rights;
+  - the static QC manifest checks fail on the hand-built comps (OCR used instead).
+
+## 2026-10-22 — TripNerd: Phoenix 16th-hole suite photo animated (Higgsfield)
+- **Preview job:** Seedance 2.5, 480p, 15 credits, job `517a3039`. Karl's prompt was used word for word.
+- **Not posted.** It needs the AI label and TripNerd's OK on AI-animated guests.
+- **Credits:** the balance has fallen to 2,097 from 9,734 on 6 Oct. That drop is not from this session's jobs.
+- **Log:** `campaigns/2026-10-instagram-growth/2026-10-22-phoenix-16th-suite-animation-log.md`.
+
+## 2026-10-22 — TripNerd Phoenix Reel tightened to 24.4 s (v1 preview)
+- **Built:** rebuilt from Karl's source zips. The ticket, card, captions and end card were rebuilt in code (no old project files existed); the stamp is lifted from the old render; the music is re-edited on the beat.
+- **Blocked:** the food and 9:16 suite clips were not supplied.
+- **Record:** `campaigns/2026-10-instagram-growth/2026-10-22-phoenix-reel-25s-tighten.md`.
+- **2026-10-22:** Phoenix Reel v2 is in, with the food clip inserted and eased to a stop on both drinks. Still pending: the 9:16 suite clip; TripNerd's confirmation of the claims.

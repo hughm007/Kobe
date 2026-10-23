@@ -1,0 +1,99 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    789,
+    67,
+    1026,
+    154
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "label",
+   "box": [
+    54,
+    89,
+    235,
+    135
+   ],
+   "font_px": 34,
+   "text": "2 \u00b7 TIMING",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    199,
+    817,
+    362
+   ],
+   "font_px": 66,
+   "text": "Don\u2019t book lunch over the big moment.",
+   "contrast": 14.77
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    394,
+    785,
+    502
+   ],
+   "font_px": 42,
+   "text": "Check tee times and know when the leaders reach your hole.",
+   "contrast": 14.77
+  },
+  {
+   "role": "fact",
+   "box": [
+    54,
+    574,
+    791,
+    673
+   ],
+   "font_px": 38,
+   "text": "At THE PLAYERS, our guests watched 17 from the rail.",
+   "contrast": 4.89
+  },
+  {
+   "role": "numeral",
+   "box": [
+    54,
+    713,
+    281,
+    1105
+   ],
+   "font_px": 380,
+   "text": "2",
+   "contrast": 5.15
+  },
+  {
+   "role": "cta",
+   "box": [
+    384,
+    1208,
+    695,
+    1262
+   ],
+   "font_px": 42,
+   "text": "Next: dining \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png",
+ "sha256": "a3961f338e98aa2e"
+}

@@ -1,0 +1,66 @@
+{
+ "name": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c7",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/bg_v2/c7-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.32,
+  "pos": "top-left",
+  "xy": [
+   70,
+   79
+  ]
+ },
+ "blocks": [
+  {
+   "role": "headline",
+   "text": "Hosting clients or bringing friends?",
+   "size": 100,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.25962962962962965
+  },
+  {
+   "role": "support",
+   "text": "TripNerd hosts guests at golf tournaments and other big events.",
+   "size": 46,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.6581481481481481
+  },
+  {
+   "role": "cta",
+   "text": "Plan yours \u00b7 link in bio",
+   "size": 48,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "x": 74,
+   "y_frac": 0.7922222222222223
+  }
+ ]
+}

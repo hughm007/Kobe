@@ -1,0 +1,109 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "photo",
+   "box": [
+    54,
+    243,
+    1026,
+    731
+   ],
+   "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c4-photo.png"
+  },
+  {
+   "role": "logo",
+   "box": [
+    70,
+    79,
+    415,
+    205
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "numeral",
+   "box": [
+    471,
+    67,
+    555,
+    219
+   ],
+   "font_px": 140,
+   "text": "3",
+   "contrast": 5.15
+  },
+  {
+   "role": "label",
+   "box": [
+    587,
+    134,
+    745,
+    180
+   ],
+   "font_px": 34,
+   "text": "3 \u00b7 FOOD",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    763,
+    815,
+    940
+   ],
+   "font_px": 72,
+   "text": "Keep the food close to the action.",
+   "contrast": 14.77
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    964,
+    795,
+    1068
+   ],
+   "font_px": 40,
+   "text": "Nobody should choose between lunch and the big shot.",
+   "contrast": 14.77
+  },
+  {
+   "role": "fact",
+   "box": [
+    86,
+    1112,
+    805,
+    1160
+   ],
+   "font_px": 36,
+   "text": "Ours: a hosted spread, set out for guests.",
+   "contrast": 4.89
+  },
+  {
+   "role": "cta",
+   "box": [
+    74,
+    1210,
+    396,
+    1262
+   ],
+   "font_px": 40,
+   "text": "Next: the exit \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c4.png",
+ "sha256": "4f226ec4cee8270a"
+}

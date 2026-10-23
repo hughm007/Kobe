@@ -5,7 +5,7 @@ client: tripnerd
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-10-04
+updated: 2026-10-05
 tags: [client, brand, voice, design]
 ---
 
@@ -64,19 +64,28 @@ page copy than the brand guide itself, because it's the language that already co
 
 | Element | Detail |
 |---|---|
-| Logo files (location) | |
-| Logo rules / misuse | |
-| Primary color | HEX: |
-| Secondary color(s) | HEX: |
-| Accent | HEX: |
-| Heading typeface | |
-| Body typeface | |
-| Font licensing | |
+| Logo files (location) | [`brand-assets/tripnerd-logo-colour-1633x601.png`](brand-assets/README.md), sha256 `1c4996e5…caa51`. APPROVER decision 2026-10-05; **TripNerd to confirm** |
+| Logo rules / misuse | Only on site blue #5896E9 (white wordmark, navy outlines). On navy, place it on a #5896E9 plate. Never redraw, recolour or regenerate it. Secondary on ads, never the hero |
+| Primary color | HEX: #5896E9 (site blue). INFERRED from the 2026-09-24 end-card record |
+| Secondary color(s) | HEX: #202838 (logo navy). INFERRED, same source |
+| Accent | HEX: #18A0F0 (logo blue). INFERRED, same source |
+| Heading typeface | Montserrat ExtraBold. INFERRED from the September client-approved end card; TripNerd's own font unknown |
+| Body typeface | Inter. Our choice; TripNerd's own font unknown |
+| Font licensing | Montserrat and Inter are both SIL Open Font License |
 | Photography style | |
 | Iconography / illustration | |
 
 **Accessibility:** confirm text/background combinations meet WCAG AA (4.5:1 body,
 3:1 large text). Record compliant alternatives for any brand color that fails.
+
+Measured 2026-10-05:
+
+| Text on background | Contrast | Use? |
+|---|---|---|
+| White on #5896E9 | ~3:1 | **Fails.** Never use for text |
+| Navy #202838 on #5896E9 | 4.9:1 | OK |
+| White on navy #202838 | 14.8:1 | OK |
+| #18A0F0 on navy | 5.2:1 | OK |
 
 ## Assets
 

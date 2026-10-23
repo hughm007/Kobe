@@ -1,0 +1,93 @@
+{
+ "name": "tripnerd-fanexp-C03-H1-feed-portrait-v1-c4",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_vip/bg_v1/c4-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.32,
+  "pos": "top-left",
+  "xy": [
+   70,
+   79
+  ]
+ },
+ "blocks": [
+  {
+   "role": "label",
+   "text": "WHERE WE GO",
+   "size": 34,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "x": 471,
+   "y_frac": 0.09074074074074075
+  },
+  {
+   "role": "support",
+   "text": "Not just any event.",
+   "size": 52,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.37444444444444447
+  },
+  {
+   "role": "headline",
+   "text": "The big ones.",
+   "size": 104,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.43666666666666665
+  },
+  {
+   "role": "support",
+   "text": "TripNerd hosts guests at golf tournaments and other big events.",
+   "size": 50,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.5522222222222222
+  },
+  {
+   "role": "cta",
+   "text": "Next: arrival \u2192",
+   "size": 40,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "left",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "x": 74,
+   "y_frac": 0.8966666666666666
+  }
+ ]
+}
