@@ -85,3 +85,38 @@ Notes on the checks:
 **Status:** owner review. Not approved; nothing posted.
 - **Consent:** guests' faces are visible. They are covered by TripNerd's standing consent ("Always assume that").
 - **Third-party marks:** "THE PLAYERS" is the event name, used as a date and place line. No PGA TOUR or tournament logo is used.
+
+## Final client-ready pass (owner, 2026-10-23)
+**Built:** [`final.py`](final.py), run as `final.py P085_novape.png logo.png FONT_DIR OUT_DIR`.
+- It is **version A plus three changes**. It imports `build.py`, so the grade, headline, subline, ticket design and text, CTA, fonts and logo come from the same code.
+- **Outputs:**
+
+  | File | MD5 |
+  |---|---|
+  | `TN-PLAYERS-17-suite-FINAL.png` | `3c681dee60283fffc53de7f5ef2084d6` |
+  | `TN-PLAYERS-17-suite-FINAL.jpg` | `369d77ed5c1a76896093c5143d9aaf2f` |
+
+### The three changes
+1. **Ticket:** scaled to 80% (452×262 → 362×210, proportional) and moved to the bottom-right, at (658, 996)–(1019, 1205).
+   - It sits inside the 60 px margins and stays above the CTA line, because the centred CTA pill (y 1222–1274) is unchanged.
+   - Its top edge is below the heads of the guests at the rail.
+2. **Island green highlight:** a soft white glow, drawn only on lake pixels within about 18 px of a traced outline of the island and bulkhead.
+   - Measured: 0 px of glow and 0 px of overlay on the island.
+   - Label "The 17th": Montserrat Bold 34 with a soft shadow, over the trees.
+   - A thin pointer runs from the label to the water just right of the island's tip.
+3. **Bottom edge:** cropped higher. The source window is x 584–1736, y 0–1440 (was 560–1760, 0–1500).
+   - The guest's hand and arm (source y ≥ 1455) and the chair stub beside it fall outside the frame.
+   - No retouching.
+
+### Checks
+| Check | Result |
+|---|---|
+| (a) Ticket fully visible | Pass: logo, "TripNerd" wordmark, strip, stamp, 3 lines |
+| (a) Ticket covers no faces | Pass |
+| (b) Glow subtle, label readable on a phone | Pass, checked at a 390 px-wide phone preview |
+| (c) Bottom edge | Pass: no hand, no cut stub |
+| (d) Island green, lake and crowd in frame | Island green whole; lake and crowd as before (see the earlier crop limit) |
+| (e) Logo | Pass: original file, scaled proportionally only |
+| (f) 3:4 grid thumbnail | Pass |
+
+Notes on (c): the left edge still cuts a cup on the counter and the seated guests at the rail, as in every earlier version. These were left as they are: the brief limited changes to the bottom edge and said no other people or objects get changed.

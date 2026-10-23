@@ -1779,3 +1779,9 @@ quality gate, claims and brand law after the commit.
 - **Update (owner):** the two disposable vapes on the counter, far left of the photo, were removed non-generatively ([`vape_fix.py`](../../ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-23-players-17th-suite-static/vape_fix.py): Telea inpaint, phone-edge-aware).
   - A, B and C re-rendered. Only the counter area changed.
   - Meta's ad policy restricts showing vaping products, so the removal is also a compliance fix.
+- **Final pass (owner):** `TN-PLAYERS-17-suite-FINAL.png/.jpg` is version A plus three changes:
+  - the ticket at 80%, bottom-right above the CTA line;
+  - a water-only glow around the island green, with a "The 17th" label and pointer;
+  - the frame cropped higher, so the hand and the cut chair at the bottom-right are gone.
+  - Checks (a)–(f) pass.
+  - **Disclosed:** the left edge still cuts a cup and the guests at the rail (left unchanged by the brief). Not approved yet; nothing posted.
