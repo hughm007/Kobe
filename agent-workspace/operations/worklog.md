@@ -2912,3 +2912,17 @@ Not deployed.
 **Open:** does the free audit cover social media (site lists disagree); Safari/real-device and
 Lighthouse checks; TripNerd review preview not rebuilt.
 
+
+## 2026-10-23 — Merged all branches to main; owner feedback review
+
+**Did:** merged the eight working branches into `main` (PR hughm007/Kobe#2; `main` had not moved since
+2026-09-06). Put the Daytona approval into the one approved list (`ServicePOW/Clients/TripNerd/07_Client_Approved/`).
+Three agents read every recorded owner verdict; the rules are now in `.claude/OWNER-TASTE.md`, imported by the
+root CLAUDE.md so every session loads them. Evidence: `knowledge/learnings/2026-10-23-owner-feedback-review.md`.
+
+**Found:** the top owner complaint is pacing ("too rushed", ~8 times), and it had never been captured. The
+playbook pushed faster cuts. The top kill reason is fakeness. Only 1 of the ~6 approved statics is recorded.
+
+**Open:** six owner rulings (AI labels, animated photos, sponsor logos, blurred backgrounds, "handled", TripNerd's
+AI-person rule); the ~5 unrecorded static approvals; consolidating `agent-workspace/clients/tripnerd/` into
+`ServicePOW/Clients/TripNerd/`.
