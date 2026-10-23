@@ -12,6 +12,8 @@ source: TN-DAYTONA-001, built 2026-10-12 to 2026-10-19 over ~10 owner review rou
 
 # Real-media Reel (photos + phone clips → 15-20 s Instagram Reel)
 
+**Read `.claude/OWNER-TASTE.md` first** (owner preferences from every recorded verdict; it wins where this file is older).
+
 Use this when a client has real event photos and short phone clips and wants a vertical Reel.
 It replays what got TripNerd's Daytona Reel approved, minus the rounds we wasted.
 Worked example and code: `clients/tripnerd/campaigns/2026-10-12-daytona-500/final-18s/`
@@ -27,7 +29,7 @@ blocking-check registry still apply; this file does not restate them.
 - Send a short explanation of what you think the owner wants **before** building anything new
   and novel (an intro animation, a new concept). Build only after the owner confirms.
 - Deliver fast: when asked for options, render both and send both in one message.
-- Never blur people. Sponsor logos in frame are fine.
+- Never blur people. Sponsor logos in frame were fine on the Daytona Reel, but the Derby statics brief says cover marks (layout or crop), never blur; see OWNER-TASTE conflicts.
 - Music must be free and safe on Instagram. Composing an original track (FluidSynth +
   FluidR3_GM, MIT) has been the reliable route; Pixabay is blocked from the build container.
 
