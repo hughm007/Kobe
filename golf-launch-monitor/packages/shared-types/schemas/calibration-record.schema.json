@@ -1,0 +1,482 @@
+{
+  "$id": "https://golf-launch-monitor.local/schemas/glm-schema-0.1.0/calibration-record.schema.json",
+  "title": "calibration-record",
+  "description": "Generated from @glm/shared-types (glm-schema-0.1.0). Cross-field invariants (e.g. a null measurement value requires source 'unavailable') are enforced by the runtime zod schemas and are not all expressible in JSON Schema.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "createdUtc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+    },
+    "sensorConfigurationVersion": {
+      "type": "string"
+    },
+    "coordinateSystemVersion": {
+      "type": "string"
+    },
+    "pattern": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "charuco",
+            "checkerboard"
+          ]
+        },
+        "squaresX": {
+          "type": "integer",
+          "exclusiveMinimum": 1,
+          "maximum": 9007199254740991
+        },
+        "squaresY": {
+          "type": "integer",
+          "exclusiveMinimum": 1,
+          "maximum": 9007199254740991
+        },
+        "squareSizeM": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "markerSizeM": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "dictionary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "squaresX",
+        "squaresY",
+        "squareSizeM",
+        "markerSizeM",
+        "dictionary"
+      ],
+      "additionalProperties": false
+    },
+    "intrinsics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cameraId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "imageSize": {
+            "type": "object",
+            "properties": {
+              "widthPx": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              },
+              "heightPx": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "widthPx",
+              "heightPx"
+            ],
+            "additionalProperties": false
+          },
+          "fxPx": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "fyPx": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "cxPx": {
+            "type": "number"
+          },
+          "cyPx": {
+            "type": "number"
+          },
+          "skew": {
+            "type": "number"
+          },
+          "distortion": {
+            "type": "object",
+            "properties": {
+              "model": {
+                "type": "string",
+                "const": "brown-conrady"
+              },
+              "k1": {
+                "type": "number"
+              },
+              "k2": {
+                "type": "number"
+              },
+              "p1": {
+                "type": "number"
+              },
+              "p2": {
+                "type": "number"
+              },
+              "k3": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "model",
+              "k1",
+              "k2",
+              "p1",
+              "p2",
+              "k3"
+            ],
+            "additionalProperties": false
+          },
+          "deviceConfigurationHash": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "cameraId",
+          "imageSize",
+          "fxPx",
+          "fyPx",
+          "cxPx",
+          "cyPx",
+          "skew",
+          "distortion",
+          "deviceConfigurationHash"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "extrinsics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cameraId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rotationWorldToCamera": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            }
+          },
+          "translationM": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "z": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "z"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "cameraId",
+          "rotationWorldToCamera",
+          "translationM"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "worldFrame": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "addressPointM": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                },
+                "z": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y",
+                "z"
+              ],
+              "additionalProperties": false
+            },
+            "targetLineUnit": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                },
+                "z": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y",
+                "z"
+              ],
+              "additionalProperties": false
+            },
+            "groundPlane": {
+              "type": "object",
+              "properties": {
+                "normal": {
+                  "type": "object",
+                  "properties": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    },
+                    "z": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y",
+                    "z"
+                  ],
+                  "additionalProperties": false
+                },
+                "offsetM": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "normal",
+                "offsetM"
+              ],
+              "additionalProperties": false
+            },
+            "screenPlane": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "normal": {
+                      "type": "object",
+                      "properties": {
+                        "x": {
+                          "type": "number"
+                        },
+                        "y": {
+                          "type": "number"
+                        },
+                        "z": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "x",
+                        "y",
+                        "z"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "offsetM": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "normal",
+                    "offsetM"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "teeHeightM": {
+              "type": "number",
+              "minimum": 0
+            },
+            "method": {
+              "type": "string",
+              "enum": [
+                "alignment-stick",
+                "laser",
+                "target-marker",
+                "board-on-ground",
+                "manual"
+              ]
+            }
+          },
+          "required": [
+            "addressPointM",
+            "targetLineUnit",
+            "groundPlane",
+            "screenPlane",
+            "teeHeightM",
+            "method"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "quality": {
+      "type": "object",
+      "properties": {
+        "rmsReprojectionErrorPx": {
+          "type": "number",
+          "minimum": 0
+        },
+        "perCamera": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "cameraId": {
+                "type": "string"
+              },
+              "rmsReprojectionErrorPx": {
+                "type": "number",
+                "minimum": 0
+              },
+              "boardCoverageScore": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "imageCount": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "cameraId",
+              "rmsReprojectionErrorPx",
+              "boardCoverageScore",
+              "imageCount"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "stereoEpipolarErrorPx": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "knownLengthRelativeError": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "targetLineErrorRad": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "evaluatedUtc": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+        }
+      },
+      "required": [
+        "rmsReprojectionErrorPx",
+        "perCamera",
+        "stereoEpipolarErrorPx",
+        "knownLengthRelativeError",
+        "targetLineErrorRad",
+        "evaluatedUtc"
+      ],
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "green",
+        "yellow",
+        "red",
+        "none"
+      ]
+    },
+    "statusReasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifactPaths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "version",
+    "createdUtc",
+    "sensorConfigurationVersion",
+    "coordinateSystemVersion",
+    "pattern",
+    "intrinsics",
+    "extrinsics",
+    "worldFrame",
+    "quality",
+    "status",
+    "statusReasons",
+    "artifactPaths"
+  ],
+  "additionalProperties": false
+}

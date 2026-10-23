@@ -1,0 +1,13 @@
+{
+  "name": "@glm/core-math",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic vector math, small dense linear algebra, seeded RNG, and statistics.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@glm/shared-types": "0.1.0"
+  }
+}
