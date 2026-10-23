@@ -1762,3 +1762,7 @@ quality gate, claims and brand law after the commit.
   - **Phoenix claims, TripNerd still to confirm:** suite access, hotel, Fairmont, Feb 2027.
   - **Derby claims, Jason to confirm:** the date and the checklist.
   - **Nothing posted.**
+- **Update 2026-10-23 (owner):** Jason (TripNerd) approved the Phoenix Open Reel. The Derby static was already his approval.
+  - **Claims:** the owner's direction is that the claims on both (Phoenix: suite, hotel, Fairmont, Feb 2027; Derby: the date and the checklist) are Jason's to stand behind. They are no longer open holds on our side.
+  - **Where recorded:** both 07 records and a new rule in `07_Client_Approved/README.md`.
+  - **Still ours:** consent and third-party marks remain our checks.

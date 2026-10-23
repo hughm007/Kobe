@@ -23,10 +23,7 @@ tags: [assets, video, approved, phoenix-open, reel]
 
 Both read "16th Hole Suite".
 
-**Approval:**
-- The owner wrote "approved" on 2026-10-23 and asked for the file to go in this folder.
-- No score was given.
-- **Who signed off for TripNerd is not recorded.** If it was Jason, note it here.
+**Approval:** **client approved by Jason (TripNerd)**, as reported by the owner on 2026-10-23. The owner then filed it here. No score was given.
 
 **What it is:**
 - The owner's cut, `TripNerd_PhoenixOpen_25s_small.mp4` (MD5 `397d2944…`), built by another session; its project files never reached this repo.
@@ -36,9 +33,6 @@ Both read "16th Hole Suite".
 **Method and limits:** [`../05_Edit_Project/2026-10-22-phoenix-open-16th-hole-suite-fix/README.md`](../05_Edit_Project/2026-10-22-phoenix-open-16th-hole-suite-fix/README.md).
 - **Known trace:** a faint outline of the old word remains in the 0.2 s fade-in over the crowd shot, frames 236–241, around 7.9 s.
 
-**Open before paid use:** TripNerd to confirm the remaining claims in the record of the cut:
-- suite access;
-- food and drink included;
-- hotel included;
-- Fairmont;
-- Feb 2027.
+**Claims:** suite access, food and drink, hotel, Fairmont, Feb 2027.
+- **Owner's direction (2026-10-23):** they are Jason's to stand behind ("let him worry about").
+- **Status:** client-owned. Approving the advert is the client's sign-off on its claims; this workspace no longer holds the advert for them.
