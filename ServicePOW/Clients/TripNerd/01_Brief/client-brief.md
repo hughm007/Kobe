@@ -35,6 +35,23 @@ always assume it for TripNerd. Confidence: CONFIRMED (the owner's written statem
   identifiable guests in TripNerd's footage still needs those guests' releases. Ask Taylor once
   whether event terms include photo consent, and only for an advert that shows a guest's face.
 
+## Instagram — current main focus (owner decision, 2026-10-05)
+
+**Brand awareness and engagement come first for the 90-day plan (5 Oct 2026 – 2 Jan
+2027):** make @tripnerd a page people find, enjoy, follow and interact with. Primary
+metrics: views from non-followers, watch time/completion, sends, saves, follows per reach,
+comments. Enquiries and bookings stay the business outcome. Borrow popular formats (food
+reviews, rankings, price breakdowns, POV) but keep the subject inside TripNerd's world.
+Full system, rules and Grok prompts: `instagram-content-system.md` (merged from branch quirky-davinci).
+TripNerd's approver still needs to be told the primary KPI changed.
+
+## Standing approvals (owner-recorded)
+- **Guest consent for TripNerd's own footage — CONFIRMED, standing.** 2026-10-06: the owner
+  reported that Jason (TripNerd contact) confirmed the guests shown in TripNerd's footage are
+  fine to feature, and instructed: "Always assume that." Applies to identifiable guests in
+  TripNerd's own archive footage. Does not cover footage from other companies (e.g. All Access
+  watermarked/branded clips) or anyone who asks to be removed.
+
 ## Brand
 White wordmark, nerd-head mark, brand blue. **Brand standards win outright** over any
 reference palette. Archetype for web/creative: Cinematic (G), story pages Warm editorial (A).

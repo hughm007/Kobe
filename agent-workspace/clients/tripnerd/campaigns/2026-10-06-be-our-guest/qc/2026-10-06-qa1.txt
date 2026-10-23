@@ -1,0 +1,121 @@
+QA1 — servicepow_qc.py (sandbox copy sha256 cd48e66268f9df22dbf2d4fd5bc3c8d5412c7accbcc6c8aa14f8dde9d3caa743 = canonical)
+Higgsfield sandbox, 2026-10-06. Master: tripnerd-be-our-guest-v1-2-master.mp4
+sha256 3e1b64d6c242cd3fc25b3d032803cc1fdb97987fa41548ba3ee68601700a25c6
+
+PREFLIGHT: PASS (planted freeze detected: yes; planted black detected: yes; still clip fails motion gate: yes). OCR unavailable.
+(No generation in this build; preflight run before QC, not before spend — there was no spend.)
+
+== Clip gate: conformed segments exactly as used (fps 24, lanczos 1080x1920, grade) ==
+seg00 V23 1.2-3.6 (logo-cleared)  md5 11083ac51433936018d7b87edef02571  motion 32.68  PASS
+seg01 V23 10.3-12.3               md5 f1536f3767c0c9bdbcf21b8e52d02215  motion 41.64  PASS
+seg02 V23 24.0-26.0               md5 3defe8497f3946963219d637a3dfac53  motion  8.94  PASS
+seg03 V24 13.0-15.0               md5 cd0d57a5f92f4403971059230964f1bd  motion 25.48  PASS
+seg04 V07 8.5-10.0                md5 1be84ccb03efc6ee626674d468dd981d  motion 24.22  PASS
+seg05 V23 30.0-32.0               md5 d2129d99f569b649611da41126dbf255  motion 17.80  PASS
+seg06 V16 8.5-10.0                md5 6f784a2369da9ceb06a266878d402541  motion 22.63  PASS   (replaced V18 0.5-2.0: motion 0.56 FAIL)
+seg07 V24 16.0-17.5               md5 d5ce3db06ed2d0e594dfdb9833bbc96a  motion  9.00  PASS
+seg08 V23 50.0-52.5               md5 6202fcc6a03720b56a374557bdb9445f  motion 48.88  PASS
+seg09 V08 3.0-6.0                 md5 62de0551dffc45caeea0d11317734bdb  motion 163.86 PASS
+(10/10 PASS)
+
+== Master ==
+  resolution             PASS          1080x1920 (min dim >= 1080)
+  fps                    PASS          24.000
+  pix_fmt                PASS          yuv420p
+  audio-48k-stereo       PASS          48000 Hz / 2 ch
+  audio-peak/not-silent  PASS          peak -1.4 dB (<= -0.5), mean -18.9 dB (> -45.0)
+  no-frozen-sections     PASS          none > 0.7s
+  no-black-sections      PASS          none >= 0.3s
+  motion-gate            PASS          edge travel 35.63 px/frame >= 1.6
+  hook-motion            PASS          first 1.2s edge travel 7.64 (floor 1.0, WARN only)
+  no-flash-cuts          PASS          0 detected cuts; shots < 0.4s: 0
+  aspect                 PASS          declared 9:16, got 1080x1920
+  duration               PASS          declared 20.4s, got 20.42s (+/-2%)
+  OVERALL: PASS
+
+Loudness (ebur128): I -16.0 LUFS, LRA 7.6 LU, peak -1.3 dBFS. Declared target: -16 LUFS / -1.5 dBTP (loudnorm).
+Speech: faster-whisper tiny.en with VAD on master audio: 0 segments.
+Burned-text safe area: overlays.js layout check 6/6 inside y 288-1344 px, x <= 940 px. OCR checks not run (no tesseract).
+
+
+=====================================================================
+v1.3 (owner trim) — tripnerd-be-our-guest-v1-3-master.mp4
+sha256 03b641aa79735f95e0186452f164476c0f3b0cd9234cf20fc7ba0ab90cb5ed46
+Clip gate (conformed segments): seg00 11083ac5… 32.68 PASS · seg01 5b14191e… 41.13 PASS · seg02 5f69f910… 9.15 PASS ·
+seg03 cd0d57a5… 25.48 PASS · seg04 d2129d99… 17.80 PASS · seg05 6202fcc6… 48.88 PASS · seg06 6ed1a104… 9.37 PASS (7/7)
+Master: resolution PASS · fps 24 PASS · yuv420p PASS · 48 kHz/2 ch PASS · peak -1.4 dB / mean -18.5 dB PASS · no frozen PASS ·
+no black PASS · motion 30.89 PASS · hook motion 7.64 PASS · no flash cuts PASS · aspect PASS · duration 15.00 vs 15.0 PASS · OVERALL PASS
+Loudness: I -16.0 LUFS, LRA 5.6 LU, peak -1.4 dBFS. ASR (VAD): 0 segments. Text band: 7/7.
+
+
+=====================================================================
+v1.4a — tripnerd-be-our-guest-v1-4a-master.mp4  sha256 00affd65daeacd79176fe2f04fa06ceb1699f762882370eb21b008ee508235fa
+Clip gate (conformed segments, identical picture chain to v1.4): seg00 0a528682… 8.65 PASS · seg01 85262526… 33.16 PASS ·
+seg02 858fb10f… 52.69 PASS · seg03 057954d3… 18.96 PASS · seg04 15e59f4a… 44.23 PASS · seg05 047abf3d… 159.08 PASS (6/6)
+Master: 1080x1920 · 24 fps · yuv420p · 48 kHz/2 ch · peak -2.1 dB / mean -20.2 dB · no frozen · no black · motion 31.03 ·
+hook motion 3.61 · no flash cuts · aspect 9:16 · duration 15.00 vs 15.0 → OVERALL PASS
+ebur128: I -16.6 LUFS, LRA 10.9 LU, true peak -2.1 dBFS (target -16 LUFS / -2 dBTP). ASR (VAD): 0 segments.
+Text band: 7/7 inside y 288-1344, x <= 940. (v1.4 before the limiter fix measured -14.6 LUFS / -0.6 dB — superseded.)
+
+
+=====================================================================
+v1.5 — two payoff variants, identical except the panel line
+  A tn-bog-v1-5-A.mp4 "TripNerd's got the best spot."  sha256 ccee5cc993d23b33be582a0e42a7742e7d6f79ad2f73c9638835aae86747c0c7
+  B tn-bog-v1-5-B.mp4 "This is TripNerd's spot."       sha256 01d10e2c64dacbc25190b28e0eff127b098b70c3b5b020ae4cb6ba83b50b1807
+Harness: qc.py sha256 cd48e66268f9df22dbf2d4fd5bc3c8d5412c7accbcc6c8aa14f8dde9d3caa743 (= canonical).
+
+PREFLIGHT — servicepow_qc.py (rebuilt 2026-08-26)
+  ffmpeg: present · ffprobe: present · numpy: present
+  OCR (expect-strings): UNAVAILABLE — expect checks will be INDETERMINATE
+  self-test planted-freeze detected: yes · planted-black detected: yes · still-clip fails motion gate: yes (score 0.0, density 0.0)
+PREFLIGHT: PASS
+
+Clip gate (conformed segments, `assemble.py --segments`; resolution/fps/no-frozen/no-black/motion/oner all PASS):
+  seg1 e3f7f373… motion 37.16 PASS · seg2 9f82afa6… 34.90 PASS · seg3 d6623a4d… 58.63 PASS ·
+  seg4 ba601a39… 11.05 PASS · seg5 fa304948… 39.28 PASS · seg6 fa76455e… 61.10 PASS   (6/6; ledger written)
+
+Master A and master B (--master --aspect 9:16 --duration 15.0 --endcard 3.0), identical rows:
+  resolution PASS 1080x1920 · fps PASS 24.000 · pix_fmt PASS yuv420p · audio PASS 48000 Hz / 2 ch ·
+  audio-peak/not-silent PASS peak -2.5 dB, mean -19.2 dB · no-frozen PASS · no-black PASS ·
+  motion-gate PASS A 26.81 / B 28.81 · hook-motion PASS 12.04 · no-flash-cuts PASS (scene-detect: 0 detected cuts;
+  actual hard cuts at 3.2 / 4.1 / 5.4 / 7.8 / 12.0 s, shortest shot 0.9 s) · aspect PASS · duration PASS 15.00 s · OVERALL: PASS
+ebur128 (encoded masters): I -16.0 LUFS · LRA 7.7 LU · true peak -2.5 dBFS (both).
+  (First v1.5 render used single-pass loudnorm → -18.3 LUFS; replaced by a measured static gain + limiter. Superseded.)
+
+BC-13 letterbox/pillarbox: ffmpeg cropdetect (limit 24) on all 358 sampled frames → crop=1080:1920:0:0 every frame (A and B). PASS.
+BC-15 expected strings: harness --expect INDETERMINATE (no tesseract). Substitute OCR — RapidOCR (onnxruntime), frames at
+  1.0 / 2.9 / 3.6 / 6.5 / 9.6 / 13.6 s:
+  A: "POV: | you're TripNerd's | guest at The Players" · "THE 17TH" · "TripNerd | FAN EXPERIENCES | THE SUITE" · "THE VIEW" ·
+     "TripNerd's got | the best spot. | Where would you sit — rail or table? | Tell us below." · "TripNerd | Beour | guest. | 2027 packages: link in bio"
+  B: same, panel "This is | TripNerd's spot. | Where would you sit — rail or table? | Tell us below."
+  Expected CTA "2027 packages: link in bio" read exactly in both.
+BC-26 bed (V07 0.5–15.5 s): faster-whisper small.en VAD 0 segments; no-VAD 0 segments. (base.en no-VAD on the full clip: one "You" token.) PASS.
+BC-27 master speech (no declared lines): small.en VAD → 0 segments (A, B). No-VAD → whole-window low-confidence tokens
+  (A "Whoa!"; B "Oh!", "Oh, I see."; no_speech_prob 0.14) — different words on identical audio = hallucination on crowd noise.
+  Isolated suite-guest shot (V23 40.4–42.0, master 4.1–5.4): VAD triggers; small.en "We'll see you next time." (nsp 0.53),
+  base.en "I'm going to go back here." (nsp 0.33) — unrelated texts = unintelligible guest chatter. FLAG for the BC-25 human listen.
+Cut gaps (40 ms RMS, ±0.3 s): body median -21.8 dB; minimum vs body at 3.2 s +1.9 · 4.1 s -3.2 · 5.4 s -1.6 · 7.8 s -0.8 ·
+  12.0 s -3.2 dB; end card 12.0–14.2 s median -2.2 dB vs body. (v1.4a: holes -10 to -16 dB; end card about -13 to -17 dB.)
+Text band (overlays.js, Chromium layout boxes): 8/8 inside y 288–1344, x <= 940 (hook 300–568 · labels 1170–1289 ·
+  ask_a / ask_b 1038–1336 · end 560–1069). Fonts loaded (Inter/Poppins). Wordmark file sha256 11bfe474… (real asset).
+Upload: both masters + contact sheet HTTP 200, media confirmed.
+
+
+=====================================================================
+v1.6 — owner: "feels rushed" → longer, even beats (16.2 s); suite-guest shot with event cups/can replaced
+  A tn-bog-v1-6-A.mp4 sha256 2a8c9d919dd3b8238995e58ba6466417bd6cefb2d05122cf1fd40eaaf74966df
+  B tn-bog-v1-6-B.mp4 sha256 7fa3490df548d34b9df72714856673e4050c5aa8095092259707153a3fe1ffe9
+Harness qc.py sha256 cd48e662… (= canonical). PREFLIGHT: PASS (OCR unavailable — expect INDETERMINATE).
+Clip gate: seg1 989b6bde… 22.45 PASS · seg2 9f82afa6… 34.90 PASS · seg3 e551e75c… 43.59 PASS · seg4 5a4b0592… 10.84 PASS ·
+  seg5 c14434e2… 35.44 PASS · seg6 fa76455e… 61.10 PASS (6/6)
+Master A / B (--master --aspect 9:16 --duration 16.2 --endcard 3.0): all rows PASS; peak -2.2 dB, mean -19.2 dB; motion
+  A 26.69 / B 27.08; duration 16.21 s vs 16.2 → OVERALL PASS (both).
+ebur128: I -16.0 LUFS · LRA 6.6 LU (both). Pre-encode measure: -16.0 LUFS / -2.5 dBTP (static gain +1.6 dB).
+BC-13: cropdetect crop=1080:1920:0:0 on all 387 sampled frames (A, B).
+BC-15 (RapidOCR substitute; harness INDETERMINATE): every super read, incl. "2027 packages: link in bio" (A, B).
+BC-26 bed V07 0–16.2 s: small.en VAD 0 segments; no-VAD one "Thanks for watching!" (nsp 0.32, a known noise hallucination).
+BC-27: master small.en VAD 0 segments (A, B); no-VAD whole-window noise tokens only.
+Cut gaps (40 ms RMS): body -21.4 dB; cuts 3.6 +0.4 · 4.5 -4.3 · 6.6 -1.3 · 9.8 -1.3 · 13.2 -3.1 dB; end card -2.4 dB vs body.
+Visual checks by eye: hook punch-in removes the foreground head; guests shot starts at V23 48.6 (TV edge visible 48.2–48.5
+  removed); no event cups / beer cans legible in the new guests shot. Venue video board still visible, small, in THE VIEW
+  (needs client ruling, C8). Upload: A, B, sheet HTTP 200, confirmed.

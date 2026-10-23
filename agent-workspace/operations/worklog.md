@@ -2697,3 +2697,176 @@ The basis is on the slide-10 and roadmap footers. Karl's in-viewer layout edits 
 - **Blocked:** the food and 9:16 suite clips were not supplied.
 - **Record:** `campaigns/2026-10-instagram-growth/2026-10-22-phoenix-reel-25s-tighten.md`.
 - **2026-10-22:** Phoenix Reel v2 is in, with the food clip inserted and eased to a stop on both drinks. Still pending: the 9:16 suite clip; TripNerd's confirmation of the claims.
+## 2026-10-04 — TripNerd: first Instagram Story week drafted (posting from Mon 2026-10-05)
+
+**Did:** drafted five organic IG Story sets for TripNerd (Mon–Fri, 3–5 frames each) as a
+mockup page: [`clients/tripnerd/deliverables/2026-10-05-ig-stories/tripnerd-stories.html`](../clients/tripnerd/deliverables/2026-10-05-ig-stories/tripnerd-stories.html),
+published privately as a claude.ai artifact. Sets: seat poll (awareness) · Augusta Experience
+walkthrough · corporate "Hosting clients?" · staff behind-the-scenes takeover + LA countdown ·
+real reviews + booking-lead-time quiz. Research on category leaders' Stories (Masters, NFL,
+Marriott×NFL, SeatGeek, Vivid Seats, StubHub, Ticketmaster) came from search-index summaries only —
+WebFetch and Instagram were blocked by the egress proxy, so no profile or Highlight was observed.
+
+**Decided:** event names written as "the Big Game" / city names pending owner ruling (NFL enforces
+"Super Bowl"); no synthetic people, no stock standing in for guests; every review/testimonial verbatim
+with consent.
+
+**Open (blocking Monday's post):** IG access for ServicePOW; real past-trip photos; brand blue + logo
+files; written confirmation of Augusta inclusions, LA on-sale, Birdeye "43 five-star reviews" and
+"6–12 months" quiz answer (no EV-tripnerd records exist yet); "20+ years" (site) vs founded 2017
+mismatch; ownership change (acquired by All Access Golf Travel & Events, 2023) — confirm approver and
+handle. Client approval of copy not yet given.
+
+## 2026-10-04 (later) — TripNerd Story week: finished frames rendered
+
+**Did:** owner chose "the Big Game" wording. Built 19 finished 1080×1920 frames from real
+tripnerd.com assets (guest gallery, Augusta page, logo, Poppins/Inter, #2ea3f2/#07283d/#e6a310),
+rendered in the Higgsfield sandbox, uploaded ZIP + contact sheet to Higgsfield storage (links in
+`clients/tripnerd/deliverables/2026-10-05-ig-stories/build/README.md`). Thursday swapped from the
+staff takeover (needs new video) to a Big Game LA countdown. Page republished as a posting kit.
+
+**Open:** TripNerd approval, IG posting access, OK to reuse site photos/reviews on IG, licence check
+on s2-2 house photo and s4-2 football photo, LA on-sale confirmation, "6–12 months" quiz answer.
+**Learned:** this workspace's egress blocks client sites and Higgsfield CDNs; the Higgsfield sandbox
+can fetch both. MCP calls time out at ~60s regardless of `timeout_seconds` — run renders/uploads with
+`background: true` and poll.
+
+## 2026-10-04 (later) — TripNerd Story week aligned to the Instagram Growth Plan
+
+**Did:** checked the week against the owner's "TripNerd Instagram Growth Plan" PDF (90 days from
+5 Oct). Gaps fixed: Stories now 10 AM ET Mon–Fri; push frames within the hour of each feed post
+(Mon 2 PM Reel 01, Tue 1 PM carousel 02, Thu 12:30 PM proof 04; Fri Trial Reel deliberately not
+pushed); daily DM keywords (AUGUSTA, HOST, BIGGAME) for ServicePOW first-line DMs; days re-ordered
+to sit beside the launch queue; Friday built for sends; reviews now word for word (no ellipses);
+UTM-tagged link stickers; guest-consent rule made blocking. 22 frames re-rendered (v2 ZIP + sheet
+in `build/README.md`); page republished with a plan-vs-stories table.
+
+**Open:** approver sign-off of the batch; partner access; guest consent confirmation; LA on-sale;
+quiz answer; push frames depend on Reel 01 / carousel 02 / proof 04 going live as scheduled.
+
+## 2026-10-04 (later) — TripNerd Story week v3: rebuilt after an @tripnerd audit
+
+**Did:** owner said v2 was too generic and repeated the feed. Pulled @tripnerd via the Instagram
+feed API from the Higgsfield sandbox (24 posts; older pages rate-limited) — log + analysis in
+`clients/tripnerd/notes/2026-10-04-instagram-audit-raw.md`. v2 repeated feed themes (incl. a
+near-copy of "skip another client dinner"). Ran a 10-hook tournament with an isolated red-team
+agent; kept 5 concepts: Nerd Notes: Augusta (sourced facts: $1.50 sandwich, phone ban, payphones),
+client-week calendar (corporate), "Don't book with TripNerd if…" anti-ad, Review X-ray (7/15 name
+Jason, 6/15 say "detail"), Big Game on Valentine's Day + 14-day window (Jan 31 → Feb 14). New
+"Nerd Notes" visual device. 24 frames rendered, uploaded (v3 links in build/README.md); page
+republished with audit, rationale and DM reply scripts.
+
+**Open:** Jason's role/consent for Thursday; TripNerd to confirm the client-week calendar and BIGGAME
+handling; consent for the 4 guests in mon-1's photo; approver sign-off; partner access.
+**Learned:** the Instagram web_profile endpoint fails for this account; `api/v1/feed/user/<username>/username/`
+works from the sandbox but rate-limits after ~1 page.
+
+## 2026-10-05 — TripNerd: Instagram main focus set to awareness/engagement; Grok prompt pack
+
+**Decided (owner):** TripNerd Instagram's main focus for the 90 days is brand awareness and
+engagement (non-follower views, watch time, sends, saves, follows, comments); leads second.
+Recorded in `clients/tripnerd/client-brief.md` and `clients/tripnerd/instagram-content-system.md`.
+
+**Did:** wrote the content system: format-borrowing table (food review → $1.50 Augusta menu
+made at home, rating spreads, price breakdowns, guess-the-sound, POV, day-in-the-life), rules,
+what Grok can/can't do, and a Grok prompt pack (project instructions + 5 task prompts).
+
+**Declined:** the AI-person food review at "the TripNerd suite" — a synthetic reviewer is a fake
+testimonial (FTC Fake Reviews Rule; TripNerd's plan p.6 bans AI people/voices/testimonials).
+Legal versions listed instead (real Nerd, at-home recreation, archive photos + real VO, creator).
+
+**Open:** tell TripNerd's approver the primary KPI changed (plan p.10 says "Likes never the
+goal"); connect Supermetrics Instagram insights once TripNerd grants access.
+
+## 2026-10-05 (later) — TripNerd: $1.50 Augusta menu Reel script + Grok briefing file
+
+**Did:** wrote the first awareness Reel script (real Nerd recreates and ranks the 2026 Augusta
+concessions menu; prices sourced from Yahoo Sports/On3/NPR; 3 Trial Reel hooks; shoot list; rule
+check) and a standalone Grok study file (`clients/tripnerd/grok-briefing-instagram-algorithm.md`):
+goal, ranking systems, signals, tactics per signal, Stories mechanics, schedule, format borrowing,
+food-review rules, hard rules, assets, fact bank, prompts A–F.
+**Open:** approver sign-off; real ranking + grocery total on shoot day; slot it as Friday's Trial Reel
+or swap with Reel 01.
+
+## 2026-10-05 (evening) — TripNerd: Augusta cheap eats Reel run through the campaign system
+
+**Did:** opened campaign `clients/tripnerd/campaigns/2026-10-05-augusta-menu/` (Bible at depth
+FULL, ten-field shot list, keyword DM reply, production log) and `clients/tripnerd/evidence-records.md`
+(EV-tripnerd-001…010). Pulled Meta Ad Library references (Golfbreaks comment-keyword CTAs, Bounty
+creator taste test, Gorse & Thistle founders; IDs in Bible §3). Rendered the edit kit (transparent
+overlays, boards, renderer with a 15–70% text-band check) locally and in the Higgsfield sandbox;
+ZIP on Higgsfield storage. 0 generation credits. Built an approval page (storyboard, animatic,
+decisions).
+**Skeptic:** isolated Pass 1 = BLOCK (3 S4, 5 S3); regression 1-R (fresh packet) = BLOCK (1 S4,
+4 S3). Two repair rounds applied (claims sourced or cut, NERDNOTES keyword on both routes, single
+DM message, live verdicts, "ours: homemade / store-bought" on every card, 2026 on every price,
+like-for-like receipt, offer on screen, text band incl. worst-case render). Remaining blocks need
+role-holders; next regression deferred until they land (Bible §16).
+**Published:** approval page https://claude.ai/artifact/DoHBvb7sknuCgYH5KCVuHq; edit kit v2 on
+Higgsfield storage (link in the campaign production log); Story kit page v5.
+**Also:** Story kit AUGUSTA DM reply replaced with the evidence-checked version; old Reel script
+marked superseded.
+**Open (role-holders):** APPROVER — strategy/concept/storyboard, CTA, loop ending, CONFLICT C1
+(how "Augusta" may be used), sign-off of EV-001…006/008/009. CLIENT_APPROVER — cast a real staff
+member + written consent; confirm EV-007 by email; supply the master logo. ManyChat setup.
+**Learned:** `knowledge/learnings/2026-10-05-the-keyword-dm-is-part-of-the-ad.md`.
+
+## 2026-10-05 (late) — TripNerd Augusta Reel: AI judges declined; rebuilt as a two-judge table
+
+**Asked:** AI-generated people as Nerds/guests judging the five foods, Hell's Kitchen style.
+**Declined** for the posted ad: FTC Consumer Reviews and Testimonials Rule (no reviews from people
+who don't exist, AI included; insider reviews must be disclosed), TripNerd Growth Plan p.6, "The
+Parking Lot" precedent, and people eating is the worst AI-video failure mode. Also corrected: the
+five foods are Augusta National concessions, not TripNerd's suite menu.
+**Decided (owner):** two real Nerds at a judging table ("Nerd Tribunal"); each scores every item
+out of 10 on a paddle; the average sets the rank.
+**Did:** rebuilt shot list, Bible (§3, §5–§8, §16), renderer (two scores + average per card, rank
+computed from averages, two-name caption; worst-case render passes 22/22), approval page (v3, same
+link), edit kit v3 on Higgsfield storage (hash-verified renderer copy). 0 generation credits.
+**Open:** cast two staff + both consents; props (~$40–60) payer; the next Skeptic regression must
+cover the two-judge version before STORYBOARD APPROVED; all earlier role-holder items stand.
+
+## 2026-10-06 — TripNerd: searched Drive for client-approved ads
+
+**Asked:** pull the client-approved TripNerd ads from Google Drive.
+**Found:** none labelled as approved. `16_APPROVED_CREATIVE_LIBRARY.md` says no client-approved
+entries exist. The Growth Plan's September approvals ("Their Camera Roll", "VIP Hosting Spot",
+two carousels) are not in this Drive. What is there: a new `media/` event archive (masters-week
+100+ photos + 2 videos; the-players 13 videos; phoenix-open 7; kentucky-derby 3; daytona 2;
+4 Topaz upscales), the Social Direction deck, and carousel slide 4/6.
+**Did:** pointer register at `clients/tripnerd/assets/2026-10-06-drive-media-register.md`.
+**Open:** where the approved ads live; contact sheet of the media (needs a link share or another
+route; the connector can't preview these files); guest consent and rights for the archive.
+
+## 2026-10-06 — TripNerd: "One Text" Reel built (v1, all-AI scenes)
+
+**Asked:** build concept #2 "One Text" with Higgsfield and show it. Mid-build: use real TripNerd
+footage or a mix where it looks best, guided by proven competitor ads.
+**Did:** Bible + shot list in `clients/tripnerd/campaigns/2026-10-06-one-text/`. Storyboard
+revised (hug/cheer/island-green shots dropped for the realism floor and live-ad rotation). New
+terrace keyframe (GPT Image 2.5) + four Kling 3.0 pro clips; tracked blur over the AI phone
+screen; composited bubbles + end card with the real wordmark; SFX bed (no speech); assembled
+15.0 s 1080×1920 24 fps master, uploaded to Higgsfield storage. QA1 canonical harness
+(hash-matched): master PASS 12/12, conformed clips PASS, ASR 0 speech. Spend 40.75 credits
+(cap 200). Dual gate (critic + isolated Skeptic) launched; competitor research launched.
+**Open:** gate verdicts; CONFLICT C2 (every person is AI — TripNerd p.6 needs a written
+exception or v2); C3 (who answers DMs); v2 real-footage mix needs Drive clip access (owner-only
+archive); preflight ran after generation (process miss, logged).
+**Update (same day):** dual gate on v1 — critic HARD FAIL 5.8 ± 1.5, Skeptic BLOCK (S4: client's
+no-AI-people rule; S3: unverified DM promise, fake venue under an AI label, angle not rotated).
+Also caught: hero footwear drift across shots 2–4 that my QA2 missed. v1 is a reference cut only;
+not polished further. v2 = real TripNerd footage, pending clip access. Learning filed.
+
+## 2026-10-06 — TripNerd: "Be Our Guest" Reel built from real footage (v1.2)
+
+**Asked:** build the Be Our Guest ad from TripNerd's real footage (Roadtrips #1 format as guide).
+**Did:** owner opened two Drive folders to link access; 13 videos pulled and bundled into
+Higgsfield storage. Reviewed every clip: excluded V12 (All Access suite branding) and V15
+(All Access repost watermarks), scoreboard frames, suite TV. Cleared "THE PLAYERS" from the door
+placard with a tracked flat fill. Cut 20.4 s: POV through TripNerd's suite door → suite →
+balcony → the 17th → crowds → table payoff with a comment prompt → end card (real wordmark,
+tripnerd.com, whose Players page is live). Real location sound, −16 LUFS. QA1 (hash-matched
+harness): 10/10 segments PASS after replacing a static clip, master 12/12 PASS, no speech.
+0 credits. Dual gate running. Campaign: `clients/tripnerd/campaigns/2026-10-06-be-our-guest/`.
+**Open:** guest consent (C4); low source resolution (C5); Drive folders still on "anyone with
+the link" at last check — owner to switch back to Restricted.
