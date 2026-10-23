@@ -29,13 +29,23 @@ tags: [static-ads, players, tpc-sawgrass, real-photos, ticket]
 
 | File | MD5 |
 |---|---|
-| `TN-PLAYERS-17-suite-A.png` / `.jpg` | `605c5b59f4c8d0431a12f43747893698` / `a4532445fff3af84657966e59f01c8c2` |
-| `TN-PLAYERS-17-suite-B.png` / `.jpg` | `8bd094a72bc167d313a906a3ef8ce201` / `c39e35bbee0766d4129aba8210aa374b` |
-| `TN-PLAYERS-17-suite-C.png` / `.jpg` | `3367a133adb6475671241a586880bdb5` / `379b8be1949a517dc019975617311b5e` |
+| `TN-PLAYERS-17-suite-A.png` / `.jpg` | `8c3d6e41659eb53b0151640d6c548c8f` / `8cdabff5fa29e2592d6a03c8aede170a` |
+| `TN-PLAYERS-17-suite-B.png` / `.jpg` | `1047ad493e01a42e76dcfb5383b3573e` / `6f1edc6b9f50f0975e772d2130bbdae2` |
+| `TN-PLAYERS-17-suite-C.png` / `.jpg` | `539ec74d8e2ab2bc426352673107bafc` / `a61eaf610d034b00020d36347f217905` |
 | `TN-PLAYERS-17-suite-A-B-C-side-by-side.jpg` | review sheet |
 | `grid_3x4_check.jpg` | the 3:4 grid-thumbnail preview (34 px trimmed each side) |
 
-**Build:** [`build.py`](build.py), run as `build.py P085.jpg logo.png FONT_DIR OUT_DIR`.
+**Vape removal (owner request, 2026-10-23):** two disposable vapes on the counter were removed. One stood on the phone; the other lay on the napkin.
+- **Why it matters for the ad:** Meta restricts ads that show vaping products, so this also clears a policy risk.
+- **Method:** [`vape_fix.py`](vape_fix.py), run as `vape_fix.py P085.jpg P085_novape.png`. No generative tools:
+  - **Mask:** the convex hull of each vape's teal pixels, dilated.
+  - **Standing vape:** filled with OpenCV Telea inpaint from the phone and counter separately, split along the phone's top edge, which was measured either side of the vape.
+  - **Lying vape:** Telea inpaint, with the arm's skin kept out of the fill sources.
+  - **Grain:** matched to the surrounding surface.
+- **Result:** 9,363 source pixels changed. The clean source `P085_novape.png` has MD5 `26e75371fa509c35fd1bc20560d56366`.
+- **Scope:** in the adverts only the box x 0–78, y 804–1005 changed. Every layout box is identical to the first render.
+
+**Build:** [`build.py`](build.py), run as `build.py P085_novape.png logo.png FONT_DIR OUT_DIR`.
 - **Sources:**
   - P085 (2000×1500, MD5 `6132a7464098cf067a65a7e5d68208fd`);
   - the original logo (MD5 `66c112d84c3175a0800e5644602f94f2`), scaled only;

@@ -1776,3 +1776,6 @@ quality gate, claims and brand law after the commit.
   - the owner's and Jason's pick of A, B or C;
   - TripNerd to stand behind "Hotel included" and "Food & drink included" (per the owner's 2026-10-23 direction);
   - **nothing posted.**
+- **Update (owner):** the two disposable vapes on the counter, far left of the photo, were removed non-generatively ([`vape_fix.py`](../../ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-23-players-17th-suite-static/vape_fix.py): Telea inpaint, phone-edge-aware).
+  - A, B and C re-rendered. Only the counter area changed.
+  - Meta's ad policy restricts showing vaping products, so the removal is also a compliance fix.
