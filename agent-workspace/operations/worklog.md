@@ -1766,3 +1766,13 @@ quality gate, claims and brand law after the commit.
   - **Claims:** the owner's direction is that the claims on both (Phoenix: suite, hotel, Fairmont, Feb 2027; Derby: the date and the checklist) are Jason's to stand behind. They are no longer open holds on our side.
   - **Where recorded:** both 07 records and a new rule in `07_Client_Approved/README.md`.
   - **Still ours:** consent and third-party marks remain our checks.
+
+## 2026-10-23 — TripNerd: THE PLAYERS 2027 17th-suite static, A/B/C
+- **Built** three 4:5 Instagram statics from P085 and the original logo: A "Clean premium", B "Spotlight the 17th", C "Bold band". Each is a PNG and a q95 4:4:4 JPG with an sRGB profile.
+- **Where:** files in `ServicePOW/Clients/TripNerd/06_Review_Exports/2026-10-23-players-17th-suite-static/`; the build script and check record in `05_Edit_Project/` under the same slug. Added to the 06 register.
+- **Checks:** (a)–(f) pass on all three after one fix. C's tilted ticket was moved down, clear of the seated guest.
+- **Disclosed to the owner:** the lake and the hill crowd run off the photo's own right edge, so no crop shows them fully. The far-left guest in the visor is outside the 4:5 window.
+- **Open:**
+  - the owner's and Jason's pick of A, B or C;
+  - TripNerd to stand behind "Hotel included" and "Food & drink included" (per the owner's 2026-10-23 direction);
+  - **nothing posted.**
