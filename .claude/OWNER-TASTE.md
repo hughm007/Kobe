@@ -22,7 +22,8 @@ When the owner gives new feedback, update this file in the same session.
    generic "visual change every 3 s" advice in `playbooks/ads/video-production.md`.
 2. **Real beats fake.** About 9 kills were for fakeness. No generated people at readable distance, no frozen
    crowds, no wrong-speed motion, no photo animated to stand in for the product or a place we sell.
-   AI is fine where it is not obvious (the owner judges; see Advert Brief).
+   AI is fine where it is not obvious (the owner judges; see Advert Brief). Generated people only when
+   they clearly improve the result (ruling 5).
 3. **Event logic must be right.** The crowd faces the action and reacts on cue, sized to the
    outcome ("the ball never goes in, so don't make them too excited, just like clapping"). Real
    speed. The ball stays visible. No repeated actions (no "two backswings").
@@ -44,11 +45,10 @@ When the owner gives new feedback, update this file in the same session.
 2. **One tactile device plus proof only the client has.** The approved Derby static was a ticket
    stub over a real crowd photo, plus an "Ours:" Polaroid of TripNerd's own check-in table
    ("so each ad shows something only a TripNerd guest gets"). The headline belongs to that exact photo.
-3. **Cover marks, never blur.** Hide logos under the ticket or Polaroid, or crop them out. "Real photos
-   only, light grade, no blur, no face edits."
+3. **Marks:** cover them with the device or crop them; blur only per ruling 3 below. No face edits.
 4. **Original logo file, top-left** unless the owner says otherwise.
-5. **TripNerd banned words** (Derby brief, 2026-10-20): handled, VIP, exclusive, owns, private,
-   best, #1, guaranteed, "DM us", "book now", tag a friend. Check before the first render.
+5. **TripNerd banned words** (Derby brief, 2026-10-20; "handled" removed by owner ruling 2026-10-23):
+   VIP, exclusive, owns, private, best, #1, guaranteed, "DM us", "book now", tag a friend. Check before the first render.
 6. **Once approved, the layout is frozen.** Later polish only adds; keep the approved file as reference.
 7. **Don't copy the client's feed.** TripNerd's feed is "gallery photo + blue headline bar" (19 of 21
    posts). Their September carousel copy is not reused.
@@ -70,13 +70,16 @@ When the owner gives new feedback, update this file in the same session.
 - **Record every verdict** (score plus one line why) in the client's `07_Client_Approved` or the
   rejection in the campaign folder, and update this file.
 
-## Waiting on owner rulings (conflicts in the record)
-1. **On-screen AI labels.** He asked to remove "AI generated" and "Scenes dramatized"; policy wants
-   disclosure. The platform AI toggle at posting stays either way.
-2. **Animated photos.** Banned for product or place shots (Augusta house), but the approved Daytona
-   burnout was one. Proposed reading: OK for a payoff moment, never for what we sell.
-3. **Sponsor logos.** "Fine in frame" (Daytona, Phoenix R3) versus "cover them" (Derby, brand guide).
-4. **Blurred backgrounds.** The Daytona boxed-on-blur layout was approved; Phoenix R21 said "No blurred
-   backgrounds".
-5. **"Handled".** Banned in the Derby brief, yet "Augusta, handled" was approved.
-6. **TripNerd's own rule "AI never creates a person"** versus the 10-19 "AI allowed anywhere".
+## Owner rulings (2026-10-23, the owner's words in quotes)
+1. **AI labels:** "No Ai labels unless necessary legally." Nothing burned into the picture. The platform
+   AI-content toggle stays on where the platform or law requires it (Meta, for realistic AI imagery).
+2. **Animated photos:** "animated photos as a pay of shot is fine." Still never for the product or a place
+   we sell (Augusta house, 7.7).
+3. **Blur:** "blurred backgrounds only if the footage will look better with it or if its to blur out other
+   brand names we would not want to display in an advert due to who we are marketing for." So: blur when it
+   improves the shot, or to hide third-party brands that do not suit the client. Never blur people.
+   Other sponsor logos may stay in frame (agent's reading of this ruling plus the Daytona and Phoenix approvals).
+4. **"Handled":** "handles is not banned jason likes it." Allowed for TripNerd.
+5. **AI-generated people:** "not the main route we should go but we can do if deemed necessary for a better
+   outcome of the advert or clip." Real people first; generated people only when they clearly improve the
+   result, never presented as a real customer or reviewer (policy).

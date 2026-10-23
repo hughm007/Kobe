@@ -2926,3 +2926,9 @@ playbook pushed faster cuts. The top kill reason is fakeness. Only 1 of the ~6 a
 **Open:** six owner rulings (AI labels, animated photos, sponsor logos, blurred backgrounds, "handled", TripNerd's
 AI-person rule); the ~5 unrecorded static approvals; consolidating `agent-workspace/clients/tripnerd/` into
 `ServicePOW/Clients/TripNerd/`.
+
+## 2026-10-23 — Owner rulings on the six conflicts
+Recorded in `.claude/OWNER-TASTE.md` ("Owner rulings"): no on-screen AI labels unless legally necessary;
+animated photos fine as a payoff shot; blur only to improve footage or hide brands that do not suit the client;
+"handled" allowed (Jason likes it); AI people not the main route, allowed when they clearly improve the result.
+ADVERT-BRIEF and the Reel playbook updated to match.

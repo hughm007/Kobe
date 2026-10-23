@@ -29,7 +29,7 @@ blocking-check registry still apply; this file does not restate them.
 - Send a short explanation of what you think the owner wants **before** building anything new
   and novel (an intro animation, a new concept). Build only after the owner confirms.
 - Deliver fast: when asked for options, render both and send both in one message.
-- Never blur people. Sponsor logos in frame were fine on the Daytona Reel, but the Derby statics brief says cover marks (layout or crop), never blur; see OWNER-TASTE conflicts.
+- Never blur people. Blur backgrounds only when it improves the shot or hides brands that do not suit the client; other sponsor logos may stay (owner ruling 2026-10-23, OWNER-TASTE).
 - Music must be free and safe on Instagram. Composing an original track (FluidSynth +
   FluidR3_GM, MIT) has been the reliable route; Pixabay is blocked from the build container.
 
