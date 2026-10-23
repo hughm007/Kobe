@@ -22,7 +22,7 @@ tags: [static-ads, derby, louisville, real-photos, ticket]
 
 | File | Main photo | MD5 |
 |---|---|---|
-| `TN-DERBY-01-everyones-filming-it.png` | P050 (the race with phones up), left 4:5 window | `cf2dbc6b9bad52207ce651b0f8cee1bb` |
+| `TN-DERBY-01-everyones-filming-it.png` (client approved; moved 2026-10-23 to [`07_Client_Approved/2026-10-20-derby-everyones-filming-it-client-approved.png`](../../07_Client_Approved/2026-10-20-derby-everyones-filming-it-client-approved.png)) | P050 (the race with phones up), left 4:5 window | `cf2dbc6b9bad52207ce651b0f8cee1bb` |
 | `TN-DERBY-02-the-bubblys-cold.png` | P179 (the couple with champagne), top 4:5 window | `810eeb682bdfb5ab74b227d5e49531e3` |
 
 **Build:** [`build.py`](build.py), run with `build.py SRC FONTS OUT`.

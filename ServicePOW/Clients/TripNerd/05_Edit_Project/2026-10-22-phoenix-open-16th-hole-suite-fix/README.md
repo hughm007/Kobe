@@ -3,9 +3,9 @@ title: "TripNerd Phoenix Open Reel — '16th Hole LOGE Suite' → '16th Hole Sui
 type: report
 client: tripnerd
 owner: Karl
-status: draft
+status: active
 created: 2026-10-22
-updated: 2026-10-22
+updated: 2026-10-23
 tags: [phoenix-open, reel, text-fix, video]
 ---
 
@@ -18,7 +18,7 @@ tags: [phoenix-open, reel, text-fix, video]
 - 30.98 s despite the "25s" in the name; 929 frames; 1080×1920; 30 fps.
 - No project files or source clips for this cut exist on any branch of this repo, so the rendered frames were patched.
 
-**Output:** [`../../06_Review_Exports/2026-10-22-phoenix-open-16th-hole-suite/TripNerd_PhoenixOpen_25s_small_16thHoleSuite.mp4`](../../06_Review_Exports/2026-10-22-phoenix-open-16th-hole-suite/)
+**Output (approved 2026-10-23, now in 07):** [`../../07_Client_Approved/2026-10-23-phoenix-open-reel-31s-client-approved.mp4`](../../07_Client_Approved/2026-10-23-phoenix-open-reel-31s-client-approved.mp4)
 - 929 frames, 30 fps, 1080×1920, H.264 High at 5.6 Mb/s (original 4.4), 21.4 MB.
 - Audio stream-copied, bit-identical: audio MD5 `670f78fc…` on both files.
 

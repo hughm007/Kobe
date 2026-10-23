@@ -1749,3 +1749,16 @@ quality gate, claims and brand law after the commit.
   - **Index pages for folders 02/03/04/06:** pending the cross-branch advert inventory.
   - **Written copy of Jason's approval:** to be filed.
   - **Branches:** the other sessions' branches are not merged.
+
+## 2026-10-22/23 — TripNerd: Phoenix Open Reel text fix approved; 07 Client Approved brought up to date
+- **Phoenix Open Reel (the owner's 31 s cut, built by another session):** "16th Hole LOGE Suite" → "16th Hole Suite" on the ticket and the corner card. No project files existed, so the rendered frames were patched (method and limits in `05_Edit_Project/2026-10-22-phoenix-open-16th-hole-suite-fix/`).
+  - 929 frames; audio bit-identical.
+  - One faint trace remains, in the 0.2 s crowd cross-fade.
+  - **The owner approved it on 2026-10-23.** It moved to `07_Client_Approved/` with proof stills and a record.
+- **The Derby static "Everyone's filming it" v1** was already client approved (owner, 2026-10-20) but sat only under review exports. Its file and record are now in `07`. The later v1.1 and v2 stay in `06` and are not approved.
+- **Learning:** ship every advert with its editable project; run claim words through the claims check before the first render. Filed and indexed. The standing rule is added to `07_Client_Approved/README.md`.
+- **Open:**
+  - **Who approved for TripNerd:** not recorded for the Phoenix Reel.
+  - **Phoenix claims, TripNerd still to confirm:** suite access, hotel, Fairmont, Feb 2027.
+  - **Derby claims, Jason to confirm:** the date and the checklist.
+  - **Nothing posted.**
