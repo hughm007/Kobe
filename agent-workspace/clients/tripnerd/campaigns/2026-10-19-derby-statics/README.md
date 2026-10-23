@@ -13,8 +13,8 @@ tags: [client, static, derby, louisville, real-photos]
 
 > **Superseded 2026-10-20.** The owner rebuilt two of these as the Derby ticket statics
 > (`ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-20-derby-ticket-statics/`); Ad 1 "Everyone's filming it"
-> is client-approved. This set broke two rules the owner then stated: it says "handled" (banned word)
-> and blurs marks (he wants marks covered or cropped, never blurred). Lessons: `.claude/OWNER-TASTE.md`.
+> is client-approved. (On 2026-10-23 the owner ruled "handled" allowed, and blur fine for brands that do not
+> suit the client.) Lessons: `.claude/OWNER-TASTE.md`.
 
 Five feed statics (1080x1350) from real Drive photos. Picks and rejects: [photo-picks.md](photo-picks.md).
 Rebuild: `TN_LOGO=<tripnerd-logo-colour-1633x601.png> python3 build_statics.py <derby originals dir> <out dir>`.

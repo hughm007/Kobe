@@ -43,7 +43,9 @@ Before filling the brief for a client, read that client's folder in the repo roo
 AI-generated or AI-animated media is allowed in any advert, for any client, unless the owner
 says otherwise for that job. Use it without asking first and without defaulting to an all-real
 fallback. The owner is the judge of whether something looks too AI: only drop an AI shot on
-your own if it is plainly, badly fake; otherwise use it and let the owner decide. This does not
+your own if it is plainly, badly fake; otherwise use it and let the owner decide. AI-generated people are
+not the main route: use them only when they clearly make the advert better (owner, 2026-10-23). No on-screen
+AI labels unless legally necessary. Rulings: `.claude/OWNER-TASTE.md`. This does not
 change the platform AI-content toggle at posting, and it never permits a synthetic person
 presented as a real customer or reviewer (realism-and-disclosure policy §2).
 
