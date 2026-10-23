@@ -1,0 +1,28 @@
+{
+ "out": "v5b.mp4", "work": "work5b", "qc": "v5b_qc.jpg", "logo": "logo.png", "duck": 0.4,
+ "shots": [
+  {"src": "d81.mp4", "in": 0.3, "out": 3.5},
+  {"src": "s01.mp4", "in": 0.4, "out": 3.2},
+  {"src": "w0.mp4", "in": 1.5, "out": 8.5},
+  {"src": "s03.mp4", "in": 0.0, "out": 1.5, "vol": 0.9},
+  {"src": "s05.mp4", "in": 1.4, "out": 4.4, "vol": 0.9},
+  {"src": "b1.mp4", "in": 0.4, "out": 3.1, "vol": 0.5},
+  {"src": "b1.mp4", "in": 3.1, "out": 3.5, "mute": true},
+  {"src": "c1.mp4", "in": 0.4, "out": 6.0, "vol": 0.3}
+ ],
+ "cues": [
+  {"t0": 0.6, "t1": 2.9, "text": "Every golf fan\nknows this hole."},
+  {"t0": 10.6, "t1": 12.6, "text": "Almost none have\nseen it from here."},
+  {"t0": 22.6, "t1": 25.6, "text": "Bring the people\nwho deserve it."}
+ ],
+ "endcard": {"line1": "Your suite. On 17.", "line2": "Talk to a Nerd", "line3": "tripnerd.com", "dur": 4.0},
+ "tracks": [
+  {"src": "cm_h1.wav", "at": "min(11.9, 16.0 - speech_end)", "gain": 1.5, "duck": true, "_line": "Tremaine... this for birdie, at seventeen. (Barrett preset, loudness -25, rate -10, pitch -1)"},
+  {"src": "cm_h2.wav", "at": 16.7, "gain": 1.5, "duck": true, "_line": "Got the line..."},
+  {"src": "cm_h3.wav", "at": "min(18.4, 19.9 - speech_end)", "gain": 1.5, "duck": true, "_line": "Come on..."},
+  {"src": "cm_h4.wav", "at": 20.05, "gain": 1.7, "duck": true, "_line": "Yes! He's made it! (loudness +10, rate +10)"},
+  {"src": "roar1.mp3", "at": 15.75, "gain": 1.0, "fade_in": 0.5, "fade_out": 2.0, "duck": false, "_note": "generated gallery roar, 12 s; its attack sits at 4.4 s so the swell leads the drop at 20.0 and the peak lands at 20.15"},
+  {"src": "me1.wav", "at": 26.6, "gain": 1.8, "duck": true, "_line": "No experience like the TripNerd experience. (owner's cloned voice, element 'me')"}
+ ],
+ "_note": "v5 (first pass) used the same shots with the earlier plain-delivery Barrett lines (Whitlock, wordier make line), roar at 19.9 with fade-in, c1 at 0.6; v5b is the recommended master."
+}

@@ -1,0 +1,31 @@
+{
+ "out": "v7_draft.mp4", "work": "work7", "logo": "logo.png", "duck": 0.4,
+ "shots": [
+  {"src": "f1_take.mp4", "in": 0.0, "out": 3.3, "vol": 0.8, "_": "frame 1 locked: Kling 4K take 404 from still 304"},
+  {"src": "f2_take.mp4", "in": 0.0, "out": 3.3, "vol": 0.8, "_": "frame 2: Kling 4K take 601 from still 501"},
+  {"src": "tn_IMG_1901.jpg", "still": true, "dur": 2.5, "zoom": 1.14, "pan": [0.5, 0.62], "_": "REAL client photo, branded table"},
+  {"src": "tn_IMG_1915.jpg", "still": true, "dur": 2.3, "zoom": 1.12, "pan": [0.5, 0.5], "zdir": "out", "_": "REAL client photo, bar with the course"},
+  {"src": "tn_IMG_1930.jpg", "still": true, "dur": 2.5, "zoom": 1.12, "pan": [0.5, 0.45], "_": "REAL client photo, six guests (consent to confirm)"},
+  {"src": "s03.mp4", "in": 0.0, "out": 1.5, "vol": 0.9},
+  {"src": "s05.mp4", "in": 1.4, "out": 4.4, "vol": 0.9},
+  {"src": "b1.mp4", "in": 0.4, "out": 3.1, "vol": 0.5},
+  {"src": "b1.mp4", "in": 3.1, "out": 3.5, "mute": true},
+  {"src": "c1.mp4", "in": 0.4, "out": 4.9, "vol": 0.3}
+ ],
+ "cues": [
+  {"t0": 0.5, "t1": 1.9, "text": "You know this hole."},
+  {"t0": 1.9, "t1": 3.25, "text": "You've never sat here."},
+  {"t0": 3.8, "t1": 6.5, "text": "Until now."},
+  {"t0": 11.6, "t1": 13.7, "text": "Bring your people."}
+ ],
+ "endcard": {"line1": "Your suite. On 17.", "line2": "Talk to a Nerd", "line3": "tripnerd.com", "dur": 4.0},
+ "tracks": [
+  {"src": "roar1.mp3", "at": 3.3, "ss": 3.9, "gain": 0.5, "fade_in": 0.3, "fade_out": 1.2, "duck": false, "_": "roar bridge across the frame 1 to 2 cut"},
+  {"src": "cm_h1.wav", "at": 12.1, "gain": 1.5, "duck": true},
+  {"src": "cm_h2.wav", "at": 17.6, "gain": 1.5, "duck": true},
+  {"src": "cm_h3.wav", "at": 18.84, "gain": 1.5, "duck": true},
+  {"src": "cm_h4.wav", "at": 20.95, "gain": 1.7, "duck": true},
+  {"src": "roar1.mp3", "at": 16.65, "gain": 1.0, "fade_in": 0.5, "fade_out": 2.0, "duck": false},
+  {"src": "me1.wav", "at": 26.9, "gain": 1.8, "duck": true}
+ ]
+}

@@ -1411,3 +1411,384 @@ without asking, the owner judges whether it looks too AI. Recorded in `.claude/A
 **Open:** the master MP4 lives only in this session's container and in the chat; save it to Drive.
 Father-son and wow-guests photos need their years from TripNerd. "Now booking 2027" waits on Jason.
 This work is on branch `claude/friendly-feynman-v2rci5`, not yet on `main`.
+## 2026-09-23 — TripNerd 17th-hole 30s advert v3b (cloud session) + Service Pow pricing rubric proposal
+
+**Done**
+- Pricing: market-researched client-facing pricing page published (private artifact
+  `https://claude.ai/artifact/FBsxESpEBvbBuTNPoRkBct`) and the proposal with seven owner
+  decisions written to `company/pricing-rubric-proposal-2026-09-22.md`. Floors in
+  `pricing-and-packaging.md` untouched. Three deviations flagged for Karl: paid-ad rights
+  included, Starter $2,500, ad-account management as a priced optional line.
+- TripNerd: rebuilt the 17th-hole suites advert to the owner's evening brief (crisp real
+  Hole 17, POV cup toast into a 360 of the real suite, celebration, end card, spoken close).
+  Master v3b in the Higgsfield account; record, build script, shot plan and source map in
+  `ServicePOW/Clients/TripNerd/deliverables`. 9 Seedance clips + 3 voice takes generated (≈540 credits).
+- Old all-AI advert (AdvertV3.MOV) and the Mac media library were not reachable from the
+  cloud session; its beat structure was used from the handoff brief and a frame.
+
+**Decided**
+- Cut the generated golfer close-up (soft background twice, fake cap mark once); the golf
+  beats are grass-level, wide stroke and the drop, all with the far bank sharp.
+- Chose the 360 take that starts on the real POV photo over the references-only take.
+- Voice is a generic preset narrator; the two cloned voices in the account were not used.
+
+**Open**
+- Owner watch end to end with sound (nobody has heard the mix).
+- Guest consent, platform AI disclosure, tournament-mark licence position before paid media.
+- Pricing page conflicts with live servicepow.com packages (decision 0006) until reconciled.
+
+## 2026-09-23 (afternoon) — TripNerd 17th-hole advert v4: owner revision rounds 1 and 2 applied
+
+**Done**
+- Rebuilt the advert as v4 (26.8 s, two masters differing only in the Wyatt voice take) to
+  the owner's nine notes: new drive-up → walk-in → look-around/sit-down → putt → drop → cup
+  → 360 → end card; static putter close-up; real-reference ball drop (three-model 720p test,
+  Gemini 1080p final); J-cut roar; crowd-filled 360; the two repeated celebration clips cut;
+  Wyatt's real voice from the account. Record: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-23-17th-hole/2026-09-23-17th-hole-v4.md`;
+  build script, shot JSON and source map in `17th-hole-v3-build/`.
+- Spend 463.75 credits (balance 9,241.69 → 8,777.94), within the prior-approved
+  proceed-and-inform pattern; cost ladder followed for the ball drop.
+- Learning recorded: reference-driven macro beat model test; units in a Gemini prompt were
+  drawn as a label at 1080p.
+- The shot-design workflow (8 agents) finished after the shots were already generated; its
+  drive-up design (oak-canopy boulevard, tents, generated first-frame still, owner-supplied
+  phone clip preferred) is on file in the session tasks output but was not used. The
+  clubhouse-approach drive-up from a Commons reference tested well on frame sheets.
+
+**Decided**
+- 360 take: chose the backs-and-profiles take (LB25) over the take whose crowd was denser
+  but showed a generated face laughing at readable distance.
+- Sit-down take: chose the take that keeps the island green's water and bulkhead; the other
+  lost the water and surrounded the green with people.
+- Ball drop: started the Gemini clip at 1.0 s to cut a rendered "108 mm" label.
+
+**Open**
+- Owner watch with sound (LB29); which Wyatt take; the same compliance flags as v3b plus the
+  clubhouse-as-real-building note; faint alignment line on the ball.
+
+## 2026-09-23 (evening) — TripNerd 17th-hole advert v5: owner's final corrections, client-ready candidate
+
+**Done**
+- Rebuilt as v5 (30.2 s) to the owner's rounds 3 and 4: 4K drive-up; one continuous 10 s walk from the real lounge photo to the front row; static putter; single stroke; real-speed ball drop; from the raised cup to the end card one clip; everyone in the 360 on their feet facing the green; a golf commentator (preset voice, fictional "Tremaine", hushed controls) from the putter close-up to the make; one generated roar source placed by its measured attack; the owner's cloned voice on the end card only; "Every eye on one putt." removed; grain removed and CRF 15.
+- Two masters uploaded (v5b recommended, v5 first pass). Record: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-23-17th-hole/2026-09-23-17th-hole-v5.md`; build script v5 (multi-track audio), shot JSON, sources in `17th-hole-v3-build/`. v4 marked superseded.
+- Spend 616.90 credits (8,777.94 → 8,161.04); 4K and long-clip unit costs priced from the runtime first.
+- Research workflow (8 agents) delivered commentary anatomy, roar mix plan and the seed_audio controls in time to shape v5b; its prompt panel, judge and skeptic had not returned at render time.
+
+**Decided**
+- 360: chose the take with everyone standing and facing the green (backs/profiles) over two fuller-turn takes that showed seated guests mid-roar or a laughing generated face near camera.
+- Commentary: fictional player name (rights), Barrett preset, four lines, burst then lay out.
+- Kept three captions; dropped the putt caption per the owner.
+
+**Open**
+- Owner watch with sound (nobody here can hear it); confirm the "me" voice is the owner's; the usual paid-media flags (AI disclosure, guest consent, tournament mark on the cup).
+- Fold in the skeptic's findings when the workflow returns.
+
+## 2026-09-23 (late evening) — TripNerd 17th-hole v6: frame-by-frame method, frame 1 built and realism-reviewed
+
+**Done**
+- Owner changed the method: one frame at a time, locked together. Frame 1 hook chosen by the agent between two owner-approved options (island green from the air over the muffled-roar door; the door keeps the roar as frame 2's sound bridge).
+- Frame 1 v1 built (still-first, Kling 4K) and reported; owner asked for a five-minute realism pass with web references.
+- Realism pass: stitched public satellite tiles of the hole in the vendor sandbox and read them against the Commons photos; found two layout errors (walkway too long and wide, no front pot bunker). Four new stills, two Kling 4K takes, two previews (v2b recommended, v2a alternate). Record: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-23-17th-hole/2026-09-23-17th-hole-v6-frame-log.md`; assets in `17th-hole-v3-build/SOURCES.md`.
+- Learning filed: model memory beat references for a world-famous landmark; satellite tile as the cheap geometry check (`knowledge/learnings/2026-09-23-famous-landmark-model-memory-beats-references.md`, indexed).
+- Spend: frame 1 v1 244 credits; review 72 credits (7,917.04 → 7,845.04). Two of the four stills went out without references by my mistake (6 credits); by luck they were the accurate ones, which is the learning.
+- Real-footage search: Adobe Stock, Flickr, Commons, Getty — nothing usable for an advert. Owner photo library: no Apple Photos connector; Google Drive is connected.
+
+**Open**
+- Owner lock of frame 1 (v2b or v2a; captions; length; end position). Then frame 2 (the suite door with the muffled roar).
+- This session's egress blocks Commons, Flickr and the CloudFront hosts from the shell; all fetching and viewing goes through the vendor sandbox and the Adobe preview tool.
+
+## 2026-09-23 (night) — TripNerd v6: frame 1 locked, frame 2 built
+
+- Owner locked frame 1 as the recommended v2b cut. Asked for five flow ideas for frame 2, then delegated the choice with the rule "strengths only, never the weaknesses".
+- Chose the cut on the promise: frame 2 is the seat's view from the front row of the suite balcony, caption "Until now.", roar bridging the cut. Three text-only 4K stills, one Kling 4K take, frame-2 preview and a frame 1 → frame 2 flow reel uploaded. Record in the v6 frame log; assets in SOURCES.
+- Spend 39 credits (7,845.04 → 7,806.04 expected; verified in the report).
+- Open: owner lock of frame 2 (chair in or out, caption, push speed); then frame 3.
+
+## 2026-09-23 (late night) — TripNerd v7 draft with real client photos
+- Owner: frame 2 "still seems fake", asked for real client footage. Checked access honestly: no computer/Photos access; Google Drive has 29 TripNerd photos (Wyatt, 22 Sep), no event video. Pulled all 29 through the Drive connector (base64 tool results decoded locally), uploaded to Higgsfield, contact-sheeted.
+- Built v7 draft (30 s): locked frames 1–2, three real photos as Ken Burns shots (no AI on real pixels), putt beat, roar, end card with the real logo. Link and flags in the v6 frame log. No generation spend (balance 7,806.04).
+- Open: owner watch; guest consent for faces; venue framing; re-normalise loudness; then lock frames 3+ or re-cut.
+
+## 2026-09-24 — TripNerd 20 s hosting spot: end card replaced, build reverse-engineered into a recipe
+- Owner supplied `TripNerd_20s_1080p_1.mp4` as the direction to match. Analysed in the vendor sandbox (cuts, word-level transcript, sheets). Card replaced with brand blue + real logo + "Hospitality. Handled." below the logo + CTA + URL; audio untouched. Record: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-24-hosting-spot/2026-09-24-hosting-spot-endcard-fix.md`.
+- Routine written: `playbooks/ads/recipes/hosting-spot-20s.md` (+ `hosting-spot-20s.shots.json`), the 4·2·2·2·3·4·3 spine with inputs, copy table, build steps, QC and variants. Card generator and swap script saved in the build folder.
+- Spend none. Open: owner watch; tournament-mark and consent flags on the reference; the frame-by-frame 17th-hole advert is paused at frame 3 pending the owner's footage route.
+
+## 2026-09-24 (evening) — TripNerd 20 s hosting spot: polo "TripNers" fixed, v6 delivered
+- Owner spotted "TripNers" on the woman's polo in the connections shot. Tracked the text across the 60 frames of 8.0–10.0 s, filled it with fabric, composited the real wordmark (official logo file) sized by height with a relief shadow, fabric-masked so hair and skin never take it. Three passes (v4 width-matched read weak, v5 brightness-matched, v6 delivered). Audio and the rest of the picture untouched; loudness identical. Record in `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-24-hosting-spot/2026-09-24-hosting-spot-endcard-fix.md`; script `17th-hole-v3-build/polofix.py`.
+- Recipe updated: garment wordmark spelling is now a pre-delivery check.
+- Spend none (sandbox only). Open: owner watch of 8–10 s in motion; the carried flags (THE PLAYERS mark, "VIP", consent, loudness); 17th-hole advert still paused at frame 3 pending the owner's footage route.
+
+## 2026-09-25 — TripNerd hosting spot: opening clip swapped for the supplied drone shot
+- Owner supplied their 25.8 s 720p cut (`TripNerdFix3_3.MOV`, with the polo fix and a "REAL SUITE FOOTAGE" section) and a 5 s Higgsfield drone export. Replaced the 0–4 s picture with the drone shot, re-set the title, "VIP ON 17" and the real wordmark with the original fade, kept the audio bit-for-bit, delivered at 1080p (body upscaled from 720p). Found and fixed a one-frame title overrun at the cut in the owner's export. Record: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-24-hosting-spot/2026-09-25-hosting-spot-drone-opening.md`; scripts in the build folder; recipe gained an opening-swap section.
+- Spend none. Open: owner watch in motion; the drone opening is a generation supplied as footage (disclosure); standing flags (THE PLAYERS mark, VIP, consent, loudness −16.7). 17th-hole advert still paused at frame 3.
+
+## 2026-09-27 — TripNerd: drone-opening advert client-approved at 8.4/10
+- Owner returned the delivered file (byte-identical, MD5 a213ad84…) with a score of 8.4/10: idea and execution rated great, realism credited to the strengths-only approach, the deduction is full-screen picture quality. Created `ServicePOW/Clients/TripNerd/Client approved adverts/` with an index and a pointer file (permanent download and stream links, checksum, specs, provenance, owner verdict). Video bytes stay out of git per `assets/README.md`.
+- Learning filed and indexed: the whole deduction was master resolution (720p body upscaled beside a native 1080p opening). Also repaired `knowledge/index.md`: two earlier learning lines had been prepended above the frontmatter; moved into Advertising.
+- Next: re-master at native resolution once the owner supplies the raw suite clips or a 1080p/4K export of the cut. 17th-hole advert still paused at frame 3.
+
+## 2026-09-28 — TripNerd: ten-script pack drafted (owner is now the script approver)
+- Owner asked for ten advert scripts (15–30 s) from the real client media, and a Higgsfield top three. Routed through the Campaign Director (SLIM Bible, strategy and concept parked with the owner, no spend). Read the brief, the handoff brief and all 29 house photos: the set is Masters-week material, so only mark-free frames are usable and the house is never named — catalogued in `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-28-ten-scripts/media-catalog.md`.
+- Wrote `scripts.md` (ten scripts with beat tables, sources tagged REAL/GEN/EXISTS/COMP, VO with performance marks, flags, generation estimates) and `campaign-bible.md`. Top three for Higgsfield: The Empty Suite, The Roar, Day One/Two/Three (v1). Owner then allowed generated shots wherever they look real; v2 rewrote every beat with a generation route (models named from the live list, proven vs untested marked) and re-ranked: The Empty Suite, The Roar, Your People.
+- Open: owner picks; consent by group; package sheet; format; raw suite clips and the 25-video library. Spend none.
+
+## 2026-09-28 (later) — TripNerd YOUR PEOPLE: frame-by-frame brief for ChatGPT + Higgsfield
+- Owner picked YOUR PEOPLE and asked for a frame-by-frame brief from the Campaign Director that ChatGPT can execute one frame at a time in Higgsfield. Wrote `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-28-ten-scripts/your-people-frame-by-frame.md`: nine shots with the ten storyboard fields, Nano Banana 2 still prompts, Kling 3.0 / Seedance 2.5 motion prompts (Seedance in the house prompt structure), actor briefs, continuity bible, reject lists and fallbacks, VO with delivery marks, sound spine, assembly spec, estimate.
+- Pulled four real reference frames from the owner's suite footage into Higgsfield (c2a0c138, 9111e76a, e5329451, 4b183815; sheet 802db49f). They showed the real view is across the water to the green's wooden edge and a white grandstand under high afternoon sun, so the location and light were re-based on them. Built a new end card (963af612) with "Talk to a Nerd" because the existing card says "VIP".
+- Designed out the hand-landing risk (the son's arm is already across dad's shoulders). F3 pointing and F4 hand carry NO REFERENCE FOUND — HIGH RISK; F4 offered as a real phone clip.
+- Spend none. Skeptic Pass 1 run in an isolated agent; verdict in the bible.
+
+## 2026-09-28 (evening) — TripNerd YOUR PEOPLE: storyboard taken through Skeptic rounds 2–6, now v6
+- Five isolated Skeptic Pass 1 rounds on the frame-by-frame brief, each BLOCK, each recorded verbatim in the bible §14 with the Director's resolution. v2–v5 added method (real F4 hand, keyframed end stills, a Seedance roar plate, a two-layer composite); round 5 showed the added method was generating new failure surfaces.
+- v6 simplifies instead: everything past the rail soft in every generated shot (removes the green's contents, crowd celebration and in-scene marks in one rule); one engine (Kling 3.0 4k) for all motion; F7 a single push-in with a soft foreground-shoulder occlusion and one action; F3 push-in only; F8 a 30° turn away from the lens with a crop-push end still; hard cut to the card; no putter click.
+- Found and fixed a real error: the four "clean" reference frames were described from memory and two were wrong (4ec88dba shows real players' headshots on the big screen; no chair exists in any frame). Made three mark-free crops at no credit cost (R-VIEW 1f4a5b57, R-FRAME 2f8b2d78, R-RAIL 6a26be6c); originals never attached. Learning recorded and indexed.
+- Venue and tournament rights now a delivery blocker until Taylor confirms in writing. Owner items: F4 hand shoot with a release; licensed golf-gallery roar; re-price credits (ESTIMATE ≈470).
+- Rounds 6 and 7 (v6→v8): F7 keyframed at both ends and used in full; F5 and F8 keyframed; singles and pairs on 29°; open-shade light; references rebuilt with signs and figures cloned out and the view softened (R-VIEW aaf2c1f4, R-FRAME f564a3a2). Round 7 raised venue, tournament and on-site-footage rights to **S4**: the storyboard is BLOCKED until Taylor confirms in writing, and the owner waiver was removed.
+- Round 8 (v9): F5, F7 and F8 locked in generation with their pushes done in the edit on 4K clips; F8 frames the son's hand out; rights rule has no override and now also asks Taylor to confirm a group can hold the front rail together.
+- Spend none (uploads and sandbox crops only). Brief v9 sent to the owner. Further Skeptic runs held until Taylor's written confirmation is filed; a fresh Pass 1 on the final storyboard runs immediately before spend.
+- Open: Taylor's written rights confirmation (blocks everything); F4 hand shoot + release; licensed golf-gallery audio; live re-price; APPROVER calls on the edit-built pushes and stillness under the roar.
+- Rights cleared: the owner relayed Taylor's standing authorization to use any TripNerd photo, video or asset in its advertising (always assume for TripNerd). Recorded in the client brief; S4 closed; client roar recordings cleared subject to the audio screen. Binding Skeptic Pass 1 on v9 launched before spend.
+
+## 2026-09-29 — TripNerd: YOUR PEOPLE killed; real-footage pack; THEIR CAMERA ROLL built (v1, internal draft)
+- **YOUR PEOPLE.** F6 Take B was fixed and approved (join 2). Cut v1 was built and delivered. The owner killed the concept ("scratch the whole advert idea"). Lesson recorded in the ten-scripts build log: AI people seen from behind plus an unheard synthetic voice.
+- **Real footage first.** Logged the six real clips (`2026-09-29-real-footage/footage-log.md`) and wrote five scripts, ranked (SAME HOLE 8.5 first). Recorded the Claude Code vs ChatGPT recommendation with its conflict noted.
+- **Every event.** The owner widened the brief beyond golf. Found about 85 real guest photos on tripnerd.com/nerds and wrote THEIR CAMERA ROLL (`2026-09-29-all-events/script.md`). The owner said "Build".
+- **Build v1** (`2026-09-29-all-events/build-v1.md`): 25 s master (`ea121491`) and 15 s cutdown (`594c1292`).
+  - Inputs: real photos and real suite video only. Higgsfield upscales plus Adobe auto-tone as touch-up (20.18 credits). The camera-roll motion design, sound design and card were made in code in the Higgsfield sandbox (scripts in `build-v1/`).
+  - QA1: every row PASS except flash-cut. That FAIL was frame-checked as scroll and swipe motion (one real hard cut); the third confirmation of that harness limit is now noted in the learning.
+  - Loudness −13.98 / −13.92 LUFS, −1.4 dBTP. No speech.
+- Script corrected: #45 excluded (an apparent Hall of Famer), #46 is Phoenix. New learning: the Adobe block-upload bridge, and the sandbox is stateless without a lease.
+- **Open:**
+  - The owner's watch with sound.
+  - Guest consent, including a minor in the Daytona hero (or swap to gallery 01).
+  - Licensed music to replace the synthesised placeholder.
+  - "This year", the Daytona month and "We have everything".
+  - The Skeptic pass and Critic scorecard before any paid use.
+
+## 2026-09-29 (later) — THEIR CAMERA ROLL owner-approved; real client material becomes the default route
+- **Approved.** The owner approved the 25 s ("Like this ad a lot… better than the other advert you created that was client approved"). No numeric score; ranked above the 8.4.
+- **Filed** in `ServicePOW/Clients/TripNerd/Client approved adverts/`:
+  - a pointer with the MD5, a stream link, a **zip forced-download link** (verified byte-identical inside) and the Adobe Creative Cloud copy;
+  - a README row and a standing rule.
+- **Learned and promoted:**
+  - the owner's verdicts rank monotonically with the share of real client material (4/10 → killed → 8.4 → approved above 8.4);
+  - decision **0008**: real client material first, generation fills gaps, and a canonical skill change is proposed rather than hand-edited;
+  - recipe `playbooks/ads/recipes/camera-roll-real-photos.md`;
+  - router Lane C;
+  - an EVIDENCE-INDEX PROVEN row;
+  - the flash-cut false-positive pattern is now at three confirmations and due for a harness ruling.
+- **Open:**
+  - Before paid use: guest releases (a minor in the Daytona photo), licensed music, and the "this year" / Daytona month / "everything" calls.
+  - A market hook test.
+  - Next: the config-driven renderer and seasonal single-event cutdowns.
+
+## 2026-09-30 — TripNerd: five more real-material advert ideas (concept pack, no spend)
+- **Ask.** After approving THEIR CAMERA ROLL the owner asked for five more ideas from real client footage. Routed through the Campaign Director as SLIM (approved family). Folder: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-09-30-five-more-real-footage` (`campaign-bible.md`, `scripts.md`, `real-material-inventory.md`).
+- **Found.** Before pitching, the client's website was crawled as an asset register: five Vimeo videos (two real suite tours, one Derby film not yet seen), 15 attributed Google reviews, published package lines per event, and more real photos than the register held. The site contradicts itself on THE PLAYERS 2027 dates. A re-check of the repo still finds no Derby media.
+- **Ideas**, on new angles and ranked as my judgment (ESTIMATE):
+  - YOUR 2027, the calendar (8.0);
+  - WHAT THEY WROTE, real reviews (7.5);
+  - HANDLED., the checklist over the 29 house photos (7.5);
+  - HOW MANY ARE YOU BRINGING?, the group-size poll (7.0);
+  - guests' own camera rolls (9.0 ceiling, blocked on assets).
+- **Recommendation:** build the calendar and the reviews first, send TripNerd one consolidated ask, and test against the approved advert before building the rest. `THE LISTING`, `MEET THE NERDS` and a Derby countdown were considered and cut (reasons in `scripts.md`).
+- **Learned:** the client's website is part of its asset register (learning filed and indexed). Turned into the playbook `playbooks/ads/real-material-intake.md` and linked from the camera-roll recipe.
+- **Open:** the owner's pick; the TripNerd ask (masters, permissions, written confirmation of the package lines, consent); a platform check on a non-tappable poll; the gates (Skeptic, Critic) once anything is built. Spend none. Higgsfield's upload call failed repeatedly today; the Adobe bridge carried the review sheets.
+
+## 2026-09-30 (later) — TripNerd: online-presence audit done; growth plan started (step 1 of 9)
+- **Reframe.** The owner moved from more adverts to growing TripNerd's followers and online presence, with a tailored marketing plan built step by step. Routed through client-intelligence. New folder `ServicePOW/Clients/TripNerd/01_Brief/marketing-plan`: `README.md` (the nine-step roadmap and status) and `2026-09-30-online-presence-audit.md` (the log).
+- **Found.** LinkedIn is the live channel (1,296 followers, about ten posts in three weeks). TikTok exists but is dormant (4 followers). The YouTube channel is empty. An X account is probably theirs but unlinked. Facebook (2,731 likes by an undated snippet) and Instagram cannot be verified from here (login walls). The five videos sit on a personal Vimeo account. The site has no email signup, no `og:image` on 47 of 52 pages, no canonical tags, templated event-page descriptions with errors, three ad trackers and no cookie banner. TripNerd did not appear in search results for its own headline events. Business addresses disagree (Chicago versus Wisconsin). Several claims on their own profiles have no evidence.
+- **Corrected in flight:** a first Open Graph check wrongly said the home page had no social tags; re-checked in both attribute orders. The real gap is the missing image.
+- **Recommendation recorded:** make qualified inquiries the north star, with followers as a leading indicator; set targets only after the baseline is verified.
+- **Learned:** method and limits of a presence audit from a cloud session are now a playbook (`playbooks/content/social-presence-audit.md`). The access register has the public identifiers (no credentials).
+- **Open:** step 2 needs the owner to get access or exports (open-questions row added). Spend none; nothing published.
+
+## 2026-09-30 (evening) — Approved TripNerd 25 s re-encoded under 30 MB for upload and the website
+- Owner asked for the approved advert under 30 MB. Re-encoded the 84 MB master to 21.8 MiB (two-pass H.264 at about 7.2 Mbps, AAC 128k; same 1080x1920, 30 fps, 25 s). PSNR 42.0 dB, SSIM 0.976 against the master; loudness and peak unchanged. Download and stream links verified byte-for-byte. Filed in the approved-advert pointer. The master stays the source of truth.
+- Open: if the website needs it smaller or as a muted autoplay loop, make a separate web cut (about 8–10 MB, poster frame).
+
+## 2026-10-04 — TripNerd: the Instagram growth plan read; week 1's two Reels drafted (no build, no posting)
+- **Ask.** The owner supplied a 12-page "TripNerd × ServicePow Instagram growth plan" (first 90 days 5 Oct 2026 – 2 Jan 2027; 4 posts a week in month one; a Monday Reel, a Friday Trial Reel, a carousel, a proof post, Stories five days; priced $9,750 for 90 days) and asked to start prepping it by drafting this week's Reels: what they do, what they look like, how they travel in the algorithm for brand awareness. The PDF text was extracted locally (pypdf, with the broken system `cryptography` module bypassed); the PDF itself is not committed.
+- **Produced** in `ServicePOW/Clients/TripNerd/01_Brief/marketing-plan`: the plan digest with every number labelled stated or verified and the two rules it loosens; the week-1 Reels brief: *Augusta, by the clock* (17 s, nine real house photos, a clock device whose course hours fast-forward on an empty clock) and *Two ways to see 17* (16 s, the public gallery looking up at the suites, the rail, the real roar as original audio; a Trial Reel with hooks A/B and a 72-hour decision rule), the Stories strip, outlines for the carousel and proof post, the week-1 report fields and the asks to TripNerd. Real material only (decision 0008); nothing generated. Ranking statements verified through secondary sources and labelled; instagram.com is unreachable from here.
+- **Said plainly:** Reel 01 cannot post Monday 5 Oct at 2 PM (nothing built or approved, no partner access); the realistic week puts it on Thu 8 Oct with the Trial on Fri 9 Oct. Six owner decisions are listed before anything posts (the city name "Augusta", event names in captions, staff consent, the run-of-show times, Trial Reels availability, DM coverage).
+- **Reconciled:** the plan's "4,730 followers" (observed 11 Sep 2026 by whoever prepared it) versus the audit's UNKNOWN (login wall): carried as stated, not verified; audit addendum written. The plan's $325 per Reel / $75 per static pricing has no line in `company/pricing-and-packaging.md` (open question). The roadmap README now shows steps 3, 5, 8 and 9 as proposed by the plan and step 6 in progress for Instagram.
+- **Left the office better:** `templates/reel-brief.md` (what it does, what it looks like, how it travels, what must clear, build) and a row in the templates README; the TripNerd brand guide, empty since 2026-08-24, now carries an inferred working voice with sources and is marked active.
+- **Open:** the owner's six decisions and the plan's three; the TripNerd asks (access, staff consent, run-of-show, original clips, review names, real "hosts get wrong" points, a guest briefing); then the two builds. Spend none; nothing published.
+
+## 2026-10-06 — TripNerd: which advert was built when (three chats), and the ROAR Reel built (v1 draft)
+- **Ask 1: "the most recent three adverts, as links; the Wednesday one from the growth plan."** Reconciled across the three TripNerd chats by reading their branches: *Book It Now* (Augusta) v2 (5 Oct, 20 s, built in the "TripNerd Growth strategy" chat, sent as a file card there, no public link) · *Augusta, by the clock* v5 (4 Oct, 7.8 s, same chat, critic 7.3 / Skeptic CONDITIONAL, no public link) · *Their Camera Roll* (29 Sep, this chat, links re-verified live). **The Wednesday slot ("Two ways to see the 17th", Wed 7 Oct 12 PM, the owed September video per the October test-month plan on `claude/admiring-mendel-aqjyaw`) was never cut:** storyboard approved, blocked on Taylor's originals. Told the owner plainly; offered to cut it from the Higgsfield copies.
+- **Ask 2: a Roadtrips Instagram Reel (`DLnBJwfC1iX`).** Instagram serves only the public preview without a login (fetched with the social-preview user agent; no wall worked around): account **@roadtripsinc**, posted 2 Jul 2025, 18 likes, 0 comments, cover = "CHEER" stacked over fans in red, caption about custom sports-travel packages for the 2026 World Cup, Winter Games, Women's World Cup and Summer Games. The video itself is not reachable from here. A direct peer of TripNerd.
+- **Ask 3: "make a TripNerd version with the roar clip."** Built as SLIM (zero generation, cleared material): `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-06-roar-reel` (Bible, build record, `build/` scripts). **ROAR v1:** 8.0 s, 1080x1920/30; QUIET stacked nine rows over the suite POV while the gallery holds its breath, snaps to ROAR on the real hit (V24 source 13.5 s) and pulses with the measured crowd level; brand-blue pill with the real logo and "Hospitality. Handled." from 6.0 s; seamless loop. Audio is TripNerd's own roar (loudnorm −14.5 LUFS, −0.98 dBTP). V24 upscaled once to 1080p/30 (0.62 credits). QC1 harness PASS on every row; speech screen clean (whisper-tiny's low-confidence "no, no" segments on crowd noise recorded as the known hallucination); marks and faces frame-checked. MD5 `600551b3b1fe39e776737e78ee12af2a`; stream and zip links verified byte-for-byte in the build record. **Owner review pending; Skeptic and Critic not run; nothing posted.**
+- **Tooling, learned the hard way (filed in the harness-limits learning):** a `nohup sleep` inside a foreground sandbox call does not hold the sandbox; only a `background:true` job does. `pkill -f <script>` inside a sandbox call matches the call's own command line and kills it. The local container cannot reach `upload.higgsfield.ai`; PUTs run from the sandbox. The QC harness crossed by heredoc in two halves and byte-matched.
+- **Open:** the owner's verdict on ROAR; whether to cut "Two ways" for Wednesday from the Higgsfield copies; the two unmerged branches (`admiring-mendel`, `quirky-davinci`) carry the October test-month plan and supersede parts of my 4 Oct week-1 brief; a reconcile is due before anyone works from either.
+
+## 2026-10-06 (later) — TripNerd: "Two ways to see the 17th" cut for the Wed 7 Oct slot (H1, v1 draft)
+- **Ask:** the owner's go-ahead ("Got two ways to see the 17th for Wednesday") after I flagged that the Wednesday Reel was never cut.
+- **Built to the storyboard Karl approved on 2026-10-04** (`edit-plan-01-two-ways-17th.md`, `shotlist.md` on `claude/admiring-mendel-aqjyaw`): 10.6 s, five shots, real footage and real sound only, no music, nothing generated. S1 the walk to 17 from Gallery walk 1 (= V16) with "Two ways to see the 17th." then "1. The path."; S2 under the suite banner, **cropped 1.5x to the right so only TRIPNERD reads** (the tournament name on the banner's left half is a third-party mark) and shortened to 1.0 s with the hush lengthened to keep 10.6 s; S3 the rail hush with "2. The rail."; S4 the putt drops, V24's own roar (V08 is not on file); S5 "Who are you bringing?" with the 103 % push. Mix by static gain and a true-peak limiter (loudnorm's dynamic fallback flattened the walla–hush–roar shape): −13.95 LUFS, −1.00 dBTP.
+- **Material:** V23 and Gallery walk 1 upscaled once to 1080p/30 (1.08 + 0.28 credits); V24's upscale from the ROAR build. The gallery clips' full media IDs were only in this session's transcript; now recorded in the footage log addendum.
+- **QC:** harness PASS on every row; speech screen clean (one whisper-tiny fragment on walla, the known hallucination); marks and faces frame-checked (the distant video board in S1 is unreadable at delivery size). MD5 `09ea4569ca274205a23fe24768666a5a`; stream, zip and sheet links verified byte-for-byte. Record: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-04-launch-reels/build-two-ways-v1.md` (filed in the same campaign folder as the other branch so the records converge on merge), script `build/build_twoways.py`.
+- **Open:** owner review; TripNerd's approver by Tue EOD for a Wed 12 PM post (the board's rule); Skeptic Pass 3 and the Critic scorecard before the approval batch; H10 variant renders on request. Nothing posted.
+
+## 2026-10-06 (evening) — TripNerd "Two ways to see the 17th" v2: the owner's redirect, built from real footage
+- **Owner's note:** the board's two *places* missed the point; the ad should contrast a regular fan with a bad view at the back of the crowd during the big moment (jumping to see, not fitting in) with a TripNerd guest already living the moment. "With TripNerd or without."
+- **Built v2 (9.8 s, 9:16), real footage and real sound only:** the same V24 roar heard twice. From the back of the gallery (Gallery 2, 1.45x crop on heads and shoulders, the crop window hops up three times from the moment the roar goes up ahead), then the fan looks up at the suites; cut to two guests already at the rail ("With TripNerd."), the putt drops, the roar clear, "Who are you bringing?". The "jumping" is a post camera move over real crowd footage (the fan's own eyes), not an actor; a filmed or AI person jumping would be a shoot or an AI-actor piece with the label, and is noted as such in the record.
+- **Fixes on the way:** ffmpeg's `crop` sizes are fixed at init (the hop lives in `y` only); a crop-then-scale leaves SAR 992:993 and breaks `concat` until `setsar=1`; `tail -3` had hidden the ffmpeg error. Gallery 2 upscaled once (0.33 credits).
+- **QC:** harness PASS on every row; −14.00 LUFS, −1.63 dBTP; whisper-tiny's repeated phrase on the walla re-checked with the base model + VAD: 0 speech segments; links verified byte-for-byte (MD5 `5311d4612f3f3cc17522e58615243fcf`). v1 (the board-faithful cut) stands as the alternate; both in `build-two-ways-v1.md`, script `build/build_twoways_v2.py`.
+- **Open:** owner review of v2 tonight; TripNerd's approver for Wed 12 PM; Skeptic and Critic before the batch. Nothing posted.
+
+## 2026-10-06 (late) — TripNerd: v2 rejected and stopped; the Augusta "ball sticks close" reference found and sheeted; no clip cut
+- **Owner:** "don't like it, just stop" on Two-ways v2; he built his own with Claude. Line stopped; recorded in the build record. Then: "find me a specific video" of a shot at Augusta showing only the green and the ball sticking close to the pin, and "screenshot or screen record" it with a viewing spot as a TripNerd guest.
+- **Found and verified by eye:** five moments in The Masters' "Every Tee Shot on Hole No. 12 Friday" (`Wk0wuTQ6VpE`): 16:29, 18:03, 19:13, 4:04, 2:45 (deep links and a 15-frame reference sheet in `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-04-launch-reels/reference-augusta-12.md`). Correction: the earlier "no chapters" note was wrong; yt-dlp metadata carries them.
+- **Not done, said plainly:** no clip cut from official Augusta National footage and none goes into a TripNerd asset (no advertising licence exists; the client brief excludes Masters/Augusta marks). No patron video exists (phones banned, cameras practice days only). TripNerd's Augusta product has no on-course suite; the "viewing spot" is the patron gallery, and an ad implying more is an unevidenced claim. Recommendation: film it (practice-day shoot at Masters week 2027, or any course now); stock has nothing.
+- **Tooling:** yt-dlp installs with pip in the Higgsfield sandbox and YouTube is reachable there; `sandbox_exec` `image_paths` (four images, 512 KiB) is the way to look at frames; an unquoted `%(ext)s` in a background command breaks the wrapper's shell (use a fixed output name).
+- **Open:** the owner's choice between the two film routes and the real-footage ask to TripNerd; owner review of ROAR and Two-ways v1 still pending; nothing posted.
+
+## 2026-10-06 (night) — TripNerd: Meta Ad Library competitive picture and five mechanism-led scripts
+- **Ask:** better, more creative scripts, modelled on the best-performing adverts in TripNerd's industry from the Meta Ad Library, tailored to TripNerd's assets.
+- **Said plainly:** the Ad Library shows no performance data for US commercial ads; proxies used are days running, variants and ad count. Direct competitors (Roadtrips, QuintEvents, PrimeSport, Bucket List Events) are not advertising on Meta right now; the window belongs to the official rights holder (On Location) and the longest-running creative is adjacent (Epic Golf Club, 206 days; Black Tomato, 172 days; TrueFan Travel, 175 days).
+- **Method:** Playwright in the Higgsfield sandbox (public pages, no login), 30 keyword searches filtered by advertiser, 116 ads from 26 advertisers, 18 videos downloaded, transcribed with faster-whisper and frame-checked. The advertiser typeahead does not render headless, so page-level filtering failed; keyword exact-phrase plus advertiser-name filtering worked.
+- **Produced:** `ServicePOW/Clients/TripNerd/01_Brief/marketing-plan/2026-10-06-competitive-picture-meta-ad-library.md` (evidence table with Library IDs, eight mechanisms, conventions and vacancies) and `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-04-launch-reels/scripts-round-2-mechanism-led.md` (The thread · 6:12 AM · Ask Taylor · What the ticket doesn't include · Monday). Mechanisms adapted, no competitor copy reused. Ask 8 (a host on camera) added to the week-1 brief.
+- **Tooling:** `pkill -f` with the pattern in the command kills the call (again; use `pgrep -f 'patt[e]rn'`); foreground `sandbox_exec` calls time out at the MCP layer at 60 s regardless of `timeout_seconds`, so anything longer runs in the background; `image_paths` totals must stay under 512 KiB or nothing is returned.
+- **Open:** the owner's pick from the five; Taylor on camera; the package sheet as an Evidence Record; the review-name OKs; nothing posted.
+
+## 2026-10-06 (late night) — TripNerd "The thread" (TN-R02) v1 built, QC'd, gated, delivered as a draft
+- **Ask:** "Build thread one now" (script 1 of the round-2 set: the planning pain is the villain; the mechanism behind the longest-running creative in the Meta Ad Library set).
+- **Built (15.0 s, 9:16, real material only, zero generation):** an 8 s composited group thread (generic look, fictional, initials only, event-agnostic copy: "Golf trip. This year?" … "anyone?" … "Booked. TripNerd."), then the TripNerd suite-wall photo (eased pan), the house patio photo (push), the real roar from V24 and the lockup. Sound: synthesised tones per message, a swoosh on "Booked", V24's real murmur and roar; −14.00 LUFS, −2.29 dBTP. Record, links, MD5s, QC and gate verdicts: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-06-the-thread/build-v1.md`.
+- **Substitution, said plainly:** the script's check-in photo (Wyatt's Drive, IMG_1901/1907) could not reach the sandbox (no public link; a base64 relay is not viable); the suite-wall photo from tripnerd.com stands in. Two website photos were imported by URL and upscaled once (4 credits, cost preflighted).
+- **QC:** harness PASS on every row except `no-flash-cuts`, overridden on frame-check evidence (`cutcheck.py`: all detected "cuts" lie inside the handheld roar footage because the 8 s of near-static UI drags the file's median diff down; real cuts 8.0/10.0/11.4/13.6 s, shortest shot 1.4 s) and a hook-motion WARN (a quiet first second by design). Speech screen: 0 segments. Marks and faces checked at the pan positions.
+- **Dual gate:** Skeptic Pass 3 (four lenses) and the Critic ran as isolated workflow agents on the frozen master with an Isolation Packet; verdicts in the build record §6.
+- **Ledger note (FACT):** the Higgsfield ledger shows other spends in the same hour (Seedance 2.5 −240 and −60, Kling v3.0 −25/−30/−12.5/−12.5 between 22:27 and 22:49 UTC) that are not this session's; this build's spend is the two upscales at 22:38 (−2 each). Flagged to the owner.
+- **Tooling:** the harness's scene-detect baseline breaks on mixed UI + footage (filed); `pkill -f` self-kill (again); foreground sandbox calls cap at 60 s at the MCP layer.
+- **Open:** owner review; TripNerd's approver; the check-in photo swap for v2; the hook's first second if the owner wants more motion. Nothing posted.
+
+## 2026-10-07 (early) — TripNerd "The thread" v2: Augusta week, real house + the owner's Higgsfield course clips; v1 gate closed
+- **Owner's verdict on v1:** loves the thread opening, rejects the stills after "Booked."; wants one named event with real or Higgsfield footage (not THE PLAYERS). Direction delivered first (`ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-06-the-thread/creative-direction-v2.md`); the owner chose **Augusta, accepted the AI label, kept the green chairs**, and said build.
+- **Inventory behind the direction (FACT):** no real on-course Augusta video can exist (phones banned); the real house exists in photos only; the owner's own session had generated a coherent Augusta-look set in Kling 3.0 tonight (porch, gallery POV, ball through pines, two landing takes, the man in the chair) plus matching stills. The 2022 Daytona suite tour (Vimeo, login-walled to yt-dlp) was captured through the tripnerd.com embed in a headless browser and stored in Higgsfield (`553c8ee2`, MD5 `1ea776fa…`) as the real-footage alternative for a Daytona ad.
+- **v1 dual gate (nine isolated agents, 23.6 min):** all four Skeptic lenses found the same real bug (the newest chat bubble sat at 92–97 % of frame height, inside the Reels UI; a layout error, anchor added to the list top), two called BLOCK on it; the competitor lens raised an S4 for footage provenance missing from the packet (a packet omission: V24 is TripNerd's own, Taylor's authorisation); all four blocking findings upheld by fresh verifiers. Critic: 7.5 ± 1.5, REVISE, AI risk 2/10, plus a formal block for missing registry receipts. All folded into v2.
+- **v2 built (16.0 s, 24 fps, zero new generation, 2 credits touch-up):** the thread re-anchored at 60 % with larger month separators (years dropped), a "haha", a settling move after "Booked."; then the real brick house (push), the owner's porch, gallery POV, ball-through-pines, landing-by-the-pin with the green-chair gallery, and the man in the chair re-framed so the lockup never covers a face; on-screen "Course scenes dramatised" at first generated frame per the realism policy; sound: tones, TripNerd's real gallery murmur, a real crowd swell shaped under the landing; −14.0 LUFS. Record: `build-v2.md`.
+- **QC:** harness PASS on every row except the known scene-detect false positive (this time the end fade to dark registers as two sub-0.4 s "shots" at 15.8–15.9 s; real cuts 8.0/9.2/10.5/11.8/12.5/14.6 s, shortest 0.7 s) and the hook-motion WARN (0.29). Speech screen 0.
+- **Open:** owner review of v2; TripNerd's approver; the AI label at posting; the ® on the logo file (ask TripNerd); the package sheet as evidence for "badges" and "the house"; the Drive house photos for a later swap. Nothing posted.
+
+## 2026-10-07 (early, continued) — TripNerd "The thread" v3: the owner's own two clips after the thread, delivered as the finished cut
+- **Owner's note on v2:** "you're just using the wrong footage after"; supplied two Higgsfield clips (byte-identical to his own generations: Seedance 2.5 `adac6b4d`, the ball landing by the pin, and Kling 3.0 `0c1646c7`, the group in the TripNerd suite watching it on the TV and erupting) and asked for them added after the text messages, blended, as a finished product.
+- **Built v3 (16.6 s, 24 fps):** the v2 thread (drift raised so the silence beat never reads as a freeze) → crossfade → the landing (a 9:16 window of the 16:9 clip held on the flag) → crossfade → the suite (a 9:16 window that starts on the TV and pans left to the men as they erupt) → the lockup in the upper band, loop fade. Both clips upscaled once to 4k so the 9:16 window stays sharp. Sound: the thread's tones, the clips' own generated sound under disclosure, TripNerd's real gallery murmur and real crowd swell beneath; −14.0 LUFS. Record: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-06-the-thread/build-v3.md`.
+- **Brand fidelity, said plainly:** clip B's wall carries a generated rendering of the TripNerd mark (no glasses on the nerd head, different line weight; checked at full resolution against the real file), and lanyards carry small generated "TripNerd" text. The window keeps the wall out of frame (a sliver of the glasses outline can touch the right edge in the first second) and the real logo file carries the brand in the lockup; the finding is recorded as the owner's call, not passed silently. Clip A's flag carries a faint dark fleck, an artefact, not a mark.
+- **Label fixed before delivery:** the v2 gate called the disclosure label small, low-contrast and mislabelled for its first shot; v3 carries "Scenes dramatized" (US spelling, 40 px on a darker pill, 59–63 % of frame height, 8.0–10.5 s, over the first generated shot). Re-rendered and re-checked after the change.
+- **QC:** harness PASS on every row (crossfades removed the flash-cut false positive); hook-motion WARN as before; speech screen 0; −14.03 LUFS / −1.00 dBTP. Final master MD5 `acf8ec1b4303cc7d69fc54ad2a1322de`, 12,484,620 B, 16.60 s; master, contact sheet and build kit uploaded to the Higgsfield account and byte-verified after upload (links in the record). Spend by this build (FACT, ledger): Bytedance Video Upscale −0.4 credits ×2 at 23:41 UTC, nothing else. Dual gate launched on the frozen master; verdicts appended to the record when they land.
+- **Ledger note (FACT):** the other spends in the same hour (Seedance 2.5 −180 at 23:42 and −60 at 23:28, GPT Image 2.0 −6.5/−6.5/−11, GPT Image 2.5 Flare −2.75, Nano Banana 2.1 −3, Kling v3.0 −12.5 ×4, between 23:14 and 23:54 UTC) are the owner's own work in the account, not this session's.
+- **Open:** owner review of v3; TripNerd's approver; the AI label at posting; the owner's decision on the regenerated mark in clip B (accept as mitigated, or regenerate B with a blank wall); the ® on the logo file; the package sheet. Nothing posted.
+
+## 2026-10-07 (early, later) — TripNerd "Augusta, handled" 15 s: owner's copy built as a real-footage Reel (A) plus a held owner-clip variant (B)
+- **Ask:** Karl's copy ("Augusta is the bucket-list moment … Let TripNerd handle the details.") as a 10–15 s advert. Plan approved with a 400-credit cap; SLIM Bible in `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-07-augusta-handled`.
+- **Built (15.0 s, 9:16, 30 fps, silent master):** real V19 sunset over TripNerd's hospitality lawn → TripNerd's published Private Executive Home (Seedance push-in) → TripNerd's published veranda (Seedance drift) with the four inclusions ticking in → real V25 veranda live music and guests → real-logo lockup "Get the Augusta details". Variant B swaps only the hook for the owner's clip A (generated) and is **held**.
+- **Rules applied:** TripNerd's agreed rule (AI never creates a person, voice or testimonial) → no AI VO/music, AI motion on people-free photos only; claims are TripNerd's live page wording, DRAFT until TripNerd's written OK; caption carries TripNerd's own non-affiliation line.
+- **Spend:** 172 credits (two 2-credit upscales, Seedance 48 + 60 + 60; one veranda take rejected for an invented foreground pillar). Other spends in the same window (Seedance −60/−96, Kling −25, Nano Banana −3) are the owner's other session.
+- **QC:** QA1 picture rows all PASS on A2 and B1; the audio row FAILs by declaration (silent master) — BC-05 OPEN until music or a real VO. QA2 caught a golfer on West Lake's fairway in A1's first half-second under the Augusta line → A2 (1.22× punch-in) supersedes A1.
+- **Open:** Karl's review of A2/B1; audio choice; TripNerd's written OK on the four lines and the venue; the musician's consent; the house photo being a home TripNerd books; the dual gate (isolated Skeptic + critic) on the masters frozen after Karl's notes. Nothing posted.
+
+## 2026-10-07 (morning) — TripNerd "Augusta, handled" v3: music, a voice on the list, no opening label (owner's notes)
+- **Ask (Karl):** add music and someone speaking when the list pops up; remove the "AI-generated" tag at the start; give the advert back. The tag only existed on B, so B3 is the advert; A3 gets the same audio.
+- **Voice:** Higgsfield Seed Audio "Miles" reading Karl's line verbatim (2 takes, 0.8 credits each; the +10 take used at atempo 1.04). Karl chose this over his own recording, knowingly departing from TripNerd's "AI never creates a voice" rule — TripNerd's OK is a posting condition.
+- **Music:** an original bed composed in code (`build/music.py`) — Higgsfield has no music model for ads, Instagram's library isn't cleared for paid ads, free libraries carry Content ID risk.
+- **QC:** harness OVERALL PASS on B3 and A3 (−13.7 LUFS / −1.0 dBTP); BC-26 music bed has no words; BC-27 transcript matches the line; ticks land on the spoken words; B3's opening has no label and the generated flag is plain yellow at full resolution.
+- **Tooling:** the Higgsfield sandbox now resets between idle calls — keep a background `sleep` running as a lease while staging files across calls; the QC harness was re-staged in three pieces and hash-verified (`321ef0b7…`).
+- **Spend:** 1.6 credits this round; build total 173.6.
+- **Open:** Karl's listen; TripNerd's OK on the AI voice, B's generated crowd and the four lines; Meta's AI label on at posting; the dual gate on the frozen master. Nothing posted.
+
+## 2026-10-07 (afternoon) — TripNerd "Augusta, handled" A4: the real-footage advert with the owner's five notes
+- **Ask (Karl), on A3:**
+  - add his ball-landing clip at the end, centred;
+  - use better music, legally clear, in the style of the niche's popular Reels;
+  - use TripNerd's client-approved end card;
+  - use the voice of the AI host from the client-approved hosting spot for the list ("same voice, use all of it").
+- **Built A4 (18.12 s):** the A3 body, then a hard cut on the music's drop to clip A at 4k. The 9:16 window follows the flagstick and ball and settles with the cup centred at 75 % height, under "Let TripNerd handle the details." Then a hard cut on the beat to TripNerd's camera-roll end card (ported from the approved renderer).
+- **Music:** the niche's longest-running video ads, measured, use instrumental beds in two families: upbeat ~117–136 BPM (the golf-trip leader) and cinematic ~78–89. Pick: Mixkit #470 "Golden Storm"; its licence names social posts and online ads, with no attribution.
+  - Evidence: `ServicePOW/Clients/TripNerd/05_Edit_Project/2026-10-07-augusta-handled/qc/music-licence.md`.
+  - Research: `ServicePOW/Clients/TripNerd/01_Brief/marketing-plan/2026-10-07-niche-reel-music-research.md`.
+- **Voice:** the host's speech was cut from the hosting spot and separated with Demucs (Adobe's enhancer could not be polled from this client). Seed Audio reads the line from that audio reference. Saving the clone was refused (voice slots full); nothing was deleted.
+- **Found and fixed:**
+  - Clip A's flag carries a generated tournament-style emblem. The committed paint-out (`flagfix2`) left visible outlines on this upscale; `flagfix3` removes it, checked on all 59 flag frames at native 4k.
+  - **B3, delivered this morning, contains the emblem.** The v3 QA1 line was wrong; it is corrected, and B3 is withdrawn.
+- **QC:**
+  - harness OVERALL PASS;
+  - −14.0 LUFS (true peak −0.9 dBFS after AAC; the WAV mix −1.2);
+  - BC-26 bed speech-free; BC-27 voice matches the line;
+  - final upload byte-verified (MD5 `7c406481…`).
+- **Spend:** 2.0 credits (4k upscale and two voice takes); build total 175.6 of 400.
+- **Tooling:** the sandbox reset three times. The fix is one `background:true` pipeline that persists results as it goes (learning filed and indexed).
+- **Open:**
+  - Karl's watch and listen;
+  - TripNerd's OK on the AI voice and the generated gallery (their agreed rule);
+  - the owner's call on the venue look and the green tops;
+  - "Now booking 2027" for Augusta;
+  - the musician's consent and the house photo;
+  - Meta's AI label at posting;
+  - the isolated Skeptic and critic on the frozen master.
+
+  Nothing posted.
+
+## 2026-10-07 (late afternoon) — TripNerd "Augusta, handled" A5 and A6: the 20 s voice cut, then the Instagram posting master
+- **A5 (owner's ask):**
+  - slow the voiceover so the ad runs 20 s;
+  - speak "Bring your people", "Enjoy the moment" and "Let TripNerd handle the details";
+  - say "All done with TripNerd!" as it fades into the end card, with no caption.
+
+  Built at 20.00 s. The list is read slower (5.4–12.1 s), with three more lines in the host voice; the music now starts at 0.21 s so the drop still lands on the cut into the end shot. ASR found every line in order. QA1 PASS.
+- **A6 (owner's ask): "upscale the whole advert … export … best way to post on Instagram".**
+  - **Advised against a whole-ad 4k upscale.** Reels serve at 1080×1920 and are re-encoded on upload. Running the card and logo through an AI upscaler also risks warped type and a warped logo (brand-asset law).
+  - **The owner said "do what you recommend".** So we upscaled only the two 404×720 real shots and made one top-quality encode: H.264 High 4.2, 17.3 Mb/s, BT.709, AAC 320 kb/s, faststart.
+  - **The first render was rejected.** ByteDance's upscale gave the foliage a painted texture.
+  - **The final render uses Topaz Video upscales.** Faces stay true, trees look natural, and the image is sharper than A5.
+  - **Checks:** QA1 PASS; −14.2 LUFS / −1.2 dBTP; ASR matches; the upload was byte-verified (MD5 `d02414b9…`).
+  - The learning is filed and indexed.
+- **Spend:**
+  - A5 voice: 1.6 credits. We told the owner 3.2; the ledger is correct, and the correction is recorded.
+  - A6 upscales: 10.31 credits.
+  - Build total: 187.51 of the 400 cap.
+- **Found:**
+  - **The GitHub repo `hughm007/Kobe` is public.** Client documents, Drive IDs of link-shared folders and media links are readable by anyone. Raised with the owner. It's the owner's call whether to make the repo private.
+- **Open:**
+  - **Before posting:**
+    - Karl's watch and listen on a phone;
+    - TripNerd's OK on the AI voice and the generated gallery;
+    - the venue-look call;
+    - "Now booking 2027";
+    - the musician's consent;
+    - Meta's AI label at posting.
+  - **Not yet run:** the isolated Skeptic and critic on the frozen master.
+
+  Nothing posted.
+- **Reel cover (same day, later).** The owner's draft cover was rebuilt from source, not sharpened:
+  - **Source frame:** the ad's first frame (V19 2.4 s), matched by correlation (0.99), taken from the Topaz upscale and graded.
+  - **Type and logo:** type re-set at 2×; the real logo placed on its brand-blue pill.
+  - **Fits every Instagram crop:** all text and the logo sit inside the 1080×1350 safe block, so nothing is cut off in the 9:16, 4:5 or 3:4 grid crops.
+  - **Subline:** recommended as "Homes. Hospitality. Concierge." "Suites" is not an Augusta product.
+  - **Delivered:** both versions, as PNG links and JPEGs in `deliverables/`.
+  - **Spend:** 0 credits.
+
+## 2026-10-08 — TripNerd moved to ServicePOW/Clients/TripNerd (01–08); Augusta client approved (7.7)
+- **Reorganisation:** TripNerd's 111 files now sit in the owner's 01–08 structure at `ServicePOW/Clients/TripNerd/`.
+  - Every link pointing to the moved files was rewritten. A link check finds the same 23 pre-existing broken links before and after the move, so the move broke none.
+  - Three byte-identical images were removed from the intro-video build.
+  - The legacy QC scripts in `playbooks/ads/scripts/` were kept: a gate script still runs them.
+- **Augusta, handled:** client approved by Jason (TripNerd).
+  - The owner's file is the A6 master re-encoded at 5.3 Mb/s, filed in `07_Client_Approved/`.
+  - **Owner score 7.7:** the house shot (an animated photo) "looks fake". The learning is filed.
+- **Open:**
+  - **Index pages for folders 02/03/04/06:** pending the cross-branch advert inventory.
+  - **Written copy of Jason's approval:** to be filed.
+  - **Branches:** the other sessions' branches are not merged.
+
+## 2026-10-22/23 — TripNerd: Phoenix Open Reel text fix approved; 07 Client Approved brought up to date
+- **Phoenix Open Reel (the owner's 31 s cut, built by another session):** "16th Hole LOGE Suite" → "16th Hole Suite" on the ticket and the corner card. No project files existed, so the rendered frames were patched (method and limits in `05_Edit_Project/2026-10-22-phoenix-open-16th-hole-suite-fix/`).
+  - 929 frames; audio bit-identical.
+  - One faint trace remains, in the 0.2 s crowd cross-fade.
+  - **The owner approved it on 2026-10-23.** It moved to `07_Client_Approved/` with proof stills and a record.
+- **The Derby static "Everyone's filming it" v1** was already client approved (owner, 2026-10-20) but sat only under review exports. Its file and record are now in `07`. The later v1.1 and v2 stay in `06` and are not approved.
+- **Learning:** ship every advert with its editable project; run claim words through the claims check before the first render. Filed and indexed. The standing rule is added to `07_Client_Approved/README.md`.
+- **Open:**
+  - **Who approved for TripNerd:** not recorded for the Phoenix Reel.
+  - **Phoenix claims, TripNerd still to confirm:** suite access, hotel, Fairmont, Feb 2027.
+  - **Derby claims, Jason to confirm:** the date and the checklist.
+  - **Nothing posted.**
