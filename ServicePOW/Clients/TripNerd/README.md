@@ -11,7 +11,7 @@ tags: [client, index, tripnerd]
 
 # TripNerd
 
-Moved here from `agent-workspace/clients/tripnerd/` on 2026-10-08.
+Moved here from `agent-workspace/clients/tripnerd/` on 2026-10-08. **Note (2026-10-23):** several sessions kept writing to the old path after the move; their campaigns are still in `agent-workspace/clients/tripnerd/campaigns/` until that folder is consolidated here.
 
 | Folder | What is in it |
 |---|---|
@@ -21,7 +21,7 @@ Moved here from `agent-workspace/clients/tripnerd/` on 2026-10-08.
 | [`04_Generated_Assets/`](04_Generated_Assets/README.md) | Every AI-generated piece used, by advert |
 | [`05_Edit_Project/`](05_Edit_Project/README.md) | One folder per advert or campaign: Bible, scripts, build scripts, QC, production log |
 | [`06_Review_Exports/`](06_Review_Exports/README.md) | **The advert register:** every advert once, its current version, status and superseded versions |
-| [`07_Client_Approved/`](07_Client_Approved/README.md) | Approved adverts with score and reason: hosting spot 8.4, Their Camera Roll, Augusta, handled 7.7 |
+| [`07_Client_Approved/`](07_Client_Approved/README.md) | Approved adverts with score and reason: hosting spot 8.4, Their Camera Roll, Augusta, handled 7.7, Daytona Reel, Derby static, Phoenix Open Reel |
 | [`08_Performance/`](08_Performance/README.md) | Results once adverts are posted (empty) |
 
 **Start here:**
