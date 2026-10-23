@@ -5,7 +5,7 @@ client: internal
 owner: APPROVER
 status: active
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-29
 tags: [video, funnel, routing, qa]
 ---
 
@@ -124,6 +124,11 @@ internal standard) != **CLIENT READY** (we would deliver it and charge for it).
   (~7/10)**. Genuinely better for: explaining a process, simplifying an abstract offer,
   education, animated hooks, diagram storytelling, pain-point visualisation, retargeting,
   hybrid real-footage-plus-illustration.
+- **LANE C — REAL CLIENT MATERIAL + MOTION DESIGN** (added 2026-09-29). **Default route, per decision
+  [0008](../../../knowledge/decisions/0008-real-client-material-first-for-video-ads.md).** Uses the client's own photos and phone video,
+  with Higgsfield and Adobe for touch-up only, and the story told by motion design (for example
+  [the camera roll](../recipes/camera-roll-real-photos.md)). Owner-rated highest so far: ranked above the 8.4 hosting spot on
+  2026-09-29. Lanes A and B fill the beats that have no real material.
 A strong illustrated ad is not inferior for failing to be photoreal. **Lane B's higher score
 must not be allowed to disguise Lane A's weakness** — they are scored on separate scales and
 never mixed by accident.

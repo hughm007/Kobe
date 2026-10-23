@@ -1,0 +1,151 @@
+{
+  "$id": "https://golf-launch-monitor.local/schemas/glm-schema-0.1.0/ball-aerodynamics-profile.schema.json",
+  "title": "ball-aerodynamics-profile",
+  "description": "Generated from @glm/shared-types (glm-schema-0.1.0). Cross-field invariants (e.g. a null measurement value requires source 'unavailable') are enforced by the runtime zod schemas and are not all expressible in JSON Schema.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "massKg": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "diameterM": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "crossSectionAreaM2": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "momentOfInertiaKgM2": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "dragModelId": {
+      "type": "string"
+    },
+    "dragModelParams": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "liftModelId": {
+      "type": "string"
+    },
+    "liftModelParams": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "spinDecayModelId": {
+      "type": "string"
+    },
+    "spinDecayModelParams": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "applicableSpeedRangeMps": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "type": "number"
+        },
+        "max": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "min",
+        "max"
+      ],
+      "additionalProperties": false
+    },
+    "applicableSpinRangeRpm": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "type": "number"
+        },
+        "max": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "min",
+        "max"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "default",
+        "reference-data-fit",
+        "lab-fit",
+        "user-calibrated"
+      ]
+    },
+    "confidenceCeiling": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "version",
+    "massKg",
+    "diameterM",
+    "crossSectionAreaM2",
+    "momentOfInertiaKgM2",
+    "dragModelId",
+    "dragModelParams",
+    "liftModelId",
+    "liftModelParams",
+    "spinDecayModelId",
+    "spinDecayModelParams",
+    "applicableSpeedRangeMps",
+    "applicableSpinRangeRpm",
+    "source",
+    "confidenceCeiling",
+    "limitations",
+    "warnings"
+  ],
+  "additionalProperties": false
+}

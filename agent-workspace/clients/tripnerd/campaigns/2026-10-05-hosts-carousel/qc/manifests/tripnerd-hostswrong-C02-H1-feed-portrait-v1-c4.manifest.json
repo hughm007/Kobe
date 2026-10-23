@@ -1,0 +1,99 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    789,
+    67,
+    1026,
+    154
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "label",
+   "box": [
+    54,
+    89,
+    237,
+    135
+   ],
+   "font_px": 34,
+   "text": "3 \u00b7 DINING",
+   "contrast": 5.15
+  },
+  {
+   "role": "numeral",
+   "box": [
+    54,
+    175,
+    204,
+    437
+   ],
+   "font_px": 250,
+   "text": "3",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    453,
+    709,
+    630
+   ],
+   "font_px": 72,
+   "text": "Don\u2019t pull guests away to eat.",
+   "contrast": 14.77
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    662,
+    736,
+    770
+   ],
+   "font_px": 42,
+   "text": "Put the food where the view is, so nobody misses a shot.",
+   "contrast": 14.77
+  },
+  {
+   "role": "fact",
+   "box": [
+    54,
+    842,
+    751,
+    941
+   ],
+   "font_px": 38,
+   "text": "In our suite on 17, the buffet was steps from the rail.",
+   "contrast": 4.89
+  },
+  {
+   "role": "cta",
+   "box": [
+    370,
+    1208,
+    709,
+    1262
+   ],
+   "font_px": 42,
+   "text": "Next: the exit \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png",
+ "sha256": "80824692876916f8"
+}

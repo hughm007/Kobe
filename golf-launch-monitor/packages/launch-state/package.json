@@ -1,0 +1,14 @@
+{
+  "name": "@glm/launch-state",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Launch-state derivations, measurement provenance factories, multi-frame launch fit, spin resolution, and confidence model.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@glm/shared-types": "0.1.0",
+    "@glm/core-math": "0.1.0"
+  }
+}

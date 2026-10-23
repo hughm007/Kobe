@@ -1,0 +1,268 @@
+<title>TripNerd Story Week</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a briefing sheet — schedule strip up top, then one row per story: notes on the left, swipeable 9:16 phone frames on the right. */
+:root{
+  --bg:#F2F4F7; --surface:#FFFFFF; --ink:#101826; --muted:#5A6576; --line:#D9DEE6;
+  --brand:#1C64F2; --brand-ink:#FFFFFF; --flag:#B4530B; --flag-bg:#FFF4E5; --ok:#1F7A4D;
+  /* story frames commit to one stadium-night look in both themes */
+  --night:#0B1220; --night-2:#16233A; --chalk:#F5F7FA; --chalk-dim:rgba(245,247,250,.72);
+  --sticker:#FFFFFF; --sticker-ink:#0B1220;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0D131D; --surface:#151D2A; --ink:#E7ECF3; --muted:#9AA6B8; --line:#273246;
+  --brand:#5B8DFF; --flag:#F2A65A; --flag-bg:#2A1E12; --ok:#4CC38A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D131D; --surface:#151D2A; --ink:#E7ECF3; --muted:#9AA6B8; --line:#273246;
+  --brand:#5B8DFF; --flag:#F2A65A; --flag-bg:#2A1E12; --ok:#4CC38A; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:28px 64px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:.01em}
+h1{font-size:clamp(34px,5vw,52px);line-height:1;text-transform:uppercase}
+h2{font-size:30px;line-height:1.05;text-transform:uppercase}
+h3{font-size:19px;text-transform:uppercase;letter-spacing:.04em}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:68ch;color:var(--muted);margin-top:12px}
+header.top{display:grid;gap:10px;margin-bottom:28px}
+
+/* schedule strip */
+.week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:18px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:4px;text-decoration:none;color:inherit}
+.day:hover,.day:focus-visible{border-color:var(--brand);outline:none}
+.day .d{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.day .t{font-family:var(--display);font-size:20px;font-weight:700;text-transform:uppercase;line-height:1.05}
+.day .s{font-size:12.5px;color:var(--muted)}
+.stage{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:999px;border:1px solid var(--line);color:var(--muted);width:max-content}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0 26px}
+.toggle{font:600 13px var(--body);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+.toggle[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.toggle:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.hint{font-size:13px;color:var(--muted)}
+
+/* story rows */
+.story{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:28px;padding-block:30px;border-top:1px solid var(--line)}
+.notes{display:grid;gap:14px;align-content:start}
+.notes .num{font-family:var(--mono);font-size:12px;color:var(--brand);letter-spacing:.08em}
+.kv{display:grid;grid-template-columns:96px minmax(0,1fr);gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;padding-top:2px}
+.kv dd{margin:0}
+.flag{background:var(--flag-bg);border-left:3px solid var(--flag);padding:10px 12px;border-radius:0 8px 8px 0;font-size:13px}
+.flag b{color:var(--flag)}
+.reel{display:flex;align-items:flex-start;gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory;min-width:0}
+.cell{flex:0 0 auto;display:grid;align-content:start;gap:8px;scroll-snap-align:start;width:228px}
+.cap{font-size:12.5px;color:var(--muted);line-height:1.4}
+.cap b{color:var(--ink);font-weight:600}
+
+/* the 9:16 frame */
+.frame{position:relative;width:228px;max-width:100%;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:var(--night);color:var(--chalk);box-shadow:0 1px 0 rgba(0,0,0,.04),0 8px 24px rgba(11,18,32,.18);font-family:var(--body);isolation:isolate}
+.frame .bars{position:absolute;top:8px;left:8px;right:8px;display:flex;gap:3px;z-index:5}
+.frame .bars i{flex:1;height:2px;background:rgba(255,255,255,.35);border-radius:2px}
+.frame .bars i.on{background:#fff}
+.frame .acct{position:absolute;top:16px;left:10px;display:flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;z-index:5}
+.frame .acct span.av{width:20px;height:20px;border-radius:50%;background:var(--brand);display:grid;place-items:center;font:700 9px var(--display);color:#fff}
+.photo{position:absolute;inset:0;z-index:0;display:flex;align-items:flex-end;justify-content:flex-start}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,32,.55) 0%,rgba(11,18,32,0) 30%,rgba(11,18,32,0) 55%,rgba(11,18,32,.8) 100%)}
+.photo .ph{position:absolute;left:10px;right:10px;top:60%;transform:translateY(-50%);border:1px dashed rgba(255,255,255,.45);border-radius:8px;padding:8px;font:500 9.5px/1.35 var(--mono);color:rgba(255,255,255,.85);background:rgba(0,0,0,.18);z-index:1}
+.p-upper{background:radial-gradient(120% 60% at 50% 92%,#2E6B3F 0 18%,#1A2B22 19% 30%,transparent 31%),linear-gradient(180deg,#1B2840,#0E1626 60%,#0B1220)}
+.p-field{background:linear-gradient(180deg,#0F1A2D 0%,#1F3B5C 35%,#2F7A44 36%,#3C8F52 70%,#2B6B3C 100%)}
+.p-food{background:radial-gradient(60% 40% at 30% 60%,#7A4A2A,transparent 70%),radial-gradient(50% 35% at 70% 55%,#C9A46B,transparent 70%),linear-gradient(180deg,#2A1D16,#120D0A)}
+.p-hotel{background:linear-gradient(160deg,#30405E,#151D2C 60%,#0B1220)}
+.p-azalea{background:radial-gradient(45% 25% at 25% 70%,#C2457A,transparent 70%),radial-gradient(40% 22% at 78% 66%,#D25C8A,transparent 70%),linear-gradient(180deg,#9DB7D9 0%,#5F8F5A 40%,#2E5E33 100%)}
+.p-suite{background:linear-gradient(180deg,#141C2B,#26354F 50%,#3B4F70)}
+.p-group{background:linear-gradient(180deg,#0F1A2D,#22406A 40%,#2F7A44 41%,#2B6B3C)}
+.p-blue{background:var(--brand)}
+.p-night{background:radial-gradient(90% 50% at 50% 0%,#22365A,transparent 70%),var(--night)}
+.txt{position:absolute;left:14px;right:14px;z-index:3;display:grid;gap:6px}
+.txt.top{top:15%} .txt.mid{top:50%;transform:translateY(-50%)} .txt.low{bottom:21%}
+.big{font:800 30px/0.95 var(--display);text-transform:uppercase;letter-spacing:.005em}
+.big.xl{font-size:34px}
+.big.md{font-size:22px}
+.small{font-size:11.5px;line-height:1.35;color:var(--chalk-dim)}
+.tag{font:500 9.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--chalk-dim)}
+.sticker{background:var(--sticker);color:var(--sticker-ink);border-radius:12px;padding:9px 10px;font-size:11px;box-shadow:0 4px 14px rgba(0,0,0,.25);display:grid;gap:6px}
+.sticker .q{font-weight:700;font-size:11.5px;text-align:center}
+.poll{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.poll span,.quiz span{background:#EEF1F5;border-radius:8px;padding:6px 4px;text-align:center;font-weight:600}
+.quiz{display:grid;gap:4px}
+.quiz span{text-align:left;padding:5px 8px}
+.quiz span.right{background:#D9F2E3}
+.ask{background:#EEF1F5;border-radius:8px;padding:7px;color:#6B7585;text-align:center}
+.count{text-align:center}
+.count .n{font:800 22px var(--display);letter-spacing:.04em}
+.link{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--brand);border-radius:8px;padding:7px 11px;font:700 11px var(--body);width:max-content;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.link::before{content:"";width:10px;height:10px;border:2px solid currentColor;border-radius:50%;border-right-color:transparent}
+.review{background:rgba(255,255,255,.96);color:#1A1A1A;border-radius:12px;padding:10px;font-size:11px;display:grid;gap:5px}
+.review .stars{letter-spacing:2px;color:#E7A600;font-size:12px}
+.review .who{font-weight:700;font-size:10.5px}
+.review .src{font:500 9px var(--mono);color:#666;text-transform:uppercase}
+.safe{position:absolute;inset:0;z-index:6;pointer-events:none;display:none}
+.safe::before,.safe::after{content:"";position:absolute;left:0;right:0;background:repeating-linear-gradient(45deg,rgba(255,80,80,.28) 0 6px,rgba(255,80,80,.12) 6px 12px)}
+.safe::before{top:0;height:14%} .safe::after{bottom:0;height:20%}
+body.show-safe .safe{display:block}
+
+/* bottom sections */
+section.block{border-top:1px solid var(--line);padding-block:30px;display:grid;gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.list{margin:0;padding-left:18px;display:grid;gap:8px}
+.list li{padding-left:2px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:500}
+.tablewrap{overflow-x:auto}
+.check{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.check li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px}
+.check li::before{content:"";width:14px;height:14px;border:1.5px solid var(--muted);border-radius:3px;margin-top:4px}
+.src a,a.src,.list a{color:var(--brand)}
+td{min-width:120px}
+.foot{font-size:12.5px;color:var(--muted)}
+
+@media (max-width:900px){
+  .story{grid-template-columns:minmax(0,1fr)}
+  .week{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid2{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+
+<div class="wrap">
+<style>
+.kit{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);text-decoration:none;font:600 14px var(--body);padding:12px 18px;border-radius:10px}
+.btn.alt{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.btn:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.day-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;margin-top:8px}
+.post td:first-child{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+td code{font-family:var(--mono);font-size:12px;background:var(--bg);padding:1px 5px;border-radius:4px;word-break:break-all}
+.post .none{color:var(--muted)}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:10px 0 4px}
+.why div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:13.5px;display:grid;gap:4px}
+.why b{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.dm{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:13.5px;display:grid;gap:6px}
+.dm b{font-family:var(--mono);font-size:12px}
+.dm p{margin:0;color:var(--ink)}
+@media (max-width:900px){.why{grid-template-columns:minmax(0,1fr)}}
+</style>
+<header class="top">
+  <span class="eyebrow">ServicePOW × TripNerd · Instagram Stories · Week 1 (Mon 5 – Fri 9 Oct 2026) · v3</span>
+  <h1>TripNerd Story Week</h1>
+  <p class="lede">24 finished frames, built after reading TripNerd's own Instagram. Their feed already tells people TripNerd is VIP, handles the details and knows the right people. These Stories prove it instead: insider knowledge, real stakes, real review data and real deadlines, each ending in a DM keyword. Every set still follows the growth plan: 10 AM ET, a frame promoting each new feed post, and links with tracking tags.</p>
+  <div class="kit">
+    <a class="btn" href="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/3baddf76-515d-413b-8b3f-3f18f969f853.jpg">See all 24 frames</a>
+    <a class="btn alt" href="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0i4XLf4zirKambECqGr0AGq93/923c510a-90d0-463c-8fc5-5d52daa28911.zip">Download posting files (ZIP, 4.7 MB)</a>
+  </div>
+  <p class="foot" style="margin-top:10px"><b>post/</b> holds the clean frames to upload. <b>preview/</b> shows where each sticker goes as a dashed gold box. Stickers are added in the Instagram app.</p>
+</header>
+
+<section class="block">
+  <span class="eyebrow">What we found on @tripnerd</span>
+  <h2>Their feed already says it. Nobody believes it yet.</h2>
+  <p class="lede" style="margin-top:0">We read the 21 most recent posts (13 Aug – 1 Oct 2026) and the 3 pinned ones. Instagram rate-limited anything older. 19 of the 21 are the same template: a gallery photo with a blue headline bar. The median post gets 2 likes. The two outliers (140 and 75 likes) look boosted, which we'll confirm in Insights.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Theme they've already posted</th><th>Times</th><th>Example line</th><th>How the Stories avoid repeating it</th></tr></thead>
+    <tbody>
+      <tr><td>Knowing the right people</td><td>3</td><td>"How'd they get that? It's knowing the right people."</td><td>Not used. Thursday shows <em>who</em> those people are (Jason, named in 7 of 15 reviews) instead of claiming access.</td></tr>
+      <tr><td>Bucket list to booked</td><td>4</td><td>"Turn someday into booked."</td><td>Not used. Friday gives a hard deadline instead: 14 days.</td></tr>
+      <tr><td>Details handled, stress-free</td><td>4</td><td>"The details are already handled."</td><td>Not claimed. Monday shows the details (phones, payphones, arrival day). Thursday lets 6 reviewers say "detail" for us.</td></tr>
+      <tr><td>Skip the client dinner</td><td>2</td><td>"Hosting clients? Skip another dinner."</td><td>Dropped from the last version, where it was a near-copy. Tuesday sells the planning calendar instead.</td></tr>
+      <tr><td>Memories last; don't just attend</td><td>3</td><td>"The game ends. The memories don't."</td><td>Not used anywhere.</td></tr>
+      <tr><td>Nerd wordplay</td><td>1</td><td>"Access Nerd. Hospitality Nerd. Hotel Nerd…"</td><td>Kept as the brand device, but every "Nerd" line has to earn it with a fact (the "Trip like a Nerd" tagline is from their site).</td></tr>
+    </tbody>
+  </table></div>
+  <p class="foot">Visual change: their feed is photo plus blue bar. These Stories use a graph-paper "Nerd Notes" notebook with red-pen circles, highlighter and planner pages, plus one bold navy anti-ad set. They're recognisably TripNerd (Poppins, Inter, brand blue, navy and gold) but don't look like the feed.</p>
+</section>
+
+<section class="block">
+  <span class="eyebrow">The marketing angle</span>
+  <h2>Sell the Nerd, not the trip</h2>
+  <p class="lede" style="margin-top:0">Everyone in premium sports travel says "VIP" and "unforgettable." TripNerd's name is the one thing a competitor can't copy, so every Story has to prove that a Nerd knows something useful. Each set does at least one job: teach something the viewer didn't know, show what goes wrong without a Nerd, prove it with TripNerd's own reviews, or give a real reason to act now. "Here's our trip" photos appear only as supporting evidence.</p>
+  <p class="foot">Each concept was put through a separate red-team review: would a competitor run it unchanged, what would a viewer remember, and is it actually marketing. Concepts that failed were cut: "Nerd vs Google", the client-value slider, the Add Yours chain (which stays empty on an account getting 2 likes), the 3 a.m. call (we can't promise overnight support until TripNerd confirms it), and 17th-hole trivia.</p>
+</section>
+
+<section class="block">
+  <span class="eyebrow">Day by day</span>
+  <h2>The five Stories</h2>
+
+  <div class="day-h"><h3>Mon · Nerd Notes: Augusta</h3><span class="stage">Fans</span><span class="stage">Feed: Reel 01 "Augusta, by the clock", 2 PM</span></div>
+  <div class="why"><div><b>Hook</b>A pop quiz: what does a pimento cheese sandwich cost at Augusta? ($1.50, unchanged since 2002.)</div><div><b>Why it sells</b>A fun fact opens the set; the stakes close it. Get caught with a phone and you can lose your credentials for good. Knowing that before you go is exactly what a Nerd is for.</div><div><b>Action</b>DM AUGUSTA for the cheat sheet (script below).</div></div>
+  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>Add in the app</th></tr></thead><tbody>
+    <tr><td>mon-1</td><td>Quiz: <code>What does a pimento cheese sandwich cost at Augusta?</code> · <code>$1.50</code> (correct) / <code>$8</code> / <code>$15</code></td></tr>
+    <tr><td>mon-2–4</td><td class="none">Nothing. $1.50 reveal → phone rule and free payphones → Rookie vs Nerd arrival day</td></tr>
+    <tr><td>mon-5 · 2 PM</td><td>Share Reel 01 onto this frame</td></tr>
+  </tbody></table></div>
+
+  <div class="day-h"><h3>Tue · The client-week calendar</h3><span class="stage">Corporate hosts</span><span class="stage">Feed: Carousel 02 "What corporate hosts get wrong", 1 PM</span></div>
+  <div class="why"><div><b>Hook</b>Poll: "The last thing you did for your top client?" Dinner / Box seats / Gift basket / Nothing yet.</div><div><b>Why it sells</b>Hosts book about a year out. Showing the October-to-April calendar makes "start now" feel like normal planning rather than a sales push, and "Every month you wait is one less choice" answers the "we'll do it in spring" objection.</div><div><b>Action</b>DM HOST for the client-week planner.</div></div>
+  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>Add in the app</th></tr></thead><tbody>
+    <tr><td>tue-1</td><td>Poll (4 options): <code>Dinner</code> / <code>Box seats</code> / <code>Gift basket</code> / <code>Nothing yet</code></td></tr>
+    <tr><td>tue-4</td><td>Link: <code>https://www.tripnerd.com/contact?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-tue-corporate</code></td></tr>
+    <tr><td>tue-5 · 1 PM</td><td>Share carousel 02 onto this frame</td></tr>
+  </tbody></table></div>
+
+  <div class="day-h"><h3>Wed · Don't book with TripNerd if…</h3><span class="stage">Both</span><span class="stage">No feed post</span></div>
+  <div class="why"><div><b>Hook</b>An anti-ad: "Don't book with TripNerd if…"</div><div><b>Why it sells</b>Each line names a real event-specific pain: parking at Churchill Downs, 2 a.m. resale refreshing, eight people and no beds in Augusta. It filters for people who'd rather pay than suffer, and the payoff uses their own tagline: "You trip like a Nerd."</div><div><b>Action</b>DM NERD with the event.</div></div>
+  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>Add in the app</th></tr></thead><tbody>
+    <tr><td>wed-4</td><td>Poll: <code>Been there?</code> · <code>Yes, painfully</code> / <code>Not yet</code></td></tr>
+    <tr><td>wed-5</td><td>Link: <code>https://www.tripnerd.com/?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-wed-nerd</code></td></tr>
+  </tbody></table></div>
+
+  <div class="day-h"><h3>Thu · Review X-ray</h3><span class="stage">Corporate hosts + fans</span><span class="stage">Feed: Proof post 04, 12:30 PM</span></div>
+  <div class="why"><div><b>Hook</b>Quiz: "15 guests. How many mention Jason by name?" (7.)</div><div><b>Why it sells</b>Proof from data, not adjectives. Seven of fifteen reviews name the person who ran their trip, and six use the word "detail." Risk-averse corporate buyers want a person, not a call centre.</div><div><b>Action</b>DM NERD.</div></div>
+  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>Add in the app</th></tr></thead><tbody>
+    <tr><td>thu-1</td><td>Quiz: <code>How many of 15 reviews mention Jason?</code> · <code>2</code> / <code>4</code> / <code>7</code> (correct)</td></tr>
+    <tr><td>thu-4</td><td>Link: <code>https://www.tripnerd.com/reviews?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-thu-proof</code></td></tr>
+    <tr><td>thu-5 · 12:30 PM</td><td>Share proof post 04 onto this frame</td></tr>
+  </tbody></table></div>
+  <p class="foot">Counts come from all 15 reviews on tripnerd.com/reviews, read 4 Oct 2026: "Jason" or "JD" appears in 7, "detail" in 6. The two quotes are whole sentences, word for word.</p>
+
+  <div class="day-h"><h3>Fri · The Big Game is on Valentine's Day</h3><span class="stage">Fans</span><span class="stage">Feed: Trial Reel, 11 AM (not promoted)</span></div>
+  <div class="why"><div><b>Hook</b>Poll: Sun Feb 14 is the Big Game <em>and</em> Valentine's Day. "Dinner for two / Two seats in LA."</div><div><b>Why it sells</b>The real stakes: the conference championships are Jan 31, so a fan whose team makes it gets 14 days to sort flights, hotel and tickets in LA, the same 14 days as everyone else from their city. That's a reason to act now that no slogan gives.</div><div><b>Action</b>DM BIGGAME with your team.</div></div>
+  <div class="tablewrap"><table class="post"><thead><tr><th>Frame</th><th>Add in the app</th></tr></thead><tbody>
+    <tr><td>fri-1</td><td>Poll: <code>Valentine's Day plans?</code> · <code>Dinner for two</code> / <code>Two seats in LA</code></td></tr>
+    <tr><td>fri-4</td><td>Countdown: <code>The Big Game · LA</code> ending 14 Feb 2027 · Link: <code>https://www.tripnerd.com/contact?utm_source=instagram&amp;utm_medium=story&amp;utm_campaign=wk1-fri-biggame</code>, text <code>Get a quote</code></td></tr>
+  </tbody></table></div>
+</section>
+
+<section class="block">
+  <span class="eyebrow">DM replies</span>
+  <h2>What ServicePOW sends back</h2>
+  <p class="lede" style="margin-top:0">Every Story promises something in the DMs, so the promise has to exist. A person sends these within 1 business hour, Mon–Fri 9 AM–6 PM ET, until ManyChat is live. The plan's keyword example was "AUGUSTA", so these are built to load straight into ManyChat later.</p>
+  <div class="grid2">
+    <div class="dm"><b>AUGUSTA · Nerd Notes cheat sheet</b><p>Augusta Nerd Notes: 1) No phones on the grounds. Get caught with one and you can lose your badge for good. Leave it in the car; there are free public phones on the course. 2) The pimento cheese and egg salad sandwiches were $1.50 on the 2026 menu, the same price since 2002. 3) Grandstand seats are first come, first served, and it's one folding chair per person. Rules are as reported for recent tournaments; check the current patron policy before you go. Lunch is the easy part. Want the house, the passes and the logistics handled? Reply with your group size and dates. We answer within one business hour, Mon–Fri 9–6 ET.</p></div>
+    <div class="dm"><b>HOST · Client-week planner</b><p>Here's how a client week comes together: pick the event and headcount now, lock the private house next, send invitations in January, a guest briefing goes out before the trip, then you host. To start: which company, roughly how many guests, which event (Augusta, Derby, THE PLAYERS, Phoenix, Daytona), and do you have a budget range?</p></div>
+    <div class="dm"><b>NERD · Intro</b><p>Hey, you've found the Nerds. Which event are you thinking about, how many people, and is this for clients or for your crew? We'll come back with options.</p></div>
+    <div class="dm"><b>BIGGAME · Standby</b><p>Love it. Which team, how many in your group, and do you need flights and a hotel or just the game-day experience? We'll send LA options now, so you're ready to move the moment your team clinches.</p></div>
+  </div>
+  <p class="foot">Each reply only states facts we've sourced. The AUGUSTA reply was replaced on 2026-10-05 by the evidence-checked version shared with the Augusta Reel (phone rule, free phones and prices from press coverage; grandstands and the offer line from TripNerd's Augusta page); see evidence-records.md, EV-tripnerd-001 to 008. Consider switching this keyword to NERDNOTES so genuine Augusta questions reach a person. Have TripNerd check the HOST timeline and the BIGGAME wording before Tuesday and Friday.</p>
+</section>
+
+<section class="block">
+  <span class="eyebrow">Before Monday</span>
+  <h2>What TripNerd needs to confirm</h2>
+  <div class="grid2">
+    <ul class="check">
+      <li>The approver signs off on all 24 frames (the plan says nothing posts unapproved)</li>
+      <li>Partner access to Instagram and Meta Business Suite</li>
+      <li><b>Jason:</b> is he still at TripNerd, and is he OK being the face of Thursday? Reviews name him, and the 2023 acquisition moved him to All Access Events.</li>
+      <li><b>Tuesday's calendar</b> (Oct pick, Nov lock the house, Jan invitations, Mar briefing, Apr host) matches how TripNerd actually runs a client week</li>
+      <li>LA Big Game packages are on sale, and someone can answer BIGGAME DMs with options</li>
+    </ul>
+    <ul class="check">
+      <li>Monday's taped photo shows four identifiable guests. The plan's rule is consent, so confirm it or swap the photo.</li>
+      <li>Push frames go up only once their feed post is live. If Reel 01 slips, drop mon-5 and the 2 PM line on mon-4.</li>
+      <li>Music, if added: Instagram's commercial-use library only</li>
+      <li>Monday report: quiz and poll taps, DMs by keyword (AUGUSTA, HOST, NERD, BIGGAME), link taps by tag, exits per frame</li>
+    </ul>
+  </div>
+  <p class="foot">Sources: <span class="src"><a href="https://www.kunc.org/npr-news/2026-04-09/how-a-cheese-sandwich-at-the-masters-is-still-1-50-in-an-era-of-price-hikes">NPR via KUNC, $1.50 sandwich (Apr 2026)</a> · <a href="https://www.golfmonthly.com/tour/the-masters/what-is-the-masters-phone-policy">Golf Monthly, phone policy</a> · <a href="https://www.nbcsandiego.com/news/national-international/cell-phones-are-banned-at-the-masters-golf-tournament-heres-why/2914639/?amp=1&amp;os=w">NBC, phones and payphones</a> · <a href="https://www.tripnerd.com/events/augusta-experience">TripNerd Augusta Experience</a> · <a href="https://www.tripnerd.com/reviews">tripnerd.com/reviews</a> · <a href="https://www.excelsior.com.mx/deportes/super-bowl-2027-donde-es-calendario-nfl">Excelsior, Jan 31 championships, Feb 14 Valentine's Day</a> · <a href="https://www.cbsnews.com/amp/losangeles/news/super-bowl-lxi-to-be-played-at-sofi-stadium-in-2027">CBS, SoFi 2027</a></span></p>
+</section>
+</div>

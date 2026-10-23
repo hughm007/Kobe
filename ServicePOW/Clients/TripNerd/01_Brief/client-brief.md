@@ -1,0 +1,82 @@
+---
+title: "TripNerd — Client Brief"
+type: brief
+client: tripnerd
+owner: Karl
+status: active
+created: 2026-08-24
+updated: 2026-10-05
+tags: [client, brief]
+source: Drive "ServicePow OS 2" — 04, 05, 37_EMAIL_MARKETING_OFFERING.md (synced 2026-08-25)
+---
+
+# TripNerd — Client Brief
+
+> **Current engagement (2026-10-05):** **October 2026 Instagram test month, $1,500, agreed verbally** (meeting 2026-10-04; nothing in writing yet; October invoice to send).
+> **Posting from Wed 7 Oct, subject to TripNerd's named approver** (no approver named yet). The 90-day plan (Deck A) is on hold until the review in the first week of November.
+> - Plan: [`2026-10-test-month-plan.md`](campaigns/2026-10-instagram-growth/2026-10-test-month-plan.md). Campaign folder, tracker and ops: [`campaigns/2026-10-instagram-growth/`](campaigns/2026-10-instagram-growth/README.md).
+> - October: 4 new Reels and 4 new statics, plus the 3 owed September adverts at no charge (11 posts); Stories Mon/Wed/Fri; Monday report; 20 min of engagement every weekday. CEO: Jason.
+> - September 2026 (invoice TN-2026-09, $1,200, paid): 2 video adverts delivered (Their Camera Roll, VIP Hosting Spot). Owed and posting in October: 1 video ("Two ways to see the 17th", Wed 7 Oct) and 2 carousels (VIP Fan Experiences, an unfinished draft needing TripNerd's photos; Augusta, after TripNerd's written confirmations).
+
+**Active, standard client.** tripnerd.com — premium fan experiences: marquee sports
+hospitality (Super Bowl, Augusta, field-level access). Buyers decide roughly **a year
+out**; a company buying corporate hospitality for eight clients is a distinct, higher-
+ticket B2B track. Confidence: VERIFIED.
+
+## Standing media authorization (2026-09-28)
+**Taylor (TripNerd) has authorised Service Pow to use any TripNerd photos, videos and assets in
+TripNerd's advertising.** Relayed in writing by the owner on 2026-09-28, with the instruction to
+always assume it for TripNerd. Confidence: CONFIRMED (the owner's written statement).
+- **Covers:** TripNerd's own footage and photos, including footage filmed at the venues where it
+  hosts and its on-site crowd recordings; its logos and brand files; using any of these as
+  generation references; showing the venues where TripNerd hosts. Do not re-ask per campaign.
+- **Cannot cover (not TripNerd's to give):** third-party marks (THE PLAYERS, PGA TOUR, Masters and
+  Augusta names and logos, sponsors, broadcast graphics) stay out of every advert; the likeness of
+  identifiable guests in TripNerd's footage still needs those guests' releases. Ask Taylor once
+  whether event terms include photo consent, and only for an advert that shows a guest's face.
+
+## Instagram — current main focus (owner decision, 2026-10-05)
+
+**Brand awareness and engagement come first for the 90-day plan (5 Oct 2026 – 2 Jan
+2027):** make @tripnerd a page people find, enjoy, follow and interact with. Primary
+metrics: views from non-followers, watch time/completion, sends, saves, follows per reach,
+comments. Enquiries and bookings stay the business outcome. Borrow popular formats (food
+reviews, rankings, price breakdowns, POV) but keep the subject inside TripNerd's world.
+Full system, rules and Grok prompts: `instagram-content-system.md` (merged from branch quirky-davinci).
+TripNerd's approver still needs to be told the primary KPI changed.
+
+## Standing approvals (owner-recorded)
+- **Guest consent for TripNerd's own footage — CONFIRMED, standing.** 2026-10-06: the owner
+  reported that Jason (TripNerd contact) confirmed the guests shown in TripNerd's footage are
+  fine to feature, and instructed: "Always assume that." Applies to identifiable guests in
+  TripNerd's own archive footage. Does not cover footage from other companies (e.g. All Access
+  watermarked/branded clips) or anyone who asks to be removed.
+
+## Brand
+White wordmark, nerd-head mark, brand blue. **Brand standards win outright** over any
+reference palette. Archetype for web/creative: Cinematic (G), story pages Warm editorial (A).
+
+## Video work — the honest state
+**As of the 2026-08-25 Drive sync: creative health RED, zero live deliverables.** That line is dated: see the engagement state at the top. Nothing from the October test month is live yet (first post Wed 7 Oct, subject to approval). **NEEDS INPUT:** whether TripNerd has posted either delivered September video itself.
+- "The Seat" 30s brand film — QC FAIL (owner 6.5/10): hook absent, uniformly slow,
+  stitched audio, weak CTA. Rebuild pending.
+- "The Reversal" v3 — **killed 2026-08-20** on first human watch (7 owner findings).
+- "The Parking Lot" — **rejected 2026-08-21, compliance-fatal, unrepairable**: a
+  synthetic person delivering a first-person customer testimonial violates the FTC Fake
+  Reviews Rule; disclosure does not cure it — the *form* is the violation.
+- **Approved and unstarted: the owner's-hook rebuild** — open on a man visibly unhappy
+  with where he's sitting → pay off with where TripNerd seats him. Reads in one second,
+  no dialogue, moves the payoff from a crowd to a face.
+
+## Email — the expansion play (scoped, unstarted)
+The diagnosis (verified from their site): **no email platform, no signup form anywhere,
+contact form drops into an inbox.** Their unknown asset: nine years of past attendees,
+43 five-star Google reviewers, every form submission since the Webflow migration —
+that's the seed list; ask for the export first.
+Programs in order of money: per-event notify-me lists (the centrepiece) → on-sale
+alerts → welcome sequence → post-trip review request → annual re-book → win-back.
+Segment by sport and buyer type. Lead magnet: the 2027-28 marquee event calendar.
+**Risks to raise as scoping findings:** a 9-year list cannot be blasted (validate,
+recent-first waves, re-permission, sunset the dead); their form collects SMS consent for
+a channel they don't run; CAN-SPAM address currently resolves to a residential condo.
+Full doctrine: `../../playbooks/content/email-marketing.md`.

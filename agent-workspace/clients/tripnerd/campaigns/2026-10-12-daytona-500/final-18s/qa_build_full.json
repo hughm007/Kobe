@@ -1,0 +1,272 @@
+{
+ "layout": "full",
+ "cuts": [
+  {
+   "t": "0.0-2.0",
+   "what": "lanyard entrance (card-open-2.0s: suite photo, drawn strap with unmirrored STAFF, Grok-animated TV), white-out 1.7-2.0"
+  },
+  {
+   "t": "2.0-4.0",
+   "what": "V06 frames 60-103 (30 fps source), 73% speed"
+  },
+  {
+   "t": "4.0-7.5",
+   "what": "V05 frames 0-83 (24 fps source, 0.000-3.500 s), real speed"
+  },
+  {
+   "t": "11.5-14.5",
+   "what": "Photo A still (EXIF 2023-02-19 18:56), native 1024x771"
+  }
+ ],
+ "photos": [
+  {
+   "file": "tripnerd_gallery_07.jpg",
+   "full_bleed_crop": [
+    590,
+    0,
+    1024,
+    771
+   ]
+  },
+  {
+   "file": "tripnerd-daytona_father-son-seats.jpg",
+   "full_bleed_crop": [
+    499,
+    0,
+    800,
+    535
+   ]
+  },
+  {
+   "file": "tripnerd-daytona_wow-guests.jpg",
+   "full_bleed_crop": [
+    499,
+    0,
+    800,
+    535
+   ]
+  },
+  {
+   "file": "tripnerd_gallery_05.jpg",
+   "full_bleed_crop": [
+    360,
+    0,
+    772,
+    733
+   ]
+  }
+ ],
+ "logo": [
+  370,
+  1413,
+  710,
+  1538
+ ],
+ "text": [
+  {
+   "beat": 0,
+   "card": "Our Daytona suite.",
+   "text": "Our Daytona suite.",
+   "box": [
+    111,
+    330,
+    969,
+    418
+   ]
+  },
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "This beats watching",
+   "box": [
+    78,
+    1120,
+    1001,
+    1208
+   ]
+  },
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "from home.",
+   "box": [
+    274,
+    1224,
+    806,
+    1290
+   ]
+  },
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "2024",
+   "box": [
+    920,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "Race weekend,",
+   "box": [
+    191,
+    1108,
+    888,
+    1186
+   ]
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "the TripNerd way.",
+   "box": [
+    133,
+    1202,
+    946,
+    1290
+   ]
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "2024",
+   "box": [
+    920,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 3,
+   "card": "Headsets on. Drinks up.",
+   "text": "Headsets on.",
+   "box": [
+    244,
+    330,
+    836,
+    395
+   ]
+  },
+  {
+   "beat": 3,
+   "card": "Headsets on. Drinks up.",
+   "text": "Drinks up.",
+   "box": [
+    306,
+    411,
+    774,
+    498
+   ]
+  },
+  {
+   "beat": 3,
+   "card": "Headsets on. Drinks up.",
+   "text": "2023",
+   "box": [
+    923,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 4,
+   "card": "Thumbs up from the seats.",
+   "text": "Thumbs up",
+   "box": [
+    669,
+    300,
+    1040,
+    359
+   ]
+  },
+  {
+   "beat": 4,
+   "card": "Thumbs up from the seats.",
+   "text": "from the",
+   "box": [
+    753,
+    373,
+    1040,
+    421
+   ]
+  },
+  {
+   "beat": 4,
+   "card": "Thumbs up from the seats.",
+   "text": "seats.",
+   "box": [
+    849,
+    435,
+    1040,
+    478
+   ]
+  },
+  {
+   "beat": 5,
+   "card": "Bring your people.",
+   "text": "Bring your people.",
+   "box": [
+    116,
+    330,
+    964,
+    418
+   ]
+  },
+  {
+   "beat": 6,
+   "card": "The burnout. The memories.",
+   "text": "The burnout.",
+   "box": [
+    250,
+    330,
+    830,
+    394
+   ]
+  },
+  {
+   "beat": 6,
+   "card": "The burnout. The memories.",
+   "text": "The memories.",
+   "box": [
+    208,
+    410,
+    872,
+    479
+   ]
+  },
+  {
+   "beat": 6,
+   "card": "The burnout. The memories.",
+   "text": "2023",
+   "box": [
+    923,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  }
+ ],
+ "race_gain_db": -9.7,
+ "burn_gain_db": -7.7,
+ "premaster": {
+  "input_i": "-17.19",
+  "input_tp": "-4.64",
+  "input_lra": "4.60",
+  "input_thresh": "-27.48",
+  "output_i": "-13.28",
+  "output_tp": "-1.50",
+  "output_lra": "3.70",
+  "output_thresh": "-23.56",
+  "normalization_type": "dynamic",
+  "target_offset": "-0.72"
+ }
+}

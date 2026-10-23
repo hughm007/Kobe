@@ -38,6 +38,7 @@ Then, in order:
 ├── client-brief.md          who they are, what they want, how we're measured
 ├── brand-guide.md           their voice, their look — governs all their materials
 ├── access-and-accounts.md   where access lives and who holds it (never the credentials)
+├── asset-register.md        real client files: sha256, provenance, never-generate flags (ingest appends here)
 ├── campaigns/               one folder or file per campaign
 ├── deliverables/            finished work sent to the client
 └── notes/                   dated meeting and call notes
@@ -48,8 +49,11 @@ Then, in order:
 | Client | Folder | Status | Services | Owner |
 |---|---|---|---|---|
 | 911 Drain | [`911drain/`](911drain/) | **Active** — main account | **NEEDS INPUT** | Karl |
-| TripNerd | [`tripnerd/`](tripnerd/) | Prospect | — | Karl |
-| WaveReaction | [`wavereaction/`](wavereaction/) | Prospect | — | Karl |
+| TripNerd | [`ServicePOW/Clients/TripNerd/`](../../ServicePOW/Clients/TripNerd) (moved 2026-10-08 to the 01–08 production structure) | Active | — | Karl |
+| WaveReaction | [`wavereaction/`](wavereaction/) | **Unknown — NEEDS INPUT** (brief says operator-confirmed client; CLAUDE.md and OPEN-QUESTIONS say unknown). Treat as prospect-gated until the owner confirms. | — | Karl |
+| Copperline Coffee | [`copperline-coffee/`](copperline-coffee/) | **TEST CLIENT** — Run 16 fixture. Never do client work. | — | — |
+| Desert Aire Cooling | [`desert-aire-cooling/`](desert-aire-cooling/) | **TEST CLIENT** — Run 16 fixture. Never do client work. | — | — |
+| Molar Bright Dental | [`molar-bright-dental/`](molar-bright-dental/) | **TEST CLIENT** — Run 16 fixture. Never do client work. | — | — |
 
 ### Active vs. prospect
 

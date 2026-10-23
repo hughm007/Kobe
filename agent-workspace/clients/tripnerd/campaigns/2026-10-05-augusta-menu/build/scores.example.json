@@ -1,0 +1,7 @@
+{
+  "names": ["FirstNameA", "FirstNameB"],
+  "scores": {"chips": [6, 5], "straws": [7, 6], "pimento": [8, 9], "peach": [9, 7], "egg": [9, 10]},
+  "made": {"chips": false, "straws": true, "pimento": true, "peach": false, "egg": true},
+  "leftovers": true,
+  "receipt": "0.00"
+}

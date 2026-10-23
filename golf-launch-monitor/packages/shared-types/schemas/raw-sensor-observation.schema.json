@@ -1,0 +1,486 @@
+{
+  "$id": "https://golf-launch-monitor.local/schemas/glm-schema-0.1.0/raw-sensor-observation.schema.json",
+  "title": "raw-sensor-observation",
+  "description": "Generated from @glm/shared-types (glm-schema-0.1.0). Cross-field invariants (e.g. a null measurement value requires source 'unavailable') are enforced by the runtime zod schemas and are not all expressible in JSON Schema.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "sensorId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "timestampS": {
+          "type": "number"
+        },
+        "kind": {
+          "type": "string",
+          "const": "trigger"
+        },
+        "triggerSource": {
+          "type": "string",
+          "enum": [
+            "microphone",
+            "beam-break",
+            "ball-motion",
+            "club-proximity",
+            "synthetic",
+            "manual"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "sensorId",
+        "sequence",
+        "timestampS",
+        "kind",
+        "triggerSource",
+        "confidence"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "sensorId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "timestampS": {
+          "type": "number"
+        },
+        "kind": {
+          "type": "string",
+          "const": "ball-address"
+        },
+        "positionM": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "z": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "z"
+          ],
+          "additionalProperties": false
+        },
+        "stationary": {
+          "type": "boolean"
+        },
+        "inHittingZone": {
+          "type": "boolean"
+        },
+        "ballCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "sensorId",
+        "sequence",
+        "timestampS",
+        "kind",
+        "positionM",
+        "stationary",
+        "inHittingZone",
+        "ballCount",
+        "confidence"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "sensorId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "timestampS": {
+          "type": "number"
+        },
+        "kind": {
+          "type": "string",
+          "const": "ball-detection-2d"
+        },
+        "cameraId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "frameIndex": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "centerPx": {
+          "type": "object",
+          "properties": {
+            "u": {
+              "type": "number"
+            },
+            "v": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "u",
+            "v"
+          ],
+          "additionalProperties": false
+        },
+        "radiusPx": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "sensorId",
+        "sequence",
+        "timestampS",
+        "kind",
+        "cameraId",
+        "frameIndex",
+        "centerPx",
+        "radiusPx",
+        "confidence"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "sensorId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "timestampS": {
+          "type": "number"
+        },
+        "kind": {
+          "type": "string",
+          "const": "ball-position-3d"
+        },
+        "frameIndex": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "positionM": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "z": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "z"
+          ],
+          "additionalProperties": false
+        },
+        "covarianceM2": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "reprojectionErrorPx": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "detectionConfidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "cameraIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "sensorId",
+        "sequence",
+        "timestampS",
+        "kind",
+        "frameIndex",
+        "positionM",
+        "covarianceM2",
+        "reprojectionErrorPx",
+        "detectionConfidence",
+        "cameraIds"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "sensorId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "timestampS": {
+          "type": "number"
+        },
+        "kind": {
+          "type": "string",
+          "const": "spin"
+        },
+        "method": {
+          "type": "string",
+          "enum": [
+            "marked-ball",
+            "dimple-tracking",
+            "radar-doppler",
+            "synthetic"
+          ]
+        },
+        "angularVelocityRadPerSec": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "z": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "z"
+          ],
+          "additionalProperties": false
+        },
+        "covarianceRad2PerS2": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "validObservationCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "fitResidualRad": {
+          "type": "number",
+          "minimum": 0
+        },
+        "qualityFlags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "sensorId",
+        "sequence",
+        "timestampS",
+        "kind",
+        "method",
+        "angularVelocityRadPerSec",
+        "covarianceRad2PerS2",
+        "validObservationCount",
+        "fitResidualRad",
+        "qualityFlags"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "sensorId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "timestampS": {
+          "type": "number"
+        },
+        "kind": {
+          "type": "string",
+          "const": "health"
+        },
+        "health": {
+          "type": "object",
+          "properties": {
+            "sensorId": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "ok",
+                "degraded",
+                "failed",
+                "disconnected"
+              ]
+            },
+            "checkedUtc": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d+)?(?:Z))$"
+            },
+            "metrics": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "unit": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "type": "string",
+                    "enum": [
+                      "ok",
+                      "warn",
+                      "fail",
+                      "unknown"
+                    ]
+                  },
+                  "detail": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "label",
+                  "value",
+                  "unit",
+                  "status",
+                  "detail"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "messages": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "calibrationStatus": {
+              "type": "string",
+              "enum": [
+                "green",
+                "yellow",
+                "red",
+                "none"
+              ]
+            }
+          },
+          "required": [
+            "sensorId",
+            "status",
+            "checkedUtc",
+            "metrics",
+            "messages",
+            "calibrationStatus"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "sensorId",
+        "sequence",
+        "timestampS",
+        "kind",
+        "health"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

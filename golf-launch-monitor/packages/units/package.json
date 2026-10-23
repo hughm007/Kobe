@@ -1,0 +1,11 @@
+{
+  "name": "@glm/units",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Exact unit conversions and golfer-facing formatting. SI internally; conversions at display/export boundaries only.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {}
+}

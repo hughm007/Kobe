@@ -9,6 +9,8 @@ updated: 2026-08-24
 tags: [ads, paid-media, campaign, launch]
 ---
 
+> **CANONICAL OWNER:** `servicepow-campaign-director` + `_servicepow/policies/generation-and-spend.md` (SPEND_APPROVER gate). This playbook is reference; where they differ, the skill wins.
+
 # Campaign Launch
 
 **When to use:** any paid campaign, on any platform.

@@ -1,0 +1,85 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "photo",
+   "box": [
+    54,
+    241,
+    1026,
+    619
+   ],
+   "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c1-photo.png"
+  },
+  {
+   "role": "logo",
+   "box": [
+    70,
+    79,
+    415,
+    205
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    651,
+    729,
+    965
+   ],
+   "font_px": 84,
+   "text": "Hosting clients at a golf tournament?",
+   "contrast": 4.89
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    989,
+    708,
+    1102
+   ],
+   "font_px": 44,
+   "text": "Four moments make or break a hosted day.",
+   "contrast": 4.89
+  },
+  {
+   "role": "label",
+   "box": [
+    54,
+    1122,
+    628,
+    1166
+   ],
+   "font_px": 32,
+   "text": "Arrival \u00b7 The view \u00b7 Food \u00b7 The exit",
+   "contrast": 4.89
+  },
+  {
+   "role": "cta",
+   "box": [
+    74,
+    1208,
+    247,
+    1262
+   ],
+   "font_px": 42,
+   "text": "Swipe \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c1.png",
+ "sha256": "9601f55b9d28bfbb"
+}

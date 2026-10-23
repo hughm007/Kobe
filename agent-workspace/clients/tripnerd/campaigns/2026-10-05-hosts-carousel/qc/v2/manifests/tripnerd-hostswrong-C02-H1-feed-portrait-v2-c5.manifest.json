@@ -1,0 +1,87 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    70,
+    79,
+    415,
+    205
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "numeral",
+   "box": [
+    471,
+    67,
+    569,
+    219
+   ],
+   "font_px": 140,
+   "text": "4",
+   "contrast": 5.15
+  },
+  {
+   "role": "label",
+   "box": [
+    601,
+    133,
+    817,
+    179
+   ],
+   "font_px": 34,
+   "text": "4 \u00b7 THE EXIT",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    368,
+    792,
+    908
+   ],
+   "font_px": 108,
+   "text": "Plan the ride home before anyone arrives.",
+   "contrast": 14.77
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    948,
+    722,
+    1075
+   ],
+   "font_px": 50,
+   "text": "Know how every guest gets back, and when.",
+   "contrast": 14.77
+  },
+  {
+   "role": "cta",
+   "box": [
+    74,
+    1210,
+    534,
+    1262
+   ],
+   "font_px": 40,
+   "text": "Next: your checklist \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c5.png",
+ "sha256": "fa09ea0a287805cf"
+}

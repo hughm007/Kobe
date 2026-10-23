@@ -1,0 +1,85 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "photo",
+   "box": [
+    54,
+    241,
+    1026,
+    817
+   ],
+   "file": "tripnerd-fanexp-C03-H1-feed-portrait-v1-c5-photo.png"
+  },
+  {
+   "role": "logo",
+   "box": [
+    70,
+    79,
+    415,
+    205
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "label",
+   "box": [
+    471,
+    121,
+    631,
+    167
+   ],
+   "font_px": 34,
+   "text": "ARRIVAL",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    849,
+    830,
+    1026
+   ],
+   "font_px": 72,
+   "text": "Know who to find when you get there.",
+   "contrast": 14.77
+  },
+  {
+   "role": "fact",
+   "box": [
+    86,
+    1066,
+    813,
+    1160
+   ],
+   "font_px": 36,
+   "text": "Ours: a TripNerd-branded table, with staff on hand.",
+   "contrast": 4.89
+  },
+  {
+   "role": "cta",
+   "box": [
+    74,
+    1210,
+    413,
+    1262
+   ],
+   "font_px": 40,
+   "text": "Next: the food \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-fanexp-C03-H1-feed-portrait-v1-c5.png",
+ "sha256": "2035179d9c32b40b"
+}

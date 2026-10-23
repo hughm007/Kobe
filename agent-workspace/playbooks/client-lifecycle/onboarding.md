@@ -53,7 +53,7 @@ the most common cause of a slipped first deadline.
 ## 4. Access
 
 - ☐ Access requested for everything in the register in `access-and-accounts.md`
-- ☐ **Delegated agency access preferred** over shared logins wherever the platform offers it
+- ☐ **Delegated agency access preferred** over shared logins wherever the platform offers it. For Instagram and Facebook: [`meta-partner-access.md`](meta-partner-access.md)
 - ☐ Access confirmed working — not just granted
 - ☐ Register completed with pointers *(never credentials — see the hard rule in that file)*
 - ☐ Baseline metrics recorded before we change anything

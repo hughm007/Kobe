@@ -1,0 +1,4 @@
+{
+ "must_contain": ["link in bio"],
+ "must_not_contain": ["Masters","Augusta","2027","golf major","guarantee","best","#1","VIP","official","review","5-star","sold out","limited","PGA TOUR","always","every trip","THE PLAYERS","handled","Handled","tripnerd.com","transport"]
+}

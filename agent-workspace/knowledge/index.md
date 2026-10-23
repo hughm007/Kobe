@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-25
+updated: 2026-10-23
 tags: [index, knowledge]
 ---
 
@@ -19,6 +19,8 @@ open the file.
 
 ---
 
+> **Baseline evidence:** what is PROVEN / FAILED / PROVISIONAL lives in [EVIDENCE-INDEX.md](EVIDENCE-INDEX.md) — start there for the verified baseline.
+
 ## Decisions
 
 | Date | Decision | Status |
@@ -30,6 +32,7 @@ open the file.
 | 2026-08-26 | [v4.0 consolidation](decisions/0005-v40-consolidation.md) | Accepted |
 | 2026-09-03 | [servicepow.com production reality — `plumbing` vs `servicepow-v2`](decisions/0006-servicepow-com-production-reality.md) | ⛔ **OWNER DECISION REQUIRED — no session may resolve it** |
 | 2026-09-04 | [Service Pow typography system: Fraunces · Work Sans · JetBrains Mono](decisions/0007-typography-system.md) | Accepted |
+| 2026-09-29 | [Real client material is the default picture source for client video adverts](decisions/0008-real-client-material-first-for-video-ads.md) | Accepted (owner directive) |
 
 ## Learnings
 
@@ -37,11 +40,21 @@ Grouped by theme. Add themes as they emerge — don't force a learning into a he
 doesn't fit.
 
 ### Advertising
+- [2026-09-30 — A client's own website is part of its asset register](learnings/2026-09-30-the-client-website-is-part-of-the-asset-register.md): a 15-minute crawl found five Vimeo videos, 15 attributed reviews, published package lines and a date contradiction that days of searching Drive and Higgsfield had missed. Now a playbook: `playbooks/ads/real-material-intake.md`.
+- [2026-09-29 — Real client material plus motion design outranked everything generated](learnings/2026-09-29-real-client-material-plus-motion-design-outranked-generation.md): across four owner verdicts, the ranking follows the share of real client material in the picture (4/10 → killed → 8.4 → approved above 8.4). Owner preference, not market data yet.
+- [2026-09-27 — Strengths-only production scored 8.4/10; the whole deduction was master resolution](learnings/2026-09-27-strengths-only-realism-scored-8-4-master-resolution-capped-it.md): owner credited realism to generating only what the model does well and compositing real material; the only points lost were to a 720p body upscaled next to a native 1080p opening.
+- [2026-09-28 — View every reference at full size before citing it](learnings/2026-09-28-view-every-reference-at-full-size-before-citing-it.md): two of four "clean" reference frames had been described wrongly from memory; one would have fed real player headshots to the generator, and a chair used in three shots existed in no frame.
+- [2026-09-23 — Famous landmark: model memory beat references; satellite tile as the geometry check](learnings/2026-09-23-famous-landmark-model-memory-beats-references.md): for the TPC Sawgrass island green, text-only Nano Banana 2 stills had the right bunker and walkway while referenced stills imported crowd artefacts; a stitched satellite tile caught two layout errors that oblique-photo QC had missed.
+- [2026-09-23 — Reference-driven macro beat: three-model 720p test, Gemini won, units became drawings](learnings/2026-09-23-reference-driven-macro-beat-model-test.md): for a close-up physical beat, test Seedance / Gemini / Wan at 720p first; Gemini followed the cup references, and a measurement in its prompt was drawn as a label at 1080p.
+- [2026-09-23 — Broadcast commentary and a gallery roar in an AI cut](learnings/2026-09-23-hushed-commentary-and-one-roar.md): seed_audio loudness/speech/pitch controls, one measured roar source placed by its attack, faster-whisper transcript QC, and a sandbox shell gotcha.
 - [2026-08-25 — Checks beat prose](learnings/2026-08-25-checks-beat-prose.md): the v8
   "2:07 AM" kill showed binary blocking checks catch what quality prose never does;
-  the 31-check gate exists because scores alone passed a dead ad.
+  the blocking-check gate exists because scores alone passed a dead ad.
 - [2026-08-26 — Correctness is the floor, conversion is the objective](learnings/2026-08-26-correctness-floor-conversion-objective.md):
   Owner-directed promotion; produced the DR lens and the Performance Challenger Rule.
+- [2026-10-04 — Stills-only Reels hit a hook ceiling](learnings/2026-10-04-stills-reels-hit-a-hook-ceiling.md): five cuts of event-hospitality stills topped out at 7.7 against the 8.0 floor; the hook is capped when the paid-for moment isn't on camera.
+- [2026-10-04 — Follower targets next to a fee get priced per follower](learnings/2026-10-04-follower-targets-next-to-a-fee-get-priced-per-follower.md): a +8% follower target beside a 90-day fee became "$ per follower" and cut the deal to a one-month test; lead with booking break-even.
+- [2026-10-04 — Verify retouching on rendered frames](learnings/2026-10-04-verify-retouch-on-rendered-frames.md): a logo survived because QC cropped around the box, not the subject. Clone and heal beat blur.
 - [2026-08-31 — Frames catch what code review cannot](learnings/2026-08-31-frames-catch-what-code-review-cannot.md):
   15 defects across 3 build rounds, all invisible to clean code — **third occurrence, promoted** (probe-pass advisory in the video playbook).
 - [2026-08-31 — Claim qualifiers drop in re-transcription](learnings/2026-08-31-claim-qualifiers-drop-in-transcription.md):
@@ -52,6 +65,9 @@ doesn't fit.
   four S3/S4s from strings that self-refuted on their own surface, picture, or loop order.
 - [2026-08-31 — Code-rendered films freeze without a boil](learnings/2026-08-31-code-rendered-films-freeze-without-a-boil.md):
   73% still images until every stroke boiled; measured down to declared calm holds.
+- [Decouple audio from visual generation](learnings/2026-09-02-audio-decoupled-from-visual.md) — never pick a video model for its bundled audio.
+- [Photorealism is not physical correctness](learnings/2026-09-02-photorealism-is-not-physical-correctness.md) — trade and device shots need reference grounding.
+- [Model performance observations](learnings/2026-09-02-model-performance-observations.md) — provisional, Run 9/10 only.
 
 ### Clients and process (advertising ops)
 - [2026-08-31 — Gates need frozen artifacts](learnings/2026-08-31-gates-need-frozen-artifacts.md):
@@ -67,6 +83,17 @@ doesn't fit.
   three delivery routes tested and closed; the model is not a byte-faithful conduit and fails by
   confabulation (6107 of 12000 bytes, fabricated JPEG terminator). Check asset reachability
   *before* generating.
+- [2026-10-02 — Drive binaries reach the container via saved tool results](learnings/2026-10-02-drive-binaries-reach-the-container-via-saved-tool-results.md):
+  oversized Drive downloads are saved to disk by the harness; decoding locally gave 29/29 byte-exact JPEGs.
+  Drive is a working intake route even though the CDN egress wall still holds.
+- [2026-10-05 — The keyword DM is part of the ad](learnings/2026-10-05-the-keyword-dm-is-part-of-the-ad.md):
+  isolated Pass 1 on a no-AI Reel storyboard: 0/10 shots above LOW risk, yet 3 S4 + 5 S3 —
+  2 of the 3 S4s were in the keyword DM reply. Put the DM in the packet and the EV records.
+- [2026-10-06 — All-AI scenario ads fail for real-experience sellers](learnings/2026-10-06-ai-scenario-ads-fail-for-real-experience-sellers.md):
+  TripNerd "One Text" v1 passed machine QC but failed critic (5.8) and Skeptic (S4): client bans AI
+  people, logo-swap fails, near-silent audio, wardrobe drift. Real footage must carry people beats.
+- [911 Drain's assets were misfiled, not missing](learnings/2026-09-02-client-assets-were-misfiled-not-missing.md) — the ad system could not see them.
+- [Discoverability is a production capability](learnings/2026-09-02-asset-discoverability-is-a-production-capability.md) — 'does not exist' ≠ 'cannot be discovered'.
 
 ### Web
 *None yet.*
@@ -76,14 +103,29 @@ doesn't fit.
 
 ### Clients and process
 *None yet.*
+- [2026-09-23 — A vendor's cloud sandbox gives a cloud session hands and eyes](learnings/2026-09-23-vendor-sandbox-gives-a-cloud-session-hands-and-eyes.md):
+  the egress wall stands, but assembly can run in Higgsfield's own sandbox and QC frames come back through a connector that fetches public URLs; reused clips may carry no audio.
+- [2026-09-29 — Adobe touch-up on Higgsfield media needs a block-upload bridge](learnings/2026-09-29-adobe-touch-up-on-higgsfield-media-needs-a-bridge.md):
+  Adobe rejects the Higgsfield generation CDN. Block-upload from the sandbox by resolving the transfer redirect and PUTting to S3 over HTTP/1.1 (9 of 9 succeeded; the HTTP/2 PUT failed 9 of 9). Import the Adobe outputs back with `media_import_url`. The sandbox is stateless without a background lease.
+- [2026-10-23 — Ship every advert with its editable project](learnings/2026-10-23-ship-every-advert-with-its-editable-project.md): a one-word change on the Phoenix Open Reel needed a frame-by-frame patch (clean on opaque frames, a faint trace in one busy cross-fade). Keep the project, sources and text in 05; run claim words through the claims check before the first render.
+- [2026-10-08 — An animated still photo reads as fake](learnings/2026-10-08-animated-stills-read-as-fake-to-the-owner.md): Augusta, handled scored 7.7 only because the house was a photo animated as a push-in. For product shots, get real video or cut the shot.
+- [2026-10-07 — Topaz beats ByteDance for upscaling real phone footage](learnings/2026-10-07-topaz-beats-bytedance-for-upscaling-real-phone-footage.md): ByteDance's video upscale paints foliage on real footage; Topaz stays natural. Review at 1:1 where trees meet sky; for Instagram, upscale only sub-1080 shots and export once at 1080×1920, not 4k.
+- [2026-10-07 — Higgsfield sandbox work must run under one background lease](learnings/2026-10-07-higgsfield-sandbox-work-must-run-under-one-background-lease.md):
+  the sandbox is discarded between idle calls unless a `background:true` job holds it; run the build as one background pipeline that PUTs each result to Higgsfield storage as it is made; base64 relays are refused; a full voice-slot list is worked around with Seed Audio `audio_references`.
 
 ## Research
 
 | Date | Subject | File |
 |---|---|---|
 | 2026-08-25 | Design intelligence — the ServicePow Style Bank archetypes, hard laws, and how they translate to static + motion work | [research/design-intelligence.md](research/design-intelligence.md) |
+| 2026-10-01 | Instagram follower growth — ranking signals, format benchmarks, creators, giveaways, paid, fake-influence law (2025–26) | [research/2026-10-01-instagram-growth-evidence.md](research/2026-10-01-instagram-growth-evidence.md) |
 
 ---
+- [Intro video Rev 3 — bar-raiser brief](research/2026-08-31-hero-video-bar-raiser.md) — hero video craft + delivery research.
+
+## Production log
+
+- [911 Drain 'Look Us Up' — Skeptic Pass-1 findings](production-log/2026-08-26-lookusup-pass1-findings.md) — paper stage, two rounds.
 
 ## Patterns to watch
 
@@ -98,9 +140,10 @@ the section below.
 | Claim qualifiers drop on every re-transcription | 2 (this file + the 08-28 control catch) | Watching — promote on a third |
 | The offer/price line gets the shortest hold | 2 (911 Drain price line · intro offer line) | Watching — a third promotes it into check 32's scope for burned text |
 | "Secondary-location" resolution misses (a fix applied at the named spot while other cells still assert the old answer) | 3 (911 Drain rounds 10, 14, 15) | **Due for promotion** — evidence in the 911 Drain campaign bible §14; needs its learning file written and a playbook line |
-| Flash-cut detector false-positives on multi-frame wipes | 2 (gate rounds 1 and 2) | Watching — harness fix proposed (P4) |
-| Build location must be chosen by where the heaviest inputs live | 1 ([build-where-the-assets-are](learnings/2026-08-31-build-where-the-assets-are.md)) | Forming — one measurement, but the measurement is unambiguous (half a build round spent on transport) |
+| Flash-cut detector false-positives on multi-frame wipes | **3** (gate rounds 1 and 2 + the 2026-09-29 camera-roll build, where 11–12 were reported against 1 real hard cut) | **Due for a harness ruling**. Until then, frame-check every FAIL and record it (see harness-instrument-limits) |
+| Build location must be chosen by where the heaviest inputs live | 2 ([build-where-the-assets-are](learnings/2026-08-31-build-where-the-assets-are.md), [vendor-sandbox-gives-hands-and-eyes](learnings/2026-09-23-vendor-sandbox-gives-a-cloud-session-hands-and-eyes.md)) | Watching — second measurement from the other side: when the inputs live with the vendor, build in the vendor's sandbox |
 | The expensive gate belongs at publish, not on drafts | 1 ([first-artifact-in-ten-minutes](learnings/2026-08-31-first-artifact-in-ten-minutes.md)) | Forming — Owner-stated; changes the default order of work |
+| Describe media from full-size views, never from contact sheets (night read as dusk, empty stands as packed, a duplicate moment as progression, faces missed at a frame edge) | 2 ([describe-real-media-from-full-size-views](learnings/2026-10-13-describe-real-media-from-full-size-views-not-contact-sheets.md) · the 2026-10-07 generated-clip rule in the worklog) | Watching — promote on a third |
 
 ## Promoted to playbooks
 
@@ -109,5 +152,6 @@ playbook rule stays visible.
 
 | Pattern | Playbook | Learnings behind it |
 |---|---|---|
-| Blocking checks + ServicePow-6 scoring before any ad ships | [playbooks/ads/video-production.md](../playbooks/ads/video-production.md) | Imported from the Drive OS (19_PRODUCTION_LEARNINGS); local trail starts with checks-beat-prose |
+| Real client material first; generation fills gaps (owner ranking follows real-material share) | [decision 0008](decisions/0008-real-client-material-first-for-video-ads.md) · [recipe: camera roll](../playbooks/ads/recipes/camera-roll-real-photos.md) · router Lane C | [real-client-material-outranked-generation](learnings/2026-09-29-real-client-material-plus-motion-design-outranked-generation.md) (4 owner verdicts), [strengths-only 8.4](learnings/2026-09-27-strengths-only-realism-scored-8-4-master-resolution-capped-it.md), 911 Drain 4/10 realistic lane (run ledger); promoted at the owner's explicit directive, 2026-09-29 |
+| Blocking checks + ServicePow-6 scoring before any ad ships | canonical registry `.claude/skills/_servicepow/data/blocking-checks.yaml` (historical trail: [playbooks/ads/video-production.md](../playbooks/ads/video-production.md), superseded 2026-09-01) | Imported from the Drive OS (19_PRODUCTION_LEARNINGS); local trail starts with checks-beat-prose |
 | Performance Challenger Rule — production QA paired with performance-marketing QA; clever-mechanism packs ship a problem/solution-first challenger and the market decides | [playbooks/ads/video-production.md](../playbooks/ads/video-production.md) (Doctrine, advisory tier) + the creative-critic Direct-Response lens | [correctness-floor-conversion-objective](learnings/2026-08-26-correctness-floor-conversion-objective.md) — promoted at occurrence #1 by explicit Owner directive, recorded as such |

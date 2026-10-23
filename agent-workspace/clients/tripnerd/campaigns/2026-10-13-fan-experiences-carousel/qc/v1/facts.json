@@ -1,0 +1,4 @@
+{
+ "must_contain": ["link in bio", "Ours: at the island-green 17th, guests watched from the rail.", "TripNerd hosts guests at golf tournaments and other big events.", "Ours: a TripNerd-branded table, with staff on hand.", "Ours: a hosted spread, set out for guests."],
+ "must_not_contain": ["Masters","Augusta","2026","2027","golf major","guarantee","best","#1","VIP","official","review","5-star","five-star","sold out","limited","PGA TOUR","always","every","THE PLAYERS","handled","tripnerd.com","transport","ultimate","Super Bowl","field-level","years","one call","Book Smart","suite","steps"]
+}

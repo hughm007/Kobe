@@ -1,0 +1,134 @@
+CREATIVE CRITIC — ServicePow-6 (BC-22), fresh agent, run 2026-10-06 on v1.5-B
+(master sha256 01d10e2c64dacbc25190b28e0eff127b098b70c3b5b020ae4cb6ba83b50b1807). Transcribed verbatim.
+
+VERDICT: HARD FAIL
+
+How I watched: I can't play video in real time or hear audio. The cold watch was built from frames of the master, whose sha256 matched the frozen hash 01d10e2c…1807:
+- contact sheets at 2 fps;
+- 24 fps strips across the cuts;
+- full-resolution crops;
+- loudness, spectrogram and waveform measurements.
+
+I worked only in /home/user/gate-critic-v15 and opened no campaign files. I opened tripnerd.com in the sandbox (headless Chromium, iPhone 13 viewport).
+
+FIRST REACTION (stranger watch): This reads as genuine, well-typeset phone footage, and the island-green roar is a real moment. After 3.2 s it settles into a calm walk-through of a suite and the energy never comes back. Paused, I could read "THE PLAYERS" on guests' cups and a hat.
+
+FIVE QUESTIONS
+- Who is it for: golf fans and premium-hospitality buyers who know The Players. Answered.
+- Why does it matter: the 17th from a private suite, a seat most fans never get. Shown rather than said. Answered.
+- What is offered: "2027 packages" at 12.0 s. Weakly answered: nothing shows what a package includes (the counter at 3.2–4.1 is empty; no food or bar service).
+- Why believe it: real footage, the real logo wall, real guests. Strong.
+- What to do next: comment "rail or table", then the link in bio. Clear, but the bio link is not set yet.
+
+SEMANTIC HARD FAILURES: none.
+I checked all 10 rows explicitly:
+1. No disconnected scene: the order is moment → suite → guests → view → guests → end card.
+2. The story makes sense.
+3. No face or hand issues; these are real people.
+4. Product shown correctly (the suite).
+5. Client branding is correct. The end-card wordmark matches tripnerd.com's own tripnerd-logo_white.png (bold "Trip", light "Nerd", ®), and the logo wall is the real physical sign.
+6. No continuity error.
+7. No dialogue, so no lip-sync issue.
+8. Unusable audio: I can't judge this without hearing it; the measurements are clean (see BC-25).
+9. The CTA fits an engagement goal.
+10. Minor only: the "rail or table?" panel sits over guests at a table that is at the rail, which blurs the choice. Not a contradiction.
+
+REGISTRY VERIFICATION (by BC id)
+
+Passed, and reproduced by me where possible:
+- BC-01/02/03/04/11/12: confirmed with ffprobe (1080x1920, 24/1, yuv420p, 48 kHz 2-channel, 15.000 s). The audio is real stereo; the side channel averages -26.6 dB.
+- BC-05: I re-ran ebur128 and got -16.0 LUFS integrated, LRA 7.7, true peak -2.5.
+- BC-06/07/08/09/13/14/26/28: passed on the receipts.
+- BC-09: my own frame-difference scan found no duplicate frames and no repeating cadence pattern, which is consistent with no retiming.
+- BC-10: the scene detector found 0 cuts, so its PASS was empty. My frame-difference spikes put the cuts at 3.208, 4.125, 5.417, 7.833 and 12.042 s. The shortest shot is 0.917 s (22 frames), above the floor, so BC-10 is now actually measured.
+- BC-30: 6/6 clips passed and hash-matched. The receipt uses sha256 where the registry says md5; sha256 is the stronger hash, so I accept it.
+- BC-42: passed on inspection. All text a viewer reads is composited with real fonts; text inside the scene is real footage.
+- BC-21: I checked the wordmark against the live site's logo file. No formal brand-fidelity receipt is in the packet.
+
+BC-19 (passed, with a condition). I opened https://www.tripnerd.com/events/the-players-championship on 2026-10-06: HTTP 200.
+- Above the fold on a phone: "2027 The PLAYERS Championship · TPC Sawgrass · March 11–14, 2027", with an "Inquire About Event" button.
+- Further down: "17th Hole VIP Luxury Suite", "Packages Available March 2027", a working form and phone number, and a statement that TripNerd is not affiliated with THE PLAYERS.
+- Condition: the @tripnerd bio link is planned but not set. It must be set and re-opened on a phone before posting.
+
+Failed or open:
+- BC-16 (claims), OPEN, no receipt. The packet cites no Evidence Records (EV-ids). The stated copy carries no superlative. But "This is TripNerd's spot." + "Where would you sit — rail or table?" + "Be our guest. 2027 packages" together present the 2026 seat as what a 2027 buyer gets. Your packet says the 2027 suite's structure and position are NOT confirmed. Under the claims policy, a claim with no documented evidence cannot appear. The page supports "a 17th-hole suite in 2027", not "this spot".
+- BC-20 (rights), PARTIAL, logos not cleared. Footage (TripNerd's own), guest likeness (Jason's standing approval) and music (none) are covered. Not covered:
+  - The THE PLAYERS wordmark is readable at full resolution on the guests' metal cups and on a straw-hat band at 4.1–5.4 s.
+  - The venue video board shows the live broadcast feed plus leaderboard graphics at about 6.0–7.8 s; it is small.
+  - TripNerd's approved plan, p.6, says "No event logos, no broadcast footage." The page's own non-affiliation statement shows TripNerd is sensitive to this.
+  - There is no clearance and no recorded client ruling.
+  - Minor, not blocking: Titleist caps and a Michelob Ultra can. People at frame right in 4.1–5.4 may be in a neighbouring area; confirm the standing approval covers them.
+- BC-33 (impossible human speed), NOT RUN. It was recorded N/A, but its scope ("video-people") matches this master, so it applies. My cadence scan supports the reasoning (no retiming), but that is not the gate's receipt. It blocks until the gate runs or the N/A gets a named acceptance.
+- BC-15 (expected on-screen strings), COULD NOT RUN on the canonical harness (tesseract absent). The substitute OCR (RapidOCR) read the exact CTA string, and I saw every string on screen. To close it formally, re-run the harness or record a named acceptance of the substitute.
+
+Passed with a flag:
+- BC-27 (master speech vs declared lines): passed on the master (VAD found 0 segments). On the 4.1–5.4 shot alone, VAD triggers and ASR returns different text on each run. That guest chatter is the loudest moment after the roar (momentary about -13 LUFS at 4.5–4.8 s). It needs a human listen.
+- BC-24 (angle rotation): receipt present; the owner passed it with a stated memory-test risk. My note: the rotation is thin at the level of structure. It runs island green → logo wall → interior → view over the same 2026 suite as the Sep 26 Reel. That Reel's low reach (104 plays) softens the overlap.
+- BC-32: recorded N/A. With no lines there is nothing to measure, so it is satisfied by default.
+
+Not applicable (scope doesn't match): BC-17/18/41 (generated media), BC-29/43 (no generation; preflight passed anyway), BC-31/34 (storyboard stage), BC-35–40 (outbound), BC-44–50 (web), BC-51–55 (static).
+
+Not mine: BC-22 is this score. BC-23 is the Skeptic's; I have not seen it or waited for it. BC-25 is the APPROVER's (see below).
+
+SERVICEPOW-6
+- Doesn't look AI: 10. Real phone footage throughout. The upscale softness and the zoomed-in crowd at 2.0–3.2 s read as a phone zoom, not as synthetic.
+- Hook inside 2 s: 7.
+  - Working: the island green and the "POV" super are there from frame 1. The roar starts at about 0.5 s (RMS rises from -24.6 to -12.1 dB by 0.7 s), and crowd arms go up at about 1.3 s.
+  - Missing: the ball is a roughly 5 px dot until the zoom makes it readable at about 2.0 s, just as the super leaves. With sound off, viewers get about 1.3 s of near-still wide shot plus text. A blurred dark foreground head sits lower-left for about 0–0.5 s.
+- Human presence: 7. The guests are real, consenting and natural, but passive: seated, mostly backs or profiles. No TripNerd guest reacts to the roar; the only visible joy belongs to strangers at the water.
+- Format fit: 9. Native 9:16. All text sits inside y 288–1344 and stays left of x 940, clear of the Reels button column. 15 s, with a comment prompt that suits Reels. Docked for the soft 720p source.
+- Audio design: 7, provisional, because I couldn't hear it.
+  - On paper the design is sound: 0.3 s sound tails under each cut, the roar carried 0.6 s past the 3.2 s cut, a speech-free crowd bed, no gaps at cuts, no clipping.
+  - The energy is front-loaded: the roar measures about -10.6 to -12 LUFS momentary, then the body settles to about -17 to -21, and the CTA lands at the quietest point (about -20 to -21).
+  - Mix quality, wind or handling noise, and whether the chatter is intelligible are all unverified.
+- Message + CTA clarity: 8. The chain is clear and the comment ask fits the goal. Docked because package contents are never shown, the rail-vs-table choice is blurred, and the commercial CTA depends on a bio link that isn't set yet.
+
+Result: 8.0 ± 1.5. The midpoint sits exactly on the floor and no axis is at 6 or below. It is provisional on the unheard audio axis. It does not make the piece client ready because of the compliance blocks.
+
+AI ARTIFACT RISK: 1/10. Nothing synthetic; no generation was used. The only texture is softness from the phone zoom and upscaling. The logo is fully legible for only about 0.65 s (from about 3.45 to 4.1 s), because the 3.2 cut lands on a blurred mid-pan frame showing "TripN". That is a craft and memory note, not an AI tell.
+
+TOP 3 REASONS NOT TO SHIP
+1. BC-16: an implied, unevidenced claim. 2026 footage, plus present-tense "This is TripNerd's spot" and "rail or table?", plus "2027 packages", sells a seat whose 2027 position is unconfirmed.
+2. BC-20 and the client's plan p.6: THE PLAYERS event marks are readable on cups and a hat at 4.1–5.4 s, and a venue screen carries the broadcast feed at about 6.0–7.8 s. There is no clearance and no client ruling.
+3. Procedural gates are open: BC-33 not run although it applies, and BC-15 could not run on the canonical harness. On top of that, the score sits exactly on the floor and depends on audio no one has heard. The unintelligible guest chatter at 4.1–5.4 is the loudest moment after the roar and needs a human ear (BC-25).
+
+FIX PER FAILURE
+- BC-16 → servicepow-client-intelligence. Get a written confirmation from Jason (email is enough under the policy) that TripNerd's 2027 "17th Hole VIP Luxury Suite" is this structure and position, or at least has rail and table seating over the island green. File it as an EV-tripnerd record and have the Campaign Director cite it. If it can't be confirmed, the copy owner (servicepow-creative-director, executed by servicepow-video-production) re-words the panel and end card so they stop presenting the 2026 seat as the 2027 product.
+- BC-20 → servicepow-brand-fidelity reviews the third-party and event marks. The Campaign Director gets a recorded CLIENT_APPROVER ruling on whether incidental event merchandise and a distant venue screen in TripNerd's own footage are acceptable under p.6. If not, servicepow-cinematography-editor re-picks the 4.1–5.4 stretch (or uses a real crop) so the cups and hat band can't be read, with no generative fill. It also reframes or trims the view shot to drop the board. Then re-run the master and clip gates and both quality gates.
+- BC-33 → servicepow-video-production: run the biomech gate on the master, or get a named APPROVER acceptance of the N/A reasoning.
+- BC-15 → servicepow-video-production: re-run the harness with tesseract installed, or get a named acceptance of the RapidOCR substitute.
+- BC-27 / BC-25 → APPROVER: watch end to end with sound. If a guest word is intelligible at 4.1–5.4, servicepow-audio-director replaces that stretch with the shot's own room tone.
+- BC-19 → OPERATOR: set the bio link before posting and re-open it from the app.
+- Optional score lifts, not blocking:
+  - servicepow-cinematography-editor: make the ball by the pin readable earlier.
+  - servicepow-cinematography-editor: if 2026 footage of a TripNerd guest reacting to a roar exists, use it. That ties the roar to the suite and addresses the memory-test risk the BC-24 receipt itself names.
+  - servicepow-audio-director: give the end card a lift instead of landing the CTA at the quietest point.
+
+LEARNING LOG (all CLAUDE-CAUGHT)
+1. Event-branded merchandise in real client footage conflicts with a client's "no event logos" rule, and no machine gate sees it. Add a sweep for third-party and event marks to brand-fidelity's post-review of real-footage edits.
+2. Footage year vs offer year: last year's seat sold as next year's product is an implied claim and needs an Evidence Record.
+3. A scope match by the registry's scope ("applies") field (video-people) makes BC-33 applicable to real-footage masters. Recording it N/A without a run is not a receipt.
+4. BC-10's scene detector found 0 of 5 hard cuts, so its PASS was empty. The flash-cut check needs edit-list or frame-difference cut detection.
+
+HUMAN WATCHED END TO END: NO, none recorded. BC-25 is not the critic's to tick. Things only an ear can confirm:
+- the 4.1–5.4 chatter;
+- wind or handling noise under the roar;
+- an unexplained broadband sound spike at about 8.6 s;
+- the overall mix.
+
+HUMAN TASTE GATE: AWAITING (the APPROVER's to answer).
+
+ADVISORY (Direct-Response lens; it does not block or clear anything)
+- Time to value: the suite is first seen at 3.2 s and the offer at 12.0 s. The clever part (POV plus the live roar) is also the value, which is fine for awareness. The 4.2 s rail-table shot of backs of heads is where completion is most at risk.
+- CTA directness: "Be our guest. 2027 packages: link in bio" is an invitation plus brand plus action. Moderately direct. "Tell us below" is direct for comments.
+- Persuasion vs cleverness: the cleverest element is the rail-or-table question. Keep it for an engagement goal; for buyers, the freed seconds would sell what's included.
+- Challenger: no problem-then-solution challenger exists in the packet (for example, general-admission crowding vs the suite rail, possibly using TripNerd's 2024 walkway footage). Write the exemption down by name and surface it to the APPROVER.
+- Tracking: use a UTM-tagged bio link so inquiries can be traced to this Reel.
+- Client's page: it contradicts itself (header "March 11–14, 2027" vs FAQ "2027 dates not yet officially set"). Flag it to TripNerd.
+- Sibling A (not reviewed): "TripNerd's got the best spot." has no Evidence Record and would fail BC-16 as described.
+
+This report is the QC-verdict section for the Campaign Director to file. I was barred from campaign files, so I wrote no files.
+
+Returned to servicepow-campaign-director: HARD FAIL. Top reasons: BC-16 implied 2027 seat claim; BC-20 event marks against plan p.6; BC-33 and BC-15 open, plus a score exactly on the floor that depends on unheard audio.
+
+VERDICT: HARD FAIL

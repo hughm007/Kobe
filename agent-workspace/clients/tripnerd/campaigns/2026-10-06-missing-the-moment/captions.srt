@@ -1,0 +1,23 @@
+1
+00:00:00,300 --> 00:00:02,000
+You made it to the event.
+
+2
+00:00:02,000 --> 00:00:04,700
+But does it feel like you're actually there?
+
+3
+00:00:04,850 --> 00:00:06,550
+The biggest moment of the day...
+
+4
+00:00:06,550 --> 00:00:08,600
+and you can't even see it.
+
+5
+00:00:11,300 --> 00:00:14,300
+With TripNerd, you're not just at the event.
+
+6
+00:00:14,300 --> 00:00:15,600
+You're in it.

@@ -1,0 +1,75 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    378,
+    67,
+    702,
+    186
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "headline",
+   "box": [
+    154,
+    372,
+    925,
+    728
+   ],
+   "font_px": 96,
+   "text": "Hosting clients at a golf tournament?",
+   "contrast": 4.89
+  },
+  {
+   "role": "support",
+   "box": [
+    190,
+    776,
+    889,
+    836
+   ],
+   "font_px": 48,
+   "text": "Four moments decide the day.",
+   "contrast": 4.89
+  },
+  {
+   "role": "fact",
+   "box": [
+    237,
+    872,
+    842,
+    918
+   ],
+   "font_px": 34,
+   "text": "Arrival \u00b7 Timing \u00b7 Dining \u00b7 The exit",
+   "contrast": 4.89
+  },
+  {
+   "role": "cta",
+   "box": [
+    453,
+    1166,
+    626,
+    1220
+   ],
+   "font_px": 42,
+   "text": "Swipe \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png",
+ "sha256": "c0e1a5dac904f610"
+}

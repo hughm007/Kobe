@@ -1,0 +1,47 @@
+QA1 — servicepow_qc.py (sandbox copy sha256 cd48e66268f9df22dbf2d4fd5bc3c8d5412c7accbcc6c8aa14f8dde9d3caa743 = canonical)
+Run in the Higgsfield sandbox, 2026-10-06.
+
+PREFLIGHT — servicepow_qc.py (rebuilt 2026-08-26)
+  ffmpeg: present
+  ffprobe: present
+  numpy: present
+  OCR (expect-strings): UNAVAILABLE — expect checks will be INDETERMINATE
+  self-test planted-freeze detected: yes
+  self-test planted-black  detected: yes
+  self-test still-clip fails motion gate: yes (score 0.0, density 0.0)
+PREFLIGHT: PASS — paste this output before any generation (blocking check 29)
+(Note: preflight was run after generation in this session, not before it — recorded as a
+process miss against BC-29/BC-43; the toolchain and delivery path were proven by the same
+session's earlier sandbox renders and uploads.)
+
+== Raw Kling sources (as delivered by the model) ==
+s2.mp4 / s3.mp4 / s4.mp4: resolution FAIL 1076x1924 (min dim >= 1080); all other rows PASS.
+s1.mp4 (already conformed by blur_screen.py): PASS.
+
+== Conformed clips (exact windows and scaling used in the master) — clip gate ==
+s1.mp4  (md5 30d6e4d39d201c1a849f497532c17662)  resolution 1080x1920 PASS · motion 4.12 px/frame PASS · OVERALL PASS
+s2c.mp4 (md5 58a47cbe577ad3eb7f5b79d92b5e4487)  resolution 1080x1920 PASS · motion 3.91 PASS · OVERALL PASS
+s3c.mp4 (md5 3f0b98f0c6bba5a78a58bd5e79815421)  resolution 1080x1920 PASS · motion 4.00 PASS · OVERALL PASS
+s4c.mp4 (md5 6b5df14dd02ec5006a1e4a9de19031c0)  --calm (storyboard-declared stillness beat) · motion 0.87 >= 0.6 PASS · OVERALL PASS
+
+== tripnerd-one-text-v1-master.mp4 (sha256 40d527cd303a14205b1c815fb45f3768e492203e9ed9d1ea66d9d2836dae30e1) ==
+  resolution             PASS          1080x1920 (min dim >= 1080)
+  fps                    PASS          24.000
+  pix_fmt                PASS          yuv420p
+  audio-48k-stereo       PASS          48000 Hz / 2 ch
+  audio-peak/not-silent  PASS          peak -13.5 dB (<= -0.5), mean -35.0 dB (> -45.0)
+  no-frozen-sections     PASS          none > 0.7s
+  no-black-sections      PASS          none >= 0.3s
+  motion-gate            PASS          edge travel 8.54 px/frame >= 1.6
+  hook-motion            PASS          first 1.2s edge travel 2.75 (floor 1.0, WARN only)
+  no-flash-cuts          PASS          3 detected cuts; shots < 0.4s: 0
+  aspect                 PASS          declared 9:16, got 1080x1920
+  duration               PASS          declared 15.0s, got 15.00s (+/-2%)
+  OVERALL: PASS
+
+== Speech check (BC-26/27 intent) ==
+faster-whisper tiny.en on the master audio (16 kHz mono): 0 segments — no speech.
+
+== Burned-text safe area (BC-28) ==
+overlays.js geometric check (Chromium layout boxes): 6/6 text blocks inside y 288-1344 px and x <= 940 px.
+OCR-based --expect / --safe-area: NOT RUN (tesseract unavailable in the sandbox).

@@ -1,0 +1,96 @@
+{
+  "$id": "https://golf-launch-monitor.local/schemas/glm-schema-0.1.0/surface-properties.schema.json",
+  "title": "surface-properties",
+  "description": "Generated from @glm/shared-types (glm-schema-0.1.0). Cross-field invariants (e.g. a null measurement value requires source 'unavailable') are enforced by the runtime zod schemas and are not all expressible in JSON Schema.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "tee",
+        "range-mat",
+        "fairway-firm",
+        "fairway-normal",
+        "fairway-soft",
+        "first-cut",
+        "rough",
+        "bunker",
+        "green",
+        "fringe",
+        "cart-path",
+        "water",
+        "out-of-bounds",
+        "trees",
+        "penalty-area"
+      ]
+    },
+    "version": {
+      "type": "string"
+    },
+    "firmness": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "restitutionBase": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "restitutionSpeedSlope": {
+      "type": "number",
+      "minimum": 0
+    },
+    "restitutionMin": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "slidingFriction": {
+      "type": "number",
+      "minimum": 0
+    },
+    "rollingResistance": {
+      "type": "number",
+      "minimum": 0
+    },
+    "moistureSoftness": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "stimpFt": {
+      "anyOf": [
+        {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "terminal": {
+      "type": "boolean"
+    },
+    "provisional": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "type",
+    "version",
+    "firmness",
+    "restitutionBase",
+    "restitutionSpeedSlope",
+    "restitutionMin",
+    "slidingFriction",
+    "rollingResistance",
+    "moistureSoftness",
+    "stimpFt",
+    "terminal",
+    "provisional"
+  ],
+  "additionalProperties": false
+}

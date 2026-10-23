@@ -1,0 +1,287 @@
+PASS  BC-51:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: 67KB (<8MB)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:logo: box [378, 67, 702, 186] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:headline: box [154, 372, 925, 728] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:headline: 96px (floor 64)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:headline: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:support: box [190, 776, 889, 836] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:support: 48px (floor 36)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:support: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:fact: box [237, 872, 842, 918] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:fact: 34px (floor 28)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:fact: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:cta: box [453, 1166, 626, 1220] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:cta: 42px (floor 40)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'2027':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'best':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'#1':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'official':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'review':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'limited':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'always':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-55:barred:'every trip':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png: clean
+PASS  BC-51:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: 68KB (<8MB)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:logo: box [789, 67, 1026, 154] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:label: box [54, 89, 259, 135] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:numeral: box [54, 171, 191, 523] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:numeral: 340px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:numeral: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:headline: box [54, 539, 778, 716] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:headline: 72px (floor 64)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:headline: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:support: box [54, 748, 820, 856] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:support: 42px (floor 36)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:support: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:fact: box [54, 928, 779, 978] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:fact: 38px (floor 28)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:fact: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:cta: box [382, 1208, 697, 1262] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:cta: 42px (floor 40)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'2027':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'best':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'#1':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'official':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'review':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'limited':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'always':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-55:barred:'every trip':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: clean
+PASS  BC-51:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: 75KB (<8MB)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:logo: box [789, 67, 1026, 154] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:label: box [54, 89, 235, 135] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:headline: box [54, 199, 817, 362] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:headline: 66px (floor 64)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:headline: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:support: box [54, 394, 785, 502] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:support: 42px (floor 36)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:support: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:fact: box [54, 574, 791, 673] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:fact: 38px (floor 28)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:fact: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:numeral: box [54, 713, 281, 1105] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:numeral: 380px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:numeral: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:cta: box [384, 1208, 695, 1262] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:cta: 42px (floor 40)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'2027':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'best':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'#1':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'official':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'review':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'limited':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'always':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-55:barred:'every trip':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: clean
+PASS  BC-51:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: 69KB (<8MB)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:logo: box [789, 67, 1026, 154] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:label: box [54, 89, 237, 135] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:numeral: box [54, 175, 204, 437] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:numeral: 250px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:numeral: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:headline: box [54, 453, 709, 630] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:headline: 72px (floor 64)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:headline: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:support: box [54, 662, 736, 770] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:support: 42px (floor 36)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:support: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:fact: box [54, 842, 751, 941] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:fact: 38px (floor 28)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:fact: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:cta: box [370, 1208, 709, 1262] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:cta: 42px (floor 40)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'2027':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'best':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'#1':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'official':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'review':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'limited':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'always':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-55:barred:'every trip':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: clean
+PASS  BC-51:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: 64KB (<8MB)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:logo: box [789, 67, 1026, 154] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:label: box [54, 89, 270, 135] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:numeral: box [54, 163, 383, 645] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:numeral: 470px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:numeral: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:headline: box [54, 661, 742, 838] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:headline: 72px (floor 64)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:headline: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:support: box [54, 870, 766, 978] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:support: 42px (floor 36)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:support: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:cta: box [298, 1208, 781, 1262] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:cta: 42px (floor 40)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'2027':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'best':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'#1':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'official':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'review':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'limited':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'always':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-55:barred:'every trip':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: clean
+PASS  BC-51:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: 90KB (<8MB)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:logo: box [789, 67, 1026, 154] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: box [54, 89, 368, 135] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: 34px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:headline: box [54, 179, 684, 449] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:headline: 72px (floor 64)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:headline: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: box [54, 501, 235, 543] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: 30px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: box [54, 559, 566, 623] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: 52px (floor 36)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: box [54, 679, 214, 721] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: 30px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: box [54, 737, 654, 801] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: 52px (floor 36)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: box [54, 857, 215, 899] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: 30px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: box [54, 915, 564, 979] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: 52px (floor 36)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: box [54, 1035, 244, 1077] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: 30px (floor 24)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:label: 5.15:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: box [54, 1093, 717, 1157] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: 52px (floor 36)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:support: 14.77:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:cta: box [331, 1208, 748, 1262] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:cta: 42px (floor 40)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'2027':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'best':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'#1':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'official':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'review':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'limited':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'always':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-55:barred:'every trip':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: clean
+PASS  BC-51:dims:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: 1080x1350 vs (1080, 1350)
+PASS  BC-51:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: 68KB (<8MB)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:logo: box [356, 1148, 723, 1283] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:headline: box [165, 372, 914, 623] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:headline: 104px (floor 64)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:headline: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:support: box [174, 667, 905, 780] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:support: 44px (floor 36)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:support: 4.89:1 (>=4.5)
+PASS  BC-52:safe:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:cta: box [212, 864, 867, 922] vs safe [54, 67, 1026, 1283]
+PASS  BC-52:size:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:cta: 46px (floor 40)
+PASS  BC-52:contrast:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png:cta: 14.77:1 (>=4.5)
+PASS  BC-53:cta-present:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: cta block
+PASS  BC-55:barred:'Masters':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'Augusta':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'2027':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'golf major':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'guarantee':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'best':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'#1':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'VIP':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'official':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'review':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'5-star':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'sold out':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'limited':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'PGA TOUR':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'always':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:barred:'every trip':tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: clean
+PASS  BC-55:present:'tripnerd.com': in set
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png: diff=0.353 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: diff=0.345 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: diff=0.346 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: diff=0.364 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: diff=0.355 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c1.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: diff=0.092 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png: diff=0.180 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: diff=0.152 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: diff=0.170 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: diff=0.173 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: diff=0.365 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png: diff=0.200 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: diff=0.194 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: diff=0.177 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c3.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: diff=0.357 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png: diff=0.169 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: diff=0.188 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c4.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: diff=0.351 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png: diff=0.166 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c5.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: diff=0.374 (ok)
+PASS  BC-54:distinct:tripnerd-hostswrong-C02-H1-feed-portrait-v1-c6.png~tripnerd-hostswrong-C02-H1-feed-portrait-v1-c7.png: diff=0.371 (ok)
+
+STATIC-QC: PASS (285 passed, 0 failed, 7 exports)

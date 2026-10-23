@@ -1,0 +1,124 @@
+CREATIVE CRITIC — ServicePow-6 (BC-22)
+Master: tripnerd-one-text-v1-master.mp4 sha256 40d527cd303a14205b1c815fb45f3768e492203e9ed9d1ea66d9d2836dae30e1
+Run: 2026-10-06, Workflow wf_c8ca7b93-2e9 (fresh agents, run in parallel, blind to each other). Transcribed verbatim.
+
+VERDICT: HARD FAIL
+
+FIRST REACTION (stranger watch): A pleasant, glossy group-trip piece. It opens on a blurred phone on a couch that looks censored, and it doesn't say "sports event" until a tiny golfer appears at about 9 s. Every person in it is generated, and TripNerd's own approved plan bans that.
+
+How I watched: the master downloaded with sha256 40d527cd…30e1, which matches. I looked at frames every 0.5 s plus full-resolution crops at 0.04, 1.2, 2.2, 2.9, 4.2, 4.6, 5.6, 6.3, 6.6, 7.2, 7.4, 7.9, 8.3, 9.5, 10.2, 11.0 and 13.5 s. Cuts measured at 3.00, 5.79 and 8.08 s. I cannot hear audio, so it was judged by meter only.
+
+FIVE QUESTIONS:
+- Who is it for: a friend who organises group trips ("6 of us"). Answered.
+- Why it matters: not stated. Unanswered.
+- What is offered: unclear. The dining room (3.0–8.1 s) looks like a generic resort brunch. The tournament shows only as a distant golfer and gallery from about 9 s. No word on screen says event, tickets or hospitality. Partly answered.
+- Why believe it: nothing. No real guests, no proof, every person synthetic, and an AI label at posting. Unanswered.
+- What to do next: "DM @tripnerd with your group size." Answered.
+- Two of the five are unanswered, which counts as a clarity failure.
+
+SEMANTIC HARD FAILURES:
+- None of the ten hits the "major" level on its own at delivery size.
+- Recorded below that level, and failed under BC-41: a continuity error on the hero's footwear. White sneakers in shot 2 (4.2 s), black sneakers in shot 3 (clearly visible 7.4–7.9 s), white again in shot 4 (8.3 s).
+- Also noted:
+  - The bubbles are iMessage-style blue "text" while the call to action (CTA) says "DM". The line "It starts with one text" and the Instagram DM ask don't match.
+  - The payoff that should show "6 of us" has extra partial figures at the left frame edge at 8.3 s.
+- No face or hand issue survives at delivery size. Dining-room faces hold up at phone size.
+
+REGISTRY VERIFICATION:
+- PASSED (packet receipts; I re-checked 01–04, 11 and 12 with ffprobe):
+  - BC-01, 02, 03, 04, 06, 07, 08, 10, 11, 12, 14.
+  - BC-28: text inside y 288–1344 px, which is 15.0–70.0% of frame height.
+  - BC-30: clip gate, md5-ledgered.
+  - BC-27: no lines declared, automatic speech recognition (ASR) found 0 speech segments.
+- PASSED on the critic's read (human or hybrid checks):
+  - BC-42: all readable text is composited. The painted phone text is blurred. The model-painted "EXIT" sign at 7.9 s is garbled and irrelevant.
+  - BC-16: no stated claim. Risk on the picture: it shows a private-looking terrace at the rope line of a live tournament. If TripNerd doesn't sell that experience, it is an implied claim with no Evidence Record.
+- FAILED:
+  - BC-21. TripNerd's approved plan says, quoted: "AI never creates a person, face… AI is only for short bridges between real shots." In this master, AI creates every person. That means the hands in shot 1, everyone in shots 2–4, and dozens of readable AI faces in shots 2–3 (for example at 6.6 s). There are 0 s of real TripNerd footage, so nothing is being bridged. The only real asset is the wordmark. Real event footage does exist: the packet's own live ads use real suite and guest footage, and the client asset register lists Masters, Players, Phoenix, Derby and Daytona media. Whether that footage is usable and consented is not recorded. Separately, I could not compare the wordmark with the source file because the brand guide's logo-file field is blank.
+  - BC-41. The hero's footwear continuity, above.
+  - BC-22. See the ServicePow-6 below.
+- COULD NOT RUN / NO RECEIPT (each one is a BLOCK):
+  - BC-19: the destination is the DM inbox, and whether anyone at TripNerd answers, and how fast, is UNKNOWN. The ad acts out a reply within 1.75 s.
+  - BC-05: the receipt gives peak and mean dB, not LUFS, and no declared target. I measured −20.4 LUFS integrated (gated, driven by the two UI pings), loudness range (LRA) 23.6 LU, true peak −13.5 dBFS.
+  - BC-13: no receipt. No letterbox visible.
+  - BC-15: no --expect receipt. I saw all the end-card strings on screen.
+  - BC-17: no receipt. My read is a scenario with no endorser or testimonial, so no breach of the policy standard.
+  - BC-18: the AI label is "to be switched on at posting", so it is not set yet.
+  - BC-20: no receipt, and the music isn't chosen.
+  - BC-24: no receipt. My read is that the logo-swap test fails.
+  - BC-25: not recorded.
+  - BC-29 and BC-43: no preflight receipts.
+  - BC-31: shot 4 sits below the normal motion floor under a "calm floor", but no named acceptance is shown.
+  - BC-33: no biomechanics receipt, though people walk in three shots.
+  - BC-34: no receipt.
+  - BC-26: no --bed receipt. The master ASR result covers the outcome.
+  - BC-09: only a master-level figure was given (8.54 px/frame). No per-shot figure.
+- Not judged here: BC-23, the Skeptic's check. I have not seen it and did not wait for it.
+- N/A: BC-32 (no speech), BC-35 to BC-40 (outbound), BC-44 to BC-50 (web), BC-51 to BC-55 (static).
+
+SERVICEPOW-6:
+- Doesn't-look-AI: 6. Every shot has the same golden-hour gloss and wardrobe coordinated in navy, light blue and cream. The dining-room crowd looks too perfect. The blurred phone reads as a defect. The caption and Meta label announce AI anyway.
+- Hook inside 2 s: 6. The question is readable by about 0.2 s. But the picture is the least interesting image in the ad, "it" is never defined, the sound drops to digital silence between pings, and nothing says sport or event.
+- Human presence: 6. Backs, a POV hand and one hand on a shoulder. The people are figures rather than people, and all of them are synthetic.
+- Format fit: 7. Correct 9:16 at 15 s, safe-area text, clean end card. But shot 4 holds for 6.9 s, 46% of the runtime, on one calm frame, and the master depends on music added in the app.
+- Audio design: 4.
+  - True digital zero at about 0.24–1.75 s and 1.95–2.79 s, with no room tone on the couch.
+  - The receive ping is about −17 LUFS momentary against room tone at about −45, a jump of about 28 LU.
+  - The busy dining room sits at about −45 LUFS, which is very quiet for a crowded room.
+  - The golf section is flat at about −56.5 LUFS through a visible swing (about 10–11 s), with no strike or gallery sound.
+  - I could not verify what the sounds actually contain.
+- Message + CTA clarity: 6. The ask is direct, but what you're buying is never stated, and "text" doesn't match "DM".
+
+Score: 5.8 ± 1.5. Below the 8.0 floor, and five axes are at 6 or below.
+
+AI ARTIFACT RISK: 6/10. Tells:
+- The frosted, censored-looking phone, which also blurs the thumb, with bubbles floating off it and not tracked to it (0–3 s).
+- Uniform AI golden glow and wardrobe matched like a catalogue.
+- A foreground woman in a white tee locked to the same screen spot through shot 3.
+- The hero's shoe change.
+- A marshal standing within a few metres of the swinging golfer (10.2 s).
+
+With the label on, the audience is told it is AI regardless.
+
+TOP 3 REASONS NOT TO SHIP:
+1. It breaks TripNerd's written rule (BC-21): AI made every person and face, and there is no real footage at all. That is also the opposite of the request that "everything that is real and that is tripnerd" goes into the ad.
+2. BC-19 cannot run. The ad acts out an instant reply and sends people to a DM inbox nobody has confirmed is answered.
+3. It is generic and slow to show what's on offer:
+   - The sport doesn't appear until about 9 s, and only as a speck.
+   - It fails the logo-swap test: any golf-travel or concierge brand could run it.
+   - The "we handle it" message rewords the Sep 26 end line "Hospitality. Handled." and the banned slogan "details handled".
+   - It is near-silent, and the hold is 6.9 s.
+
+FIX PER FAILURE:
+- BC-21 (Campaign Director routes):
+  - servicepow-client-intelligence: contact-sheet the real event archive and clear consent and rights.
+  - servicepow-creative-spine and servicepow-storyboard-director: rebuild with real TripNerd footage carrying every people beat. AI only for short, labelled, person-free bridges.
+  - servicepow-brand-fidelity: record "no AI persons" as a client constraint, and check the wordmark against the source file.
+  - The only alternative is a written amendment from the CLIENT_APPROVER.
+- BC-19 (Campaign Director): get written client confirmation of who answers DMs and within what window, and open the inbox flow. Until then, drop the instant-reply act-out or point the CTA at a verified destination.
+- Hook and what's on offer:
+  - servicepow-creative-director (Hook Tournament): put real event footage in the first second.
+  - servicepow-video-production: if the text device stays, use a readable composited UI that tracks the phone, not a blur. Align "text" and "DM".
+- Audio (servicepow-audio-director):
+  - A living-room bed with TV murmur.
+  - Dining-room crowd chatter and clinks at a believable level.
+  - Gallery murmur and a strike synced to the swing.
+  - Tame the ping-to-bed jump.
+  - A master that stands without in-app music, or music chosen and QC'd inside the master.
+  - Measure BC-05 against a declared target.
+- Continuity: servicepow-continuity-supervisor and servicepow-higgsfield-production fix shot 3's footwear, if the shot survives the rebuild.
+- Pacing: servicepow-cinematography-editor tightens the 6.9 s shot-4 hold.
+- Implied-experience risk: servicepow-client-intelligence confirms TripNerd sells on-course terrace hospitality, or the picture changes.
+- Missing receipts: the Campaign Director runs and attaches BC-05, 13, 15, 17, 18 (at posting), 20, 24, 25, 26, 29, 31, 33, 34, 43 and per-shot BC-09.
+- Learning log: hard failures tagged CLAUDE-CAUGHT for BC-21 client-rule breach, BC-19 unverified destination, and BC-41 hero wardrobe drift.
+
+HUMAN WATCHED END TO END: no — not recorded in the packet (BC-25, not the critic's to tick).
+
+HUMAN TASTE GATE: AWAITING.
+
+ADVISORY (Direct-Response lens):
+- Time to what's on offer: about 9–10 s, and only as a distant golfer and gallery. The chat device sits in front of the sale.
+- CTA directness: good — verb, handle and action. But it sends people to an unconfirmed inbox. The caption line "the event your group keeps talking about" would work harder as a comment prompt for the engagement goal, and comments are public social proof.
+- Persuasion vs. cleverness: the cleverest element is the "One text / On it." exchange. Spend those 3 s on real guests at a real event instead, and a stranger is more likely to act.
+- Challenger: none exists. Only one cut was supplied and there is no problem-first, real-footage challenger. Any exemption must be written down by name for the APPROVER.
+- Not verified: I did not open the Meta Ad Library in this run, so I can't confirm competitor performance. The category norm of real event spectacle in the first second and real guests is the opposite of this cut.

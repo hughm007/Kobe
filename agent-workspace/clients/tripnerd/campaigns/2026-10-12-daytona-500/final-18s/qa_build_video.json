@@ -1,0 +1,259 @@
+{
+ "variant": "video",
+ "cuts": [
+  {
+   "t": "0.0-2.0",
+   "what": "hospitality-suite photo (md5 2d9008ce..), native 800x535, white-out 1.7-2.0"
+  },
+  {
+   "t": "2.0-4.0",
+   "what": "V06 frames 60-103 (30 fps source), 73% speed"
+  },
+  {
+   "t": "4.0-7.5",
+   "what": "V05 frames 0-83 (24 fps source, 0.000-3.500 s), real speed"
+  },
+  {
+   "t": "11.5-14.5",
+   "what": "Kling 3.0 Pro animation of Photo A (AI), clip frames 32-103 at real speed"
+  }
+ ],
+ "photos": [
+  {
+   "file": "tripnerd-daytona_hospitality-suite.jpg",
+   "native": [
+    800,
+    535
+   ],
+   "placed": [
+    140,
+    692,
+    940,
+    1227
+   ]
+  },
+  {
+   "file": "tripnerd_gallery_07.jpg",
+   "native": [
+    1024,
+    771
+   ],
+   "placed": [
+    28,
+    574,
+    1052,
+    1345
+   ]
+  },
+  {
+   "file": "tripnerd-daytona_father-son-seats.jpg",
+   "native": [
+    800,
+    535
+   ],
+   "placed": [
+    140,
+    692,
+    940,
+    1227
+   ]
+  },
+  {
+   "file": "tripnerd-daytona_wow-guests.jpg",
+   "native": [
+    800,
+    535
+   ],
+   "placed": [
+    140,
+    692,
+    940,
+    1227
+   ]
+  }
+ ],
+ "text": [
+  {
+   "beat": 0,
+   "card": "Our Daytona suite.",
+   "text": "Our Daytona suite.",
+   "box": [
+    111,
+    554,
+    969,
+    642
+   ]
+  },
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "This beats watching",
+   "box": [
+    78,
+    1120,
+    1001,
+    1208
+   ]
+  },
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "from home.",
+   "box": [
+    274,
+    1224,
+    806,
+    1290
+   ]
+  },
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "2024",
+   "box": [
+    920,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "Race weekend,",
+   "box": [
+    191,
+    1108,
+    888,
+    1186
+   ]
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "the TripNerd way.",
+   "box": [
+    133,
+    1202,
+    946,
+    1290
+   ]
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "2024",
+   "box": [
+    920,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 3,
+   "card": "Headsets on. Drinks up.",
+   "text": "Headsets on.",
+   "box": [
+    244,
+    366,
+    836,
+    431
+   ]
+  },
+  {
+   "beat": 3,
+   "card": "Headsets on. Drinks up.",
+   "text": "Drinks up.",
+   "box": [
+    306,
+    447,
+    774,
+    534
+   ]
+  },
+  {
+   "beat": 3,
+   "card": "Headsets on. Drinks up.",
+   "text": "2023",
+   "box": [
+    923,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 4,
+   "card": "Thumbs up from the seats.",
+   "text": "Thumbs up",
+   "box": [
+    282,
+    479,
+    797,
+    560
+   ]
+  },
+  {
+   "beat": 4,
+   "card": "Thumbs up from the seats.",
+   "text": "from the seats.",
+   "box": [
+    195,
+    576,
+    884,
+    642
+   ]
+  },
+  {
+   "beat": 5,
+   "card": "Bring your people.",
+   "text": "Bring your people.",
+   "box": [
+    116,
+    554,
+    964,
+    642
+   ]
+  },
+  {
+   "beat": 6,
+   "card": "The burnout. The memories.",
+   "text": "The burnout.",
+   "box": [
+    250,
+    380,
+    830,
+    444
+   ]
+  },
+  {
+   "beat": 6,
+   "card": "The burnout. The memories.",
+   "text": "The memories.",
+   "box": [
+    208,
+    460,
+    872,
+    529
+   ]
+  }
+ ],
+ "race_gain_db": -9.7,
+ "burn_gain_db": -7.7,
+ "premaster": {
+  "input_i": "-17.19",
+  "input_tp": "-4.64",
+  "input_lra": "4.60",
+  "input_thresh": "-27.48",
+  "output_i": "-13.28",
+  "output_tp": "-1.50",
+  "output_lra": "3.70",
+  "output_thresh": "-23.56",
+  "normalization_type": "dynamic",
+  "target_offset": "-0.72"
+ }
+}

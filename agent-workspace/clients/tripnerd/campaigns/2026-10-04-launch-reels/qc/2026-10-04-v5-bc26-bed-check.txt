@@ -1,0 +1,5 @@
+--bed music_v5_master.wav  (blocking 26: loop/layer audio must be speech-free)
+  advisory voice-band energy ratio: 0.50 (context only — never a verdict)
+  ASR UNAVAILABLE (openai-whisper not installed).
+  VERDICT: UNVERIFIED — the bed may not be looped or layered until ASR verifies it
+  (LB29: a check that was not actually run is recorded as not run.)

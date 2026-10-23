@@ -1,0 +1,9 @@
+{"ts": "2026-10-04T18:01:05Z", "file": "s0.mp4", "md5": "4f7d992d60461ad3d7cd921d6616fdf6", "verdict": "PASS", "accepted_by": null}
+{"ts": "2026-10-04T18:01:06Z", "file": "s1.mp4", "md5": "1316592584a4a289c45ec3cbe0c16a53", "verdict": "PASS", "accepted_by": null}
+{"ts": "2026-10-04T18:01:08Z", "file": "s2.mp4", "md5": "232c90efec07fa483ee37148f323dd79", "verdict": "PASS", "accepted_by": null}
+{"ts": "2026-10-04T18:01:10Z", "file": "s4.mp4", "md5": "53ac9d03d069d4e8bd499ccf83f0437d", "verdict": "PASS", "accepted_by": null}
+{"ts": "2026-10-04T18:01:11Z", "file": "s5.mp4", "md5": "449a2909cacb1bf597d8123152dce512", "verdict": "PASS", "accepted_by": null}
+{"ts": "2026-10-04T18:01:14Z", "file": "s6.mp4", "md5": "e8e1ec739f81a0041585478323ef68e9", "verdict": "PASS", "accepted_by": null}
+{"ts": "2026-10-04T18:01:17Z", "file": "s3.mp4", "md5": "40a5fa65c62826a7580346560ea9c84a", "verdict": "FAIL", "accepted_by": null}
+{"ts": "2026-10-04T18:03:15Z", "file": "s3.mp4", "md5": "d4f6e2574bb6ee7781a38b5ca5b85908", "verdict": "FAIL", "accepted_by": null}
+{"ts": "2026-10-04T18:05:23Z", "file": "s3.mp4", "md5": "859f1e0611117df048cefbf2fe8c8093", "verdict": "INDETERMINATE", "accepted_by": null}

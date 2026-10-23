@@ -1,0 +1,266 @@
+{
+ "container_duration_s": 16.0,
+ "video": {
+  "codec_name": "h264",
+  "profile": "High",
+  "width": 1080,
+  "height": 1920,
+  "r_frame_rate": "24/1",
+  "nb_frames": "384",
+  "duration": "16.000000",
+  "pix_fmt": "yuv420p"
+ },
+ "audio": {
+  "codec_name": "aac",
+  "sample_rate": "48000",
+  "channels": 2,
+  "duration": "16.000000",
+  "bit_rate": "192003"
+ },
+ "audio_samples_s": 16.0,
+ "audio_peak_dbfs": -3.284285068511963,
+ "audio_level_per_250ms_db": [
+  -23.3,
+  -20.1,
+  -20.4,
+  -17.8,
+  -17.8,
+  -16.9,
+  -16.7,
+  -14.8,
+  -14.5,
+  -15.7,
+  -15.8,
+  -16.5,
+  -17.1,
+  -16.6,
+  -17.1,
+  -15.8,
+  -14.4,
+  -13.6,
+  -14.9,
+  -14.7,
+  -14.6,
+  -15.0,
+  -16.3,
+  -18.9,
+  -20.2,
+  -20.7,
+  -21.0,
+  -21.6,
+  -22.3,
+  -21.4,
+  -21.3,
+  -18.7,
+  -18.6,
+  -17.8,
+  -17.6,
+  -15.7,
+  -15.3,
+  -16.5,
+  -16.6,
+  -17.2,
+  -17.7,
+  -17.1,
+  -17.4,
+  -15.9,
+  -14.4,
+  -13.5,
+  -14.8,
+  -14.5,
+  -14.4,
+  -14.8,
+  -16.1,
+  -18.8,
+  -20.2,
+  -20.8,
+  -21.1,
+  -21.9,
+  -22.5,
+  -25.8,
+  -28.4,
+  -31.1,
+  -34.1,
+  -36.5,
+  -38.3,
+  -40.3
+ ],
+ "seam_6.8_to_7.8_per_50ms_db": [
+  -21.0,
+  -21.8,
+  -21.7,
+  -21.7,
+  -20.9,
+  -21.0,
+  -22.4,
+  -24.4,
+  -24.2,
+  -22.9,
+  -20.9,
+  -21.9,
+  -23.1,
+  -19.5,
+  -21.2,
+  -20.6,
+  -21.0,
+  -22.0,
+  -21.7,
+  -21.3
+ ],
+ "silent_gaps_over_200ms_below_-50db": [],
+ "seam_max_sample_step": 0.065216064453125,
+ "whole_max_sample_step": 0.1226959228515625,
+ "ebur128_summary": "Summary: Integrated loudness: I: -13.9 LUFS Threshold: -24.3 LUFS Loudness range: LRA: 4.0 LU Threshold: -33.9 LUFS LRA low: -16.5 LUFS LRA high: -12.5 LUFS True peak: Peak: -3.3 dBFS",
+ "text_boxes_out_of_band": [],
+ "words_per_card": {
+  "1": {
+   "texts": [
+    "Sound on. 🏁"
+   ],
+   "words": 2
+  },
+  "2": {
+   "texts": [
+    "Night over pit road.",
+    "2024"
+   ],
+   "words": 5
+  },
+  "3": {
+   "texts": [
+    "Daytime. Engines on.",
+    "2024"
+   ],
+   "words": 4
+  },
+  "4": {
+   "texts": [
+    "4:54 PM.",
+    "2023"
+   ],
+   "words": 3
+  },
+  "5": {
+   "texts": [
+    "6:56 PM.",
+    "Still filming.",
+    "2023"
+   ],
+   "words": 5
+  },
+  "6": {
+   "texts": [
+    "Where would",
+    "your crew sit?"
+   ],
+   "words": 5
+  },
+  "7": {
+   "texts": [
+    "Daytona Beach plans · February 2027",
+    "tripnerd.com"
+   ],
+   "words": 6
+  }
+ },
+ "banned_phrases_found": [],
+ "beats": [
+  {
+   "beat": 1,
+   "out": "0.0-2.0",
+   "source": "V05 3.000-4.958 s (frames 72-119)"
+  },
+  {
+   "beat": 2,
+   "out": "2.0-4.5",
+   "source": "V05 0.000-2.458 s (frames 0-59)"
+  },
+  {
+   "beat": 3,
+   "out": "4.5-7.0",
+   "source": "V06 frames 60-104 (2.000-3.467 s) at 60% speed",
+   "v6_frames": [
+    60,
+    60,
+    61,
+    62,
+    63,
+    63,
+    64,
+    65,
+    66,
+    66,
+    67,
+    68,
+    69,
+    69,
+    70,
+    71,
+    72,
+    72,
+    73,
+    74,
+    75,
+    75,
+    76,
+    77,
+    78,
+    78,
+    79,
+    80,
+    81,
+    81,
+    82,
+    83,
+    84,
+    84,
+    85,
+    86,
+    87,
+    87,
+    88,
+    89,
+    90,
+    90,
+    91,
+    92,
+    93,
+    93,
+    94,
+    95,
+    96,
+    96,
+    97,
+    98,
+    99,
+    99,
+    100,
+    101,
+    102,
+    102,
+    103,
+    104
+   ]
+  },
+  {
+   "beat": 4,
+   "out": "7.0-9.5",
+   "source": "Photo B: tripnerd_gallery_07.jpg (EXIF 2023-02-19 16:54:45 -05:00), crop x 560-994 of 1024, static"
+  },
+  {
+   "beat": 5,
+   "out": "9.5-12.5",
+   "source": "Photo A: tripnerd_gallery_05.jpg (EXIF 2023-02-19 18:56:07 -05:00), crop x 350-784 of 1024 (Sunoco sign left of frame), static"
+  },
+  {
+   "beat": 6,
+   "out": "12.5-14.0",
+   "source": "V05 8.500-9.958 s (frames 204-239), forward"
+  },
+  {
+   "beat": 7,
+   "out": "14.0-16.0",
+   "source": "End card: navy #202838, original logo file on #5896E9 plate"
+  }
+ ]
+}

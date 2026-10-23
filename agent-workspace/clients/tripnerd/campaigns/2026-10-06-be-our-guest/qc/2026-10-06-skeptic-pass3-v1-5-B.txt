@@ -1,0 +1,30 @@
+SKEPTIC — Pass 3 (BC-23), isolated subagent, Isolation Packet v1
+Master: tn-bog-v1-5-B.mp4 sha256 01d10e2c64dacbc25190b28e0eff127b098b70c3b5b020ae4cb6ba83b50b1807
+Run 2026-10-06 (fresh agent; no production reasoning). Transcribed verbatim.
+
+SKEPTIC VERDICT — Pass 3
+Verdict: BLOCK
+Findings:
+- [S3] Whole master / competitor + client lens (BC-24) — The angle is not rotated and the logo-swap test fails. The live Sep 26 Reel already used the island-green open, the same 2026 suite (logo wall, interior, course view) and text labels over the footage, and this master repeats all three. The only parts TripNerd owns are the 0.9 s logo-wall shot, the name in the text and the end card; any 17th-hole suite holder could post this shot for shot with its own name in place of TripNerd's.
+- [S2] 4.1–5.4 "THE SUITE" guest table / client lens — Aluminum cups printed "THE PLAYERS" can be read on the table next to the main guest in the shot. This breaks TripNerd's written rule "No event logos."
+- [S2] 4.1–5.4 / Meta alcohol policy if boosted — A readable Michelob ULTRA can, other beer cans and a guest drinking sit mid-frame. A boost would put a third-party alcohol trademark in TripNerd's paid ad and bring in Meta's alcohol rules (US 21+ age targeting), so the cans need blurring or the boost needs that age limit.
+- [S2] Whole master / BC-19 / trust test / target-customer lens — "This is TripNerd's spot" plus "Where would you sit — rail or table?" plus "2027 packages" suggests 2027 buyers get this exact suite, view and rail-or-table seating. The landing page confirms only a "17th Hole VIP Luxury Suite", and whether the 2027 suite is the same structure in the same position is not confirmed.
+- [S2] 0.0–3.2 / BC-20 / industry-professional lens — The open shows live tournament play filmed on site (balls on the 17th green, gallery reaction). The packet confirms guest consent but nothing shows that the event or credential terms allow commercial use of on-site competition footage, let alone paid use. This is unverified and must be confirmed before any boost.
+- [S2] 0.0–3.0 / first-3s test — The opening's payoff (balls finishing near the pin) is about 10 px at full resolution, so it cannot be seen on a phone. With sound off, the first 3 s read as a slow zoom on a crowd behind the super, and an out-of-focus head blocks the lower-left corner for about the first 1.5 s.
+- [S2] 7.8–9.0 / weakest-2s test — The key panel line "This is TripNerd's spot." appears over a stranger's back as he walks past the camera, and the shot then settles on one guest sitting alone at the rail. It is survivable, but these are the weakest two seconds and the pictures do not back up "TripNerd's spot."
+- [S2] 5.4–7.8 and 9.5–12.0 / competitor lens + trust test — Rows of empty white folding chairs on the suite balcony and one guest alone at the rail table make the suite look half-empty. A competitor could screenshot that in an ad that is selling the seat.
+- [S2] 3.2–5.4 / persuasion test + industry-professional lens — The hospitality being sold never appears on screen. The logo-wall brand shot sits over a bare buffet before service with a trash or recycling bin at the right of the frame, and the guest table shows clear stadium bags and cans. The ad proves the location, not the hospitality.
+- [S2] Audio, whole master — I cannot hear, so audio is UNVERIFIED by ear.
+  - Measured: -16.0 LUFS integrated, -2.5 dBTP, LRA 7.7 LU, 48 kHz stereo.
+  - The opening roar peaks at about -12 dBFS RMS between 0.5 and 1.4 s, with a second swell at 2.8–3.1 s that matches the visible cheering. The crowd bed runs through the end card and fades to silence at 14.5–15.0 s.
+  - Speech recognition (faster-whisper small.en and base.en, with and without voice detection) found no consistent intelligible speech, only patterns typical of misreading crowd noise.
+  - A human listen must still confirm there is no audible chatter, PA announcement, profanity or music bleed. Whether the 2024 crowd bed is free of speech (BC-26) cannot be checked from the master.
+- [S1] 4.1–4.5 / client lens — Guests' clothing shows incidental third-party marks: a Pittsburgh Steelers cap in the foreground and a Titleist cap. This is acceptable for organic posting; recheck if boosted.
+- [S1] 0.0–3.2 and 5.4–7.8 — Members of the public (the far gallery and spectators cheering below the suite) are not covered by the guest consent. They are distant or seen from behind, so they are hard to identify.
+- [S1] 7.8–12.0 / BC-28 — Text safe area passes but with little room.
+  - The POV box top is at 300 px (15.6%) and the panel box bottom at 1336 px (69.6%), so any reframe would break the 15–70% band.
+  - The engagement ask ("Where would you sit — rail or table? Tell us below.") is the smallest type in the ad, at about 27 px cap height.
+- [S1] 12.0–15.0 — "link in bio" goes nowhere on a boosted placement. A boost should use the ad's CTA button pointing to the same URL.
+- [S1] Cheese / AI-detection tests — "Be our guest." is a stock phrase and "Tell us below" leans toward comment bait. Nothing reads as synthetic: real cans, caps, natural camera motion and consistent detail, and every overlay uses real glyphs. The end-card wordmark matches the two-weight wordmark on the suite wall, and no banned slogan, number, price or superlative appears.
+Isolation: packet verified; production reasoning, cost, draft history, and other
+evaluators' output withheld.

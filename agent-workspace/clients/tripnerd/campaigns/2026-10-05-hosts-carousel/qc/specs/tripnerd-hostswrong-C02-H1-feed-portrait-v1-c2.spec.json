@@ -1,0 +1,100 @@
+{
+ "name": "tripnerd-hostswrong-C02-H1-feed-portrait-v1-c2",
+ "placement": "feed-portrait",
+ "background": {
+  "image": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/static_hosts/bg/c2-plate.png"
+ },
+ "logo": {
+  "file": "/tmp/claude-0/-home-user-Kobe/7684385f-af46-5eba-9499-dc37ceef99c7/scratchpad/brand/tripnerd-logo-colour-1633x601.png",
+  "width_frac": 0.22,
+  "pos": "top-right"
+ },
+ "blocks": [
+  {
+   "role": "label",
+   "text": "1 \u00b7 ARRIVAL",
+   "size": 34,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.0662962962962963
+  },
+  {
+   "role": "numeral",
+   "text": "1",
+   "size": 340,
+   "fill": [
+    24,
+    160,
+    240
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.12703703703703703
+  },
+  {
+   "role": "headline",
+   "text": "Don\u2019t make guests find the way in.",
+   "size": 72,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": true,
+   "align": "left",
+   "y_frac": 0.3996296296296296
+  },
+  {
+   "role": "support",
+   "text": "Give them one check-in point and one host who knows their name.",
+   "size": 42,
+   "fill": [
+    255,
+    255,
+    255
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.5544444444444444
+  },
+  {
+   "role": "fact",
+   "text": "Ours: a staffed TripNerd check-in table.",
+   "size": 38,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": false,
+   "align": "left",
+   "y_frac": 0.6877777777777778
+  },
+  {
+   "role": "cta",
+   "text": "Next: timing \u2192",
+   "size": 42,
+   "fill": [
+    32,
+    40,
+    56
+   ],
+   "bold": true,
+   "align": "center",
+   "chip": true,
+   "chip_fill": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "chip_radius": "pill",
+   "y_frac": 0.8951851851851852
+  }
+ ]
+}

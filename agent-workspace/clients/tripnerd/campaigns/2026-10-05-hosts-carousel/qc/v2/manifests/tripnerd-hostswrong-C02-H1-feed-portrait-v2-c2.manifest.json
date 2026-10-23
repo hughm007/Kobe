@@ -1,0 +1,109 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "photo",
+   "box": [
+    54,
+    243,
+    1026,
+    685
+   ],
+   "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c2-photo.png"
+  },
+  {
+   "role": "logo",
+   "box": [
+    70,
+    79,
+    415,
+    205
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "numeral",
+   "box": [
+    471,
+    67,
+    527,
+    219
+   ],
+   "font_px": 140,
+   "text": "1",
+   "contrast": 5.15
+  },
+  {
+   "role": "label",
+   "box": [
+    559,
+    133,
+    764,
+    179
+   ],
+   "font_px": 34,
+   "text": "1 \u00b7 ARRIVAL",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    717,
+    666,
+    894
+   ],
+   "font_px": 72,
+   "text": "Give guests one place to arrive.",
+   "contrast": 14.77
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    918,
+    708,
+    1022
+   ],
+   "font_px": 40,
+   "text": "One check-in point. One host who knows their name.",
+   "contrast": 14.77
+  },
+  {
+   "role": "fact",
+   "box": [
+    86,
+    1066,
+    813,
+    1160
+   ],
+   "font_px": 36,
+   "text": "Ours: a TripNerd-branded table, with staff on hand.",
+   "contrast": 4.89
+  },
+  {
+   "role": "cta",
+   "box": [
+    74,
+    1210,
+    416,
+    1262
+   ],
+   "font_px": 40,
+   "text": "Next: the view \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-hostswrong-C02-H1-feed-portrait-v2-c2.png",
+ "sha256": "7974852666c2e188"
+}

@@ -1,0 +1,32 @@
+{
+ "name": "tripnerd-launchweek-poll-H1-story-v4",
+ "placement": "story",
+ "background": {
+  "image": "static_v4/bg_lawn_srgb.png"
+ },
+ "blocks": [
+  {
+   "role": "headline",
+   "text": "Augusta in April.",
+   "size": 84,
+   "y_frac": 0.165,
+   "bold": true,
+   "chip": true
+  },
+  {
+   "role": "support",
+   "text": "Our guests, Thursday 9 April 2026.",
+   "size": 42,
+   "y_frac": 0.228,
+   "chip": true
+  },
+  {
+   "role": "cta",
+   "text": "Tap your answer below.",
+   "size": 44,
+   "y_frac": 0.278,
+   "bold": true,
+   "chip": true
+  }
+ ]
+}

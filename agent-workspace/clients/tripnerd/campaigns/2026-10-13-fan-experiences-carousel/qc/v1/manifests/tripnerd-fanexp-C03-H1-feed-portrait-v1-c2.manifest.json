@@ -1,0 +1,75 @@
+{
+ "placement": "feed-portrait",
+ "size": [
+  1080,
+  1350
+ ],
+ "safe": [
+  54,
+  67,
+  1026,
+  1283
+ ],
+ "elements": [
+  {
+   "role": "logo",
+   "box": [
+    70,
+    79,
+    415,
+    205
+   ],
+   "file": "tripnerd-logo-colour-1633x601.png"
+  },
+  {
+   "role": "label",
+   "box": [
+    471,
+    122,
+    680,
+    168
+   ],
+   "font_px": 34,
+   "text": "THE TICKET",
+   "contrast": 5.15
+  },
+  {
+   "role": "headline",
+   "box": [
+    54,
+    487,
+    820,
+    784
+   ],
+   "font_px": 124,
+   "text": "A ticket gets you in.",
+   "contrast": 14.77
+  },
+  {
+   "role": "support",
+   "box": [
+    54,
+    824,
+    773,
+    955
+   ],
+   "font_px": 52,
+   "text": "Where you watch from is the part you remember.",
+   "contrast": 14.77
+  },
+  {
+   "role": "cta",
+   "box": [
+    74,
+    1210,
+    416,
+    1262
+   ],
+   "font_px": 40,
+   "text": "Next: the view \u2192",
+   "contrast": 14.77
+  }
+ ],
+ "file": "tripnerd-fanexp-C03-H1-feed-portrait-v1-c2.png",
+ "sha256": "9308ea06cf8dbe71"
+}

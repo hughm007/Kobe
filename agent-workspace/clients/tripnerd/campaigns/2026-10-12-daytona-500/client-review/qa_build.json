@@ -1,0 +1,195 @@
+{
+ "cuts": [
+  {
+   "t": "0.0-1.5",
+   "what": "lanyard opener (card v3 motion, shortened), text in first 1.5 s"
+  },
+  {
+   "t": "1.5-4.0",
+   "what": "V06 frames 60-104 (2.000-3.500 s) at 60%"
+  },
+  {
+   "t": "4.0-5.5",
+   "what": "V05 frames 0-35 (0.000-1.458 s)"
+  },
+  {
+   "t": "7.5-9.5",
+   "what": "father-son photo, whole frame on navy, y (600, 1322)"
+  },
+  {
+   "t": "11.0-13.5",
+   "what": "Kling 3.0 Pro animation of Photo A (job 0ad498ed), clip frames 44-103"
+  }
+ ],
+ "text": [
+  {
+   "beat": 0,
+   "card": "Our Daytona suite.",
+   "text": "Our Daytona suite.",
+   "box": [
+    111,
+    330,
+    969,
+    418
+   ]
+  },
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "This beats watching",
+   "box": [
+    78,
+    1120,
+    1001,
+    1208
+   ]
+  },
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "from home.",
+   "box": [
+    274,
+    1224,
+    806,
+    1290
+   ]
+  },
+  {
+   "beat": 1,
+   "card": "This beats watching from home.",
+   "text": "2024",
+   "box": [
+    920,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "Race weekend,",
+   "box": [
+    191,
+    1108,
+    888,
+    1186
+   ]
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "the TripNerd way.",
+   "box": [
+    133,
+    1202,
+    946,
+    1290
+   ]
+  },
+  {
+   "beat": 2,
+   "card": "Race weekend, the TripNerd way.",
+   "text": "2024",
+   "box": [
+    920,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 4,
+   "card": "Headsets on. Drinks up.",
+   "text": "Headsets on.",
+   "box": [
+    244,
+    400,
+    836,
+    465
+   ]
+  },
+  {
+   "beat": 4,
+   "card": "Headsets on. Drinks up.",
+   "text": "Drinks up.",
+   "box": [
+    306,
+    481,
+    774,
+    568
+   ]
+  },
+  {
+   "beat": 4,
+   "card": "Headsets on. Drinks up.",
+   "text": "2023",
+   "box": [
+    923,
+    312,
+    1016,
+    341
+   ],
+   "year": true
+  },
+  {
+   "beat": 5,
+   "card": "Thumbs up from the seats.",
+   "text": "Thumbs up",
+   "box": [
+    282,
+    380,
+    797,
+    461
+   ]
+  },
+  {
+   "beat": 5,
+   "card": "Thumbs up from the seats.",
+   "text": "from the seats.",
+   "box": [
+    195,
+    477,
+    884,
+    543
+   ]
+  },
+  {
+   "beat": 6,
+   "card": "Bring your people.",
+   "text": "Bring your people.",
+   "box": [
+    116,
+    420,
+    964,
+    508
+   ]
+  },
+  {
+   "beat": 7,
+   "card": "The burnout. The memories.",
+   "text": "The burnout.",
+   "box": [
+    250,
+    380,
+    830,
+    444
+   ]
+  },
+  {
+   "beat": 7,
+   "card": "The burnout. The memories.",
+   "text": "The memories.",
+   "box": [
+    208,
+    460,
+    872,
+    529
+   ]
+  }
+ ],
+ "race_gain_db": -8.6
+}

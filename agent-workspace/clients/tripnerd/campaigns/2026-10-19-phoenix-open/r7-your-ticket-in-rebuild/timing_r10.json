@@ -1,0 +1,5 @@
+{"bpm":124.0,"grid_offset":0.0115,"drop_frame":202,"v03_beats":8,"v03_src":3.6,"pan_beats":5,"end_beats":6,
+ "captions":{"opener":"Phoenix Open 2027.","v01":"Everyone wants the 16th.","ticket":"TripNerd gets you in.","v03":"Hole 16. With TripNerd.",
+             "p02":"Your spot at the 16th.","p05":"Food & drink included.","p06":"Hotel included."},
+ "end_headline":"The Phoenix Open, done the TripNerd way.",
+ "photos":[{"name":"P02","cx":0.22,"cap":"p02","beats":4},{"name":"P05","box":[0,450,558,1442],"cap":"p05","beats":4}]}
