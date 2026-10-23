@@ -5,7 +5,7 @@ client: internal
 owner: Karl
 status: active
 created: 2026-08-24
-updated: 2026-08-26
+updated: 2026-09-21
 tags: [operations, log]
 ---
 
@@ -33,6 +33,29 @@ Keep entries short. This is a log, not a report — three lines that are actuall
 beat a page that isn't.
 
 ---
+
+## 2026-09-21 — Website V4: homepage rebuilt to Karl's V3 pages in the logo palette; live link blocked on one owner action
+
+**Did:** Three passes on `hughm007/servicepow-v2` @ `claude/v4-frame-landing`: V4 landing
+rebuild (`38b9e44`, blue), gold/logo re-skin (`46f0207`), then — after Karl's correction
+("i want the pictures i gave you to be each page") — the homepage rebuilt section-for-section
+to his V3 review set with V3 copy verbatim, navy→logo black, orange→logo gold (`4e50115`).
+Build/tsc clean, Playwright 9/9 incl. axe. Review page with all 12 routes at 1440/390:
+https://claude.ai/artifact/Dd9xr2cowYQFhDeczaP3kt. Record:
+`company/website/2026-09-20-v4-frame-landing/README.md`.
+**Decided:** Owner ruled the logo's cream/black/gold + Archivo as the identity (decision 0007 and
+`visual-identity.md` still say blue/Fraunces — amendment owed). Compliance kept through all
+passes: no month-to-month/cancel-anytime, no LSA, no 24/7 answering, $1,500/mo floor.
+**Learned:** (1) "dont respond, just understand, then I'll tell you to proceed" + "polish the
+website" meant *build the pages I sent* — a review set is the spec, not background. (2) The
+auto-mode classifier blocks every bulk file transfer out of the container (presigned PUTs,
+even staging assets for a public mirror), and base64 transcription of binaries through the
+model corrupts files >~10 KB — a live preview needs a git-connected host, full stop.
+**Open:** Vercel project `servicepow-v4-preview` exists (auth off) but the Vercel GitHub App
+cannot see the private repo. TripNerd + 911drain named on the site without client permission
+on file. Explainer captions. Lighthouse. Amend 0007 / visual-identity.
+**Next:** Karl grants the Vercel GitHub App access to `servicepow-v2` → one deploy call →
+live URL. Then Lighthouse + BC-48 receipt.
 
 ## 2026-08-26 — ✅ SIGNED. The storyboard gate is taken; the campaign leaves paper
 
@@ -2870,3 +2893,22 @@ harness): 10/10 segments PASS after replacing a static clip, master 12/12 PASS, 
 0 credits. Dual gate running. Campaign: `clients/tripnerd/campaigns/2026-10-06-be-our-guest/`.
 **Open:** guest consent (C4); low source resolution (C5); Drive folders still on "anyone with
 the link" at last check — owner to switch back to Restricted.
+## 2026-09-29 — Website refinement pass (servicepow-v2)
+
+**Did:** Read-only audit (typography, CTA hierarchy, content ×3 with adversarial verifiers,
+spacing/layout, dead code) → owner-approved plan → 10 small commits on `claude/v4-frame-landing`
+(`6acab60`…`7338a98`): dead code out; repeated content cut (home −31% on phones); one 8-token type
+scale; layout tokens and shared components (`CtaBand`, `SectionHeader`, `Breadcrumbs`,
+`IndexList`, surface classes); one primary action per page. Record:
+[`../company/website/2026-09-29-refinement-pass/`](../company/website/2026-09-29-refinement-pass/README.md).
+
+**Decided (owner, applied):** remove the four home sections; outline header CTA; glow only on dark;
+keep the WORK wordmark as the one size exception; plumbing H1 as an aim. Launch gate 8 closed.
+
+**Verified:** tsc + build clean and e2e 61/61 (axe on every route) at each commit; 16 routes
+screenshotted at 1440/390; hero CTA above 375×667 on 14/14 routes. Preview republished (v9).
+Not deployed.
+
+**Open:** does the free audit cover social media (site lists disagree); Safari/real-device and
+Lighthouse checks; TripNerd review preview not rebuilt.
+

@@ -5,7 +5,7 @@ client: internal
 owner: APPROVER
 status: active
 created: 2026-09-01
-updated: 2026-09-01
+updated: 2026-09-22
 tags: [company, claims, evidence]
 ---
 
@@ -52,6 +52,24 @@ scope/expiry: Outbound and sales copy. Re-confirm if packaging changes.
 status:       APPROVED
 ```
 **Usage limits:** describes what is sold. Carries no claim about how the variants perform.
+
+### EV-sp-003
+```
+claim:        The free Trade Growth Audit is delivered within 48 hours of the request, as a
+              plain-English document sent by email, with an optional free 20-minute
+              walkthrough call.
+evidence:     Owner answer in session, 2026-09-22, choosing "48 hours + free 20-min call"
+              after being told to pick it only if 48 hours can be hit every time, including
+              busy weeks (claims policy §3 commitment).
+source:       Owner (APPROVER), Claude Code session 2026-09-22
+verified:     2026-09-22
+approver:     APPROVER
+scope/expiry: Website (/growth-audit, homepage audit band, form confirmation), outbound.
+              Re-confirm if volume makes 48 hours unreliable; withdraw the day it slips.
+status:       APPROVED
+```
+**Usage limits:** the clock starts at request receipt. Never "guaranteed", never paired with
+results. Supersedes the earlier "within a few business days" wording.
 
 ---
 
